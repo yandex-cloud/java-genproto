@@ -850,9 +850,8 @@ public final class PSUS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -862,8 +861,7 @@ public final class PSUS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -872,8 +870,7 @@ public final class PSUS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1030,9 +1027,8 @@ public final class PSUS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1047,8 +1043,7 @@ public final class PSUS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1069,8 +1064,7 @@ public final class PSUS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1532,9 +1526,8 @@ public final class PSUS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1546,9 +1539,8 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1563,9 +1555,8 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1581,8 +1572,7 @@ public final class PSUS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1602,8 +1592,7 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1624,8 +1613,7 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1644,8 +1632,7 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1659,8 +1646,7 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1781,10 +1767,9 @@ public final class PSUS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1793,10 +1778,9 @@ public final class PSUS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1967,10 +1951,9 @@ public final class PSUS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1991,10 +1974,9 @@ public final class PSUS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2689,10 +2671,9 @@ public final class PSUS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2712,10 +2693,9 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2736,10 +2716,9 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2758,10 +2737,9 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2775,10 +2753,9 @@ public final class PSUS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value for the [ListUsersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>

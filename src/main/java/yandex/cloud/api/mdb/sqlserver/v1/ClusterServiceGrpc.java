@@ -709,7 +709,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified SQL Server cluster.
+     * Retrieves the list of hosts for the specified SQL Server cluster.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsRequest request,
@@ -1020,7 +1020,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified SQL Server cluster.
+     * Retrieves the list of hosts for the specified SQL Server cluster.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsRequest request,
@@ -1202,7 +1202,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified SQL Server cluster.
+     * Retrieves the list of hosts for the specified SQL Server cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsResponse listHosts(yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsRequest request) {
@@ -1396,7 +1396,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified SQL Server cluster.
+     * Retrieves the list of hosts for the specified SQL Server cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.sqlserver.v1.PSCS.ListClusterHostsResponse> listHosts(

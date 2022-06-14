@@ -655,9 +655,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClustersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -667,8 +666,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -677,8 +675,7 @@ public final class PSCS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -691,10 +688,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+     * Example of a filter expression: `name NOT IN 'test,beta'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -705,10 +702,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+     * Example of a filter expression: `name NOT IN 'test,beta'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -872,9 +869,8 @@ public final class PSCS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClustersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -889,8 +885,7 @@ public final class PSCS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -911,8 +906,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -939,10 +933,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+     * Example of a filter expression: `name NOT IN 'test,beta'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -965,10 +959,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+     * Example of a filter expression: `name NOT IN 'test,beta'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1447,9 +1441,8 @@ public final class PSCS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1461,9 +1454,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1478,9 +1470,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1496,8 +1487,7 @@ public final class PSCS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1517,8 +1507,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1539,8 +1528,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1559,8 +1547,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1574,8 +1561,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1599,10 +1585,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+       * Example of a filter expression: `name NOT IN 'test,beta'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1624,10 +1610,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+       * Example of a filter expression: `name NOT IN 'test,beta'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1650,10 +1636,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+       * Example of a filter expression: `name NOT IN 'test,beta'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1674,10 +1660,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+       * Example of a filter expression: `name NOT IN 'test,beta'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1693,10 +1679,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * 1. A field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
+       * Example of a filter expression: `name NOT IN 'test,beta'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1817,10 +1803,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1829,10 +1813,8 @@ public final class PSCS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2003,10 +1985,8 @@ public final class PSCS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2027,10 +2007,8 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2725,10 +2703,8 @@ public final class PSCS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2748,10 +2724,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2772,10 +2746,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2794,10 +2766,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2811,10 +2781,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the `next_page_token` as the value for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent list request has its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2954,7 +2922,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2963,7 +2931,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2979,7 +2947,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2989,7 +2957,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3001,7 +2969,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3031,7 +2999,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * SQL Server and hosts configuration for the cluster.
+     * Configurations of SQL Server and hosts of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -3040,7 +3008,7 @@ public final class PSCS {
     boolean hasConfigSpec();
     /**
      * <pre>
-     * SQL Server and hosts configuration for the cluster.
+     * Configurations of SQL Server and hosts of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -3049,7 +3017,7 @@ public final class PSCS {
     yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpec getConfigSpec();
     /**
      * <pre>
-     * SQL Server and hosts configuration for the cluster.
+     * Configurations of SQL Server and hosts of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -3210,7 +3178,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3220,7 +3188,7 @@ public final class PSCS {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3229,7 +3197,7 @@ public final class PSCS {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3239,7 +3207,7 @@ public final class PSCS {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -3251,7 +3219,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 12;</code>
@@ -3261,7 +3229,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     *name of SQL Collation that cluster will be created with
+     * Name of SQL Collation that cluster will be created with.
      * </pre>
      *
      * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3270,7 +3238,7 @@ public final class PSCS {
     java.lang.String getSqlcollation();
     /**
      * <pre>
-     *name of SQL Collation that cluster will be created with
+     * Name of SQL Collation that cluster will be created with.
      * </pre>
      *
      * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3744,7 +3712,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3767,7 +3735,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3780,7 +3748,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3798,7 +3766,7 @@ public final class PSCS {
     /**
      * <pre>
      * Custom labels for the SQL Server cluster as `key:value` pairs.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3847,7 +3815,7 @@ public final class PSCS {
     private yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpec configSpec_;
     /**
      * <pre>
-     * SQL Server and hosts configuration for the cluster.
+     * Configurations of SQL Server and hosts of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -3859,7 +3827,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * SQL Server and hosts configuration for the cluster.
+     * Configurations of SQL Server and hosts of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -3871,7 +3839,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * SQL Server and hosts configuration for the cluster.
+     * Configurations of SQL Server and hosts of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -4111,7 +4079,7 @@ public final class PSCS {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -4123,7 +4091,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -4134,7 +4102,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -4146,7 +4114,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -4162,7 +4130,7 @@ public final class PSCS {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 12;</code>
@@ -4177,7 +4145,7 @@ public final class PSCS {
     private volatile java.lang.Object sqlcollation_;
     /**
      * <pre>
-     *name of SQL Collation that cluster will be created with
+     * Name of SQL Collation that cluster will be created with.
      * </pre>
      *
      * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -4198,7 +4166,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     *name of SQL Collation that cluster will be created with
+     * Name of SQL Collation that cluster will be created with.
      * </pre>
      *
      * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -5373,7 +5341,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5396,7 +5364,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5409,7 +5377,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5427,7 +5395,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5453,7 +5421,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5477,7 +5445,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5497,7 +5465,7 @@ public final class PSCS {
       /**
        * <pre>
        * Custom labels for the SQL Server cluster as `key:value` pairs.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5589,7 +5557,7 @@ public final class PSCS {
           yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpec, yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpec.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpecOrBuilder> configSpecBuilder_;
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5600,7 +5568,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5615,7 +5583,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5635,7 +5603,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5653,7 +5621,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5675,7 +5643,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5693,7 +5661,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5705,7 +5673,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -5720,7 +5688,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * SQL Server and hosts configuration for the cluster.
+       * Configurations of SQL Server and hosts of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.ConfigSpec config_spec = 6;</code>
@@ -6780,7 +6748,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6792,7 +6760,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6803,7 +6771,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6815,7 +6783,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6828,7 +6796,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6848,7 +6816,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6867,7 +6835,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6884,7 +6852,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6898,7 +6866,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -6920,7 +6888,7 @@ public final class PSCS {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -6932,7 +6900,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -6947,7 +6915,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -6963,7 +6931,7 @@ public final class PSCS {
       private java.lang.Object sqlcollation_ = "";
       /**
        * <pre>
-       *name of SQL Collation that cluster will be created with
+       * Name of SQL Collation that cluster will be created with.
        * </pre>
        *
        * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -6983,7 +6951,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       *name of SQL Collation that cluster will be created with
+       * Name of SQL Collation that cluster will be created with.
        * </pre>
        *
        * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -7004,7 +6972,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       *name of SQL Collation that cluster will be created with
+       * Name of SQL Collation that cluster will be created with.
        * </pre>
        *
        * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -7023,7 +6991,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       *name of SQL Collation that cluster will be created with
+       * Name of SQL Collation that cluster will be created with.
        * </pre>
        *
        * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -7037,7 +7005,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       *name of SQL Collation that cluster will be created with
+       * Name of SQL Collation that cluster will be created with.
        * </pre>
        *
        * <code>string sqlcollation = 13 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -8029,9 +7997,9 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8040,9 +8008,9 @@ public final class PSCS {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8058,9 +8026,9 @@ public final class PSCS {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8070,9 +8038,9 @@ public final class PSCS {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8084,9 +8052,9 @@ public final class PSCS {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8145,7 +8113,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8155,7 +8123,7 @@ public final class PSCS {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8164,7 +8132,7 @@ public final class PSCS {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8174,7 +8142,7 @@ public final class PSCS {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8186,7 +8154,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 8;</code>
@@ -8549,9 +8517,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8574,9 +8542,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8589,9 +8557,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8609,9 +8577,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
-     * The new set of labels will completely replace the old ones.
+     * Custom labels for the SQL Server cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
      * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
@@ -8718,7 +8686,7 @@ public final class PSCS {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8730,7 +8698,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8741,7 +8709,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8753,7 +8721,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 7;</code>
@@ -8769,7 +8737,7 @@ public final class PSCS {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 8;</code>
@@ -9722,9 +9690,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -9747,9 +9715,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -9762,9 +9730,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -9782,9 +9750,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -9810,9 +9778,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -9836,9 +9804,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -9858,9 +9826,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the SQL Server cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
-       * The new set of labels will completely replace the old ones.
+       * Custom labels for the SQL Server cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
        * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
@@ -10134,7 +10102,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10146,7 +10114,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10157,7 +10125,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10169,7 +10137,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10182,7 +10150,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10202,7 +10170,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10221,7 +10189,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10238,7 +10206,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10252,7 +10220,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 7;</code>
@@ -10274,7 +10242,7 @@ public final class PSCS {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 8;</code>
@@ -10286,7 +10254,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 8;</code>
@@ -10301,7 +10269,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 8;</code>
@@ -13595,8 +13563,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13604,8 +13572,8 @@ public final class PSCS {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13620,8 +13588,8 @@ public final class PSCS {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13630,8 +13598,8 @@ public final class PSCS {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13642,8 +13610,8 @@ public final class PSCS {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -13786,7 +13754,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13796,7 +13764,7 @@ public final class PSCS {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13805,7 +13773,7 @@ public final class PSCS {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13815,7 +13783,7 @@ public final class PSCS {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -13827,7 +13795,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 13;</code>
@@ -14324,8 +14292,8 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14347,8 +14315,8 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14360,8 +14328,8 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14378,8 +14346,8 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -14620,7 +14588,7 @@ public final class PSCS {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -14632,7 +14600,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -14643,7 +14611,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -14655,7 +14623,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -14671,7 +14639,7 @@ public final class PSCS {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 13;</code>
@@ -15910,8 +15878,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -15933,8 +15901,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -15946,8 +15914,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -15964,8 +15932,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -15990,8 +15958,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -16014,8 +15982,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -16034,8 +16002,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the new SQL Server cluster to be created from the backup as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -16795,7 +16763,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16807,7 +16775,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16818,7 +16786,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16830,7 +16798,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16843,7 +16811,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16863,7 +16831,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16882,7 +16850,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16899,7 +16867,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16913,7 +16881,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -16935,7 +16903,7 @@ public final class PSCS {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 13;</code>
@@ -16947,7 +16915,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 13;</code>
@@ -16962,7 +16930,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 13;</code>
@@ -18065,7 +18033,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * ID of sqlserver cluster.
+     * ID of SQL Server cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18074,7 +18042,7 @@ public final class PSCS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of sqlserver cluster.
+     * ID of SQL Server cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18200,7 +18168,7 @@ public final class PSCS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of sqlserver cluster.
+     * ID of SQL Server cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18221,7 +18189,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * ID of sqlserver cluster.
+     * ID of SQL Server cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18612,7 +18580,7 @@ public final class PSCS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of sqlserver cluster.
+       * ID of SQL Server cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18632,7 +18600,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of sqlserver cluster.
+       * ID of SQL Server cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18653,7 +18621,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of sqlserver cluster.
+       * ID of SQL Server cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18672,7 +18640,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of sqlserver cluster.
+       * ID of SQL Server cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18686,7 +18654,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of sqlserver cluster.
+       * ID of SQL Server cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18864,7 +18832,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * ID of the sqlserver cluster being failovered.
+     * ID of the SQL Server cluster being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18873,7 +18841,7 @@ public final class PSCS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the sqlserver cluster being failovered.
+     * ID of the SQL Server cluster being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18970,7 +18938,7 @@ public final class PSCS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the sqlserver cluster being failovered.
+     * ID of the SQL Server cluster being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -18991,7 +18959,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * ID of the sqlserver cluster being failovered.
+     * ID of the SQL Server cluster being failovered.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -19317,7 +19285,7 @@ public final class PSCS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the sqlserver cluster being failovered.
+       * ID of the SQL Server cluster being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19337,7 +19305,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the sqlserver cluster being failovered.
+       * ID of the SQL Server cluster being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19358,7 +19326,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the sqlserver cluster being failovered.
+       * ID of the SQL Server cluster being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19377,7 +19345,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the sqlserver cluster being failovered.
+       * ID of the SQL Server cluster being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -19391,7 +19359,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the sqlserver cluster being failovered.
+       * ID of the SQL Server cluster being failovered.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -20622,7 +20590,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Start timestamp for the logs request.
+     * Specifies a moment that the logs are requested from.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -20631,7 +20599,7 @@ public final class PSCS {
     boolean hasFromTime();
     /**
      * <pre>
-     * Start timestamp for the logs request.
+     * Specifies a moment that the logs are requested from.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -20640,7 +20608,7 @@ public final class PSCS {
     com.google.protobuf.Timestamp getFromTime();
     /**
      * <pre>
-     * Start timestamp for the logs request.
+     * Specifies a moment that the logs are requested from.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -20649,7 +20617,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * End timestamp for the logs request.
+     * Specifies a moment that the logs are requested till.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -20658,7 +20626,7 @@ public final class PSCS {
     boolean hasToTime();
     /**
      * <pre>
-     * End timestamp for the logs request.
+     * Specifies a moment that the logs are requested till.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -20667,7 +20635,7 @@ public final class PSCS {
     com.google.protobuf.Timestamp getToTime();
     /**
      * <pre>
-     * End timestamp for the logs request.
+     * Specifies a moment that the logs are requested till.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -20676,9 +20644,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterLogsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -20688,8 +20655,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -20698,8 +20664,7 @@ public final class PSCS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -20710,7 +20675,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Always return `next_page_token`, even if current page is empty.
+     * The service returns [next_page_token] even if the current page is empty.
      * </pre>
      *
      * <code>bool always_next_page_token = 8;</code>
@@ -20722,10 +20687,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+     * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -20736,10 +20701,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+     * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21170,7 +21135,7 @@ public final class PSCS {
     private com.google.protobuf.Timestamp fromTime_;
     /**
      * <pre>
-     * Start timestamp for the logs request.
+     * Specifies a moment that the logs are requested from.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -21182,7 +21147,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Start timestamp for the logs request.
+     * Specifies a moment that the logs are requested from.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -21194,7 +21159,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Start timestamp for the logs request.
+     * Specifies a moment that the logs are requested from.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -21208,7 +21173,7 @@ public final class PSCS {
     private com.google.protobuf.Timestamp toTime_;
     /**
      * <pre>
-     * End timestamp for the logs request.
+     * Specifies a moment that the logs are requested till.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -21220,7 +21185,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * End timestamp for the logs request.
+     * Specifies a moment that the logs are requested till.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -21232,7 +21197,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * End timestamp for the logs request.
+     * Specifies a moment that the logs are requested till.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -21246,9 +21211,8 @@ public final class PSCS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterLogsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -21263,8 +21227,7 @@ public final class PSCS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -21285,8 +21248,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -21311,7 +21273,7 @@ public final class PSCS {
     private boolean alwaysNextPageToken_;
     /**
      * <pre>
-     * Always return `next_page_token`, even if current page is empty.
+     * The service returns [next_page_token] even if the current page is empty.
      * </pre>
      *
      * <code>bool always_next_page_token = 8;</code>
@@ -21328,10 +21290,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+     * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21354,10 +21316,10 @@ public final class PSCS {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-     * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+     * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -22197,7 +22159,7 @@ public final class PSCS {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fromTimeBuilder_;
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22208,7 +22170,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22223,7 +22185,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22243,7 +22205,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22261,7 +22223,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22283,7 +22245,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22301,7 +22263,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22313,7 +22275,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22328,7 +22290,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request.
+       * Specifies a moment that the logs are requested from.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -22352,7 +22314,7 @@ public final class PSCS {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> toTimeBuilder_;
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22363,7 +22325,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22378,7 +22340,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22398,7 +22360,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22416,7 +22378,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22438,7 +22400,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22456,7 +22418,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22468,7 +22430,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22483,7 +22445,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * End timestamp for the logs request.
+       * Specifies a moment that the logs are requested till.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -22505,9 +22467,8 @@ public final class PSCS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -22519,9 +22480,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -22536,9 +22496,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -22554,8 +22513,7 @@ public final class PSCS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22575,8 +22533,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22597,8 +22554,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22617,8 +22573,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22632,8 +22587,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -22655,7 +22609,7 @@ public final class PSCS {
       private boolean alwaysNextPageToken_ ;
       /**
        * <pre>
-       * Always return `next_page_token`, even if current page is empty.
+       * The service returns [next_page_token] even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -22667,7 +22621,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Always return `next_page_token`, even if current page is empty.
+       * The service returns [next_page_token] even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -22682,7 +22636,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Always return `next_page_token`, even if current page is empty.
+       * The service returns [next_page_token] even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -22700,10 +22654,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+       * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -22725,10 +22679,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+       * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -22751,10 +22705,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+       * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -22775,10 +22729,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+       * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -22794,10 +22748,10 @@ public final class PSCS {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field.
-       * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
-       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`
+       * 1. A field name to filter by. Currently filtering can be applied to the [LogRecord.logs.message.hostname] field only.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * Example of a filter: `message.hostname='node1.db.cloud.yandex.net'`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -22918,10 +22872,9 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22930,10 +22883,9 @@ public final class PSCS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23104,10 +23056,9 @@ public final class PSCS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23128,10 +23079,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23826,10 +23776,9 @@ public final class PSCS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23849,10 +23798,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23873,10 +23821,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23895,10 +23842,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23912,10 +23858,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -24014,9 +23959,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterOperationsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24026,8 +23970,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24036,8 +23979,7 @@ public final class PSCS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24194,9 +24136,8 @@ public final class PSCS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterOperationsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24211,8 +24152,7 @@ public final class PSCS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24233,8 +24173,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24696,9 +24635,8 @@ public final class PSCS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24710,9 +24648,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24727,9 +24664,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24745,8 +24681,7 @@ public final class PSCS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24766,8 +24701,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24788,8 +24722,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24808,8 +24741,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24823,8 +24755,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24945,10 +24876,9 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -24957,10 +24887,9 @@ public final class PSCS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -25131,10 +25060,9 @@ public final class PSCS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -25155,10 +25083,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -25853,10 +25780,9 @@ public final class PSCS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -25876,10 +25802,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -25900,10 +25825,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -25922,10 +25846,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -25939,10 +25862,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -26041,9 +25963,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterBackupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26053,8 +25974,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26063,8 +25983,7 @@ public final class PSCS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26221,9 +26140,8 @@ public final class PSCS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterBackupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26238,8 +26156,7 @@ public final class PSCS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26260,8 +26177,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26723,9 +26639,8 @@ public final class PSCS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26737,9 +26652,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26754,9 +26668,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26772,8 +26685,7 @@ public final class PSCS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26793,8 +26705,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26815,8 +26726,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26835,8 +26745,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26850,8 +26759,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26972,10 +26880,9 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -26984,10 +26891,9 @@ public final class PSCS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27158,10 +27064,9 @@ public final class PSCS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27182,10 +27087,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27880,10 +27784,9 @@ public final class PSCS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27903,10 +27806,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27927,10 +27829,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27949,10 +27850,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27966,10 +27866,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -28068,9 +27967,8 @@ public final class PSCS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterHostsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -28080,8 +27978,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28090,8 +27987,7 @@ public final class PSCS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28248,9 +28144,8 @@ public final class PSCS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListClusterHostsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -28265,8 +28160,7 @@ public final class PSCS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28287,8 +28181,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28750,9 +28643,8 @@ public final class PSCS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -28764,9 +28656,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -28781,9 +28672,8 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -28799,8 +28689,7 @@ public final class PSCS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28820,8 +28709,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28842,8 +28730,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28862,8 +28749,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28877,8 +28763,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28999,10 +28884,9 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29011,10 +28895,9 @@ public final class PSCS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29185,10 +29068,9 @@ public final class PSCS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29209,10 +29091,9 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -29907,10 +29788,9 @@ public final class PSCS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -29930,10 +29810,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -29954,10 +29833,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -29976,10 +29854,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -29993,10 +29870,9 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the `next_page_token` as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -35205,8 +35081,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -35216,8 +35091,7 @@ public final class PSCS {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -35229,12 +35103,11 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
-     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-     * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+     * Determines whether the host gets a public IP address on creation.
+     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
      * Possible values:
-     * * false - don't assign a public IP to the host.
-     * * true - the host should have a public IP address.
+     * * `false` - do not assign a public IP to the host;
+     * * `true` - assign a public IP to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -35390,8 +35263,7 @@ public final class PSCS {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -35413,8 +35285,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -35440,12 +35311,11 @@ public final class PSCS {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
-     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-     * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+     * Determines whether the host gets a public IP address on creation.
+     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
      * Possible values:
-     * * false - don't assign a public IP to the host.
-     * * true - the host should have a public IP address.
+     * * `false` - do not assign a public IP to the host;
+     * * `true` - assign a public IP to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -35897,8 +35767,7 @@ public final class PSCS {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -35919,8 +35788,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -35942,8 +35810,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -35963,8 +35830,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -35979,8 +35845,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -36003,12 +35868,11 @@ public final class PSCS {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Determines whether the host gets a public IP address on creation.
+       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false - don't assign a public IP to the host.
-       * * true - the host should have a public IP address.
+       * * `false` - do not assign a public IP to the host;
+       * * `true` - assign a public IP to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -36020,12 +35884,11 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Determines whether the host gets a public IP address on creation.
+       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false - don't assign a public IP to the host.
-       * * true - the host should have a public IP address.
+       * * `false` - do not assign a public IP to the host;
+       * * `true` - assign a public IP to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -36040,12 +35903,11 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Determines whether the host gets a public IP address on creation.
+       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false - don't assign a public IP to the host.
-       * * true - the host should have a public IP address.
+       * * `false` - do not assign a public IP to the host;
+       * * `true` - assign a public IP to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -36165,7 +36027,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
+     * Determines whether the host gets a public IP address on creation.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -36365,7 +36227,7 @@ public final class PSCS {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
+     * Determines whether the host gets a public IP address on creation.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -36985,7 +36847,7 @@ public final class PSCS {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
+       * Determines whether the host gets a public IP address on creation.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -36997,7 +36859,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
+       * Determines whether the host gets a public IP address on creation.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -37012,7 +36874,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
+       * Determines whether the host gets a public IP address on creation.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -38185,7 +38047,12 @@ public final class PSCS {
      * <pre>
      * Version of SQL Server used in the cluster.
      * Possible values:
-     * * 2016sp2
+     * * 2016sp2std,
+     * * 2016sp2ent,
+     * * 2017std,
+     * * 2017ent,
+     * * 2019std,
+     * * 2019ent.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -38196,7 +38063,12 @@ public final class PSCS {
      * <pre>
      * Version of SQL Server used in the cluster.
      * Possible values:
-     * * 2016sp2
+     * * 2016sp2std,
+     * * 2016sp2ent,
+     * * 2017std,
+     * * 2017ent,
+     * * 2019std,
+     * * 2019ent.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -38261,6 +38133,114 @@ public final class PSCS {
 
     /**
      * <pre>
+     * Configuration for an SQL Server 2017 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return Whether the sqlserverConfig2017std field is set.
+     */
+    boolean hasSqlserverConfig2017Std();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return The sqlserverConfig2017std.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std getSqlserverConfig2017Std();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017stdOrBuilder getSqlserverConfig2017StdOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return Whether the sqlserverConfig2017ent field is set.
+     */
+    boolean hasSqlserverConfig2017Ent();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return The sqlserverConfig2017ent.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent getSqlserverConfig2017Ent();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017entOrBuilder getSqlserverConfig2017EntOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return Whether the sqlserverConfig2019std field is set.
+     */
+    boolean hasSqlserverConfig2019Std();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return The sqlserverConfig2019std.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std getSqlserverConfig2019Std();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019stdOrBuilder getSqlserverConfig2019StdOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return Whether the sqlserverConfig2019ent field is set.
+     */
+    boolean hasSqlserverConfig2019Ent();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return The sqlserverConfig2019ent.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent getSqlserverConfig2019Ent();
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019entOrBuilder getSqlserverConfig2019EntOrBuilder();
+
+    /**
+     * <pre>
      * Resources allocated to SQL Server hosts.
      * </pre>
      *
@@ -38288,7 +38268,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -38297,7 +38277,7 @@ public final class PSCS {
     boolean hasBackupWindowStart();
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -38306,7 +38286,7 @@ public final class PSCS {
     com.google.type.TimeOfDay getBackupWindowStart();
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -38315,7 +38295,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -38324,7 +38304,7 @@ public final class PSCS {
     boolean hasAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -38333,12 +38313,31 @@ public final class PSCS {
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder();
+
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The enum numeric value on the wire for secondaryConnections.
+     */
+    int getSecondaryConnectionsValue();
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The secondaryConnections.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections getSecondaryConnections();
 
     public yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpec.SqlserverConfigCase getSqlserverConfigCase();
   }
@@ -38356,6 +38355,7 @@ public final class PSCS {
     }
     private ConfigSpec() {
       version_ = "";
+      secondaryConnections_ = 0;
     }
 
     @java.lang.Override
@@ -38461,6 +38461,68 @@ public final class PSCS {
 
               break;
             }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              secondaryConnections_ = rawValue;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 8;
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 9;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 10;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 11;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -38500,6 +38562,10 @@ public final class PSCS {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SQLSERVER_CONFIG_2016SP2STD(2),
       SQLSERVER_CONFIG_2016SP2ENT(5),
+      SQLSERVER_CONFIG_2017STD(8),
+      SQLSERVER_CONFIG_2017ENT(9),
+      SQLSERVER_CONFIG_2019STD(10),
+      SQLSERVER_CONFIG_2019ENT(11),
       SQLSERVERCONFIG_NOT_SET(0);
       private final int value;
       private SqlserverConfigCase(int value) {
@@ -38519,6 +38585,10 @@ public final class PSCS {
         switch (value) {
           case 2: return SQLSERVER_CONFIG_2016SP2STD;
           case 5: return SQLSERVER_CONFIG_2016SP2ENT;
+          case 8: return SQLSERVER_CONFIG_2017STD;
+          case 9: return SQLSERVER_CONFIG_2017ENT;
+          case 10: return SQLSERVER_CONFIG_2019STD;
+          case 11: return SQLSERVER_CONFIG_2019ENT;
           case 0: return SQLSERVERCONFIG_NOT_SET;
           default: return null;
         }
@@ -38540,7 +38610,12 @@ public final class PSCS {
      * <pre>
      * Version of SQL Server used in the cluster.
      * Possible values:
-     * * 2016sp2
+     * * 2016sp2std,
+     * * 2016sp2ent,
+     * * 2017std,
+     * * 2017ent,
+     * * 2019std,
+     * * 2019ent.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -38563,7 +38638,12 @@ public final class PSCS {
      * <pre>
      * Version of SQL Server used in the cluster.
      * Possible values:
-     * * 2016sp2
+     * * 2016sp2std,
+     * * 2016sp2ent,
+     * * 2017std,
+     * * 2017ent,
+     * * 2019std,
+     * * 2019ent.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -38670,6 +38750,178 @@ public final class PSCS {
       return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent.getDefaultInstance();
     }
 
+    public static final int SQLSERVER_CONFIG_2017STD_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return Whether the sqlserverConfig2017std field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2017Std() {
+      return sqlserverConfigCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return The sqlserverConfig2017std.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std getSqlserverConfig2017Std() {
+      if (sqlserverConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017stdOrBuilder getSqlserverConfig2017StdOrBuilder() {
+      if (sqlserverConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance();
+    }
+
+    public static final int SQLSERVER_CONFIG_2017ENT_FIELD_NUMBER = 9;
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return Whether the sqlserverConfig2017ent field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2017Ent() {
+      return sqlserverConfigCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return The sqlserverConfig2017ent.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent getSqlserverConfig2017Ent() {
+      if (sqlserverConfigCase_ == 9) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2017 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017entOrBuilder getSqlserverConfig2017EntOrBuilder() {
+      if (sqlserverConfigCase_ == 9) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance();
+    }
+
+    public static final int SQLSERVER_CONFIG_2019STD_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return Whether the sqlserverConfig2019std field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2019Std() {
+      return sqlserverConfigCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return The sqlserverConfig2019std.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std getSqlserverConfig2019Std() {
+      if (sqlserverConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Standard edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019stdOrBuilder getSqlserverConfig2019StdOrBuilder() {
+      if (sqlserverConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance();
+    }
+
+    public static final int SQLSERVER_CONFIG_2019ENT_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return Whether the sqlserverConfig2019ent field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2019Ent() {
+      return sqlserverConfigCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return The sqlserverConfig2019ent.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent getSqlserverConfig2019Ent() {
+      if (sqlserverConfigCase_ == 11) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for an SQL Server 2019 Enterprise edition cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019entOrBuilder getSqlserverConfig2019EntOrBuilder() {
+      if (sqlserverConfigCase_ == 11) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance();
+    }
+
     public static final int RESOURCES_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_;
     /**
@@ -38712,7 +38964,7 @@ public final class PSCS {
     private com.google.type.TimeOfDay backupWindowStart_;
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -38724,7 +38976,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -38736,7 +38988,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -38750,7 +39002,7 @@ public final class PSCS {
     private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_;
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -38762,7 +39014,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -38774,7 +39026,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -38782,6 +39034,33 @@ public final class PSCS {
     @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
       return getAccess();
+    }
+
+    public static final int SECONDARY_CONNECTIONS_FIELD_NUMBER = 7;
+    private int secondaryConnections_;
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The enum numeric value on the wire for secondaryConnections.
+     */
+    @java.lang.Override public int getSecondaryConnectionsValue() {
+      return secondaryConnections_;
+    }
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The secondaryConnections.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections getSecondaryConnections() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections result = yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.valueOf(secondaryConnections_);
+      return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -38816,6 +39095,21 @@ public final class PSCS {
       if (access_ != null) {
         output.writeMessage(6, getAccess());
       }
+      if (secondaryConnections_ != yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.SECONDARY_CONNECTIONS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, secondaryConnections_);
+      }
+      if (sqlserverConfigCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -38847,6 +39141,26 @@ public final class PSCS {
       if (access_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAccess());
+      }
+      if (secondaryConnections_ != yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.SECONDARY_CONNECTIONS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, secondaryConnections_);
+      }
+      if (sqlserverConfigCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -38880,6 +39194,7 @@ public final class PSCS {
         if (!getAccess()
             .equals(other.getAccess())) return false;
       }
+      if (secondaryConnections_ != other.secondaryConnections_) return false;
       if (!getSqlserverConfigCase().equals(other.getSqlserverConfigCase())) return false;
       switch (sqlserverConfigCase_) {
         case 2:
@@ -38889,6 +39204,22 @@ public final class PSCS {
         case 5:
           if (!getSqlserverConfig2016Sp2Ent()
               .equals(other.getSqlserverConfig2016Sp2Ent())) return false;
+          break;
+        case 8:
+          if (!getSqlserverConfig2017Std()
+              .equals(other.getSqlserverConfig2017Std())) return false;
+          break;
+        case 9:
+          if (!getSqlserverConfig2017Ent()
+              .equals(other.getSqlserverConfig2017Ent())) return false;
+          break;
+        case 10:
+          if (!getSqlserverConfig2019Std()
+              .equals(other.getSqlserverConfig2019Std())) return false;
+          break;
+        case 11:
+          if (!getSqlserverConfig2019Ent()
+              .equals(other.getSqlserverConfig2019Ent())) return false;
           break;
         case 0:
         default:
@@ -38918,6 +39249,8 @@ public final class PSCS {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
         hash = (53 * hash) + getAccess().hashCode();
       }
+      hash = (37 * hash) + SECONDARY_CONNECTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + secondaryConnections_;
       switch (sqlserverConfigCase_) {
         case 2:
           hash = (37 * hash) + SQLSERVER_CONFIG_2016SP2STD_FIELD_NUMBER;
@@ -38926,6 +39259,22 @@ public final class PSCS {
         case 5:
           hash = (37 * hash) + SQLSERVER_CONFIG_2016SP2ENT_FIELD_NUMBER;
           hash = (53 * hash) + getSqlserverConfig2016Sp2Ent().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2017STD_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2017Std().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2017ENT_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2017Ent().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2019STD_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2019Std().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2019ENT_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2019Ent().hashCode();
           break;
         case 0:
         default:
@@ -39083,6 +39432,8 @@ public final class PSCS {
           access_ = null;
           accessBuilder_ = null;
         }
+        secondaryConnections_ = 0;
+
         sqlserverConfigCase_ = 0;
         sqlserverConfig_ = null;
         return this;
@@ -39126,6 +39477,34 @@ public final class PSCS {
             result.sqlserverConfig_ = sqlserverConfig2016Sp2EntBuilder_.build();
           }
         }
+        if (sqlserverConfigCase_ == 8) {
+          if (sqlserverConfig2017StdBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2017StdBuilder_.build();
+          }
+        }
+        if (sqlserverConfigCase_ == 9) {
+          if (sqlserverConfig2017EntBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2017EntBuilder_.build();
+          }
+        }
+        if (sqlserverConfigCase_ == 10) {
+          if (sqlserverConfig2019StdBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2019StdBuilder_.build();
+          }
+        }
+        if (sqlserverConfigCase_ == 11) {
+          if (sqlserverConfig2019EntBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2019EntBuilder_.build();
+          }
+        }
         if (resourcesBuilder_ == null) {
           result.resources_ = resources_;
         } else {
@@ -39141,6 +39520,7 @@ public final class PSCS {
         } else {
           result.access_ = accessBuilder_.build();
         }
+        result.secondaryConnections_ = secondaryConnections_;
         result.sqlserverConfigCase_ = sqlserverConfigCase_;
         onBuilt();
         return result;
@@ -39203,6 +39583,9 @@ public final class PSCS {
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
         }
+        if (other.secondaryConnections_ != 0) {
+          setSecondaryConnectionsValue(other.getSecondaryConnectionsValue());
+        }
         switch (other.getSqlserverConfigCase()) {
           case SQLSERVER_CONFIG_2016SP2STD: {
             mergeSqlserverConfig2016Sp2Std(other.getSqlserverConfig2016Sp2Std());
@@ -39210,6 +39593,22 @@ public final class PSCS {
           }
           case SQLSERVER_CONFIG_2016SP2ENT: {
             mergeSqlserverConfig2016Sp2Ent(other.getSqlserverConfig2016Sp2Ent());
+            break;
+          }
+          case SQLSERVER_CONFIG_2017STD: {
+            mergeSqlserverConfig2017Std(other.getSqlserverConfig2017Std());
+            break;
+          }
+          case SQLSERVER_CONFIG_2017ENT: {
+            mergeSqlserverConfig2017Ent(other.getSqlserverConfig2017Ent());
+            break;
+          }
+          case SQLSERVER_CONFIG_2019STD: {
+            mergeSqlserverConfig2019Std(other.getSqlserverConfig2019Std());
+            break;
+          }
+          case SQLSERVER_CONFIG_2019ENT: {
+            mergeSqlserverConfig2019Ent(other.getSqlserverConfig2019Ent());
             break;
           }
           case SQLSERVERCONFIG_NOT_SET: {
@@ -39265,7 +39664,12 @@ public final class PSCS {
        * <pre>
        * Version of SQL Server used in the cluster.
        * Possible values:
-       * * 2016sp2
+       * * 2016sp2std,
+       * * 2016sp2ent,
+       * * 2017std,
+       * * 2017ent,
+       * * 2019std,
+       * * 2019ent.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -39287,7 +39691,12 @@ public final class PSCS {
        * <pre>
        * Version of SQL Server used in the cluster.
        * Possible values:
-       * * 2016sp2
+       * * 2016sp2std,
+       * * 2016sp2ent,
+       * * 2017std,
+       * * 2017ent,
+       * * 2019std,
+       * * 2019ent.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -39310,7 +39719,12 @@ public final class PSCS {
        * <pre>
        * Version of SQL Server used in the cluster.
        * Possible values:
-       * * 2016sp2
+       * * 2016sp2std,
+       * * 2016sp2ent,
+       * * 2017std,
+       * * 2017ent,
+       * * 2019std,
+       * * 2019ent.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -39331,7 +39745,12 @@ public final class PSCS {
        * <pre>
        * Version of SQL Server used in the cluster.
        * Possible values:
-       * * 2016sp2
+       * * 2016sp2std,
+       * * 2016sp2ent,
+       * * 2017std,
+       * * 2017ent,
+       * * 2019std,
+       * * 2019ent.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -39347,7 +39766,12 @@ public final class PSCS {
        * <pre>
        * Version of SQL Server used in the cluster.
        * Possible values:
-       * * 2016sp2
+       * * 2016sp2std,
+       * * 2016sp2ent,
+       * * 2017std,
+       * * 2017ent,
+       * * 2019std,
+       * * 2019ent.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -39720,6 +40144,714 @@ public final class PSCS {
         return sqlserverConfig2016Sp2EntBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017stdOrBuilder> sqlserverConfig2017StdBuilder_;
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       * @return Whether the sqlserverConfig2017std field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2017Std() {
+        return sqlserverConfigCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       * @return The sqlserverConfig2017std.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std getSqlserverConfig2017Std() {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            return sqlserverConfig2017StdBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder setSqlserverConfig2017Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std value) {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2017StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder setSqlserverConfig2017Std(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.Builder builderForValue) {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2017StdBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder mergeSqlserverConfig2017Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std value) {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 8 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            sqlserverConfig2017StdBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2017StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder clearSqlserverConfig2017Std() {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 8) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2017StdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.Builder getSqlserverConfig2017StdBuilder() {
+        return getSqlserverConfig2017StdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017stdOrBuilder getSqlserverConfig2017StdOrBuilder() {
+        if ((sqlserverConfigCase_ == 8) && (sqlserverConfig2017StdBuilder_ != null)) {
+          return sqlserverConfig2017StdBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017stdOrBuilder> 
+          getSqlserverConfig2017StdFieldBuilder() {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 8)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.getDefaultInstance();
+          }
+          sqlserverConfig2017StdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017stdOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017std) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 8;
+        onChanged();;
+        return sqlserverConfig2017StdBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017entOrBuilder> sqlserverConfig2017EntBuilder_;
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       * @return Whether the sqlserverConfig2017ent field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2017Ent() {
+        return sqlserverConfigCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       * @return The sqlserverConfig2017ent.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent getSqlserverConfig2017Ent() {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 9) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            return sqlserverConfig2017EntBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder setSqlserverConfig2017Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent value) {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2017EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder setSqlserverConfig2017Ent(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.Builder builderForValue) {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2017EntBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder mergeSqlserverConfig2017Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent value) {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 9 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            sqlserverConfig2017EntBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2017EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder clearSqlserverConfig2017Ent() {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 9) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2017EntBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.Builder getSqlserverConfig2017EntBuilder() {
+        return getSqlserverConfig2017EntFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017entOrBuilder getSqlserverConfig2017EntOrBuilder() {
+        if ((sqlserverConfigCase_ == 9) && (sqlserverConfig2017EntBuilder_ != null)) {
+          return sqlserverConfig2017EntBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2017 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017entOrBuilder> 
+          getSqlserverConfig2017EntFieldBuilder() {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 9)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.getDefaultInstance();
+          }
+          sqlserverConfig2017EntBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017entOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfig2017ent) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 9;
+        onChanged();;
+        return sqlserverConfig2017EntBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019stdOrBuilder> sqlserverConfig2019StdBuilder_;
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       * @return Whether the sqlserverConfig2019std field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2019Std() {
+        return sqlserverConfigCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       * @return The sqlserverConfig2019std.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std getSqlserverConfig2019Std() {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            return sqlserverConfig2019StdBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder setSqlserverConfig2019Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std value) {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2019StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder setSqlserverConfig2019Std(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.Builder builderForValue) {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2019StdBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder mergeSqlserverConfig2019Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std value) {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 10 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            sqlserverConfig2019StdBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2019StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder clearSqlserverConfig2019Std() {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 10) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2019StdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.Builder getSqlserverConfig2019StdBuilder() {
+        return getSqlserverConfig2019StdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019stdOrBuilder getSqlserverConfig2019StdOrBuilder() {
+        if ((sqlserverConfigCase_ == 10) && (sqlserverConfig2019StdBuilder_ != null)) {
+          return sqlserverConfig2019StdBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Standard edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019stdOrBuilder> 
+          getSqlserverConfig2019StdFieldBuilder() {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 10)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.getDefaultInstance();
+          }
+          sqlserverConfig2019StdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019stdOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019std) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 10;
+        onChanged();;
+        return sqlserverConfig2019StdBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019entOrBuilder> sqlserverConfig2019EntBuilder_;
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       * @return Whether the sqlserverConfig2019ent field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2019Ent() {
+        return sqlserverConfigCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       * @return The sqlserverConfig2019ent.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent getSqlserverConfig2019Ent() {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 11) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            return sqlserverConfig2019EntBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder setSqlserverConfig2019Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent value) {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2019EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder setSqlserverConfig2019Ent(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.Builder builderForValue) {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2019EntBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder mergeSqlserverConfig2019Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent value) {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 11 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            sqlserverConfig2019EntBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2019EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder clearSqlserverConfig2019Ent() {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 11) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2019EntBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.Builder getSqlserverConfig2019EntBuilder() {
+        return getSqlserverConfig2019EntFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019entOrBuilder getSqlserverConfig2019EntOrBuilder() {
+        if ((sqlserverConfigCase_ == 11) && (sqlserverConfig2019EntBuilder_ != null)) {
+          return sqlserverConfig2019EntBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for an SQL Server 2019 Enterprise edition cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfig2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019entOrBuilder> 
+          getSqlserverConfig2019EntFieldBuilder() {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 11)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.getDefaultInstance();
+          }
+          sqlserverConfig2019EntBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019entOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfig2019ent) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 11;
+        onChanged();;
+        return sqlserverConfig2019EntBuilder_;
+      }
+
       private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources, yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.ResourcesOrBuilder> resourcesBuilder_;
@@ -39880,7 +41012,7 @@ public final class PSCS {
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> backupWindowStartBuilder_;
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39891,7 +41023,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39906,7 +41038,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39926,7 +41058,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39944,7 +41076,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39966,7 +41098,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39984,7 +41116,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -39996,7 +41128,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -40011,7 +41143,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -40035,7 +41167,7 @@ public final class PSCS {
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> accessBuilder_;
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40046,7 +41178,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40061,7 +41193,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40081,7 +41213,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40099,7 +41231,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40121,7 +41253,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40139,7 +41271,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40151,7 +41283,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40166,7 +41298,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -40183,6 +41315,80 @@ public final class PSCS {
           access_ = null;
         }
         return accessBuilder_;
+      }
+
+      private int secondaryConnections_ = 0;
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @return The enum numeric value on the wire for secondaryConnections.
+       */
+      @java.lang.Override public int getSecondaryConnectionsValue() {
+        return secondaryConnections_;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @param value The enum numeric value on the wire for secondaryConnections to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondaryConnectionsValue(int value) {
+        
+        secondaryConnections_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @return The secondaryConnections.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections getSecondaryConnections() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections result = yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.valueOf(secondaryConnections_);
+        return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @param value The secondaryConnections to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondaryConnections(yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        secondaryConnections_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecondaryConnections() {
+        
+        secondaryConnections_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -40454,228 +41660,246 @@ public final class PSCS {
       "roto\032,yandex/cloud/mdb/sqlserver/v1/data" +
       "base.proto\032(yandex/cloud/mdb/sqlserver/v" +
       "1/user.proto\032;yandex/cloud/mdb/sqlserver" +
-      "/v1/config/sqlserver2016sp2.proto\"5\n\021Get" +
-      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfold" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024L" +
-      "istClustersResponse\0228\n\010clusters\030\001 \003(\0132&." +
-      "yandex.cloud.mdb.sqlserver.v1.Cluster\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\273\006\n\024CreateCluster" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
-      "-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220" +
-      "\001\n\006labels\030\004 \003(\0132?.yandex.cloud.mdb.sqlse" +
-      "rver.v1.CreateClusterRequest.LabelsEntry" +
-      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
-      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022G\n\013environment" +
-      "\030\005 \001(\01622.yandex.cloud.mdb.sqlserver.v1.C" +
-      "luster.Environment\022>\n\013config_spec\030\006 \001(\0132" +
-      ").yandex.cloud.mdb.sqlserver.v1.ConfigSp" +
-      "ec\022C\n\016database_specs\030\007 \003(\0132+.yandex.clou" +
-      "d.mdb.sqlserver.v1.DatabaseSpec\022;\n\nuser_" +
-      "specs\030\010 \003(\0132\'.yandex.cloud.mdb.sqlserver" +
-      ".v1.UserSpec\022;\n\nhost_specs\030\t \003(\0132\'.yande" +
-      "x.cloud.mdb.sqlserver.v1.HostSpec\022\034\n\nnet" +
-      "work_id\030\n \001(\tB\010\212\3101\004<=50\022\032\n\022security_grou" +
-      "p_ids\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010" +
-      "\022\037\n\014sqlcollation\030\r \001(\tB\t\212\3101\005<=100\022\026\n\016hos" +
-      "t_group_ids\030\016 \003(\t\022\032\n\022service_account_id\030" +
-      "\017 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\"\212\004\n\024UpdateClusterReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001" +
-      "\n\006labels\030\004 \003(\0132?.yandex.cloud.mdb.sqlser" +
-      "ver.v1.UpdateClusterRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022>\n\013config_spec\030" +
-      "\005 \001(\0132).yandex.cloud.mdb.sqlserver.v1.Co" +
-      "nfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022\032\n\022security_group_ids\030\007 \003(\t\022\033" +
-      "\n\023deletion_protection\030\010 \001(\010\022\032\n\022service_a" +
-      "ccount_id\030\t \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"8\n\024BackupClusterRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupCl" +
-      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\327\005\n\025Re" +
-      "storeClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004" +
-      "\350\3071\001\022.\n\004time\030\002 \001(\0132\032.google.protobuf.Tim" +
-      "estampB\004\350\3071\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022\036\n\013description\030\005 \001(\tB\t\212\3101\005<=2" +
-      "56\022\221\001\n\006labels\030\006 \003(\0132@.yandex.cloud.mdb.s" +
-      "qlserver.v1.RestoreClusterRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022G\n\013enviro" +
-      "nment\030\007 \001(\01622.yandex.cloud.mdb.sqlserver" +
-      ".v1.Cluster.Environment\022>\n\013config_spec\030\010" +
-      " \001(\0132).yandex.cloud.mdb.sqlserver.v1.Con" +
-      "figSpec\022;\n\nhost_specs\030\t \003(\0132\'.yandex.clo" +
-      "ud.mdb.sqlserver.v1.HostSpec\022\034\n\nnetwork_" +
-      "id\030\n \001(\tB\010\212\3101\004<=50\022\033\n\tfolder_id\030\013 \001(\tB\010\212" +
-      "\3101\004<=50\022\032\n\022security_group_ids\030\014 \003(\t\022\033\n\023d" +
-      "eletion_protection\030\r \001(\010\022\026\n\016host_group_i" +
-      "ds\030\016 \003(\t\022\032\n\022service_account_id\030\017 \001(\t\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"?\n\026RestoreClusterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033StartClu" +
-      "sterFailoverRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\3101\005<=" +
-      "253\"2\n\034StartClusterFailoverMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimesta" +
-      "mp\030\001 \001(\0132\032.google.protobuf.Timestamp\022F\n\007" +
-      "message\030\002 \003(\01325.yandex.cloud.mdb.sqlserv" +
-      "er.v1.LogRecord.MessageEntry\032.\n\014MessageE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\335\003\n" +
-      "\026ListClusterLogsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t" +
-      "\022W\n\014service_type\030\003 \001(\0162A.yandex.cloud.md" +
-      "b.sqlserver.v1.ListClusterLogsRequest.Se" +
-      "rviceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003" +
-      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=" +
-      "100\022\036\n\026always_next_page_token\030\010 \001(\010\022\032\n\006f" +
-      "ilter\030\t \001(\tB\n\212\3101\006<=1000\"[\n\013ServiceType\022\034" +
-      "\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\023\n\017SQLSERVE" +
-      "R_ERROR\020\001\022\031\n\025SQLSERVER_APPLICATION\020\002\"j\n\027" +
-      "ListClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(." +
-      "yandex.cloud.mdb.sqlserver.v1.LogRecord\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"~\n\034ListClusterO" +
-      "perationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035List" +
-      "ClusterOperationsResponse\0225\n\noperations\030" +
-      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031ListCluster" +
-      "BackupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\032ListCl" +
-      "usterBackupsResponse\0226\n\007backups\030\001 \003(\0132%." +
-      "yandex.cloud.mdb.sqlserver.v1.Backup\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"y\n\027ListClusterHost" +
-      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClusterH" +
-      "ostsResponse\0222\n\005hosts\030\001 \003(\0132#.yandex.clo" +
-      "ud.mdb.sqlserver.v1.Host\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"7\n\023StartClusterRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClust" +
-      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCl" +
-      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination" +
-      "_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCl" +
-      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020sou" +
-      "rce_folder_id\030\002 \001(\t\022\035\n\025destination_folde" +
-      "r_id\030\003 \001(\t\"D\n\032UpdateClusterHostsMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t" +
-      "\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
-      "\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_p" +
-      "ublic_ip\030\003 \001(\010\"t\n\016UpdateHostSpec\022\027\n\thost" +
-      "_name\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMask\022\030\n\020assign_pub" +
-      "lic_ip\030\003 \001(\010\"\217\001\n\031UpdateClusterHostsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\021" +
-      "update_host_specs\030\002 \003(\0132-.yandex.cloud.m" +
-      "db.sqlserver.v1.UpdateHostSpecB\006\202\3101\002>0\"\344" +
-      "\003\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022\202\001\n\033sqlse" +
-      "rver_config_2016sp2std\030\002 \001(\0132?.yandex.cl" +
-      "oud.mdb.sqlserver.v1.config.SQLServerCon" +
-      "fig2016sp2stdH\000R\032sqlserverConfig_2016sp2" +
-      "std\022\202\001\n\033sqlserver_config_2016sp2ent\030\005 \001(" +
-      "\0132?.yandex.cloud.mdb.sqlserver.v1.config" +
-      ".SQLServerConfig2016sp2entH\000R\032sqlserverC" +
-      "onfig_2016sp2ent\022;\n\tresources\030\003 \001(\0132(.ya" +
-      "ndex.cloud.mdb.sqlserver.v1.Resources\0223\n" +
-      "\023backup_window_start\030\004 \001(\0132\026.google.type" +
-      ".TimeOfDay\0225\n\006access\030\006 \001(\0132%.yandex.clou" +
-      "d.mdb.sqlserver.v1.AccessB\022\n\020sqlserver_c" +
-      "onfig2\304\027\n\016ClusterService\022\220\001\n\003Get\0220.yande" +
-      "x.cloud.mdb.sqlserver.v1.GetClusterReque" +
-      "st\032&.yandex.cloud.mdb.sqlserver.v1.Clust" +
-      "er\"/\202\323\344\223\002)\022\'/mdb/sqlserver/v1/clusters/{" +
-      "cluster_id}\022\223\001\n\004List\0222.yandex.cloud.mdb." +
-      "sqlserver.v1.ListClustersRequest\0323.yande" +
-      "x.cloud.mdb.sqlserver.v1.ListClustersRes" +
-      "ponse\"\"\202\323\344\223\002\034\022\032/mdb/sqlserver/v1/cluster" +
-      "s\022\253\001\n\006Create\0223.yandex.cloud.mdb.sqlserve" +
-      "r.v1.CreateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"I\202\323\344\223\002\037\"\032/mdb/sqlse" +
-      "rver/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
-      "tadata\022\007Cluster\022\270\001\n\006Update\0223.yandex.clou" +
-      "d.mdb.sqlserver.v1.UpdateClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
-      "\002,2\'/mdb/sqlserver/v1/clusters/{cluster_" +
-      "id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clust" +
-      "er\022\303\001\n\006Delete\0223.yandex.cloud.mdb.sqlserv" +
-      "er.v1.DeleteClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"a\202\323\344\223\002)*\'/mdb/sqls" +
-      "erver/v1/clusters/{cluster_id}\262\322*.\n\025Dele" +
-      "teClusterMetadata\022\025google.protobuf.Empty" +
-      "\022\270\001\n\005Start\0222.yandex.cloud.mdb.sqlserver." +
-      "v1.StartClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"X\202\323\344\223\002/\"-/mdb/sqlserve" +
-      "r/v1/clusters/{cluster_id}:start\262\322*\037\n\024St" +
-      "artClusterMetadata\022\007Cluster\022\264\001\n\004Stop\0221.y" +
-      "andex.cloud.mdb.sqlserver.v1.StopCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"V\202\323\344\223\002.\",/mdb/sqlserver/v1/clusters/{" +
-      "cluster_id}:stop\262\322*\036\n\023StopClusterMetadat" +
-      "a\022\007Cluster\022\267\001\n\004Move\0221.yandex.cloud.mdb.s" +
-      "qlserver.v1.MoveClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"Y\202\323\344\223\0021\",/mdb/" +
-      "sqlserver/v1/clusters/{cluster_id}:move:" +
-      "\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\274\001\n" +
-      "\006Backup\0223.yandex.cloud.mdb.sqlserver.v1." +
-      "BackupClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"Z\202\323\344\223\0020\"./mdb/sqlserver/" +
-      "v1/clusters/{cluster_id}:backup\262\322* \n\025Bac" +
-      "kupClusterMetadata\022\007Cluster\022\266\001\n\007Restore\022" +
-      "4.yandex.cloud.mdb.sqlserver.v1.RestoreC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"R\202\323\344\223\002\'\"\"/mdb/sqlserver/v1/clus" +
-      "ters:restore:\001*\262\322*!\n\026RestoreClusterMetad" +
-      "ata\022\007Cluster\022\333\001\n\rStartFailover\022:.yandex." +
-      "cloud.mdb.sqlserver.v1.StartClusterFailo" +
-      "verRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"k\202\323\344\223\002:\"5/mdb/sqlserver/v1/cluster" +
-      "s/{cluster_id}:startFailover:\001*\262\322*\'\n\034Sta" +
-      "rtClusterFailoverMetadata\022\007Cluster\022\257\001\n\010L" +
-      "istLogs\0225.yandex.cloud.mdb.sqlserver.v1." +
-      "ListClusterLogsRequest\0326.yandex.cloud.md" +
-      "b.sqlserver.v1.ListClusterLogsResponse\"4" +
-      "\202\323\344\223\002.\022,/mdb/sqlserver/v1/clusters/{clus" +
-      "ter_id}:logs\022\307\001\n\016ListOperations\022;.yandex" +
-      ".cloud.mdb.sqlserver.v1.ListClusterOpera" +
-      "tionsRequest\032<.yandex.cloud.mdb.sqlserve" +
-      "r.v1.ListClusterOperationsResponse\":\202\323\344\223" +
-      "\0024\0222/mdb/sqlserver/v1/clusters/{cluster_" +
-      "id}/operations\022\273\001\n\013ListBackups\0228.yandex." +
-      "cloud.mdb.sqlserver.v1.ListClusterBackup" +
-      "sRequest\0329.yandex.cloud.mdb.sqlserver.v1" +
-      ".ListClusterBackupsResponse\"7\202\323\344\223\0021\022//md" +
-      "b/sqlserver/v1/clusters/{cluster_id}/bac" +
-      "kups\022\263\001\n\tListHosts\0226.yandex.cloud.mdb.sq" +
-      "lserver.v1.ListClusterHostsRequest\0327.yan" +
-      "dex.cloud.mdb.sqlserver.v1.ListClusterHo" +
-      "stsResponse\"5\202\323\344\223\002/\022-/mdb/sqlserver/v1/c" +
-      "lusters/{cluster_id}/hosts\022\347\001\n\013UpdateHos" +
-      "ts\0228.yandex.cloud.mdb.sqlserver.v1.Updat" +
-      "eClusterHostsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"{\202\323\344\223\002>\"9/mdb/sqlserver/" +
-      "v1/clusters/{cluster_id}/hosts:batchUpda" +
-      "te:\001*\262\322*3\n\032UpdateClusterHostsMetadata\022\025g" +
-      "oogle.protobuf.EmptyBv\n!yandex.cloud.api" +
-      ".mdb.sqlserver.v1B\004PSCSZKgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/sq" +
-      "lserver/v1;sqlserverb\006proto3"
+      "/v1/config/sqlserver2016sp2.proto\0328yande" +
+      "x/cloud/mdb/sqlserver/v1/config/sqlserve" +
+      "r2017.proto\0328yandex/cloud/mdb/sqlserver/" +
+      "v1/config/sqlserver2019.proto\"5\n\021GetClus" +
+      "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolder_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024ListC" +
+      "lustersResponse\0228\n\010clusters\030\001 \003(\0132&.yand" +
+      "ex.cloud.mdb.sqlserver.v1.Cluster\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"\273\006\n\024CreateClusterRequ" +
+      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004" +
+      "name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
+      "]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006l" +
+      "abels\030\004 \003(\0132?.yandex.cloud.mdb.sqlserver" +
+      ".v1.CreateClusterRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022G\n\013environment\030\005 \001" +
+      "(\01622.yandex.cloud.mdb.sqlserver.v1.Clust" +
+      "er.Environment\022>\n\013config_spec\030\006 \001(\0132).ya" +
+      "ndex.cloud.mdb.sqlserver.v1.ConfigSpec\022C" +
+      "\n\016database_specs\030\007 \003(\0132+.yandex.cloud.md" +
+      "b.sqlserver.v1.DatabaseSpec\022;\n\nuser_spec" +
+      "s\030\010 \003(\0132\'.yandex.cloud.mdb.sqlserver.v1." +
+      "UserSpec\022;\n\nhost_specs\030\t \003(\0132\'.yandex.cl" +
+      "oud.mdb.sqlserver.v1.HostSpec\022\034\n\nnetwork" +
+      "_id\030\n \001(\tB\010\212\3101\004<=50\022\032\n\022security_group_id" +
+      "s\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010\022\037\n\014" +
+      "sqlcollation\030\r \001(\tB\t\212\3101\005<=100\022\026\n\016host_gr" +
+      "oup_ids\030\016 \003(\t\022\032\n\022service_account_id\030\017 \001(" +
+      "\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\"\212\004\n\024UpdateClusterRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upda" +
+      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006la" +
+      "bels\030\004 \003(\0132?.yandex.cloud.mdb.sqlserver." +
+      "v1.UpdateClusterRequest.LabelsEntryB?\202\3101" +
+      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\022>\n\013config_spec\030\005 \001(" +
+      "\0132).yandex.cloud.mdb.sqlserver.v1.Config" +
+      "Spec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0" +
+      "-9_-]*\022\032\n\022security_group_ids\030\007 \003(\t\022\033\n\023de" +
+      "letion_protection\030\010 \001(\010\022\032\n\022service_accou" +
+      "nt_id\030\t \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteCluster" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\"8\n\024BackupClusterRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\327\005\n\025Restor" +
+      "eClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022.\n\004time\030\002 \001(\0132\032.google.protobuf.Timesta" +
+      "mpB\004\350\3071\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-zA-Z0" +
+      "-9_-]*\022\036\n\013description\030\005 \001(\tB\t\212\3101\005<=256\022\221" +
+      "\001\n\006labels\030\006 \003(\0132@.yandex.cloud.mdb.sqlse" +
+      "rver.v1.RestoreClusterRequest.LabelsEntr" +
+      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
+      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022G\n\013environmen" +
+      "t\030\007 \001(\01622.yandex.cloud.mdb.sqlserver.v1." +
+      "Cluster.Environment\022>\n\013config_spec\030\010 \001(\013" +
+      "2).yandex.cloud.mdb.sqlserver.v1.ConfigS" +
+      "pec\022;\n\nhost_specs\030\t \003(\0132\'.yandex.cloud.m" +
+      "db.sqlserver.v1.HostSpec\022\034\n\nnetwork_id\030\n" +
+      " \001(\tB\010\212\3101\004<=50\022\033\n\tfolder_id\030\013 \001(\tB\010\212\3101\004<" +
+      "=50\022\032\n\022security_group_ids\030\014 \003(\t\022\033\n\023delet" +
+      "ion_protection\030\r \001(\010\022\026\n\016host_group_ids\030\016" +
+      " \003(\t\022\032\n\022service_account_id\030\017 \001(\t\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "?\n\026RestoreClusterMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033StartCluster" +
+      "FailoverRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\3101\005<=253\"" +
+      "2\n\034StartClusterFailoverMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030\001" +
+      " \001(\0132\032.google.protobuf.Timestamp\022F\n\007mess" +
+      "age\030\002 \003(\01325.yandex.cloud.mdb.sqlserver.v" +
+      "1.LogRecord.MessageEntry\032.\n\014MessageEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\335\003\n\026Lis" +
+      "tClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014" +
+      "service_type\030\003 \001(\0162A.yandex.cloud.mdb.sq" +
+      "lserver.v1.ListClusterLogsRequest.Servic" +
+      "eType\022-\n\tfrom_time\030\004 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\307" +
+      "1\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022" +
+      "\036\n\026always_next_page_token\030\010 \001(\010\022\032\n\006filte" +
+      "r\030\t \001(\tB\n\212\3101\006<=1000\"[\n\013ServiceType\022\034\n\030SE" +
+      "RVICE_TYPE_UNSPECIFIED\020\000\022\023\n\017SQLSERVER_ER" +
+      "ROR\020\001\022\031\n\025SQLSERVER_APPLICATION\020\002\"j\n\027List" +
+      "ClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(.yand" +
+      "ex.cloud.mdb.sqlserver.v1.LogRecord\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"~\n\034ListClusterOpera" +
+      "tionsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClus" +
+      "terOperationsResponse\0225\n\noperations\030\001 \003(" +
+      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"{\n\031ListClusterBack" +
+      "upsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\032ListCluste" +
+      "rBackupsResponse\0226\n\007backups\030\001 \003(\0132%.yand" +
+      "ex.cloud.mdb.sqlserver.v1.Backup\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"y\n\027ListClusterHostsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClusterHosts" +
+      "Response\0222\n\005hosts\030\001 \003(\0132#.yandex.cloud.m" +
+      "db.sqlserver.v1.Host\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMe" +
+      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCluste" +
+      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\")\n\023StopClusterMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fol" +
+      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_" +
+      "folder_id\030\002 \001(\t\022\035\n\025destination_folder_id" +
+      "\030\003 \001(\t\"D\n\032UpdateClusterHostsMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\\\n\010" +
+      "HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\ts" +
+      "ubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_publi" +
+      "c_ip\030\003 \001(\010\"t\n\016UpdateHostSpec\022\027\n\thost_nam" +
+      "e\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\022\030\n\020assign_public_" +
+      "ip\030\003 \001(\010\"\217\001\n\031UpdateClusterHostsRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\021upda" +
+      "te_host_specs\030\002 \003(\0132-.yandex.cloud.mdb.s" +
+      "qlserver.v1.UpdateHostSpecB\006\202\3101\002>0\"\262\010\n\nC" +
+      "onfigSpec\022\017\n\007version\030\001 \001(\t\022\202\001\n\033sqlserver" +
+      "_config_2016sp2std\030\002 \001(\0132?.yandex.cloud." +
+      "mdb.sqlserver.v1.config.SQLServerConfig2" +
+      "016sp2stdH\000R\032sqlserverConfig_2016sp2std\022" +
+      "\202\001\n\033sqlserver_config_2016sp2ent\030\005 \001(\0132?." +
+      "yandex.cloud.mdb.sqlserver.v1.config.SQL" +
+      "ServerConfig2016sp2entH\000R\032sqlserverConfi" +
+      "g_2016sp2ent\022y\n\030sqlserver_config_2017std" +
+      "\030\010 \001(\0132<.yandex.cloud.mdb.sqlserver.v1.c" +
+      "onfig.SQLServerConfig2017stdH\000R\027sqlserve" +
+      "rConfig_2017std\022y\n\030sqlserver_config_2017" +
+      "ent\030\t \001(\0132<.yandex.cloud.mdb.sqlserver.v" +
+      "1.config.SQLServerConfig2017entH\000R\027sqlse" +
+      "rverConfig_2017ent\022y\n\030sqlserver_config_2" +
+      "019std\030\n \001(\0132<.yandex.cloud.mdb.sqlserve" +
+      "r.v1.config.SQLServerConfig2019stdH\000R\027sq" +
+      "lserverConfig_2019std\022y\n\030sqlserver_confi" +
+      "g_2019ent\030\013 \001(\0132<.yandex.cloud.mdb.sqlse" +
+      "rver.v1.config.SQLServerConfig2019entH\000R" +
+      "\027sqlserverConfig_2019ent\022;\n\tresources\030\003 " +
+      "\001(\0132(.yandex.cloud.mdb.sqlserver.v1.Reso" +
+      "urces\0223\n\023backup_window_start\030\004 \001(\0132\026.goo" +
+      "gle.type.TimeOfDay\0225\n\006access\030\006 \001(\0132%.yan" +
+      "dex.cloud.mdb.sqlserver.v1.Access\022`\n\025sec" +
+      "ondary_connections\030\007 \001(\0162A.yandex.cloud." +
+      "mdb.sqlserver.v1.ClusterConfig.Secondary" +
+      "ConnectionsB\022\n\020sqlserver_config2\304\027\n\016Clus" +
+      "terService\022\220\001\n\003Get\0220.yandex.cloud.mdb.sq" +
+      "lserver.v1.GetClusterRequest\032&.yandex.cl" +
+      "oud.mdb.sqlserver.v1.Cluster\"/\202\323\344\223\002)\022\'/m" +
+      "db/sqlserver/v1/clusters/{cluster_id}\022\223\001" +
+      "\n\004List\0222.yandex.cloud.mdb.sqlserver.v1.L" +
+      "istClustersRequest\0323.yandex.cloud.mdb.sq" +
+      "lserver.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022" +
+      "\032/mdb/sqlserver/v1/clusters\022\253\001\n\006Create\0223" +
+      ".yandex.cloud.mdb.sqlserver.v1.CreateClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"I\202\323\344\223\002\037\"\032/mdb/sqlserver/v1/cluste" +
+      "rs:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluste" +
+      "r\022\270\001\n\006Update\0223.yandex.cloud.mdb.sqlserve" +
+      "r.v1.UpdateClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"V\202\323\344\223\002,2\'/mdb/sqlse" +
+      "rver/v1/clusters/{cluster_id}:\001*\262\322* \n\025Up" +
+      "dateClusterMetadata\022\007Cluster\022\303\001\n\006Delete\022" +
+      "3.yandex.cloud.mdb.sqlserver.v1.DeleteCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"a\202\323\344\223\002)*\'/mdb/sqlserver/v1/clust" +
+      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
+      "ata\022\025google.protobuf.Empty\022\270\001\n\005Start\0222.y" +
+      "andex.cloud.mdb.sqlserver.v1.StartCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"X\202\323\344\223\002/\"-/mdb/sqlserver/v1/clusters/" +
+      "{cluster_id}:start\262\322*\037\n\024StartClusterMeta" +
+      "data\022\007Cluster\022\264\001\n\004Stop\0221.yandex.cloud.md" +
+      "b.sqlserver.v1.StopClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"V\202\323\344\223\002.\",/m" +
+      "db/sqlserver/v1/clusters/{cluster_id}:st" +
+      "op\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\267\001\n" +
+      "\004Move\0221.yandex.cloud.mdb.sqlserver.v1.Mo" +
+      "veClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Y\202\323\344\223\0021\",/mdb/sqlserver/v1/c" +
+      "lusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveCl" +
+      "usterMetadata\022\007Cluster\022\274\001\n\006Backup\0223.yand" +
+      "ex.cloud.mdb.sqlserver.v1.BackupClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"Z\202\323\344\223\0020\"./mdb/sqlserver/v1/clusters/{c" +
+      "luster_id}:backup\262\322* \n\025BackupClusterMeta" +
+      "data\022\007Cluster\022\266\001\n\007Restore\0224.yandex.cloud" +
+      ".mdb.sqlserver.v1.RestoreClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"R\202\323\344\223" +
+      "\002\'\"\"/mdb/sqlserver/v1/clusters:restore:\001" +
+      "*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\333" +
+      "\001\n\rStartFailover\022:.yandex.cloud.mdb.sqls" +
+      "erver.v1.StartClusterFailoverRequest\032!.y" +
+      "andex.cloud.operation.Operation\"k\202\323\344\223\002:\"" +
+      "5/mdb/sqlserver/v1/clusters/{cluster_id}" +
+      ":startFailover:\001*\262\322*\'\n\034StartClusterFailo" +
+      "verMetadata\022\007Cluster\022\257\001\n\010ListLogs\0225.yand" +
+      "ex.cloud.mdb.sqlserver.v1.ListClusterLog" +
+      "sRequest\0326.yandex.cloud.mdb.sqlserver.v1" +
+      ".ListClusterLogsResponse\"4\202\323\344\223\002.\022,/mdb/s" +
+      "qlserver/v1/clusters/{cluster_id}:logs\022\307" +
+      "\001\n\016ListOperations\022;.yandex.cloud.mdb.sql" +
+      "server.v1.ListClusterOperationsRequest\032<" +
+      ".yandex.cloud.mdb.sqlserver.v1.ListClust" +
+      "erOperationsResponse\":\202\323\344\223\0024\0222/mdb/sqlse" +
+      "rver/v1/clusters/{cluster_id}/operations" +
+      "\022\273\001\n\013ListBackups\0228.yandex.cloud.mdb.sqls" +
+      "erver.v1.ListClusterBackupsRequest\0329.yan" +
+      "dex.cloud.mdb.sqlserver.v1.ListClusterBa" +
+      "ckupsResponse\"7\202\323\344\223\0021\022//mdb/sqlserver/v1" +
+      "/clusters/{cluster_id}/backups\022\263\001\n\tListH" +
+      "osts\0226.yandex.cloud.mdb.sqlserver.v1.Lis" +
+      "tClusterHostsRequest\0327.yandex.cloud.mdb." +
+      "sqlserver.v1.ListClusterHostsResponse\"5\202" +
+      "\323\344\223\002/\022-/mdb/sqlserver/v1/clusters/{clust" +
+      "er_id}/hosts\022\347\001\n\013UpdateHosts\0228.yandex.cl" +
+      "oud.mdb.sqlserver.v1.UpdateClusterHostsR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"{\202\323\344\223\002>\"9/mdb/sqlserver/v1/clusters/{c" +
+      "luster_id}/hosts:batchUpdate:\001*\262\322*3\n\032Upd" +
+      "ateClusterHostsMetadata\022\025google.protobuf" +
+      ".EmptyBv\n!yandex.cloud.api.mdb.sqlserver" +
+      ".v1B\004PSCSZKgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/sqlserver/v1;sql" +
+      "serverb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -40692,6 +41916,8 @@ public final class PSCS {
           yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_sqlserver_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -40926,7 +42152,7 @@ public final class PSCS {
     internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "Resources", "BackupWindowStart", "Access", "SqlserverConfig", });
+        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "SqlserverConfig2017Std", "SqlserverConfig2017Ent", "SqlserverConfig2019Std", "SqlserverConfig2019Ent", "Resources", "BackupWindowStart", "Access", "SecondaryConnections", "SqlserverConfig", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -40951,6 +42177,8 @@ public final class PSCS {
     yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

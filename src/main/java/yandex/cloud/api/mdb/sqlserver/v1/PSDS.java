@@ -850,9 +850,8 @@ public final class PSDS {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListDatabasesResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -862,8 +861,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -872,8 +870,7 @@ public final class PSDS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1030,9 +1027,8 @@ public final class PSDS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than `page_size`, the service returns a [ListDatabasesResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1047,8 +1043,7 @@ public final class PSDS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1069,8 +1064,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1532,9 +1526,8 @@ public final class PSDS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListDatabasesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1546,9 +1539,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListDatabasesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1563,9 +1555,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than `page_size`, the service returns a [ListDatabasesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -1581,8 +1572,7 @@ public final class PSDS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1602,8 +1592,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1624,8 +1613,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1644,8 +1632,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1659,8 +1646,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, Set `page_token` to the [ListDatabasesResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListDatabasesResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1781,10 +1767,9 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1793,10 +1778,9 @@ public final class PSDS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1967,10 +1951,9 @@ public final class PSDS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1991,10 +1974,9 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Token that allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-     * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own `next_page_token` to continue paging through the results.
+     * Token that allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2689,10 +2671,9 @@ public final class PSDS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2712,10 +2693,9 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2736,10 +2716,9 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2758,10 +2737,9 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2775,10 +2753,9 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Token that allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDatabasesRequest.page_size], use the `next_page_token` as the value
-       * for the [ListDatabasesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own `next_page_token` to continue paging through the results.
+       * Token that allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListDatabasesRequest.page_size], use the [next_page_token] as the value for the [ListDatabasesRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -6119,8 +6096,8 @@ public final class PSDS {
 
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to restore a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6129,8 +6106,8 @@ public final class PSDS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to restore a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6141,7 +6118,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of the SQLServer database that is being restored.
+     * Name of the SQL Server database that is being restored.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -6150,7 +6127,7 @@ public final class PSDS {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the SQLServer database that is being restored.
+     * Name of the SQL Server database that is being restored.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -6161,7 +6138,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -6170,7 +6147,7 @@ public final class PSDS {
     java.lang.String getFromDatabase();
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -6181,7 +6158,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -6190,7 +6167,7 @@ public final class PSDS {
     java.lang.String getBackupId();
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -6201,7 +6178,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     *Timestamp which is used for Point-in-Time recovery
+     * Timestamp which is used for Point-in-Time recovery.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -6210,7 +6187,7 @@ public final class PSDS {
     boolean hasTime();
     /**
      * <pre>
-     *Timestamp which is used for Point-in-Time recovery
+     * Timestamp which is used for Point-in-Time recovery.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -6219,7 +6196,7 @@ public final class PSDS {
     com.google.protobuf.Timestamp getTime();
     /**
      * <pre>
-     *Timestamp which is used for Point-in-Time recovery
+     * Timestamp which is used for Point-in-Time recovery.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -6348,8 +6325,8 @@ public final class PSDS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to restore a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6370,8 +6347,8 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to restore a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6396,7 +6373,7 @@ public final class PSDS {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the SQLServer database that is being restored.
+     * Name of the SQL Server database that is being restored.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -6417,7 +6394,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of the SQLServer database that is being restored.
+     * Name of the SQL Server database that is being restored.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -6442,7 +6419,7 @@ public final class PSDS {
     private volatile java.lang.Object fromDatabase_;
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -6463,7 +6440,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -6488,7 +6465,7 @@ public final class PSDS {
     private volatile java.lang.Object backupId_;
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -6509,7 +6486,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -6534,7 +6511,7 @@ public final class PSDS {
     private com.google.protobuf.Timestamp time_;
     /**
      * <pre>
-     *Timestamp which is used for Point-in-Time recovery
+     * Timestamp which is used for Point-in-Time recovery.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -6546,7 +6523,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *Timestamp which is used for Point-in-Time recovery
+     * Timestamp which is used for Point-in-Time recovery.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -6558,7 +6535,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *Timestamp which is used for Point-in-Time recovery
+     * Timestamp which is used for Point-in-Time recovery.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -6954,8 +6931,8 @@ public final class PSDS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to restore a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6975,8 +6952,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to restore a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6997,8 +6974,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to restore a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7017,8 +6994,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to restore a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7032,8 +7009,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to restore a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7055,7 +7032,7 @@ public final class PSDS {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the SQLServer database that is being restored.
+       * Name of the SQL Server database that is being restored.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7075,7 +7052,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being restored.
+       * Name of the SQL Server database that is being restored.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7096,7 +7073,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being restored.
+       * Name of the SQL Server database that is being restored.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7115,7 +7092,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being restored.
+       * Name of the SQL Server database that is being restored.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7129,7 +7106,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being restored.
+       * Name of the SQL Server database that is being restored.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7151,7 +7128,7 @@ public final class PSDS {
       private java.lang.Object fromDatabase_ = "";
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7171,7 +7148,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7192,7 +7169,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7211,7 +7188,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7225,7 +7202,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7247,7 +7224,7 @@ public final class PSDS {
       private java.lang.Object backupId_ = "";
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7267,7 +7244,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7288,7 +7265,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7307,7 +7284,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7321,7 +7298,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7345,7 +7322,7 @@ public final class PSDS {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7356,7 +7333,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7371,7 +7348,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7391,7 +7368,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7409,7 +7386,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7431,7 +7408,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7449,7 +7426,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7461,7 +7438,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7476,7 +7453,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Timestamp which is used for Point-in-Time recovery
+       * Timestamp which is used for Point-in-Time recovery.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
@@ -7553,7 +7530,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being created.
+     * ID of the SQL Server cluster where a database is being created.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7562,7 +7539,7 @@ public final class PSDS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being created.
+     * ID of the SQL Server cluster where a database is being created.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7573,7 +7550,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of the SQLServer database that is being created.
+     * Name of an SQL Server database that is being created.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7582,7 +7559,7 @@ public final class PSDS {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the SQLServer database that is being created.
+     * Name of an SQL Server database that is being created.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7593,7 +7570,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7602,7 +7579,7 @@ public final class PSDS {
     java.lang.String getFromDatabase();
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7613,7 +7590,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7622,7 +7599,7 @@ public final class PSDS {
     java.lang.String getBackupId();
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7740,7 +7717,7 @@ public final class PSDS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being created.
+     * ID of the SQL Server cluster where a database is being created.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7761,7 +7738,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being created.
+     * ID of the SQL Server cluster where a database is being created.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7786,7 +7763,7 @@ public final class PSDS {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the SQLServer database that is being created.
+     * Name of an SQL Server database that is being created.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7807,7 +7784,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of the SQLServer database that is being created.
+     * Name of an SQL Server database that is being created.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -7832,7 +7809,7 @@ public final class PSDS {
     private volatile java.lang.Object fromDatabase_;
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7853,7 +7830,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *name of the database which backup will be used to restore the database
+     * Name of the database which backup is used to restore the database.
      * </pre>
      *
      * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -7878,7 +7855,7 @@ public final class PSDS {
     private volatile java.lang.Object backupId_;
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -7899,7 +7876,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *ID of a backup to be used
+     * ID of a backup to be used.
      * </pre>
      *
      * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -8276,7 +8253,7 @@ public final class PSDS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being created.
+       * ID of the SQL Server cluster where a database is being created.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8296,7 +8273,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being created.
+       * ID of the SQL Server cluster where a database is being created.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8317,7 +8294,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being created.
+       * ID of the SQL Server cluster where a database is being created.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8336,7 +8313,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being created.
+       * ID of the SQL Server cluster where a database is being created.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8350,7 +8327,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being created.
+       * ID of the SQL Server cluster where a database is being created.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8372,7 +8349,7 @@ public final class PSDS {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the SQLServer database that is being created.
+       * Name of an SQL Server database that is being created.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8392,7 +8369,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being created.
+       * Name of an SQL Server database that is being created.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8413,7 +8390,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being created.
+       * Name of an SQL Server database that is being created.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8432,7 +8409,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being created.
+       * Name of an SQL Server database that is being created.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8446,7 +8423,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being created.
+       * Name of an SQL Server database that is being created.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8468,7 +8445,7 @@ public final class PSDS {
       private java.lang.Object fromDatabase_ = "";
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -8488,7 +8465,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -8509,7 +8486,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -8528,7 +8505,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -8542,7 +8519,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *name of the database which backup will be used to restore the database
+       * Name of the database which backup is used to restore the database.
        * </pre>
        *
        * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
@@ -8564,7 +8541,7 @@ public final class PSDS {
       private java.lang.Object backupId_ = "";
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -8584,7 +8561,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -8605,7 +8582,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -8624,7 +8601,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -8638,7 +8615,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *ID of a backup to be used
+       * ID of a backup to be used.
        * </pre>
        *
        * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
@@ -8715,8 +8692,8 @@ public final class PSDS {
 
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to import a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to import a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8725,8 +8702,8 @@ public final class PSDS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to import a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to import a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8737,7 +8714,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8746,7 +8723,7 @@ public final class PSDS {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -8797,7 +8774,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -8807,7 +8784,7 @@ public final class PSDS {
         getFilesList();
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -8816,7 +8793,7 @@ public final class PSDS {
     int getFilesCount();
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -8826,7 +8803,7 @@ public final class PSDS {
     java.lang.String getFiles(int index);
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -8959,8 +8936,8 @@ public final class PSDS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to import a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to import a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8981,8 +8958,8 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to import a database in.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to import a database in.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9007,7 +8984,7 @@ public final class PSDS {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9028,7 +9005,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9145,7 +9122,7 @@ public final class PSDS {
     private com.google.protobuf.LazyStringList files_;
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -9157,7 +9134,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -9168,7 +9145,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -9180,7 +9157,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * List of .bak files in bucket containing database backup
+     * List of .bak files in bucket containing database backup.
      * </pre>
      *
      * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -9584,8 +9561,8 @@ public final class PSDS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to import a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to import a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9605,8 +9582,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to import a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to import a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9627,8 +9604,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to import a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to import a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9647,8 +9624,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to import a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to import a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9662,8 +9639,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to import a database in.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to import a database in.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9685,7 +9662,7 @@ public final class PSDS {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9705,7 +9682,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9726,7 +9703,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9745,7 +9722,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9759,7 +9736,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -9979,7 +9956,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -9991,7 +9968,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10002,7 +9979,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10014,7 +9991,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10027,7 +10004,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10047,7 +10024,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10066,7 +10043,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10083,7 +10060,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10097,7 +10074,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * List of .bak files in bucket containing database backup
+       * List of .bak files in bucket containing database backup.
        * </pre>
        *
        * <code>repeated string files = 5 [(.yandex.cloud.required) = true];</code>
@@ -10174,7 +10151,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being imported.
+     * ID of the SQL Server cluster where a database is being imported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10183,7 +10160,7 @@ public final class PSDS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being imported.
+     * ID of the SQL Server cluster where a database is being imported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10194,7 +10171,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -10203,7 +10180,7 @@ public final class PSDS {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -10361,7 +10338,7 @@ public final class PSDS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being imported.
+     * ID of the SQL Server cluster where a database is being imported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10382,7 +10359,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being imported.
+     * ID of the SQL Server cluster where a database is being imported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10407,7 +10384,7 @@ public final class PSDS {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -10428,7 +10405,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of the SQLServer database that is being imported.
+     * Name of the SQL Server database that is being imported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -10897,7 +10874,7 @@ public final class PSDS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being imported.
+       * ID of the SQL Server cluster where a database is being imported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10917,7 +10894,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being imported.
+       * ID of the SQL Server cluster where a database is being imported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10938,7 +10915,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being imported.
+       * ID of the SQL Server cluster where a database is being imported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10957,7 +10934,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being imported.
+       * ID of the SQL Server cluster where a database is being imported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10971,7 +10948,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being imported.
+       * ID of the SQL Server cluster where a database is being imported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10993,7 +10970,7 @@ public final class PSDS {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11013,7 +10990,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11034,7 +11011,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11053,7 +11030,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11067,7 +11044,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being imported.
+       * Name of the SQL Server database that is being imported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11336,8 +11313,8 @@ public final class PSDS {
 
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to export a database from.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to export a database from.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11346,8 +11323,8 @@ public final class PSDS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to export a database from.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to export a database from.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11358,7 +11335,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11367,7 +11344,7 @@ public final class PSDS {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11378,7 +11355,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of object storage bucket to export backups to
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -11387,7 +11364,7 @@ public final class PSDS {
     java.lang.String getS3Bucket();
     /**
      * <pre>
-     * Name of object storage bucket to export backups to
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -11418,7 +11395,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Prefix for .bak files to  
+     * Prefix for .bak files to export.
      * </pre>
      *
      * <code>string prefix = 5;</code>
@@ -11427,7 +11404,7 @@ public final class PSDS {
     java.lang.String getPrefix();
     /**
      * <pre>
-     * Prefix for .bak files to  
+     * Prefix for .bak files to export.
      * </pre>
      *
      * <code>string prefix = 5;</code>
@@ -11552,8 +11529,8 @@ public final class PSDS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to export a database from.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to export a database from.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11574,8 +11551,8 @@ public final class PSDS {
     }
     /**
      * <pre>
-     *Required. ID of the SQL Server cluster to export a database from.
-     * To get the cluster ID, use a [ClusterService.List] request
+     * ID of the SQL Server cluster to export a database from.
+     * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11600,7 +11577,7 @@ public final class PSDS {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11621,7 +11598,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -11646,7 +11623,7 @@ public final class PSDS {
     private volatile java.lang.Object s3Bucket_;
     /**
      * <pre>
-     * Name of object storage bucket to export backups to
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -11667,7 +11644,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of object storage bucket to export backups to
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -11738,7 +11715,7 @@ public final class PSDS {
     private volatile java.lang.Object prefix_;
     /**
      * <pre>
-     * Prefix for .bak files to  
+     * Prefix for .bak files to export.
      * </pre>
      *
      * <code>string prefix = 5;</code>
@@ -11759,7 +11736,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Prefix for .bak files to  
+     * Prefix for .bak files to export.
      * </pre>
      *
      * <code>string prefix = 5;</code>
@@ -12153,8 +12130,8 @@ public final class PSDS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to export a database from.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to export a database from.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12174,8 +12151,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to export a database from.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to export a database from.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12196,8 +12173,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to export a database from.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to export a database from.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12216,8 +12193,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to export a database from.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to export a database from.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12231,8 +12208,8 @@ public final class PSDS {
       }
       /**
        * <pre>
-       *Required. ID of the SQL Server cluster to export a database from.
-       * To get the cluster ID, use a [ClusterService.List] request
+       * ID of the SQL Server cluster to export a database from.
+       * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12254,7 +12231,7 @@ public final class PSDS {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12274,7 +12251,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12295,7 +12272,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12314,7 +12291,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12328,7 +12305,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12350,7 +12327,7 @@ public final class PSDS {
       private java.lang.Object s3Bucket_ = "";
       /**
        * <pre>
-       * Name of object storage bucket to export backups to
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12370,7 +12347,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to export backups to
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12391,7 +12368,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to export backups to
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12410,7 +12387,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to export backups to
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12424,7 +12401,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to export backups to
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12542,7 +12519,7 @@ public final class PSDS {
       private java.lang.Object prefix_ = "";
       /**
        * <pre>
-       * Prefix for .bak files to  
+       * Prefix for .bak files to export.
        * </pre>
        *
        * <code>string prefix = 5;</code>
@@ -12562,7 +12539,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Prefix for .bak files to  
+       * Prefix for .bak files to export.
        * </pre>
        *
        * <code>string prefix = 5;</code>
@@ -12583,7 +12560,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Prefix for .bak files to  
+       * Prefix for .bak files to export.
        * </pre>
        *
        * <code>string prefix = 5;</code>
@@ -12602,7 +12579,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Prefix for .bak files to  
+       * Prefix for .bak files to export.
        * </pre>
        *
        * <code>string prefix = 5;</code>
@@ -12616,7 +12593,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Prefix for .bak files to  
+       * Prefix for .bak files to export.
        * </pre>
        *
        * <code>string prefix = 5;</code>
@@ -12693,7 +12670,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being exported.
+     * ID of the SQL Server cluster where a database is being exported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12702,7 +12679,7 @@ public final class PSDS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being exported.
+     * ID of the SQL Server cluster where a database is being exported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12713,7 +12690,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12722,7 +12699,7 @@ public final class PSDS {
     java.lang.String getDatabaseName();
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12733,7 +12710,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Name of object storage bucket to import backups from.
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12742,7 +12719,7 @@ public final class PSDS {
     java.lang.String getS3Bucket();
     /**
      * <pre>
-     * Name of object storage bucket to import backups from.
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12753,7 +12730,7 @@ public final class PSDS {
 
     /**
      * <pre>
-     * Path in object storage bucket to import backups from.
+     * Path in object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_path = 4;</code>
@@ -12762,7 +12739,7 @@ public final class PSDS {
     java.lang.String getS3Path();
     /**
      * <pre>
-     * Path in object storage bucket to import backups from.
+     * Path in object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_path = 4;</code>
@@ -12880,7 +12857,7 @@ public final class PSDS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being exported.
+     * ID of the SQL Server cluster where a database is being exported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12901,7 +12878,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * ID of the SQLServer cluster where a database is being exported.
+     * ID of the SQL Server cluster where a database is being exported.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12926,7 +12903,7 @@ public final class PSDS {
     private volatile java.lang.Object databaseName_;
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12947,7 +12924,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of the SQLServer database that is being exported.
+     * Name of the SQL Server database that is being exported.
      * </pre>
      *
      * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -12972,7 +12949,7 @@ public final class PSDS {
     private volatile java.lang.Object s3Bucket_;
     /**
      * <pre>
-     * Name of object storage bucket to import backups from.
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -12993,7 +12970,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Name of object storage bucket to import backups from.
+     * Name of object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -13018,7 +12995,7 @@ public final class PSDS {
     private volatile java.lang.Object s3Path_;
     /**
      * <pre>
-     * Path in object storage bucket to import backups from.
+     * Path in object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_path = 4;</code>
@@ -13039,7 +13016,7 @@ public final class PSDS {
     }
     /**
      * <pre>
-     * Path in object storage bucket to import backups from.
+     * Path in object storage bucket to export backups to.
      * </pre>
      *
      * <code>string s3_path = 4;</code>
@@ -13416,7 +13393,7 @@ public final class PSDS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being exported.
+       * ID of the SQL Server cluster where a database is being exported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13436,7 +13413,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being exported.
+       * ID of the SQL Server cluster where a database is being exported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13457,7 +13434,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being exported.
+       * ID of the SQL Server cluster where a database is being exported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13476,7 +13453,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being exported.
+       * ID of the SQL Server cluster where a database is being exported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13490,7 +13467,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * ID of the SQLServer cluster where a database is being exported.
+       * ID of the SQL Server cluster where a database is being exported.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13512,7 +13489,7 @@ public final class PSDS {
       private java.lang.Object databaseName_ = "";
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -13532,7 +13509,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -13553,7 +13530,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -13572,7 +13549,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -13586,7 +13563,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of the SQLServer database that is being exported.
+       * Name of the SQL Server database that is being exported.
        * </pre>
        *
        * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
@@ -13608,7 +13585,7 @@ public final class PSDS {
       private java.lang.Object s3Bucket_ = "";
       /**
        * <pre>
-       * Name of object storage bucket to import backups from.
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -13628,7 +13605,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to import backups from.
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -13649,7 +13626,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to import backups from.
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -13668,7 +13645,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to import backups from.
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -13682,7 +13659,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Name of object storage bucket to import backups from.
+       * Name of object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_bucket = 3 [(.yandex.cloud.required) = true];</code>
@@ -13704,7 +13681,7 @@ public final class PSDS {
       private java.lang.Object s3Path_ = "";
       /**
        * <pre>
-       * Path in object storage bucket to import backups from.
+       * Path in object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_path = 4;</code>
@@ -13724,7 +13701,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Path in object storage bucket to import backups from.
+       * Path in object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_path = 4;</code>
@@ -13745,7 +13722,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Path in object storage bucket to import backups from.
+       * Path in object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_path = 4;</code>
@@ -13764,7 +13741,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Path in object storage bucket to import backups from.
+       * Path in object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_path = 4;</code>
@@ -13778,7 +13755,7 @@ public final class PSDS {
       }
       /**
        * <pre>
-       * Path in object storage bucket to import backups from.
+       * Path in object storage bucket to export backups to.
        * </pre>
        *
        * <code>string s3_path = 4;</code>

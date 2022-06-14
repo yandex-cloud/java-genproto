@@ -40,7 +40,7 @@ public final class PSD {
 
     /**
      * <pre>
-     * ID of the SQL Server cluster the database belongs to.
+     * ID of the SQL Server cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -49,7 +49,7 @@ public final class PSD {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the SQL Server cluster the database belongs to.
+     * ID of the SQL Server cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -204,7 +204,7 @@ public final class PSD {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the SQL Server cluster the database belongs to.
+     * ID of the SQL Server cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -225,7 +225,7 @@ public final class PSD {
     }
     /**
      * <pre>
-     * ID of the SQL Server cluster the database belongs to.
+     * ID of the SQL Server cluster that the database belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -669,7 +669,7 @@ public final class PSD {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the SQL Server cluster the database belongs to.
+       * ID of the SQL Server cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -689,7 +689,7 @@ public final class PSD {
       }
       /**
        * <pre>
-       * ID of the SQL Server cluster the database belongs to.
+       * ID of the SQL Server cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -710,7 +710,7 @@ public final class PSD {
       }
       /**
        * <pre>
-       * ID of the SQL Server cluster the database belongs to.
+       * ID of the SQL Server cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -729,7 +729,7 @@ public final class PSD {
       }
       /**
        * <pre>
-       * ID of the SQL Server cluster the database belongs to.
+       * ID of the SQL Server cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -743,7 +743,7 @@ public final class PSD {
       }
       /**
        * <pre>
-       * ID of the SQL Server cluster the database belongs to.
+       * ID of the SQL Server cluster that the database belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>

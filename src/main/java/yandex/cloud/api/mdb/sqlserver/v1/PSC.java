@@ -21,7 +21,7 @@ public final class PSC {
     /**
      * <pre>
      * ID of the SQL Server cluster.
-     * This ID is assigned by Managed Service for SQL Server at creation time.
+     * This ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -31,7 +31,7 @@ public final class PSC {
     /**
      * <pre>
      * ID of the SQL Server cluster.
-     * This ID is assigned by Managed Service for SQL Server at creation time.
+     * This ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -61,16 +61,28 @@ public final class PSC {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Time when SQL Server cluster was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Time when SQL Server cluster was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Time when SQL Server cluster was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
@@ -78,7 +90,7 @@ public final class PSC {
     /**
      * <pre>
      * Name of the SQL Server cluster.
-     * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+     * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -88,7 +100,7 @@ public final class PSC {
     /**
      * <pre>
      * Name of the SQL Server cluster.
-     * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+     * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -99,7 +111,8 @@ public final class PSC {
 
     /**
      * <pre>
-     * Description of the SQL Server cluster. 0-256 characters long.
+     * Description of the SQL Server cluster.
+     * Must be 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -108,7 +121,8 @@ public final class PSC {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the SQL Server cluster. 0-256 characters long.
+     * Description of the SQL Server cluster.
+     * Must be 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -268,7 +282,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * ID of the network the cluster belongs to.
+     * ID of the network that the cluster belongs to.
      * </pre>
      *
      * <code>string network_id = 10;</code>
@@ -277,7 +291,7 @@ public final class PSC {
     java.lang.String getNetworkId();
     /**
      * <pre>
-     * ID of the network the cluster belongs to.
+     * ID of the network that the cluster belongs to.
      * </pre>
      *
      * <code>string network_id = 10;</code>
@@ -326,7 +340,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -336,7 +350,7 @@ public final class PSC {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -345,7 +359,7 @@ public final class PSC {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -355,7 +369,7 @@ public final class PSC {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -367,7 +381,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 14;</code>
@@ -377,7 +391,7 @@ public final class PSC {
 
     /**
      * <pre>
-     *SQL Server Collation
+     *SQL Server Collation.
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
@@ -386,7 +400,7 @@ public final class PSC {
     java.lang.String getSqlcollation();
     /**
      * <pre>
-     *SQL Server Collation
+     *SQL Server Collation.
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
@@ -438,7 +452,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Yandex Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -447,7 +461,7 @@ public final class PSC {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Yandex Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -715,8 +729,7 @@ public final class PSC {
       ENVIRONMENT_UNSPECIFIED(0),
       /**
        * <pre>
-       * Stable environment with a conservative update policy:
-       * only hotfixes are applied during regular maintenance.
+       * Stable environment with a conservative update policy: only hotfixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -724,8 +737,7 @@ public final class PSC {
       PRODUCTION(1),
       /**
        * <pre>
-       * Environment with more aggressive update policy: new versions
-       * are rolled out irrespective of backward compatibility.
+       * Environment with more aggressive update policy: new versions are rolled out irrespective of backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -740,8 +752,7 @@ public final class PSC {
       public static final int ENVIRONMENT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Stable environment with a conservative update policy:
-       * only hotfixes are applied during regular maintenance.
+       * Stable environment with a conservative update policy: only hotfixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -749,8 +760,7 @@ public final class PSC {
       public static final int PRODUCTION_VALUE = 1;
       /**
        * <pre>
-       * Environment with more aggressive update policy: new versions
-       * are rolled out irrespective of backward compatibility.
+       * Environment with more aggressive update policy: new versions are rolled out irrespective of backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -856,7 +866,7 @@ public final class PSC {
       HEALTH_UNKNOWN(0),
       /**
        * <pre>
-       * Cluster is alive and well ([Host.health] of all hosts in the cluster is `ALIVE`).
+       * Cluster is alive and works well ([Host.health] of all hosts in the cluster is `ALIVE`).
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -891,7 +901,7 @@ public final class PSC {
       public static final int HEALTH_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * Cluster is alive and well ([Host.health] of all hosts in the cluster is `ALIVE`).
+       * Cluster is alive and works well ([Host.health] of all hosts in the cluster is `ALIVE`).
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -1230,7 +1240,7 @@ public final class PSC {
     /**
      * <pre>
      * ID of the SQL Server cluster.
-     * This ID is assigned by Managed Service for SQL Server at creation time.
+     * This ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1252,7 +1262,7 @@ public final class PSC {
     /**
      * <pre>
      * ID of the SQL Server cluster.
-     * This ID is assigned by Managed Service for SQL Server at creation time.
+     * This ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1322,6 +1332,10 @@ public final class PSC {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Time when SQL Server cluster was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -1330,6 +1344,10 @@ public final class PSC {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Time when SQL Server cluster was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
@@ -1338,6 +1356,10 @@ public final class PSC {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Time when SQL Server cluster was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
@@ -1350,7 +1372,7 @@ public final class PSC {
     /**
      * <pre>
      * Name of the SQL Server cluster.
-     * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+     * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1372,7 +1394,7 @@ public final class PSC {
     /**
      * <pre>
      * Name of the SQL Server cluster.
-     * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+     * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1397,7 +1419,8 @@ public final class PSC {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the SQL Server cluster. 0-256 characters long.
+     * Description of the SQL Server cluster.
+     * Must be 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1418,7 +1441,8 @@ public final class PSC {
     }
     /**
      * <pre>
-     * Description of the SQL Server cluster. 0-256 characters long.
+     * Description of the SQL Server cluster.
+     * Must be 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1669,7 +1693,7 @@ public final class PSC {
     private volatile java.lang.Object networkId_;
     /**
      * <pre>
-     * ID of the network the cluster belongs to.
+     * ID of the network that the cluster belongs to.
      * </pre>
      *
      * <code>string network_id = 10;</code>
@@ -1690,7 +1714,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * ID of the network the cluster belongs to.
+     * ID of the network that the cluster belongs to.
      * </pre>
      *
      * <code>string network_id = 10;</code>
@@ -1769,7 +1793,7 @@ public final class PSC {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -1781,7 +1805,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -1792,7 +1816,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -1804,7 +1828,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 13;</code>
@@ -1820,7 +1844,7 @@ public final class PSC {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 14;</code>
@@ -1835,7 +1859,7 @@ public final class PSC {
     private volatile java.lang.Object sqlcollation_;
     /**
      * <pre>
-     *SQL Server Collation
+     *SQL Server Collation.
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
@@ -1856,7 +1880,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     *SQL Server Collation
+     *SQL Server Collation.
      * </pre>
      *
      * <code>string sqlcollation = 15;</code>
@@ -1932,7 +1956,7 @@ public final class PSC {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Yandex Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -1953,7 +1977,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Yandex Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -2687,7 +2711,7 @@ public final class PSC {
       /**
        * <pre>
        * ID of the SQL Server cluster.
-       * This ID is assigned by Managed Service for SQL Server at creation time.
+       * This ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2708,7 +2732,7 @@ public final class PSC {
       /**
        * <pre>
        * ID of the SQL Server cluster.
-       * This ID is assigned by Managed Service for SQL Server at creation time.
+       * This ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2730,7 +2754,7 @@ public final class PSC {
       /**
        * <pre>
        * ID of the SQL Server cluster.
-       * This ID is assigned by Managed Service for SQL Server at creation time.
+       * This ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2750,7 +2774,7 @@ public final class PSC {
       /**
        * <pre>
        * ID of the SQL Server cluster.
-       * This ID is assigned by Managed Service for SQL Server at creation time.
+       * This ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2765,7 +2789,7 @@ public final class PSC {
       /**
        * <pre>
        * ID of the SQL Server cluster.
-       * This ID is assigned by Managed Service for SQL Server at creation time.
+       * This ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2884,6 +2908,10 @@ public final class PSC {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return Whether the createdAt field is set.
        */
@@ -2891,6 +2919,10 @@ public final class PSC {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return The createdAt.
        */
@@ -2902,6 +2934,10 @@ public final class PSC {
         }
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2918,6 +2954,10 @@ public final class PSC {
         return this;
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -2932,6 +2972,10 @@ public final class PSC {
         return this;
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2950,6 +2994,10 @@ public final class PSC {
         return this;
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -2964,6 +3012,10 @@ public final class PSC {
         return this;
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2972,6 +3024,10 @@ public final class PSC {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2983,6 +3039,10 @@ public final class PSC {
         }
       }
       /**
+       * <pre>
+       * Time when SQL Server cluster was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3003,7 +3063,7 @@ public final class PSC {
       /**
        * <pre>
        * Name of the SQL Server cluster.
-       * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+       * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3024,7 +3084,7 @@ public final class PSC {
       /**
        * <pre>
        * Name of the SQL Server cluster.
-       * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+       * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3046,7 +3106,7 @@ public final class PSC {
       /**
        * <pre>
        * Name of the SQL Server cluster.
-       * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+       * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3066,7 +3126,7 @@ public final class PSC {
       /**
        * <pre>
        * Name of the SQL Server cluster.
-       * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+       * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3081,7 +3141,7 @@ public final class PSC {
       /**
        * <pre>
        * Name of the SQL Server cluster.
-       * The name must be unique within the folder, comply with RFC 1035 and be 1-63 characters long.
+       * The name must be unique within the folder, comply with [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt) and be 1-63 characters long.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3103,7 +3163,8 @@ public final class PSC {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the SQL Server cluster. 0-256 characters long.
+       * Description of the SQL Server cluster.
+       * Must be 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3123,7 +3184,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Description of the SQL Server cluster. 0-256 characters long.
+       * Description of the SQL Server cluster.
+       * Must be 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3144,7 +3206,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Description of the SQL Server cluster. 0-256 characters long.
+       * Description of the SQL Server cluster.
+       * Must be 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3163,7 +3226,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Description of the SQL Server cluster. 0-256 characters long.
+       * Description of the SQL Server cluster.
+       * Must be 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3177,7 +3241,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Description of the SQL Server cluster. 0-256 characters long.
+       * Description of the SQL Server cluster.
+       * Must be 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -3906,7 +3971,7 @@ public final class PSC {
       private java.lang.Object networkId_ = "";
       /**
        * <pre>
-       * ID of the network the cluster belongs to.
+       * ID of the network that the cluster belongs to.
        * </pre>
        *
        * <code>string network_id = 10;</code>
@@ -3926,7 +3991,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the network the cluster belongs to.
+       * ID of the network that the cluster belongs to.
        * </pre>
        *
        * <code>string network_id = 10;</code>
@@ -3947,7 +4012,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the network the cluster belongs to.
+       * ID of the network that the cluster belongs to.
        * </pre>
        *
        * <code>string network_id = 10;</code>
@@ -3966,7 +4031,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the network the cluster belongs to.
+       * ID of the network that the cluster belongs to.
        * </pre>
        *
        * <code>string network_id = 10;</code>
@@ -3980,7 +4045,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the network the cluster belongs to.
+       * ID of the network that the cluster belongs to.
        * </pre>
        *
        * <code>string network_id = 10;</code>
@@ -4156,7 +4221,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4168,7 +4233,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4179,7 +4244,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4191,7 +4256,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4204,7 +4269,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4224,7 +4289,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4243,7 +4308,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4260,7 +4325,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4274,7 +4339,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 13;</code>
@@ -4296,7 +4361,7 @@ public final class PSC {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
@@ -4308,7 +4373,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
@@ -4323,7 +4388,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
@@ -4339,7 +4404,7 @@ public final class PSC {
       private java.lang.Object sqlcollation_ = "";
       /**
        * <pre>
-       *SQL Server Collation
+       *SQL Server Collation.
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
@@ -4359,7 +4424,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       *SQL Server Collation
+       *SQL Server Collation.
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
@@ -4380,7 +4445,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       *SQL Server Collation
+       *SQL Server Collation.
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
@@ -4399,7 +4464,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       *SQL Server Collation
+       *SQL Server Collation.
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
@@ -4413,7 +4478,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       *SQL Server Collation
+       *SQL Server Collation.
        * </pre>
        *
        * <code>string sqlcollation = 15;</code>
@@ -4581,7 +4646,7 @@ public final class PSC {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Yandex Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4601,7 +4666,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Yandex Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4622,7 +4687,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Yandex Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4641,7 +4706,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Yandex Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4655,7 +4720,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Yandex Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -5782,6 +5847,114 @@ public final class PSC {
 
     /**
      * <pre>
+     * Configuration of the SQL Server 2017 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return Whether the sqlserverConfig2017std field is set.
+     */
+    boolean hasSqlserverConfig2017Std();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return The sqlserverConfig2017std.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std getSqlserverConfig2017Std();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017stdOrBuilder getSqlserverConfig2017StdOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return Whether the sqlserverConfig2017ent field is set.
+     */
+    boolean hasSqlserverConfig2017Ent();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return The sqlserverConfig2017ent.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent getSqlserverConfig2017Ent();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017entOrBuilder getSqlserverConfig2017EntOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return Whether the sqlserverConfig2019std field is set.
+     */
+    boolean hasSqlserverConfig2019Std();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return The sqlserverConfig2019std.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std getSqlserverConfig2019Std();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019stdOrBuilder getSqlserverConfig2019StdOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return Whether the sqlserverConfig2019ent field is set.
+     */
+    boolean hasSqlserverConfig2019Ent();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return The sqlserverConfig2019ent.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent getSqlserverConfig2019Ent();
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019entOrBuilder getSqlserverConfig2019EntOrBuilder();
+
+    /**
+     * <pre>
      * Resources allocated to SQL Server hosts.
      * </pre>
      *
@@ -5809,7 +5982,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -5818,7 +5991,7 @@ public final class PSC {
     boolean hasBackupWindowStart();
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -5827,7 +6000,7 @@ public final class PSC {
     com.google.type.TimeOfDay getBackupWindowStart();
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -5836,7 +6009,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -5845,7 +6018,7 @@ public final class PSC {
     boolean hasAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -5854,12 +6027,31 @@ public final class PSC {
     yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
      */
     yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder();
+
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The enum numeric value on the wire for secondaryConnections.
+     */
+    int getSecondaryConnectionsValue();
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The secondaryConnections.
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections getSecondaryConnections();
 
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SqlserverConfigCase getSqlserverConfigCase();
   }
@@ -5877,6 +6069,7 @@ public final class PSC {
     }
     private ClusterConfig() {
       version_ = "";
+      secondaryConnections_ = 0;
     }
 
     @java.lang.Override
@@ -5982,6 +6175,68 @@ public final class PSC {
 
               break;
             }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              secondaryConnections_ = rawValue;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 8;
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 9;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 10;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.Builder subBuilder = null;
+              if (sqlserverConfigCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_).toBuilder();
+              }
+              sqlserverConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_);
+                sqlserverConfig_ = subBuilder.buildPartial();
+              }
+              sqlserverConfigCase_ = 11;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6014,6 +6269,139 @@ public final class PSC {
               yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.class, yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections}
+     */
+    public enum SecondaryConnections
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SECONDARY_CONNECTIONS_UNSPECIFIED = 0;</code>
+       */
+      SECONDARY_CONNECTIONS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Connections to secondary replicas are prohibited
+       * </pre>
+       *
+       * <code>SECONDARY_CONNECTIONS_OFF = 1;</code>
+       */
+      SECONDARY_CONNECTIONS_OFF(1),
+      /**
+       * <pre>
+       * Secondary replicas are read-only
+       * </pre>
+       *
+       * <code>SECONDARY_CONNECTIONS_READ_ONLY = 2;</code>
+       */
+      SECONDARY_CONNECTIONS_READ_ONLY(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SECONDARY_CONNECTIONS_UNSPECIFIED = 0;</code>
+       */
+      public static final int SECONDARY_CONNECTIONS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Connections to secondary replicas are prohibited
+       * </pre>
+       *
+       * <code>SECONDARY_CONNECTIONS_OFF = 1;</code>
+       */
+      public static final int SECONDARY_CONNECTIONS_OFF_VALUE = 1;
+      /**
+       * <pre>
+       * Secondary replicas are read-only
+       * </pre>
+       *
+       * <code>SECONDARY_CONNECTIONS_READ_ONLY = 2;</code>
+       */
+      public static final int SECONDARY_CONNECTIONS_READ_ONLY_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SecondaryConnections valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static SecondaryConnections forNumber(int value) {
+        switch (value) {
+          case 0: return SECONDARY_CONNECTIONS_UNSPECIFIED;
+          case 1: return SECONDARY_CONNECTIONS_OFF;
+          case 2: return SECONDARY_CONNECTIONS_READ_ONLY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SecondaryConnections>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SecondaryConnections> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SecondaryConnections>() {
+              public SecondaryConnections findValueByNumber(int number) {
+                return SecondaryConnections.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final SecondaryConnections[] VALUES = values();
+
+      public static SecondaryConnections valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SecondaryConnections(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections)
+    }
+
     private int sqlserverConfigCase_ = 0;
     private java.lang.Object sqlserverConfig_;
     public enum SqlserverConfigCase
@@ -6021,6 +6409,10 @@ public final class PSC {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SQLSERVER_CONFIG_2016SP2STD(2),
       SQLSERVER_CONFIG_2016SP2ENT(5),
+      SQLSERVER_CONFIG_2017STD(8),
+      SQLSERVER_CONFIG_2017ENT(9),
+      SQLSERVER_CONFIG_2019STD(10),
+      SQLSERVER_CONFIG_2019ENT(11),
       SQLSERVERCONFIG_NOT_SET(0);
       private final int value;
       private SqlserverConfigCase(int value) {
@@ -6040,6 +6432,10 @@ public final class PSC {
         switch (value) {
           case 2: return SQLSERVER_CONFIG_2016SP2STD;
           case 5: return SQLSERVER_CONFIG_2016SP2ENT;
+          case 8: return SQLSERVER_CONFIG_2017STD;
+          case 9: return SQLSERVER_CONFIG_2017ENT;
+          case 10: return SQLSERVER_CONFIG_2019STD;
+          case 11: return SQLSERVER_CONFIG_2019ENT;
           case 0: return SQLSERVERCONFIG_NOT_SET;
           default: return null;
         }
@@ -6187,6 +6583,178 @@ public final class PSC {
       return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent.getDefaultInstance();
     }
 
+    public static final int SQLSERVER_CONFIG_2017STD_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return Whether the sqlserverConfig2017std field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2017Std() {
+      return sqlserverConfigCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     * @return The sqlserverConfig2017std.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std getSqlserverConfig2017Std() {
+      if (sqlserverConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017stdOrBuilder getSqlserverConfig2017StdOrBuilder() {
+      if (sqlserverConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance();
+    }
+
+    public static final int SQLSERVER_CONFIG_2017ENT_FIELD_NUMBER = 9;
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return Whether the sqlserverConfig2017ent field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2017Ent() {
+      return sqlserverConfigCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     * @return The sqlserverConfig2017ent.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent getSqlserverConfig2017Ent() {
+      if (sqlserverConfigCase_ == 9) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2017 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017entOrBuilder getSqlserverConfig2017EntOrBuilder() {
+      if (sqlserverConfigCase_ == 9) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance();
+    }
+
+    public static final int SQLSERVER_CONFIG_2019STD_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return Whether the sqlserverConfig2019std field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2019Std() {
+      return sqlserverConfigCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     * @return The sqlserverConfig2019std.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std getSqlserverConfig2019Std() {
+      if (sqlserverConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 standard edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019stdOrBuilder getSqlserverConfig2019StdOrBuilder() {
+      if (sqlserverConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance();
+    }
+
+    public static final int SQLSERVER_CONFIG_2019ENT_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return Whether the sqlserverConfig2019ent field is set.
+     */
+    @java.lang.Override
+    public boolean hasSqlserverConfig2019Ent() {
+      return sqlserverConfigCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     * @return The sqlserverConfig2019ent.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent getSqlserverConfig2019Ent() {
+      if (sqlserverConfigCase_ == 11) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of the SQL Server 2019 enterprise edition instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019entOrBuilder getSqlserverConfig2019EntOrBuilder() {
+      if (sqlserverConfigCase_ == 11) {
+         return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_;
+      }
+      return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance();
+    }
+
     public static final int RESOURCES_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_;
     /**
@@ -6229,7 +6797,7 @@ public final class PSC {
     private com.google.type.TimeOfDay backupWindowStart_;
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -6241,7 +6809,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -6253,7 +6821,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * Start time for the daily backup in UTC timezone
+     * Start time for the daily backup in UTC timezone.
      * </pre>
      *
      * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -6267,7 +6835,7 @@ public final class PSC {
     private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_;
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -6279,7 +6847,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -6291,7 +6859,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Database access policy.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -6299,6 +6867,33 @@ public final class PSC {
     @java.lang.Override
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
       return getAccess();
+    }
+
+    public static final int SECONDARY_CONNECTIONS_FIELD_NUMBER = 7;
+    private int secondaryConnections_;
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The enum numeric value on the wire for secondaryConnections.
+     */
+    @java.lang.Override public int getSecondaryConnectionsValue() {
+      return secondaryConnections_;
+    }
+    /**
+     * <pre>
+     * Secondary replicas connection mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+     * @return The secondaryConnections.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections getSecondaryConnections() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections result = yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.valueOf(secondaryConnections_);
+      return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6333,6 +6928,21 @@ public final class PSC {
       if (access_ != null) {
         output.writeMessage(6, getAccess());
       }
+      if (secondaryConnections_ != yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.SECONDARY_CONNECTIONS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, secondaryConnections_);
+      }
+      if (sqlserverConfigCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6364,6 +6974,26 @@ public final class PSC {
       if (access_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getAccess());
+      }
+      if (secondaryConnections_ != yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.SECONDARY_CONNECTIONS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, secondaryConnections_);
+      }
+      if (sqlserverConfigCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_);
+      }
+      if (sqlserverConfigCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6397,6 +7027,7 @@ public final class PSC {
         if (!getAccess()
             .equals(other.getAccess())) return false;
       }
+      if (secondaryConnections_ != other.secondaryConnections_) return false;
       if (!getSqlserverConfigCase().equals(other.getSqlserverConfigCase())) return false;
       switch (sqlserverConfigCase_) {
         case 2:
@@ -6406,6 +7037,22 @@ public final class PSC {
         case 5:
           if (!getSqlserverConfig2016Sp2Ent()
               .equals(other.getSqlserverConfig2016Sp2Ent())) return false;
+          break;
+        case 8:
+          if (!getSqlserverConfig2017Std()
+              .equals(other.getSqlserverConfig2017Std())) return false;
+          break;
+        case 9:
+          if (!getSqlserverConfig2017Ent()
+              .equals(other.getSqlserverConfig2017Ent())) return false;
+          break;
+        case 10:
+          if (!getSqlserverConfig2019Std()
+              .equals(other.getSqlserverConfig2019Std())) return false;
+          break;
+        case 11:
+          if (!getSqlserverConfig2019Ent()
+              .equals(other.getSqlserverConfig2019Ent())) return false;
           break;
         case 0:
         default:
@@ -6435,6 +7082,8 @@ public final class PSC {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
         hash = (53 * hash) + getAccess().hashCode();
       }
+      hash = (37 * hash) + SECONDARY_CONNECTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + secondaryConnections_;
       switch (sqlserverConfigCase_) {
         case 2:
           hash = (37 * hash) + SQLSERVER_CONFIG_2016SP2STD_FIELD_NUMBER;
@@ -6443,6 +7092,22 @@ public final class PSC {
         case 5:
           hash = (37 * hash) + SQLSERVER_CONFIG_2016SP2ENT_FIELD_NUMBER;
           hash = (53 * hash) + getSqlserverConfig2016Sp2Ent().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2017STD_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2017Std().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2017ENT_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2017Ent().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2019STD_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2019Std().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + SQLSERVER_CONFIG_2019ENT_FIELD_NUMBER;
+          hash = (53 * hash) + getSqlserverConfig2019Ent().hashCode();
           break;
         case 0:
         default:
@@ -6600,6 +7265,8 @@ public final class PSC {
           access_ = null;
           accessBuilder_ = null;
         }
+        secondaryConnections_ = 0;
+
         sqlserverConfigCase_ = 0;
         sqlserverConfig_ = null;
         return this;
@@ -6643,6 +7310,34 @@ public final class PSC {
             result.sqlserverConfig_ = sqlserverConfig2016Sp2EntBuilder_.build();
           }
         }
+        if (sqlserverConfigCase_ == 8) {
+          if (sqlserverConfig2017StdBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2017StdBuilder_.build();
+          }
+        }
+        if (sqlserverConfigCase_ == 9) {
+          if (sqlserverConfig2017EntBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2017EntBuilder_.build();
+          }
+        }
+        if (sqlserverConfigCase_ == 10) {
+          if (sqlserverConfig2019StdBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2019StdBuilder_.build();
+          }
+        }
+        if (sqlserverConfigCase_ == 11) {
+          if (sqlserverConfig2019EntBuilder_ == null) {
+            result.sqlserverConfig_ = sqlserverConfig_;
+          } else {
+            result.sqlserverConfig_ = sqlserverConfig2019EntBuilder_.build();
+          }
+        }
         if (resourcesBuilder_ == null) {
           result.resources_ = resources_;
         } else {
@@ -6658,6 +7353,7 @@ public final class PSC {
         } else {
           result.access_ = accessBuilder_.build();
         }
+        result.secondaryConnections_ = secondaryConnections_;
         result.sqlserverConfigCase_ = sqlserverConfigCase_;
         onBuilt();
         return result;
@@ -6720,6 +7416,9 @@ public final class PSC {
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
         }
+        if (other.secondaryConnections_ != 0) {
+          setSecondaryConnectionsValue(other.getSecondaryConnectionsValue());
+        }
         switch (other.getSqlserverConfigCase()) {
           case SQLSERVER_CONFIG_2016SP2STD: {
             mergeSqlserverConfig2016Sp2Std(other.getSqlserverConfig2016Sp2Std());
@@ -6727,6 +7426,22 @@ public final class PSC {
           }
           case SQLSERVER_CONFIG_2016SP2ENT: {
             mergeSqlserverConfig2016Sp2Ent(other.getSqlserverConfig2016Sp2Ent());
+            break;
+          }
+          case SQLSERVER_CONFIG_2017STD: {
+            mergeSqlserverConfig2017Std(other.getSqlserverConfig2017Std());
+            break;
+          }
+          case SQLSERVER_CONFIG_2017ENT: {
+            mergeSqlserverConfig2017Ent(other.getSqlserverConfig2017Ent());
+            break;
+          }
+          case SQLSERVER_CONFIG_2019STD: {
+            mergeSqlserverConfig2019Std(other.getSqlserverConfig2019Std());
+            break;
+          }
+          case SQLSERVER_CONFIG_2019ENT: {
+            mergeSqlserverConfig2019Ent(other.getSqlserverConfig2019Ent());
             break;
           }
           case SQLSERVERCONFIG_NOT_SET: {
@@ -7227,6 +7942,714 @@ public final class PSC {
         return sqlserverConfig2016Sp2EntBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017stdOrBuilder> sqlserverConfig2017StdBuilder_;
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       * @return Whether the sqlserverConfig2017std field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2017Std() {
+        return sqlserverConfigCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       * @return The sqlserverConfig2017std.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std getSqlserverConfig2017Std() {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            return sqlserverConfig2017StdBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder setSqlserverConfig2017Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std value) {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2017StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder setSqlserverConfig2017Std(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.Builder builderForValue) {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2017StdBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder mergeSqlserverConfig2017Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std value) {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 8 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            sqlserverConfig2017StdBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2017StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public Builder clearSqlserverConfig2017Std() {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 8) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2017StdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.Builder getSqlserverConfig2017StdBuilder() {
+        return getSqlserverConfig2017StdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017stdOrBuilder getSqlserverConfig2017StdOrBuilder() {
+        if ((sqlserverConfigCase_ == 8) && (sqlserverConfig2017StdBuilder_ != null)) {
+          return sqlserverConfig2017StdBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017std sqlserver_config_2017std = 8 [json_name = "sqlserverConfig_2017std"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017stdOrBuilder> 
+          getSqlserverConfig2017StdFieldBuilder() {
+        if (sqlserverConfig2017StdBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 8)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.getDefaultInstance();
+          }
+          sqlserverConfig2017StdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017stdOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017std) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 8;
+        onChanged();;
+        return sqlserverConfig2017StdBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017entOrBuilder> sqlserverConfig2017EntBuilder_;
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       * @return Whether the sqlserverConfig2017ent field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2017Ent() {
+        return sqlserverConfigCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       * @return The sqlserverConfig2017ent.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent getSqlserverConfig2017Ent() {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 9) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            return sqlserverConfig2017EntBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder setSqlserverConfig2017Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent value) {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2017EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder setSqlserverConfig2017Ent(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.Builder builderForValue) {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2017EntBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder mergeSqlserverConfig2017Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent value) {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 9 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            sqlserverConfig2017EntBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2017EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public Builder clearSqlserverConfig2017Ent() {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 9) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2017EntBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.Builder getSqlserverConfig2017EntBuilder() {
+        return getSqlserverConfig2017EntFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017entOrBuilder getSqlserverConfig2017EntOrBuilder() {
+        if ((sqlserverConfigCase_ == 9) && (sqlserverConfig2017EntBuilder_ != null)) {
+          return sqlserverConfig2017EntBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 9) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2017 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2017ent sqlserver_config_2017ent = 9 [json_name = "sqlserverConfig_2017ent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017entOrBuilder> 
+          getSqlserverConfig2017EntFieldBuilder() {
+        if (sqlserverConfig2017EntBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 9)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.getDefaultInstance();
+          }
+          sqlserverConfig2017EntBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017entOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.SQLServerConfigSet2017ent) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 9;
+        onChanged();;
+        return sqlserverConfig2017EntBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019stdOrBuilder> sqlserverConfig2019StdBuilder_;
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       * @return Whether the sqlserverConfig2019std field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2019Std() {
+        return sqlserverConfigCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       * @return The sqlserverConfig2019std.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std getSqlserverConfig2019Std() {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            return sqlserverConfig2019StdBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder setSqlserverConfig2019Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std value) {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2019StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder setSqlserverConfig2019Std(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.Builder builderForValue) {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2019StdBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder mergeSqlserverConfig2019Std(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std value) {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 10 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            sqlserverConfig2019StdBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2019StdBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public Builder clearSqlserverConfig2019Std() {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (sqlserverConfigCase_ == 10) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2019StdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.Builder getSqlserverConfig2019StdBuilder() {
+        return getSqlserverConfig2019StdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019stdOrBuilder getSqlserverConfig2019StdOrBuilder() {
+        if ((sqlserverConfigCase_ == 10) && (sqlserverConfig2019StdBuilder_ != null)) {
+          return sqlserverConfig2019StdBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 standard edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019std sqlserver_config_2019std = 10 [json_name = "sqlserverConfig_2019std"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019stdOrBuilder> 
+          getSqlserverConfig2019StdFieldBuilder() {
+        if (sqlserverConfig2019StdBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 10)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.getDefaultInstance();
+          }
+          sqlserverConfig2019StdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019stdOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019std) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 10;
+        onChanged();;
+        return sqlserverConfig2019StdBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019entOrBuilder> sqlserverConfig2019EntBuilder_;
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       * @return Whether the sqlserverConfig2019ent field is set.
+       */
+      @java.lang.Override
+      public boolean hasSqlserverConfig2019Ent() {
+        return sqlserverConfigCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       * @return The sqlserverConfig2019ent.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent getSqlserverConfig2019Ent() {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 11) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance();
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            return sqlserverConfig2019EntBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder setSqlserverConfig2019Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent value) {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlserverConfig_ = value;
+          onChanged();
+        } else {
+          sqlserverConfig2019EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder setSqlserverConfig2019Ent(
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.Builder builderForValue) {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          sqlserverConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlserverConfig2019EntBuilder_.setMessage(builderForValue.build());
+        }
+        sqlserverConfigCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder mergeSqlserverConfig2019Ent(yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent value) {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 11 &&
+              sqlserverConfig_ != yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance()) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.newBuilder((yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sqlserverConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            sqlserverConfig2019EntBuilder_.mergeFrom(value);
+          }
+          sqlserverConfig2019EntBuilder_.setMessage(value);
+        }
+        sqlserverConfigCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public Builder clearSqlserverConfig2019Ent() {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (sqlserverConfigCase_ == 11) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            sqlserverConfigCase_ = 0;
+            sqlserverConfig_ = null;
+          }
+          sqlserverConfig2019EntBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.Builder getSqlserverConfig2019EntBuilder() {
+        return getSqlserverConfig2019EntFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019entOrBuilder getSqlserverConfig2019EntOrBuilder() {
+        if ((sqlserverConfigCase_ == 11) && (sqlserverConfig2019EntBuilder_ != null)) {
+          return sqlserverConfig2019EntBuilder_.getMessageOrBuilder();
+        } else {
+          if (sqlserverConfigCase_ == 11) {
+            return (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_;
+          }
+          return yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the SQL Server 2019 enterprise edition instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.config.SQLServerConfigSet2019ent sqlserver_config_2019ent = 11 [json_name = "sqlserverConfig_2019ent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019entOrBuilder> 
+          getSqlserverConfig2019EntFieldBuilder() {
+        if (sqlserverConfig2019EntBuilder_ == null) {
+          if (!(sqlserverConfigCase_ == 11)) {
+            sqlserverConfig_ = yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.getDefaultInstance();
+          }
+          sqlserverConfig2019EntBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent.Builder, yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019entOrBuilder>(
+                  (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.SQLServerConfigSet2019ent) sqlserverConfig_,
+                  getParentForChildren(),
+                  isClean());
+          sqlserverConfig_ = null;
+        }
+        sqlserverConfigCase_ = 11;
+        onChanged();;
+        return sqlserverConfig2019EntBuilder_;
+      }
+
       private yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources, yandex.cloud.api.mdb.sqlserver.v1.PSC.Resources.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.ResourcesOrBuilder> resourcesBuilder_;
@@ -7387,7 +8810,7 @@ public final class PSC {
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> backupWindowStartBuilder_;
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7398,7 +8821,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7413,7 +8836,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7433,7 +8856,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7451,7 +8874,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7473,7 +8896,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7491,7 +8914,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7503,7 +8926,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7518,7 +8941,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Start time for the daily backup in UTC timezone
+       * Start time for the daily backup in UTC timezone.
        * </pre>
        *
        * <code>.google.type.TimeOfDay backup_window_start = 4;</code>
@@ -7542,7 +8965,7 @@ public final class PSC {
           yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> accessBuilder_;
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7553,7 +8976,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7568,7 +8991,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7588,7 +9011,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7606,7 +9029,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7628,7 +9051,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7646,7 +9069,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7658,7 +9081,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7673,7 +9096,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Database access policy.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
@@ -7690,6 +9113,80 @@ public final class PSC {
           access_ = null;
         }
         return accessBuilder_;
+      }
+
+      private int secondaryConnections_ = 0;
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @return The enum numeric value on the wire for secondaryConnections.
+       */
+      @java.lang.Override public int getSecondaryConnectionsValue() {
+        return secondaryConnections_;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @param value The enum numeric value on the wire for secondaryConnections to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondaryConnectionsValue(int value) {
+        
+        secondaryConnections_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @return The secondaryConnections.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections getSecondaryConnections() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections result = yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.valueOf(secondaryConnections_);
+        return result == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @param value The secondaryConnections to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondaryConnections(yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SecondaryConnections value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        secondaryConnections_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary replicas connection mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.ClusterConfig.SecondaryConnections secondary_connections = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecondaryConnections() {
+        
+        secondaryConnections_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7750,10 +9247,9 @@ public final class PSC {
 
     /**
      * <pre>
-     * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the SQL Server host.
+     * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -7762,10 +9258,9 @@ public final class PSC {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the SQL Server host.
+     * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -7776,8 +9271,8 @@ public final class PSC {
 
     /**
      * <pre>
-     * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-     * at creation time.
+     * ID of the SQL Server host.
+     * The ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -7786,8 +9281,8 @@ public final class PSC {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-     * at creation time.
+     * ID of the SQL Server host.
+     * The ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -8270,7 +9765,7 @@ public final class PSC {
       ALIVE(1),
       /**
        * <pre>
-       * The host is inoperable, and cannot perform any of its essential functions.
+       * The host is inoperable and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -8278,7 +9773,7 @@ public final class PSC {
       DEAD(2),
       /**
        * <pre>
-       * The host is degraded, and can perform only some of its essential functions.
+       * The host is degraded and can perform only some of its essential functions.
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -8305,7 +9800,7 @@ public final class PSC {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * The host is inoperable, and cannot perform any of its essential functions.
+       * The host is inoperable and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -8313,7 +9808,7 @@ public final class PSC {
       public static final int DEAD_VALUE = 2;
       /**
        * <pre>
-       * The host is degraded, and can perform only some of its essential functions.
+       * The host is degraded and can perform only some of its essential functions.
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -8409,10 +9904,9 @@ public final class PSC {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the SQL Server host.
+     * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8433,10 +9927,9 @@ public final class PSC {
     }
     /**
      * <pre>
-     * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-     * at creation time, and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud,
-     * as it defines the FQDN of the host.
+     * Name of the SQL Server host.
+     * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8461,8 +9954,8 @@ public final class PSC {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-     * at creation time.
+     * ID of the SQL Server host.
+     * The ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -8483,8 +9976,8 @@ public final class PSC {
     }
     /**
      * <pre>
-     * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-     * at creation time.
+     * ID of the SQL Server host.
+     * The ID is assigned by Managed Service for SQL Server at the moment of creation.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -9257,10 +10750,9 @@ public final class PSC {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the SQL Server host.
+       * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9280,10 +10772,9 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the SQL Server host.
+       * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9304,10 +10795,9 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the SQL Server host.
+       * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9326,10 +10816,9 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the SQL Server host.
+       * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9343,10 +10832,9 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Name of the SQL Server host. The host name is assigned by Managed Service for SQL Server
-       * at creation time, and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud,
-       * as it defines the FQDN of the host.
+       * Name of the SQL Server host.
+       * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
+       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9368,8 +10856,8 @@ public final class PSC {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-       * at creation time.
+       * ID of the SQL Server host.
+       * The ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9389,8 +10877,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-       * at creation time.
+       * ID of the SQL Server host.
+       * The ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9411,8 +10899,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-       * at creation time.
+       * ID of the SQL Server host.
+       * The ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9431,8 +10919,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-       * at creation time.
+       * ID of the SQL Server host.
+       * The ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -9446,8 +10934,8 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the SQL Server host. The ID is assigned by Managed Service for SQL Server
-       * at creation time.
+       * ID of the SQL Server host.
+       * The ID is assigned by Managed Service for SQL Server at the moment of creation.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -10512,7 +12000,7 @@ public final class PSC {
       TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * SQL Server service
+       * SQL Server service.
        * </pre>
        *
        * <code>SQLSERVER = 1;</code>
@@ -10527,7 +12015,7 @@ public final class PSC {
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * SQL Server service
+       * SQL Server service.
        * </pre>
        *
        * <code>SQLSERVER = 1;</code>
@@ -11335,7 +12823,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
      * </pre>
      *
@@ -11345,7 +12833,7 @@ public final class PSC {
     java.lang.String getResourcePresetId();
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
      * </pre>
      *
@@ -11369,9 +12857,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd - network HDD drive,
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - network HDD drive;
+     * * `network-ssd` - network SSD drive;
+     * * `local-ssd` - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11382,9 +12870,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd - network HDD drive,
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - network HDD drive;
+     * * `network-ssd` - network SSD drive;
+     * * `local-ssd` - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11493,7 +12981,7 @@ public final class PSC {
     private volatile java.lang.Object resourcePresetId_;
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
      * </pre>
      *
@@ -11515,7 +13003,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
      * </pre>
      *
@@ -11558,9 +13046,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd - network HDD drive,
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - network HDD drive;
+     * * `network-ssd` - network SSD drive;
+     * * `local-ssd` - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11583,9 +13071,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd - network HDD drive,
-     * * network-ssd - network SSD drive,
-     * * local-ssd - local SSD storage.
+     * * `network-hdd` - network HDD drive;
+     * * `network-ssd` - network SSD drive;
+     * * `local-ssd` - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -11946,7 +13434,7 @@ public final class PSC {
       private java.lang.Object resourcePresetId_ = "";
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
        * </pre>
        *
@@ -11967,7 +13455,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
        * </pre>
        *
@@ -11989,7 +13477,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
        * </pre>
        *
@@ -12009,7 +13497,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
        * </pre>
        *
@@ -12024,7 +13512,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * All available presets are listed in the [documentation](/docs/managed-sqlserver/concepts/instance-types).
        * </pre>
        *
@@ -12092,9 +13580,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd - network HDD drive,
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - network HDD drive;
+       * * `network-ssd` - network SSD drive;
+       * * `local-ssd` - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -12116,9 +13604,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd - network HDD drive,
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - network HDD drive;
+       * * `network-ssd` - network SSD drive;
+       * * `local-ssd` - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -12141,9 +13629,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd - network HDD drive,
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - network HDD drive;
+       * * `network-ssd` - network SSD drive;
+       * * `local-ssd` - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -12164,9 +13652,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd - network HDD drive,
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - network HDD drive;
+       * * `network-ssd` - network SSD drive;
+       * * `local-ssd` - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -12182,9 +13670,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd - network HDD drive,
-       * * network-ssd - network SSD drive,
-       * * local-ssd - local SSD storage.
+       * * `network-hdd` - network HDD drive;
+       * * `network-ssd` - network SSD drive;
+       * * `local-ssd` - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -12261,7 +13749,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allows access for DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -12271,7 +13759,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * Allow access for Web SQL.
+     * Allows access for Web SQL.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -12370,7 +13858,7 @@ public final class PSC {
     private boolean dataLens_;
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allows access for DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -12385,7 +13873,7 @@ public final class PSC {
     private boolean webSql_;
     /**
      * <pre>
-     * Allow access for Web SQL.
+     * Allows access for Web SQL.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -12720,7 +14208,7 @@ public final class PSC {
       private boolean dataLens_ ;
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allows access for DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -12732,7 +14220,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allows access for DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -12747,7 +14235,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allows access for DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -12763,7 +14251,7 @@ public final class PSC {
       private boolean webSql_ ;
       /**
        * <pre>
-       * Allow access for Web SQL.
+       * Allows access for Web SQL.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -12775,7 +14263,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Allow access for Web SQL.
+       * Allows access for Web SQL.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -12790,7 +14278,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * Allow access for Web SQL.
+       * Allows access for Web SQL.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -12908,69 +14396,91 @@ public final class PSC {
       "proto\022\035yandex.cloud.mdb.sqlserver.v1\032\037go" +
       "ogle/protobuf/timestamp.proto\032\033google/ty" +
       "pe/timeofday.proto\032;yandex/cloud/mdb/sql" +
-      "server/v1/config/sqlserver2016sp2.proto\"" +
-      "\320\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
-      "(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030" +
-      "\005 \001(\t\022B\n\006labels\030\006 \003(\01322.yandex.cloud.mdb" +
-      ".sqlserver.v1.Cluster.LabelsEntry\022G\n\013env" +
-      "ironment\030\007 \001(\01622.yandex.cloud.mdb.sqlser" +
-      "ver.v1.Cluster.Environment\022=\n\nmonitoring" +
-      "\030\010 \003(\0132).yandex.cloud.mdb.sqlserver.v1.M" +
-      "onitoring\022<\n\006config\030\t \001(\0132,.yandex.cloud" +
-      ".mdb.sqlserver.v1.ClusterConfig\022\022\n\nnetwo" +
-      "rk_id\030\n \001(\t\022=\n\006health\030\013 \001(\0162-.yandex.clo" +
-      "ud.mdb.sqlserver.v1.Cluster.Health\022=\n\006st" +
-      "atus\030\014 \001(\0162-.yandex.cloud.mdb.sqlserver." +
-      "v1.Cluster.Status\022\032\n\022security_group_ids\030" +
-      "\r \003(\t\022\033\n\023deletion_protection\030\016 \001(\010\022\024\n\014sq" +
-      "lcollation\030\017 \001(\t\022\026\n\016host_group_ids\030\020 \003(\t" +
-      "\022\032\n\022service_account_id\030\021 \001(\t\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013E" +
-      "nvironment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022" +
-      "\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health" +
-      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
-      "\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKN" +
-      "OWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERRO" +
-      "R\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPP" +
-      "ED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name" +
-      "\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(" +
-      "\t\"\355\003\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022\205\001\n" +
-      "\033sqlserver_config_2016sp2std\030\002 \001(\0132B.yan" +
-      "dex.cloud.mdb.sqlserver.v1.config.SQLSer" +
-      "verConfigSet2016sp2stdH\000R\032sqlserverConfi" +
-      "g_2016sp2std\022\205\001\n\033sqlserver_config_2016sp" +
-      "2ent\030\005 \001(\0132B.yandex.cloud.mdb.sqlserver." +
-      "v1.config.SQLServerConfigSet2016sp2entH\000" +
-      "R\032sqlserverConfig_2016sp2ent\022;\n\tresource" +
-      "s\030\003 \001(\0132(.yandex.cloud.mdb.sqlserver.v1." +
-      "Resources\0223\n\023backup_window_start\030\004 \001(\0132\026" +
-      ".google.type.TimeOfDay\0225\n\006access\030\006 \001(\0132%" +
-      ".yandex.cloud.mdb.sqlserver.v1.AccessB\022\n" +
-      "\020sqlserver_config\"\305\003\n\004Host\022\014\n\004name\030\001 \001(\t" +
-      "\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022;\n" +
-      "\tresources\030\004 \001(\0132(.yandex.cloud.mdb.sqls" +
-      "erver.v1.Resources\0226\n\004role\030\005 \001(\0162(.yande" +
-      "x.cloud.mdb.sqlserver.v1.Host.Role\022:\n\006he" +
-      "alth\030\006 \001(\0162*.yandex.cloud.mdb.sqlserver." +
-      "v1.Host.Health\0228\n\010services\030\007 \003(\0132&.yande" +
-      "x.cloud.mdb.sqlserver.v1.Service\022\021\n\tsubn" +
-      "et_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"1\n" +
-      "\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007R" +
-      "EPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t" +
-      "\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\343\001\n\007Se" +
-      "rvice\0229\n\004type\030\001 \001(\0162+.yandex.cloud.mdb.s" +
-      "qlserver.v1.Service.Type\022=\n\006health\030\002 \001(\016" +
-      "2-.yandex.cloud.mdb.sqlserver.v1.Service" +
-      ".Health\"+\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n" +
-      "\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN" +
-      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022" +
-      "resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 " +
-      "\001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021\n\td" +
-      "ata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010Bu\n!yande" +
-      "x.cloud.api.mdb.sqlserver.v1B\003PSCZKgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/sqlserver/v1;sqlserverb\006proto3"
+      "server/v1/config/sqlserver2016sp2.proto\032" +
+      "8yandex/cloud/mdb/sqlserver/v1/config/sq" +
+      "lserver2017.proto\0328yandex/cloud/mdb/sqls" +
+      "erver/v1/config/sqlserver2019.proto\"\320\007\n\007" +
+      "Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022." +
+      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(" +
+      "\t\022B\n\006labels\030\006 \003(\01322.yandex.cloud.mdb.sql" +
+      "server.v1.Cluster.LabelsEntry\022G\n\013environ" +
+      "ment\030\007 \001(\01622.yandex.cloud.mdb.sqlserver." +
+      "v1.Cluster.Environment\022=\n\nmonitoring\030\010 \003" +
+      "(\0132).yandex.cloud.mdb.sqlserver.v1.Monit" +
+      "oring\022<\n\006config\030\t \001(\0132,.yandex.cloud.mdb" +
+      ".sqlserver.v1.ClusterConfig\022\022\n\nnetwork_i" +
+      "d\030\n \001(\t\022=\n\006health\030\013 \001(\0162-.yandex.cloud.m" +
+      "db.sqlserver.v1.Cluster.Health\022=\n\006status" +
+      "\030\014 \001(\0162-.yandex.cloud.mdb.sqlserver.v1.C" +
+      "luster.Status\022\032\n\022security_group_ids\030\r \003(" +
+      "\t\022\033\n\023deletion_protection\030\016 \001(\010\022\024\n\014sqlcol" +
+      "lation\030\017 \001(\t\022\026\n\016host_group_ids\030\020 \003(\t\022\032\n\022" +
+      "service_account_id\030\021 \001(\t\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envir" +
+      "onment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nP" +
+      "RODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016" +
+      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
+      "\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020" +
+      "\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022" +
+      "\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006" +
+      "\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001" +
+      "(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\313\t" +
+      "\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022\205\001\n\033sql" +
+      "server_config_2016sp2std\030\002 \001(\0132B.yandex." +
+      "cloud.mdb.sqlserver.v1.config.SQLServerC" +
+      "onfigSet2016sp2stdH\000R\032sqlserverConfig_20" +
+      "16sp2std\022\205\001\n\033sqlserver_config_2016sp2ent" +
+      "\030\005 \001(\0132B.yandex.cloud.mdb.sqlserver.v1.c" +
+      "onfig.SQLServerConfigSet2016sp2entH\000R\032sq" +
+      "lserverConfig_2016sp2ent\022|\n\030sqlserver_co" +
+      "nfig_2017std\030\010 \001(\0132?.yandex.cloud.mdb.sq" +
+      "lserver.v1.config.SQLServerConfigSet2017" +
+      "stdH\000R\027sqlserverConfig_2017std\022|\n\030sqlser" +
+      "ver_config_2017ent\030\t \001(\0132?.yandex.cloud." +
+      "mdb.sqlserver.v1.config.SQLServerConfigS" +
+      "et2017entH\000R\027sqlserverConfig_2017ent\022|\n\030" +
+      "sqlserver_config_2019std\030\n \001(\0132?.yandex." +
+      "cloud.mdb.sqlserver.v1.config.SQLServerC" +
+      "onfigSet2019stdH\000R\027sqlserverConfig_2019s" +
+      "td\022|\n\030sqlserver_config_2019ent\030\013 \001(\0132?.y" +
+      "andex.cloud.mdb.sqlserver.v1.config.SQLS" +
+      "erverConfigSet2019entH\000R\027sqlserverConfig" +
+      "_2019ent\022;\n\tresources\030\003 \001(\0132(.yandex.clo" +
+      "ud.mdb.sqlserver.v1.Resources\0223\n\023backup_" +
+      "window_start\030\004 \001(\0132\026.google.type.TimeOfD" +
+      "ay\0225\n\006access\030\006 \001(\0132%.yandex.cloud.mdb.sq" +
+      "lserver.v1.Access\022`\n\025secondary_connectio" +
+      "ns\030\007 \001(\0162A.yandex.cloud.mdb.sqlserver.v1" +
+      ".ClusterConfig.SecondaryConnections\"\201\001\n\024" +
+      "SecondaryConnections\022%\n!SECONDARY_CONNEC" +
+      "TIONS_UNSPECIFIED\020\000\022\035\n\031SECONDARY_CONNECT" +
+      "IONS_OFF\020\001\022#\n\037SECONDARY_CONNECTIONS_READ" +
+      "_ONLY\020\002B\022\n\020sqlserver_config\"\305\003\n\004Host\022\014\n\004" +
+      "name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_i" +
+      "d\030\003 \001(\t\022;\n\tresources\030\004 \001(\0132(.yandex.clou" +
+      "d.mdb.sqlserver.v1.Resources\0226\n\004role\030\005 \001" +
+      "(\0162(.yandex.cloud.mdb.sqlserver.v1.Host." +
+      "Role\022:\n\006health\030\006 \001(\0162*.yandex.cloud.mdb." +
+      "sqlserver.v1.Host.Health\0228\n\010services\030\007 \003" +
+      "(\0132&.yandex.cloud.mdb.sqlserver.v1.Servi" +
+      "ce\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_i" +
+      "p\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MAS" +
+      "TER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADE" +
+      "D\020\003\"\343\001\n\007Service\0229\n\004type\030\001 \001(\0162+.yandex.c" +
+      "loud.mdb.sqlserver.v1.Service.Type\022=\n\006he" +
+      "alth\030\002 \001(\0162-.yandex.cloud.mdb.sqlserver." +
+      "v1.Service.Health\"+\n\004Type\022\024\n\020TYPE_UNSPEC" +
+      "IFIED\020\000\022\r\n\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HEAL" +
+      "TH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tRes" +
+      "ources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdi" +
+      "sk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006A" +
+      "ccess\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(" +
+      "\010Bu\n!yandex.cloud.api.mdb.sqlserver.v1B\003" +
+      "PSCZKgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/mdb/sqlserver/v1;sqlserver" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12978,6 +14488,8 @@ public final class PSC {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13002,7 +14514,7 @@ public final class PSC {
     internal_static_yandex_cloud_mdb_sqlserver_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "Resources", "BackupWindowStart", "Access", "SqlserverConfig", });
+        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "SqlserverConfig2017Std", "SqlserverConfig2017Ent", "SqlserverConfig2019Std", "SqlserverConfig2019Ent", "Resources", "BackupWindowStart", "Access", "SecondaryConnections", "SqlserverConfig", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_sqlserver_v1_Host_fieldAccessorTable = new
@@ -13030,6 +14542,8 @@ public final class PSC {
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

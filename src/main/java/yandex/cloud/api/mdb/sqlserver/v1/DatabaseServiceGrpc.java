@@ -319,7 +319,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup.
      * </pre>
      */
     public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
@@ -329,7 +329,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Imports a new SQL Server database from external backup
+     *Imports a new SQL Server database from an external backup.
      * </pre>
      */
     public void importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request,
@@ -339,7 +339,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Exports database backup to external backup
+     *Exports the last database backup to an external backup.
      * </pre>
      */
     public void exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request,
@@ -465,7 +465,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup.
      * </pre>
      */
     public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
@@ -476,7 +476,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Imports a new SQL Server database from external backup
+     *Imports a new SQL Server database from an external backup.
      * </pre>
      */
     public void importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request,
@@ -487,7 +487,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Exports database backup to external backup
+     *Exports the last database backup to an external backup.
      * </pre>
      */
     public void exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request,
@@ -558,7 +558,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
@@ -568,7 +568,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Imports a new SQL Server database from external backup
+     *Imports a new SQL Server database from an external backup.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation importBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ImportDatabaseBackupRequest request) {
@@ -578,7 +578,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Exports database backup to external backup
+     *Exports the last database backup to an external backup.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation exportBackup(yandex.cloud.api.mdb.sqlserver.v1.PSDS.ExportDatabaseBackupRequest request) {
@@ -650,7 +650,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restore(
@@ -661,7 +661,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Imports a new SQL Server database from external backup
+     *Imports a new SQL Server database from an external backup.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> importBackup(
@@ -672,7 +672,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Exports database backup to external backup
+     *Exports the last database backup to an external backup.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> exportBackup(

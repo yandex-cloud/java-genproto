@@ -60,7 +60,7 @@ public final class PSB {
 
     /**
      * <pre>
-     * Creation timestamp (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -69,7 +69,7 @@ public final class PSB {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -78,7 +78,7 @@ public final class PSB {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -134,7 +134,7 @@ public final class PSB {
 
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -144,7 +144,7 @@ public final class PSB {
         getDatabasesList();
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -153,7 +153,7 @@ public final class PSB {
     int getDatabasesCount();
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -163,7 +163,7 @@ public final class PSB {
     java.lang.String getDatabases(int index);
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -412,7 +412,7 @@ public final class PSB {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -424,7 +424,7 @@ public final class PSB {
     }
     /**
      * <pre>
-     * Creation timestamp (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -436,7 +436,7 @@ public final class PSB {
     }
     /**
      * <pre>
-     * Creation timestamp (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -534,7 +534,7 @@ public final class PSB {
     private com.google.protobuf.LazyStringList databases_;
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -546,7 +546,7 @@ public final class PSB {
     }
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -557,7 +557,7 @@ public final class PSB {
     }
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -569,7 +569,7 @@ public final class PSB {
     }
     /**
      * <pre>
-     * List databases included in the backup
+     * List of databases included in the backup.
      * </pre>
      *
      * <code>repeated string databases = 6;</code>
@@ -1215,7 +1215,7 @@ public final class PSB {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1226,7 +1226,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1241,7 +1241,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1261,7 +1261,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1279,7 +1279,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1301,7 +1301,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1319,7 +1319,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1331,7 +1331,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1346,7 +1346,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * Creation timestamp (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1625,7 +1625,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1637,7 +1637,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1648,7 +1648,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1660,7 +1660,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1673,7 +1673,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1693,7 +1693,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1712,7 +1712,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1729,7 +1729,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>
@@ -1743,7 +1743,7 @@ public final class PSB {
       }
       /**
        * <pre>
-       * List databases included in the backup
+       * List of databases included in the backup.
        * </pre>
        *
        * <code>repeated string databases = 6;</code>

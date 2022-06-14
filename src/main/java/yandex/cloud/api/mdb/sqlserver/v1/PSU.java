@@ -15,6 +15,10 @@ public final class PSU {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Set of server roles.
+   * </pre>
+   *
    * Protobuf enum {@code yandex.cloud.mdb.sqlserver.v1.ServerRole}
    */
   public enum ServerRole
@@ -25,10 +29,9 @@ public final class PSU {
     SERVER_ROLE_UNSPECIFIED(0),
     /**
      * <pre>
-     *Effectively grants VIEW SERVER STATE to the login
-     *That gives an ability to use various dynamic management views to monitor server state
-     *Including Activity Monitor tool that is built-in into SSMS
-     *No intrusive actions are allowed, so this is pretty safe to grant
+     * Effectively grants VIEW SERVER STATE to the login.
+     * That gives an ability to use various dynamic management views to monitor server state, including Activity Monitor tool that is built-in into SSMS.
+     * No intrusive actions are allowed, so this is pretty safe to grant.
      * </pre>
      *
      * <code>MDB_MONITOR = 1;</code>
@@ -43,10 +46,9 @@ public final class PSU {
     public static final int SERVER_ROLE_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     *Effectively grants VIEW SERVER STATE to the login
-     *That gives an ability to use various dynamic management views to monitor server state
-     *Including Activity Monitor tool that is built-in into SSMS
-     *No intrusive actions are allowed, so this is pretty safe to grant
+     * Effectively grants VIEW SERVER STATE to the login.
+     * That gives an ability to use various dynamic management views to monitor server state, including Activity Monitor tool that is built-in into SSMS.
+     * No intrusive actions are allowed, so this is pretty safe to grant.
      * </pre>
      *
      * <code>MDB_MONITOR = 1;</code>
@@ -226,7 +228,7 @@ public final class PSU {
 
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -235,7 +237,7 @@ public final class PSU {
     java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList();
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -244,7 +246,7 @@ public final class PSU {
     int getServerRolesCount();
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -254,7 +256,7 @@ public final class PSU {
     yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index);
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -264,7 +266,7 @@ public final class PSU {
     getServerRolesValueList();
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -575,7 +577,7 @@ public final class PSU {
             };
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -588,7 +590,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -600,7 +602,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -613,7 +615,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -626,7 +628,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles granted to the login
+     *Set of server roles granted to the login.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1575,7 +1577,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1587,7 +1589,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1598,7 +1600,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1610,7 +1612,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1630,7 +1632,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1648,7 +1650,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1666,7 +1668,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1680,7 +1682,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1692,7 +1694,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1704,7 +1706,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1721,7 +1723,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1736,7 +1738,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles granted to the login
+       *Set of server roles granted to the login.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -1991,6 +1993,10 @@ public final class PSU {
     }
 
     /**
+     * <pre>
+     * Role granted to the user within the database.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.mdb.sqlserver.v1.Permission.Role}
      */
     public enum Role
@@ -2001,7 +2007,7 @@ public final class PSU {
       ROLE_UNSPECIFIED(0),
       /**
        * <pre>
-       * Members of this fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in SQL Server.
+       * Members of this fixed database role can perform all configuration and maintenance activities on a database and can also drop a database in SQL Server.
        * </pre>
        *
        * <code>DB_OWNER = 1;</code>
@@ -2017,7 +2023,7 @@ public final class PSU {
       DB_SECURITYADMIN(2),
       /**
        * <pre>
-       * Members of this fixed database role can add or remove access to the database for Windows logins, Windows groups, and SQL Server logins.
+       * Members of this fixed database role can add or remove access to a database for Windows logins, Windows groups, and SQL Server logins.
        * </pre>
        *
        * <code>DB_ACCESSADMIN = 3;</code>
@@ -2057,7 +2063,7 @@ public final class PSU {
       DB_DATAREADER(7),
       /**
        * <pre>
-       * Members of this fixed database role cannot add, modify, or delete any data in the user tables within a database. Denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
+       * Members of this fixed database role cannot add, modify, or delete any data in the user tables within a database. A denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
        * </pre>
        *
        * <code>DB_DENYDATAWRITER = 8;</code>
@@ -2065,7 +2071,7 @@ public final class PSU {
       DB_DENYDATAWRITER(8),
       /**
        * <pre>
-       * Members of this fixed database role cannot read any data in the user tables within a database. Denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
+       * Members of this fixed database role cannot read any data in the user tables within a database. A denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
        * </pre>
        *
        * <code>DB_DENYDATAREADER = 9;</code>
@@ -2080,7 +2086,7 @@ public final class PSU {
       public static final int ROLE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Members of this fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in SQL Server.
+       * Members of this fixed database role can perform all configuration and maintenance activities on a database and can also drop a database in SQL Server.
        * </pre>
        *
        * <code>DB_OWNER = 1;</code>
@@ -2096,7 +2102,7 @@ public final class PSU {
       public static final int DB_SECURITYADMIN_VALUE = 2;
       /**
        * <pre>
-       * Members of this fixed database role can add or remove access to the database for Windows logins, Windows groups, and SQL Server logins.
+       * Members of this fixed database role can add or remove access to a database for Windows logins, Windows groups, and SQL Server logins.
        * </pre>
        *
        * <code>DB_ACCESSADMIN = 3;</code>
@@ -2136,7 +2142,7 @@ public final class PSU {
       public static final int DB_DATAREADER_VALUE = 7;
       /**
        * <pre>
-       * Members of this fixed database role cannot add, modify, or delete any data in the user tables within a database. Denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
+       * Members of this fixed database role cannot add, modify, or delete any data in the user tables within a database. A denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
        * </pre>
        *
        * <code>DB_DENYDATAWRITER = 8;</code>
@@ -2144,7 +2150,7 @@ public final class PSU {
       public static final int DB_DENYDATAWRITER_VALUE = 8;
       /**
        * <pre>
-       * Members of this fixed database role cannot read any data in the user tables within a database. Denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
+       * Members of this fixed database role cannot read any data in the user tables within a database. A denial has a higher priority than a grant, so you can use this role to quickly restrict one's privileges without explicitly revoking permissions or roles.
        * </pre>
        *
        * <code>DB_DENYDATAREADER = 9;</code>
@@ -3138,7 +3144,7 @@ public final class PSU {
 
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3147,7 +3153,7 @@ public final class PSU {
     java.util.List<yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole> getServerRolesList();
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3156,7 +3162,7 @@ public final class PSU {
     int getServerRolesCount();
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3166,7 +3172,7 @@ public final class PSU {
     yandex.cloud.api.mdb.sqlserver.v1.PSU.ServerRole getServerRoles(int index);
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3176,7 +3182,7 @@ public final class PSU {
     getServerRolesValueList();
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3483,7 +3489,7 @@ public final class PSU {
             };
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3496,7 +3502,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3508,7 +3514,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3521,7 +3527,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -3534,7 +3540,7 @@ public final class PSU {
     }
     /**
      * <pre>
-     *Set of server roles
+     * Set of server roles.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4479,7 +4485,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4491,7 +4497,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4502,7 +4508,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4514,7 +4520,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4534,7 +4540,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4552,7 +4558,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4570,7 +4576,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4584,7 +4590,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4596,7 +4602,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4608,7 +4614,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4625,7 +4631,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>
@@ -4640,7 +4646,7 @@ public final class PSU {
       }
       /**
        * <pre>
-       *Set of server roles
+       * Set of server roles.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.sqlserver.v1.ServerRole server_roles = 4;</code>

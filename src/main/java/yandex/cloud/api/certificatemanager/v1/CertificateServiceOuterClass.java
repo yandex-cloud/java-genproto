@@ -5270,6 +5270,16 @@ public final class CertificateServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPrivateKeyBytes();
+
+    /**
+     * <pre>
+     * Flag that protects deletion of the certificate
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.CreateCertificateRequest}
@@ -5370,6 +5380,11 @@ public final class CertificateServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               privateKey_ = s;
+              break;
+            }
+            case 64: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -5791,6 +5806,21 @@ public final class CertificateServiceOuterClass {
       }
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Flag that protects deletion of the certificate
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5829,6 +5859,9 @@ public final class CertificateServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privateKey_);
       }
+      if (deletionProtection_ != false) {
+        output.writeBool(8, deletionProtection_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5866,6 +5899,10 @@ public final class CertificateServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privateKey_);
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5895,6 +5932,8 @@ public final class CertificateServiceOuterClass {
           .equals(other.getChain())) return false;
       if (!getPrivateKey()
           .equals(other.getPrivateKey())) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5922,6 +5961,9 @@ public final class CertificateServiceOuterClass {
       hash = (53 * hash) + getChain().hashCode();
       hash = (37 * hash) + PRIVATE_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKey().hashCode();
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6090,6 +6132,8 @@ public final class CertificateServiceOuterClass {
 
         privateKey_ = "";
 
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -6125,6 +6169,7 @@ public final class CertificateServiceOuterClass {
         result.certificate_ = certificate_;
         result.chain_ = chain_;
         result.privateKey_ = privateKey_;
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -6198,6 +6243,9 @@ public final class CertificateServiceOuterClass {
         if (!other.getPrivateKey().isEmpty()) {
           privateKey_ = other.privateKey_;
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6965,6 +7013,49 @@ public final class CertificateServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         privateKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -7831,6 +7922,16 @@ public final class CertificateServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPrivateKeyBytes();
+
+    /**
+     * <pre>
+     * Flag that protects deletion of the certificate
+     * </pre>
+     *
+     * <code>bool deletion_protection = 9;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.UpdateCertificateRequest}
@@ -7944,6 +8045,11 @@ public final class CertificateServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               privateKey_ = s;
+              break;
+            }
+            case 72: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -8403,6 +8509,21 @@ public final class CertificateServiceOuterClass {
       }
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 9;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Flag that protects deletion of the certificate
+     * </pre>
+     *
+     * <code>bool deletion_protection = 9;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8443,6 +8564,9 @@ public final class CertificateServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, privateKey_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(9, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -8485,6 +8609,10 @@ public final class CertificateServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, privateKey_);
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8519,6 +8647,8 @@ public final class CertificateServiceOuterClass {
           .equals(other.getChain())) return false;
       if (!getPrivateKey()
           .equals(other.getPrivateKey())) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8550,6 +8680,9 @@ public final class CertificateServiceOuterClass {
       hash = (53 * hash) + getChain().hashCode();
       hash = (37 * hash) + PRIVATE_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKey().hashCode();
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8724,6 +8857,8 @@ public final class CertificateServiceOuterClass {
 
         privateKey_ = "";
 
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -8764,6 +8899,7 @@ public final class CertificateServiceOuterClass {
         result.certificate_ = certificate_;
         result.chain_ = chain_;
         result.privateKey_ = privateKey_;
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -8840,6 +8976,9 @@ public final class CertificateServiceOuterClass {
         if (!other.getPrivateKey().isEmpty()) {
           privateKey_ = other.privateKey_;
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9762,6 +9901,49 @@ public final class CertificateServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         privateKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 9;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 9;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -11807,6 +11989,16 @@ public final class CertificateServiceOuterClass {
      * @return The challengeType.
      */
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType getChallengeType();
+
+    /**
+     * <pre>
+     * Flag that protects deletion of the certificate
+     * </pre>
+     *
+     * <code>bool deletion_protection = 7;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.RequestNewCertificateRequest}
@@ -11903,6 +12095,11 @@ public final class CertificateServiceOuterClass {
               int rawValue = input.readEnum();
 
               challengeType_ = rawValue;
+              break;
+            }
+            case 56: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -12265,6 +12462,21 @@ public final class CertificateServiceOuterClass {
       return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.UNRECOGNIZED : result;
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 7;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Flag that protects deletion of the certificate
+     * </pre>
+     *
+     * <code>bool deletion_protection = 7;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12299,6 +12511,9 @@ public final class CertificateServiceOuterClass {
       }
       if (challengeType_ != yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.ChallengeType.CHALLENGE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, challengeType_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(7, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -12340,6 +12555,10 @@ public final class CertificateServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, challengeType_);
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12366,6 +12585,8 @@ public final class CertificateServiceOuterClass {
       if (!getDomainsList()
           .equals(other.getDomainsList())) return false;
       if (challengeType_ != other.challengeType_) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12393,6 +12614,9 @@ public final class CertificateServiceOuterClass {
       }
       hash = (37 * hash) + CHALLENGE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + challengeType_;
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12559,6 +12783,8 @@ public final class CertificateServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         challengeType_ = 0;
 
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -12597,6 +12823,7 @@ public final class CertificateServiceOuterClass {
         }
         result.domains_ = domains_;
         result.challengeType_ = challengeType_;
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -12671,6 +12898,9 @@ public final class CertificateServiceOuterClass {
         }
         if (other.challengeType_ != 0) {
           setChallengeTypeValue(other.getChallengeTypeValue());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13365,6 +13595,49 @@ public final class CertificateServiceOuterClass {
       public Builder clearChallengeType() {
         
         challengeType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag that protects deletion of the certificate
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -16181,7 +16454,7 @@ public final class CertificateServiceOuterClass {
       "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
       "100\"n\n\024ListVersionsResponse\022=\n\010versions\030" +
       "\001 \003(\0132+.yandex.cloud.certificatemanager." +
-      "v1.Version\022\027\n\017next_page_token\030\002 \001(\t\"\302\003\n\030" +
+      "v1.Version\022\027\n\017next_page_token\030\002 \001(\t\"\337\003\n\030" +
       "CreateCertificateRequest\022\037\n\tfolder_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a" +
       "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013descrip" +
@@ -16192,109 +16465,111 @@ public final class CertificateServiceOuterClass {
       "\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\005 \001(\tB" +
       "\013\212\3101\007<=32768\022\034\n\005chain\030\006 \001(\tB\r\212\3101\t<=20971" +
       "52\022%\n\013private_key\030\007 \001(\tB\020\350\3071\001\212\3101\0101-52428" +
-      "8\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"3\n\031CreateCertificateMetadata\022\026\n" +
-      "\016certificate_id\030\001 \001(\t\"\364\003\n\030UpdateCertific" +
-      "ateRequest\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a" +
-      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013descrip" +
-      "tion\030\004 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\005 \003(\0132" +
-      "H.yandex.cloud.certificatemanager.v1.Upd" +
-      "ateCertificateRequest.LabelsEntryB?\202\3101\004<" +
-      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
-      "\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\006 \001(\tB" +
-      "\013\212\3101\007<=32768\022\034\n\005chain\030\007 \001(\tB\r\212\3101\t<=20971" +
-      "52\022!\n\013private_key\030\010 \001(\tB\014\212\3101\010<=524288\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"3\n\031UpdateCertificateMetadata\022\026\n\016cer" +
-      "tificate_id\030\001 \001(\t\"@\n\030DeleteCertificateRe" +
-      "quest\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"3\n\031DeleteCertificateMetadata\022\026\n\016cert" +
-      "ificate_id\030\001 \001(\t\"\277\003\n\034RequestNewCertifica" +
-      "teRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
-      ",61}[a-z0-9])?\022\037\n\013description\030\003 \001(\tB\n\212\3101" +
-      "\006<=1024\022\235\001\n\006labels\030\004 \003(\0132L.yandex.cloud." +
-      "certificatemanager.v1.RequestNewCertific" +
+      "8\022\033\n\023deletion_protection\030\010 \001(\010\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n" +
+      "\031CreateCertificateMetadata\022\026\n\016certificat" +
+      "e_id\030\001 \001(\t\"\221\004\n\030UpdateCertificateRequest\022" +
+      "$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n" +
+      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
+      "9]{0,61}[a-z0-9])?\022\037\n\013description\030\004 \001(\tB" +
+      "\n\212\3101\006<=1024\022\231\001\n\006labels\030\005 \003(\0132H.yandex.cl" +
+      "oud.certificatemanager.v1.UpdateCertific" +
       "ateRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
       "\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\022\017\n\007domains\030\005 \003(\t\022I\n\016challenge_ty" +
-      "pe\030\006 \001(\01621.yandex.cloud.certificatemanag" +
-      "er.v1.ChallengeType\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\035RequestNew" +
-      "CertificateMetadata\022\026\n\016certificate_id\030\001 " +
-      "\001(\t\"\206\001\n ListCertificateOperationsRequest" +
-      "\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"s\n!ListCertificateO" +
-      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
-      "yandex.cloud.operation.Operation\022\027\n\017next" +
-      "_page_token\030\002 \001(\t*&\n\017CertificateView\022\t\n\005" +
-      "BASIC\020\000\022\010\n\004FULL\020\0012\312\022\n\022CertificateService" +
-      "\022\260\001\n\003Get\0229.yandex.cloud.certificatemanag" +
-      "er.v1.GetCertificateRequest\032/.yandex.clo" +
-      "ud.certificatemanager.v1.Certificate\"=\202\323" +
-      "\344\223\0027\0225/certificate-manager/v1/certificat" +
-      "es/{certificate_id}\022\257\001\n\004List\022;.yandex.cl" +
-      "oud.certificatemanager.v1.ListCertificat" +
-      "esRequest\032<.yandex.cloud.certificatemana" +
-      "ger.v1.ListCertificatesResponse\",\202\323\344\223\002&\022" +
-      "$/certificate-manager/v1/certificates\022\311\001" +
-      "\n\014ListVersions\0227.yandex.cloud.certificat" +
-      "emanager.v1.ListVersionsRequest\0328.yandex" +
-      ".cloud.certificatemanager.v1.ListVersion" +
-      "sResponse\"F\202\323\344\223\002@\022>/certificate-manager/" +
-      "v1/certificates/{certificate_id}/version" +
-      "s\022\306\001\n\006Create\022<.yandex.cloud.certificatem" +
-      "anager.v1.CreateCertificateRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"[\202\323\344\223\002)\"$/" +
-      "certificate-manager/v1/certificates:\001*\262\322" +
-      "*(\n\031CreateCertificateMetadata\022\013Certifica" +
-      "te\022\327\001\n\006Update\022<.yandex.cloud.certificate" +
-      "manager.v1.UpdateCertificateRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"l\202\323\344\223\002:25" +
-      "/certificate-manager/v1/certificates/{ce" +
-      "rtificate_id}:\001*\262\322*(\n\031UpdateCertificateM" +
-      "etadata\022\013Certificate\022\324\001\n\006Delete\022<.yandex" +
-      ".cloud.certificatemanager.v1.DeleteCerti" +
-      "ficateRequest\032!.yandex.cloud.operation.O" +
-      "peration\"i\202\323\344\223\0027*5/certificate-manager/v" +
-      "1/certificates/{certificate_id}\262\322*(\n\031Del" +
-      "eteCertificateMetadata\022\013Certificate\022\335\001\n\n" +
-      "RequestNew\022@.yandex.cloud.certificateman" +
-      "ager.v1.RequestNewCertificateRequest\032!.y" +
-      "andex.cloud.operation.Operation\"j\202\323\344\223\0024\"" +
-      "//certificate-manager/v1/certificates/re" +
-      "questNew:\001*\262\322*,\n\035RequestNewCertificateMe" +
-      "tadata\022\013Certificate\022\347\001\n\016ListOperations\022D" +
+      "-9a-z]*\022 \n\013certificate\030\006 \001(\tB\013\212\3101\007<=3276" +
+      "8\022\034\n\005chain\030\007 \001(\tB\r\212\3101\t<=2097152\022!\n\013priva" +
+      "te_key\030\010 \001(\tB\014\212\3101\010<=524288\022\033\n\023deletion_p" +
+      "rotection\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\031UpdateCertific" +
+      "ateMetadata\022\026\n\016certificate_id\030\001 \001(\t\"@\n\030D" +
+      "eleteCertificateRequest\022$\n\016certificate_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"3\n\031DeleteCertifica" +
+      "teMetadata\022\026\n\016certificate_id\030\001 \001(\t\"\334\003\n\034R" +
+      "equestNewCertificateRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 " +
+      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013desc" +
+      "ription\030\003 \001(\tB\n\212\3101\006<=1024\022\235\001\n\006labels\030\004 \003" +
+      "(\0132L.yandex.cloud.certificatemanager.v1." +
+      "RequestNewCertificateRequest.LabelsEntry" +
+      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<" +
+      "=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\017\n\007domains\030\005 \003" +
+      "(\t\022I\n\016challenge_type\030\006 \001(\01621.yandex.clou" +
+      "d.certificatemanager.v1.ChallengeType\022\033\n" +
+      "\023deletion_protection\030\007 \001(\010\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\035Req" +
+      "uestNewCertificateMetadata\022\026\n\016certificat" +
+      "e_id\030\001 \001(\t\"\206\001\n ListCertificateOperations" +
+      "Request\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!ListCerti" +
+      "ficateOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030\002 \001(\t*&\n\017CertificateV" +
+      "iew\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\312\022\n\022Certificate" +
+      "Service\022\260\001\n\003Get\0229.yandex.cloud.certifica" +
+      "temanager.v1.GetCertificateRequest\032/.yan" +
+      "dex.cloud.certificatemanager.v1.Certific" +
+      "ate\"=\202\323\344\223\0027\0225/certificate-manager/v1/cer" +
+      "tificates/{certificate_id}\022\257\001\n\004List\022;.ya" +
+      "ndex.cloud.certificatemanager.v1.ListCer" +
+      "tificatesRequest\032<.yandex.cloud.certific" +
+      "atemanager.v1.ListCertificatesResponse\"," +
+      "\202\323\344\223\002&\022$/certificate-manager/v1/certific" +
+      "ates\022\311\001\n\014ListVersions\0227.yandex.cloud.cer" +
+      "tificatemanager.v1.ListVersionsRequest\0328" +
       ".yandex.cloud.certificatemanager.v1.List" +
-      "CertificateOperationsRequest\032E.yandex.cl" +
-      "oud.certificatemanager.v1.ListCertificat" +
-      "eOperationsResponse\"H\202\323\344\223\002B\022@/certificat" +
-      "e-manager/v1/certificates/{certificate_i" +
-      "d}/operations\022\304\001\n\022ListAccessBindings\022..y" +
-      "andex.cloud.access.ListAccessBindingsReq" +
-      "uest\032/.yandex.cloud.access.ListAccessBin" +
-      "dingsResponse\"M\202\323\344\223\002G\022E/certificate-mana" +
-      "ger/v1/certificates/{resource_id}:listAc" +
-      "cessBindings\022\364\001\n\021SetAccessBindings\022-.yan" +
-      "dex.cloud.access.SetAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\214\001\202" +
-      "\323\344\223\002I\"D/certificate-manager/v1/certifica" +
-      "tes/{resource_id}:setAccessBindings:\001*\262\322" +
-      "*9\n access.SetAccessBindingsMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\200\002\n\024UpdateAccessBind" +
-      "ings\0220.yandex.cloud.access.UpdateAccessB" +
-      "indingsRequest\032!.yandex.cloud.operation." +
-      "Operation\"\222\001\202\323\344\223\002L\"G/certificate-manager" +
-      "/v1/certificates/{resource_id}:updateAcc" +
-      "essBindings:\001*\262\322*<\n#access.UpdateAccessB" +
-      "indingsMetadata\022\025google.protobuf.EmptyB\203" +
-      "\001\n&yandex.cloud.api.certificatemanager.v" +
-      "1ZYgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/certificatemanager/v1;certif" +
-      "icatemanagerb\006proto3"
+      "VersionsResponse\"F\202\323\344\223\002@\022>/certificate-m" +
+      "anager/v1/certificates/{certificate_id}/" +
+      "versions\022\306\001\n\006Create\022<.yandex.cloud.certi" +
+      "ficatemanager.v1.CreateCertificateReques" +
+      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
+      "\344\223\002)\"$/certificate-manager/v1/certificat" +
+      "es:\001*\262\322*(\n\031CreateCertificateMetadata\022\013Ce" +
+      "rtificate\022\327\001\n\006Update\022<.yandex.cloud.cert" +
+      "ificatemanager.v1.UpdateCertificateReque" +
+      "st\032!.yandex.cloud.operation.Operation\"l\202" +
+      "\323\344\223\002:25/certificate-manager/v1/certifica" +
+      "tes/{certificate_id}:\001*\262\322*(\n\031UpdateCerti" +
+      "ficateMetadata\022\013Certificate\022\324\001\n\006Delete\022<" +
+      ".yandex.cloud.certificatemanager.v1.Dele" +
+      "teCertificateRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"i\202\323\344\223\0027*5/certificate-ma" +
+      "nager/v1/certificates/{certificate_id}\262\322" +
+      "*(\n\031DeleteCertificateMetadata\022\013Certifica" +
+      "te\022\335\001\n\nRequestNew\022@.yandex.cloud.certifi" +
+      "catemanager.v1.RequestNewCertificateRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"j" +
+      "\202\323\344\223\0024\"//certificate-manager/v1/certific" +
+      "ates/requestNew:\001*\262\322*,\n\035RequestNewCertif" +
+      "icateMetadata\022\013Certificate\022\347\001\n\016ListOpera" +
+      "tions\022D.yandex.cloud.certificatemanager." +
+      "v1.ListCertificateOperationsRequest\032E.ya" +
+      "ndex.cloud.certificatemanager.v1.ListCer" +
+      "tificateOperationsResponse\"H\202\323\344\223\002B\022@/cer" +
+      "tificate-manager/v1/certificates/{certif" +
+      "icate_id}/operations\022\304\001\n\022ListAccessBindi" +
+      "ngs\022..yandex.cloud.access.ListAccessBind" +
+      "ingsRequest\032/.yandex.cloud.access.ListAc" +
+      "cessBindingsResponse\"M\202\323\344\223\002G\022E/certifica" +
+      "te-manager/v1/certificates/{resource_id}" +
+      ":listAccessBindings\022\364\001\n\021SetAccessBinding" +
+      "s\022-.yandex.cloud.access.SetAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\214\001\202\323\344\223\002I\"D/certificate-manager/v1/ce" +
+      "rtificates/{resource_id}:setAccessBindin" +
+      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
+      "ata\022\025google.protobuf.Empty\022\200\002\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\222\001\202\323\344\223\002L\"G/certificate-" +
+      "manager/v1/certificates/{resource_id}:up" +
+      "dateAccessBindings:\001*\262\322*<\n#access.Update" +
+      "AccessBindingsMetadata\022\025google.protobuf." +
+      "EmptyB\203\001\n&yandex.cloud.api.certificatema" +
+      "nager.v1ZYgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/certificatemanager/v1" +
+      ";certificatemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16342,7 +16617,7 @@ public final class CertificateServiceOuterClass {
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Certificate", "Chain", "PrivateKey", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Certificate", "Chain", "PrivateKey", "DeletionProtection", });
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_certificatemanager_v1_CreateCertificateRequest_LabelsEntry_fieldAccessorTable = new
@@ -16360,7 +16635,7 @@ public final class CertificateServiceOuterClass {
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_descriptor,
-        new java.lang.String[] { "CertificateId", "UpdateMask", "Name", "Description", "Labels", "Certificate", "Chain", "PrivateKey", });
+        new java.lang.String[] { "CertificateId", "UpdateMask", "Name", "Description", "Labels", "Certificate", "Chain", "PrivateKey", "DeletionProtection", });
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_certificatemanager_v1_UpdateCertificateRequest_LabelsEntry_fieldAccessorTable = new
@@ -16390,7 +16665,7 @@ public final class CertificateServiceOuterClass {
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Domains", "ChallengeType", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Domains", "ChallengeType", "DeletionProtection", });
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_certificatemanager_v1_RequestNewCertificateRequest_LabelsEntry_fieldAccessorTable = new
