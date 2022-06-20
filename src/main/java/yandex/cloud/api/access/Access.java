@@ -8232,6 +8232,911 @@ public final class Access {
 
   }
 
+  public interface AccessBindingsOperationResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.AccessBindingsOperationResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> 
+        getEffectiveDeltasList();
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    yandex.cloud.api.access.Access.AccessBindingDelta getEffectiveDeltas(int index);
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    int getEffectiveDeltasCount();
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
+        getEffectiveDeltasOrBuilderList();
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getEffectiveDeltasOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.AccessBindingsOperationResult}
+   */
+  public static final class AccessBindingsOperationResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.AccessBindingsOperationResult)
+      AccessBindingsOperationResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessBindingsOperationResult.newBuilder() to construct.
+    private AccessBindingsOperationResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessBindingsOperationResult() {
+      effectiveDeltas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessBindingsOperationResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessBindingsOperationResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                effectiveDeltas_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBindingDelta>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              effectiveDeltas_.add(
+                  input.readMessage(yandex.cloud.api.access.Access.AccessBindingDelta.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          effectiveDeltas_ = java.util.Collections.unmodifiableList(effectiveDeltas_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessBindingsOperationResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.AccessBindingsOperationResult.class, yandex.cloud.api.access.Access.AccessBindingsOperationResult.Builder.class);
+    }
+
+    public static final int EFFECTIVE_DELTAS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> effectiveDeltas_;
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getEffectiveDeltasList() {
+      return effectiveDeltas_;
+    }
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
+        getEffectiveDeltasOrBuilderList() {
+      return effectiveDeltas_;
+    }
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    @java.lang.Override
+    public int getEffectiveDeltasCount() {
+      return effectiveDeltas_.size();
+    }
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessBindingDelta getEffectiveDeltas(int index) {
+      return effectiveDeltas_.get(index);
+    }
+    /**
+     * <pre>
+     * Result access binding deltas.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getEffectiveDeltasOrBuilder(
+        int index) {
+      return effectiveDeltas_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < effectiveDeltas_.size(); i++) {
+        output.writeMessage(1, effectiveDeltas_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < effectiveDeltas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, effectiveDeltas_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.AccessBindingsOperationResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.AccessBindingsOperationResult other = (yandex.cloud.api.access.Access.AccessBindingsOperationResult) obj;
+
+      if (!getEffectiveDeltasList()
+          .equals(other.getEffectiveDeltasList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEffectiveDeltasCount() > 0) {
+        hash = (37 * hash) + EFFECTIVE_DELTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getEffectiveDeltasList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.AccessBindingsOperationResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.AccessBindingsOperationResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.AccessBindingsOperationResult)
+        yandex.cloud.api.access.Access.AccessBindingsOperationResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessBindingsOperationResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.AccessBindingsOperationResult.class, yandex.cloud.api.access.Access.AccessBindingsOperationResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.AccessBindingsOperationResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEffectiveDeltasFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (effectiveDeltasBuilder_ == null) {
+          effectiveDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          effectiveDeltasBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessBindingsOperationResult getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.AccessBindingsOperationResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessBindingsOperationResult build() {
+        yandex.cloud.api.access.Access.AccessBindingsOperationResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessBindingsOperationResult buildPartial() {
+        yandex.cloud.api.access.Access.AccessBindingsOperationResult result = new yandex.cloud.api.access.Access.AccessBindingsOperationResult(this);
+        int from_bitField0_ = bitField0_;
+        if (effectiveDeltasBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            effectiveDeltas_ = java.util.Collections.unmodifiableList(effectiveDeltas_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.effectiveDeltas_ = effectiveDeltas_;
+        } else {
+          result.effectiveDeltas_ = effectiveDeltasBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.AccessBindingsOperationResult) {
+          return mergeFrom((yandex.cloud.api.access.Access.AccessBindingsOperationResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.AccessBindingsOperationResult other) {
+        if (other == yandex.cloud.api.access.Access.AccessBindingsOperationResult.getDefaultInstance()) return this;
+        if (effectiveDeltasBuilder_ == null) {
+          if (!other.effectiveDeltas_.isEmpty()) {
+            if (effectiveDeltas_.isEmpty()) {
+              effectiveDeltas_ = other.effectiveDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEffectiveDeltasIsMutable();
+              effectiveDeltas_.addAll(other.effectiveDeltas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.effectiveDeltas_.isEmpty()) {
+            if (effectiveDeltasBuilder_.isEmpty()) {
+              effectiveDeltasBuilder_.dispose();
+              effectiveDeltasBuilder_ = null;
+              effectiveDeltas_ = other.effectiveDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              effectiveDeltasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEffectiveDeltasFieldBuilder() : null;
+            } else {
+              effectiveDeltasBuilder_.addAllMessages(other.effectiveDeltas_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.AccessBindingsOperationResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.AccessBindingsOperationResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> effectiveDeltas_ =
+        java.util.Collections.emptyList();
+      private void ensureEffectiveDeltasIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          effectiveDeltas_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessBindingDelta>(effectiveDeltas_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessBindingDelta, yandex.cloud.api.access.Access.AccessBindingDelta.Builder, yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> effectiveDeltasBuilder_;
+
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getEffectiveDeltasList() {
+        if (effectiveDeltasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(effectiveDeltas_);
+        } else {
+          return effectiveDeltasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public int getEffectiveDeltasCount() {
+        if (effectiveDeltasBuilder_ == null) {
+          return effectiveDeltas_.size();
+        } else {
+          return effectiveDeltasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessBindingDelta getEffectiveDeltas(int index) {
+        if (effectiveDeltasBuilder_ == null) {
+          return effectiveDeltas_.get(index);
+        } else {
+          return effectiveDeltasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder setEffectiveDeltas(
+          int index, yandex.cloud.api.access.Access.AccessBindingDelta value) {
+        if (effectiveDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.set(index, value);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder setEffectiveDeltas(
+          int index, yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder addEffectiveDeltas(yandex.cloud.api.access.Access.AccessBindingDelta value) {
+        if (effectiveDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(value);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder addEffectiveDeltas(
+          int index, yandex.cloud.api.access.Access.AccessBindingDelta value) {
+        if (effectiveDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(index, value);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder addEffectiveDeltas(
+          yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder addEffectiveDeltas(
+          int index, yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder addAllEffectiveDeltas(
+          java.lang.Iterable<? extends yandex.cloud.api.access.Access.AccessBindingDelta> values) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, effectiveDeltas_);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder clearEffectiveDeltas() {
+        if (effectiveDeltasBuilder_ == null) {
+          effectiveDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public Builder removeEffectiveDeltas(int index) {
+        if (effectiveDeltasBuilder_ == null) {
+          ensureEffectiveDeltasIsMutable();
+          effectiveDeltas_.remove(index);
+          onChanged();
+        } else {
+          effectiveDeltasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessBindingDelta.Builder getEffectiveDeltasBuilder(
+          int index) {
+        return getEffectiveDeltasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getEffectiveDeltasOrBuilder(
+          int index) {
+        if (effectiveDeltasBuilder_ == null) {
+          return effectiveDeltas_.get(index);  } else {
+          return effectiveDeltasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
+           getEffectiveDeltasOrBuilderList() {
+        if (effectiveDeltasBuilder_ != null) {
+          return effectiveDeltasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(effectiveDeltas_);
+        }
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessBindingDelta.Builder addEffectiveDeltasBuilder() {
+        return getEffectiveDeltasFieldBuilder().addBuilder(
+            yandex.cloud.api.access.Access.AccessBindingDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessBindingDelta.Builder addEffectiveDeltasBuilder(
+          int index) {
+        return getEffectiveDeltasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.access.Access.AccessBindingDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Result access binding deltas.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta effective_deltas = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta.Builder> 
+           getEffectiveDeltasBuilderList() {
+        return getEffectiveDeltasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessBindingDelta, yandex.cloud.api.access.Access.AccessBindingDelta.Builder, yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
+          getEffectiveDeltasFieldBuilder() {
+        if (effectiveDeltasBuilder_ == null) {
+          effectiveDeltasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.access.Access.AccessBindingDelta, yandex.cloud.api.access.Access.AccessBindingDelta.Builder, yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder>(
+                  effectiveDeltas_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          effectiveDeltas_ = null;
+        }
+        return effectiveDeltasBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.AccessBindingsOperationResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.AccessBindingsOperationResult)
+    private static final yandex.cloud.api.access.Access.AccessBindingsOperationResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.AccessBindingsOperationResult();
+    }
+
+    public static yandex.cloud.api.access.Access.AccessBindingsOperationResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessBindingsOperationResult>
+        PARSER = new com.google.protobuf.AbstractParser<AccessBindingsOperationResult>() {
+      @java.lang.Override
+      public AccessBindingsOperationResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessBindingsOperationResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessBindingsOperationResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessBindingsOperationResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessBindingsOperationResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_access_Subject_descriptor;
   private static final 
@@ -8277,6 +9182,11 @@ public final class Access {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_access_AccessBindingDelta_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_AccessBindingsOperationResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8311,12 +9221,15 @@ public final class Access {
       "\030\001 \001(\t\"\226\001\n\022AccessBindingDelta\022>\n\006action\030" +
       "\001 \001(\0162(.yandex.cloud.access.AccessBindin" +
       "gActionB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\"." +
-      "yandex.cloud.access.AccessBindingB\004\350\3071\001*" +
-      "Q\n\023AccessBindingAction\022%\n!ACCESS_BINDING" +
-      "_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE" +
-      "\020\002BY\n\027yandex.cloud.api.accessZ>github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "access;accessb\006proto3"
+      "yandex.cloud.access.AccessBindingB\004\350\3071\001\"" +
+      "b\n\035AccessBindingsOperationResult\022A\n\020effe" +
+      "ctive_deltas\030\001 \003(\0132\'.yandex.cloud.access" +
+      ".AccessBindingDelta*Q\n\023AccessBindingActi" +
+      "on\022%\n!ACCESS_BINDING_ACTION_UNSPECIFIED\020" +
+      "\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027yandex.cloud.a" +
+      "pi.accessZ>github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/access;accessb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8377,6 +9290,12 @@ public final class Access {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_AccessBindingDelta_descriptor,
         new java.lang.String[] { "Action", "AccessBinding", });
+    internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_access_AccessBindingsOperationResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor,
+        new java.lang.String[] { "EffectiveDeltas", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

@@ -2857,10 +2857,18 @@ public final class Tts {
        */
       WAV(1),
       /**
+       * <pre>
+       * Data is encoded using the OPUS audio codec and compressed using the OGG container format.
+       * </pre>
+       *
        * <code>OGG_OPUS = 2;</code>
        */
       OGG_OPUS(2),
       /**
+       * <pre>
+       * Data is encoded using MPEG-1/2 Layer III and compressed using the MP3 container format.
+       * </pre>
+       *
        * <code>MP3 = 3;</code>
        */
       MP3(3),
@@ -2880,10 +2888,18 @@ public final class Tts {
        */
       public static final int WAV_VALUE = 1;
       /**
+       * <pre>
+       * Data is encoded using the OPUS audio codec and compressed using the OGG container format.
+       * </pre>
+       *
        * <code>OGG_OPUS = 2;</code>
        */
       public static final int OGG_OPUS_VALUE = 2;
       /**
+       * <pre>
+       * Data is encoded using MPEG-1/2 Layer III and compressed using the MP3 container format.
+       * </pre>
+       *
        * <code>MP3 = 3;</code>
        */
       public static final int MP3_VALUE = 3;
@@ -8789,7 +8805,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * hint to change speed
+     * Hint to change speed.
      * </pre>
      *
      * <code>double speed = 3;</code>
@@ -8798,7 +8814,7 @@ public final class Tts {
     boolean hasSpeed();
     /**
      * <pre>
-     * hint to change speed
+     * Hint to change speed.
      * </pre>
      *
      * <code>double speed = 3;</code>
@@ -8808,7 +8824,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -8817,7 +8833,7 @@ public final class Tts {
     boolean hasVolume();
     /**
      * <pre>
-     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -8826,16 +8842,28 @@ public final class Tts {
     double getVolume();
 
     /**
+     * <pre>
+     * Hint to specify pronunciation character for the speaker.
+     * </pre>
+     *
      * <code>string role = 5;</code>
      * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
+     * <pre>
+     * Hint to specify pronunciation character for the speaker.
+     * </pre>
+     *
      * <code>string role = 5;</code>
      * @return The role.
      */
     java.lang.String getRole();
     /**
+     * <pre>
+     * Hint to specify pronunciation character for the speaker.
+     * </pre>
+     *
      * <code>string role = 5;</code>
      * @return The bytes for role.
      */
@@ -9114,7 +9142,7 @@ public final class Tts {
     public static final int SPEED_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * hint to change speed
+     * Hint to change speed.
      * </pre>
      *
      * <code>double speed = 3;</code>
@@ -9126,7 +9154,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * hint to change speed
+     * Hint to change speed.
      * </pre>
      *
      * <code>double speed = 3;</code>
@@ -9143,7 +9171,7 @@ public final class Tts {
     public static final int VOLUME_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -9155,7 +9183,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -9171,6 +9199,10 @@ public final class Tts {
 
     public static final int ROLE_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Hint to specify pronunciation character for the speaker.
+     * </pre>
+     *
      * <code>string role = 5;</code>
      * @return Whether the role field is set.
      */
@@ -9178,6 +9210,10 @@ public final class Tts {
       return hintCase_ == 5;
     }
     /**
+     * <pre>
+     * Hint to specify pronunciation character for the speaker.
+     * </pre>
+     *
      * <code>string role = 5;</code>
      * @return The role.
      */
@@ -9199,6 +9235,10 @@ public final class Tts {
       }
     }
     /**
+     * <pre>
+     * Hint to specify pronunciation character for the speaker.
+     * </pre>
+     *
      * <code>string role = 5;</code>
      * @return The bytes for role.
      */
@@ -9962,7 +10002,7 @@ public final class Tts {
 
       /**
        * <pre>
-       * hint to change speed
+       * Hint to change speed.
        * </pre>
        *
        * <code>double speed = 3;</code>
@@ -9973,7 +10013,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to change speed
+       * Hint to change speed.
        * </pre>
        *
        * <code>double speed = 3;</code>
@@ -9987,7 +10027,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to change speed
+       * Hint to change speed.
        * </pre>
        *
        * <code>double speed = 3;</code>
@@ -10002,7 +10042,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to change speed
+       * Hint to change speed.
        * </pre>
        *
        * <code>double speed = 3;</code>
@@ -10019,7 +10059,7 @@ public final class Tts {
 
       /**
        * <pre>
-       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10030,7 +10070,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10044,7 +10084,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10059,7 +10099,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10075,6 +10115,10 @@ public final class Tts {
       }
 
       /**
+       * <pre>
+       * Hint to specify pronunciation character for the speaker.
+       * </pre>
+       *
        * <code>string role = 5;</code>
        * @return Whether the role field is set.
        */
@@ -10083,6 +10127,10 @@ public final class Tts {
         return hintCase_ == 5;
       }
       /**
+       * <pre>
+       * Hint to specify pronunciation character for the speaker.
+       * </pre>
+       *
        * <code>string role = 5;</code>
        * @return The role.
        */
@@ -10105,6 +10153,10 @@ public final class Tts {
         }
       }
       /**
+       * <pre>
+       * Hint to specify pronunciation character for the speaker.
+       * </pre>
+       *
        * <code>string role = 5;</code>
        * @return The bytes for role.
        */
@@ -10128,6 +10180,10 @@ public final class Tts {
         }
       }
       /**
+       * <pre>
+       * Hint to specify pronunciation character for the speaker.
+       * </pre>
+       *
        * <code>string role = 5;</code>
        * @param value The role to set.
        * @return This builder for chaining.
@@ -10143,6 +10199,10 @@ public final class Tts {
         return this;
       }
       /**
+       * <pre>
+       * Hint to specify pronunciation character for the speaker.
+       * </pre>
+       *
        * <code>string role = 5;</code>
        * @return This builder for chaining.
        */
@@ -10155,6 +10215,10 @@ public final class Tts {
         return this;
       }
       /**
+       * <pre>
+       * Hint to specify pronunciation character for the speaker.
+       * </pre>
+       *
        * <code>string role = 5;</code>
        * @param value The bytes for role to set.
        * @return This builder for chaining.
@@ -10230,7 +10294,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -10240,7 +10304,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -10378,7 +10442,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * Optional. Default: LUFS, type of loudness normalization, default value -19.
+     * Optional. Default: LUFS type of loudness normalization.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10387,7 +10451,7 @@ public final class Tts {
     int getLoudnessNormalizationTypeValue();
     /**
      * <pre>
-     * Optional. Default: LUFS, type of loudness normalization, default value -19.
+     * Optional. Default: LUFS type of loudness normalization.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10564,10 +10628,20 @@ public final class Tts {
        */
       LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * The type of normalization, wherein the gain is changed to bring the highest PCM sample value or analog signal peak to a given level.
+       * The volume changes in a range (0;1], default value is 0.7.
+       * </pre>
+       *
        * <code>MAX_PEAK = 1;</code>
        */
       MAX_PEAK(1),
       /**
+       * <pre>
+       * The type of normalization based on EBU R 128 recommendation.
+       * the volume changes in a range [-145;0], default value is -19.
+       * </pre>
+       *
        * <code>LUFS = 2;</code>
        */
       LUFS(2),
@@ -10579,10 +10653,20 @@ public final class Tts {
        */
       public static final int LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * The type of normalization, wherein the gain is changed to bring the highest PCM sample value or analog signal peak to a given level.
+       * The volume changes in a range (0;1], default value is 0.7.
+       * </pre>
+       *
        * <code>MAX_PEAK = 1;</code>
        */
       public static final int MAX_PEAK_VALUE = 1;
       /**
+       * <pre>
+       * The type of normalization based on EBU R 128 recommendation.
+       * the volume changes in a range [-145;0], default value is -19.
+       * </pre>
+       *
        * <code>LUFS = 2;</code>
        */
       public static final int LUFS_VALUE = 2;
@@ -10717,7 +10801,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -10739,7 +10823,7 @@ public final class Tts {
     /**
      * <pre>
      * The name of the model.
-     * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+     * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -10969,7 +11053,7 @@ public final class Tts {
     private int loudnessNormalizationType_;
     /**
      * <pre>
-     * Optional. Default: LUFS, type of loudness normalization, default value -19.
+     * Optional. Default: LUFS type of loudness normalization.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10980,7 +11064,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Optional. Default: LUFS, type of loudness normalization, default value -19.
+     * Optional. Default: LUFS type of loudness normalization.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -11515,7 +11599,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -11536,7 +11620,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -11558,7 +11642,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -11578,7 +11662,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -11593,7 +11677,7 @@ public final class Tts {
       /**
        * <pre>
        * The name of the model.
-       * Specifies basic synthesis functionality. Currently should be empty. Do not use it
+       * Specifies basic synthesis functionality. Currently should be empty. Do not use it.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -12380,7 +12464,7 @@ public final class Tts {
       private int loudnessNormalizationType_ = 0;
       /**
        * <pre>
-       * Optional. Default: LUFS, type of loudness normalization, default value -19.
+       * Optional. Default: LUFS type of loudness normalization.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12391,7 +12475,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS, type of loudness normalization, default value -19.
+       * Optional. Default: LUFS type of loudness normalization.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12406,7 +12490,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS, type of loudness normalization, default value -19.
+       * Optional. Default: LUFS type of loudness normalization.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12420,7 +12504,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS, type of loudness normalization, default value -19.
+       * Optional. Default: LUFS type of loudness normalization.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12438,7 +12522,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS, type of loudness normalization, default value -19.
+       * Optional. Default: LUFS type of loudness normalization.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>

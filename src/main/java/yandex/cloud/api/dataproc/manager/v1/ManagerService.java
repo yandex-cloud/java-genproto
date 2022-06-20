@@ -14,6 +14,164 @@ public final class ManagerService {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.dataproc.manager.v1.InitActsState}
+   */
+  public enum InitActsState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * No init acts on cluster
+     * </pre>
+     *
+     * <code>INIT_ACTS_STATE_UNSPECIFIED = 0;</code>
+     */
+    INIT_ACTS_STATE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * At least one failed init act
+     * </pre>
+     *
+     * <code>FAILED = 1;</code>
+     */
+    FAILED(1),
+    /**
+     * <pre>
+     * All init acts succeeded
+     * </pre>
+     *
+     * <code>SUCCESSFUL = 2;</code>
+     */
+    SUCCESSFUL(2),
+    /**
+     * <pre>
+     * Some init acts not finished
+     * </pre>
+     *
+     * <code>IN_PROGRESS = 3;</code>
+     */
+    IN_PROGRESS(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * No init acts on cluster
+     * </pre>
+     *
+     * <code>INIT_ACTS_STATE_UNSPECIFIED = 0;</code>
+     */
+    public static final int INIT_ACTS_STATE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * At least one failed init act
+     * </pre>
+     *
+     * <code>FAILED = 1;</code>
+     */
+    public static final int FAILED_VALUE = 1;
+    /**
+     * <pre>
+     * All init acts succeeded
+     * </pre>
+     *
+     * <code>SUCCESSFUL = 2;</code>
+     */
+    public static final int SUCCESSFUL_VALUE = 2;
+    /**
+     * <pre>
+     * Some init acts not finished
+     * </pre>
+     *
+     * <code>IN_PROGRESS = 3;</code>
+     */
+    public static final int IN_PROGRESS_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static InitActsState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static InitActsState forNumber(int value) {
+      switch (value) {
+        case 0: return INIT_ACTS_STATE_UNSPECIFIED;
+        case 1: return FAILED;
+        case 2: return SUCCESSFUL;
+        case 3: return IN_PROGRESS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<InitActsState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        InitActsState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<InitActsState>() {
+            public InitActsState findValueByNumber(int number) {
+              return InitActsState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.manager.v1.ManagerService.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final InitActsState[] VALUES = values();
+
+    public static InitActsState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private InitActsState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.dataproc.manager.v1.InitActsState)
+  }
+
   public interface HbaseNodeInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.HbaseNodeInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -10551,6 +10709,819 @@ public final class ManagerService {
 
   }
 
+  public interface InitActsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.InitActs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+     * @return The state.
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState getState();
+
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @return A list containing the fqdns.
+     */
+    java.util.List<java.lang.String>
+        getFqdnsList();
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @return The count of fqdns.
+     */
+    int getFqdnsCount();
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fqdns at the given index.
+     */
+    java.lang.String getFqdns(int index);
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fqdns at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFqdnsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dataproc.manager.v1.InitActs}
+   */
+  public static final class InitActs extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.InitActs)
+      InitActsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InitActs.newBuilder() to construct.
+    private InitActs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InitActs() {
+      state_ = 0;
+      fqdns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InitActs();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InitActs(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              state_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fqdns_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fqdns_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fqdns_ = fqdns_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_InitActs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_InitActs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder.class);
+    }
+
+    public static final int STATE_FIELD_NUMBER = 1;
+    private int state_;
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+     * @return The state.
+     */
+    @java.lang.Override public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState getState() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState result = yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState.valueOf(state_);
+      return result == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState.UNRECOGNIZED : result;
+    }
+
+    public static final int FQDNS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList fqdns_;
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @return A list containing the fqdns.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFqdnsList() {
+      return fqdns_;
+    }
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @return The count of fqdns.
+     */
+    public int getFqdnsCount() {
+      return fqdns_.size();
+    }
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fqdns at the given index.
+     */
+    public java.lang.String getFqdns(int index) {
+      return fqdns_.get(index);
+    }
+    /**
+     * <pre>
+     * fqdns of nodes for error message
+     * </pre>
+     *
+     * <code>repeated string fqdns = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fqdns at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFqdnsBytes(int index) {
+      return fqdns_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (state_ != yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState.INIT_ACTS_STATE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, state_);
+      }
+      for (int i = 0; i < fqdns_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fqdns_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (state_ != yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState.INIT_ACTS_STATE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, state_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fqdns_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fqdns_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFqdnsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs) obj;
+
+      if (state_ != other.state_) return false;
+      if (!getFqdnsList()
+          .equals(other.getFqdnsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      if (getFqdnsCount() > 0) {
+        hash = (37 * hash) + FQDNS_FIELD_NUMBER;
+        hash = (53 * hash) + getFqdnsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dataproc.manager.v1.InitActs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.manager.v1.InitActs)
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_InitActs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_InitActs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        state_ = 0;
+
+        fqdns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_InitActs_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs build() {
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs buildPartial() {
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs(this);
+        int from_bitField0_ = bitField0_;
+        result.state_ = state_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fqdns_ = fqdns_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fqdns_ = fqdns_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs) {
+          return mergeFrom((yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs other) {
+        if (other == yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.getDefaultInstance()) return this;
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (!other.fqdns_.isEmpty()) {
+          if (fqdns_.isEmpty()) {
+            fqdns_ = other.fqdns_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFqdnsIsMutable();
+            fqdns_.addAll(other.fqdns_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int state_ = 0;
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState getState() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState result = yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState.valueOf(state_);
+        return result == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActsState state = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList fqdns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFqdnsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fqdns_ = new com.google.protobuf.LazyStringArrayList(fqdns_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @return A list containing the fqdns.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFqdnsList() {
+        return fqdns_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @return The count of fqdns.
+       */
+      public int getFqdnsCount() {
+        return fqdns_.size();
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @param index The index of the element to return.
+       * @return The fqdns at the given index.
+       */
+      public java.lang.String getFqdns(int index) {
+        return fqdns_.get(index);
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fqdns at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFqdnsBytes(int index) {
+        return fqdns_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The fqdns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFqdns(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFqdnsIsMutable();
+        fqdns_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @param value The fqdns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFqdns(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFqdnsIsMutable();
+        fqdns_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @param values The fqdns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFqdns(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFqdnsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fqdns_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFqdns() {
+        fqdns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fqdns of nodes for error message
+       * </pre>
+       *
+       * <code>repeated string fqdns = 2;</code>
+       * @param value The bytes of the fqdns to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFqdnsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFqdnsIsMutable();
+        fqdns_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.manager.v1.InitActs)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.manager.v1.InitActs)
+    private static final yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs();
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InitActs>
+        PARSER = new com.google.protobuf.AbstractParser<InitActs>() {
+      @java.lang.Override
+      public InitActs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InitActs(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InitActs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InitActs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface InfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.Info)
       com.google.protobuf.MessageOrBuilder {
@@ -10671,6 +11642,21 @@ public final class ManagerService {
      * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder getLivyOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+     * @return Whether the initActs field is set.
+     */
+    boolean hasInitActs();
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+     * @return The initActs.
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs getInitActs();
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder getInitActsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.Info}
@@ -10809,6 +11795,19 @@ public final class ManagerService {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(livy_);
                 livy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder subBuilder = null;
+              if (initActs_ != null) {
+                subBuilder = initActs_.toBuilder();
+              }
+              initActs_ = input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(initActs_);
+                initActs_ = subBuilder.buildPartial();
               }
 
               break;
@@ -11044,6 +12043,32 @@ public final class ManagerService {
       return getLivy();
     }
 
+    public static final int INIT_ACTS_FIELD_NUMBER = 9;
+    private yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs initActs_;
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+     * @return Whether the initActs field is set.
+     */
+    @java.lang.Override
+    public boolean hasInitActs() {
+      return initActs_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+     * @return The initActs.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs getInitActs() {
+      return initActs_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.getDefaultInstance() : initActs_;
+    }
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder getInitActsOrBuilder() {
+      return getInitActs();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11081,6 +12106,9 @@ public final class ManagerService {
       }
       if (livy_ != null) {
         output.writeMessage(8, getLivy());
+      }
+      if (initActs_ != null) {
+        output.writeMessage(9, getInitActs());
       }
       unknownFields.writeTo(output);
     }
@@ -11122,6 +12150,10 @@ public final class ManagerService {
       if (livy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLivy());
+      }
+      if (initActs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getInitActs());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11175,6 +12207,11 @@ public final class ManagerService {
         if (!getLivy()
             .equals(other.getLivy())) return false;
       }
+      if (hasInitActs() != other.hasInitActs()) return false;
+      if (hasInitActs()) {
+        if (!getInitActs()
+            .equals(other.getInitActs())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11216,6 +12253,10 @@ public final class ManagerService {
       if (hasLivy()) {
         hash = (37 * hash) + LIVY_FIELD_NUMBER;
         hash = (53 * hash) + getLivy().hashCode();
+      }
+      if (hasInitActs()) {
+        hash = (37 * hash) + INIT_ACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInitActs().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11394,6 +12435,12 @@ public final class ManagerService {
           livy_ = null;
           livyBuilder_ = null;
         }
+        if (initActsBuilder_ == null) {
+          initActs_ = null;
+        } else {
+          initActs_ = null;
+          initActsBuilder_ = null;
+        }
         return this;
       }
 
@@ -11455,6 +12502,11 @@ public final class ManagerService {
           result.livy_ = livy_;
         } else {
           result.livy_ = livyBuilder_.build();
+        }
+        if (initActsBuilder_ == null) {
+          result.initActs_ = initActs_;
+        } else {
+          result.initActs_ = initActsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11527,6 +12579,9 @@ public final class ManagerService {
         }
         if (other.hasLivy()) {
           mergeLivy(other.getLivy());
+        }
+        if (other.hasInitActs()) {
+          mergeInitActs(other.getInitActs());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12437,6 +13492,125 @@ public final class ManagerService {
           livy_ = null;
         }
         return livyBuilder_;
+      }
+
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs initActs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder> initActsBuilder_;
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       * @return Whether the initActs field is set.
+       */
+      public boolean hasInitActs() {
+        return initActsBuilder_ != null || initActs_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       * @return The initActs.
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs getInitActs() {
+        if (initActsBuilder_ == null) {
+          return initActs_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.getDefaultInstance() : initActs_;
+        } else {
+          return initActsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      public Builder setInitActs(yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs value) {
+        if (initActsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          initActs_ = value;
+          onChanged();
+        } else {
+          initActsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      public Builder setInitActs(
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder builderForValue) {
+        if (initActsBuilder_ == null) {
+          initActs_ = builderForValue.build();
+          onChanged();
+        } else {
+          initActsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      public Builder mergeInitActs(yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs value) {
+        if (initActsBuilder_ == null) {
+          if (initActs_ != null) {
+            initActs_ =
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.newBuilder(initActs_).mergeFrom(value).buildPartial();
+          } else {
+            initActs_ = value;
+          }
+          onChanged();
+        } else {
+          initActsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      public Builder clearInitActs() {
+        if (initActsBuilder_ == null) {
+          initActs_ = null;
+          onChanged();
+        } else {
+          initActs_ = null;
+          initActsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder getInitActsBuilder() {
+        
+        onChanged();
+        return getInitActsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder getInitActsOrBuilder() {
+        if (initActsBuilder_ != null) {
+          return initActsBuilder_.getMessageOrBuilder();
+        } else {
+          return initActs_ == null ?
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.getDefaultInstance() : initActs_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.InitActs init_acts = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder> 
+          getInitActsFieldBuilder() {
+        if (initActsBuilder_ == null) {
+          initActsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActs.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.InitActsOrBuilder>(
+                  getInitActs(),
+                  getParentForChildren(),
+                  isClean());
+          initActs_ = null;
+        }
+        return initActsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14529,6 +15703,11 @@ public final class ManagerService {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_manager_v1_InitActs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_manager_v1_InitActs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14592,32 +15771,38 @@ public final class ManagerService {
       "rnNodeInfo\022$\n\034requested_decommission_hos" +
       "ts\030\003 \003(\t\"\036\n\rZookeeperInfo\022\r\n\005alive\030\001 \001(\010" +
       "\"\032\n\tOozieInfo\022\r\n\005alive\030\001 \001(\010\"\031\n\010LivyInfo" +
-      "\022\r\n\005alive\030\001 \001(\010\"\300\003\n\004Info\0228\n\004hdfs\030\001 \001(\0132*" +
-      ".yandex.cloud.dataproc.manager.v1.HDFSIn" +
-      "fo\0228\n\004yarn\030\002 \001(\0132*.yandex.cloud.dataproc" +
-      ".manager.v1.YarnInfo\0228\n\004hive\030\003 \001(\0132*.yan" +
-      "dex.cloud.dataproc.manager.v1.HiveInfo\022B" +
-      "\n\tzookeeper\030\004 \001(\0132/.yandex.cloud.datapro" +
-      "c.manager.v1.ZookeeperInfo\022:\n\005hbase\030\005 \001(" +
-      "\0132+.yandex.cloud.dataproc.manager.v1.Hba" +
-      "seInfo\022:\n\005oozie\030\006 \001(\0132+.yandex.cloud.dat" +
-      "aproc.manager.v1.OozieInfo\022\024\n\014report_cou" +
-      "nt\030\007 \001(\003\0228\n\004livy\030\010 \001(\0132*.yandex.cloud.da" +
-      "taproc.manager.v1.LivyInfo\"\237\001\n\rReportReq" +
-      "uest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_revision\030\002" +
-      " \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.cloud.datapr" +
-      "oc.manager.v1.Info\0220\n\014collected_at\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"s\n\013ReportRe" +
-      "ply\022\034\n\024decommission_timeout\030\001 \001(\003\022\"\n\032yar" +
-      "n_hosts_to_decommission\030\002 \003(\t\022\"\n\032hdfs_ho" +
-      "sts_to_decommission\030\003 \003(\t2\204\001\n\026DataprocMa" +
-      "nagerService\022j\n\006Report\022/.yandex.cloud.da" +
-      "taproc.manager.v1.ReportRequest\032-.yandex" +
-      ".cloud.dataproc.manager.v1.ReportReply\"\000" +
-      "B}\n$yandex.cloud.api.dataproc.manager.v1" +
-      "ZUgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/dataproc/manager/v1;dataproc_" +
-      "managerb\006proto3"
+      "\022\r\n\005alive\030\001 \001(\010\"Y\n\010InitActs\022>\n\005state\030\001 \001" +
+      "(\0162/.yandex.cloud.dataproc.manager.v1.In" +
+      "itActsState\022\r\n\005fqdns\030\002 \003(\t\"\377\003\n\004Info\0228\n\004h" +
+      "dfs\030\001 \001(\0132*.yandex.cloud.dataproc.manage" +
+      "r.v1.HDFSInfo\0228\n\004yarn\030\002 \001(\0132*.yandex.clo" +
+      "ud.dataproc.manager.v1.YarnInfo\0228\n\004hive\030" +
+      "\003 \001(\0132*.yandex.cloud.dataproc.manager.v1" +
+      ".HiveInfo\022B\n\tzookeeper\030\004 \001(\0132/.yandex.cl" +
+      "oud.dataproc.manager.v1.ZookeeperInfo\022:\n" +
+      "\005hbase\030\005 \001(\0132+.yandex.cloud.dataproc.man" +
+      "ager.v1.HbaseInfo\022:\n\005oozie\030\006 \001(\0132+.yande" +
+      "x.cloud.dataproc.manager.v1.OozieInfo\022\024\n" +
+      "\014report_count\030\007 \001(\003\0228\n\004livy\030\010 \001(\0132*.yand" +
+      "ex.cloud.dataproc.manager.v1.LivyInfo\022=\n" +
+      "\tinit_acts\030\t \001(\0132*.yandex.cloud.dataproc" +
+      ".manager.v1.InitActs\"\237\001\n\rReportRequest\022\013" +
+      "\n\003cid\030\001 \001(\t\022\031\n\021topology_revision\030\002 \001(\003\0224" +
+      "\n\004info\030\003 \001(\0132&.yandex.cloud.dataproc.man" +
+      "ager.v1.Info\0220\n\014collected_at\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\"s\n\013ReportReply\022\034\n" +
+      "\024decommission_timeout\030\001 \001(\003\022\"\n\032yarn_host" +
+      "s_to_decommission\030\002 \003(\t\022\"\n\032hdfs_hosts_to" +
+      "_decommission\030\003 \003(\t*]\n\rInitActsState\022\037\n\033" +
+      "INIT_ACTS_STATE_UNSPECIFIED\020\000\022\n\n\006FAILED\020" +
+      "\001\022\016\n\nSUCCESSFUL\020\002\022\017\n\013IN_PROGRESS\020\0032\204\001\n\026D" +
+      "ataprocManagerService\022j\n\006Report\022/.yandex" +
+      ".cloud.dataproc.manager.v1.ReportRequest" +
+      "\032-.yandex.cloud.dataproc.manager.v1.Repo" +
+      "rtReply\"\000B}\n$yandex.cloud.api.dataproc.m" +
+      "anager.v1ZUgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/dataproc/manager/v1;" +
+      "dataproc_managerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14684,20 +15869,26 @@ public final class ManagerService {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor,
         new java.lang.String[] { "Alive", });
-    internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor =
+    internal_static_yandex_cloud_dataproc_manager_v1_InitActs_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_dataproc_manager_v1_InitActs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_manager_v1_InitActs_descriptor,
+        new java.lang.String[] { "State", "Fqdns", });
+    internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_dataproc_manager_v1_Info_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor,
-        new java.lang.String[] { "Hdfs", "Yarn", "Hive", "Zookeeper", "Hbase", "Oozie", "ReportCount", "Livy", });
+        new java.lang.String[] { "Hdfs", "Yarn", "Hive", "Zookeeper", "Hbase", "Oozie", "ReportCount", "Livy", "InitActs", });
     internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_descriptor,
         new java.lang.String[] { "Cid", "TopologyRevision", "Info", "CollectedAt", });
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor,
