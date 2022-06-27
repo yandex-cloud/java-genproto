@@ -12032,7 +12032,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -12043,7 +12043,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -12955,7 +12955,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -12978,7 +12978,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -14042,7 +14042,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -14064,7 +14064,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -14087,7 +14087,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -14108,7 +14108,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -14124,7 +14124,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the PostgreSQL host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -20638,7 +20638,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow SQL queries to the cluster databases from the Yandex Cloud management console.
+     * Allow SQL queries to the cluster databases from the management console.
      * See [SQL queries in the management console](/docs/managed-postgresql/operations/web-sql-query) for more details.
      * </pre>
      *
@@ -20783,7 +20783,7 @@ public final class ClusterOuterClass {
     private boolean webSql_;
     /**
      * <pre>
-     * Allow SQL queries to the cluster databases from the Yandex Cloud management console.
+     * Allow SQL queries to the cluster databases from the management console.
      * See [SQL queries in the management console](/docs/managed-postgresql/operations/web-sql-query) for more details.
      * </pre>
      *
@@ -21228,7 +21228,7 @@ public final class ClusterOuterClass {
       private boolean webSql_ ;
       /**
        * <pre>
-       * Allow SQL queries to the cluster databases from the Yandex Cloud management console.
+       * Allow SQL queries to the cluster databases from the management console.
        * See [SQL queries in the management console](/docs/managed-postgresql/operations/web-sql-query) for more details.
        * </pre>
        *
@@ -21241,7 +21241,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow SQL queries to the cluster databases from the Yandex Cloud management console.
+       * Allow SQL queries to the cluster databases from the management console.
        * See [SQL queries in the management console](/docs/managed-postgresql/operations/web-sql-query) for more details.
        * </pre>
        *
@@ -21257,7 +21257,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow SQL queries to the cluster databases from the Yandex Cloud management console.
+       * Allow SQL queries to the cluster databases from the management console.
        * See [SQL queries in the management console](/docs/managed-postgresql/operations/web-sql-query) for more details.
        * </pre>
        *

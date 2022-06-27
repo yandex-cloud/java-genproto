@@ -3290,7 +3290,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -3299,7 +3299,7 @@ public final class PSCS {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -4242,7 +4242,7 @@ public final class PSCS {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -4263,7 +4263,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -7173,7 +7173,7 @@ public final class PSCS {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -7193,7 +7193,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -7214,7 +7214,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -7233,7 +7233,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -7247,7 +7247,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -8164,7 +8164,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
@@ -8173,7 +8173,7 @@ public final class PSCS {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
@@ -8752,7 +8752,7 @@ public final class PSCS {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
@@ -8773,7 +8773,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 9;</code>
@@ -10285,7 +10285,7 @@ public final class PSCS {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
@@ -10305,7 +10305,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
@@ -10326,7 +10326,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
@@ -10345,7 +10345,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
@@ -10359,7 +10359,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 9;</code>
@@ -13846,7 +13846,7 @@ public final class PSCS {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -13855,7 +13855,7 @@ public final class PSCS {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -14705,7 +14705,7 @@ public final class PSCS {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -14726,7 +14726,7 @@ public final class PSCS {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 15;</code>
@@ -17092,7 +17092,7 @@ public final class PSCS {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -17112,7 +17112,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -17133,7 +17133,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -17152,7 +17152,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>
@@ -17166,7 +17166,7 @@ public final class PSCS {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 15;</code>

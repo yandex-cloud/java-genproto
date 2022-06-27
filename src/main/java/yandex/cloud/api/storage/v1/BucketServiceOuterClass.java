@@ -2469,7 +2469,7 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+     * The name must be unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -2480,7 +2480,7 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+     * The name must be unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -2741,7 +2741,7 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+     * The name must be unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -2764,7 +2764,7 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+     * The name must be unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -3400,7 +3400,7 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+       * The name must be unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -3422,7 +3422,7 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+       * The name must be unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -3445,7 +3445,7 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+       * The name must be unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -3466,7 +3466,7 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+       * The name must be unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -3482,7 +3482,7 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name must be unique within Yandex Cloud. For naming limitations and rules, see
+       * The name must be unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -12072,7 +12072,7 @@ public final class BucketServiceOuterClass {
   }
   /**
    * <pre>
-   * A resource for a TLS certificate from Yandex Certificate Manager.
+   * A resource for a TLS certificate from Certificate Manager.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams}
@@ -12364,7 +12364,7 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * A resource for a TLS certificate from Yandex Certificate Manager.
+     * A resource for a TLS certificate from Certificate Manager.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.storage.v1.CertificateManagerHTTPSConfigParams}
@@ -12728,7 +12728,7 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * TLS certificate from Yandex Certificate Manager.
+     * TLS certificate from Certificate Manager.
      * To create a certificate in Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
      * </pre>
@@ -12739,7 +12739,7 @@ public final class BucketServiceOuterClass {
     boolean hasCertificateManager();
     /**
      * <pre>
-     * TLS certificate from Yandex Certificate Manager.
+     * TLS certificate from Certificate Manager.
      * To create a certificate in Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
      * </pre>
@@ -12750,7 +12750,7 @@ public final class BucketServiceOuterClass {
     yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams getCertificateManager();
     /**
      * <pre>
-     * TLS certificate from Yandex Certificate Manager.
+     * TLS certificate from Certificate Manager.
      * To create a certificate in Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
      * </pre>
@@ -13009,7 +13009,7 @@ public final class BucketServiceOuterClass {
     public static final int CERTIFICATE_MANAGER_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * TLS certificate from Yandex Certificate Manager.
+     * TLS certificate from Certificate Manager.
      * To create a certificate in Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
      * </pre>
@@ -13023,7 +13023,7 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * TLS certificate from Yandex Certificate Manager.
+     * TLS certificate from Certificate Manager.
      * To create a certificate in Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
      * </pre>
@@ -13040,7 +13040,7 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * TLS certificate from Yandex Certificate Manager.
+     * TLS certificate from Certificate Manager.
      * To create a certificate in Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
      * </pre>
@@ -13727,7 +13727,7 @@ public final class BucketServiceOuterClass {
           yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams, yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParams.Builder, yandex.cloud.api.storage.v1.BucketServiceOuterClass.CertificateManagerHTTPSConfigParamsOrBuilder> certificateManagerBuilder_;
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13741,7 +13741,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13765,7 +13765,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13787,7 +13787,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13807,7 +13807,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13835,7 +13835,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13860,7 +13860,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13872,7 +13872,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>
@@ -13892,7 +13892,7 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * TLS certificate from Yandex Certificate Manager.
+       * TLS certificate from Certificate Manager.
        * To create a certificate in Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Create] request.
        * </pre>

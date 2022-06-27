@@ -9182,7 +9182,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9193,7 +9193,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9902,7 +9902,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9925,7 +9925,7 @@ public final class ClusterOuterClass {
      * <pre>
      * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
      * 1-63 characters long.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -10875,7 +10875,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10897,7 +10897,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10920,7 +10920,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10941,7 +10941,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10957,7 +10957,7 @@ public final class ClusterOuterClass {
        * <pre>
        * Name of the Redis host. The host name is assigned by MDB at creation time, and cannot be changed.
        * 1-63 characters long.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>

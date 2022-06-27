@@ -6105,7 +6105,7 @@ public final class ExtensionServiceOuterClass {
 
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6114,7 +6114,7 @@ public final class ExtensionServiceOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6332,7 +6332,7 @@ public final class ExtensionServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6353,7 +6353,7 @@ public final class ExtensionServiceOuterClass {
     }
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6938,7 +6938,7 @@ public final class ExtensionServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6958,7 +6958,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6979,7 +6979,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -6998,7 +6998,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>
@@ -7012,7 +7012,7 @@ public final class ExtensionServiceOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 3 [(.yandex.cloud.required) = true];</code>

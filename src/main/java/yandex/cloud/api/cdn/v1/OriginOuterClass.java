@@ -2412,7 +2412,7 @@ public final class OriginOuterClass {
 
     /**
      * <pre>
-     * A Yandex Object Storage bucket not configured as a static site hosting.
+     * An Object Storage bucket not configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -2421,7 +2421,7 @@ public final class OriginOuterClass {
     boolean hasBucket();
     /**
      * <pre>
-     * A Yandex Object Storage bucket not configured as a static site hosting.
+     * An Object Storage bucket not configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -2430,7 +2430,7 @@ public final class OriginOuterClass {
     yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMeta getBucket();
     /**
      * <pre>
-     * A Yandex Object Storage bucket not configured as a static site hosting.
+     * An Object Storage bucket not configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -2439,7 +2439,7 @@ public final class OriginOuterClass {
 
     /**
      * <pre>
-     * A Yandex Object Storage bucket configured as a static site hosting.
+     * An Object Storage bucket configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -2448,7 +2448,7 @@ public final class OriginOuterClass {
     boolean hasWebsite();
     /**
      * <pre>
-     * A Yandex Object Storage bucket configured as a static site hosting.
+     * An Object Storage bucket configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -2457,7 +2457,7 @@ public final class OriginOuterClass {
     yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMeta getWebsite();
     /**
      * <pre>
-     * A Yandex Object Storage bucket configured as a static site hosting.
+     * An Object Storage bucket configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -2466,7 +2466,7 @@ public final class OriginOuterClass {
 
     /**
      * <pre>
-     * An L7 load balancer from Yandex Application Load Balancer.
+     * An L7 load balancer from Application Load Balancer.
      * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
      * </pre>
      *
@@ -2476,7 +2476,7 @@ public final class OriginOuterClass {
     boolean hasBalancer();
     /**
      * <pre>
-     * An L7 load balancer from Yandex Application Load Balancer.
+     * An L7 load balancer from Application Load Balancer.
      * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
      * </pre>
      *
@@ -2486,7 +2486,7 @@ public final class OriginOuterClass {
     yandex.cloud.api.cdn.v1.OriginOuterClass.OriginBalancerMeta getBalancer();
     /**
      * <pre>
-     * An L7 load balancer from Yandex Application Load Balancer.
+     * An L7 load balancer from Application Load Balancer.
      * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
      * </pre>
      *
@@ -2724,7 +2724,7 @@ public final class OriginOuterClass {
     public static final int BUCKET_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * A Yandex Object Storage bucket not configured as a static site hosting.
+     * An Object Storage bucket not configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -2736,7 +2736,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * A Yandex Object Storage bucket not configured as a static site hosting.
+     * An Object Storage bucket not configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -2751,7 +2751,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * A Yandex Object Storage bucket not configured as a static site hosting.
+     * An Object Storage bucket not configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -2767,7 +2767,7 @@ public final class OriginOuterClass {
     public static final int WEBSITE_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * A Yandex Object Storage bucket configured as a static site hosting.
+     * An Object Storage bucket configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -2779,7 +2779,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * A Yandex Object Storage bucket configured as a static site hosting.
+     * An Object Storage bucket configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -2794,7 +2794,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * A Yandex Object Storage bucket configured as a static site hosting.
+     * An Object Storage bucket configured as a static site hosting.
      * </pre>
      *
      * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -2810,7 +2810,7 @@ public final class OriginOuterClass {
     public static final int BALANCER_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * An L7 load balancer from Yandex Application Load Balancer.
+     * An L7 load balancer from Application Load Balancer.
      * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
      * </pre>
      *
@@ -2823,7 +2823,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * An L7 load balancer from Yandex Application Load Balancer.
+     * An L7 load balancer from Application Load Balancer.
      * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
      * </pre>
      *
@@ -2839,7 +2839,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * An L7 load balancer from Yandex Application Load Balancer.
+     * An L7 load balancer from Application Load Balancer.
      * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
      * </pre>
      *
@@ -3459,7 +3459,7 @@ public final class OriginOuterClass {
           yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMeta, yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMeta.Builder, yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMetaOrBuilder> bucketBuilder_;
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3471,7 +3471,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3493,7 +3493,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3513,7 +3513,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3531,7 +3531,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3557,7 +3557,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3580,7 +3580,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3590,7 +3590,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3608,7 +3608,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket not configured as a static site hosting.
+       * An Object Storage bucket not configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta bucket = 2;</code>
@@ -3636,7 +3636,7 @@ public final class OriginOuterClass {
           yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMeta, yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMeta.Builder, yandex.cloud.api.cdn.v1.OriginOuterClass.OriginNamedMetaOrBuilder> websiteBuilder_;
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3648,7 +3648,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3670,7 +3670,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3690,7 +3690,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3708,7 +3708,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3734,7 +3734,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3757,7 +3757,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3767,7 +3767,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3785,7 +3785,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * A Yandex Object Storage bucket configured as a static site hosting.
+       * An Object Storage bucket configured as a static site hosting.
        * </pre>
        *
        * <code>.yandex.cloud.cdn.v1.OriginNamedMeta website = 3;</code>
@@ -3813,7 +3813,7 @@ public final class OriginOuterClass {
           yandex.cloud.api.cdn.v1.OriginOuterClass.OriginBalancerMeta, yandex.cloud.api.cdn.v1.OriginOuterClass.OriginBalancerMeta.Builder, yandex.cloud.api.cdn.v1.OriginOuterClass.OriginBalancerMetaOrBuilder> balancerBuilder_;
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3826,7 +3826,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3849,7 +3849,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3870,7 +3870,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3889,7 +3889,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3916,7 +3916,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3940,7 +3940,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3951,7 +3951,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -3970,7 +3970,7 @@ public final class OriginOuterClass {
       }
       /**
        * <pre>
-       * An L7 load balancer from Yandex Application Load Balancer.
+       * An L7 load balancer from Application Load Balancer.
        * CDN servers will access the load balancer at one of its IP addresses that must be selected in the origin settings.
        * </pre>
        *
@@ -4685,7 +4685,7 @@ public final class OriginOuterClass {
   }
   /**
    * <pre>
-   * Yandex Application Load Balancer origin info. For details about the concept, see [documentation](/docs/cdn/concepts/origins).
+   * Application Load Balancer origin info. For details about the concept, see [documentation](/docs/cdn/concepts/origins).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.cdn.v1.OriginBalancerMeta}
@@ -4973,7 +4973,7 @@ public final class OriginOuterClass {
     }
     /**
      * <pre>
-     * Yandex Application Load Balancer origin info. For details about the concept, see [documentation](/docs/cdn/concepts/origins).
+     * Application Load Balancer origin info. For details about the concept, see [documentation](/docs/cdn/concepts/origins).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.cdn.v1.OriginBalancerMeta}

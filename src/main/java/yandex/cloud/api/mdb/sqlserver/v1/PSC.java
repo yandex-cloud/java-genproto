@@ -452,7 +452,7 @@ public final class PSC {
 
     /**
      * <pre>
-     * ID of the service account which is used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -461,7 +461,7 @@ public final class PSC {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account which is used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -1956,7 +1956,7 @@ public final class PSC {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account which is used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -1977,7 +1977,7 @@ public final class PSC {
     }
     /**
      * <pre>
-     * ID of the service account which is used for access to Yandex Object Storage.
+     * ID of the service account which is used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 17;</code>
@@ -4646,7 +4646,7 @@ public final class PSC {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account which is used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4666,7 +4666,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account which is used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4687,7 +4687,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account which is used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4706,7 +4706,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account which is used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -4720,7 +4720,7 @@ public final class PSC {
       }
       /**
        * <pre>
-       * ID of the service account which is used for access to Yandex Object Storage.
+       * ID of the service account which is used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 17;</code>
@@ -9249,7 +9249,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host.
      * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+     * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9260,7 +9260,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host.
      * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+     * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9906,7 +9906,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host.
      * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+     * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9929,7 +9929,7 @@ public final class PSC {
      * <pre>
      * Name of the SQL Server host.
      * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-     * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+     * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -10752,7 +10752,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host.
        * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+       * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10774,7 +10774,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host.
        * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+       * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10797,7 +10797,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host.
        * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+       * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10818,7 +10818,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host.
        * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+       * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -10834,7 +10834,7 @@ public final class PSC {
        * <pre>
        * Name of the SQL Server host.
        * The host name is assigned by Managed Service for SQL Server at the moment of creation and cannot be changed. 1-63 characters long.
-       * The name is unique across all existing database hosts in Yandex Cloud as it defines the FQDN of the host.
+       * The name is unique across all database hosts that exist on the platform as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>

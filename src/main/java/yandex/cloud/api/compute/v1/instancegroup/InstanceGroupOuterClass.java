@@ -10456,7 +10456,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
        * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10467,7 +10467,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
        * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10478,7 +10478,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
        * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10488,8 +10488,8 @@ public final class InstanceGroupOuterClass {
 
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10499,8 +10499,8 @@ public final class InstanceGroupOuterClass {
           getCustomRulesList();
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10509,8 +10509,8 @@ public final class InstanceGroupOuterClass {
       yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule getCustomRules(int index);
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10519,8 +10519,8 @@ public final class InstanceGroupOuterClass {
       int getCustomRulesCount();
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -10530,8 +10530,8 @@ public final class InstanceGroupOuterClass {
           getCustomRulesOrBuilderList();
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11037,7 +11037,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
        * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11051,7 +11051,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
        * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11065,7 +11065,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-       * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+       * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
        * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11080,8 +11080,8 @@ public final class InstanceGroupOuterClass {
       private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule> customRules_;
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11093,8 +11093,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11107,8 +11107,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11120,8 +11120,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -11133,8 +11133,8 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+       * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+       * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
        * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
        * </pre>
        *
@@ -12353,7 +12353,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12366,7 +12366,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12383,7 +12383,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12405,7 +12405,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12425,7 +12425,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12449,7 +12449,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12469,7 +12469,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12483,7 +12483,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12500,7 +12500,7 @@ public final class InstanceGroupOuterClass {
         /**
          * <pre>
          * Defines an autoscaling rule based on the average CPU utilization of the instance group.
-         * If more than one rule is specified, e.g. CPU utilization and one or more Yandex Monitoring metrics ([custom_rules]),
+         * If more than one rule is specified, e.g. CPU utilization and one or more Monitoring metrics ([custom_rules]),
          * the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12534,8 +12534,8 @@ public final class InstanceGroupOuterClass {
 
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12550,8 +12550,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12566,8 +12566,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12582,8 +12582,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12605,8 +12605,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12625,8 +12625,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12647,8 +12647,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12670,8 +12670,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12690,8 +12690,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12710,8 +12710,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12731,8 +12731,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12750,8 +12750,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12769,8 +12769,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12782,8 +12782,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12798,8 +12798,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12815,8 +12815,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12828,8 +12828,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -12842,8 +12842,8 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Yandex Monitoring.
-         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Yandex Monitoring
+         * Defines an autoscaling rule based on a [custom metric](/docs/monitoring/operations/metric/add) from Monitoring.
+         * If more than one rule is specified, e.g. CPU utilization ([cpu_utilization_rule]) and one or more Monitoring
          * metrics, the size of the instance group will be equal to the maximum of sizes calculated according to each metric.
          * </pre>
          *
@@ -13550,7 +13550,7 @@ public final class InstanceGroupOuterClass {
 
       /**
        * <pre>
-       * Name of custom metric in Yandex Monitoring that should be used for scaling.
+       * Name of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -13559,7 +13559,7 @@ public final class InstanceGroupOuterClass {
       java.lang.String getMetricName();
       /**
        * <pre>
-       * Name of custom metric in Yandex Monitoring that should be used for scaling.
+       * Name of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -13570,7 +13570,7 @@ public final class InstanceGroupOuterClass {
 
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -13578,7 +13578,7 @@ public final class InstanceGroupOuterClass {
       int getLabelsCount();
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -13593,7 +13593,7 @@ public final class InstanceGroupOuterClass {
       getLabels();
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -13602,7 +13602,7 @@ public final class InstanceGroupOuterClass {
       getLabelsMap();
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -13613,7 +13613,7 @@ public final class InstanceGroupOuterClass {
           java.lang.String defaultValue);
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -13634,7 +13634,7 @@ public final class InstanceGroupOuterClass {
 
       /**
        * <pre>
-       * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+       * Folder id of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13643,7 +13643,7 @@ public final class InstanceGroupOuterClass {
       java.lang.String getFolderId();
       /**
        * <pre>
-       * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+       * Folder id of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13654,7 +13654,7 @@ public final class InstanceGroupOuterClass {
 
       /**
        * <pre>
-       * Service of custom metric in Yandex Monitoring that should be used for scaling.
+       * Service of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -13663,7 +13663,7 @@ public final class InstanceGroupOuterClass {
       java.lang.String getService();
       /**
        * <pre>
-       * Service of custom metric in Yandex Monitoring that should be used for scaling.
+       * Service of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -14161,7 +14161,7 @@ public final class InstanceGroupOuterClass {
       private volatile java.lang.Object metricName_;
       /**
        * <pre>
-       * Name of custom metric in Yandex Monitoring that should be used for scaling.
+       * Name of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -14182,7 +14182,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of custom metric in Yandex Monitoring that should be used for scaling.
+       * Name of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -14231,7 +14231,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -14253,7 +14253,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -14265,7 +14265,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -14282,7 +14282,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * Labels of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -14319,7 +14319,7 @@ public final class InstanceGroupOuterClass {
       private volatile java.lang.Object folderId_;
       /**
        * <pre>
-       * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+       * Folder id of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14340,7 +14340,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+       * Folder id of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14365,7 +14365,7 @@ public final class InstanceGroupOuterClass {
       private volatile java.lang.Object service_;
       /**
        * <pre>
-       * Service of custom metric in Yandex Monitoring that should be used for scaling.
+       * Service of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -14386,7 +14386,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Service of custom metric in Yandex Monitoring that should be used for scaling.
+       * Service of custom metric in Monitoring that should be used for scaling.
        * </pre>
        *
        * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15001,7 +15001,7 @@ public final class InstanceGroupOuterClass {
         private java.lang.Object metricName_ = "";
         /**
          * <pre>
-         * Name of custom metric in Yandex Monitoring that should be used for scaling.
+         * Name of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -15021,7 +15021,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Name of custom metric in Yandex Monitoring that should be used for scaling.
+         * Name of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -15042,7 +15042,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Name of custom metric in Yandex Monitoring that should be used for scaling.
+         * Name of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -15061,7 +15061,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Name of custom metric in Yandex Monitoring that should be used for scaling.
+         * Name of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -15075,7 +15075,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Name of custom metric in Yandex Monitoring that should be used for scaling.
+         * Name of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string metric_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}"];</code>
@@ -15122,7 +15122,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15144,7 +15144,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15156,7 +15156,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15173,7 +15173,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15198,7 +15198,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15221,7 +15221,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15240,7 +15240,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * Labels of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
@@ -15299,7 +15299,7 @@ public final class InstanceGroupOuterClass {
         private java.lang.Object folderId_ = "";
         /**
          * <pre>
-         * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+         * Folder id of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15319,7 +15319,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+         * Folder id of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15340,7 +15340,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+         * Folder id of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15359,7 +15359,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+         * Folder id of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15373,7 +15373,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Folder id of custom metric in Yandex Monitoring that should be used for scaling.
+         * Folder id of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string folder_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15395,7 +15395,7 @@ public final class InstanceGroupOuterClass {
         private java.lang.Object service_ = "";
         /**
          * <pre>
-         * Service of custom metric in Yandex Monitoring that should be used for scaling.
+         * Service of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15415,7 +15415,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Service of custom metric in Yandex Monitoring that should be used for scaling.
+         * Service of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15436,7 +15436,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Service of custom metric in Yandex Monitoring that should be used for scaling.
+         * Service of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15455,7 +15455,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Service of custom metric in Yandex Monitoring that should be used for scaling.
+         * Service of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15469,7 +15469,7 @@ public final class InstanceGroupOuterClass {
         }
         /**
          * <pre>
-         * Service of custom metric in Yandex Monitoring that should be used for scaling.
+         * Service of custom metric in Monitoring that should be used for scaling.
          * </pre>
          *
          * <code>string service = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>

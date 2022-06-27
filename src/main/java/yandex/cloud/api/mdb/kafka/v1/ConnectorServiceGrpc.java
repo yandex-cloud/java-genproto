@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing Apache Kafka Connectors resources.
+ * A set of methods for managing Apache Kafka® connectors.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -281,15 +281,14 @@ public final class ConnectorServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Apache Kafka Connectors resources.
+   * A set of methods for managing Apache Kafka® connectors.
    * </pre>
    */
   public static abstract class ConnectorServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Apache Kafka Connector resource.
-     * To get the list of available Apache Kafka Connector resources, make a [List] request.
+     * Returns information about an Apache Kafka® connector.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.GetConnectorRequest request,
@@ -299,7 +298,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Apache Kafka Connector resources in the specified cluster.
+     * Retrieves the list of Apache Kafka® connectors in a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ListConnectorsRequest request,
@@ -309,7 +308,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new Apache Kafka connector in the specified cluster.
+     * Creates a new Apache Kafka® connector in a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.CreateConnectorRequest request,
@@ -319,7 +318,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Updates an Apache Kafka connector in the specified cluster.
+     * Updates an Apache Kafka® connector.
      * </pre>
      */
     public void update(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest request,
@@ -329,7 +328,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Apache Kafka connector.
+     * Deletes an Apache Kafka® connector.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.DeleteConnectorRequest request,
@@ -339,7 +338,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Resume the specified Apache Kafka connector.
+     * Resumes an Apache Kafka® connector.
      * </pre>
      */
     public void resume(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ResumeConnectorRequest request,
@@ -349,7 +348,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Pause the specified Apache Kafka connector.
+     * Pauses an Apache Kafka® connector.
      * </pre>
      */
     public void pause(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.PauseConnectorRequest request,
@@ -414,7 +413,7 @@ public final class ConnectorServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Apache Kafka Connectors resources.
+   * A set of methods for managing Apache Kafka® connectors.
    * </pre>
    */
   public static final class ConnectorServiceStub extends io.grpc.stub.AbstractAsyncStub<ConnectorServiceStub> {
@@ -431,8 +430,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Apache Kafka Connector resource.
-     * To get the list of available Apache Kafka Connector resources, make a [List] request.
+     * Returns information about an Apache Kafka® connector.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.GetConnectorRequest request,
@@ -443,7 +441,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Apache Kafka Connector resources in the specified cluster.
+     * Retrieves the list of Apache Kafka® connectors in a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ListConnectorsRequest request,
@@ -454,7 +452,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new Apache Kafka connector in the specified cluster.
+     * Creates a new Apache Kafka® connector in a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.CreateConnectorRequest request,
@@ -465,7 +463,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Updates an Apache Kafka connector in the specified cluster.
+     * Updates an Apache Kafka® connector.
      * </pre>
      */
     public void update(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest request,
@@ -476,7 +474,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Apache Kafka connector.
+     * Deletes an Apache Kafka® connector.
      * </pre>
      */
     public void delete(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.DeleteConnectorRequest request,
@@ -487,7 +485,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Resume the specified Apache Kafka connector.
+     * Resumes an Apache Kafka® connector.
      * </pre>
      */
     public void resume(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ResumeConnectorRequest request,
@@ -498,7 +496,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Pause the specified Apache Kafka connector.
+     * Pauses an Apache Kafka® connector.
      * </pre>
      */
     public void pause(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.PauseConnectorRequest request,
@@ -510,7 +508,7 @@ public final class ConnectorServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Apache Kafka Connectors resources.
+   * A set of methods for managing Apache Kafka® connectors.
    * </pre>
    */
   public static final class ConnectorServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConnectorServiceBlockingStub> {
@@ -527,8 +525,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Apache Kafka Connector resource.
-     * To get the list of available Apache Kafka Connector resources, make a [List] request.
+     * Returns information about an Apache Kafka® connector.
      * </pre>
      */
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector get(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.GetConnectorRequest request) {
@@ -538,7 +535,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Apache Kafka Connector resources in the specified cluster.
+     * Retrieves the list of Apache Kafka® connectors in a cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ListConnectorsResponse list(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ListConnectorsRequest request) {
@@ -548,7 +545,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new Apache Kafka connector in the specified cluster.
+     * Creates a new Apache Kafka® connector in a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.CreateConnectorRequest request) {
@@ -558,7 +555,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Updates an Apache Kafka connector in the specified cluster.
+     * Updates an Apache Kafka® connector.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.UpdateConnectorRequest request) {
@@ -568,7 +565,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Apache Kafka connector.
+     * Deletes an Apache Kafka® connector.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.DeleteConnectorRequest request) {
@@ -578,7 +575,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Resume the specified Apache Kafka connector.
+     * Resumes an Apache Kafka® connector.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation resume(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ResumeConnectorRequest request) {
@@ -588,7 +585,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Pause the specified Apache Kafka connector.
+     * Pauses an Apache Kafka® connector.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation pause(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.PauseConnectorRequest request) {
@@ -599,7 +596,7 @@ public final class ConnectorServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Apache Kafka Connectors resources.
+   * A set of methods for managing Apache Kafka® connectors.
    * </pre>
    */
   public static final class ConnectorServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConnectorServiceFutureStub> {
@@ -616,8 +613,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Apache Kafka Connector resource.
-     * To get the list of available Apache Kafka Connector resources, make a [List] request.
+     * Returns information about an Apache Kafka® connector.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector> get(
@@ -628,7 +624,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Apache Kafka Connector resources in the specified cluster.
+     * Retrieves the list of Apache Kafka® connectors in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.kafka.v1.ConnectorServiceOuterClass.ListConnectorsResponse> list(
@@ -639,7 +635,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new Apache Kafka connector in the specified cluster.
+     * Creates a new Apache Kafka® connector in a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -650,7 +646,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Updates an Apache Kafka connector in the specified cluster.
+     * Updates an Apache Kafka® connector.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -661,7 +657,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Apache Kafka connector.
+     * Deletes an Apache Kafka® connector.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -672,7 +668,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Resume the specified Apache Kafka connector.
+     * Resumes an Apache Kafka® connector.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resume(
@@ -683,7 +679,7 @@ public final class ConnectorServiceGrpc {
 
     /**
      * <pre>
-     * Pause the specified Apache Kafka connector.
+     * Pauses an Apache Kafka® connector.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> pause(

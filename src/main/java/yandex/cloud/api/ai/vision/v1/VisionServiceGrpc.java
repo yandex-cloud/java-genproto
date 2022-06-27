@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for the Yandex Vision service.
+ * A set of methods for the Vision service.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -95,7 +95,7 @@ public final class VisionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Vision service.
+   * A set of methods for the Vision service.
    * </pre>
    */
   public static abstract class VisionServiceImplBase implements io.grpc.BindableService {
@@ -125,7 +125,7 @@ public final class VisionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Vision service.
+   * A set of methods for the Vision service.
    * </pre>
    */
   public static final class VisionServiceStub extends io.grpc.stub.AbstractAsyncStub<VisionServiceStub> {
@@ -154,7 +154,7 @@ public final class VisionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Vision service.
+   * A set of methods for the Vision service.
    * </pre>
    */
   public static final class VisionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VisionServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class VisionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Vision service.
+   * A set of methods for the Vision service.
    * </pre>
    */
   public static final class VisionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VisionServiceFutureStub> {

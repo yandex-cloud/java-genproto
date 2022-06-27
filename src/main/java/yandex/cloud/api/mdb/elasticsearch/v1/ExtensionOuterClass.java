@@ -1198,7 +1198,7 @@ public final class ExtensionOuterClass {
 
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1207,7 +1207,7 @@ public final class ExtensionOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1372,7 +1372,7 @@ public final class ExtensionOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1393,7 +1393,7 @@ public final class ExtensionOuterClass {
     }
     /**
      * <pre>
-     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+     * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 2;</code>
@@ -1865,7 +1865,7 @@ public final class ExtensionOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1885,7 +1885,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1906,7 +1906,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1925,7 +1925,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>
@@ -1939,7 +1939,7 @@ public final class ExtensionOuterClass {
       }
       /**
        * <pre>
-       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Yandex Object Storage.
+       * URI of the zip archive to create the new extension from. Currently only supports links that are stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 2;</code>

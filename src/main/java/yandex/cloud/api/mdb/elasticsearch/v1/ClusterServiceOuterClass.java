@@ -3200,7 +3200,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -3209,7 +3209,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -4052,7 +4052,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -4073,7 +4073,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -6473,7 +6473,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -6493,7 +6493,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -6514,7 +6514,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -6533,7 +6533,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -6547,7 +6547,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -7955,7 +7955,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -7964,7 +7964,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -8569,7 +8569,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -8590,7 +8590,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -10115,7 +10115,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -10135,7 +10135,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -10156,7 +10156,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -10175,7 +10175,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -10189,7 +10189,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -40726,7 +40726,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -40735,7 +40735,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -41492,7 +41492,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -41513,7 +41513,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the service account used for access to Yandex Object Storage.
+     * ID of the service account used for access to Object Storage.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -43541,7 +43541,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -43561,7 +43561,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -43582,7 +43582,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -43601,7 +43601,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -43615,7 +43615,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account used for access to Yandex Object Storage.
+       * ID of the service account used for access to Object Storage.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>

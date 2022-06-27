@@ -165,10 +165,30 @@ public final class DatabaseOuterClass {
      */
     yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.ExtensionOrBuilder getExtensionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Name of the database template.
+     * </pre>
+     *
+     * <code>string template_db = 7;</code>
+     * @return The templateDb.
+     */
+    java.lang.String getTemplateDb();
+    /**
+     * <pre>
+     * Name of the database template.
+     * </pre>
+     *
+     * <code>string template_db = 7;</code>
+     * @return The bytes for templateDb.
+     */
+    com.google.protobuf.ByteString
+        getTemplateDbBytes();
   }
   /**
    * <pre>
-   * A PostgreSQL Database resource. For more information, see 
+   * A PostgreSQL Database resource. For more information, see
    * the [Developer's Guide](/docs/managed-postgresql/concepts).
    * </pre>
    *
@@ -190,6 +210,7 @@ public final class DatabaseOuterClass {
       lcCollate_ = "";
       lcCtype_ = "";
       extensions_ = java.util.Collections.emptyList();
+      templateDb_ = "";
     }
 
     @java.lang.Override
@@ -260,6 +281,12 @@ public final class DatabaseOuterClass {
               }
               extensions_.add(
                   input.readMessage(yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              templateDb_ = s;
               break;
             }
             default: {
@@ -591,6 +618,52 @@ public final class DatabaseOuterClass {
       return extensions_.get(index);
     }
 
+    public static final int TEMPLATE_DB_FIELD_NUMBER = 7;
+    private volatile java.lang.Object templateDb_;
+    /**
+     * <pre>
+     * Name of the database template.
+     * </pre>
+     *
+     * <code>string template_db = 7;</code>
+     * @return The templateDb.
+     */
+    @java.lang.Override
+    public java.lang.String getTemplateDb() {
+      java.lang.Object ref = templateDb_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateDb_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the database template.
+     * </pre>
+     *
+     * <code>string template_db = 7;</code>
+     * @return The bytes for templateDb.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemplateDbBytes() {
+      java.lang.Object ref = templateDb_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateDb_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -623,6 +696,9 @@ public final class DatabaseOuterClass {
       for (int i = 0; i < extensions_.size(); i++) {
         output.writeMessage(6, extensions_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, templateDb_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -651,6 +727,9 @@ public final class DatabaseOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, extensions_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, templateDb_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -678,6 +757,8 @@ public final class DatabaseOuterClass {
           .equals(other.getLcCtype())) return false;
       if (!getExtensionsList()
           .equals(other.getExtensionsList())) return false;
+      if (!getTemplateDb()
+          .equals(other.getTemplateDb())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -703,6 +784,8 @@ public final class DatabaseOuterClass {
         hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getExtensionsList().hashCode();
       }
+      hash = (37 * hash) + TEMPLATE_DB_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateDb().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -800,7 +883,7 @@ public final class DatabaseOuterClass {
     }
     /**
      * <pre>
-     * A PostgreSQL Database resource. For more information, see 
+     * A PostgreSQL Database resource. For more information, see
      * the [Developer's Guide](/docs/managed-postgresql/concepts).
      * </pre>
      *
@@ -858,6 +941,8 @@ public final class DatabaseOuterClass {
         } else {
           extensionsBuilder_.clear();
         }
+        templateDb_ = "";
+
         return this;
       }
 
@@ -899,6 +984,7 @@ public final class DatabaseOuterClass {
         } else {
           result.extensions_ = extensionsBuilder_.build();
         }
+        result.templateDb_ = templateDb_;
         onBuilt();
         return result;
       }
@@ -992,6 +1078,10 @@ public final class DatabaseOuterClass {
               extensionsBuilder_.addAllMessages(other.extensions_);
             }
           }
+        }
+        if (!other.getTemplateDb().isEmpty()) {
+          templateDb_ = other.templateDb_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1823,6 +1913,102 @@ public final class DatabaseOuterClass {
           extensions_ = null;
         }
         return extensionsBuilder_;
+      }
+
+      private java.lang.Object templateDb_ = "";
+      /**
+       * <pre>
+       * Name of the database template.
+       * </pre>
+       *
+       * <code>string template_db = 7;</code>
+       * @return The templateDb.
+       */
+      public java.lang.String getTemplateDb() {
+        java.lang.Object ref = templateDb_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          templateDb_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the database template.
+       * </pre>
+       *
+       * <code>string template_db = 7;</code>
+       * @return The bytes for templateDb.
+       */
+      public com.google.protobuf.ByteString
+          getTemplateDbBytes() {
+        java.lang.Object ref = templateDb_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          templateDb_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the database template.
+       * </pre>
+       *
+       * <code>string template_db = 7;</code>
+       * @param value The templateDb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateDb(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        templateDb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the database template.
+       * </pre>
+       *
+       * <code>string template_db = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemplateDb() {
+        
+        templateDb_ = getDefaultInstance().getTemplateDb();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the database template.
+       * </pre>
+       *
+       * <code>string template_db = 7;</code>
+       * @param value The bytes for templateDb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateDbBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        templateDb_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2809,6 +2995,26 @@ public final class DatabaseOuterClass {
      */
     yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.ExtensionOrBuilder getExtensionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Name of the PostgreSQL database template.
+     * </pre>
+     *
+     * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The templateDb.
+     */
+    java.lang.String getTemplateDb();
+    /**
+     * <pre>
+     * Name of the PostgreSQL database template.
+     * </pre>
+     *
+     * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for templateDb.
+     */
+    com.google.protobuf.ByteString
+        getTemplateDbBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DatabaseSpec}
@@ -2828,6 +3034,7 @@ public final class DatabaseOuterClass {
       lcCollate_ = "";
       lcCtype_ = "";
       extensions_ = java.util.Collections.emptyList();
+      templateDb_ = "";
     }
 
     @java.lang.Override
@@ -2892,6 +3099,12 @@ public final class DatabaseOuterClass {
               }
               extensions_.add(
                   input.readMessage(yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              templateDb_ = s;
               break;
             }
             default: {
@@ -3179,6 +3392,52 @@ public final class DatabaseOuterClass {
       return extensions_.get(index);
     }
 
+    public static final int TEMPLATE_DB_FIELD_NUMBER = 6;
+    private volatile java.lang.Object templateDb_;
+    /**
+     * <pre>
+     * Name of the PostgreSQL database template.
+     * </pre>
+     *
+     * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The templateDb.
+     */
+    @java.lang.Override
+    public java.lang.String getTemplateDb() {
+      java.lang.Object ref = templateDb_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateDb_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the PostgreSQL database template.
+     * </pre>
+     *
+     * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for templateDb.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemplateDbBytes() {
+      java.lang.Object ref = templateDb_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateDb_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3208,6 +3467,9 @@ public final class DatabaseOuterClass {
       for (int i = 0; i < extensions_.size(); i++) {
         output.writeMessage(5, extensions_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, templateDb_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3232,6 +3494,9 @@ public final class DatabaseOuterClass {
       for (int i = 0; i < extensions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, extensions_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, templateDb_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3258,6 +3523,8 @@ public final class DatabaseOuterClass {
           .equals(other.getLcCtype())) return false;
       if (!getExtensionsList()
           .equals(other.getExtensionsList())) return false;
+      if (!getTemplateDb()
+          .equals(other.getTemplateDb())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3281,6 +3548,8 @@ public final class DatabaseOuterClass {
         hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getExtensionsList().hashCode();
       }
+      hash = (37 * hash) + TEMPLATE_DB_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateDb().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3429,6 +3698,8 @@ public final class DatabaseOuterClass {
         } else {
           extensionsBuilder_.clear();
         }
+        templateDb_ = "";
+
         return this;
       }
 
@@ -3469,6 +3740,7 @@ public final class DatabaseOuterClass {
         } else {
           result.extensions_ = extensionsBuilder_.build();
         }
+        result.templateDb_ = templateDb_;
         onBuilt();
         return result;
       }
@@ -3558,6 +3830,10 @@ public final class DatabaseOuterClass {
               extensionsBuilder_.addAllMessages(other.extensions_);
             }
           }
+        }
+        if (!other.getTemplateDb().isEmpty()) {
+          templateDb_ = other.templateDb_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4299,6 +4575,102 @@ public final class DatabaseOuterClass {
         }
         return extensionsBuilder_;
       }
+
+      private java.lang.Object templateDb_ = "";
+      /**
+       * <pre>
+       * Name of the PostgreSQL database template.
+       * </pre>
+       *
+       * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The templateDb.
+       */
+      public java.lang.String getTemplateDb() {
+        java.lang.Object ref = templateDb_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          templateDb_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the PostgreSQL database template.
+       * </pre>
+       *
+       * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for templateDb.
+       */
+      public com.google.protobuf.ByteString
+          getTemplateDbBytes() {
+        java.lang.Object ref = templateDb_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          templateDb_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the PostgreSQL database template.
+       * </pre>
+       *
+       * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The templateDb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateDb(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        templateDb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the PostgreSQL database template.
+       * </pre>
+       *
+       * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemplateDb() {
+        
+        templateDb_ = getDefaultInstance().getTemplateDb();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the PostgreSQL database template.
+       * </pre>
+       *
+       * <code>string template_db = 6 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for templateDb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateDbBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        templateDb_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4378,22 +4750,24 @@ public final class DatabaseOuterClass {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/mdb/postgresql/v1/databas" +
       "e.proto\022\036yandex.cloud.mdb.postgresql.v1\032" +
-      "\035yandex/cloud/validation.proto\"\240\001\n\010Datab" +
+      "\035yandex/cloud/validation.proto\"\265\001\n\010Datab" +
       "ase\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\r\n" +
       "\005owner\030\003 \001(\t\022\022\n\nlc_collate\030\004 \001(\t\022\020\n\010lc_c" +
       "type\030\005 \001(\t\022=\n\nextensions\030\006 \003(\0132).yandex." +
-      "cloud.mdb.postgresql.v1.Extension\"*\n\tExt" +
-      "ension\022\014\n\004name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"\201\002" +
-      "\n\014DatabaseSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\022,\n\005owner\030\002 \001(\tB\035\350\3071" +
-      "\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022+\n\nlc_collate" +
-      "\030\003 \001(\tB\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022)\n\010lc_ct" +
-      "ype\030\004 \001(\tB\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022=\n\nex" +
-      "tensions\030\005 \003(\0132).yandex.cloud.mdb.postgr" +
-      "esql.v1.ExtensionBs\n\"yandex.cloud.api.md" +
-      "b.postgresql.v1ZMgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/postgresql" +
-      "/v1;postgresqlb\006proto3"
+      "cloud.mdb.postgresql.v1.Extension\022\023\n\013tem" +
+      "plate_db\030\007 \001(\t\"*\n\tExtension\022\014\n\004name\030\001 \001(" +
+      "\t\022\017\n\007version\030\002 \001(\t\"\262\002\n\014DatabaseSpec\022,\n\004n" +
+      "ame\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
+      "*\022,\n\005owner\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-" +
+      "Z0-9_]*\022+\n\nlc_collate\030\003 \001(\tB\027\362\3071\023|[a-zA-" +
+      "Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004 \001(\tB\027\362\3071\023|[a-" +
+      "zA-Z_]+.UTF-8|C\022=\n\nextensions\030\005 \003(\0132).ya" +
+      "ndex.cloud.mdb.postgresql.v1.Extension\022/" +
+      "\n\013template_db\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z" +
+      "0-9_-]*Bs\n\"yandex.cloud.api.mdb.postgres" +
+      "ql.v1ZMgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/postgresql/v1;postgr" +
+      "esqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4405,7 +4779,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Database_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Owner", "LcCollate", "LcCtype", "Extensions", });
+        new java.lang.String[] { "Name", "ClusterId", "Owner", "LcCollate", "LcCtype", "Extensions", "TemplateDb", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Extension_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_Extension_fieldAccessorTable = new
@@ -4417,7 +4791,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_DatabaseSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_DatabaseSpec_descriptor,
-        new java.lang.String[] { "Name", "Owner", "LcCollate", "LcCtype", "Extensions", });
+        new java.lang.String[] { "Name", "Owner", "LcCollate", "LcCtype", "Extensions", "TemplateDb", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

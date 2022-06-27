@@ -211,7 +211,7 @@ public final class BucketOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name is unique within Yandex Cloud. For naming limitations and rules, see
+     * The name is unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -222,7 +222,7 @@ public final class BucketOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name is unique within Yandex Cloud. For naming limitations and rules, see
+     * The name is unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -818,7 +818,7 @@ public final class BucketOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name is unique within Yandex Cloud. For naming limitations and rules, see
+     * The name is unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -841,7 +841,7 @@ public final class BucketOuterClass {
     /**
      * <pre>
      * Name of the bucket.
-     * The name is unique within Yandex Cloud. For naming limitations and rules, see
+     * The name is unique within the platform. For naming limitations and rules, see
      * [documentation](/docs/storage/concepts/bucket#naming).
      * </pre>
      *
@@ -2090,7 +2090,7 @@ public final class BucketOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name is unique within Yandex Cloud. For naming limitations and rules, see
+       * The name is unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -2112,7 +2112,7 @@ public final class BucketOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name is unique within Yandex Cloud. For naming limitations and rules, see
+       * The name is unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -2135,7 +2135,7 @@ public final class BucketOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name is unique within Yandex Cloud. For naming limitations and rules, see
+       * The name is unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -2156,7 +2156,7 @@ public final class BucketOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name is unique within Yandex Cloud. For naming limitations and rules, see
+       * The name is unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -2172,7 +2172,7 @@ public final class BucketOuterClass {
       /**
        * <pre>
        * Name of the bucket.
-       * The name is unique within Yandex Cloud. For naming limitations and rules, see
+       * The name is unique within the platform. For naming limitations and rules, see
        * [documentation](/docs/storage/concepts/bucket#naming).
        * </pre>
        *
@@ -4225,7 +4225,7 @@ public final class BucketOuterClass {
 
       /**
        * <pre>
-       * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+       * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
        * <code>string grantee_id = 3;</code>
@@ -4234,7 +4234,7 @@ public final class BucketOuterClass {
       java.lang.String getGranteeId();
       /**
        * <pre>
-       * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+       * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
        * <code>string grantee_id = 3;</code>
@@ -4564,7 +4564,7 @@ public final class BucketOuterClass {
         GRANT_TYPE_UNSPECIFIED(0),
         /**
          * <pre>
-         * A grantee is a [Yandex Cloud account](/docs/iam/concepts/#accounts).
+         * A grantee is an [account on the platform](/docs/iam/concepts/#accounts).
          * For this grantee type, you need to specify the user ID in [Bucket.acl.grants.grantee_id] field. To get user ID, see
          * [instruction](/docs/iam/operations/users/get).
          * Maps to using `id="*"` value for `x-amz-grant-*` header ([bucketPutAcl](/docs/storage/s3/api-ref/acl/bucketput)
@@ -4576,8 +4576,8 @@ public final class BucketOuterClass {
         GRANT_TYPE_ACCOUNT(1),
         /**
          * <pre>
-         * Grantees are all authenticated Yandex Cloud users, both from your clouds and other users' clouds. Access
-         * permission to this group allows any Yandex Cloud account to access the resource via a signed (authenticated)
+         * Grantees are all authenticated users, both from your clouds and other users' clouds. Access
+         * permission to this group allows any account on the platform to access the resource via a signed (authenticated)
          * request.
          * Maps to using `uri="http://acs.amazonaws.com/groups/global/AuthenticatedUsers"` value for `x-amz-grant-*`
          * header ([bucketPutAcl](/docs/storage/s3/api-ref/acl/bucketput) method of Amazon S3-compatible HTTP API).
@@ -4606,7 +4606,7 @@ public final class BucketOuterClass {
         public static final int GRANT_TYPE_UNSPECIFIED_VALUE = 0;
         /**
          * <pre>
-         * A grantee is a [Yandex Cloud account](/docs/iam/concepts/#accounts).
+         * A grantee is an [account on the platform](/docs/iam/concepts/#accounts).
          * For this grantee type, you need to specify the user ID in [Bucket.acl.grants.grantee_id] field. To get user ID, see
          * [instruction](/docs/iam/operations/users/get).
          * Maps to using `id="*"` value for `x-amz-grant-*` header ([bucketPutAcl](/docs/storage/s3/api-ref/acl/bucketput)
@@ -4618,8 +4618,8 @@ public final class BucketOuterClass {
         public static final int GRANT_TYPE_ACCOUNT_VALUE = 1;
         /**
          * <pre>
-         * Grantees are all authenticated Yandex Cloud users, both from your clouds and other users' clouds. Access
-         * permission to this group allows any Yandex Cloud account to access the resource via a signed (authenticated)
+         * Grantees are all authenticated users, both from your clouds and other users' clouds. Access
+         * permission to this group allows any account on the platform to access the resource via a signed (authenticated)
          * request.
          * Maps to using `uri="http://acs.amazonaws.com/groups/global/AuthenticatedUsers"` value for `x-amz-grant-*`
          * header ([bucketPutAcl](/docs/storage/s3/api-ref/acl/bucketput) method of Amazon S3-compatible HTTP API).
@@ -4783,7 +4783,7 @@ public final class BucketOuterClass {
       private volatile java.lang.Object granteeId_;
       /**
        * <pre>
-       * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+       * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
        * <code>string grantee_id = 3;</code>
@@ -4804,7 +4804,7 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+       * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
        * </pre>
        *
        * <code>string grantee_id = 3;</code>
@@ -5314,7 +5314,7 @@ public final class BucketOuterClass {
         private java.lang.Object granteeId_ = "";
         /**
          * <pre>
-         * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+         * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
          * <code>string grantee_id = 3;</code>
@@ -5334,7 +5334,7 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+         * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
          * <code>string grantee_id = 3;</code>
@@ -5355,7 +5355,7 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+         * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
          * <code>string grantee_id = 3;</code>
@@ -5374,7 +5374,7 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+         * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
          * <code>string grantee_id = 3;</code>
@@ -5388,7 +5388,7 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex Cloud user who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
+         * ID of the account who is a grantee. Required when the [grant_type] is `GRANT_TYPE_ACCOUNT`.
          * </pre>
          *
          * <code>string grantee_id = 3;</code>
@@ -31463,7 +31463,7 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * ID of the TLS certificate in Yandex Certificate Manager.
+     * ID of the TLS certificate in Certificate Manager.
      * To get information about the certificate from Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
      * </pre>
@@ -31474,7 +31474,7 @@ public final class BucketOuterClass {
     java.lang.String getCertificateId();
     /**
      * <pre>
-     * ID of the TLS certificate in Yandex Certificate Manager.
+     * ID of the TLS certificate in Certificate Manager.
      * To get information about the certificate from Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
      * </pre>
@@ -31676,7 +31676,7 @@ public final class BucketOuterClass {
       SOURCE_TYPE_SELF_MANAGED(1),
       /**
        * <pre>
-       * Certificate managed by Yandex Certificate Manager.
+       * Certificate managed by Certificate Manager.
        * </pre>
        *
        * <code>SOURCE_TYPE_MANAGED_BY_CERTIFICATE_MANAGER = 2;</code>
@@ -31699,7 +31699,7 @@ public final class BucketOuterClass {
       public static final int SOURCE_TYPE_SELF_MANAGED_VALUE = 1;
       /**
        * <pre>
-       * Certificate managed by Yandex Certificate Manager.
+       * Certificate managed by Certificate Manager.
        * </pre>
        *
        * <code>SOURCE_TYPE_MANAGED_BY_CERTIFICATE_MANAGER = 2;</code>
@@ -32070,7 +32070,7 @@ public final class BucketOuterClass {
     private volatile java.lang.Object certificateId_;
     /**
      * <pre>
-     * ID of the TLS certificate in Yandex Certificate Manager.
+     * ID of the TLS certificate in Certificate Manager.
      * To get information about the certificate from Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
      * </pre>
@@ -32093,7 +32093,7 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * ID of the TLS certificate in Yandex Certificate Manager.
+     * ID of the TLS certificate in Certificate Manager.
      * To get information about the certificate from Certificate Manager, make a
      * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
      * </pre>
@@ -33550,7 +33550,7 @@ public final class BucketOuterClass {
       private java.lang.Object certificateId_ = "";
       /**
        * <pre>
-       * ID of the TLS certificate in Yandex Certificate Manager.
+       * ID of the TLS certificate in Certificate Manager.
        * To get information about the certificate from Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
        * </pre>
@@ -33572,7 +33572,7 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * ID of the TLS certificate in Yandex Certificate Manager.
+       * ID of the TLS certificate in Certificate Manager.
        * To get information about the certificate from Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
        * </pre>
@@ -33595,7 +33595,7 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * ID of the TLS certificate in Yandex Certificate Manager.
+       * ID of the TLS certificate in Certificate Manager.
        * To get information about the certificate from Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
        * </pre>
@@ -33616,7 +33616,7 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * ID of the TLS certificate in Yandex Certificate Manager.
+       * ID of the TLS certificate in Certificate Manager.
        * To get information about the certificate from Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
        * </pre>
@@ -33632,7 +33632,7 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * ID of the TLS certificate in Yandex Certificate Manager.
+       * ID of the TLS certificate in Certificate Manager.
        * To get information about the certificate from Certificate Manager, make a
        * [yandex.cloud.certificatemanager.v1.CertificateService.Get] request.
        * </pre>

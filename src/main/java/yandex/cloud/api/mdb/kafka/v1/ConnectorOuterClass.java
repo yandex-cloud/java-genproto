@@ -40,8 +40,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Maximum number of connector tasks.
-     * Default is the number of brokers.
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -50,8 +49,7 @@ public final class ConnectorOuterClass {
     boolean hasTasksMax();
     /**
      * <pre>
-     * Maximum number of connector tasks.
-     * Default is the number of brokers.
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -60,8 +58,7 @@ public final class ConnectorOuterClass {
     com.google.protobuf.Int64Value getTasksMax();
     /**
      * <pre>
-     * Maximum number of connector tasks.
-     * Default is the number of brokers.
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -70,8 +67,8 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -79,8 +76,8 @@ public final class ConnectorOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -95,8 +92,8 @@ public final class ConnectorOuterClass {
     getProperties();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -105,8 +102,8 @@ public final class ConnectorOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -117,8 +114,8 @@ public final class ConnectorOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -129,7 +126,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Configuration of MirrorMaker connector
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -138,7 +135,7 @@ public final class ConnectorOuterClass {
     boolean hasConnectorConfigMirrormaker();
     /**
      * <pre>
-     * Configuration of MirrorMaker connector
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -147,7 +144,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker();
     /**
      * <pre>
-     * Configuration of MirrorMaker connector
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -158,7 +155,8 @@ public final class ConnectorOuterClass {
   }
   /**
    * <pre>
-   * An Apache Kafka® connector specification
+   * An object that represents an Apache Kafka® connector.
+   * See [the documentation](/docs/managed-kafka/concepts/connectors) for details.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorSpec}
@@ -386,8 +384,7 @@ public final class ConnectorOuterClass {
     private com.google.protobuf.Int64Value tasksMax_;
     /**
      * <pre>
-     * Maximum number of connector tasks.
-     * Default is the number of brokers.
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -399,8 +396,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Maximum number of connector tasks.
-     * Default is the number of brokers.
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -412,8 +408,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Maximum number of connector tasks.
-     * Default is the number of brokers.
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -451,8 +446,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -474,8 +469,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -487,8 +482,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -505,8 +500,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service.
-     * Example: 'sync.topics.config.enabled: true'.
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -527,7 +522,7 @@ public final class ConnectorOuterClass {
     public static final int CONNECTOR_CONFIG_MIRRORMAKER_FIELD_NUMBER = 10;
     /**
      * <pre>
-     * Configuration of MirrorMaker connector
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -539,7 +534,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Configuration of MirrorMaker connector
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -554,7 +549,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Configuration of MirrorMaker connector
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -785,7 +780,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * An Apache Kafka® connector specification
+     * An object that represents an Apache Kafka® connector.
+     * See [the documentation](/docs/managed-kafka/concepts/connectors) for details.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorSpec}
@@ -1113,8 +1109,7 @@ public final class ConnectorOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1125,8 +1120,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1141,8 +1135,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1162,8 +1155,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1181,8 +1173,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1204,8 +1195,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1223,8 +1213,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1236,8 +1225,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1252,8 +1240,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of connector tasks.
-       * Default is the number of brokers.
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -1300,8 +1287,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1323,8 +1310,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1336,8 +1323,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1354,8 +1341,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1380,8 +1367,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1404,8 +1391,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1424,8 +1411,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service.
-       * Example: 'sync.topics.config.enabled: true'.
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -1442,7 +1429,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder> connectorConfigMirrormakerBuilder_;
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1454,7 +1441,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1476,7 +1463,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1496,7 +1483,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1514,7 +1501,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1540,7 +1527,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1563,7 +1550,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1573,7 +1560,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1591,7 +1578,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Configuration of MirrorMaker connector
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1673,7 +1660,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Maximum number of tasks to update.
+     * Maximum number of connector tasks to update.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -1682,7 +1669,7 @@ public final class ConnectorOuterClass {
     boolean hasTasksMax();
     /**
      * <pre>
-     * Maximum number of tasks to update.
+     * Maximum number of connector tasks to update.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -1691,7 +1678,7 @@ public final class ConnectorOuterClass {
     com.google.protobuf.Int64Value getTasksMax();
     /**
      * <pre>
-     * Maximum number of tasks to update.
+     * Maximum number of connector tasks to update.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -1700,9 +1687,8 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -1710,9 +1696,8 @@ public final class ConnectorOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -1727,9 +1712,8 @@ public final class ConnectorOuterClass {
     getProperties();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -1738,9 +1722,8 @@ public final class ConnectorOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -1751,9 +1734,8 @@ public final class ConnectorOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -1764,7 +1746,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Update specification for MirrorMaker.
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1773,7 +1755,7 @@ public final class ConnectorOuterClass {
     boolean hasConnectorConfigMirrormaker();
     /**
      * <pre>
-     * Update specification for MirrorMaker.
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1782,7 +1764,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec getConnectorConfigMirrormaker();
     /**
      * <pre>
-     * Update specification for MirrorMaker.
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -1792,10 +1774,6 @@ public final class ConnectorOuterClass {
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.UpdateConnectorSpec.ConnectorConfigCase getConnectorConfigCase();
   }
   /**
-   * <pre>
-   * An Apache Kafka® connector's update specification.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec}
    */
   public static final class UpdateConnectorSpec extends
@@ -1968,7 +1946,7 @@ public final class ConnectorOuterClass {
     private com.google.protobuf.Int64Value tasksMax_;
     /**
      * <pre>
-     * Maximum number of tasks to update.
+     * Maximum number of connector tasks to update.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -1980,7 +1958,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Maximum number of tasks to update.
+     * Maximum number of connector tasks to update.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -1992,7 +1970,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Maximum number of tasks to update.
+     * Maximum number of connector tasks to update.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2030,9 +2008,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2054,9 +2031,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2068,9 +2044,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2087,9 +2062,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service, that
-     * we should change or add in existing Properties-set of connector.
-     * Example: 'sync.topics.config.enabled: false'
+     * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+     * Example: `sync.topics.config.enabled: false`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2110,7 +2084,7 @@ public final class ConnectorOuterClass {
     public static final int CONNECTOR_CONFIG_MIRRORMAKER_FIELD_NUMBER = 10;
     /**
      * <pre>
-     * Update specification for MirrorMaker.
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2122,7 +2096,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Update specification for MirrorMaker.
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2137,7 +2111,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Update specification for MirrorMaker.
+     * Configuration of the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2357,10 +2331,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * An Apache Kafka® connector's update specification.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateConnectorSpec}
      */
     public static final class Builder extends
@@ -2583,7 +2553,7 @@ public final class ConnectorOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2594,7 +2564,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2609,7 +2579,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2629,7 +2599,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2647,7 +2617,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2669,7 +2639,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2687,7 +2657,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2699,7 +2669,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2714,7 +2684,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks to update.
+       * Maximum number of connector tasks to update.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 1;</code>
@@ -2761,9 +2731,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2785,9 +2754,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2799,9 +2767,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2818,9 +2785,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2845,9 +2811,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2870,9 +2835,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2891,9 +2855,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service, that
-       * we should change or add in existing Properties-set of connector.
-       * Example: 'sync.topics.config.enabled: false'
+       * A set of new or changed properties to update for the connector. They are passed with the connector configuration to Managed Service for Apache Kafka®.
+       * Example: `sync.topics.config.enabled: false`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -2910,7 +2873,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerSpecOrBuilder> connectorConfigMirrormakerBuilder_;
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2922,7 +2885,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2944,7 +2907,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2964,7 +2927,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -2982,7 +2945,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -3008,7 +2971,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -3031,7 +2994,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -3041,7 +3004,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -3059,7 +3022,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Update specification for MirrorMaker.
+       * Configuration of the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec connector_config_mirrormaker = 10;</code>
@@ -3141,7 +3104,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Source cluster configuration.
+     * Source cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3150,7 +3113,7 @@ public final class ConnectorOuterClass {
     boolean hasSourceCluster();
     /**
      * <pre>
-     * Source cluster configuration.
+     * Source cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3159,7 +3122,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getSourceCluster();
     /**
      * <pre>
-     * Source cluster configuration.
+     * Source cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3168,7 +3131,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Target cluster configuration.
+     * Target cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -3177,7 +3140,7 @@ public final class ConnectorOuterClass {
     boolean hasTargetCluster();
     /**
      * <pre>
-     * Target cluster configuration.
+     * Target cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -3186,7 +3149,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec getTargetCluster();
     /**
      * <pre>
-     * Target cluster configuration.
+     * Target cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -3195,7 +3158,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -3204,7 +3167,7 @@ public final class ConnectorOuterClass {
     java.lang.String getTopics();
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -3241,11 +3204,6 @@ public final class ConnectorOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
   }
   /**
-   * <pre>
-   * An An Apache Kafka® MirrorMaker
-   * connector specification.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec}
    */
   public static final class ConnectorConfigMirrorMakerSpec extends
@@ -3372,7 +3330,7 @@ public final class ConnectorOuterClass {
     private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec sourceCluster_;
     /**
      * <pre>
-     * Source cluster configuration.
+     * Source cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3384,7 +3342,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Source cluster configuration.
+     * Source cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3396,7 +3354,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Source cluster configuration.
+     * Source cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3410,7 +3368,7 @@ public final class ConnectorOuterClass {
     private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec targetCluster_;
     /**
      * <pre>
-     * Target cluster configuration.
+     * Target cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -3422,7 +3380,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Target cluster configuration.
+     * Target cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -3434,7 +3392,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Target cluster configuration.
+     * Target cluster configuration for the MirrorMaker connector.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -3448,7 +3406,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object topics_;
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -3469,7 +3427,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -3731,11 +3689,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * An An Apache Kafka® MirrorMaker
-     * connector specification.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMakerSpec}
      */
     public static final class Builder extends
@@ -3930,7 +3883,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpecOrBuilder> sourceClusterBuilder_;
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3941,7 +3894,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3956,7 +3909,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3976,7 +3929,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -3994,7 +3947,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -4016,7 +3969,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -4034,7 +3987,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -4046,7 +3999,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -4061,7 +4014,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster configuration.
+       * Source cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec source_cluster = 1;</code>
@@ -4085,7 +4038,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpecOrBuilder> targetClusterBuilder_;
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4096,7 +4049,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4111,7 +4064,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4131,7 +4084,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4149,7 +4102,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4171,7 +4124,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4189,7 +4142,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4201,7 +4154,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4216,7 +4169,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster configuration.
+       * Target cluster configuration for the MirrorMaker connector.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec target_cluster = 2;</code>
@@ -4238,7 +4191,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object topics_ = "";
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -4258,7 +4211,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -4279,7 +4232,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -4298,7 +4251,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -4312,7 +4265,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -4544,8 +4497,8 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Alias of ClusterConnection.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -4554,8 +4507,8 @@ public final class ConnectorOuterClass {
     java.lang.String getAlias();
     /**
      * <pre>
-     * Alias of ClusterConnection.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -4566,9 +4519,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -4577,9 +4528,7 @@ public final class ConnectorOuterClass {
     boolean hasThisCluster();
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -4588,9 +4537,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec getThisCluster();
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -4599,9 +4546,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -4610,9 +4555,7 @@ public final class ConnectorOuterClass {
     boolean hasExternalCluster();
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -4621,9 +4564,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec getExternalCluster();
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -4633,13 +4574,6 @@ public final class ConnectorOuterClass {
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionSpec.ClusterConnectionCase getClusterConnectionCase();
   }
   /**
-   * <pre>
-   * Specification of ClusterConnection -
-   * connection to clusters, that
-   * are source or target of MirrorMaker
-   * clusters.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec}
    */
   public static final class ClusterConnectionSpec extends
@@ -4796,8 +4730,8 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object alias_;
     /**
      * <pre>
-     * Alias of ClusterConnection.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -4818,8 +4752,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Alias of ClusterConnection.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -4843,9 +4777,7 @@ public final class ConnectorOuterClass {
     public static final int THIS_CLUSTER_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -4857,9 +4789,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -4874,9 +4804,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -4892,9 +4820,7 @@ public final class ConnectorOuterClass {
     public static final int EXTERNAL_CLUSTER_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -4906,9 +4832,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -4923,9 +4847,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5132,13 +5054,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Specification of ClusterConnection -
-     * connection to clusters, that
-     * are source or target of MirrorMaker
-     * clusters.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ClusterConnectionSpec}
      */
     public static final class Builder extends
@@ -5334,8 +5249,8 @@ public final class ConnectorOuterClass {
       private java.lang.Object alias_ = "";
       /**
        * <pre>
-       * Alias of ClusterConnection.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -5355,8 +5270,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -5377,8 +5292,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -5397,8 +5312,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -5412,8 +5327,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -5436,9 +5351,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterSpecOrBuilder> thisClusterBuilder_;
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5450,9 +5363,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5474,9 +5385,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5496,9 +5405,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5516,9 +5423,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5544,9 +5449,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5569,9 +5472,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5581,9 +5482,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5601,9 +5500,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisClusterSpec this_cluster = 2;</code>
@@ -5631,9 +5528,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpec.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionSpecOrBuilder> externalClusterBuilder_;
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5645,9 +5540,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5669,9 +5562,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5691,9 +5582,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5711,9 +5600,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5739,9 +5626,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5764,9 +5649,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5776,9 +5659,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5796,9 +5677,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec external_cluster = 3;</code>
@@ -5879,13 +5758,6 @@ public final class ConnectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * Specification of cluster_connection
-   * type 'this_cluster'. This means
-   * that we already have all credentials,
-   * so this spec is empty.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ThisClusterSpec}
    */
   public static final class ThisClusterSpec extends
@@ -6107,13 +5979,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Specification of cluster_connection
-     * type 'this_cluster'. This means
-     * that we already have all credentials,
-     * so this spec is empty.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ThisClusterSpec}
      */
     public static final class Builder extends
@@ -6312,8 +6177,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','.
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -6322,8 +6186,7 @@ public final class ConnectorOuterClass {
     java.lang.String getBootstrapServers();
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','.
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -6334,8 +6197,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -6344,8 +6206,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSaslUsername();
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -6356,8 +6217,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Sasl password which we use
-     * to connect to cluster.
+     * SASL password to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
@@ -6366,8 +6226,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSaslPassword();
     /**
      * <pre>
-     * Sasl password which we use
-     * to connect to cluster.
+     * SASL password to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
@@ -6378,8 +6237,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -6388,8 +6246,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSaslMechanism();
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -6400,9 +6257,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -6411,9 +6266,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSecurityProtocol();
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -6445,13 +6298,6 @@ public final class ConnectorOuterClass {
         getSslTruststoreCertificatesBytes();
   }
   /**
-   * <pre>
-   * Specification of connection to
-   * external cluster. It contains
-   * all necessary credentials to
-   * connect to external cluster.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec}
    */
   public static final class ExternalClusterConnectionSpec extends
@@ -6574,8 +6420,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object bootstrapServers_;
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','.
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -6596,8 +6441,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','.
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -6622,8 +6466,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object saslUsername_;
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -6644,8 +6487,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -6670,8 +6512,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object saslPassword_;
     /**
      * <pre>
-     * Sasl password which we use
-     * to connect to cluster.
+     * SASL password to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
@@ -6692,8 +6533,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Sasl password which we use
-     * to connect to cluster.
+     * SASL password to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_password = 3;</code>
@@ -6718,8 +6558,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object saslMechanism_;
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -6740,8 +6579,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -6766,9 +6604,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object securityProtocol_;
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -6789,9 +6625,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -7065,13 +6899,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Specification of connection to
-     * external cluster. It contains
-     * all necessary credentials to
-     * connect to external cluster.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalClusterConnectionSpec}
      */
     public static final class Builder extends
@@ -7257,8 +7084,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object bootstrapServers_ = "";
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','.
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -7278,8 +7104,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','.
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -7300,8 +7125,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','.
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -7320,8 +7144,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','.
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -7335,8 +7158,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','.
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -7358,8 +7180,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object saslUsername_ = "";
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -7379,8 +7200,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -7401,8 +7221,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -7421,8 +7240,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -7436,8 +7254,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -7459,8 +7276,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object saslPassword_ = "";
       /**
        * <pre>
-       * Sasl password which we use
-       * to connect to cluster.
+       * SASL password to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
@@ -7480,8 +7296,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl password which we use
-       * to connect to cluster.
+       * SASL password to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
@@ -7502,8 +7317,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl password which we use
-       * to connect to cluster.
+       * SASL password to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
@@ -7522,8 +7336,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl password which we use
-       * to connect to cluster.
+       * SASL password to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
@@ -7537,8 +7350,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl password which we use
-       * to connect to cluster.
+       * SASL password to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_password = 3;</code>
@@ -7560,8 +7372,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object saslMechanism_ = "";
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -7581,8 +7392,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -7603,8 +7413,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -7623,8 +7432,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -7638,8 +7446,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -7661,9 +7468,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object securityProtocol_ = "";
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -7683,9 +7488,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -7706,9 +7509,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -7727,9 +7528,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -7743,9 +7542,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -7943,7 +7740,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Maximum number of tasks. Default is the number of brokers
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -7952,7 +7749,7 @@ public final class ConnectorOuterClass {
     boolean hasTasksMax();
     /**
      * <pre>
-     * Maximum number of tasks. Default is the number of brokers
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -7961,7 +7758,7 @@ public final class ConnectorOuterClass {
     com.google.protobuf.Int64Value getTasksMax();
     /**
      * <pre>
-     * Maximum number of tasks. Default is the number of brokers
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -7970,8 +7767,8 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -7979,8 +7776,8 @@ public final class ConnectorOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -7995,8 +7792,8 @@ public final class ConnectorOuterClass {
     getProperties();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8005,8 +7802,8 @@ public final class ConnectorOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8017,8 +7814,8 @@ public final class ConnectorOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8067,7 +7864,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * ID of the Apache Kafka cluster that the connector belongs to.
+     * ID of the Apache Kafka® cluster that the connector belongs to.
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
@@ -8076,7 +7873,7 @@ public final class ConnectorOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Apache Kafka cluster that the connector belongs to.
+     * ID of the Apache Kafka® cluster that the connector belongs to.
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
@@ -8086,16 +7883,28 @@ public final class ConnectorOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Configuration of the MirrorMaker connector.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      * @return Whether the connectorConfigMirrormaker field is set.
      */
     boolean hasConnectorConfigMirrormaker();
     /**
+     * <pre>
+     * Configuration of the MirrorMaker connector.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      * @return The connectorConfigMirrormaker.
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker getConnectorConfigMirrormaker();
     /**
+     * <pre>
+     * Configuration of the MirrorMaker connector.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerOrBuilder getConnectorConfigMirrormakerOrBuilder();
@@ -8103,10 +7912,6 @@ public final class ConnectorOuterClass {
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.Connector.ConnectorConfigCase getConnectorConfigCase();
   }
   /**
-   * <pre>
-   * An Apache Kafka® connector resource.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Connector}
    */
   public static final class Connector extends
@@ -8271,7 +8076,7 @@ public final class ConnectorOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * State of the connector is unknown.
+       * Health of the connector is unknown.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -8287,7 +8092,7 @@ public final class ConnectorOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * Connector is failed to start.
+       * Connector has failed to start.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -8298,7 +8103,7 @@ public final class ConnectorOuterClass {
 
       /**
        * <pre>
-       * State of the connector is unknown.
+       * Health of the connector is unknown.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -8314,7 +8119,7 @@ public final class ConnectorOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * Connector is failed to start.
+       * Connector has failed to start.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -8428,7 +8233,7 @@ public final class ConnectorOuterClass {
       RUNNING(1),
       /**
        * <pre>
-       * Connector encountered a problem and cannot operate.
+       * Connector has encountered a problem and cannot operate.
        * </pre>
        *
        * <code>ERROR = 2;</code>
@@ -8436,7 +8241,7 @@ public final class ConnectorOuterClass {
       ERROR(2),
       /**
        * <pre>
-       * Connector paused.
+       * Connector is paused.
        * </pre>
        *
        * <code>PAUSED = 3;</code>
@@ -8463,7 +8268,7 @@ public final class ConnectorOuterClass {
       public static final int RUNNING_VALUE = 1;
       /**
        * <pre>
-       * Connector encountered a problem and cannot operate.
+       * Connector has encountered a problem and cannot operate.
        * </pre>
        *
        * <code>ERROR = 2;</code>
@@ -8471,7 +8276,7 @@ public final class ConnectorOuterClass {
       public static final int ERROR_VALUE = 2;
       /**
        * <pre>
-       * Connector paused.
+       * Connector is paused.
        * </pre>
        *
        * <code>PAUSED = 3;</code>
@@ -8652,7 +8457,7 @@ public final class ConnectorOuterClass {
     private com.google.protobuf.Int64Value tasksMax_;
     /**
      * <pre>
-     * Maximum number of tasks. Default is the number of brokers
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -8664,7 +8469,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Maximum number of tasks. Default is the number of brokers
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -8676,7 +8481,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Maximum number of tasks. Default is the number of brokers
+     * Maximum number of connector tasks. Default value is the number of brokers.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -8714,8 +8519,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8737,8 +8542,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8750,8 +8555,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8768,8 +8573,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Properties passed with connector config to Connect service
-     * Example: 'sync.topics.config.enabled: true'
+     * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+     * Example: `sync.topics.config.enabled: true`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -8845,7 +8650,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Apache Kafka cluster that the connector belongs to.
+     * ID of the Apache Kafka® cluster that the connector belongs to.
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
@@ -8866,7 +8671,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * ID of the Apache Kafka cluster that the connector belongs to.
+     * ID of the Apache Kafka® cluster that the connector belongs to.
      * </pre>
      *
      * <code>string cluster_id = 6;</code>
@@ -8889,6 +8694,10 @@ public final class ConnectorOuterClass {
 
     public static final int CONNECTOR_CONFIG_MIRRORMAKER_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Configuration of the MirrorMaker connector.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      * @return Whether the connectorConfigMirrormaker field is set.
      */
@@ -8897,6 +8706,10 @@ public final class ConnectorOuterClass {
       return connectorConfigCase_ == 10;
     }
     /**
+     * <pre>
+     * Configuration of the MirrorMaker connector.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      * @return The connectorConfigMirrormaker.
      */
@@ -8908,6 +8721,10 @@ public final class ConnectorOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration of the MirrorMaker connector.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
      */
     @java.lang.Override
@@ -9165,10 +8982,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * An Apache Kafka® connector resource.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Connector}
      */
     public static final class Builder extends
@@ -9513,7 +9326,7 @@ public final class ConnectorOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tasksMaxBuilder_;
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9524,7 +9337,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9539,7 +9352,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9559,7 +9372,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9577,7 +9390,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9599,7 +9412,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9617,7 +9430,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9629,7 +9442,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9644,7 +9457,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of tasks. Default is the number of brokers
+       * Maximum number of connector tasks. Default value is the number of brokers.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tasks_max = 2;</code>
@@ -9691,8 +9504,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9714,8 +9527,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9727,8 +9540,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9745,8 +9558,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9771,8 +9584,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9795,8 +9608,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9815,8 +9628,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Properties passed with connector config to Connect service
-       * Example: 'sync.topics.config.enabled: true'
+       * A set of properties passed to Managed Service for Apache Kafka® with the connector configuration.
+       * Example: `sync.topics.config.enabled: true`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 3;</code>
@@ -9980,7 +9793,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Apache Kafka cluster that the connector belongs to.
+       * ID of the Apache Kafka® cluster that the connector belongs to.
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
@@ -10000,7 +9813,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * ID of the Apache Kafka cluster that the connector belongs to.
+       * ID of the Apache Kafka® cluster that the connector belongs to.
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
@@ -10021,7 +9834,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * ID of the Apache Kafka cluster that the connector belongs to.
+       * ID of the Apache Kafka® cluster that the connector belongs to.
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
@@ -10040,7 +9853,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * ID of the Apache Kafka cluster that the connector belongs to.
+       * ID of the Apache Kafka® cluster that the connector belongs to.
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
@@ -10054,7 +9867,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * ID of the Apache Kafka cluster that the connector belongs to.
+       * ID of the Apache Kafka® cluster that the connector belongs to.
        * </pre>
        *
        * <code>string cluster_id = 6;</code>
@@ -10076,6 +9889,10 @@ public final class ConnectorOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMakerOrBuilder> connectorConfigMirrormakerBuilder_;
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        * @return Whether the connectorConfigMirrormaker field is set.
        */
@@ -10084,6 +9901,10 @@ public final class ConnectorOuterClass {
         return connectorConfigCase_ == 10;
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        * @return The connectorConfigMirrormaker.
        */
@@ -10102,6 +9923,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       public Builder setConnectorConfigMirrormaker(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker value) {
@@ -10118,6 +9943,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       public Builder setConnectorConfigMirrormaker(
@@ -10132,6 +9961,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       public Builder mergeConnectorConfigMirrormaker(yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker value) {
@@ -10154,6 +9987,10 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       public Builder clearConnectorConfigMirrormaker() {
@@ -10173,12 +10010,20 @@ public final class ConnectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ConnectorConfigMirrorMaker.Builder getConnectorConfigMirrormakerBuilder() {
         return getConnectorConfigMirrormakerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       @java.lang.Override
@@ -10193,6 +10038,10 @@ public final class ConnectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the MirrorMaker connector.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker connector_config_mirrormaker = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10272,8 +10121,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Source cluster resource
-     * settings.
+     * Source cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -10282,8 +10130,7 @@ public final class ConnectorOuterClass {
     boolean hasSourceCluster();
     /**
      * <pre>
-     * Source cluster resource
-     * settings.
+     * Source cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -10292,8 +10139,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getSourceCluster();
     /**
      * <pre>
-     * Source cluster resource
-     * settings.
+     * Source cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -10302,8 +10148,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Target cluster resource
-     * settings.
+     * Target cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -10312,8 +10157,7 @@ public final class ConnectorOuterClass {
     boolean hasTargetCluster();
     /**
      * <pre>
-     * Target cluster resource
-     * settings.
+     * Target cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -10322,8 +10166,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection getTargetCluster();
     /**
      * <pre>
-     * Target cluster resource
-     * settings.
+     * Target cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -10332,7 +10175,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -10341,7 +10184,7 @@ public final class ConnectorOuterClass {
     java.lang.String getTopics();
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -10378,11 +10221,6 @@ public final class ConnectorOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
   }
   /**
-   * <pre>
-   * An An Apache Kafka® MirrorMaker
-   * connector resource.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker}
    */
   public static final class ConnectorConfigMirrorMaker extends
@@ -10509,8 +10347,7 @@ public final class ConnectorOuterClass {
     private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection sourceCluster_;
     /**
      * <pre>
-     * Source cluster resource
-     * settings.
+     * Source cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -10522,8 +10359,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Source cluster resource
-     * settings.
+     * Source cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -10535,8 +10371,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Source cluster resource
-     * settings.
+     * Source cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -10550,8 +10385,7 @@ public final class ConnectorOuterClass {
     private yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection targetCluster_;
     /**
      * <pre>
-     * Target cluster resource
-     * settings.
+     * Target cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -10563,8 +10397,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Target cluster resource
-     * settings.
+     * Target cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -10576,8 +10409,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Target cluster resource
-     * settings.
+     * Target cluster connection configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -10591,7 +10423,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object topics_;
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -10612,7 +10444,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * List of Kafka topics, separated by ','
+     * List of Kafka topics, separated by `,`.
      * </pre>
      *
      * <code>string topics = 3;</code>
@@ -10874,11 +10706,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * An An Apache Kafka® MirrorMaker
-     * connector resource.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConnectorConfigMirrorMaker}
      */
     public static final class Builder extends
@@ -11073,8 +10900,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionOrBuilder> sourceClusterBuilder_;
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11085,8 +10911,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11101,8 +10926,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11122,8 +10946,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11141,8 +10964,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11164,8 +10986,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11183,8 +11004,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11196,8 +11016,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11212,8 +11031,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Source cluster resource
-       * settings.
+       * Source cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection source_cluster = 1;</code>
@@ -11237,8 +11055,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnectionOrBuilder> targetClusterBuilder_;
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11249,8 +11066,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11265,8 +11081,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11286,8 +11101,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11305,8 +11119,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11328,8 +11141,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11347,8 +11159,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11360,8 +11171,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11376,8 +11186,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Target cluster resource
-       * settings.
+       * Target cluster connection configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ClusterConnection target_cluster = 2;</code>
@@ -11399,7 +11208,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object topics_ = "";
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -11419,7 +11228,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -11440,7 +11249,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -11459,7 +11268,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -11473,7 +11282,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List of Kafka topics, separated by ','
+       * List of Kafka topics, separated by `,`.
        * </pre>
        *
        * <code>string topics = 3;</code>
@@ -11705,8 +11514,8 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Alias of ClusterConnection resource.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -11715,8 +11524,8 @@ public final class ConnectorOuterClass {
     java.lang.String getAlias();
     /**
      * <pre>
-     * Alias of ClusterConnection resource.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -11727,9 +11536,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -11738,9 +11545,7 @@ public final class ConnectorOuterClass {
     boolean hasThisCluster();
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -11749,9 +11554,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster getThisCluster();
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -11760,9 +11563,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -11771,9 +11572,7 @@ public final class ConnectorOuterClass {
     boolean hasExternalCluster();
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -11782,9 +11581,7 @@ public final class ConnectorOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection getExternalCluster();
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -11794,14 +11591,6 @@ public final class ConnectorOuterClass {
     public yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ClusterConnection.ClusterConnectionCase getClusterConnectionCase();
   }
   /**
-   * <pre>
-   * Resource ClusterConnection -
-   * settings of
-   * connection to clusters, that
-   * are source or target of MirrorMaker
-   * clusters.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ClusterConnection}
    */
   public static final class ClusterConnection extends
@@ -11958,8 +11747,8 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object alias_;
     /**
      * <pre>
-     * Alias of ClusterConnection resource.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -11980,8 +11769,8 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Alias of ClusterConnection resource.
-     * For example: 'source', 'target', ...
+     * Alias of cluster connection configuration.
+     * Examples: `source`, `target`.
      * </pre>
      *
      * <code>string alias = 1;</code>
@@ -12005,9 +11794,7 @@ public final class ConnectorOuterClass {
     public static final int THIS_CLUSTER_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12019,9 +11806,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12036,9 +11821,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'this_cluster' - we connect to
-     * cluster that is handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12054,9 +11837,7 @@ public final class ConnectorOuterClass {
     public static final int EXTERNAL_CLUSTER_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12068,9 +11849,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12085,9 +11864,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * If type is 'external_cluster' - we connect
-     * to cluster that is not handle Kafka Connect Worker,
-     * on which we try to register connector.
+     * Configuration of connection to an external cluster with all the necessary credentials.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12294,14 +12071,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Resource ClusterConnection -
-     * settings of
-     * connection to clusters, that
-     * are source or target of MirrorMaker
-     * clusters.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ClusterConnection}
      */
     public static final class Builder extends
@@ -12497,8 +12266,8 @@ public final class ConnectorOuterClass {
       private java.lang.Object alias_ = "";
       /**
        * <pre>
-       * Alias of ClusterConnection resource.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -12518,8 +12287,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection resource.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -12540,8 +12309,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection resource.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -12560,8 +12329,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection resource.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -12575,8 +12344,8 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Alias of ClusterConnection resource.
-       * For example: 'source', 'target', ...
+       * Alias of cluster connection configuration.
+       * Examples: `source`, `target`.
        * </pre>
        *
        * <code>string alias = 1;</code>
@@ -12599,9 +12368,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisCluster.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ThisClusterOrBuilder> thisClusterBuilder_;
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12613,9 +12380,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12637,9 +12402,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12659,9 +12422,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12679,9 +12440,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12707,9 +12466,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12732,9 +12489,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12744,9 +12499,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12764,9 +12517,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'this_cluster' - we connect to
-       * cluster that is handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Connection configuration of the cluster the connector belongs to. As all credentials are already known, leave this parameter empty.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ThisCluster this_cluster = 2;</code>
@@ -12794,9 +12545,7 @@ public final class ConnectorOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnection.Builder, yandex.cloud.api.mdb.kafka.v1.ConnectorOuterClass.ExternalClusterConnectionOrBuilder> externalClusterBuilder_;
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12808,9 +12557,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12832,9 +12579,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12854,9 +12599,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12874,9 +12617,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12902,9 +12643,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12927,9 +12666,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12939,9 +12676,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -12959,9 +12694,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * If type is 'external_cluster' - we connect
-       * to cluster that is not handle Kafka Connect Worker,
-       * on which we try to register connector.
+       * Configuration of connection to an external cluster with all the necessary credentials.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ExternalClusterConnection external_cluster = 3;</code>
@@ -13042,11 +12775,6 @@ public final class ConnectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * Resource of cluster_connection
-   * type 'this_cluster'.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ThisCluster}
    */
   public static final class ThisCluster extends
@@ -13268,11 +12996,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Resource of cluster_connection
-     * type 'this_cluster'.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ThisCluster}
      */
     public static final class Builder extends
@@ -13471,8 +13194,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -13481,8 +13203,7 @@ public final class ConnectorOuterClass {
     java.lang.String getBootstrapServers();
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -13493,8 +13214,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -13503,8 +13223,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSaslUsername();
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -13515,8 +13234,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -13525,8 +13243,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSaslMechanism();
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -13537,9 +13254,7 @@ public final class ConnectorOuterClass {
 
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -13548,9 +13263,7 @@ public final class ConnectorOuterClass {
     java.lang.String getSecurityProtocol();
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -13560,13 +13273,6 @@ public final class ConnectorOuterClass {
         getSecurityProtocolBytes();
   }
   /**
-   * <pre>
-   * Resource of connection to
-   * external cluster. It contains
-   * all settings of connection
-   * to external cluster.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalClusterConnection}
    */
   public static final class ExternalClusterConnection extends
@@ -13675,8 +13381,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object bootstrapServers_;
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -13697,8 +13402,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * List bootstrap servers of cluster,
-     * separated by ','
+     * List of bootstrap servers of the cluster, separated by `,`.
      * </pre>
      *
      * <code>string bootstrap_servers = 1;</code>
@@ -13723,8 +13427,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object saslUsername_;
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -13745,8 +13448,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Sasl username which
-     * we use to connect to cluster.
+     * SASL username to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_username = 2;</code>
@@ -13771,8 +13473,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object saslMechanism_;
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -13793,8 +13494,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Sasl mechanism, which we
-     * should use to connect to cluster.
+     * SASL mechanism to use for connection to the cluster.
      * </pre>
      *
      * <code>string sasl_mechanism = 4;</code>
@@ -13819,9 +13519,7 @@ public final class ConnectorOuterClass {
     private volatile java.lang.Object securityProtocol_;
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -13842,9 +13540,7 @@ public final class ConnectorOuterClass {
     }
     /**
      * <pre>
-     * Security protocol, which
-     * we should use to connect
-     * to cluster.
+     * Security protocol to use for connection to the cluster.
      * </pre>
      *
      * <code>string security_protocol = 5;</code>
@@ -14050,13 +13746,6 @@ public final class ConnectorOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Resource of connection to
-     * external cluster. It contains
-     * all settings of connection
-     * to external cluster.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ExternalClusterConnection}
      */
     public static final class Builder extends
@@ -14228,8 +13917,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object bootstrapServers_ = "";
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -14249,8 +13937,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -14271,8 +13958,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -14291,8 +13977,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -14306,8 +13991,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * List bootstrap servers of cluster,
-       * separated by ','
+       * List of bootstrap servers of the cluster, separated by `,`.
        * </pre>
        *
        * <code>string bootstrap_servers = 1;</code>
@@ -14329,8 +14013,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object saslUsername_ = "";
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -14350,8 +14033,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -14372,8 +14054,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -14392,8 +14073,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -14407,8 +14087,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl username which
-       * we use to connect to cluster.
+       * SASL username to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_username = 2;</code>
@@ -14430,8 +14109,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object saslMechanism_ = "";
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -14451,8 +14129,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -14473,8 +14150,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -14493,8 +14169,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -14508,8 +14183,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Sasl mechanism, which we
-       * should use to connect to cluster.
+       * SASL mechanism to use for connection to the cluster.
        * </pre>
        *
        * <code>string sasl_mechanism = 4;</code>
@@ -14531,9 +14205,7 @@ public final class ConnectorOuterClass {
       private java.lang.Object securityProtocol_ = "";
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -14553,9 +14225,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -14576,9 +14246,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -14597,9 +14265,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>
@@ -14613,9 +14279,7 @@ public final class ConnectorOuterClass {
       }
       /**
        * <pre>
-       * Security protocol, which
-       * we should use to connect
-       * to cluster.
+       * Security protocol to use for connection to the cluster.
        * </pre>
        *
        * <code>string security_protocol = 5;</code>

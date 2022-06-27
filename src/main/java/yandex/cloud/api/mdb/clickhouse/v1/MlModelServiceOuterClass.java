@@ -2903,7 +2903,7 @@ public final class MlModelServiceOuterClass {
 
     /**
      * <pre>
-     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * Model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -2912,7 +2912,7 @@ public final class MlModelServiceOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * Model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3151,7 +3151,7 @@ public final class MlModelServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * Model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3172,7 +3172,7 @@ public final class MlModelServiceOuterClass {
     }
     /**
      * <pre>
-     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * Model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3819,7 +3819,7 @@ public final class MlModelServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * Model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3839,7 +3839,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * Model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3860,7 +3860,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * Model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3879,7 +3879,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * Model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3893,7 +3893,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * Model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -4817,7 +4817,7 @@ public final class MlModelServiceOuterClass {
 
     /**
      * <pre>
-     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * The new model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -4826,7 +4826,7 @@ public final class MlModelServiceOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * The new model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -5070,7 +5070,7 @@ public final class MlModelServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * The new model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -5091,7 +5091,7 @@ public final class MlModelServiceOuterClass {
     }
     /**
      * <pre>
-     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * The new model file URL. You can only use models stored in Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -5797,7 +5797,7 @@ public final class MlModelServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * The new model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5817,7 +5817,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * The new model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5838,7 +5838,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * The new model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5857,7 +5857,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * The new model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5871,7 +5871,7 @@ public final class MlModelServiceOuterClass {
       }
       /**
        * <pre>
-       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * The new model file URL. You can only use models stored in Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>

@@ -8824,7 +8824,9 @@ public final class Tts {
 
     /**
      * <pre>
-     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate normalization level.
+     * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+     * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -8833,7 +8835,9 @@ public final class Tts {
     boolean hasVolume();
     /**
      * <pre>
-     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate normalization level.
+     * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+     * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -9171,7 +9175,9 @@ public final class Tts {
     public static final int VOLUME_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate normalization level.
+     * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+     * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -9183,7 +9189,9 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+     * Hint to regulate normalization level.
+     * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+     * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
      * </pre>
      *
      * <code>double volume = 4;</code>
@@ -10059,7 +10067,9 @@ public final class Tts {
 
       /**
        * <pre>
-       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate normalization level.
+       * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+       * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10070,7 +10080,9 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate normalization level.
+       * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+       * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10084,7 +10096,9 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate normalization level.
+       * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+       * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10099,7 +10113,9 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Hint to regulate volume. For LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED normalization will use MAX_PEAK, if volume in (0, 1], LUFS if volume in [-145, 0).
+       * Hint to regulate normalization level.
+       * * For `MAX_PEAK` loudness_normalization_type: volume changes in a range (0;1], default value is 0.7.
+       * * For `LUFS` loudness_normalization_type: volume changes in a range [-145;0), default value is -19.
        * </pre>
        *
        * <code>double volume = 4;</code>
@@ -10442,7 +10458,8 @@ public final class Tts {
 
     /**
      * <pre>
-     * Optional. Default: LUFS type of loudness normalization.
+     * Specifies type of loudness normalization.
+     * Optional. Default: `LUFS`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10451,7 +10468,8 @@ public final class Tts {
     int getLoudnessNormalizationTypeValue();
     /**
      * <pre>
-     * Optional. Default: LUFS type of loudness normalization.
+     * Specifies type of loudness normalization.
+     * Optional. Default: `LUFS`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -10615,10 +10633,6 @@ public final class Tts {
     }
 
     /**
-     * <pre>
-     * Normalization type
-     * </pre>
-     *
      * Protobuf enum {@code speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType}
      */
     public enum LoudnessNormalizationType
@@ -10630,7 +10644,6 @@ public final class Tts {
       /**
        * <pre>
        * The type of normalization, wherein the gain is changed to bring the highest PCM sample value or analog signal peak to a given level.
-       * The volume changes in a range (0;1], default value is 0.7.
        * </pre>
        *
        * <code>MAX_PEAK = 1;</code>
@@ -10639,7 +10652,6 @@ public final class Tts {
       /**
        * <pre>
        * The type of normalization based on EBU R 128 recommendation.
-       * the volume changes in a range [-145;0], default value is -19.
        * </pre>
        *
        * <code>LUFS = 2;</code>
@@ -10655,7 +10667,6 @@ public final class Tts {
       /**
        * <pre>
        * The type of normalization, wherein the gain is changed to bring the highest PCM sample value or analog signal peak to a given level.
-       * The volume changes in a range (0;1], default value is 0.7.
        * </pre>
        *
        * <code>MAX_PEAK = 1;</code>
@@ -10664,7 +10675,6 @@ public final class Tts {
       /**
        * <pre>
        * The type of normalization based on EBU R 128 recommendation.
-       * the volume changes in a range [-145;0], default value is -19.
        * </pre>
        *
        * <code>LUFS = 2;</code>
@@ -11053,7 +11063,8 @@ public final class Tts {
     private int loudnessNormalizationType_;
     /**
      * <pre>
-     * Optional. Default: LUFS type of loudness normalization.
+     * Specifies type of loudness normalization.
+     * Optional. Default: `LUFS`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -11064,7 +11075,8 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Optional. Default: LUFS type of loudness normalization.
+     * Specifies type of loudness normalization.
+     * Optional. Default: `LUFS`.
      * </pre>
      *
      * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12464,7 +12476,8 @@ public final class Tts {
       private int loudnessNormalizationType_ = 0;
       /**
        * <pre>
-       * Optional. Default: LUFS type of loudness normalization.
+       * Specifies type of loudness normalization.
+       * Optional. Default: `LUFS`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12475,7 +12488,8 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS type of loudness normalization.
+       * Specifies type of loudness normalization.
+       * Optional. Default: `LUFS`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12490,7 +12504,8 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS type of loudness normalization.
+       * Specifies type of loudness normalization.
+       * Optional. Default: `LUFS`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12504,7 +12519,8 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS type of loudness normalization.
+       * Specifies type of loudness normalization.
+       * Optional. Default: `LUFS`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
@@ -12522,7 +12538,8 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: LUFS type of loudness normalization.
+       * Specifies type of loudness normalization.
+       * Optional. Default: `LUFS`.
        * </pre>
        *
        * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>

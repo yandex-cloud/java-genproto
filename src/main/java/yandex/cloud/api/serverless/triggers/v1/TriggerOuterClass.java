@@ -34,7 +34,7 @@ public final class TriggerOuterClass {
     /**
      * <pre>
      * The trigger is activated by messages from a message queue.
-     * Only Yandex Message Queue is currently supported.
+     * Only Message Queue is currently supported.
      * </pre>
      *
      * <code>MESSAGE_QUEUE = 3;</code>
@@ -42,7 +42,7 @@ public final class TriggerOuterClass {
     MESSAGE_QUEUE(3),
     /**
      * <pre>
-     * The trigger is activated by messages from Yandex IoT Core.
+     * The trigger is activated by messages from IoT Core.
      * </pre>
      *
      * <code>IOT_MESSAGE = 4;</code>
@@ -106,7 +106,7 @@ public final class TriggerOuterClass {
     /**
      * <pre>
      * The trigger is activated by messages from a message queue.
-     * Only Yandex Message Queue is currently supported.
+     * Only Message Queue is currently supported.
      * </pre>
      *
      * <code>MESSAGE_QUEUE = 3;</code>
@@ -114,7 +114,7 @@ public final class TriggerOuterClass {
     public static final int MESSAGE_QUEUE_VALUE = 3;
     /**
      * <pre>
-     * The trigger is activated by messages from Yandex IoT Core.
+     * The trigger is activated by messages from IoT Core.
      * </pre>
      *
      * <code>IOT_MESSAGE = 4;</code>
@@ -1069,7 +1069,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * Rule for a Yandex IoT Core trigger.
+       * Rule for a IoT Core trigger.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -1078,7 +1078,7 @@ public final class TriggerOuterClass {
       boolean hasIotMessage();
       /**
        * <pre>
-       * Rule for a Yandex IoT Core trigger.
+       * Rule for a IoT Core trigger.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -1087,7 +1087,7 @@ public final class TriggerOuterClass {
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage();
       /**
        * <pre>
-       * Rule for a Yandex IoT Core trigger.
+       * Rule for a IoT Core trigger.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -1537,7 +1537,7 @@ public final class TriggerOuterClass {
       public static final int IOT_MESSAGE_FIELD_NUMBER = 4;
       /**
        * <pre>
-       * Rule for a Yandex IoT Core trigger.
+       * Rule for a IoT Core trigger.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -1549,7 +1549,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Rule for a Yandex IoT Core trigger.
+       * Rule for a IoT Core trigger.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -1564,7 +1564,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Rule for a Yandex IoT Core trigger.
+       * Rule for a IoT Core trigger.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2676,7 +2676,7 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder> iotMessageBuilder_;
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2688,7 +2688,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2710,7 +2710,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2730,7 +2730,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2748,7 +2748,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2774,7 +2774,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2797,7 +2797,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2807,7 +2807,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -2825,7 +2825,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Rule for a Yandex IoT Core trigger.
+         * Rule for a IoT Core trigger.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
@@ -5303,7 +5303,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * ID of the message queue in Yandex Message Queue.
+       * ID of the message queue in Message Queue.
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -5312,7 +5312,7 @@ public final class TriggerOuterClass {
       java.lang.String getQueueId();
       /**
        * <pre>
-       * ID of the message queue in Yandex Message Queue.
+       * ID of the message queue in Message Queue.
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -5645,7 +5645,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object queueId_;
       /**
        * <pre>
-       * ID of the message queue in Yandex Message Queue.
+       * ID of the message queue in Message Queue.
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -5666,7 +5666,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the message queue in Yandex Message Queue.
+       * ID of the message queue in Message Queue.
        * </pre>
        *
        * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -6365,7 +6365,7 @@ public final class TriggerOuterClass {
         private java.lang.Object queueId_ = "";
         /**
          * <pre>
-         * ID of the message queue in Yandex Message Queue.
+         * ID of the message queue in Message Queue.
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -6385,7 +6385,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the message queue in Yandex Message Queue.
+         * ID of the message queue in Message Queue.
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -6406,7 +6406,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the message queue in Yandex Message Queue.
+         * ID of the message queue in Message Queue.
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -6425,7 +6425,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the message queue in Yandex Message Queue.
+         * ID of the message queue in Message Queue.
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -6439,7 +6439,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the message queue in Yandex Message Queue.
+         * ID of the message queue in Message Queue.
          * </pre>
          *
          * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
@@ -7276,7 +7276,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * ID of the Yandex IoT Core registry.
+       * ID of the IoT Core registry.
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7285,7 +7285,7 @@ public final class TriggerOuterClass {
       java.lang.String getRegistryId();
       /**
        * <pre>
-       * ID of the Yandex IoT Core registry.
+       * ID of the IoT Core registry.
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7296,7 +7296,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * ID of the Yandex IoT Core device in the registry.
+       * ID of the IoT Core device in the registry.
        * </pre>
        *
        * <code>string device_id = 2;</code>
@@ -7305,7 +7305,7 @@ public final class TriggerOuterClass {
       java.lang.String getDeviceId();
       /**
        * <pre>
-       * ID of the Yandex IoT Core device in the registry.
+       * ID of the IoT Core device in the registry.
        * </pre>
        *
        * <code>string device_id = 2;</code>
@@ -7392,7 +7392,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Rule for activating a Yandex IoT Core trigger.
+     * Rule for activating a IoT Core trigger.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage}
@@ -7565,7 +7565,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object registryId_;
       /**
        * <pre>
-       * ID of the Yandex IoT Core registry.
+       * ID of the IoT Core registry.
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7586,7 +7586,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the Yandex IoT Core registry.
+       * ID of the IoT Core registry.
        * </pre>
        *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7611,7 +7611,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object deviceId_;
       /**
        * <pre>
-       * ID of the Yandex IoT Core device in the registry.
+       * ID of the IoT Core device in the registry.
        * </pre>
        *
        * <code>string device_id = 2;</code>
@@ -7632,7 +7632,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the Yandex IoT Core device in the registry.
+       * ID of the IoT Core device in the registry.
        * </pre>
        *
        * <code>string device_id = 2;</code>
@@ -8000,7 +8000,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Rule for activating a Yandex IoT Core trigger.
+       * Rule for activating a IoT Core trigger.
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage}
@@ -8212,7 +8212,7 @@ public final class TriggerOuterClass {
         private java.lang.Object registryId_ = "";
         /**
          * <pre>
-         * ID of the Yandex IoT Core registry.
+         * ID of the IoT Core registry.
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8232,7 +8232,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core registry.
+         * ID of the IoT Core registry.
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8253,7 +8253,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core registry.
+         * ID of the IoT Core registry.
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8272,7 +8272,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core registry.
+         * ID of the IoT Core registry.
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8286,7 +8286,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core registry.
+         * ID of the IoT Core registry.
          * </pre>
          *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8308,7 +8308,7 @@ public final class TriggerOuterClass {
         private java.lang.Object deviceId_ = "";
         /**
          * <pre>
-         * ID of the Yandex IoT Core device in the registry.
+         * ID of the IoT Core device in the registry.
          * </pre>
          *
          * <code>string device_id = 2;</code>
@@ -8328,7 +8328,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core device in the registry.
+         * ID of the IoT Core device in the registry.
          * </pre>
          *
          * <code>string device_id = 2;</code>
@@ -8349,7 +8349,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core device in the registry.
+         * ID of the IoT Core device in the registry.
          * </pre>
          *
          * <code>string device_id = 2;</code>
@@ -8368,7 +8368,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core device in the registry.
+         * ID of the IoT Core device in the registry.
          * </pre>
          *
          * <code>string device_id = 2;</code>
@@ -8382,7 +8382,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the Yandex IoT Core device in the registry.
+         * ID of the IoT Core device in the registry.
          * </pre>
          *
          * <code>string device_id = 2;</code>

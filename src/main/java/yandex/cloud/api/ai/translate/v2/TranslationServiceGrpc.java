@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for the Yandex Translate service.
+ * A set of methods for the Translate service.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -157,7 +157,7 @@ public final class TranslationServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Translate service.
+   * A set of methods for the Translate service.
    * </pre>
    */
   public static abstract class TranslationServiceImplBase implements io.grpc.BindableService {
@@ -221,7 +221,7 @@ public final class TranslationServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Translate service.
+   * A set of methods for the Translate service.
    * </pre>
    */
   public static final class TranslationServiceStub extends io.grpc.stub.AbstractAsyncStub<TranslationServiceStub> {
@@ -272,7 +272,7 @@ public final class TranslationServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Translate service.
+   * A set of methods for the Translate service.
    * </pre>
    */
   public static final class TranslationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TranslationServiceBlockingStub> {
@@ -320,7 +320,7 @@ public final class TranslationServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for the Yandex Translate service.
+   * A set of methods for the Translate service.
    * </pre>
    */
   public static final class TranslationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TranslationServiceFutureStub> {

@@ -4413,7 +4413,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed PostgreSQL cluster ID
+     * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4424,7 +4424,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed PostgreSQL cluster ID
+     * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4435,7 +4435,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed PostgreSQL cluster ID
+     * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4622,7 +4622,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed PostgreSQL cluster ID
+     * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4635,7 +4635,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed PostgreSQL cluster ID
+     * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -4662,7 +4662,7 @@ public final class Postgres {
      * <pre>
      * Managed cluster
      * 
-     * Yandex.Cloud Managed PostgreSQL cluster ID
+     * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
      * <code>string mdb_cluster_id = 1;</code>
@@ -5106,7 +5106,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed PostgreSQL cluster ID
+       * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -5120,7 +5120,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed PostgreSQL cluster ID
+       * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -5148,7 +5148,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed PostgreSQL cluster ID
+       * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -5177,7 +5177,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed PostgreSQL cluster ID
+       * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -5198,7 +5198,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed PostgreSQL cluster ID
+       * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>
@@ -5216,7 +5216,7 @@ public final class Postgres {
        * <pre>
        * Managed cluster
        * 
-       * Yandex.Cloud Managed PostgreSQL cluster ID
+       * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
        * <code>string mdb_cluster_id = 1;</code>

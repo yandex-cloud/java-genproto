@@ -21,7 +21,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the cluster.
-     * This ID is assigned by Yandex Cloud at the time of creation.
+     * This ID is assigned by the platform at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -31,7 +31,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the cluster.
-     * This ID is assigned by Yandex Cloud at the time of creation.
+     * This ID is assigned by the platform at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1263,7 +1263,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the cluster.
-     * This ID is assigned by Yandex Cloud at the time of creation.
+     * This ID is assigned by the platform at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1285,7 +1285,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the cluster.
-     * This ID is assigned by Yandex Cloud at the time of creation.
+     * This ID is assigned by the platform at the time of creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -2736,7 +2736,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the cluster.
-       * This ID is assigned by Yandex Cloud at the time of creation.
+       * This ID is assigned by the platform at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2757,7 +2757,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the cluster.
-       * This ID is assigned by Yandex Cloud at the time of creation.
+       * This ID is assigned by the platform at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2779,7 +2779,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the cluster.
-       * This ID is assigned by Yandex Cloud at the time of creation.
+       * This ID is assigned by the platform at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2799,7 +2799,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the cluster.
-       * This ID is assigned by Yandex Cloud at the time of creation.
+       * This ID is assigned by the platform at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2814,7 +2814,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the cluster.
-       * This ID is assigned by Yandex Cloud at the time of creation.
+       * This ID is assigned by the platform at the time of creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -8213,8 +8213,8 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the host.
-     * This name is assigned by Yandex Cloud at the time of creation.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * This name is assigned by the platform at the time of creation.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8224,8 +8224,8 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the host.
-     * This name is assigned by Yandex Cloud at the time of creation.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * This name is assigned by the platform at the time of creation.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8925,8 +8925,8 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the host.
-     * This name is assigned by Yandex Cloud at the time of creation.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * This name is assigned by the platform at the time of creation.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -8948,8 +8948,8 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the host.
-     * This name is assigned by Yandex Cloud at the time of creation.
-     * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+     * This name is assigned by the platform at the time of creation.
+     * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -9898,8 +9898,8 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the host.
-       * This name is assigned by Yandex Cloud at the time of creation.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * This name is assigned by the platform at the time of creation.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9920,8 +9920,8 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the host.
-       * This name is assigned by Yandex Cloud at the time of creation.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * This name is assigned by the platform at the time of creation.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9943,8 +9943,8 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the host.
-       * This name is assigned by Yandex Cloud at the time of creation.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * This name is assigned by the platform at the time of creation.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9964,8 +9964,8 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the host.
-       * This name is assigned by Yandex Cloud at the time of creation.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * This name is assigned by the platform at the time of creation.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -9980,8 +9980,8 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the host.
-       * This name is assigned by Yandex Cloud at the time of creation.
-       * The name is unique across all existing MDB hosts in Yandex Cloud, as it defines the FQDN of the host.
+       * This name is assigned by the platform at the time of creation.
+       * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -13110,7 +13110,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allows SQL queries to the cluster databases from Yandex Cloud management console.
+     * Allows SQL queries to the cluster databases from management console.
      * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
      * </pre>
      *
@@ -13241,7 +13241,7 @@ public final class ClusterOuterClass {
     private boolean webSql_;
     /**
      * <pre>
-     * Allows SQL queries to the cluster databases from Yandex Cloud management console.
+     * Allows SQL queries to the cluster databases from management console.
      * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
      * </pre>
      *
@@ -13656,7 +13656,7 @@ public final class ClusterOuterClass {
       private boolean webSql_ ;
       /**
        * <pre>
-       * Allows SQL queries to the cluster databases from Yandex Cloud management console.
+       * Allows SQL queries to the cluster databases from management console.
        * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
        * </pre>
        *
@@ -13669,7 +13669,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allows SQL queries to the cluster databases from Yandex Cloud management console.
+       * Allows SQL queries to the cluster databases from management console.
        * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
        * </pre>
        *
@@ -13685,7 +13685,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allows SQL queries to the cluster databases from Yandex Cloud management console.
+       * Allows SQL queries to the cluster databases from management console.
        * See [the documentation](/docs/managed-mysql/operations/web-sql-query) for details.
        * </pre>
        *

@@ -179,7 +179,6 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the region that the application load balancer is located at.
-     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -189,7 +188,6 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the region that the application load balancer is located at.
-     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -1129,7 +1127,6 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the region that the application load balancer is located at.
-     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -1151,7 +1148,6 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the region that the application load balancer is located at.
-     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -2722,7 +2718,6 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the region that the application load balancer is located at.
-       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2743,7 +2738,6 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the region that the application load balancer is located at.
-       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2765,7 +2759,6 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the region that the application load balancer is located at.
-       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2785,7 +2778,6 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the region that the application load balancer is located at.
-       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2800,7 +2792,6 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the region that the application load balancer is located at.
-       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -7289,7 +7280,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the application load balancer resides.
-     * Each Yandex Cloud availability zone can only be specified once.
+     * Each availability zone can only be specified once.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7299,7 +7290,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the application load balancer resides.
-     * Each Yandex Cloud availability zone can only be specified once.
+     * Each availability zone can only be specified once.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7447,7 +7438,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the application load balancer resides.
-     * Each Yandex Cloud availability zone can only be specified once.
+     * Each availability zone can only be specified once.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7469,7 +7460,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the application load balancer resides.
-     * Each Yandex Cloud availability zone can only be specified once.
+     * Each availability zone can only be specified once.
      * </pre>
      *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7900,7 +7891,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the application load balancer resides.
-       * Each Yandex Cloud availability zone can only be specified once.
+       * Each availability zone can only be specified once.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7921,7 +7912,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the application load balancer resides.
-       * Each Yandex Cloud availability zone can only be specified once.
+       * Each availability zone can only be specified once.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7943,7 +7934,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the application load balancer resides.
-       * Each Yandex Cloud availability zone can only be specified once.
+       * Each availability zone can only be specified once.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7963,7 +7954,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the application load balancer resides.
-       * Each Yandex Cloud availability zone can only be specified once.
+       * Each availability zone can only be specified once.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -7978,7 +7969,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the application load balancer resides.
-       * Each Yandex Cloud availability zone can only be specified once.
+       * Each availability zone can only be specified once.
        * </pre>
        *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>

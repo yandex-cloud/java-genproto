@@ -21,7 +21,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by Yandex Cloud at the time of cluster creation.
+     * This ID is assigned by the platform at the time of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -31,7 +31,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by Yandex Cloud at the time of cluster creation.
+     * This ID is assigned by the platform at the time of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1475,7 +1475,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by Yandex Cloud at the time of cluster creation.
+     * This ID is assigned by the platform at the time of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1497,7 +1497,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by Yandex Cloud at the time of cluster creation.
+     * This ID is assigned by the platform at the time of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -3315,7 +3315,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by Yandex Cloud at the time of cluster creation.
+       * This ID is assigned by the platform at the time of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3336,7 +3336,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by Yandex Cloud at the time of cluster creation.
+       * This ID is assigned by the platform at the time of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3358,7 +3358,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by Yandex Cloud at the time of cluster creation.
+       * This ID is assigned by the platform at the time of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3378,7 +3378,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by Yandex Cloud at the time of cluster creation.
+       * This ID is assigned by the platform at the time of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3393,7 +3393,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by Yandex Cloud at the time of cluster creation.
+       * This ID is assigned by the platform at the time of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -10015,7 +10015,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allows data export from the cluster to Yandex DataLens.
+     * Allows data export from the cluster to DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -10025,7 +10025,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allows SQL queries to the cluster databases from the Yandex Cloud management console.
+     * Allows SQL queries to the cluster databases from the management console.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -10143,7 +10143,7 @@ public final class ClusterOuterClass {
     private boolean dataLens_;
     /**
      * <pre>
-     * Allows data export from the cluster to Yandex DataLens.
+     * Allows data export from the cluster to DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -10158,7 +10158,7 @@ public final class ClusterOuterClass {
     private boolean webSql_;
     /**
      * <pre>
-     * Allows SQL queries to the cluster databases from the Yandex Cloud management console.
+     * Allows SQL queries to the cluster databases from the management console.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -10530,7 +10530,7 @@ public final class ClusterOuterClass {
       private boolean dataLens_ ;
       /**
        * <pre>
-       * Allows data export from the cluster to Yandex DataLens.
+       * Allows data export from the cluster to DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -10542,7 +10542,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allows data export from the cluster to Yandex DataLens.
+       * Allows data export from the cluster to DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -10557,7 +10557,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allows data export from the cluster to Yandex DataLens.
+       * Allows data export from the cluster to DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -10573,7 +10573,7 @@ public final class ClusterOuterClass {
       private boolean webSql_ ;
       /**
        * <pre>
-       * Allows SQL queries to the cluster databases from the Yandex Cloud management console.
+       * Allows SQL queries to the cluster databases from the management console.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -10585,7 +10585,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allows SQL queries to the cluster databases from the Yandex Cloud management console.
+       * Allows SQL queries to the cluster databases from the management console.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -10600,7 +10600,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allows SQL queries to the cluster databases from the Yandex Cloud management console.
+       * Allows SQL queries to the cluster databases from the management console.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
