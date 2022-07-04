@@ -654,6 +654,12 @@ public final class ClusterServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -863,6 +869,12 @@ public final class ClusterServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -1430,6 +1442,12 @@ public final class ClusterServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -1438,6 +1456,12 @@ public final class ClusterServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1449,6 +1473,12 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -24827,6 +24857,12 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -25357,6 +25393,12 @@ public final class ClusterServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 6;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -26504,6 +26546,12 @@ public final class ClusterServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -26512,6 +26560,12 @@ public final class ClusterServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -26523,6 +26577,12 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -30864,6 +30924,12 @@ public final class ClusterServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -31036,6 +31102,12 @@ public final class ClusterServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -31527,6 +31599,12 @@ public final class ClusterServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -31535,6 +31613,12 @@ public final class ClusterServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -31546,6 +31630,12 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -32854,6 +32944,12 @@ public final class ClusterServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -33028,6 +33124,12 @@ public final class ClusterServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -33524,6 +33626,12 @@ public final class ClusterServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -33532,6 +33640,12 @@ public final class ClusterServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -33543,6 +33657,12 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -34851,6 +34971,12 @@ public final class ClusterServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -35025,6 +35151,12 @@ public final class ClusterServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -35521,6 +35653,12 @@ public final class ClusterServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -35529,6 +35667,12 @@ public final class ClusterServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -35540,6 +35684,12 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */

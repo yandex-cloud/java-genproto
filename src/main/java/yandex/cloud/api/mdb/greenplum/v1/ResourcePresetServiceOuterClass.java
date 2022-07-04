@@ -39,6 +39,25 @@ public final class ResourcePresetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getResourcePresetIdBytes();
+
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GetResourcePresetRequest}
@@ -54,6 +73,7 @@ public final class ResourcePresetServiceOuterClass {
     }
     private GetResourcePresetRequest() {
       resourcePresetId_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -90,6 +110,12 @@ public final class ResourcePresetServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               resourcePresetId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
             default: {
@@ -172,6 +198,33 @@ public final class ResourcePresetServiceOuterClass {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type result = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -189,6 +242,9 @@ public final class ResourcePresetServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcePresetId_);
       }
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -200,6 +256,10 @@ public final class ResourcePresetServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcePresetId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcePresetId_);
+      }
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -218,6 +278,7 @@ public final class ResourcePresetServiceOuterClass {
 
       if (!getResourcePresetId()
           .equals(other.getResourcePresetId())) return false;
+      if (type_ != other.type_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -231,6 +292,8 @@ public final class ResourcePresetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESOURCE_PRESET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getResourcePresetId().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -366,6 +429,8 @@ public final class ResourcePresetServiceOuterClass {
         super.clear();
         resourcePresetId_ = "";
 
+        type_ = 0;
+
         return this;
       }
 
@@ -393,6 +458,7 @@ public final class ResourcePresetServiceOuterClass {
       public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest buildPartial() {
         yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest result = new yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.GetResourcePresetRequest(this);
         result.resourcePresetId_ = resourcePresetId_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -444,6 +510,9 @@ public final class ResourcePresetServiceOuterClass {
         if (!other.getResourcePresetId().isEmpty()) {
           resourcePresetId_ = other.resourcePresetId_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -574,6 +643,80 @@ public final class ResourcePresetServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type result = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -664,6 +807,25 @@ public final class ResourcePresetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ListResourcePresetsRequest}
@@ -679,6 +841,7 @@ public final class ResourcePresetServiceOuterClass {
     }
     private ListResourcePresetsRequest() {
       pageToken_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -720,6 +883,12 @@ public final class ResourcePresetServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
             default: {
@@ -819,6 +988,33 @@ public final class ResourcePresetServiceOuterClass {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_;
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Required. ResourcePreset type - master or segment.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type result = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -839,6 +1035,9 @@ public final class ResourcePresetServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -854,6 +1053,10 @@ public final class ResourcePresetServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -874,6 +1077,7 @@ public final class ResourcePresetServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (type_ != other.type_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -890,6 +1094,8 @@ public final class ResourcePresetServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1027,6 +1233,8 @@ public final class ResourcePresetServiceOuterClass {
 
         pageToken_ = "";
 
+        type_ = 0;
+
         return this;
       }
 
@@ -1055,6 +1263,7 @@ public final class ResourcePresetServiceOuterClass {
         yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest result = new yandex.cloud.api.mdb.greenplum.v1.ResourcePresetServiceOuterClass.ListResourcePresetsRequest(this);
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -1109,6 +1318,9 @@ public final class ResourcePresetServiceOuterClass {
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1285,6 +1497,80 @@ public final class ResourcePresetServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type result = yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.mdb.greenplum.v1.ResourcePresetOuterClass.ResourcePreset.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ResourcePreset type - master or segment.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 4 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
@@ -2488,27 +2774,30 @@ public final class ResourcePresetServiceOuterClass {
       "greenplum.v1\032\034google/api/annotations.pro" +
       "to\032\035yandex/cloud/validation.proto\0323yande" +
       "x/cloud/mdb/greenplum/v1/resource_preset" +
-      ".proto\"<\n\030GetResourcePresetRequest\022 \n\022re" +
-      "source_preset_id\030\001 \001(\tB\004\350\3071\001\"Z\n\032ListReso" +
-      "urcePresetsRequest\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"\212\001\n\033ListResourcePresetsResponse\022G\n\020reso" +
-      "urce_presets\030\001 \003(\0132-.yandex.cloud.mdb.gr" +
-      "eenplum.v1.ResourcePreset\022\"\n\017next_page_t" +
-      "oken\030\002 \001(\tB\t\212\3101\005<=1002\372\002\n\025ResourcePreset" +
-      "Service\022\261\001\n\003Get\0227.yandex.cloud.mdb.green" +
-      "plum.v1.GetResourcePresetRequest\032-.yande" +
-      "x.cloud.mdb.greenplum.v1.ResourcePreset\"" +
-      "B\202\323\344\223\002<\022:/managed-greenplum/v1/resourceP" +
-      "resets/{resource_preset_id}\022\254\001\n\004List\0229.y" +
-      "andex.cloud.mdb.greenplum.v1.ListResourc" +
-      "ePresetsRequest\032:.yandex.cloud.mdb.green" +
-      "plum.v1.ListResourcePresetsResponse\"-\202\323\344" +
-      "\223\002\'\022%/managed-greenplum/v1/resourcePrese" +
-      "tsBp\n!yandex.cloud.api.mdb.greenplum.v1Z" +
-      "Kgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/mdb/greenplum/v1;greenplumb\006pr" +
-      "oto3"
+      ".proto\"\204\001\n\030GetResourcePresetRequest\022 \n\022r" +
+      "esource_preset_id\030\001 \001(\tB\004\350\3071\001\022F\n\004type\030\002 " +
+      "\001(\01622.yandex.cloud.mdb.greenplum.v1.Reso" +
+      "urcePreset.TypeB\004\350\3071\001\"\242\001\n\032ListResourcePr" +
+      "esetsRequest\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022F\n\004ty" +
+      "pe\030\004 \001(\01622.yandex.cloud.mdb.greenplum.v1" +
+      ".ResourcePreset.TypeB\004\350\3071\001\"\212\001\n\033ListResou" +
+      "rcePresetsResponse\022G\n\020resource_presets\030\001" +
+      " \003(\0132-.yandex.cloud.mdb.greenplum.v1.Res" +
+      "ourcePreset\022\"\n\017next_page_token\030\002 \001(\tB\t\212\310" +
+      "1\005<=1002\372\002\n\025ResourcePresetService\022\261\001\n\003Ge" +
+      "t\0227.yandex.cloud.mdb.greenplum.v1.GetRes" +
+      "ourcePresetRequest\032-.yandex.cloud.mdb.gr" +
+      "eenplum.v1.ResourcePreset\"B\202\323\344\223\002<\022:/mana" +
+      "ged-greenplum/v1/resourcePresets/{resour" +
+      "ce_preset_id}\022\254\001\n\004List\0229.yandex.cloud.md" +
+      "b.greenplum.v1.ListResourcePresetsReques" +
+      "t\032:.yandex.cloud.mdb.greenplum.v1.ListRe" +
+      "sourcePresetsResponse\"-\202\323\344\223\002\'\022%/managed-" +
+      "greenplum/v1/resourcePresetsBp\n!yandex.c" +
+      "loud.api.mdb.greenplum.v1ZKgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2522,13 +2811,13 @@ public final class ResourcePresetServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_GetResourcePresetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GetResourcePresetRequest_descriptor,
-        new java.lang.String[] { "ResourcePresetId", });
+        new java.lang.String[] { "ResourcePresetId", "Type", });
     internal_static_yandex_cloud_mdb_greenplum_v1_ListResourcePresetsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_greenplum_v1_ListResourcePresetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ListResourcePresetsRequest_descriptor,
-        new java.lang.String[] { "PageSize", "PageToken", });
+        new java.lang.String[] { "PageSize", "PageToken", "Type", });
     internal_static_yandex_cloud_mdb_greenplum_v1_ListResourcePresetsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_greenplum_v1_ListResourcePresetsResponse_fieldAccessorTable = new

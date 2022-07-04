@@ -9183,6 +9183,60 @@ public final class NodeOuterClass {
 
     /**
      * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
      * ID of the hardware platform configuration for the node.
      * </pre>
      *
@@ -9566,10 +9620,10 @@ public final class NodeOuterClass {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -9605,9 +9659,9 @@ public final class NodeOuterClass {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000004;
               }
               networkInterfaceSpecs_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.parser(), extensionRegistry));
@@ -9658,6 +9712,19 @@ public final class NodeOuterClass {
               name_ = s;
               break;
             }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9673,7 +9740,7 @@ public final class NodeOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
         }
         this.unknownFields = unknownFields.build();
@@ -9690,6 +9757,8 @@ public final class NodeOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
+        case 15:
+          return internalGetLabels();
         case 4:
           return internalGetMetadata();
         default:
@@ -11059,6 +11128,103 @@ public final class NodeOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 15;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * these labels will be assigned to compute nodes (instances), created by the nodegroup
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int PLATFORM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object platformId_;
     /**
@@ -11572,6 +11738,12 @@ public final class NodeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, name_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          15);
       unknownFields.writeTo(output);
     }
 
@@ -11629,6 +11801,16 @@ public final class NodeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, name_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(15, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11646,6 +11828,8 @@ public final class NodeOuterClass {
 
       if (!getName()
           .equals(other.getName())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getPlatformId()
           .equals(other.getPlatformId())) return false;
       if (hasResourcesSpec() != other.hasResourcesSpec()) return false;
@@ -11700,6 +11884,10 @@ public final class NodeOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (37 * hash) + PLATFORM_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPlatformId().hashCode();
       if (hasResourcesSpec()) {
@@ -11849,6 +12037,8 @@ public final class NodeOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
+          case 15:
+            return internalGetLabels();
           case 4:
             return internalGetMetadata();
           default:
@@ -11860,6 +12050,8 @@ public final class NodeOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
+          case 15:
+            return internalGetMutableLabels();
           case 4:
             return internalGetMutableMetadata();
           default:
@@ -11896,6 +12088,7 @@ public final class NodeOuterClass {
         super.clear();
         name_ = "";
 
+        internalGetMutableLabels().clear();
         platformId_ = "";
 
         if (resourcesSpecBuilder_ == null) {
@@ -11925,7 +12118,7 @@ public final class NodeOuterClass {
         }
         if (networkInterfaceSpecsBuilder_ == null) {
           networkInterfaceSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           networkInterfaceSpecsBuilder_.clear();
         }
@@ -11975,6 +12168,8 @@ public final class NodeOuterClass {
         yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate result = new yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate(this);
         int from_bitField0_ = bitField0_;
         result.name_ = name_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         result.platformId_ = platformId_;
         if (resourcesSpecBuilder_ == null) {
           result.resourcesSpec_ = resourcesSpec_;
@@ -11999,9 +12194,9 @@ public final class NodeOuterClass {
           result.schedulingPolicy_ = schedulingPolicyBuilder_.build();
         }
         if (networkInterfaceSpecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.networkInterfaceSpecs_ = networkInterfaceSpecs_;
         } else {
@@ -12074,6 +12269,8 @@ public final class NodeOuterClass {
           name_ = other.name_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         if (!other.getPlatformId().isEmpty()) {
           platformId_ = other.platformId_;
           onChanged();
@@ -12096,7 +12293,7 @@ public final class NodeOuterClass {
           if (!other.networkInterfaceSpecs_.isEmpty()) {
             if (networkInterfaceSpecs_.isEmpty()) {
               networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureNetworkInterfaceSpecsIsMutable();
               networkInterfaceSpecs_.addAll(other.networkInterfaceSpecs_);
@@ -12109,7 +12306,7 @@ public final class NodeOuterClass {
               networkInterfaceSpecsBuilder_.dispose();
               networkInterfaceSpecsBuilder_ = null;
               networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               networkInterfaceSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNetworkInterfaceSpecsFieldBuilder() : null;
@@ -12285,6 +12482,165 @@ public final class NodeOuterClass {
         
         name_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * these labels will be assigned to compute nodes (instances), created by the nodegroup
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 15 [(.yandex.cloud.size) = "&lt;=32", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -13191,9 +13547,9 @@ public final class NodeOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> networkInterfaceSpecs_ =
         java.util.Collections.emptyList();
       private void ensureNetworkInterfaceSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec>(networkInterfaceSpecs_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -13398,7 +13754,7 @@ public final class NodeOuterClass {
       public Builder clearNetworkInterfaceSpecs() {
         if (networkInterfaceSpecsBuilder_ == null) {
           networkInterfaceSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           networkInterfaceSpecsBuilder_.clear();
@@ -13510,7 +13866,7 @@ public final class NodeOuterClass {
           networkInterfaceSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder>(
                   networkInterfaceSpecs_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           networkInterfaceSpecs_ = null;
@@ -20827,6 +21183,11 @@ public final class NodeOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20921,61 +21282,65 @@ public final class NodeOuterClass {
       "PECIFIED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO" +
       "_SCHEDULE\020\002\022\016\n\nNO_EXECUTE\020\003\"<\n\016AttachedV" +
       "olume\022\023\n\013driver_name\030\001 \001(\t\022\025\n\rvolume_han" +
-      "dle\030\002 \001(\t\"\351\010\n\014NodeTemplate\022\027\n\004name\030\r \001(\t" +
-      "B\t\212\3101\005<=128\022\023\n\013platform_id\030\001 \001(\t\022:\n\016reso" +
-      "urces_spec\030\002 \001(\0132\".yandex.cloud.k8s.v1.R" +
-      "esourcesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132\035.y" +
-      "andex.cloud.k8s.v1.DiskSpec\022w\n\010metadata\030" +
-      "\004 \003(\0132/.yandex.cloud.k8s.v1.NodeTemplate" +
-      ".MetadataEntryB4\202\3101\004<=64\212\3101\010<=131072\262\3101\006" +
-      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022A\n\017v4_addre" +
-      "ss_spec\030\005 \001(\0132$.yandex.cloud.k8s.v1.Node" +
-      "AddressSpecB\002\030\001\022@\n\021scheduling_policy\030\006 \001" +
-      "(\0132%.yandex.cloud.k8s.v1.SchedulingPolic" +
-      "y\022J\n\027network_interface_specs\030\007 \003(\0132).yan" +
-      "dex.cloud.k8s.v1.NetworkInterfaceSpec\022>\n" +
-      "\020placement_policy\030\n \001(\0132$.yandex.cloud.k" +
-      "8s.v1.PlacementPolicy\022K\n\020network_setting" +
-      "s\030\013 \001(\01321.yandex.cloud.k8s.v1.NodeTempla" +
-      "te.NetworkSettings\022^\n\032container_runtime_" +
-      "settings\030\014 \001(\0132:.yandex.cloud.k8s.v1.Nod" +
-      "eTemplate.ContainerRuntimeSettings\032/\n\rMe" +
-      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032\243\001\n\017NetworkSettings\022J\n\004type\030\001 \001(\01626." +
-      "yandex.cloud.k8s.v1.NodeTemplate.Network" +
-      "Settings.TypeB\004\350\3071\001\"D\n\004Type\022\024\n\020TYPE_UNSP" +
-      "ECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCE" +
-      "LERATED\020\002\032\251\001\n\030ContainerRuntimeSettings\022S" +
-      "\n\004type\030\001 \001(\0162?.yandex.cloud.k8s.v1.NodeT" +
-      "emplate.ContainerRuntimeSettings.TypeB\004\350" +
-      "\3071\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006DOC" +
-      "KER\020\001\022\016\n\nCONTAINERD\020\002\"\324\001\n\024NetworkInterfa" +
-      "ceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027primary_v4" +
-      "_address_spec\030\003 \001(\0132$.yandex.cloud.k8s.v" +
-      "1.NodeAddressSpec\022E\n\027primary_v6_address_" +
-      "spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.NodeAdd" +
-      "ressSpec\022\032\n\022security_group_ids\030\005 \003(\t\"\222\001\n" +
-      "\017NodeAddressSpec\022A\n\023one_to_one_nat_spec\030" +
-      "\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOneNatS" +
-      "pec\022<\n\020dns_record_specs\030\002 \003(\0132\".yandex.c" +
-      "loud.k8s.v1.DnsRecordSpec\"_\n\rDnsRecordSp" +
-      "ec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 " +
-      "\001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001" +
-      "(\010\"E\n\017OneToOneNatSpec\0222\n\nip_version\030\001 \001(" +
-      "\0162\036.yandex.cloud.k8s.v1.IpVersion\"y\n\rRes" +
-      "ourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005c" +
-      "ores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fraction\030\003 \001" +
-      "(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\200\001\n" +
-      "\010DiskSpec\022L\n\014disk_type_id\030\001 \001(\tB6\362\30712|ne" +
-      "twork-ssd|network-hdd|network-ssd-nonrep" +
-      "licated\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-439804" +
-      "6511104\"\'\n\020SchedulingPolicy\022\023\n\013preemptib" +
-      "le\030\001 \001(\010\"-\n\017PlacementPolicy\022\032\n\022placement" +
-      "_group_id\030\001 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSI" +
-      "ON_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027" +
-      "yandex.cloud.api.k8s.v1Z;github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/k8s/v1" +
-      ";k8sb\006proto3"
+      "dle\030\002 \001(\t\"\216\n\n\014NodeTemplate\022\027\n\004name\030\r \001(\t" +
+      "B\t\212\3101\005<=128\022t\n\006labels\030\017 \003(\0132-.yandex.clo" +
+      "ud.k8s.v1.NodeTemplate.LabelsEntryB5\202\3101\004" +
+      "<=32\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\" +
+      "@0-9a-z]*\022\023\n\013platform_id\030\001 \001(\t\022:\n\016resour" +
+      "ces_spec\030\002 \001(\0132\".yandex.cloud.k8s.v1.Res" +
+      "ourcesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132\035.yan" +
+      "dex.cloud.k8s.v1.DiskSpec\022w\n\010metadata\030\004 " +
+      "\003(\0132/.yandex.cloud.k8s.v1.NodeTemplate.M" +
+      "etadataEntryB4\202\3101\004<=64\212\3101\010<=131072\262\3101\006\032\004" +
+      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022A\n\017v4_address" +
+      "_spec\030\005 \001(\0132$.yandex.cloud.k8s.v1.NodeAd" +
+      "dressSpecB\002\030\001\022@\n\021scheduling_policy\030\006 \001(\013" +
+      "2%.yandex.cloud.k8s.v1.SchedulingPolicy\022" +
+      "J\n\027network_interface_specs\030\007 \003(\0132).yande" +
+      "x.cloud.k8s.v1.NetworkInterfaceSpec\022>\n\020p" +
+      "lacement_policy\030\n \001(\0132$.yandex.cloud.k8s" +
+      ".v1.PlacementPolicy\022K\n\020network_settings\030" +
+      "\013 \001(\01321.yandex.cloud.k8s.v1.NodeTemplate" +
+      ".NetworkSettings\022^\n\032container_runtime_se" +
+      "ttings\030\014 \001(\0132:.yandex.cloud.k8s.v1.NodeT" +
+      "emplate.ContainerRuntimeSettings\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
+      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032\243\001\n\017NetworkSettings\022J\n\004type\030\001 \001" +
+      "(\01626.yandex.cloud.k8s.v1.NodeTemplate.Ne" +
+      "tworkSettings.TypeB\004\350\3071\001\"D\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE" +
+      "_ACCELERATED\020\002\032\251\001\n\030ContainerRuntimeSetti" +
+      "ngs\022S\n\004type\030\001 \001(\0162?.yandex.cloud.k8s.v1." +
+      "NodeTemplate.ContainerRuntimeSettings.Ty" +
+      "peB\004\350\3071\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n" +
+      "\n\006DOCKER\020\001\022\016\n\nCONTAINERD\020\002\"\324\001\n\024NetworkIn" +
+      "terfaceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027prima" +
+      "ry_v4_address_spec\030\003 \001(\0132$.yandex.cloud." +
+      "k8s.v1.NodeAddressSpec\022E\n\027primary_v6_add" +
+      "ress_spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.No" +
+      "deAddressSpec\022\032\n\022security_group_ids\030\005 \003(" +
+      "\t\"\222\001\n\017NodeAddressSpec\022A\n\023one_to_one_nat_" +
+      "spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOn" +
+      "eNatSpec\022<\n\020dns_record_specs\030\002 \003(\0132\".yan" +
+      "dex.cloud.k8s.v1.DnsRecordSpec\"_\n\rDnsRec" +
+      "ordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_" +
+      "id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003pt" +
+      "r\030\004 \001(\010\"E\n\017OneToOneNatSpec\0222\n\nip_version" +
+      "\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpVersion\"y" +
+      "\n\rResourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0" +
+      "\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fractio" +
+      "n\030\003 \001(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=" +
+      "0\"\200\001\n\010DiskSpec\022L\n\014disk_type_id\030\001 \001(\tB6\362\307" +
+      "12|network-ssd|network-hdd|network-ssd-n" +
+      "onreplicated\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-4" +
+      "398046511104\"\'\n\020SchedulingPolicy\022\023\n\013pree" +
+      "mptible\030\001 \001(\010\"-\n\017PlacementPolicy\022\032\n\022plac" +
+      "ement_group_id\030\001 \001(\t*;\n\tIpVersion\022\032\n\026IP_" +
+      "VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020" +
+      "\002BV\n\027yandex.cloud.api.k8s.v1Z;github.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/k" +
+      "8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21030,21 +21395,27 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor,
-        new java.lang.String[] { "Name", "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", });
-    internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor =
+        new java.lang.String[] { "Name", "Labels", "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", });
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor =
+      internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_NetworkSettings_descriptor =
-      internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(1);
+      internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_NetworkSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_NetworkSettings_descriptor,
         new java.lang.String[] { "Type", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerRuntimeSettings_descriptor =
-      internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(2);
+      internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerRuntimeSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerRuntimeSettings_descriptor,

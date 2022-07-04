@@ -11585,6 +11585,128 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    boolean hasMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    com.google.protobuf.Int64Value getMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    boolean hasReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    com.google.protobuf.Int64Value getReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    java.util.List<java.lang.String>
+        getSslCipherSuitesList();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    int getSslCipherSuitesCount();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    java.lang.String getSslCipherSuites(int index);
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index);
+
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    boolean hasOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    com.google.protobuf.Int64Value getOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder();
   }
   /**
    * <pre>
@@ -11604,6 +11726,7 @@ public final class ClusterOuterClass {
     }
     private KafkaConfig2_1() {
       compressionType_ = 0;
+      sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -11626,6 +11749,7 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11824,6 +11948,54 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 130: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (messageMaxBytes_ != null) {
+                subBuilder = messageMaxBytes_.toBuilder();
+              }
+              messageMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(messageMaxBytes_);
+                messageMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaFetchMaxBytes_ != null) {
+                subBuilder = replicaFetchMaxBytes_.toBuilder();
+              }
+              replicaFetchMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaFetchMaxBytes_);
+                replicaFetchMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sslCipherSuites_.add(s);
+              break;
+            }
+            case 154: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (offsetsRetentionMinutes_ != null) {
+                subBuilder = offsetsRetentionMinutes_.toBuilder();
+              }
+              offsetsRetentionMinutes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(offsetsRetentionMinutes_);
+                offsetsRetentionMinutes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11839,6 +12011,9 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -12448,6 +12623,171 @@ public final class ClusterOuterClass {
       return getDefaultReplicationFactor();
     }
 
+    public static final int MESSAGE_MAX_BYTES_FIELD_NUMBER = 16;
+    private com.google.protobuf.Int64Value messageMaxBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessageMaxBytes() {
+      return messageMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMessageMaxBytes() {
+      return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+      return getMessageMaxBytes();
+    }
+
+    public static final int REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+      return getReplicaFetchMaxBytes();
+    }
+
+    public static final int SSL_CIPHER_SUITES_FIELD_NUMBER = 18;
+    private com.google.protobuf.LazyStringList sslCipherSuites_;
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSslCipherSuitesList() {
+      return sslCipherSuites_;
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    public int getSslCipherSuitesCount() {
+      return sslCipherSuites_.size();
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    public java.lang.String getSslCipherSuites(int index) {
+      return sslCipherSuites_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index) {
+      return sslCipherSuites_.getByteString(index);
+    }
+
+    public static final int OFFSETS_RETENTION_MINUTES_FIELD_NUMBER = 19;
+    private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ != null;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+      return getOffsetsRetentionMinutes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12506,6 +12846,18 @@ public final class ClusterOuterClass {
       }
       if (defaultReplicationFactor_ != null) {
         output.writeMessage(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        output.writeMessage(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        output.writeMessage(17, getReplicaFetchMaxBytes());
+      }
+      for (int i = 0; i < sslCipherSuites_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, sslCipherSuites_.getRaw(i));
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        output.writeMessage(19, getOffsetsRetentionMinutes());
       }
       unknownFields.writeTo(output);
     }
@@ -12575,6 +12927,26 @@ public final class ClusterOuterClass {
       if (defaultReplicationFactor_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getReplicaFetchMaxBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sslCipherSuites_.size(); i++) {
+          dataSize += computeStringSizeNoTag(sslCipherSuites_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSslCipherSuitesList().size();
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getOffsetsRetentionMinutes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12662,6 +13034,23 @@ public final class ClusterOuterClass {
         if (!getDefaultReplicationFactor()
             .equals(other.getDefaultReplicationFactor())) return false;
       }
+      if (hasMessageMaxBytes() != other.hasMessageMaxBytes()) return false;
+      if (hasMessageMaxBytes()) {
+        if (!getMessageMaxBytes()
+            .equals(other.getMessageMaxBytes())) return false;
+      }
+      if (hasReplicaFetchMaxBytes() != other.hasReplicaFetchMaxBytes()) return false;
+      if (hasReplicaFetchMaxBytes()) {
+        if (!getReplicaFetchMaxBytes()
+            .equals(other.getReplicaFetchMaxBytes())) return false;
+      }
+      if (!getSslCipherSuitesList()
+          .equals(other.getSslCipherSuitesList())) return false;
+      if (hasOffsetsRetentionMinutes() != other.hasOffsetsRetentionMinutes()) return false;
+      if (hasOffsetsRetentionMinutes()) {
+        if (!getOffsetsRetentionMinutes()
+            .equals(other.getOffsetsRetentionMinutes())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12730,6 +13119,22 @@ public final class ClusterOuterClass {
       if (hasDefaultReplicationFactor()) {
         hash = (37 * hash) + DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER;
         hash = (53 * hash) + getDefaultReplicationFactor().hashCode();
+      }
+      if (hasMessageMaxBytes()) {
+        hash = (37 * hash) + MESSAGE_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessageMaxBytes().hashCode();
+      }
+      if (hasReplicaFetchMaxBytes()) {
+        hash = (37 * hash) + REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaFetchMaxBytes().hashCode();
+      }
+      if (getSslCipherSuitesCount() > 0) {
+        hash = (37 * hash) + SSL_CIPHER_SUITES_FIELD_NUMBER;
+        hash = (53 * hash) + getSslCipherSuitesList().hashCode();
+      }
+      if (hasOffsetsRetentionMinutes()) {
+        hash = (37 * hash) + OFFSETS_RETENTION_MINUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getOffsetsRetentionMinutes().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12954,6 +13359,26 @@ public final class ClusterOuterClass {
           defaultReplicationFactor_ = null;
           defaultReplicationFactorBuilder_ = null;
         }
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
         return this;
       }
 
@@ -12980,6 +13405,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_1 buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_1 result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_1(this);
+        int from_bitField0_ = bitField0_;
         result.compressionType_ = compressionType_;
         if (logFlushIntervalMessagesBuilder_ == null) {
           result.logFlushIntervalMessages_ = logFlushIntervalMessages_;
@@ -13050,6 +13476,26 @@ public final class ClusterOuterClass {
           result.defaultReplicationFactor_ = defaultReplicationFactor_;
         } else {
           result.defaultReplicationFactor_ = defaultReplicationFactorBuilder_.build();
+        }
+        if (messageMaxBytesBuilder_ == null) {
+          result.messageMaxBytes_ = messageMaxBytes_;
+        } else {
+          result.messageMaxBytes_ = messageMaxBytesBuilder_.build();
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytes_;
+        } else {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sslCipherSuites_ = sslCipherSuites_;
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutes_;
+        } else {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13144,6 +13590,25 @@ public final class ClusterOuterClass {
         if (other.hasDefaultReplicationFactor()) {
           mergeDefaultReplicationFactor(other.getDefaultReplicationFactor());
         }
+        if (other.hasMessageMaxBytes()) {
+          mergeMessageMaxBytes(other.getMessageMaxBytes());
+        }
+        if (other.hasReplicaFetchMaxBytes()) {
+          mergeReplicaFetchMaxBytes(other.getReplicaFetchMaxBytes());
+        }
+        if (!other.sslCipherSuites_.isEmpty()) {
+          if (sslCipherSuites_.isEmpty()) {
+            sslCipherSuites_ = other.sslCipherSuites_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSslCipherSuitesIsMutable();
+            sslCipherSuites_.addAll(other.sslCipherSuites_);
+          }
+          onChanged();
+        }
+        if (other.hasOffsetsRetentionMinutes()) {
+          mergeOffsetsRetentionMinutes(other.getOffsetsRetentionMinutes());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -13172,6 +13637,7 @@ public final class ClusterOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private int compressionType_ = 0;
       /**
@@ -15515,6 +15981,617 @@ public final class ClusterOuterClass {
         }
         return defaultReplicationFactorBuilder_;
       }
+
+      private com.google.protobuf.Int64Value messageMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> messageMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return Whether the messageMaxBytes field is set.
+       */
+      public boolean hasMessageMaxBytes() {
+        return messageMaxBytesBuilder_ != null || messageMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return The messageMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        } else {
+          return messageMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          messageMaxBytes_ = value;
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder mergeMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (messageMaxBytes_ != null) {
+            messageMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(messageMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            messageMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder clearMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+          onChanged();
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMessageMaxBytesBuilder() {
+        
+        onChanged();
+        return getMessageMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+        if (messageMaxBytesBuilder_ != null) {
+          return messageMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return messageMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMessageMaxBytesFieldBuilder() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMessageMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          messageMaxBytes_ = null;
+        }
+        return messageMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaFetchMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return Whether the replicaFetchMaxBytes field is set.
+       */
+      public boolean hasReplicaFetchMaxBytes() {
+        return replicaFetchMaxBytesBuilder_ != null || replicaFetchMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return The replicaFetchMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        } else {
+          return replicaFetchMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaFetchMaxBytes_ = value;
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder mergeReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (replicaFetchMaxBytes_ != null) {
+            replicaFetchMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaFetchMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            replicaFetchMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder clearReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+          onChanged();
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaFetchMaxBytesBuilder() {
+        
+        onChanged();
+        return getReplicaFetchMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+        if (replicaFetchMaxBytesBuilder_ != null) {
+          return replicaFetchMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaFetchMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaFetchMaxBytesFieldBuilder() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaFetchMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          replicaFetchMaxBytes_ = null;
+        }
+        return replicaFetchMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSslCipherSuitesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList(sslCipherSuites_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return A list containing the sslCipherSuites.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSslCipherSuitesList() {
+        return sslCipherSuites_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return The count of sslCipherSuites.
+       */
+      public int getSslCipherSuitesCount() {
+        return sslCipherSuites_.size();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the element to return.
+       * @return The sslCipherSuites at the given index.
+       */
+      public java.lang.String getSslCipherSuites(int index) {
+        return sslCipherSuites_.get(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sslCipherSuites at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSslCipherSuitesBytes(int index) {
+        return sslCipherSuites_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index to set the value at.
+       * @param value The sslCipherSuites to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSslCipherSuites(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuites(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param values The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSslCipherSuites(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSslCipherSuitesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sslCipherSuites_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSslCipherSuites() {
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The bytes of the sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuitesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> offsetsRetentionMinutesBuilder_;
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return Whether the offsetsRetentionMinutes field is set.
+       */
+      public boolean hasOffsetsRetentionMinutes() {
+        return offsetsRetentionMinutesBuilder_ != null || offsetsRetentionMinutes_ != null;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return The offsetsRetentionMinutes.
+       */
+      public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        } else {
+          return offsetsRetentionMinutesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offsetsRetentionMinutes_ = value;
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = builderForValue.build();
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder mergeOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (offsetsRetentionMinutes_ != null) {
+            offsetsRetentionMinutes_ =
+              com.google.protobuf.Int64Value.newBuilder(offsetsRetentionMinutes_).mergeFrom(value).buildPartial();
+          } else {
+            offsetsRetentionMinutes_ = value;
+          }
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder clearOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+          onChanged();
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOffsetsRetentionMinutesBuilder() {
+        
+        onChanged();
+        return getOffsetsRetentionMinutesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+        if (offsetsRetentionMinutesBuilder_ != null) {
+          return offsetsRetentionMinutesBuilder_.getMessageOrBuilder();
+        } else {
+          return offsetsRetentionMinutes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOffsetsRetentionMinutesFieldBuilder() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOffsetsRetentionMinutes(),
+                  getParentForChildren(),
+                  isClean());
+          offsetsRetentionMinutes_ = null;
+        }
+        return offsetsRetentionMinutesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16001,6 +17078,128 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    boolean hasMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    com.google.protobuf.Int64Value getMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    boolean hasReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    com.google.protobuf.Int64Value getReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    java.util.List<java.lang.String>
+        getSslCipherSuitesList();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    int getSslCipherSuitesCount();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    java.lang.String getSslCipherSuites(int index);
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index);
+
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    boolean hasOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    com.google.protobuf.Int64Value getOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder();
   }
   /**
    * <pre>
@@ -16020,6 +17219,7 @@ public final class ClusterOuterClass {
     }
     private KafkaConfig2_6() {
       compressionType_ = 0;
+      sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -16042,6 +17242,7 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16240,6 +17441,54 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 130: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (messageMaxBytes_ != null) {
+                subBuilder = messageMaxBytes_.toBuilder();
+              }
+              messageMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(messageMaxBytes_);
+                messageMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaFetchMaxBytes_ != null) {
+                subBuilder = replicaFetchMaxBytes_.toBuilder();
+              }
+              replicaFetchMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaFetchMaxBytes_);
+                replicaFetchMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sslCipherSuites_.add(s);
+              break;
+            }
+            case 154: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (offsetsRetentionMinutes_ != null) {
+                subBuilder = offsetsRetentionMinutes_.toBuilder();
+              }
+              offsetsRetentionMinutes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(offsetsRetentionMinutes_);
+                offsetsRetentionMinutes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -16255,6 +17504,9 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -16864,6 +18116,171 @@ public final class ClusterOuterClass {
       return getDefaultReplicationFactor();
     }
 
+    public static final int MESSAGE_MAX_BYTES_FIELD_NUMBER = 16;
+    private com.google.protobuf.Int64Value messageMaxBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessageMaxBytes() {
+      return messageMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMessageMaxBytes() {
+      return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+      return getMessageMaxBytes();
+    }
+
+    public static final int REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+      return getReplicaFetchMaxBytes();
+    }
+
+    public static final int SSL_CIPHER_SUITES_FIELD_NUMBER = 18;
+    private com.google.protobuf.LazyStringList sslCipherSuites_;
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSslCipherSuitesList() {
+      return sslCipherSuites_;
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    public int getSslCipherSuitesCount() {
+      return sslCipherSuites_.size();
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    public java.lang.String getSslCipherSuites(int index) {
+      return sslCipherSuites_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index) {
+      return sslCipherSuites_.getByteString(index);
+    }
+
+    public static final int OFFSETS_RETENTION_MINUTES_FIELD_NUMBER = 19;
+    private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ != null;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+      return getOffsetsRetentionMinutes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16922,6 +18339,18 @@ public final class ClusterOuterClass {
       }
       if (defaultReplicationFactor_ != null) {
         output.writeMessage(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        output.writeMessage(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        output.writeMessage(17, getReplicaFetchMaxBytes());
+      }
+      for (int i = 0; i < sslCipherSuites_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, sslCipherSuites_.getRaw(i));
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        output.writeMessage(19, getOffsetsRetentionMinutes());
       }
       unknownFields.writeTo(output);
     }
@@ -16991,6 +18420,26 @@ public final class ClusterOuterClass {
       if (defaultReplicationFactor_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getReplicaFetchMaxBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sslCipherSuites_.size(); i++) {
+          dataSize += computeStringSizeNoTag(sslCipherSuites_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSslCipherSuitesList().size();
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getOffsetsRetentionMinutes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17078,6 +18527,23 @@ public final class ClusterOuterClass {
         if (!getDefaultReplicationFactor()
             .equals(other.getDefaultReplicationFactor())) return false;
       }
+      if (hasMessageMaxBytes() != other.hasMessageMaxBytes()) return false;
+      if (hasMessageMaxBytes()) {
+        if (!getMessageMaxBytes()
+            .equals(other.getMessageMaxBytes())) return false;
+      }
+      if (hasReplicaFetchMaxBytes() != other.hasReplicaFetchMaxBytes()) return false;
+      if (hasReplicaFetchMaxBytes()) {
+        if (!getReplicaFetchMaxBytes()
+            .equals(other.getReplicaFetchMaxBytes())) return false;
+      }
+      if (!getSslCipherSuitesList()
+          .equals(other.getSslCipherSuitesList())) return false;
+      if (hasOffsetsRetentionMinutes() != other.hasOffsetsRetentionMinutes()) return false;
+      if (hasOffsetsRetentionMinutes()) {
+        if (!getOffsetsRetentionMinutes()
+            .equals(other.getOffsetsRetentionMinutes())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17146,6 +18612,22 @@ public final class ClusterOuterClass {
       if (hasDefaultReplicationFactor()) {
         hash = (37 * hash) + DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER;
         hash = (53 * hash) + getDefaultReplicationFactor().hashCode();
+      }
+      if (hasMessageMaxBytes()) {
+        hash = (37 * hash) + MESSAGE_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessageMaxBytes().hashCode();
+      }
+      if (hasReplicaFetchMaxBytes()) {
+        hash = (37 * hash) + REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaFetchMaxBytes().hashCode();
+      }
+      if (getSslCipherSuitesCount() > 0) {
+        hash = (37 * hash) + SSL_CIPHER_SUITES_FIELD_NUMBER;
+        hash = (53 * hash) + getSslCipherSuitesList().hashCode();
+      }
+      if (hasOffsetsRetentionMinutes()) {
+        hash = (37 * hash) + OFFSETS_RETENTION_MINUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getOffsetsRetentionMinutes().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -17370,6 +18852,26 @@ public final class ClusterOuterClass {
           defaultReplicationFactor_ = null;
           defaultReplicationFactorBuilder_ = null;
         }
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
         return this;
       }
 
@@ -17396,6 +18898,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_6 buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_6 result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_6(this);
+        int from_bitField0_ = bitField0_;
         result.compressionType_ = compressionType_;
         if (logFlushIntervalMessagesBuilder_ == null) {
           result.logFlushIntervalMessages_ = logFlushIntervalMessages_;
@@ -17466,6 +18969,26 @@ public final class ClusterOuterClass {
           result.defaultReplicationFactor_ = defaultReplicationFactor_;
         } else {
           result.defaultReplicationFactor_ = defaultReplicationFactorBuilder_.build();
+        }
+        if (messageMaxBytesBuilder_ == null) {
+          result.messageMaxBytes_ = messageMaxBytes_;
+        } else {
+          result.messageMaxBytes_ = messageMaxBytesBuilder_.build();
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytes_;
+        } else {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sslCipherSuites_ = sslCipherSuites_;
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutes_;
+        } else {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -17560,6 +19083,25 @@ public final class ClusterOuterClass {
         if (other.hasDefaultReplicationFactor()) {
           mergeDefaultReplicationFactor(other.getDefaultReplicationFactor());
         }
+        if (other.hasMessageMaxBytes()) {
+          mergeMessageMaxBytes(other.getMessageMaxBytes());
+        }
+        if (other.hasReplicaFetchMaxBytes()) {
+          mergeReplicaFetchMaxBytes(other.getReplicaFetchMaxBytes());
+        }
+        if (!other.sslCipherSuites_.isEmpty()) {
+          if (sslCipherSuites_.isEmpty()) {
+            sslCipherSuites_ = other.sslCipherSuites_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSslCipherSuitesIsMutable();
+            sslCipherSuites_.addAll(other.sslCipherSuites_);
+          }
+          onChanged();
+        }
+        if (other.hasOffsetsRetentionMinutes()) {
+          mergeOffsetsRetentionMinutes(other.getOffsetsRetentionMinutes());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -17588,6 +19130,7 @@ public final class ClusterOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private int compressionType_ = 0;
       /**
@@ -19931,6 +21474,617 @@ public final class ClusterOuterClass {
         }
         return defaultReplicationFactorBuilder_;
       }
+
+      private com.google.protobuf.Int64Value messageMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> messageMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return Whether the messageMaxBytes field is set.
+       */
+      public boolean hasMessageMaxBytes() {
+        return messageMaxBytesBuilder_ != null || messageMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return The messageMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        } else {
+          return messageMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          messageMaxBytes_ = value;
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder mergeMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (messageMaxBytes_ != null) {
+            messageMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(messageMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            messageMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder clearMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+          onChanged();
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMessageMaxBytesBuilder() {
+        
+        onChanged();
+        return getMessageMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+        if (messageMaxBytesBuilder_ != null) {
+          return messageMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return messageMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMessageMaxBytesFieldBuilder() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMessageMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          messageMaxBytes_ = null;
+        }
+        return messageMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaFetchMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return Whether the replicaFetchMaxBytes field is set.
+       */
+      public boolean hasReplicaFetchMaxBytes() {
+        return replicaFetchMaxBytesBuilder_ != null || replicaFetchMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return The replicaFetchMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        } else {
+          return replicaFetchMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaFetchMaxBytes_ = value;
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder mergeReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (replicaFetchMaxBytes_ != null) {
+            replicaFetchMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaFetchMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            replicaFetchMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder clearReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+          onChanged();
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaFetchMaxBytesBuilder() {
+        
+        onChanged();
+        return getReplicaFetchMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+        if (replicaFetchMaxBytesBuilder_ != null) {
+          return replicaFetchMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaFetchMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaFetchMaxBytesFieldBuilder() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaFetchMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          replicaFetchMaxBytes_ = null;
+        }
+        return replicaFetchMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSslCipherSuitesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList(sslCipherSuites_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return A list containing the sslCipherSuites.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSslCipherSuitesList() {
+        return sslCipherSuites_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return The count of sslCipherSuites.
+       */
+      public int getSslCipherSuitesCount() {
+        return sslCipherSuites_.size();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the element to return.
+       * @return The sslCipherSuites at the given index.
+       */
+      public java.lang.String getSslCipherSuites(int index) {
+        return sslCipherSuites_.get(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sslCipherSuites at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSslCipherSuitesBytes(int index) {
+        return sslCipherSuites_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index to set the value at.
+       * @param value The sslCipherSuites to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSslCipherSuites(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuites(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param values The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSslCipherSuites(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSslCipherSuitesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sslCipherSuites_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSslCipherSuites() {
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The bytes of the sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuitesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> offsetsRetentionMinutesBuilder_;
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return Whether the offsetsRetentionMinutes field is set.
+       */
+      public boolean hasOffsetsRetentionMinutes() {
+        return offsetsRetentionMinutesBuilder_ != null || offsetsRetentionMinutes_ != null;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return The offsetsRetentionMinutes.
+       */
+      public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        } else {
+          return offsetsRetentionMinutesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offsetsRetentionMinutes_ = value;
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = builderForValue.build();
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder mergeOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (offsetsRetentionMinutes_ != null) {
+            offsetsRetentionMinutes_ =
+              com.google.protobuf.Int64Value.newBuilder(offsetsRetentionMinutes_).mergeFrom(value).buildPartial();
+          } else {
+            offsetsRetentionMinutes_ = value;
+          }
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder clearOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+          onChanged();
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOffsetsRetentionMinutesBuilder() {
+        
+        onChanged();
+        return getOffsetsRetentionMinutesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+        if (offsetsRetentionMinutesBuilder_ != null) {
+          return offsetsRetentionMinutesBuilder_.getMessageOrBuilder();
+        } else {
+          return offsetsRetentionMinutes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOffsetsRetentionMinutesFieldBuilder() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOffsetsRetentionMinutes(),
+                  getParentForChildren(),
+                  isClean());
+          offsetsRetentionMinutes_ = null;
+        }
+        return offsetsRetentionMinutesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20417,6 +22571,128 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    boolean hasMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    com.google.protobuf.Int64Value getMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    boolean hasReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    com.google.protobuf.Int64Value getReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    java.util.List<java.lang.String>
+        getSslCipherSuitesList();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    int getSslCipherSuitesCount();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    java.lang.String getSslCipherSuites(int index);
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index);
+
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    boolean hasOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    com.google.protobuf.Int64Value getOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder();
   }
   /**
    * <pre>
@@ -20436,6 +22712,7 @@ public final class ClusterOuterClass {
     }
     private KafkaConfig2_8() {
       compressionType_ = 0;
+      sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -20458,6 +22735,7 @@ public final class ClusterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -20656,6 +22934,54 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 130: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (messageMaxBytes_ != null) {
+                subBuilder = messageMaxBytes_.toBuilder();
+              }
+              messageMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(messageMaxBytes_);
+                messageMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaFetchMaxBytes_ != null) {
+                subBuilder = replicaFetchMaxBytes_.toBuilder();
+              }
+              replicaFetchMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaFetchMaxBytes_);
+                replicaFetchMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sslCipherSuites_.add(s);
+              break;
+            }
+            case 154: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (offsetsRetentionMinutes_ != null) {
+                subBuilder = offsetsRetentionMinutes_.toBuilder();
+              }
+              offsetsRetentionMinutes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(offsetsRetentionMinutes_);
+                offsetsRetentionMinutes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -20671,6 +22997,9 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -21280,6 +23609,171 @@ public final class ClusterOuterClass {
       return getDefaultReplicationFactor();
     }
 
+    public static final int MESSAGE_MAX_BYTES_FIELD_NUMBER = 16;
+    private com.google.protobuf.Int64Value messageMaxBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessageMaxBytes() {
+      return messageMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMessageMaxBytes() {
+      return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+      return getMessageMaxBytes();
+    }
+
+    public static final int REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+      return getReplicaFetchMaxBytes();
+    }
+
+    public static final int SSL_CIPHER_SUITES_FIELD_NUMBER = 18;
+    private com.google.protobuf.LazyStringList sslCipherSuites_;
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSslCipherSuitesList() {
+      return sslCipherSuites_;
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    public int getSslCipherSuitesCount() {
+      return sslCipherSuites_.size();
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    public java.lang.String getSslCipherSuites(int index) {
+      return sslCipherSuites_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index) {
+      return sslCipherSuites_.getByteString(index);
+    }
+
+    public static final int OFFSETS_RETENTION_MINUTES_FIELD_NUMBER = 19;
+    private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ != null;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+      return getOffsetsRetentionMinutes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21338,6 +23832,18 @@ public final class ClusterOuterClass {
       }
       if (defaultReplicationFactor_ != null) {
         output.writeMessage(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        output.writeMessage(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        output.writeMessage(17, getReplicaFetchMaxBytes());
+      }
+      for (int i = 0; i < sslCipherSuites_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, sslCipherSuites_.getRaw(i));
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        output.writeMessage(19, getOffsetsRetentionMinutes());
       }
       unknownFields.writeTo(output);
     }
@@ -21407,6 +23913,26 @@ public final class ClusterOuterClass {
       if (defaultReplicationFactor_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getReplicaFetchMaxBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sslCipherSuites_.size(); i++) {
+          dataSize += computeStringSizeNoTag(sslCipherSuites_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSslCipherSuitesList().size();
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getOffsetsRetentionMinutes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -21494,6 +24020,23 @@ public final class ClusterOuterClass {
         if (!getDefaultReplicationFactor()
             .equals(other.getDefaultReplicationFactor())) return false;
       }
+      if (hasMessageMaxBytes() != other.hasMessageMaxBytes()) return false;
+      if (hasMessageMaxBytes()) {
+        if (!getMessageMaxBytes()
+            .equals(other.getMessageMaxBytes())) return false;
+      }
+      if (hasReplicaFetchMaxBytes() != other.hasReplicaFetchMaxBytes()) return false;
+      if (hasReplicaFetchMaxBytes()) {
+        if (!getReplicaFetchMaxBytes()
+            .equals(other.getReplicaFetchMaxBytes())) return false;
+      }
+      if (!getSslCipherSuitesList()
+          .equals(other.getSslCipherSuitesList())) return false;
+      if (hasOffsetsRetentionMinutes() != other.hasOffsetsRetentionMinutes()) return false;
+      if (hasOffsetsRetentionMinutes()) {
+        if (!getOffsetsRetentionMinutes()
+            .equals(other.getOffsetsRetentionMinutes())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21562,6 +24105,22 @@ public final class ClusterOuterClass {
       if (hasDefaultReplicationFactor()) {
         hash = (37 * hash) + DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER;
         hash = (53 * hash) + getDefaultReplicationFactor().hashCode();
+      }
+      if (hasMessageMaxBytes()) {
+        hash = (37 * hash) + MESSAGE_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessageMaxBytes().hashCode();
+      }
+      if (hasReplicaFetchMaxBytes()) {
+        hash = (37 * hash) + REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaFetchMaxBytes().hashCode();
+      }
+      if (getSslCipherSuitesCount() > 0) {
+        hash = (37 * hash) + SSL_CIPHER_SUITES_FIELD_NUMBER;
+        hash = (53 * hash) + getSslCipherSuitesList().hashCode();
+      }
+      if (hasOffsetsRetentionMinutes()) {
+        hash = (37 * hash) + OFFSETS_RETENTION_MINUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getOffsetsRetentionMinutes().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -21786,6 +24345,26 @@ public final class ClusterOuterClass {
           defaultReplicationFactor_ = null;
           defaultReplicationFactorBuilder_ = null;
         }
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
         return this;
       }
 
@@ -21812,6 +24391,7 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8 buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8 result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8(this);
+        int from_bitField0_ = bitField0_;
         result.compressionType_ = compressionType_;
         if (logFlushIntervalMessagesBuilder_ == null) {
           result.logFlushIntervalMessages_ = logFlushIntervalMessages_;
@@ -21882,6 +24462,26 @@ public final class ClusterOuterClass {
           result.defaultReplicationFactor_ = defaultReplicationFactor_;
         } else {
           result.defaultReplicationFactor_ = defaultReplicationFactorBuilder_.build();
+        }
+        if (messageMaxBytesBuilder_ == null) {
+          result.messageMaxBytes_ = messageMaxBytes_;
+        } else {
+          result.messageMaxBytes_ = messageMaxBytesBuilder_.build();
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytes_;
+        } else {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sslCipherSuites_ = sslCipherSuites_;
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutes_;
+        } else {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -21976,6 +24576,25 @@ public final class ClusterOuterClass {
         if (other.hasDefaultReplicationFactor()) {
           mergeDefaultReplicationFactor(other.getDefaultReplicationFactor());
         }
+        if (other.hasMessageMaxBytes()) {
+          mergeMessageMaxBytes(other.getMessageMaxBytes());
+        }
+        if (other.hasReplicaFetchMaxBytes()) {
+          mergeReplicaFetchMaxBytes(other.getReplicaFetchMaxBytes());
+        }
+        if (!other.sslCipherSuites_.isEmpty()) {
+          if (sslCipherSuites_.isEmpty()) {
+            sslCipherSuites_ = other.sslCipherSuites_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSslCipherSuitesIsMutable();
+            sslCipherSuites_.addAll(other.sslCipherSuites_);
+          }
+          onChanged();
+        }
+        if (other.hasOffsetsRetentionMinutes()) {
+          mergeOffsetsRetentionMinutes(other.getOffsetsRetentionMinutes());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -22004,6 +24623,7 @@ public final class ClusterOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private int compressionType_ = 0;
       /**
@@ -24346,6 +26966,617 @@ public final class ClusterOuterClass {
           defaultReplicationFactor_ = null;
         }
         return defaultReplicationFactorBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value messageMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> messageMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return Whether the messageMaxBytes field is set.
+       */
+      public boolean hasMessageMaxBytes() {
+        return messageMaxBytesBuilder_ != null || messageMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return The messageMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        } else {
+          return messageMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          messageMaxBytes_ = value;
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder mergeMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (messageMaxBytes_ != null) {
+            messageMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(messageMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            messageMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder clearMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+          onChanged();
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMessageMaxBytesBuilder() {
+        
+        onChanged();
+        return getMessageMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+        if (messageMaxBytesBuilder_ != null) {
+          return messageMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return messageMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMessageMaxBytesFieldBuilder() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMessageMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          messageMaxBytes_ = null;
+        }
+        return messageMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaFetchMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return Whether the replicaFetchMaxBytes field is set.
+       */
+      public boolean hasReplicaFetchMaxBytes() {
+        return replicaFetchMaxBytesBuilder_ != null || replicaFetchMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return The replicaFetchMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        } else {
+          return replicaFetchMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaFetchMaxBytes_ = value;
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder mergeReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (replicaFetchMaxBytes_ != null) {
+            replicaFetchMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaFetchMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            replicaFetchMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder clearReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+          onChanged();
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaFetchMaxBytesBuilder() {
+        
+        onChanged();
+        return getReplicaFetchMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+        if (replicaFetchMaxBytesBuilder_ != null) {
+          return replicaFetchMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaFetchMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaFetchMaxBytesFieldBuilder() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaFetchMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          replicaFetchMaxBytes_ = null;
+        }
+        return replicaFetchMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSslCipherSuitesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList(sslCipherSuites_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return A list containing the sslCipherSuites.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSslCipherSuitesList() {
+        return sslCipherSuites_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return The count of sslCipherSuites.
+       */
+      public int getSslCipherSuitesCount() {
+        return sslCipherSuites_.size();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the element to return.
+       * @return The sslCipherSuites at the given index.
+       */
+      public java.lang.String getSslCipherSuites(int index) {
+        return sslCipherSuites_.get(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sslCipherSuites at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSslCipherSuitesBytes(int index) {
+        return sslCipherSuites_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index to set the value at.
+       * @param value The sslCipherSuites to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSslCipherSuites(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuites(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param values The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSslCipherSuites(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSslCipherSuitesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sslCipherSuites_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSslCipherSuites() {
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The bytes of the sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuitesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> offsetsRetentionMinutesBuilder_;
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return Whether the offsetsRetentionMinutes field is set.
+       */
+      public boolean hasOffsetsRetentionMinutes() {
+        return offsetsRetentionMinutesBuilder_ != null || offsetsRetentionMinutes_ != null;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return The offsetsRetentionMinutes.
+       */
+      public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        } else {
+          return offsetsRetentionMinutesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offsetsRetentionMinutes_ = value;
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = builderForValue.build();
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder mergeOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (offsetsRetentionMinutes_ != null) {
+            offsetsRetentionMinutes_ =
+              com.google.protobuf.Int64Value.newBuilder(offsetsRetentionMinutes_).mergeFrom(value).buildPartial();
+          } else {
+            offsetsRetentionMinutes_ = value;
+          }
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder clearOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+          onChanged();
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOffsetsRetentionMinutesBuilder() {
+        
+        onChanged();
+        return getOffsetsRetentionMinutesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+        if (offsetsRetentionMinutesBuilder_ != null) {
+          return offsetsRetentionMinutesBuilder_.getMessageOrBuilder();
+        } else {
+          return offsetsRetentionMinutes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOffsetsRetentionMinutesFieldBuilder() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOffsetsRetentionMinutes(),
+                  getParentForChildren(),
+                  isClean());
+          offsetsRetentionMinutes_ = null;
+        }
+        return offsetsRetentionMinutesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27138,7 +30369,7 @@ public final class ClusterOuterClass {
       "\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex.c" +
       "loud.mdb.kafka.v1.Resources\"P\n\tResources" +
       "\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_siz" +
-      "e\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\244\007\n\016KafkaC" +
+      "e\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\365\010\n\016KafkaC" +
       "onfig2_1\022D\n\020compression_type\030\001 \001(\0162*.yan" +
       "dex.cloud.mdb.kafka.v1.CompressionType\022@" +
       "\n\033log_flush_interval_messages\030\002 \001(\0132\033.go" +
@@ -27162,67 +30393,82 @@ public final class ClusterOuterClass {
       "lValue\0223\n\016num_partitions\030\016 \001(\0132\033.google." +
       "protobuf.Int64Value\022?\n\032default_replicati" +
       "on_factor\030\017 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\"\244\007\n\016KafkaConfig2_6\022D\n\020compression_t" +
-      "ype\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Co" +
-      "mpressionType\022@\n\033log_flush_interval_mess" +
-      "ages\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
-      ":\n\025log_flush_interval_ms\030\003 \001(\0132\033.google." +
-      "protobuf.Int64Value\022D\n\037log_flush_schedul" +
-      "er_interval_ms\030\004 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033" +
-      ".google.protobuf.Int64Value\0228\n\023log_reten" +
-      "tion_hours\030\006 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022:\n\025log_retention_minutes\030\007 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\0225\n\020log_retenti" +
-      "on_ms\030\010 \001(\0132\033.google.protobuf.Int64Value" +
-      "\0226\n\021log_segment_bytes\030\t \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0223\n\017log_preallocate\030\n \001(" +
-      "\0132\032.google.protobuf.BoolValue\022=\n\030socket_" +
-      "send_buffer_bytes\030\013 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022@\n\033socket_receive_buffer_by" +
-      "tes\030\014 \001(\0132\033.google.protobuf.Int64Value\022=" +
-      "\n\031auto_create_topics_enable\030\r \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\0223\n\016num_partitions\030" +
-      "\016 \001(\0132\033.google.protobuf.Int64Value\022?\n\032de" +
-      "fault_replication_factor\030\017 \001(\0132\033.google." +
-      "protobuf.Int64Value\"\244\007\n\016KafkaConfig2_8\022D" +
-      "\n\020compression_type\030\001 \001(\0162*.yandex.cloud." +
-      "mdb.kafka.v1.CompressionType\022@\n\033log_flus" +
-      "h_interval_messages\030\002 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022:\n\025log_flush_interval_ms\030" +
-      "\003 \001(\0132\033.google.protobuf.Int64Value\022D\n\037lo" +
-      "g_flush_scheduler_interval_ms\030\004 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
-      "n_bytes\030\005 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0228\n\023log_retention_hours\030\006 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022:\n\025log_retention_mi" +
-      "nutes\030\007 \001(\0132\033.google.protobuf.Int64Value" +
-      "\0225\n\020log_retention_ms\030\010 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0226\n\021log_segment_bytes\030\t \001" +
-      "(\0132\033.google.protobuf.Int64Value\0223\n\017log_p" +
-      "reallocate\030\n \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022@\n\033socket_re" +
-      "ceive_buffer_bytes\030\014 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022=\n\031auto_create_topics_enab" +
-      "le\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016" +
-      "num_partitions\030\016 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022?\n\032default_replication_factor\030" +
-      "\017 \001(\0132\033.google.protobuf.Int64Value\"\375\002\n\004H" +
-      "ost\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n" +
-      "\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.cl" +
-      "oud.mdb.kafka.v1.Host.Role\0227\n\tresources\030" +
-      "\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resour" +
-      "ces\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb.k" +
-      "afka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030" +
-      "\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE" +
-      "_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002" +
-      "\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
-      "AD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022\025\n\rdata_tra" +
-      "nsfer\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.kafk" +
-      "a.v1ZCgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/kafka/v1;kafkab\006proto" +
-      "3"
+      "alue\0226\n\021message_max_bytes\030\020 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022<\n\027replica_fetch_ma" +
+      "x_bytes\030\021 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets" +
+      "_retention_minutes\030\023 \001(\0132\033.google.protob" +
+      "uf.Int64Value\"\365\010\n\016KafkaConfig2_6\022D\n\020comp" +
+      "ression_type\030\001 \001(\0162*.yandex.cloud.mdb.ka" +
+      "fka.v1.CompressionType\022@\n\033log_flush_inte" +
+      "rval_messages\030\002 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022:\n\025log_flush_interval_ms\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022D\n\037log_flus" +
+      "h_scheduler_interval_ms\030\004 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0228\n\023log_retention_byte" +
+      "s\030\005 \001(\0132\033.google.protobuf.Int64Value\0228\n\023" +
+      "log_retention_hours\030\006 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022:\n\025log_retention_minutes\030" +
+      "\007 \001(\0132\033.google.protobuf.Int64Value\0225\n\020lo" +
+      "g_retention_ms\030\010 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0226\n\021log_segment_bytes\030\t \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0223\n\017log_preallo" +
+      "cate\030\n \001(\0132\032.google.protobuf.BoolValue\022=" +
+      "\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022@\n\033socket_receive_" +
+      "buffer_bytes\030\014 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022=\n\031auto_create_topics_enable\030\r \001" +
+      "(\0132\032.google.protobuf.BoolValue\0223\n\016num_pa" +
+      "rtitions\030\016 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022?\n\032default_replication_factor\030\017 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0226\n\021message_" +
+      "max_bytes\030\020 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033." +
+      "google.protobuf.Int64Value\022\031\n\021ssl_cipher" +
+      "_suites\030\022 \003(\t\022>\n\031offsets_retention_minut" +
+      "es\030\023 \001(\0132\033.google.protobuf.Int64Value\"\365\010" +
+      "\n\016KafkaConfig2_8\022D\n\020compression_type\030\001 \001" +
+      "(\0162*.yandex.cloud.mdb.kafka.v1.Compressi" +
+      "onType\022@\n\033log_flush_interval_messages\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022:\n\025log_" +
+      "flush_interval_ms\030\003 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022D\n\037log_flush_scheduler_inte" +
+      "rval_ms\030\004 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\0228\n\023log_retention_bytes\030\005 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0228\n\023log_retention_ho" +
+      "urs\030\006 \001(\0132\033.google.protobuf.Int64Value\022:" +
+      "\n\025log_retention_minutes\030\007 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0225\n\020log_retention_ms\030\010" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021log" +
+      "_segment_bytes\030\t \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0223\n\017log_preallocate\030\n \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022=\n\030socket_send_bu" +
+      "ffer_bytes\030\013 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022@\n\033socket_receive_buffer_bytes\030\014 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022=\n\031auto_" +
+      "create_topics_enable\030\r \001(\0132\032.google.prot" +
+      "obuf.BoolValue\0223\n\016num_partitions\030\016 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022?\n\032default_r" +
+      "eplication_factor\030\017 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021message_max_bytes\030\020 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022<\n\027replica_" +
+      "fetch_max_bytes\030\021 \001(\0132\033.google.protobuf." +
+      "Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n" +
+      "\031offsets_retention_minutes\030\023 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\"\375\002\n\004Host\022\014\n\004name\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(" +
+      "\t\0222\n\004role\030\004 \001(\0162$.yandex.cloud.mdb.kafka" +
+      ".v1.Host.Role\0227\n\tresources\030\005 \001(\0132$.yande" +
+      "x.cloud.mdb.kafka.v1.Resources\0226\n\006health" +
+      "\030\006 \001(\0162&.yandex.cloud.mdb.kafka.v1.Host." +
+      "Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_publ" +
+      "ic_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020" +
+      "\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n" +
+      "\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRA" +
+      "DED\020\003\"\037\n\006Access\022\025\n\rdata_transfer\030\001 \001(\010Bd" +
+      "\n\035yandex.cloud.api.mdb.kafka.v1ZCgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/kafka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27279,19 +30525,19 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new

@@ -849,6 +849,12 @@ public final class DatabaseServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -1023,6 +1029,12 @@ public final class DatabaseServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -1519,6 +1531,12 @@ public final class DatabaseServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -1527,6 +1545,12 @@ public final class DatabaseServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1538,6 +1562,12 @@ public final class DatabaseServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDatabasesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */

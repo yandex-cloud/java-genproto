@@ -249,11 +249,19 @@ public final class LogGroupOuterClass {
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
 
     /**
+     * <pre>
+     * Data stream name
+     * </pre>
+     *
      * <code>string data_stream = 10;</code>
      * @return The dataStream.
      */
     java.lang.String getDataStream();
     /**
+     * <pre>
+     * Data stream name
+     * </pre>
+     *
      * <code>string data_stream = 10;</code>
      * @return The bytes for dataStream.
      */
@@ -1057,6 +1065,10 @@ public final class LogGroupOuterClass {
     public static final int DATA_STREAM_FIELD_NUMBER = 10;
     private volatile java.lang.Object dataStream_;
     /**
+     * <pre>
+     * Data stream name
+     * </pre>
+     *
      * <code>string data_stream = 10;</code>
      * @return The dataStream.
      */
@@ -1074,6 +1086,10 @@ public final class LogGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Data stream name
+     * </pre>
+     *
      * <code>string data_stream = 10;</code>
      * @return The bytes for dataStream.
      */
@@ -2640,6 +2656,10 @@ public final class LogGroupOuterClass {
 
       private java.lang.Object dataStream_ = "";
       /**
+       * <pre>
+       * Data stream name
+       * </pre>
+       *
        * <code>string data_stream = 10;</code>
        * @return The dataStream.
        */
@@ -2656,6 +2676,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Data stream name
+       * </pre>
+       *
        * <code>string data_stream = 10;</code>
        * @return The bytes for dataStream.
        */
@@ -2673,6 +2697,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Data stream name
+       * </pre>
+       *
        * <code>string data_stream = 10;</code>
        * @param value The dataStream to set.
        * @return This builder for chaining.
@@ -2688,6 +2716,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data stream name
+       * </pre>
+       *
        * <code>string data_stream = 10;</code>
        * @return This builder for chaining.
        */
@@ -2698,6 +2730,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data stream name
+       * </pre>
+       *
        * <code>string data_stream = 10;</code>
        * @param value The bytes for dataStream to set.
        * @return This builder for chaining.
