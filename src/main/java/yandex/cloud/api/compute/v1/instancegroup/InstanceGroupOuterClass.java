@@ -25120,7 +25120,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Affinitity definition
+     * Affinity definition
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PlacementPolicy.HostAffinityRule}
@@ -25651,7 +25651,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Affinitity definition
+       * Affinity definition
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PlacementPolicy.HostAffinityRule}

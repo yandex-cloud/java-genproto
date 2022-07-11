@@ -3456,6 +3456,33 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+     * @return Whether the metadataOptions field is set.
+     */
+    boolean hasMetadataOptions();
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+     * @return The metadataOptions.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions getMetadataOptions();
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder();
+
+    /**
+     * <pre>
      * Boot disk to attach to the instance.
      * </pre>
      *
@@ -4039,6 +4066,19 @@ public final class InstanceServiceOuterClass {
                   input.readMessage(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedLocalDiskSpec.parser(), extensionRegistry));
               break;
             }
+            case 154: {
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder subBuilder = null;
+              if (metadataOptions_ != null) {
+                subBuilder = metadataOptions_.toBuilder();
+              }
+              metadataOptions_ = input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadataOptions_);
+                metadataOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4592,6 +4632,44 @@ public final class InstanceServiceOuterClass {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
+    }
+
+    public static final int METADATA_OPTIONS_FIELD_NUMBER = 19;
+    private yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions metadataOptions_;
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+     * @return Whether the metadataOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadataOptions() {
+      return metadataOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+     * @return The metadataOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions getMetadataOptions() {
+      return metadataOptions_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+    }
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
+      return getMetadataOptions();
     }
 
     public static final int BOOT_DISK_SPEC_FIELD_NUMBER = 9;
@@ -5187,6 +5265,9 @@ public final class InstanceServiceOuterClass {
       for (int i = 0; i < localDiskSpecs_.size(); i++) {
         output.writeMessage(18, localDiskSpecs_.get(i));
       }
+      if (metadataOptions_ != null) {
+        output.writeMessage(19, getMetadataOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5273,6 +5354,10 @@ public final class InstanceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, localDiskSpecs_.get(i));
       }
+      if (metadataOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getMetadataOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5307,6 +5392,11 @@ public final class InstanceServiceOuterClass {
       }
       if (!internalGetMetadata().equals(
           other.internalGetMetadata())) return false;
+      if (hasMetadataOptions() != other.hasMetadataOptions()) return false;
+      if (hasMetadataOptions()) {
+        if (!getMetadataOptions()
+            .equals(other.getMetadataOptions())) return false;
+      }
       if (hasBootDiskSpec() != other.hasBootDiskSpec()) return false;
       if (hasBootDiskSpec()) {
         if (!getBootDiskSpec()
@@ -5371,6 +5461,10 @@ public final class InstanceServiceOuterClass {
       if (!internalGetMetadata().getMap().isEmpty()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMetadata().hashCode();
+      }
+      if (hasMetadataOptions()) {
+        hash = (37 * hash) + METADATA_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadataOptions().hashCode();
       }
       if (hasBootDiskSpec()) {
         hash = (37 * hash) + BOOT_DISK_SPEC_FIELD_NUMBER;
@@ -5589,6 +5683,12 @@ public final class InstanceServiceOuterClass {
           resourcesSpecBuilder_ = null;
         }
         internalGetMutableMetadata().clear();
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = null;
+        } else {
+          metadataOptions_ = null;
+          metadataOptionsBuilder_ = null;
+        }
         if (bootDiskSpecBuilder_ == null) {
           bootDiskSpec_ = null;
         } else {
@@ -5682,6 +5782,11 @@ public final class InstanceServiceOuterClass {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        if (metadataOptionsBuilder_ == null) {
+          result.metadataOptions_ = metadataOptions_;
+        } else {
+          result.metadataOptions_ = metadataOptionsBuilder_.build();
+        }
         if (bootDiskSpecBuilder_ == null) {
           result.bootDiskSpec_ = bootDiskSpec_;
         } else {
@@ -5815,6 +5920,9 @@ public final class InstanceServiceOuterClass {
         }
         internalGetMutableMetadata().mergeFrom(
             other.internalGetMetadata());
+        if (other.hasMetadataOptions()) {
+          mergeMetadataOptions(other.getMetadataOptions());
+        }
         if (other.hasBootDiskSpec()) {
           mergeBootDiskSpec(other.getBootDiskSpec());
         }
@@ -6994,6 +7102,161 @@ public final class InstanceServiceOuterClass {
         internalGetMutableMetadata().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions metadataOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder> metadataOptionsBuilder_;
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       * @return Whether the metadataOptions field is set.
+       */
+      public boolean hasMetadataOptions() {
+        return metadataOptionsBuilder_ != null || metadataOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       * @return The metadataOptions.
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions getMetadataOptions() {
+        if (metadataOptionsBuilder_ == null) {
+          return metadataOptions_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+        } else {
+          return metadataOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      public Builder setMetadataOptions(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions value) {
+        if (metadataOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadataOptions_ = value;
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      public Builder setMetadataOptions(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder builderForValue) {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      public Builder mergeMetadataOptions(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions value) {
+        if (metadataOptionsBuilder_ == null) {
+          if (metadataOptions_ != null) {
+            metadataOptions_ =
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.newBuilder(metadataOptions_).mergeFrom(value).buildPartial();
+          } else {
+            metadataOptions_ = value;
+          }
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      public Builder clearMetadataOptions() {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = null;
+          onChanged();
+        } else {
+          metadataOptions_ = null;
+          metadataOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder getMetadataOptionsBuilder() {
+        
+        onChanged();
+        return getMetadataOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
+        if (metadataOptionsBuilder_ != null) {
+          return metadataOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return metadataOptions_ == null ?
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder> 
+          getMetadataOptionsFieldBuilder() {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder>(
+                  getMetadataOptions(),
+                  getParentForChildren(),
+                  isClean());
+          metadataOptions_ = null;
+        }
+        return metadataOptionsBuilder_;
       }
 
       private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedDiskSpec bootDiskSpec_;
@@ -10123,6 +10386,33 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+     * @return Whether the metadataOptions field is set.
+     */
+    boolean hasMetadataOptions();
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+     * @return The metadataOptions.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions getMetadataOptions();
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder();
+
+    /**
+     * <pre>
      * ID of the service account to use for [authentication inside the instance](/docs/compute/operations/vm-connect/auth-inside-vm).
      * To get the service account ID, use a [yandex.cloud.iam.v1.ServiceAccountService.List] request.
      * </pre>
@@ -10392,6 +10682,19 @@ public final class InstanceServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(schedulingPolicy_);
                 schedulingPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder subBuilder = null;
+              if (metadataOptions_ != null) {
+                subBuilder = metadataOptions_.toBuilder();
+              }
+              metadataOptions_ = input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadataOptions_);
+                metadataOptions_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10937,6 +11240,44 @@ public final class InstanceServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int METADATA_OPTIONS_FIELD_NUMBER = 13;
+    private yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions metadataOptions_;
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+     * @return Whether the metadataOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadataOptions() {
+      return metadataOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+     * @return The metadataOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions getMetadataOptions() {
+      return metadataOptions_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+    }
+    /**
+     * <pre>
+     * Options allow user to configure access to instance's metadata
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
+      return getMetadataOptions();
+    }
+
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 9;
     private volatile java.lang.Object serviceAccountId_;
     /**
@@ -11155,6 +11496,9 @@ public final class InstanceServiceOuterClass {
       if (schedulingPolicy_ != null) {
         output.writeMessage(12, getSchedulingPolicy());
       }
+      if (metadataOptions_ != null) {
+        output.writeMessage(13, getMetadataOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11219,6 +11563,10 @@ public final class InstanceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getSchedulingPolicy());
       }
+      if (metadataOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getMetadataOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11256,6 +11604,11 @@ public final class InstanceServiceOuterClass {
       }
       if (!internalGetMetadata().equals(
           other.internalGetMetadata())) return false;
+      if (hasMetadataOptions() != other.hasMetadataOptions()) return false;
+      if (hasMetadataOptions()) {
+        if (!getMetadataOptions()
+            .equals(other.getMetadataOptions())) return false;
+      }
       if (!getServiceAccountId()
           .equals(other.getServiceAccountId())) return false;
       if (hasNetworkSettings() != other.hasNetworkSettings()) return false;
@@ -11307,6 +11660,10 @@ public final class InstanceServiceOuterClass {
       if (!internalGetMetadata().getMap().isEmpty()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMetadata().hashCode();
+      }
+      if (hasMetadataOptions()) {
+        hash = (37 * hash) + METADATA_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadataOptions().hashCode();
       }
       hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountId().hashCode();
@@ -11503,6 +11860,12 @@ public final class InstanceServiceOuterClass {
           resourcesSpecBuilder_ = null;
         }
         internalGetMutableMetadata().clear();
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = null;
+        } else {
+          metadataOptions_ = null;
+          metadataOptionsBuilder_ = null;
+        }
         serviceAccountId_ = "";
 
         if (networkSettingsBuilder_ == null) {
@@ -11568,6 +11931,11 @@ public final class InstanceServiceOuterClass {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        if (metadataOptionsBuilder_ == null) {
+          result.metadataOptions_ = metadataOptions_;
+        } else {
+          result.metadataOptions_ = metadataOptionsBuilder_.build();
+        }
         result.serviceAccountId_ = serviceAccountId_;
         if (networkSettingsBuilder_ == null) {
           result.networkSettings_ = networkSettings_;
@@ -11658,6 +12026,9 @@ public final class InstanceServiceOuterClass {
         }
         internalGetMutableMetadata().mergeFrom(
             other.internalGetMetadata());
+        if (other.hasMetadataOptions()) {
+          mergeMetadataOptions(other.getMetadataOptions());
+        }
         if (!other.getServiceAccountId().isEmpty()) {
           serviceAccountId_ = other.serviceAccountId_;
           onChanged();
@@ -12794,6 +13165,161 @@ public final class InstanceServiceOuterClass {
         internalGetMutableMetadata().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions metadataOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder> metadataOptionsBuilder_;
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       * @return Whether the metadataOptions field is set.
+       */
+      public boolean hasMetadataOptions() {
+        return metadataOptionsBuilder_ != null || metadataOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       * @return The metadataOptions.
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions getMetadataOptions() {
+        if (metadataOptionsBuilder_ == null) {
+          return metadataOptions_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+        } else {
+          return metadataOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      public Builder setMetadataOptions(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions value) {
+        if (metadataOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadataOptions_ = value;
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      public Builder setMetadataOptions(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder builderForValue) {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      public Builder mergeMetadataOptions(yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions value) {
+        if (metadataOptionsBuilder_ == null) {
+          if (metadataOptions_ != null) {
+            metadataOptions_ =
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.newBuilder(metadataOptions_).mergeFrom(value).buildPartial();
+          } else {
+            metadataOptions_ = value;
+          }
+          onChanged();
+        } else {
+          metadataOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      public Builder clearMetadataOptions() {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptions_ = null;
+          onChanged();
+        } else {
+          metadataOptions_ = null;
+          metadataOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder getMetadataOptionsBuilder() {
+        
+        onChanged();
+        return getMetadataOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder getMetadataOptionsOrBuilder() {
+        if (metadataOptionsBuilder_ != null) {
+          return metadataOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return metadataOptions_ == null ?
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.getDefaultInstance() : metadataOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options allow user to configure access to instance's metadata
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MetadataOptions metadata_options = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder> 
+          getMetadataOptionsFieldBuilder() {
+        if (metadataOptionsBuilder_ == null) {
+          metadataOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptions.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.MetadataOptionsOrBuilder>(
+                  getMetadataOptions(),
+                  getParentForChildren(),
+                  isClean());
+          metadataOptions_ = null;
+        }
+        return metadataOptionsBuilder_;
       }
 
       private java.lang.Object serviceAccountId_ = "";
@@ -52540,7 +53066,7 @@ public final class InstanceServiceOuterClass {
       " \001(\tB\n\212\3101\006<=1000\"f\n\025ListInstancesRespons" +
       "e\0224\n\tinstances\030\001 \003(\0132!.yandex.cloud.comp" +
       "ute.v1.Instance\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\373\t\n\025CreateInstanceRequest\022\037\n\tfolder_id\030" +
+      "\"\277\n\n\025CreateInstanceRequest\022\037\n\tfolder_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |" +
       "[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descr" +
       "iption\030\003 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\004 \003(\013" +
@@ -52552,275 +53078,278 @@ public final class InstanceServiceOuterClass {
       "rces_spec\030\007 \001(\0132&.yandex.cloud.compute.v" +
       "1.ResourcesSpecB\004\350\3071\001\022N\n\010metadata\030\010 \003(\0132" +
       "<.yandex.cloud.compute.v1.CreateInstance" +
-      "Request.MetadataEntry\022G\n\016boot_disk_spec\030" +
-      "\t \001(\0132).yandex.cloud.compute.v1.Attached" +
-      "DiskSpecB\004\350\3071\001\022P\n\024secondary_disk_specs\030\n" +
-      " \003(\0132).yandex.cloud.compute.v1.AttachedD" +
-      "iskSpecB\007\202\3101\003<=3\022H\n\020local_disk_specs\030\022 \003" +
-      "(\0132..yandex.cloud.compute.v1.AttachedLoc" +
-      "alDiskSpec\022I\n\020filesystem_specs\030\021 \003(\0132/.y" +
-      "andex.cloud.compute.v1.AttachedFilesyste" +
-      "mSpec\022U\n\027network_interface_specs\030\013 \003(\0132-" +
-      ".yandex.cloud.compute.v1.NetworkInterfac" +
-      "eSpecB\005\202\3101\0011\0226\n\010hostname\030\014 \001(\tB$\362\3071 |[a-" +
-      "z]([-a-z0-9]{0,61}[a-z0-9])?\022D\n\021scheduli" +
-      "ng_policy\030\r \001(\0132).yandex.cloud.compute.v" +
-      "1.SchedulingPolicy\022\032\n\022service_account_id" +
-      "\030\016 \001(\t\022B\n\020network_settings\030\017 \001(\0132(.yande" +
-      "x.cloud.compute.v1.NetworkSettings\022B\n\020pl" +
-      "acement_policy\030\020 \001(\0132(.yandex.cloud.comp" +
-      "ute.v1.PlacementPolicy\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7" +
-      "\n\026CreateInstanceMetadata\022\035\n\013instance_id\030" +
-      "\001 \001(\tB\010\212\3101\004<=50\"\304\006\n\025UpdateInstanceReques" +
-      "t\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
-      "]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
-      "\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yandex.clou" +
-      "d.compute.v1.UpdateInstanceRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "\023\n\013platform_id\030\006 \001(\t\022>\n\016resources_spec\030\007" +
-      " \001(\0132&.yandex.cloud.compute.v1.Resources" +
-      "Spec\022N\n\010metadata\030\010 \003(\0132<.yandex.cloud.co" +
-      "mpute.v1.UpdateInstanceRequest.MetadataE" +
-      "ntry\022\032\n\022service_account_id\030\t \001(\t\022B\n\020netw" +
-      "ork_settings\030\n \001(\0132(.yandex.cloud.comput" +
-      "e.v1.NetworkSettings\022B\n\020placement_policy" +
-      "\030\013 \001(\0132(.yandex.cloud.compute.v1.Placeme" +
-      "ntPolicy\022D\n\021scheduling_policy\030\014 \001(\0132).ya" +
-      "ndex.cloud.compute.v1.SchedulingPolicy\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"-\n\026UpdateInstanceMetadata" +
-      "\022\023\n\013instance_id\030\001 \001(\t\":\n\025DeleteInstanceR" +
-      "equest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"-\n\026DeleteInstanceMetadata\022\023\n\013instance_" +
-      "id\030\001 \001(\t\"\307\001\n\035UpdateInstanceMetadataReque" +
-      "st\022\023\n\013instance_id\030\001 \001(\t\022\016\n\006delete\030\002 \003(\t\022" +
-      "R\n\006upsert\030\003 \003(\0132B.yandex.cloud.compute.v" +
-      "1.UpdateInstanceMetadataRequest.UpsertEn" +
-      "try\032-\n\013UpsertEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"5\n\036UpdateInstanceMetadataMeta" +
-      "data\022\023\n\013instance_id\030\001 \001(\t\"b\n\"GetInstance" +
-      "SerialPortOutputRequest\022!\n\013instance_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\004port\030\002 \001(\003B\013\372\3071\0071," +
-      "2,3,4\"7\n#GetInstanceSerialPortOutputResp" +
-      "onse\022\020\n\010contents\030\001 \001(\t\"8\n\023StopInstanceRe" +
+      "Request.MetadataEntry\022B\n\020metadata_option" +
+      "s\030\023 \001(\0132(.yandex.cloud.compute.v1.Metada" +
+      "taOptions\022G\n\016boot_disk_spec\030\t \001(\0132).yand" +
+      "ex.cloud.compute.v1.AttachedDiskSpecB\004\350\307" +
+      "1\001\022P\n\024secondary_disk_specs\030\n \003(\0132).yande" +
+      "x.cloud.compute.v1.AttachedDiskSpecB\007\202\3101" +
+      "\003<=3\022H\n\020local_disk_specs\030\022 \003(\0132..yandex." +
+      "cloud.compute.v1.AttachedLocalDiskSpec\022I" +
+      "\n\020filesystem_specs\030\021 \003(\0132/.yandex.cloud." +
+      "compute.v1.AttachedFilesystemSpec\022U\n\027net" +
+      "work_interface_specs\030\013 \003(\0132-.yandex.clou" +
+      "d.compute.v1.NetworkInterfaceSpecB\005\202\3101\0011" +
+      "\0226\n\010hostname\030\014 \001(\tB$\362\3071 |[a-z]([-a-z0-9]" +
+      "{0,61}[a-z0-9])?\022D\n\021scheduling_policy\030\r " +
+      "\001(\0132).yandex.cloud.compute.v1.Scheduling" +
+      "Policy\022\032\n\022service_account_id\030\016 \001(\t\022B\n\020ne" +
+      "twork_settings\030\017 \001(\0132(.yandex.cloud.comp" +
+      "ute.v1.NetworkSettings\022B\n\020placement_poli" +
+      "cy\030\020 \001(\0132(.yandex.cloud.compute.v1.Place" +
+      "mentPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\026CreateInst" +
+      "anceMetadata\022\035\n\013instance_id\030\001 \001(\tB\010\212\3101\004<" +
+      "=50\"\210\007\n\025UpdateInstanceRequest\022!\n\013instanc" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030" +
+      "\002 \001(\0132\032.google.protobuf.FieldMask\0222\n\004nam" +
+      "e\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0" +
+      "-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\223\001" +
+      "\n\006labels\030\005 \003(\0132:.yandex.cloud.compute.v1" +
+      ".UpdateInstanceRequest.LabelsEntryBG\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\023\n\013platform_" +
+      "id\030\006 \001(\t\022>\n\016resources_spec\030\007 \001(\0132&.yande" +
+      "x.cloud.compute.v1.ResourcesSpec\022N\n\010meta" +
+      "data\030\010 \003(\0132<.yandex.cloud.compute.v1.Upd" +
+      "ateInstanceRequest.MetadataEntry\022B\n\020meta" +
+      "data_options\030\r \001(\0132(.yandex.cloud.comput" +
+      "e.v1.MetadataOptions\022\032\n\022service_account_" +
+      "id\030\t \001(\t\022B\n\020network_settings\030\n \001(\0132(.yan" +
+      "dex.cloud.compute.v1.NetworkSettings\022B\n\020" +
+      "placement_policy\030\013 \001(\0132(.yandex.cloud.co" +
+      "mpute.v1.PlacementPolicy\022D\n\021scheduling_p" +
+      "olicy\030\014 \001(\0132).yandex.cloud.compute.v1.Sc" +
+      "hedulingPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Update" +
+      "InstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\":\n" +
+      "\025DeleteInstanceRequest\022!\n\013instance_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInstanceMetad" +
+      "ata\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035UpdateInsta" +
+      "nceMetadataRequest\022\023\n\013instance_id\030\001 \001(\t\022" +
+      "\016\n\006delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132B.yandex" +
+      ".cloud.compute.v1.UpdateInstanceMetadata" +
+      "Request.UpsertEntry\032-\n\013UpsertEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036UpdateInst" +
+      "anceMetadataMetadata\022\023\n\013instance_id\030\001 \001(" +
+      "\t\"b\n\"GetInstanceSerialPortOutputRequest\022" +
+      "!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\004po" +
+      "rt\030\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInstanceSeri" +
+      "alPortOutputResponse\022\020\n\010contents\030\001 \001(\t\"8" +
+      "\n\023StopInstanceRequest\022!\n\013instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstanceMetadata" +
+      "\022\023\n\013instance_id\030\001 \001(\t\"9\n\024StartInstanceRe" +
       "quest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"+\n\024StopInstanceMetadata\022\023\n\013instance_id\030" +
-      "\001 \001(\t\"9\n\024StartInstanceRequest\022!\n\013instanc" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\025StartInstanc" +
-      "eMetadata\022\023\n\013instance_id\030\001 \001(\t\";\n\026Restar" +
-      "tInstanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\".\n\027RestartInstanceMetadata\022\023" +
-      "\n\013instance_id\030\001 \001(\t\"\213\001\n\031AttachInstanceDi" +
-      "skRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022K\n\022attached_disk_spec\030\002 \001(\0132).yande" +
-      "x.cloud.compute.v1.AttachedDiskSpecB\004\350\3071" +
-      "\001\"B\n\032AttachInstanceDiskMetadata\022\023\n\013insta" +
-      "nce_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\232\001\n\031Detach" +
-      "InstanceDiskRequest\022!\n\013instance_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\033\n\007disk_id\030\002 \001(\tB\010\212\3101\004<=5" +
-      "0H\000\022/\n\013device_name\030\003 \001(\tB\030\362\3071\024[a-z][a-z0" +
-      "-9-_]{,19}H\000B\014\n\004disk\022\004\300\3011\001\"B\n\032DetachInst" +
-      "anceDiskMetadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n" +
-      "\007disk_id\030\002 \001(\t\"\235\001\n\037AttachInstanceFilesys" +
-      "temRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022W\n\030attached_filesystem_spec\030\002 \001(\0132" +
-      "/.yandex.cloud.compute.v1.AttachedFilesy" +
-      "stemSpecB\004\350\3071\001\"N\n AttachInstanceFilesyst" +
-      "emMetadata\022\023\n\013instance_id\030\001 \001(\t\022\025\n\rfiles" +
-      "ystem_id\030\002 \001(\t\"\254\001\n\037DetachInstanceFilesys" +
-      "temRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022!\n\rfilesystem_id\030\002 \001(\tB\010\212\3101\004<=50H\000" +
-      "\022/\n\013device_name\030\003 \001(\tB\030\362\3071\024[a-z][a-z0-9-" +
-      "_]{,19}H\000B\022\n\nfilesystem\022\004\300\3011\001\"N\n DetachI" +
-      "nstanceFilesystemMetadata\022\023\n\013instance_id" +
-      "\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\266\001\n\035AddIns" +
-      "tanceOneToOneNatRequest\022\023\n\013instance_id\030\001" +
-      " \001(\t\022\037\n\027network_interface_index\030\002 \001(\t\022\030\n" +
-      "\020internal_address\030\003 \001(\t\022E\n\023one_to_one_na" +
-      "t_spec\030\004 \001(\0132(.yandex.cloud.compute.v1.O" +
-      "neToOneNatSpec\"5\n\036AddInstanceOneToOneNat" +
-      "Metadata\022\023\n\013instance_id\030\001 \001(\t\"r\n RemoveI" +
-      "nstanceOneToOneNatRequest\022\023\n\013instance_id" +
-      "\030\001 \001(\t\022\037\n\027network_interface_index\030\002 \001(\t\022" +
-      "\030\n\020internal_address\030\003 \001(\t\"8\n!RemoveInsta" +
-      "nceOneToOneNatMetadata\022\023\n\013instance_id\030\001 " +
-      "\001(\t\"\345\002\n%UpdateInstanceNetworkInterfaceRe" +
-      "quest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027netw" +
-      "ork_interface_index\030\002 \001(\tB\004\350\3071\001\022/\n\013updat" +
-      "e_mask\030\003 \001(\0132\032.google.protobuf.FieldMask" +
-      "\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027primary_v4_addres" +
-      "s_spec\030\005 \001(\0132+.yandex.cloud.compute.v1.P" +
-      "rimaryAddressSpec\022L\n\027primary_v6_address_" +
-      "spec\030\006 \001(\0132+.yandex.cloud.compute.v1.Pri" +
-      "maryAddressSpec\022\032\n\022security_group_ids\030\007 " +
-      "\003(\t\"^\n&UpdateInstanceNetworkInterfaceMet" +
-      "adata\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_in" +
-      "terface_index\030\002 \001(\t\"\200\001\n\035ListInstanceOper" +
-      "ationsRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListIn" +
-      "stanceOperationsResponse\0225\n\noperations\030\001" +
-      " \003(\0132!.yandex.cloud.operation.Operation\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"\347\001\n\rResourcesSp" +
-      "ec\022&\n\006memory\030\001 \001(\003B\026\350\3071\001\372\3071\016<=2748779069" +
-      "44\022i\n\005cores\030\002 \001(\003BZ\350\3071\001\372\3071R2,4,6,8,10,12" +
-      ",14,16,18,20,22,24,26,28,30,32,34,36,40," +
-      "44,48,52,56,60,64,68,72,76,80\022(\n\rcore_fr" +
-      "action\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus\030" +
-      "\004 \001(\003B\013\372\3071\0070,1,2,4\"\230\005\n\020AttachedDiskSpec\022" +
-      "<\n\004mode\030\001 \001(\0162..yandex.cloud.compute.v1." +
-      "AttachedDiskSpec.Mode\022-\n\013device_name\030\002 \001" +
-      "(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}\022\023\n\013auto_del" +
-      "ete\030\003 \001(\010\022G\n\tdisk_spec\030\004 \001(\01322.yandex.cl" +
-      "oud.compute.v1.AttachedDiskSpec.DiskSpec" +
-      "H\000\022\033\n\007disk_id\030\005 \001(\tB\010\212\3101\004<=50H\000\032\320\002\n\010Disk" +
-      "Spec\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]" +
-      "{0,61}[a-z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212" +
-      "\3101\005<=256\022\031\n\007type_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004s" +
-      "ize\030\004 \001(\003B\035\350\3071\001\372\3071\0254194304-4398046511104" +
-      "\022\022\n\nblock_size\030\010 \001(\003\022K\n\025disk_placement_p" +
-      "olicy\030\007 \001(\0132,.yandex.cloud.compute.v1.Di" +
-      "skPlacementPolicy\022\034\n\010image_id\030\005 \001(\tB\010\212\3101" +
-      "\004<=50H\000\022\037\n\013snapshot_id\030\006 \001(\tB\010\212\3101\004<=50H\000" +
-      "B\010\n\006source\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000" +
-      "\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002B\014\n\004disk\022" +
-      "\004\300\3011\001\"+\n\025AttachedLocalDiskSpec\022\022\n\004size\030\001" +
-      " \001(\003B\004\350\3071\001\"\351\001\n\026AttachedFilesystemSpec\022B\n" +
-      "\004mode\030\001 \001(\01624.yandex.cloud.compute.v1.At" +
-      "tachedFilesystemSpec.Mode\022-\n\013device_name" +
-      "\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}\022\037\n\rfile" +
-      "system_id\030\003 \001(\tB\010\212\3101\004<=50\";\n\004Mode\022\024\n\020MOD" +
-      "E_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_W" +
-      "RITE\020\002\"\357\001\n\024NetworkInterfaceSpec\022\037\n\tsubne" +
-      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\027primary_v4_a" +
-      "ddress_spec\030\002 \001(\0132+.yandex.cloud.compute" +
-      ".v1.PrimaryAddressSpec\022L\n\027primary_v6_add" +
-      "ress_spec\030\003 \001(\0132+.yandex.cloud.compute.v" +
-      "1.PrimaryAddressSpec\022\032\n\022security_group_i" +
-      "ds\030\006 \003(\t\"\256\001\n\022PrimaryAddressSpec\022\017\n\007addre" +
-      "ss\030\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002 \001(\0132(." +
-      "yandex.cloud.compute.v1.OneToOneNatSpec\022" +
-      "@\n\020dns_record_specs\030\003 \003(\0132&.yandex.cloud" +
-      ".compute.v1.DnsRecordSpec\"\234\001\n\017OneToOneNa" +
-      "tSpec\0226\n\nip_version\030\001 \001(\0162\".yandex.cloud" +
-      ".compute.v1.IpVersion\022\017\n\007address\030\002 \001(\t\022@" +
-      "\n\020dns_record_specs\030\003 \003(\0132&.yandex.cloud." +
-      "compute.v1.DnsRecordSpec\"_\n\rDnsRecordSpe" +
-      "c\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001" +
-      "(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(" +
-      "\010\"e\n\023MoveInstanceRequest\022!\n\013instance_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folde" +
-      "r_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveInstance" +
-      "Metadata\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020source_" +
-      "folder_id\030\002 \001(\t\022\035\n\025destination_folder_id" +
-      "\030\003 \001(\t\"0\n\031GuestStopInstanceMetadata\022\023\n\013i" +
-      "nstance_id\030\001 \001(\t\".\n\027PreemptInstanceMetad" +
-      "ata\022\023\n\013instance_id\030\001 \001(\t\",\n\025CrashInstanc" +
-      "eMetadata\022\023\n\013instance_id\030\001 \001(\t*#\n\014Instan" +
-      "ceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\243\035\n\017Instance" +
-      "Service\022\202\001\n\003Get\022+.yandex.cloud.compute.v" +
-      "1.GetInstanceRequest\032!.yandex.cloud.comp" +
-      "ute.v1.Instance\"+\202\323\344\223\002%\022#/compute/v1/ins" +
-      "tances/{instance_id}\022\204\001\n\004List\022-.yandex.c" +
-      "loud.compute.v1.ListInstancesRequest\032..y" +
-      "andex.cloud.compute.v1.ListInstancesResp" +
-      "onse\"\035\202\323\344\223\002\027\022\025/compute/v1/instances\022\243\001\n\006" +
-      "Create\022..yandex.cloud.compute.v1.CreateI" +
-      "nstanceRequest\032!.yandex.cloud.operation." +
-      "Operation\"F\202\323\344\223\002\032\"\025/compute/v1/instances" +
-      ":\001*\262\322*\"\n\026CreateInstanceMetadata\022\010Instanc" +
-      "e\022\261\001\n\006Update\022..yandex.cloud.compute.v1.U" +
-      "pdateInstanceRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"T\202\323\344\223\002(2#/compute/v1/ins" +
-      "tances/{instance_id}:\001*\262\322*\"\n\026UpdateInsta" +
-      "nceMetadata\022\010Instance\022\273\001\n\006Delete\022..yande" +
-      "x.cloud.compute.v1.DeleteInstanceRequest" +
-      "\032!.yandex.cloud.operation.Operation\"^\202\323\344" +
-      "\223\002%*#/compute/v1/instances/{instance_id}" +
-      "\262\322*/\n\026DeleteInstanceMetadata\022\025google.pro" +
-      "tobuf.Empty\022\330\001\n\016UpdateMetadata\0226.yandex." +
-      "cloud.compute.v1.UpdateInstanceMetadataR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"k\202\323\344\223\0027\"2/compute/v1/instances/{instan" +
-      "ce_id}/updateMetadata:\001*\262\322**\n\036UpdateInst" +
-      "anceMetadataMetadata\022\010Instance\022\316\001\n\023GetSe" +
-      "rialPortOutput\022;.yandex.cloud.compute.v1" +
-      ".GetInstanceSerialPortOutputRequest\032<.ya" +
-      "ndex.cloud.compute.v1.GetInstanceSerialP" +
-      "ortOutputResponse\"<\202\323\344\223\0026\0224/compute/v1/i" +
-      "nstances/{instance_id}:serialPortOutput\022" +
-      "\272\001\n\004Stop\022,.yandex.cloud.compute.v1.StopI" +
-      "nstanceRequest\032!.yandex.cloud.operation." +
-      "Operation\"a\202\323\344\223\002*\"(/compute/v1/instances" +
-      "/{instance_id}:stop\262\322*-\n\024StopInstanceMet" +
-      "adata\022\025google.protobuf.Empty\022\261\001\n\005Start\022-" +
-      ".yandex.cloud.compute.v1.StartInstanceRe" +
+      "\",\n\025StartInstanceMetadata\022\023\n\013instance_id" +
+      "\030\001 \001(\t\";\n\026RestartInstanceRequest\022!\n\013inst" +
+      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027RestartIn" +
+      "stanceMetadata\022\023\n\013instance_id\030\001 \001(\t\"\213\001\n\031" +
+      "AttachInstanceDiskRequest\022!\n\013instance_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached_disk_sp" +
+      "ec\030\002 \001(\0132).yandex.cloud.compute.v1.Attac" +
+      "hedDiskSpecB\004\350\3071\001\"B\n\032AttachInstanceDiskM" +
+      "etadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007disk_id\030" +
+      "\002 \001(\t\"\232\001\n\031DetachInstanceDiskRequest\022!\n\013i" +
+      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\007disk_i" +
+      "d\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\t" +
+      "B\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004disk\022\004\300\301" +
+      "1\001\"B\n\032DetachInstanceDiskMetadata\022\023\n\013inst" +
+      "ance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\235\001\n\037Attac" +
+      "hInstanceFilesystemRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\030attached_filesy" +
+      "stem_spec\030\002 \001(\0132/.yandex.cloud.compute.v" +
+      "1.AttachedFilesystemSpecB\004\350\3071\001\"N\n Attach" +
+      "InstanceFilesystemMetadata\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\254\001\n\037Detac" +
+      "hInstanceFilesystemRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\rfilesystem_id\030\002" +
+      " \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\tB\030\362" +
+      "\3071\024[a-z][a-z0-9-_]{,19}H\000B\022\n\nfilesystem\022" +
+      "\004\300\3011\001\"N\n DetachInstanceFilesystemMetadat" +
+      "a\022\023\n\013instance_id\030\001 \001(\t\022\025\n\rfilesystem_id\030" +
+      "\002 \001(\t\"\266\001\n\035AddInstanceOneToOneNatRequest\022" +
+      "\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_interfac" +
+      "e_index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001(\t\022" +
+      "E\n\023one_to_one_nat_spec\030\004 \001(\0132(.yandex.cl" +
+      "oud.compute.v1.OneToOneNatSpec\"5\n\036AddIns" +
+      "tanceOneToOneNatMetadata\022\023\n\013instance_id\030" +
+      "\001 \001(\t\"r\n RemoveInstanceOneToOneNatReques" +
+      "t\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_interf" +
+      "ace_index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001(" +
+      "\t\"8\n!RemoveInstanceOneToOneNatMetadata\022\023" +
+      "\n\013instance_id\030\001 \001(\t\"\345\002\n%UpdateInstanceNe" +
+      "tworkInterfaceRequest\022\031\n\013instance_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022%\n\027network_interface_index\030\002 \001(" +
+      "\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027p" +
+      "rimary_v4_address_spec\030\005 \001(\0132+.yandex.cl" +
+      "oud.compute.v1.PrimaryAddressSpec\022L\n\027pri" +
+      "mary_v6_address_spec\030\006 \001(\0132+.yandex.clou" +
+      "d.compute.v1.PrimaryAddressSpec\022\032\n\022secur" +
+      "ity_group_ids\030\007 \003(\t\"^\n&UpdateInstanceNet" +
+      "workInterfaceMetadata\022\023\n\013instance_id\030\001 \001" +
+      "(\t\022\037\n\027network_interface_index\030\002 \001(\t\"\200\001\n\035" +
+      "ListInstanceOperationsRequest\022!\n\013instanc" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"p\n\036ListInstanceOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\347\001\n\rResourcesSpec\022&\n\006memory\030\001 \001(\003B\026\350\3071\001" +
+      "\372\3071\016<=274877906944\022i\n\005cores\030\002 \001(\003BZ\350\3071\001\372" +
+      "\3071R2,4,6,8,10,12,14,16,18,20,22,24,26,28" +
+      ",30,32,34,36,40,44,48,52,56,60,64,68,72," +
+      "76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20" +
+      ",50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\230\005\n\020A" +
+      "ttachedDiskSpec\022<\n\004mode\030\001 \001(\0162..yandex.c" +
+      "loud.compute.v1.AttachedDiskSpec.Mode\022-\n" +
+      "\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{" +
+      ",19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\tdisk_spec\030\004" +
+      " \001(\01322.yandex.cloud.compute.v1.AttachedD" +
+      "iskSpec.DiskSpecH\000\022\033\n\007disk_id\030\005 \001(\tB\010\212\3101" +
+      "\004<=50H\000\032\320\002\n\010DiskSpec\0222\n\004name\030\001 \001(\tB$\362\3071 " +
+      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
+      "ription\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007type_id\030\003 \001(" +
+      "\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\3071\001\372\3071\02541943" +
+      "04-4398046511104\022\022\n\nblock_size\030\010 \001(\003\022K\n\025" +
+      "disk_placement_policy\030\007 \001(\0132,.yandex.clo" +
+      "ud.compute.v1.DiskPlacementPolicy\022\034\n\010ima" +
+      "ge_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\006" +
+      " \001(\tB\010\212\3101\004<=50H\000B\010\n\006source\";\n\004Mode\022\024\n\020MO" +
+      "DE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_" +
+      "WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025AttachedLocalDi" +
+      "skSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n\026AttachedF" +
+      "ilesystemSpec\022B\n\004mode\030\001 \001(\01624.yandex.clo" +
+      "ud.compute.v1.AttachedFilesystemSpec.Mod" +
+      "e\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9" +
+      "-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(\tB\010\212\3101\004<=5" +
+      "0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_" +
+      "ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\024NetworkInterf" +
+      "aceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022L\n\027primary_v4_address_spec\030\002 \001(\0132+.yand" +
+      "ex.cloud.compute.v1.PrimaryAddressSpec\022L" +
+      "\n\027primary_v6_address_spec\030\003 \001(\0132+.yandex" +
+      ".cloud.compute.v1.PrimaryAddressSpec\022\032\n\022" +
+      "security_group_ids\030\006 \003(\t\"\256\001\n\022PrimaryAddr" +
+      "essSpec\022\017\n\007address\030\001 \001(\t\022E\n\023one_to_one_n" +
+      "at_spec\030\002 \001(\0132(.yandex.cloud.compute.v1." +
+      "OneToOneNatSpec\022@\n\020dns_record_specs\030\003 \003(" +
+      "\0132&.yandex.cloud.compute.v1.DnsRecordSpe" +
+      "c\"\234\001\n\017OneToOneNatSpec\0226\n\nip_version\030\001 \001(" +
+      "\0162\".yandex.cloud.compute.v1.IpVersion\022\017\n" +
+      "\007address\030\002 \001(\t\022@\n\020dns_record_specs\030\003 \003(\013" +
+      "2&.yandex.cloud.compute.v1.DnsRecordSpec" +
+      "\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n" +
+      "\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-8" +
+      "6400\022\013\n\003ptr\030\004 \001(\010\"e\n\023MoveInstanceRequest" +
+      "\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025d" +
+      "estination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"d\n\024MoveInstanceMetadata\022\023\n\013instance_id\030" +
+      "\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025desti" +
+      "nation_folder_id\030\003 \001(\t\"0\n\031GuestStopInsta" +
+      "nceMetadata\022\023\n\013instance_id\030\001 \001(\t\".\n\027Pree" +
+      "mptInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t" +
+      "\",\n\025CrashInstanceMetadata\022\023\n\013instance_id" +
+      "\030\001 \001(\t*#\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004FUL" +
+      "L\020\0012\243\035\n\017InstanceService\022\202\001\n\003Get\022+.yandex" +
+      ".cloud.compute.v1.GetInstanceRequest\032!.y" +
+      "andex.cloud.compute.v1.Instance\"+\202\323\344\223\002%\022" +
+      "#/compute/v1/instances/{instance_id}\022\204\001\n" +
+      "\004List\022-.yandex.cloud.compute.v1.ListInst" +
+      "ancesRequest\032..yandex.cloud.compute.v1.L" +
+      "istInstancesResponse\"\035\202\323\344\223\002\027\022\025/compute/v" +
+      "1/instances\022\243\001\n\006Create\022..yandex.cloud.co" +
+      "mpute.v1.CreateInstanceRequest\032!.yandex." +
+      "cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/comp" +
+      "ute/v1/instances:\001*\262\322*\"\n\026CreateInstanceM" +
+      "etadata\022\010Instance\022\261\001\n\006Update\022..yandex.cl" +
+      "oud.compute.v1.UpdateInstanceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"T\202\323\344\223\002(2" +
+      "#/compute/v1/instances/{instance_id}:\001*\262" +
+      "\322*\"\n\026UpdateInstanceMetadata\022\010Instance\022\273\001" +
+      "\n\006Delete\022..yandex.cloud.compute.v1.Delet" +
+      "eInstanceRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"^\202\323\344\223\002%*#/compute/v1/instanc" +
+      "es/{instance_id}\262\322*/\n\026DeleteInstanceMeta" +
+      "data\022\025google.protobuf.Empty\022\330\001\n\016UpdateMe" +
+      "tadata\0226.yandex.cloud.compute.v1.UpdateI" +
+      "nstanceMetadataRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"k\202\323\344\223\0027\"2/compute/v1/i" +
+      "nstances/{instance_id}/updateMetadata:\001*" +
+      "\262\322**\n\036UpdateInstanceMetadataMetadata\022\010In" +
+      "stance\022\316\001\n\023GetSerialPortOutput\022;.yandex." +
+      "cloud.compute.v1.GetInstanceSerialPortOu" +
+      "tputRequest\032<.yandex.cloud.compute.v1.Ge" +
+      "tInstanceSerialPortOutputResponse\"<\202\323\344\223\002" +
+      "6\0224/compute/v1/instances/{instance_id}:s" +
+      "erialPortOutput\022\272\001\n\004Stop\022,.yandex.cloud." +
+      "compute.v1.StopInstanceRequest\032!.yandex." +
+      "cloud.operation.Operation\"a\202\323\344\223\002*\"(/comp" +
+      "ute/v1/instances/{instance_id}:stop\262\322*-\n" +
+      "\024StopInstanceMetadata\022\025google.protobuf.E" +
+      "mpty\022\261\001\n\005Start\022-.yandex.cloud.compute.v1" +
+      ".StartInstanceRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"V\202\323\344\223\002+\")/compute/v1/in" +
+      "stances/{instance_id}:start\262\322*!\n\025StartIn" +
+      "stanceMetadata\022\010Instance\022\306\001\n\007Restart\022/.y" +
+      "andex.cloud.compute.v1.RestartInstanceRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"V\202\323\344\223\002+\")/compute/v1/instances/{instanc" +
-      "e_id}:start\262\322*!\n\025StartInstanceMetadata\022\010" +
-      "Instance\022\306\001\n\007Restart\022/.yandex.cloud.comp" +
-      "ute.v1.RestartInstanceRequest\032!.yandex.c" +
-      "loud.operation.Operation\"g\202\323\344\223\002-\"+/compu" +
-      "te/v1/instances/{instance_id}:restart\262\322*" +
-      "0\n\027RestartInstanceMetadata\022\025google.proto" +
-      "buf.Empty\022\310\001\n\nAttachDisk\0222.yandex.cloud." +
-      "compute.v1.AttachInstanceDiskRequest\032!.y" +
-      "andex.cloud.operation.Operation\"c\202\323\344\223\0023\"" +
-      "./compute/v1/instances/{instance_id}:att" +
-      "achDisk:\001*\262\322*&\n\032AttachInstanceDiskMetada" +
-      "ta\022\010Instance\022\310\001\n\nDetachDisk\0222.yandex.clo" +
-      "ud.compute.v1.DetachInstanceDiskRequest\032" +
-      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
-      "\0023\"./compute/v1/instances/{instance_id}:" +
-      "detachDisk:\001*\262\322*&\n\032DetachInstanceDiskMet" +
-      "adata\022\010Instance\022\340\001\n\020AttachFilesystem\0228.y" +
-      "andex.cloud.compute.v1.AttachInstanceFil" +
-      "esystemRequest\032!.yandex.cloud.operation." +
-      "Operation\"o\202\323\344\223\0029\"4/compute/v1/instances" +
-      "/{instance_id}:attachFilesystem:\001*\262\322*,\n " +
-      "AttachInstanceFilesystemMetadata\022\010Instan" +
-      "ce\022\340\001\n\020DetachFilesystem\0228.yandex.cloud.c" +
-      "ompute.v1.DetachInstanceFilesystemReques" +
-      "t\032!.yandex.cloud.operation.Operation\"o\202\323" +
-      "\344\223\0029\"4/compute/v1/instances/{instance_id" +
-      "}:detachFilesystem:\001*\262\322*,\n DetachInstanc" +
-      "eFilesystemMetadata\022\010Instance\022\330\001\n\016AddOne" +
-      "ToOneNat\0226.yandex.cloud.compute.v1.AddIn" +
-      "stanceOneToOneNatRequest\032!.yandex.cloud." +
-      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
-      "/instances/{instance_id}/addOneToOneNat:" +
-      "\001*\262\322**\n\036AddInstanceOneToOneNatMetadata\022\010" +
-      "Instance\022\344\001\n\021RemoveOneToOneNat\0229.yandex." +
-      "cloud.compute.v1.RemoveInstanceOneToOneN" +
-      "atRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"q\202\323\344\223\002:\"5/compute/v1/instances/{ins" +
-      "tance_id}/removeOneToOneNat:\001*\262\322*-\n!Remo" +
-      "veInstanceOneToOneNatMetadata\022\010Instance\022" +
-      "\370\001\n\026UpdateNetworkInterface\022>.yandex.clou" +
-      "d.compute.v1.UpdateInstanceNetworkInterf" +
-      "aceRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"{\202\323\344\223\002?2:/compute/v1/instances/{in" +
-      "stance_id}/updateNetworkInterface:\001*\262\322*2" +
-      "\n&UpdateInstanceNetworkInterfaceMetadata" +
-      "\022\010Instance\022\271\001\n\016ListOperations\0226.yandex.c" +
-      "loud.compute.v1.ListInstanceOperationsRe" +
-      "quest\0327.yandex.cloud.compute.v1.ListInst" +
-      "anceOperationsResponse\"6\202\323\344\223\0020\022./compute" +
-      "/v1/instances/{instance_id}/operations\022\260" +
-      "\001\n\004Move\022,.yandex.cloud.compute.v1.MoveIn" +
-      "stanceRequest\032!.yandex.cloud.operation.O" +
-      "peration\"W\202\323\344\223\002-\"(/compute/v1/instances/" +
-      "{instance_id}:move:\001*\262\322* \n\024MoveInstanceM" +
-      "etadata\022\010InstanceBb\n\033yandex.cloud.api.co" +
-      "mpute.v1ZCgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/compute/v1;computeb\006p" +
-      "roto3"
+      "\"g\202\323\344\223\002-\"+/compute/v1/instances/{instanc" +
+      "e_id}:restart\262\322*0\n\027RestartInstanceMetada" +
+      "ta\022\025google.protobuf.Empty\022\310\001\n\nAttachDisk" +
+      "\0222.yandex.cloud.compute.v1.AttachInstanc" +
+      "eDiskRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"c\202\323\344\223\0023\"./compute/v1/instances/{" +
+      "instance_id}:attachDisk:\001*\262\322*&\n\032AttachIn" +
+      "stanceDiskMetadata\022\010Instance\022\310\001\n\nDetachD" +
+      "isk\0222.yandex.cloud.compute.v1.DetachInst" +
+      "anceDiskRequest\032!.yandex.cloud.operation" +
+      ".Operation\"c\202\323\344\223\0023\"./compute/v1/instance" +
+      "s/{instance_id}:detachDisk:\001*\262\322*&\n\032Detac" +
+      "hInstanceDiskMetadata\022\010Instance\022\340\001\n\020Atta" +
+      "chFilesystem\0228.yandex.cloud.compute.v1.A" +
+      "ttachInstanceFilesystemRequest\032!.yandex." +
+      "cloud.operation.Operation\"o\202\323\344\223\0029\"4/comp" +
+      "ute/v1/instances/{instance_id}:attachFil" +
+      "esystem:\001*\262\322*,\n AttachInstanceFilesystem" +
+      "Metadata\022\010Instance\022\340\001\n\020DetachFilesystem\022" +
+      "8.yandex.cloud.compute.v1.DetachInstance" +
+      "FilesystemRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"o\202\323\344\223\0029\"4/compute/v1/instan" +
+      "ces/{instance_id}:detachFilesystem:\001*\262\322*" +
+      ",\n DetachInstanceFilesystemMetadata\022\010Ins" +
+      "tance\022\330\001\n\016AddOneToOneNat\0226.yandex.cloud." +
+      "compute.v1.AddInstanceOneToOneNatRequest" +
+      "\032!.yandex.cloud.operation.Operation\"k\202\323\344" +
+      "\223\0027\"2/compute/v1/instances/{instance_id}" +
+      "/addOneToOneNat:\001*\262\322**\n\036AddInstanceOneTo" +
+      "OneNatMetadata\022\010Instance\022\344\001\n\021RemoveOneTo" +
+      "OneNat\0229.yandex.cloud.compute.v1.RemoveI" +
+      "nstanceOneToOneNatRequest\032!.yandex.cloud" +
+      ".operation.Operation\"q\202\323\344\223\002:\"5/compute/v" +
+      "1/instances/{instance_id}/removeOneToOne" +
+      "Nat:\001*\262\322*-\n!RemoveInstanceOneToOneNatMet" +
+      "adata\022\010Instance\022\370\001\n\026UpdateNetworkInterfa" +
+      "ce\022>.yandex.cloud.compute.v1.UpdateInsta" +
+      "nceNetworkInterfaceRequest\032!.yandex.clou" +
+      "d.operation.Operation\"{\202\323\344\223\002?2:/compute/" +
+      "v1/instances/{instance_id}/updateNetwork" +
+      "Interface:\001*\262\322*2\n&UpdateInstanceNetworkI" +
+      "nterfaceMetadata\022\010Instance\022\271\001\n\016ListOpera" +
+      "tions\0226.yandex.cloud.compute.v1.ListInst" +
+      "anceOperationsRequest\0327.yandex.cloud.com" +
+      "pute.v1.ListInstanceOperationsResponse\"6" +
+      "\202\323\344\223\0020\022./compute/v1/instances/{instance_" +
+      "id}/operations\022\260\001\n\004Move\022,.yandex.cloud.c" +
+      "ompute.v1.MoveInstanceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"W\202\323\344\223\002-\"(/compu" +
+      "te/v1/instances/{instance_id}:move:\001*\262\322*" +
+      " \n\024MoveInstanceMetadata\022\010InstanceBb\n\033yan" +
+      "dex.cloud.api.compute.v1ZCgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/compu" +
+      "te/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -52856,7 +53385,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ZoneId", "PlatformId", "ResourcesSpec", "Metadata", "BootDiskSpec", "SecondaryDiskSpecs", "LocalDiskSpecs", "FilesystemSpecs", "NetworkInterfaceSpecs", "Hostname", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ZoneId", "PlatformId", "ResourcesSpec", "Metadata", "MetadataOptions", "BootDiskSpec", "SecondaryDiskSpecs", "LocalDiskSpecs", "FilesystemSpecs", "NetworkInterfaceSpecs", "Hostname", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_LabelsEntry_fieldAccessorTable = new
@@ -52880,7 +53409,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_descriptor,
-        new java.lang.String[] { "InstanceId", "UpdateMask", "Name", "Description", "Labels", "PlatformId", "ResourcesSpec", "Metadata", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "SchedulingPolicy", });
+        new java.lang.String[] { "InstanceId", "UpdateMask", "Name", "Description", "Labels", "PlatformId", "ResourcesSpec", "Metadata", "MetadataOptions", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "SchedulingPolicy", });
     internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_LabelsEntry_fieldAccessorTable = new

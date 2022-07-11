@@ -645,7 +645,7 @@ public final class ResourcePresetServiceOuterClass {
     /**
      * <pre>
      * Page token.
-     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -655,7 +655,7 @@ public final class ResourcePresetServiceOuterClass {
     /**
      * <pre>
      * Page token.
-     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -774,7 +774,7 @@ public final class ResourcePresetServiceOuterClass {
     /**
      * <pre>
      * Page token.
-     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -796,7 +796,7 @@ public final class ResourcePresetServiceOuterClass {
     /**
      * <pre>
      * Page token.
-     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+     * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1187,7 +1187,7 @@ public final class ResourcePresetServiceOuterClass {
       /**
        * <pre>
        * Page token.
-       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1208,7 +1208,7 @@ public final class ResourcePresetServiceOuterClass {
       /**
        * <pre>
        * Page token.
-       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1230,7 +1230,7 @@ public final class ResourcePresetServiceOuterClass {
       /**
        * <pre>
        * Page token.
-       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1250,7 +1250,7 @@ public final class ResourcePresetServiceOuterClass {
       /**
        * <pre>
        * Page token.
-       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1265,7 +1265,7 @@ public final class ResourcePresetServiceOuterClass {
       /**
        * <pre>
        * Page token.
-       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by a previous list request.
+       * To get the next page of results, set [page_token] to the [ListResourcePresetsResponse.next_page_token], returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>

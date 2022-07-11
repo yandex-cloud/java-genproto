@@ -21,7 +21,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by the platform at the time of cluster creation.
+     * This ID is assigned by the platform at the moment of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -31,7 +31,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by the platform at the time of cluster creation.
+     * This ID is assigned by the platform at the moment of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -62,7 +62,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the cluster was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -71,7 +71,7 @@ public final class ClusterOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the cluster was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -80,7 +80,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the cluster was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -90,7 +90,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Greenplum® cluster.
-     * The name is unique within the folder and is 1-63 characters long.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -100,7 +100,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Greenplum® cluster.
-     * The name is unique within the folder and is 1-63 characters long.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -138,19 +138,19 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Description of the Greenplum® cluster. 0-256 characters long.
+     * Description of the Greenplum® cluster.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the Greenplum® cluster. 0-256 characters long.
+     * Description of the Greenplum® cluster.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -417,7 +417,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -426,7 +426,7 @@ public final class ClusterOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -435,7 +435,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -532,7 +532,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Whether or not cluster is protected from being deleted.
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 22;</code>
@@ -583,7 +583,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Greenplum and Odyssey configuration;
+     * Greenplum® and Odyssey® configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -592,7 +592,7 @@ public final class ClusterOuterClass {
     boolean hasClusterConfig();
     /**
      * <pre>
-     * Greenplum and Odyssey configuration;
+     * Greenplum® and Odyssey® configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -601,7 +601,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.ClusterConfigSet getClusterConfig();
     /**
      * <pre>
-     * Greenplum and Odyssey configuration;
+     * Greenplum® and Odyssey® configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -939,8 +939,7 @@ public final class ClusterOuterClass {
       ENVIRONMENT_UNSPECIFIED(0),
       /**
        * <pre>
-       * Stable environment with a conservative update policy:
-       * only hotfixes are applied during regular maintenance.
+       * Stable environment with a conservative update policy: only hotfixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -948,8 +947,7 @@ public final class ClusterOuterClass {
       PRODUCTION(1),
       /**
        * <pre>
-       * Environment with more aggressive update policy: new versions
-       * are rolled out irrespective of backward compatibility.
+       * Environment with more aggressive update policy: new versions are rolled out irrespective of backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -964,8 +962,7 @@ public final class ClusterOuterClass {
       public static final int ENVIRONMENT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Stable environment with a conservative update policy:
-       * only hotfixes are applied during regular maintenance.
+       * Stable environment with a conservative update policy: only hotfixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -973,8 +970,7 @@ public final class ClusterOuterClass {
       public static final int PRODUCTION_VALUE = 1;
       /**
        * <pre>
-       * Environment with more aggressive update policy: new versions
-       * are rolled out irrespective of backward compatibility.
+       * Environment with more aggressive update policy: new versions are rolled out irrespective of backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -1241,10 +1237,6 @@ public final class ClusterOuterClass {
     }
 
     /**
-     * <pre>
-     * Current state of the cluster.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Cluster.Status}
      */
     public enum Status
@@ -1475,7 +1467,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by the platform at the time of cluster creation.
+     * This ID is assigned by the platform at the moment of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1497,7 +1489,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * ID of the Greenplum® cluster.
-     * This ID is assigned by the platform at the time of cluster creation.
+     * This ID is assigned by the platform at the moment of cluster creation.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1568,7 +1560,7 @@ public final class ClusterOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the cluster was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1580,7 +1572,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the cluster was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1592,7 +1584,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the cluster was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1607,7 +1599,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Greenplum® cluster.
-     * The name is unique within the folder and is 1-63 characters long.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1629,7 +1621,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Greenplum® cluster.
-     * The name is unique within the folder and is 1-63 characters long.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1692,10 +1684,10 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the Greenplum® cluster. 0-256 characters long.
+     * Description of the Greenplum® cluster.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -1713,10 +1705,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of the Greenplum® cluster. 0-256 characters long.
+     * Description of the Greenplum® cluster.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -2143,7 +2135,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -2155,7 +2147,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -2167,7 +2159,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -2316,7 +2308,7 @@ public final class ClusterOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Whether or not cluster is protected from being deleted.
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 22;</code>
@@ -2382,7 +2374,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.ClusterConfigSet clusterConfig_;
     /**
      * <pre>
-     * Greenplum and Odyssey configuration;
+     * Greenplum® and Odyssey® configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -2394,7 +2386,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Greenplum and Odyssey configuration;
+     * Greenplum® and Odyssey® configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -2406,7 +2398,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Greenplum and Odyssey configuration;
+     * Greenplum® and Odyssey® configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -3315,7 +3307,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by the platform at the time of cluster creation.
+       * This ID is assigned by the platform at the moment of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3336,7 +3328,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by the platform at the time of cluster creation.
+       * This ID is assigned by the platform at the moment of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3358,7 +3350,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by the platform at the time of cluster creation.
+       * This ID is assigned by the platform at the moment of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3378,7 +3370,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by the platform at the time of cluster creation.
+       * This ID is assigned by the platform at the moment of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3393,7 +3385,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * ID of the Greenplum® cluster.
-       * This ID is assigned by the platform at the time of cluster creation.
+       * This ID is assigned by the platform at the moment of cluster creation.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -3513,7 +3505,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3524,7 +3516,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3539,7 +3531,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3559,7 +3551,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3577,7 +3569,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3599,7 +3591,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3617,7 +3609,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3629,7 +3621,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3644,7 +3636,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Cluster creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the cluster was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -3667,7 +3659,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Greenplum® cluster.
-       * The name is unique within the folder and is 1-63 characters long.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3688,7 +3680,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Greenplum® cluster.
-       * The name is unique within the folder and is 1-63 characters long.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3710,7 +3702,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Greenplum® cluster.
-       * The name is unique within the folder and is 1-63 characters long.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3730,7 +3722,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Greenplum® cluster.
-       * The name is unique within the folder and is 1-63 characters long.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3745,7 +3737,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Greenplum® cluster.
-       * The name is unique within the folder and is 1-63 characters long.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3922,10 +3914,10 @@ public final class ClusterOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the Greenplum® cluster. 0-256 characters long.
+       * Description of the Greenplum® cluster.
        * </pre>
        *
-       * <code>string description = 6;</code>
+       * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -3942,10 +3934,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Greenplum® cluster. 0-256 characters long.
+       * Description of the Greenplum® cluster.
        * </pre>
        *
-       * <code>string description = 6;</code>
+       * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -3963,10 +3955,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Greenplum® cluster. 0-256 characters long.
+       * Description of the Greenplum® cluster.
        * </pre>
        *
-       * <code>string description = 6;</code>
+       * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -3982,10 +3974,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Greenplum® cluster. 0-256 characters long.
+       * Description of the Greenplum® cluster.
        * </pre>
        *
-       * <code>string description = 6;</code>
+       * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -3996,10 +3988,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Greenplum® cluster. 0-256 characters long.
+       * Description of the Greenplum® cluster.
        * </pre>
        *
-       * <code>string description = 6;</code>
+       * <code>string description = 6 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -5248,7 +5240,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5259,7 +5251,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5274,7 +5266,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5294,7 +5286,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5312,7 +5304,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5334,7 +5326,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5352,7 +5344,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5364,7 +5356,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5379,7 +5371,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 18;</code>
@@ -5798,7 +5790,7 @@ public final class ClusterOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 22;</code>
@@ -5810,7 +5802,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 22;</code>
@@ -5825,7 +5817,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 22;</code>
@@ -5989,7 +5981,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.ClusterConfigSet, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.ClusterConfigSet.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.ClusterConfigSetOrBuilder> clusterConfigBuilder_;
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6000,7 +5992,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6015,7 +6007,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6035,7 +6027,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6053,7 +6045,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6075,7 +6067,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6093,7 +6085,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6105,7 +6097,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6120,7 +6112,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Greenplum and Odyssey configuration;
+       * Greenplum® and Odyssey® configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ClusterConfigSet cluster_config = 24;</code>
@@ -6227,28 +6219,28 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
      * @return Whether the pool field is set.
      */
     boolean hasPool();
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
      * @return The pool.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet getPool();
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSetOrBuilder getPoolOrBuilder();
 
@@ -6327,7 +6319,7 @@ public final class ClusterOuterClass {
               greenplumConfigCase_ = 2;
               break;
             }
-            case 34: {
+            case 26: {
               yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet.Builder subBuilder = null;
               if (pool_ != null) {
                 subBuilder = pool_.toBuilder();
@@ -6475,14 +6467,14 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_19.getDefaultInstance();
     }
 
-    public static final int POOL_FIELD_NUMBER = 4;
+    public static final int POOL_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet pool_;
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
      * @return Whether the pool field is set.
      */
     @java.lang.Override
@@ -6491,10 +6483,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
      * @return The pool.
      */
     @java.lang.Override
@@ -6503,10 +6495,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSetOrBuilder getPoolOrBuilder() {
@@ -6534,7 +6526,7 @@ public final class ClusterOuterClass {
         output.writeMessage(2, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_19) greenplumConfig_);
       }
       if (pool_ != null) {
-        output.writeMessage(4, getPool());
+        output.writeMessage(3, getPool());
       }
       unknownFields.writeTo(output);
     }
@@ -6555,7 +6547,7 @@ public final class ClusterOuterClass {
       }
       if (pool_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPool());
+          .computeMessageSize(3, getPool());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7199,10 +7191,10 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSetOrBuilder> poolBuilder_;
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        * @return Whether the pool field is set.
        */
       public boolean hasPool() {
@@ -7210,10 +7202,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        * @return The pool.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet getPool() {
@@ -7225,10 +7217,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       public Builder setPool(yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet value) {
         if (poolBuilder_ == null) {
@@ -7245,10 +7237,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       public Builder setPool(
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet.Builder builderForValue) {
@@ -7263,10 +7255,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       public Builder mergePool(yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet value) {
         if (poolBuilder_ == null) {
@@ -7285,10 +7277,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       public Builder clearPool() {
         if (poolBuilder_ == null) {
@@ -7303,10 +7295,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet.Builder getPoolBuilder() {
         
@@ -7315,10 +7307,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSetOrBuilder getPoolOrBuilder() {
         if (poolBuilder_ != null) {
@@ -7330,10 +7322,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet pool = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSetOrBuilder> 
@@ -8487,8 +8479,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the subnet the cluster belongs to. This subnet should be a part
-     * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+     * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8497,8 +8488,7 @@ public final class ClusterOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of the subnet the cluster belongs to. This subnet should be a part
-     * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+     * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8509,7 +8499,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Whether or not the cluster has a public IP address.
+     * Determines whether the cluster has a public IP address.
      * After the cluster has been created, this setting cannot be changed.
      * </pre>
      *
@@ -8519,10 +8509,6 @@ public final class ClusterOuterClass {
     boolean getAssignPublicIp();
   }
   /**
-   * <pre>
-   * Greenplum® cluster configuration.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig}
    */
   public static final class GreenplumConfig extends
@@ -8825,8 +8811,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of the subnet the cluster belongs to. This subnet should be a part
-     * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+     * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8847,8 +8832,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the subnet the cluster belongs to. This subnet should be a part
-     * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+     * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8873,7 +8857,7 @@ public final class ClusterOuterClass {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Whether or not the cluster has a public IP address.
+     * Determines whether the cluster has a public IP address.
      * After the cluster has been created, this setting cannot be changed.
      * </pre>
      *
@@ -9104,10 +9088,6 @@ public final class ClusterOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Greenplum® cluster configuration.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig}
      */
     public static final class Builder extends
@@ -9813,8 +9793,7 @@ public final class ClusterOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of the subnet the cluster belongs to. This subnet should be a part
-       * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+       * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9834,8 +9813,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet the cluster belongs to. This subnet should be a part
-       * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+       * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9856,8 +9834,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet the cluster belongs to. This subnet should be a part
-       * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+       * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9876,8 +9853,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet the cluster belongs to. This subnet should be a part
-       * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+       * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9891,8 +9867,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet the cluster belongs to. This subnet should be a part
-       * of the cloud network the cluster belongs to (see [Cluster.network_id]).
+       * ID of the subnet the cluster belongs to. This subnet should be a part of the cloud network the cluster belongs to (see [Cluster.network_id]).
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9914,7 +9889,7 @@ public final class ClusterOuterClass {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Whether or not the cluster has a public IP address.
+       * Determines whether the cluster has a public IP address.
        * After the cluster has been created, this setting cannot be changed.
        * </pre>
        *
@@ -9927,7 +9902,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Whether or not the cluster has a public IP address.
+       * Determines whether the cluster has a public IP address.
        * After the cluster has been created, this setting cannot be changed.
        * </pre>
        *
@@ -9943,7 +9918,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Whether or not the cluster has a public IP address.
+       * Determines whether the cluster has a public IP address.
        * After the cluster has been created, this setting cannot be changed.
        * </pre>
        *
@@ -10035,7 +10010,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for DataTransfer.
+     * Allows access for DataTransfer.
      * </pre>
      *
      * <code>bool data_transfer = 3;</code>
@@ -10044,10 +10019,6 @@ public final class ClusterOuterClass {
     boolean getDataTransfer();
   }
   /**
-   * <pre>
-   * Greenplum® cluster access options.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Access}
    */
   public static final class Access extends
@@ -10173,7 +10144,7 @@ public final class ClusterOuterClass {
     private boolean dataTransfer_;
     /**
      * <pre>
-     * Allow access for DataTransfer.
+     * Allows access for DataTransfer.
      * </pre>
      *
      * <code>bool data_transfer = 3;</code>
@@ -10365,10 +10336,6 @@ public final class ClusterOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Greenplum® cluster access options.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Access}
      */
     public static final class Builder extends
@@ -10616,7 +10583,7 @@ public final class ClusterOuterClass {
       private boolean dataTransfer_ ;
       /**
        * <pre>
-       * Allow access for DataTransfer.
+       * Allows access for DataTransfer.
        * </pre>
        *
        * <code>bool data_transfer = 3;</code>
@@ -10628,7 +10595,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataTransfer.
+       * Allows access for DataTransfer.
        * </pre>
        *
        * <code>bool data_transfer = 3;</code>
@@ -10643,7 +10610,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataTransfer.
+       * Allows access for DataTransfer.
        * </pre>
        *
        * <code>bool data_transfer = 3;</code>
@@ -10790,8 +10757,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -10801,8 +10767,7 @@ public final class ClusterOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -10814,12 +10779,12 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
-     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-     * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+     * Determines whether the host should get a public IP address on creation.
+     * After a host has been created, this setting cannot be changed.
+     * To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
      * Possible values:
-     * * false - don't assign a public IP to the master hosts.
-     * * true - the master hosts should have a public IP address.
+     * * `false` - do not assign a public IP to the master host.
+     * * `true` - assign a public IP to the master host.
      * </pre>
      *
      * <code>bool assign_public_ip = 5;</code>
@@ -11077,8 +11042,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -11100,8 +11064,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the subnet that the host should belong to. This subnet should be a part
-     * of the network that the cluster belongs to.
+     * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
      * The ID of the network is set in the field [Cluster.network_id].
      * </pre>
      *
@@ -11127,12 +11090,12 @@ public final class ClusterOuterClass {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Whether the host should get a public IP address on creation.
-     * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-     * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+     * Determines whether the host should get a public IP address on creation.
+     * After a host has been created, this setting cannot be changed.
+     * To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
      * Possible values:
-     * * false - don't assign a public IP to the master hosts.
-     * * true - the master hosts should have a public IP address.
+     * * `false` - do not assign a public IP to the master host.
+     * * `true` - assign a public IP to the master host.
      * </pre>
      *
      * <code>bool assign_public_ip = 5;</code>
@@ -11954,8 +11917,7 @@ public final class ClusterOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -11976,8 +11938,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -11999,8 +11960,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -12020,8 +11980,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -12036,8 +11995,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that the host should belong to. This subnet should be a part
-       * of the network that the cluster belongs to.
+       * ID of the subnet that the host should belong to. This subnet should be a part of the network that the cluster belongs to.
        * The ID of the network is set in the field [Cluster.network_id].
        * </pre>
        *
@@ -12060,12 +12018,12 @@ public final class ClusterOuterClass {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Determines whether the host should get a public IP address on creation.
+       * After a host has been created, this setting cannot be changed.
+       * To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false - don't assign a public IP to the master hosts.
-       * * true - the master hosts should have a public IP address.
+       * * `false` - do not assign a public IP to the master host.
+       * * `true` - assign a public IP to the master host.
        * </pre>
        *
        * <code>bool assign_public_ip = 5;</code>
@@ -12077,12 +12035,12 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Determines whether the host should get a public IP address on creation.
+       * After a host has been created, this setting cannot be changed.
+       * To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false - don't assign a public IP to the master hosts.
-       * * true - the master hosts should have a public IP address.
+       * * `false` - do not assign a public IP to the master host.
+       * * `true` - assign a public IP to the master host.
        * </pre>
        *
        * <code>bool assign_public_ip = 5;</code>
@@ -12097,12 +12055,12 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Whether the host should get a public IP address on creation.
-       * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
-       * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
+       * Determines whether the host should get a public IP address on creation.
+       * After a host has been created, this setting cannot be changed.
+       * To remove an assigned public IP, or to assign a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false - don't assign a public IP to the master hosts.
-       * * true - the master hosts should have a public IP address.
+       * * `false` - do not assign a public IP to the master host.
+       * * `true` - assign a public IP to the master host.
        * </pre>
        *
        * <code>bool assign_public_ip = 5;</code>
@@ -12173,7 +12131,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -12182,7 +12140,7 @@ public final class ClusterOuterClass {
     java.lang.String getResourcePresetId();
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -12294,7 +12252,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object resourcePresetId_;
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -12315,7 +12273,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the preset for computational resources available to a host (CPU, memory etc.).
+     * ID of the preset for computational resources available to a host (CPU, memory, etc.).
      * </pre>
      *
      * <code>string resource_preset_id = 1;</code>
@@ -12674,7 +12632,7 @@ public final class ClusterOuterClass {
       private java.lang.Object resourcePresetId_ = "";
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -12694,7 +12652,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -12715,7 +12673,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -12734,7 +12692,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -12748,7 +12706,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the preset for computational resources available to a host (CPU, memory etc.).
+       * ID of the preset for computational resources available to a host (CPU, memory, etc.).
        * </pre>
        *
        * <code>string resource_preset_id = 1;</code>
@@ -12917,71 +12875,71 @@ public final class ClusterOuterClass {
       "pe/timeofday.proto\032\035yandex/cloud/validat" +
       "ion.proto\032*yandex/cloud/mdb/greenplum/v1" +
       "/config.proto\032/yandex/cloud/mdb/greenplu" +
-      "m/v1/maintenance.proto\"\246\013\n\007Cluster\022\n\n\002id" +
+      "m/v1/maintenance.proto\"\261\013\n\007Cluster\022\n\n\002id" +
       "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030" +
       "\003 \001(\0132\032.google.protobuf.Timestamp\022\032\n\004nam" +
       "e\030\004 \001(\tB\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132.." +
       "yandex.cloud.mdb.greenplum.v1.GreenplumC" +
-      "onfig\022\023\n\013description\030\006 \001(\t\022B\n\006labels\030\007 \003" +
-      "(\01322.yandex.cloud.mdb.greenplum.v1.Clust" +
-      "er.LabelsEntry\022G\n\013environment\030\010 \001(\01622.ya" +
-      "ndex.cloud.mdb.greenplum.v1.Cluster.Envi" +
-      "ronment\022=\n\nmonitoring\030\t \003(\0132).yandex.clo" +
-      "ud.mdb.greenplum.v1.Monitoring\022L\n\rmaster" +
-      "_config\030\n \001(\01325.yandex.cloud.mdb.greenpl" +
-      "um.v1.MasterSubclusterConfig\022N\n\016segment_" +
-      "config\030\013 \001(\01326.yandex.cloud.mdb.greenplu" +
-      "m.v1.SegmentSubclusterConfig\022\031\n\021master_h" +
-      "ost_count\030\014 \001(\003\022\032\n\022segment_host_count\030\r " +
-      "\001(\003\022\027\n\017segment_in_host\030\016 \001(\003\022\022\n\nnetwork_" +
-      "id\030\017 \001(\t\022=\n\006health\030\020 \001(\0162-.yandex.cloud." +
-      "mdb.greenplum.v1.Cluster.Health\022=\n\006statu" +
-      "s\030\021 \001(\0162-.yandex.cloud.mdb.greenplum.v1." +
-      "Cluster.Status\022L\n\022maintenance_window\030\022 \001" +
-      "(\01320.yandex.cloud.mdb.greenplum.v1.Maint" +
-      "enanceWindow\022N\n\021planned_operation\030\023 \001(\0132" +
-      "3.yandex.cloud.mdb.greenplum.v1.Maintena" +
-      "nceOperation\022\032\n\022security_group_ids\030\024 \003(\t" +
-      "\022\021\n\tuser_name\030\025 \001(\t\022\033\n\023deletion_protecti" +
-      "on\030\026 \001(\010\022\026\n\016host_group_ids\030\027 \003(\t\022G\n\016clus" +
-      "ter_config\030\030 \001(\0132/.yandex.cloud.mdb.gree" +
-      "nplum.v1.ClusterConfigSet\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envi" +
-      "ronment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\n" +
-      "PRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"O\n\006Health\022\022\n" +
-      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
-      "\n\010DEGRADED\020\003\022\016\n\nUNBALANCED\020\004\"y\n\006Status\022\022" +
-      "\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNN" +
-      "ING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPI" +
-      "NG\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\330\002\n\020Clus" +
-      "terConfigSet\022s\n\031greenplum_config_set_6_1" +
-      "7\030\001 \001(\01325.yandex.cloud.mdb.greenplum.v1." +
-      "GreenplumConfigSet6_17H\000R\027greenplumConfi" +
-      "gSet_6_17\022s\n\031greenplum_config_set_6_19\030\002" +
-      " \001(\01325.yandex.cloud.mdb.greenplum.v1.Gre" +
-      "enplumConfigSet6_19H\000R\027greenplumConfigSe" +
-      "t_6_19\022F\n\004pool\030\004 \001(\01328.yandex.cloud.mdb." +
-      "greenplum.v1.ConnectionPoolerConfigSetB\022" +
-      "\n\020greenplum_config\"=\n\nMonitoring\022\014\n\004name" +
-      "\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(" +
-      "\t\"\340\001\n\017GreenplumConfig\022\017\n\007version\030\001 \001(\t\0223" +
-      "\n\023backup_window_start\030\002 \001(\0132\026.google.typ" +
-      "e.TimeOfDay\0225\n\006access\030\003 \001(\0132%.yandex.clo" +
-      "ud.mdb.greenplum.v1.Access\022\031\n\007zone_id\030\004 " +
-      "\001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101\004<=" +
-      "50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Access\022\021" +
-      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rda" +
-      "ta_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRestoreCo" +
-      "nfig\0223\n\023backup_window_start\030\001 \001(\0132\026.goog" +
-      "le.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%.yand" +
-      "ex.cloud.mdb.greenplum.v1.Access\022\031\n\007zone" +
-      "_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(\tB\010" +
-      "\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n\020Re" +
-      "storeResources\022\032\n\022resource_preset_id\030\001 \001" +
-      "(\t\022\021\n\tdisk_size\030\002 \001(\003Bp\n!yandex.cloud.ap" +
-      "i.mdb.greenplum.v1ZKgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/greenpl" +
-      "um/v1;greenplumb\006proto3"
+      "onfig\022\036\n\013description\030\006 \001(\tB\t\212\3101\005<=256\022B\n" +
+      "\006labels\030\007 \003(\01322.yandex.cloud.mdb.greenpl" +
+      "um.v1.Cluster.LabelsEntry\022G\n\013environment" +
+      "\030\010 \001(\01622.yandex.cloud.mdb.greenplum.v1.C" +
+      "luster.Environment\022=\n\nmonitoring\030\t \003(\0132)" +
+      ".yandex.cloud.mdb.greenplum.v1.Monitorin" +
+      "g\022L\n\rmaster_config\030\n \001(\01325.yandex.cloud." +
+      "mdb.greenplum.v1.MasterSubclusterConfig\022" +
+      "N\n\016segment_config\030\013 \001(\01326.yandex.cloud.m" +
+      "db.greenplum.v1.SegmentSubclusterConfig\022" +
+      "\031\n\021master_host_count\030\014 \001(\003\022\032\n\022segment_ho" +
+      "st_count\030\r \001(\003\022\027\n\017segment_in_host\030\016 \001(\003\022" +
+      "\022\n\nnetwork_id\030\017 \001(\t\022=\n\006health\030\020 \001(\0162-.ya" +
+      "ndex.cloud.mdb.greenplum.v1.Cluster.Heal" +
+      "th\022=\n\006status\030\021 \001(\0162-.yandex.cloud.mdb.gr" +
+      "eenplum.v1.Cluster.Status\022L\n\022maintenance" +
+      "_window\030\022 \001(\01320.yandex.cloud.mdb.greenpl" +
+      "um.v1.MaintenanceWindow\022N\n\021planned_opera" +
+      "tion\030\023 \001(\01323.yandex.cloud.mdb.greenplum." +
+      "v1.MaintenanceOperation\022\032\n\022security_grou" +
+      "p_ids\030\024 \003(\t\022\021\n\tuser_name\030\025 \001(\t\022\033\n\023deleti" +
+      "on_protection\030\026 \001(\010\022\026\n\016host_group_ids\030\027 " +
+      "\003(\t\022G\n\016cluster_config\030\030 \001(\0132/.yandex.clo" +
+      "ud.mdb.greenplum.v1.ClusterConfigSet\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPEC" +
+      "IFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"O" +
+      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
+      "\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\022\016\n\nUNBALANCED\020\004\"" +
+      "y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATIN" +
+      "G\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020" +
+      "\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING" +
+      "\020\007\"\330\002\n\020ClusterConfigSet\022s\n\031greenplum_con" +
+      "fig_set_6_17\030\001 \001(\01325.yandex.cloud.mdb.gr" +
+      "eenplum.v1.GreenplumConfigSet6_17H\000R\027gre" +
+      "enplumConfigSet_6_17\022s\n\031greenplum_config" +
+      "_set_6_19\030\002 \001(\01325.yandex.cloud.mdb.green" +
+      "plum.v1.GreenplumConfigSet6_19H\000R\027greenp" +
+      "lumConfigSet_6_19\022F\n\004pool\030\003 \001(\01328.yandex" +
+      ".cloud.mdb.greenplum.v1.ConnectionPooler" +
+      "ConfigSetB\022\n\020greenplum_config\"=\n\nMonitor" +
+      "ing\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014" +
+      "\n\004link\030\003 \001(\t\"\340\001\n\017GreenplumConfig\022\017\n\007vers" +
+      "ion\030\001 \001(\t\0223\n\023backup_window_start\030\002 \001(\0132\026" +
+      ".google.type.TimeOfDay\0225\n\006access\030\003 \001(\0132%" +
+      ".yandex.cloud.mdb.greenplum.v1.Access\022\031\n" +
+      "\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 " +
+      "\001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"" +
+      "C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030" +
+      "\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\326\001\n\026Greenpl" +
+      "umRestoreConfig\0223\n\023backup_window_start\030\001" +
+      " \001(\0132\026.google.type.TimeOfDay\0225\n\006access\030\002" +
+      " \001(\0132%.yandex.cloud.mdb.greenplum.v1.Acc" +
+      "ess\022\031\n\007zone_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet" +
+      "_id\030\004 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030" +
+      "\005 \001(\010\"A\n\020RestoreResources\022\032\n\022resource_pr" +
+      "eset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003Bp\n!yand" +
+      "ex.cloud.api.mdb.greenplum.v1ZKgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "mdb/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

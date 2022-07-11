@@ -122,7 +122,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * Number of CPU cores for a Greenplum host created with the preset.
+     * Number of CPU cores for a Greenplum® host created with the preset.
      * </pre>
      *
      * <code>int64 cores = 3;</code>
@@ -132,7 +132,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * RAM volume for a Greenplum host created with the preset, in bytes.
+     * RAM volume for a Greenplum® host created with the preset, in bytes.
      * </pre>
      *
      * <code>int64 memory = 4;</code>
@@ -142,7 +142,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * Host type
+     * Host type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -151,7 +151,7 @@ public final class ResourcePresetOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Host type
+     * Host type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -161,7 +161,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * The number of hosts must be divisible by host_count_divider
+     * The number of hosts must be divisible by [host_count_divider].
      * </pre>
      *
      * <code>int64 host_count_divider = 8;</code>
@@ -171,7 +171,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * Max segment count in host (actual only for segment host)
+     * Maximum number of segments in segment host.
      * </pre>
      *
      * <code>int64 max_segment_in_host_count = 9;</code>
@@ -181,7 +181,7 @@ public final class ResourcePresetOuterClass {
   }
   /**
    * <pre>
-   * A preset of resources for hardware configuration of Greenplum hosts.
+   * A preset of resources for hardware configuration of Greenplum® hosts.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ResourcePreset}
@@ -332,7 +332,7 @@ public final class ResourcePresetOuterClass {
       TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * Greenplum master host.
+       * Greenplum® master host.
        * </pre>
        *
        * <code>MASTER = 1;</code>
@@ -340,7 +340,7 @@ public final class ResourcePresetOuterClass {
       MASTER(1),
       /**
        * <pre>
-       * Greenplum segment host.
+       * Greenplum® segment host.
        * </pre>
        *
        * <code>SEGMENT = 2;</code>
@@ -355,7 +355,7 @@ public final class ResourcePresetOuterClass {
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Greenplum master host.
+       * Greenplum® master host.
        * </pre>
        *
        * <code>MASTER = 1;</code>
@@ -363,7 +363,7 @@ public final class ResourcePresetOuterClass {
       public static final int MASTER_VALUE = 1;
       /**
        * <pre>
-       * Greenplum segment host.
+       * Greenplum® segment host.
        * </pre>
        *
        * <code>SEGMENT = 2;</code>
@@ -606,7 +606,7 @@ public final class ResourcePresetOuterClass {
     private long cores_;
     /**
      * <pre>
-     * Number of CPU cores for a Greenplum host created with the preset.
+     * Number of CPU cores for a Greenplum® host created with the preset.
      * </pre>
      *
      * <code>int64 cores = 3;</code>
@@ -621,7 +621,7 @@ public final class ResourcePresetOuterClass {
     private long memory_;
     /**
      * <pre>
-     * RAM volume for a Greenplum host created with the preset, in bytes.
+     * RAM volume for a Greenplum® host created with the preset, in bytes.
      * </pre>
      *
      * <code>int64 memory = 4;</code>
@@ -636,7 +636,7 @@ public final class ResourcePresetOuterClass {
     private int type_;
     /**
      * <pre>
-     * Host type
+     * Host type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -647,7 +647,7 @@ public final class ResourcePresetOuterClass {
     }
     /**
      * <pre>
-     * Host type
+     * Host type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -663,7 +663,7 @@ public final class ResourcePresetOuterClass {
     private long hostCountDivider_;
     /**
      * <pre>
-     * The number of hosts must be divisible by host_count_divider
+     * The number of hosts must be divisible by [host_count_divider].
      * </pre>
      *
      * <code>int64 host_count_divider = 8;</code>
@@ -678,7 +678,7 @@ public final class ResourcePresetOuterClass {
     private long maxSegmentInHostCount_;
     /**
      * <pre>
-     * Max segment count in host (actual only for segment host)
+     * Maximum number of segments in segment host.
      * </pre>
      *
      * <code>int64 max_segment_in_host_count = 9;</code>
@@ -937,7 +937,7 @@ public final class ResourcePresetOuterClass {
     }
     /**
      * <pre>
-     * A preset of resources for hardware configuration of Greenplum hosts.
+     * A preset of resources for hardware configuration of Greenplum® hosts.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ResourcePreset}
@@ -1544,7 +1544,7 @@ public final class ResourcePresetOuterClass {
       private long cores_ ;
       /**
        * <pre>
-       * Number of CPU cores for a Greenplum host created with the preset.
+       * Number of CPU cores for a Greenplum® host created with the preset.
        * </pre>
        *
        * <code>int64 cores = 3;</code>
@@ -1556,7 +1556,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Number of CPU cores for a Greenplum host created with the preset.
+       * Number of CPU cores for a Greenplum® host created with the preset.
        * </pre>
        *
        * <code>int64 cores = 3;</code>
@@ -1571,7 +1571,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Number of CPU cores for a Greenplum host created with the preset.
+       * Number of CPU cores for a Greenplum® host created with the preset.
        * </pre>
        *
        * <code>int64 cores = 3;</code>
@@ -1587,7 +1587,7 @@ public final class ResourcePresetOuterClass {
       private long memory_ ;
       /**
        * <pre>
-       * RAM volume for a Greenplum host created with the preset, in bytes.
+       * RAM volume for a Greenplum® host created with the preset, in bytes.
        * </pre>
        *
        * <code>int64 memory = 4;</code>
@@ -1599,7 +1599,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * RAM volume for a Greenplum host created with the preset, in bytes.
+       * RAM volume for a Greenplum® host created with the preset, in bytes.
        * </pre>
        *
        * <code>int64 memory = 4;</code>
@@ -1614,7 +1614,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * RAM volume for a Greenplum host created with the preset, in bytes.
+       * RAM volume for a Greenplum® host created with the preset, in bytes.
        * </pre>
        *
        * <code>int64 memory = 4;</code>
@@ -1630,7 +1630,7 @@ public final class ResourcePresetOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Host type
+       * Host type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -1641,7 +1641,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Host type
+       * Host type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -1656,7 +1656,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Host type
+       * Host type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -1670,7 +1670,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Host type
+       * Host type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -1688,7 +1688,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Host type
+       * Host type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ResourcePreset.Type type = 5;</code>
@@ -1704,7 +1704,7 @@ public final class ResourcePresetOuterClass {
       private long hostCountDivider_ ;
       /**
        * <pre>
-       * The number of hosts must be divisible by host_count_divider
+       * The number of hosts must be divisible by [host_count_divider].
        * </pre>
        *
        * <code>int64 host_count_divider = 8;</code>
@@ -1716,7 +1716,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * The number of hosts must be divisible by host_count_divider
+       * The number of hosts must be divisible by [host_count_divider].
        * </pre>
        *
        * <code>int64 host_count_divider = 8;</code>
@@ -1731,7 +1731,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * The number of hosts must be divisible by host_count_divider
+       * The number of hosts must be divisible by [host_count_divider].
        * </pre>
        *
        * <code>int64 host_count_divider = 8;</code>
@@ -1747,7 +1747,7 @@ public final class ResourcePresetOuterClass {
       private long maxSegmentInHostCount_ ;
       /**
        * <pre>
-       * Max segment count in host (actual only for segment host)
+       * Maximum number of segments in segment host.
        * </pre>
        *
        * <code>int64 max_segment_in_host_count = 9;</code>
@@ -1759,7 +1759,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Max segment count in host (actual only for segment host)
+       * Maximum number of segments in segment host.
        * </pre>
        *
        * <code>int64 max_segment_in_host_count = 9;</code>
@@ -1774,7 +1774,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Max segment count in host (actual only for segment host)
+       * Maximum number of segments in segment host.
        * </pre>
        *
        * <code>int64 max_segment_in_host_count = 9;</code>

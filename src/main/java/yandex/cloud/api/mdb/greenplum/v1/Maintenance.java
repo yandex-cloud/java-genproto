@@ -75,10 +75,6 @@ public final class Maintenance {
     public yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.PolicyCase getPolicyCase();
   }
   /**
-   * <pre>
-   * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceWindow}
    */
   public static final class MaintenanceWindow extends
@@ -494,10 +490,6 @@ public final class Maintenance {
       return builder;
     }
     /**
-     * <pre>
-     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceWindow}
      */
     public static final class Builder extends
@@ -1651,30 +1643,58 @@ public final class Maintenance {
        */
       WEEK_DAY_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Monday
+       * </pre>
+       *
        * <code>MON = 1;</code>
        */
       MON(1),
       /**
+       * <pre>
+       * Tuesday
+       * </pre>
+       *
        * <code>TUE = 2;</code>
        */
       TUE(2),
       /**
+       * <pre>
+       * Wednesday
+       * </pre>
+       *
        * <code>WED = 3;</code>
        */
       WED(3),
       /**
+       * <pre>
+       * Thursday
+       * </pre>
+       *
        * <code>THU = 4;</code>
        */
       THU(4),
       /**
+       * <pre>
+       * Friday
+       * </pre>
+       *
        * <code>FRI = 5;</code>
        */
       FRI(5),
       /**
+       * <pre>
+       * Saturday
+       * </pre>
+       *
        * <code>SAT = 6;</code>
        */
       SAT(6),
       /**
+       * <pre>
+       * Sunday
+       * </pre>
+       *
        * <code>SUN = 7;</code>
        */
       SUN(7),
@@ -1686,30 +1706,58 @@ public final class Maintenance {
        */
       public static final int WEEK_DAY_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Monday
+       * </pre>
+       *
        * <code>MON = 1;</code>
        */
       public static final int MON_VALUE = 1;
       /**
+       * <pre>
+       * Tuesday
+       * </pre>
+       *
        * <code>TUE = 2;</code>
        */
       public static final int TUE_VALUE = 2;
       /**
+       * <pre>
+       * Wednesday
+       * </pre>
+       *
        * <code>WED = 3;</code>
        */
       public static final int WED_VALUE = 3;
       /**
+       * <pre>
+       * Thursday
+       * </pre>
+       *
        * <code>THU = 4;</code>
        */
       public static final int THU_VALUE = 4;
       /**
+       * <pre>
+       * Friday
+       * </pre>
+       *
        * <code>FRI = 5;</code>
        */
       public static final int FRI_VALUE = 5;
       /**
+       * <pre>
+       * Saturday
+       * </pre>
+       *
        * <code>SAT = 6;</code>
        */
       public static final int SAT_VALUE = 6;
       /**
+       * <pre>
+       * Sunday
+       * </pre>
+       *
        * <code>SUN = 7;</code>
        */
       public static final int SUN_VALUE = 7;
@@ -2343,7 +2391,7 @@ public final class Maintenance {
 
     /**
      * <pre>
-     * The description of the operation, 1-256 characters long.
+     * The description of the operation.
      * </pre>
      *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2352,7 +2400,7 @@ public final class Maintenance {
     java.lang.String getInfo();
     /**
      * <pre>
-     * The description of the operation, 1-256 characters long.
+     * The description of the operation.
      * </pre>
      *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2389,10 +2437,6 @@ public final class Maintenance {
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
   }
   /**
-   * <pre>
-   * The operation to perform during maintenance.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceOperation}
    */
   public static final class MaintenanceOperation extends
@@ -2493,7 +2537,7 @@ public final class Maintenance {
     private volatile java.lang.Object info_;
     /**
      * <pre>
-     * The description of the operation, 1-256 characters long.
+     * The description of the operation.
      * </pre>
      *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2514,7 +2558,7 @@ public final class Maintenance {
     }
     /**
      * <pre>
-     * The description of the operation, 1-256 characters long.
+     * The description of the operation.
      * </pre>
      *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2744,10 +2788,6 @@ public final class Maintenance {
       return builder;
     }
     /**
-     * <pre>
-     * The operation to perform during maintenance.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MaintenanceOperation}
      */
     public static final class Builder extends
@@ -2912,7 +2952,7 @@ public final class Maintenance {
       private java.lang.Object info_ = "";
       /**
        * <pre>
-       * The description of the operation, 1-256 characters long.
+       * The description of the operation.
        * </pre>
        *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2932,7 +2972,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * The description of the operation, 1-256 characters long.
+       * The description of the operation.
        * </pre>
        *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2953,7 +2993,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * The description of the operation, 1-256 characters long.
+       * The description of the operation.
        * </pre>
        *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2972,7 +3012,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * The description of the operation, 1-256 characters long.
+       * The description of the operation.
        * </pre>
        *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -2986,7 +3026,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * The description of the operation, 1-256 characters long.
+       * The description of the operation.
        * </pre>
        *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>

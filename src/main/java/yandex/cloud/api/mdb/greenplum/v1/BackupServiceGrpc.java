@@ -3,6 +3,9 @@ package yandex.cloud.api.mdb.greenplum.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing backups.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,6 +125,9 @@ public final class BackupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backups.
+   * </pre>
    */
   public static abstract class BackupServiceImplBase implements io.grpc.BindableService {
 
@@ -166,6 +172,9 @@ public final class BackupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backups.
+   * </pre>
    */
   public static final class BackupServiceStub extends io.grpc.stub.AbstractAsyncStub<BackupServiceStub> {
     private BackupServiceStub(
@@ -203,6 +212,9 @@ public final class BackupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backups.
+   * </pre>
    */
   public static final class BackupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BackupServiceBlockingStub> {
     private BackupServiceBlockingStub(
@@ -238,6 +250,9 @@ public final class BackupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backups.
+   * </pre>
    */
   public static final class BackupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BackupServiceFutureStub> {
     private BackupServiceFutureStub(

@@ -668,7 +668,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -678,7 +678,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -888,7 +888,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -910,7 +910,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1493,7 +1493,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1514,7 +1514,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1536,7 +1536,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1556,7 +1556,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1571,7 +1571,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26528,7 +26528,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26538,7 +26538,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27066,7 +27066,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27088,7 +27088,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+     * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28284,7 +28284,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28305,7 +28305,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28327,7 +28327,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28347,7 +28347,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28362,7 +28362,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListClusterLogsResponse.next_page_token] returned by a previous list request.
+       * [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -32677,7 +32677,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -32687,7 +32687,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -32860,7 +32860,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -32882,7 +32882,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -33389,7 +33389,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -33410,7 +33410,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -33432,7 +33432,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -33452,7 +33452,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -33467,7 +33467,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -34697,7 +34697,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -34707,7 +34707,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -34882,7 +34882,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -34904,7 +34904,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -35416,7 +35416,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -35437,7 +35437,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -35459,7 +35459,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -35479,7 +35479,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -35494,7 +35494,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -36724,7 +36724,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -36734,7 +36734,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -36909,7 +36909,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -36931,7 +36931,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -37443,7 +37443,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -37464,7 +37464,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -37486,7 +37486,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -37506,7 +37506,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -37521,7 +37521,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Page token.  To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>

@@ -60,8 +60,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-     * (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -70,8 +69,7 @@ public final class BackupOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-     * (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -80,8 +78,7 @@ public final class BackupOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-     * (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -90,7 +87,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * ID of the PostgreSQL cluster that the backup was created for.
+     * ID of the Greenplum® cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -99,7 +96,7 @@ public final class BackupOuterClass {
     java.lang.String getSourceClusterId();
     /**
      * <pre>
-     * ID of the PostgreSQL cluster that the backup was created for.
+     * ID of the Greenplum® cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -137,7 +134,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Size of backup in bytes
+     * Size of the backup in bytes.
      * </pre>
      *
      * <code>int64 size = 6;</code>
@@ -370,8 +367,7 @@ public final class BackupOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-     * (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -383,8 +379,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-     * (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -396,8 +391,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-     * (i.e. when the backup operation was completed).
+     * Time when the backup operation was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -411,7 +405,7 @@ public final class BackupOuterClass {
     private volatile java.lang.Object sourceClusterId_;
     /**
      * <pre>
-     * ID of the PostgreSQL cluster that the backup was created for.
+     * ID of the Greenplum® cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -432,7 +426,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * ID of the PostgreSQL cluster that the backup was created for.
+     * ID of the Greenplum® cluster that the backup was created for.
      * </pre>
      *
      * <code>string source_cluster_id = 4;</code>
@@ -495,7 +489,7 @@ public final class BackupOuterClass {
     private long size_;
     /**
      * <pre>
-     * Size of backup in bytes
+     * Size of the backup in bytes.
      * </pre>
      *
      * <code>int64 size = 6;</code>
@@ -1117,8 +1111,7 @@ public final class BackupOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1129,8 +1122,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1145,8 +1137,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1166,8 +1157,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1185,8 +1175,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1208,8 +1197,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1227,8 +1215,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1240,8 +1227,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1256,8 +1242,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format
-       * (i.e. when the backup operation was completed).
+       * Time when the backup operation was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1279,7 +1264,7 @@ public final class BackupOuterClass {
       private java.lang.Object sourceClusterId_ = "";
       /**
        * <pre>
-       * ID of the PostgreSQL cluster that the backup was created for.
+       * ID of the Greenplum® cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1299,7 +1284,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster that the backup was created for.
+       * ID of the Greenplum® cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1320,7 +1305,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster that the backup was created for.
+       * ID of the Greenplum® cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1339,7 +1324,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster that the backup was created for.
+       * ID of the Greenplum® cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1353,7 +1338,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster that the backup was created for.
+       * ID of the Greenplum® cluster that the backup was created for.
        * </pre>
        *
        * <code>string source_cluster_id = 4;</code>
@@ -1530,7 +1515,7 @@ public final class BackupOuterClass {
       private long size_ ;
       /**
        * <pre>
-       * Size of backup in bytes
+       * Size of the backup in bytes.
        * </pre>
        *
        * <code>int64 size = 6;</code>
@@ -1542,7 +1527,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Size of backup in bytes
+       * Size of the backup in bytes.
        * </pre>
        *
        * <code>int64 size = 6;</code>
@@ -1557,7 +1542,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Size of backup in bytes
+       * Size of the backup in bytes.
        * </pre>
        *
        * <code>int64 size = 6;</code>

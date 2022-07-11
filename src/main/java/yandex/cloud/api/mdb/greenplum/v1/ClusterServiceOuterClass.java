@@ -20,7 +20,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to return.
+     * ID of the Greenplum® cluster resource to return.
      * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -30,7 +30,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to return.
+     * ID of the Greenplum® cluster resource to return.
      * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -128,7 +128,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to return.
+     * ID of the Greenplum® cluster resource to return.
      * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -150,7 +150,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to return.
+     * ID of the Greenplum® cluster resource to return.
      * To get the cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -477,7 +477,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to return.
+       * ID of the Greenplum® cluster resource to return.
        * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -498,7 +498,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to return.
+       * ID of the Greenplum® cluster resource to return.
        * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -520,7 +520,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to return.
+       * ID of the Greenplum® cluster resource to return.
        * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -540,7 +540,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to return.
+       * ID of the Greenplum® cluster resource to return.
        * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -555,7 +555,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to return.
+       * ID of the Greenplum® cluster resource to return.
        * To get the cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -634,6 +634,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list Greenplum® clusters in.
+     * 
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -644,6 +645,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list Greenplum® clusters in.
+     * 
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -655,9 +657,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * 
+     * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -667,8 +669,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -677,8 +678,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -690,9 +690,13 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
+     * 
      * The expression must specify:
+     * 
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 
      * 2. An `=` operator.
+     * 
      * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
@@ -703,9 +707,13 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
+     * 
      * The expression must specify:
+     * 
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 
      * 2. An `=` operator.
+     * 
      * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
@@ -823,6 +831,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list Greenplum® clusters in.
+     * 
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -845,6 +854,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list Greenplum® clusters in.
+     * 
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
@@ -870,9 +880,9 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * 
+     * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -887,8 +897,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -909,8 +918,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -936,9 +944,13 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
+     * 
      * The expression must specify:
+     * 
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 
      * 2. An `=` operator.
+     * 
      * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
@@ -961,9 +973,13 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
+     * 
      * The expression must specify:
+     * 
      * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 
      * 2. An `=` operator.
+     * 
      * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
      * </pre>
      *
@@ -1343,6 +1359,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list Greenplum® clusters in.
+       * 
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1364,6 +1381,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list Greenplum® clusters in.
+       * 
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1386,6 +1404,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list Greenplum® clusters in.
+       * 
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1406,6 +1425,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list Greenplum® clusters in.
+       * 
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1421,6 +1441,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list Greenplum® clusters in.
+       * 
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
@@ -1443,9 +1464,9 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * 
+       * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1457,9 +1478,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * 
+       * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1474,9 +1495,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * 
+       * If the number of available results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1492,8 +1513,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1513,8 +1533,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1535,8 +1554,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1555,8 +1573,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1570,8 +1587,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClustersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1594,9 +1610,13 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
+       * 
        * The expression must specify:
+       * 
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 
        * 2. An `=` operator.
+       * 
        * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
@@ -1618,9 +1638,13 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
+       * 
        * The expression must specify:
+       * 
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 
        * 2. An `=` operator.
+       * 
        * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
@@ -1643,9 +1667,13 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
+       * 
        * The expression must specify:
+       * 
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 
        * 2. An `=` operator.
+       * 
        * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
@@ -1666,9 +1694,13 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
+       * 
        * The expression must specify:
+       * 
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 
        * 2. An `=` operator.
+       * 
        * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
@@ -1684,9 +1716,13 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
+       * 
        * The expression must specify:
+       * 
        * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 
        * 2. An `=` operator.
+       * 
        * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-zA-Z0-9_-]+`.
        * </pre>
        *
@@ -1764,7 +1800,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1773,7 +1809,7 @@ public final class ClusterServiceOuterClass {
         getClustersList();
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1781,7 +1817,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster getClusters(int index);
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1789,7 +1825,7 @@ public final class ClusterServiceOuterClass {
     int getClustersCount();
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1798,7 +1834,7 @@ public final class ClusterServiceOuterClass {
         getClustersOrBuilderList();
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1808,10 +1844,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1820,10 +1855,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1934,7 +1968,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> clusters_;
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1945,7 +1979,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1957,7 +1991,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1968,7 +2002,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1979,7 +2013,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Greenplum Cluster resources.
+     * List of Greenplum® cluster resources.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -1994,10 +2028,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2018,10 +2051,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2415,7 +2447,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2429,7 +2461,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2443,7 +2475,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2457,7 +2489,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2478,7 +2510,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2496,7 +2528,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2516,7 +2548,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2537,7 +2569,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2555,7 +2587,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2573,7 +2605,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2592,7 +2624,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2609,7 +2641,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2626,7 +2658,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2637,7 +2669,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2651,7 +2683,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2666,7 +2698,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2677,7 +2709,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2689,7 +2721,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Greenplum Cluster resources.
+       * List of Greenplum® cluster resources.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.greenplum.v1.Cluster clusters = 1;</code>
@@ -2716,10 +2748,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2739,10 +2770,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2763,10 +2793,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2785,10 +2814,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2802,10 +2830,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClustersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClustersRequest.page_size], use the [next_page_token] as the value for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2902,7 +2929,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+     * Name of the Greenplum® cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2911,7 +2938,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+     * Name of the Greenplum® cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2942,8 +2969,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2951,8 +2978,8 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2967,8 +2994,8 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2977,8 +3004,8 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2989,8 +3016,8 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3134,7 +3161,7 @@ public final class ClusterServiceOuterClass {
      * Owner user name.
      * </pre>
      *
-     * <code>string user_name = 12;</code>
+     * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
      * @return The userName.
      */
     java.lang.String getUserName();
@@ -3143,7 +3170,7 @@ public final class ClusterServiceOuterClass {
      * Owner user name.
      * </pre>
      *
-     * <code>string user_name = 12;</code>
+     * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
@@ -3151,7 +3178,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -3160,7 +3187,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getUserPassword();
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -3232,7 +3259,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Whether or not cluster is protected from being deleted.
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 16;</code>
@@ -3283,7 +3310,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -3292,7 +3319,7 @@ public final class ClusterServiceOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -3301,7 +3328,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -3309,16 +3336,28 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
 
     /**
+     * <pre>
+     * Configuration of Greenplum® and Odyssey®.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
      * @return Whether the configSpec field is set.
      */
     boolean hasConfigSpec();
     /**
+     * <pre>
+     * Configuration of Greenplum® and Odyssey®.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
      * @return The configSpec.
      */
     yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec();
     /**
+     * <pre>
+     * Configuration of Greenplum® and Odyssey®.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder();
@@ -3636,7 +3675,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+     * Name of the Greenplum® cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3657,7 +3696,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+     * Name of the Greenplum® cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3752,8 +3791,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3775,8 +3814,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3788,8 +3827,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3806,8 +3845,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4018,7 +4057,7 @@ public final class ClusterServiceOuterClass {
      * Owner user name.
      * </pre>
      *
-     * <code>string user_name = 12;</code>
+     * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -4039,7 +4078,7 @@ public final class ClusterServiceOuterClass {
      * Owner user name.
      * </pre>
      *
-     * <code>string user_name = 12;</code>
+     * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -4061,7 +4100,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object userPassword_;
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -4082,7 +4121,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -4204,7 +4243,7 @@ public final class ClusterServiceOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Whether or not cluster is protected from being deleted.
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 16;</code>
@@ -4270,7 +4309,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -4282,7 +4321,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -4294,7 +4333,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -4307,6 +4346,10 @@ public final class ClusterServiceOuterClass {
     public static final int CONFIG_SPEC_FIELD_NUMBER = 20;
     private yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec configSpec_;
     /**
+     * <pre>
+     * Configuration of Greenplum® and Odyssey®.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
      * @return Whether the configSpec field is set.
      */
@@ -4315,6 +4358,10 @@ public final class ClusterServiceOuterClass {
       return configSpec_ != null;
     }
     /**
+     * <pre>
+     * Configuration of Greenplum® and Odyssey®.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
      * @return The configSpec.
      */
@@ -4323,6 +4370,10 @@ public final class ClusterServiceOuterClass {
       return configSpec_ == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
     }
     /**
+     * <pre>
+     * Configuration of Greenplum® and Odyssey®.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
      */
     @java.lang.Override
@@ -5173,7 +5224,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+       * Name of the Greenplum® cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5193,7 +5244,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+       * Name of the Greenplum® cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5214,7 +5265,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+       * Name of the Greenplum® cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5233,7 +5284,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+       * Name of the Greenplum® cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5247,7 +5298,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® cluster. The name must be unique within the folder. Maximum 63 characters.
+       * Name of the Greenplum® cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5390,8 +5441,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5413,8 +5464,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5426,8 +5477,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5444,8 +5495,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5470,8 +5521,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5494,8 +5545,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5514,8 +5565,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6202,7 +6253,7 @@ public final class ClusterServiceOuterClass {
        * Owner user name.
        * </pre>
        *
-       * <code>string user_name = 12;</code>
+       * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -6222,7 +6273,7 @@ public final class ClusterServiceOuterClass {
        * Owner user name.
        * </pre>
        *
-       * <code>string user_name = 12;</code>
+       * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -6243,7 +6294,7 @@ public final class ClusterServiceOuterClass {
        * Owner user name.
        * </pre>
        *
-       * <code>string user_name = 12;</code>
+       * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -6262,7 +6313,7 @@ public final class ClusterServiceOuterClass {
        * Owner user name.
        * </pre>
        *
-       * <code>string user_name = 12;</code>
+       * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -6276,7 +6327,7 @@ public final class ClusterServiceOuterClass {
        * Owner user name.
        * </pre>
        *
-       * <code>string user_name = 12;</code>
+       * <code>string user_name = 12 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -6295,7 +6346,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object userPassword_ = "";
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6315,7 +6366,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6336,7 +6387,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6355,7 +6406,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6369,7 +6420,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -6633,7 +6684,7 @@ public final class ClusterServiceOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -6645,7 +6696,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -6660,7 +6711,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 16;</code>
@@ -6824,7 +6875,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6835,7 +6886,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6850,7 +6901,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6870,7 +6921,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6888,7 +6939,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6910,7 +6961,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6928,7 +6979,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6940,7 +6991,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6955,7 +7006,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 19;</code>
@@ -6978,6 +7029,10 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> configSpecBuilder_;
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        * @return Whether the configSpec field is set.
        */
@@ -6985,6 +7040,10 @@ public final class ClusterServiceOuterClass {
         return configSpecBuilder_ != null || configSpec_ != null;
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        * @return The configSpec.
        */
@@ -6996,6 +7055,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       public Builder setConfigSpec(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec value) {
@@ -7012,6 +7075,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       public Builder setConfigSpec(
@@ -7026,6 +7093,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       public Builder mergeConfigSpec(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec value) {
@@ -7044,6 +7115,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       public Builder clearConfigSpec() {
@@ -7058,6 +7133,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec.Builder getConfigSpecBuilder() {
@@ -7066,6 +7145,10 @@ public final class ClusterServiceOuterClass {
         return getConfigSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder() {
@@ -7077,6 +7160,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of Greenplum® and Odyssey®.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConfigSpec config_spec = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7181,38 +7268,34 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
      * @return Whether the pool field is set.
      */
     boolean hasPool();
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
      * @return The pool.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getPool();
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getPoolOrBuilder();
 
     public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec.GreenplumConfigCase getGreenplumConfigCase();
   }
   /**
-   * <pre>
-   * Configuration of greenplum and odyssey
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConfigSpec}
    */
   public static final class ConfigSpec extends
@@ -7285,7 +7368,7 @@ public final class ClusterServiceOuterClass {
               greenplumConfigCase_ = 2;
               break;
             }
-            case 34: {
+            case 26: {
               yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder subBuilder = null;
               if (pool_ != null) {
                 subBuilder = pool_.toBuilder();
@@ -7433,14 +7516,14 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.getDefaultInstance();
     }
 
-    public static final int POOL_FIELD_NUMBER = 4;
+    public static final int POOL_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig pool_;
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
      * @return Whether the pool field is set.
      */
     @java.lang.Override
@@ -7449,10 +7532,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
      * @return The pool.
      */
     @java.lang.Override
@@ -7461,10 +7544,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Odyssey pool settings
+     * Odyssey® pool settings.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+     * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getPoolOrBuilder() {
@@ -7492,7 +7575,7 @@ public final class ClusterServiceOuterClass {
         output.writeMessage(2, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19) greenplumConfig_);
       }
       if (pool_ != null) {
-        output.writeMessage(4, getPool());
+        output.writeMessage(3, getPool());
       }
       unknownFields.writeTo(output);
     }
@@ -7513,7 +7596,7 @@ public final class ClusterServiceOuterClass {
       }
       if (pool_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPool());
+          .computeMessageSize(3, getPool());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7671,10 +7754,6 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Configuration of greenplum and odyssey
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConfigSpec}
      */
     public static final class Builder extends
@@ -8161,10 +8240,10 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> poolBuilder_;
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        * @return Whether the pool field is set.
        */
       public boolean hasPool() {
@@ -8172,10 +8251,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        * @return The pool.
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getPool() {
@@ -8187,10 +8266,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       public Builder setPool(yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig value) {
         if (poolBuilder_ == null) {
@@ -8207,10 +8286,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       public Builder setPool(
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder builderForValue) {
@@ -8225,10 +8304,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       public Builder mergePool(yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig value) {
         if (poolBuilder_ == null) {
@@ -8247,10 +8326,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       public Builder clearPool() {
         if (poolBuilder_ == null) {
@@ -8265,10 +8344,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder getPoolBuilder() {
         
@@ -8277,10 +8356,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getPoolOrBuilder() {
         if (poolBuilder_ != null) {
@@ -8292,10 +8371,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Odyssey pool settings
+       * Odyssey® pool settings.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 4;</code>
+       * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig pool = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> 
@@ -8973,7 +9052,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to update.
+     * ID of the Greenplum® cluster resource to update.
      * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -8983,7 +9062,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to update.
+     * ID of the Greenplum® cluster resource to update.
      * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -8995,7 +9074,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+     * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -9004,7 +9083,7 @@ public final class ClusterServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+     * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -9013,7 +9092,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+     * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -9042,10 +9121,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9053,10 +9132,10 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9071,10 +9150,10 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9083,10 +9162,10 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9097,10 +9176,10 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9131,7 +9210,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Greenplum® cluster configuration.
+     * The Greenplum® cluster configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -9140,7 +9219,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfig();
     /**
      * <pre>
-     * Greenplum® cluster configuration.
+     * The Greenplum® cluster configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -9149,7 +9228,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumConfig getConfig();
     /**
      * <pre>
-     * Greenplum® cluster configuration.
+     * The Greenplum® cluster configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -9212,7 +9291,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -9221,7 +9300,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getUserPassword();
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -9232,7 +9311,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -9241,7 +9320,7 @@ public final class ClusterServiceOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -9250,7 +9329,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -9300,7 +9379,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Whether or not cluster is protected from being deleted.
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 18;</code>
@@ -9566,7 +9645,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to update.
+     * ID of the Greenplum® cluster resource to update.
      * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -9588,7 +9667,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to update.
+     * ID of the Greenplum® cluster resource to update.
      * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
      * </pre>
      *
@@ -9614,7 +9693,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+     * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -9626,7 +9705,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+     * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -9638,7 +9717,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+     * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -9722,10 +9801,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9747,10 +9826,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9762,10 +9841,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9782,10 +9861,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project":"mvp" or "source":"dictionary".
-     * The new set of labels will completely replace the old ones. To add a label, request the current
-     * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, `"project":"mvp"` or `"source":"dictionary"`.
+     * The new set of labels completely replaces the old one.
+     * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9853,7 +9932,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumConfig config_;
     /**
      * <pre>
-     * Greenplum® cluster configuration.
+     * The Greenplum® cluster configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -9865,7 +9944,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Greenplum® cluster configuration.
+     * The Greenplum® cluster configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -9877,7 +9956,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Greenplum® cluster configuration.
+     * The Greenplum® cluster configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -9967,7 +10046,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object userPassword_;
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -9988,7 +10067,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Owner user password. Must be 8-128 characters long
+     * Owner user password.
      * </pre>
      *
      * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -10013,7 +10092,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -10025,7 +10104,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -10037,7 +10116,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -10102,7 +10181,7 @@ public final class ClusterServiceOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Whether or not cluster is protected from being deleted.
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 18;</code>
@@ -10790,7 +10869,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to update.
+       * ID of the Greenplum® cluster resource to update.
        * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -10811,7 +10890,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to update.
+       * ID of the Greenplum® cluster resource to update.
        * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -10833,7 +10912,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to update.
+       * ID of the Greenplum® cluster resource to update.
        * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -10853,7 +10932,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to update.
+       * ID of the Greenplum® cluster resource to update.
        * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -10868,7 +10947,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to update.
+       * ID of the Greenplum® cluster resource to update.
        * To get the Greenplum® cluster ID, use a [ClusterService.List] request.
        * </pre>
        *
@@ -10893,7 +10972,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10904,7 +10983,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10919,7 +10998,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10939,7 +11018,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10957,7 +11036,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10979,7 +11058,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10997,7 +11076,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11009,7 +11088,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11024,7 +11103,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Greenplum® Cluster resource should be updated.
+       * Field mask that specifies which fields of the Greenplum® cluster resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11167,10 +11246,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11192,10 +11271,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11207,10 +11286,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11227,10 +11306,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11255,10 +11334,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11281,10 +11360,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11303,10 +11382,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project":"mvp" or "source":"dictionary".
-       * The new set of labels will completely replace the old ones. To add a label, request the current
-       * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, `"project":"mvp"` or `"source":"dictionary"`.
+       * The new set of labels completely replaces the old one.
+       * To add a label, request the current set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11420,7 +11499,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumConfigOrBuilder> configBuilder_;
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11431,7 +11510,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11446,7 +11525,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11466,7 +11545,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11484,7 +11563,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11506,7 +11585,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11524,7 +11603,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11536,7 +11615,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11551,7 +11630,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster configuration.
+       * The Greenplum® cluster configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 6;</code>
@@ -11883,7 +11962,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object userPassword_ = "";
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -11903,7 +11982,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -11924,7 +12003,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -11943,7 +12022,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -11957,7 +12036,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Owner user password. Must be 8-128 characters long
+       * Owner user password.
        * </pre>
        *
        * <code>string user_password = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "8-128"];</code>
@@ -11981,7 +12060,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -11992,7 +12071,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12007,7 +12086,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12027,7 +12106,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12045,7 +12124,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12067,7 +12146,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12085,7 +12164,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12097,7 +12176,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12112,7 +12191,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * The Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -12280,7 +12359,7 @@ public final class ClusterServiceOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 18;</code>
@@ -12292,7 +12371,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 18;</code>
@@ -12307,7 +12386,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Whether or not cluster is protected from being deleted.
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 18;</code>
@@ -12533,7 +12612,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource that is being updated.
+     * ID of the Greenplum® cluster resource that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12542,7 +12621,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource that is being updated.
+     * ID of the Greenplum® cluster resource that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12639,7 +12718,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource that is being updated.
+     * ID of the Greenplum® cluster resource that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12660,7 +12739,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource that is being updated.
+     * ID of the Greenplum® cluster resource that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12986,7 +13065,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource that is being updated.
+       * ID of the Greenplum® cluster resource that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13006,7 +13085,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource that is being updated.
+       * ID of the Greenplum® cluster resource that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13027,7 +13106,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource that is being updated.
+       * ID of the Greenplum® cluster resource that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13046,7 +13125,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource that is being updated.
+       * ID of the Greenplum® cluster resource that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13060,7 +13139,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource that is being updated.
+       * ID of the Greenplum® cluster resource that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16788,7 +16867,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to list operations for.
+     * ID of the Greenplum® cluster resource to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16797,7 +16876,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to list operations for.
+     * ID of the Greenplum® cluster resource to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16808,9 +16887,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -16820,8 +16898,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -16830,8 +16907,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -16940,7 +17016,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to list operations for.
+     * ID of the Greenplum® cluster resource to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16961,7 +17037,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Greenplum® Cluster resource to list operations for.
+     * ID of the Greenplum® cluster resource to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16986,9 +17062,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17003,8 +17078,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17025,8 +17099,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17387,7 +17460,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to list operations for.
+       * ID of the Greenplum® cluster resource to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17407,7 +17480,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to list operations for.
+       * ID of the Greenplum® cluster resource to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17428,7 +17501,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to list operations for.
+       * ID of the Greenplum® cluster resource to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17447,7 +17520,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to list operations for.
+       * ID of the Greenplum® cluster resource to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17461,7 +17534,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum® Cluster resource to list operations for.
+       * ID of the Greenplum® cluster resource to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17483,9 +17556,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17497,9 +17569,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17514,9 +17585,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17532,8 +17602,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17553,8 +17622,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17575,8 +17643,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17595,8 +17662,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17610,8 +17676,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterOperationsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17732,10 +17797,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17744,10 +17808,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17918,10 +17981,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17942,10 +18004,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -18640,10 +18701,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18663,10 +18723,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18687,10 +18746,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18709,10 +18767,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18726,10 +18783,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18828,9 +18884,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -18840,8 +18895,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -18850,8 +18904,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19008,9 +19061,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19025,8 +19077,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19047,8 +19098,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19510,9 +19560,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19524,9 +19573,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19541,9 +19589,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19559,8 +19606,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19580,8 +19626,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19602,8 +19647,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19622,8 +19666,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19637,8 +19680,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterHostsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19759,10 +19801,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -19771,10 +19812,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -19945,10 +19985,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -19969,10 +20008,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -20667,10 +20705,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20690,10 +20727,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20714,10 +20750,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20736,10 +20771,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20753,10 +20787,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterHostsRequest.page_size], use the [next_page_token] as the value for the [ListClusterHostsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20859,10 +20892,6 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder();
   }
   /**
-   * <pre>
-   * Configuration of the master subcluster.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec}
    */
   public static final class MasterSubclusterConfigSpec extends
@@ -21151,10 +21180,6 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Configuration of the master subcluster.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfigSpec}
      */
     public static final class Builder extends
@@ -21548,10 +21573,6 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder();
   }
   /**
-   * <pre>
-   * Configuration of the segment subcluster.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec}
    */
   public static final class SegmentSubclusterConfigSpec extends
@@ -21840,10 +21861,6 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Configuration of the segment subcluster.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfigSpec}
      */
     public static final class Builder extends
@@ -22255,11 +22272,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22268,11 +22284,10 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22443,11 +22458,10 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22468,11 +22482,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23167,11 +23180,10 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23191,11 +23203,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23216,11 +23227,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23239,11 +23249,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23257,11 +23266,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from [StreamLogs] method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23338,7 +23346,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the log was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -23347,7 +23355,7 @@ public final class ClusterServiceOuterClass {
     boolean hasTimestamp();
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the log was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -23356,7 +23364,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getTimestamp();
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the log was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -23537,7 +23545,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the log was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -23549,7 +23557,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the log was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -23561,7 +23569,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time when the log was recorded.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24039,7 +24047,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24050,7 +24058,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24065,7 +24073,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24085,7 +24093,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24103,7 +24111,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24125,7 +24133,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24143,7 +24151,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24155,7 +24163,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24170,7 +24178,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Log record timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time when the log was recorded.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 1;</code>
@@ -24428,7 +24436,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -24439,7 +24447,7 @@ public final class ClusterServiceOuterClass {
         getColumnFilterList();
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -24449,7 +24457,7 @@ public final class ClusterServiceOuterClass {
     int getColumnFilterCount();
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -24460,7 +24468,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getColumnFilter(int index);
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -24492,7 +24500,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Start timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -24501,7 +24509,7 @@ public final class ClusterServiceOuterClass {
     boolean hasFromTime();
     /**
      * <pre>
-     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Start timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -24510,7 +24518,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getFromTime();
     /**
      * <pre>
-     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Start timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -24519,7 +24527,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -24528,7 +24536,7 @@ public final class ClusterServiceOuterClass {
     boolean hasToTime();
     /**
      * <pre>
-     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -24537,7 +24545,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getToTime();
     /**
      * <pre>
-     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -24546,9 +24554,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -24558,8 +24565,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24568,8 +24574,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -24580,7 +24585,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Always return `next_page_token`, even if the current page is empty.
+     * The service always returns a [ListClusterLogsResponse.next_page_token], even if the current page is empty.
      * </pre>
      *
      * <code>bool always_next_page_token = 8;</code>
@@ -24592,13 +24597,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
      * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
      * Examples of a filter:
-     * * `message.hostname='node1.db.cloud.yandex.net'`
-     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -24609,13 +24613,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
      * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
      * Examples of a filter:
-     * * `message.hostname='node1.db.cloud.yandex.net'`
-     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -24780,10 +24783,6 @@ public final class ClusterServiceOuterClass {
     }
 
     /**
-     * <pre>
-     * Type of the service to request logs about.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.ListClusterLogsRequest.ServiceType}
      */
     public enum ServiceType
@@ -24976,7 +24975,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList columnFilter_;
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -24989,7 +24988,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -25001,7 +25000,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -25014,7 +25013,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to request.
+     * Columns from log table to request.
      * If no columns are specified, entire log records are returned.
      * </pre>
      *
@@ -25058,7 +25057,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp fromTime_;
     /**
      * <pre>
-     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Start timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -25070,7 +25069,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Start timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -25082,7 +25081,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Start timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -25096,7 +25095,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp toTime_;
     /**
      * <pre>
-     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -25108,7 +25107,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -25120,7 +25119,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End timestamp for the logs request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -25134,9 +25133,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -25151,8 +25149,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -25173,8 +25170,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -25199,7 +25195,7 @@ public final class ClusterServiceOuterClass {
     private boolean alwaysNextPageToken_;
     /**
      * <pre>
-     * Always return `next_page_token`, even if the current page is empty.
+     * The service always returns a [ListClusterLogsResponse.next_page_token], even if the current page is empty.
      * </pre>
      *
      * <code>bool always_next_page_token = 8;</code>
@@ -25216,13 +25212,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
      * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
      * Examples of a filter:
-     * * `message.hostname='node1.db.cloud.yandex.net'`
-     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -25245,13 +25240,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
      * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
      * Examples of a filter:
-     * * `message.hostname='node1.db.cloud.yandex.net'`
-     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -25866,7 +25860,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25879,7 +25873,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25891,7 +25885,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25904,7 +25898,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25918,7 +25912,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25939,7 +25933,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25959,7 +25953,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25977,7 +25971,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -25992,7 +25986,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to request.
+       * Columns from log table to request.
        * If no columns are specified, entire log records are returned.
        * </pre>
        *
@@ -26091,7 +26085,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fromTimeBuilder_;
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26102,7 +26096,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26117,7 +26111,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26137,7 +26131,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26155,7 +26149,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26177,7 +26171,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26195,7 +26189,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26207,7 +26201,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26222,7 +26216,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Start timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Start timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 4;</code>
@@ -26246,7 +26240,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> toTimeBuilder_;
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26257,7 +26251,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26272,7 +26266,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26292,7 +26286,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26310,7 +26304,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26332,7 +26326,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26350,7 +26344,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26362,7 +26356,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26377,7 +26371,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * End timestamp for the logs request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End timestamp for the logs request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -26399,9 +26393,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26413,9 +26406,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26430,9 +26422,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterLogsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 6 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26448,8 +26439,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26469,8 +26459,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26491,8 +26480,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26511,8 +26499,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26526,8 +26513,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterLogsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 7 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26549,7 +26535,7 @@ public final class ClusterServiceOuterClass {
       private boolean alwaysNextPageToken_ ;
       /**
        * <pre>
-       * Always return `next_page_token`, even if the current page is empty.
+       * The service always returns a [ListClusterLogsResponse.next_page_token], even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -26561,7 +26547,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Always return `next_page_token`, even if the current page is empty.
+       * The service always returns a [ListClusterLogsResponse.next_page_token], even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -26576,7 +26562,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Always return `next_page_token`, even if the current page is empty.
+       * The service always returns a [ListClusterLogsResponse.next_page_token], even if the current page is empty.
        * </pre>
        *
        * <code>bool always_next_page_token = 8;</code>
@@ -26594,13 +26580,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
        * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
        * Examples of a filter:
-       * * `message.hostname='node1.db.cloud.yandex.net'`
-       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -26622,13 +26607,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
        * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
        * Examples of a filter:
-       * * `message.hostname='node1.db.cloud.yandex.net'`
-       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -26651,13 +26635,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
        * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
        * Examples of a filter:
-       * * `message.hostname='node1.db.cloud.yandex.net'`
-       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -26678,13 +26661,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
        * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
        * Examples of a filter:
-       * * `message.hostname='node1.db.cloud.yandex.net'`
-       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -26700,13 +26682,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for `GREENPLUM` service) and [LogRecord.logs.message.level] (for `GREENPLUM_POOLER` service) fields.
        * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * 3. A value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
        * Examples of a filter:
-       * * `message.hostname='node1.db.cloud.yandex.net'`
-       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -26805,9 +26786,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     *If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -26817,8 +26797,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26827,8 +26806,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -26985,9 +26963,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     *If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -27002,8 +26979,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27024,8 +27000,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27487,9 +27462,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       *If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -27501,9 +27475,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       *If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -27518,9 +27491,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       *If the number of available results is larger than [page_size], the service returns a [ListClusterBackupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -27536,8 +27508,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27557,8 +27528,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27579,8 +27549,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27599,8 +27568,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27614,8 +27582,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token.  To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterBackupsResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -27719,10 +27686,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * This token allows you to continue streaming logs starting from the exact same record.
+     * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+     * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -27731,10 +27697,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextRecordToken();
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * This token allows you to continue streaming logs starting from the exact same record.
+     * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+     * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -27882,10 +27847,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextRecordToken_;
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * This token allows you to continue streaming logs starting from the exact same record.
+     * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+     * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -27906,10 +27870,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * This token allows you to continue streaming logs starting from the exact same record.
+     * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+     * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -28420,10 +28383,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextRecordToken_ = "";
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * This token allows you to continue streaming logs starting from the exact same record.
+       * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+       * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28443,10 +28405,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * This token allows you to continue streaming logs starting from the exact same record.
+       * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+       * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28467,10 +28428,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * This token allows you to continue streaming logs starting from the exact same record.
+       * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+       * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28489,10 +28449,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * This token allows you to continue streaming logs starting from the exact same record.
+       * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+       * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28506,10 +28465,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * This token allows you to continue streaming logs starting from the exact same record.
+       * To do that, specify value of [next_record_token] as the value for [StreamLogs.record_token] parameter in the next [StreamLogs] request.
+       * This value is interchangeable with [ListLogs.next_page_token] from [ListLogs] method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28586,7 +28544,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the Greenplum cluster.
+     * ID of the Greenplum® cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28595,7 +28553,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the Greenplum cluster.
+     * ID of the Greenplum® cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28606,7 +28564,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -28616,7 +28575,8 @@ public final class ClusterServiceOuterClass {
         getColumnFilterList();
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -28625,7 +28585,8 @@ public final class ClusterServiceOuterClass {
     int getColumnFilterCount();
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -28635,7 +28596,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getColumnFilter(int index);
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -28646,11 +28608,19 @@ public final class ClusterServiceOuterClass {
         getColumnFilterBytes(int index);
 
     /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      * @return The enum numeric value on the wire for serviceType.
      */
     int getServiceTypeValue();
     /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      * @return The serviceType.
      */
@@ -28686,8 +28656,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+     * In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -28697,8 +28667,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+     * In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -28708,8 +28678,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+     * In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -28718,8 +28688,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28728,8 +28697,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getRecordToken();
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -28742,13 +28710,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
      * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
-     * `message.hostname='node1.db.cloud.yandex.net'`
-     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -28759,13 +28726,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
      * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
-     * `message.hostname='node1.db.cloud.yandex.net'`
-     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -29064,7 +29030,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the Greenplum cluster.
+     * ID of the Greenplum® cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29085,7 +29051,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the Greenplum cluster.
+     * ID of the Greenplum® cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29110,7 +29076,8 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList columnFilter_;
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -29122,7 +29089,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -29133,7 +29101,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -29145,7 +29114,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Columns from logs table to get in the response.
+     * Columns from log table to get in the response.
+     * If no columns are specified, entire log records are returned.
      * </pre>
      *
      * <code>repeated string column_filter = 2;</code>
@@ -29160,6 +29130,10 @@ public final class ClusterServiceOuterClass {
     public static final int SERVICE_TYPE_FIELD_NUMBER = 3;
     private int serviceType_;
     /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      * @return The enum numeric value on the wire for serviceType.
      */
@@ -29167,6 +29141,10 @@ public final class ClusterServiceOuterClass {
       return serviceType_;
     }
     /**
+     * <pre>
+     * Type of the service to request logs about.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
      * @return The serviceType.
      */
@@ -29219,8 +29197,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+     * In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -29233,8 +29211,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+     * In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -29247,8 +29225,8 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * End timestamp for the logs request.
-     * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+     * In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -29262,8 +29240,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object recordToken_;
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29284,8 +29261,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-     * request to start streaming from next log record.
+     * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
      * </pre>
      *
      * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -29312,13 +29288,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
      * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
-     * `message.hostname='node1.db.cloud.yandex.net'`
-     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -29341,13 +29316,12 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-     * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+     * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
      * 2. An `=` operator.
-     * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+     * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
      * Examples of a filter:
-     * `message.hostname='node1.db.cloud.yandex.net'`
-     * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+     * * `message.hostname='node1.db.cloud.yandex.net'`;
+     * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -29819,7 +29793,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the Greenplum cluster.
+       * ID of the Greenplum® cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29839,7 +29813,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Greenplum cluster.
+       * ID of the Greenplum® cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29860,7 +29834,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Greenplum cluster.
+       * ID of the Greenplum® cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29879,7 +29853,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Greenplum cluster.
+       * ID of the Greenplum® cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29893,7 +29867,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Greenplum cluster.
+       * ID of the Greenplum® cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29921,7 +29895,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -29933,7 +29908,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -29944,7 +29920,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -29956,7 +29933,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -29969,7 +29947,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -29989,7 +29968,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -30008,7 +29988,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -30025,7 +30006,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -30039,7 +30021,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Columns from logs table to get in the response.
+       * Columns from log table to get in the response.
+       * If no columns are specified, entire log records are returned.
        * </pre>
        *
        * <code>repeated string column_filter = 2;</code>
@@ -30060,6 +30043,10 @@ public final class ClusterServiceOuterClass {
 
       private int serviceType_ = 0;
       /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        * @return The enum numeric value on the wire for serviceType.
        */
@@ -30067,6 +30054,10 @@ public final class ClusterServiceOuterClass {
         return serviceType_;
       }
       /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        * @param value The enum numeric value on the wire for serviceType to set.
        * @return This builder for chaining.
@@ -30078,6 +30069,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        * @return The serviceType.
        */
@@ -30088,6 +30083,10 @@ public final class ClusterServiceOuterClass {
         return result == null ? yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.ServiceType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        * @param value The serviceType to set.
        * @return This builder for chaining.
@@ -30102,6 +30101,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the service to request logs about.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.StreamClusterLogsRequest.ServiceType service_type = 3;</code>
        * @return This builder for chaining.
        */
@@ -30273,8 +30276,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30286,8 +30289,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30303,8 +30306,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30325,8 +30328,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30345,8 +30348,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30369,8 +30372,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30389,8 +30392,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30403,8 +30406,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30420,8 +30423,8 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * End timestamp for the logs request.
-       * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * If this field is not set, all existing logs are sent as well as the new ones as they appear.
+       * In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30443,8 +30446,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object recordToken_ = "";
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30464,8 +30466,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30486,8 +30487,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30506,8 +30506,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30521,8 +30520,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
-       * request to start streaming from next log record.
+       * Record token. Set [record_token] to the [StreamLogs.next_record_token] returned by the previous [StreamLogs] request to start streaming from the next log record.
        * </pre>
        *
        * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -30546,13 +30544,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
        * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
-       * `message.hostname='node1.db.cloud.yandex.net'`
-       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -30574,13 +30571,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
        * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
-       * `message.hostname='node1.db.cloud.yandex.net'`
-       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -30603,13 +30599,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
        * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
-       * `message.hostname='node1.db.cloud.yandex.net'`
-       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -30630,13 +30625,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
        * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
-       * `message.hostname='node1.db.cloud.yandex.net'`
-       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -30652,13 +30646,12 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname],
-       * [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
+       * 1. A field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.error_severity] (for GREENPLUM service), [LogRecord.logs.message.level] (for POOLER service) fields.
        * 2. An `=` operator.
-       * 3. The value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
+       * 3. A value in double quotes (`"`). Must be 1-63 characters long and match the regular expression `[a-z0-9.-]{1,61}`.
        * Examples of a filter:
-       * `message.hostname='node1.db.cloud.yandex.net'`
-       * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`
+       * * `message.hostname='node1.db.cloud.yandex.net'`;
+       * * `message.error_severity IN ("ERROR", "FATAL", "PANIC") AND message.hostname = "node1.db.cloud.yandex.net"`.
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -30779,10 +30772,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -30791,10 +30783,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -30965,10 +30956,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -30989,10 +30979,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request has its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -31687,10 +31676,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -31710,10 +31698,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -31734,10 +31721,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -31756,10 +31742,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -31773,10 +31758,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterBackupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterBackupsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request has its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -31935,8 +31919,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -31944,8 +31928,8 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -31960,8 +31944,8 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -31970,8 +31954,8 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -31982,8 +31966,8 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -32013,7 +31997,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Greenplum® cluster config
+     * Greenplum® cluster config.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -32022,7 +32006,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfig();
     /**
      * <pre>
-     * Greenplum® cluster config
+     * Greenplum® cluster config.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -32031,7 +32015,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumRestoreConfig getConfig();
     /**
      * <pre>
-     * Greenplum® cluster config
+     * Greenplum® cluster config.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -32114,7 +32098,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32124,7 +32108,7 @@ public final class ClusterServiceOuterClass {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32133,7 +32117,7 @@ public final class ClusterServiceOuterClass {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32143,7 +32127,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32155,7 +32139,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 12;</code>
@@ -32206,7 +32190,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of placement group
+     * ID of the placement group.
      * </pre>
      *
      * <code>string placement_group_id = 14;</code>
@@ -32215,7 +32199,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPlacementGroupId();
     /**
      * <pre>
-     * ID of placement group
+     * ID of the placement group.
      * </pre>
      *
      * <code>string placement_group_id = 14;</code>
@@ -32226,7 +32210,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -32235,7 +32219,7 @@ public final class ClusterServiceOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -32244,7 +32228,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -32700,8 +32684,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -32723,8 +32707,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -32736,8 +32720,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -32754,8 +32738,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-     * For example, "project": "mvp" or "source": "dictionary".
+     * Custom labels for the Greenplum® cluster as `key:value` pairs.
+     * For example, "project":"mvp" or "source":"dictionary".
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -32804,7 +32788,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumRestoreConfig config_;
     /**
      * <pre>
-     * Greenplum® cluster config
+     * Greenplum® cluster config.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -32816,7 +32800,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Greenplum® cluster config
+     * Greenplum® cluster config.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -32828,7 +32812,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Greenplum® cluster config
+     * Greenplum® cluster config.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -32964,7 +32948,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32976,7 +32960,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32987,7 +32971,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -32999,7 +32983,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * User security groups
+     * User security groups.
      * </pre>
      *
      * <code>repeated string security_group_ids = 11;</code>
@@ -33015,7 +32999,7 @@ public final class ClusterServiceOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the cluster
+     * Determines whether the cluster is protected from being deleted.
      * </pre>
      *
      * <code>bool deletion_protection = 12;</code>
@@ -33081,7 +33065,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object placementGroupId_;
     /**
      * <pre>
-     * ID of placement group
+     * ID of the placement group.
      * </pre>
      *
      * <code>string placement_group_id = 14;</code>
@@ -33102,7 +33086,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of placement group
+     * ID of the placement group.
      * </pre>
      *
      * <code>string placement_group_id = 14;</code>
@@ -33127,7 +33111,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -33139,7 +33123,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -33151,7 +33135,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -34238,8 +34222,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34261,8 +34245,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34274,8 +34258,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34292,8 +34276,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34318,8 +34302,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34342,8 +34326,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34362,8 +34346,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Greenplum® cluster as `key:value` pairs. Maximum 64 per resource.
-       * For example, "project": "mvp" or "source": "dictionary".
+       * Custom labels for the Greenplum® cluster as `key:value` pairs.
+       * For example, "project":"mvp" or "source":"dictionary".
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -34455,7 +34439,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumRestoreConfig, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumRestoreConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.GreenplumRestoreConfigOrBuilder> configBuilder_;
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34466,7 +34450,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34481,7 +34465,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34501,7 +34485,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34519,7 +34503,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34541,7 +34525,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34559,7 +34543,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34571,7 +34555,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -34586,7 +34570,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Greenplum® cluster config
+       * Greenplum® cluster config.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumRestoreConfig config = 7;</code>
@@ -35020,7 +35004,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35032,7 +35016,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35043,7 +35027,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35055,7 +35039,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35068,7 +35052,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35088,7 +35072,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35107,7 +35091,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35124,7 +35108,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35138,7 +35122,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * User security groups
+       * User security groups.
        * </pre>
        *
        * <code>repeated string security_group_ids = 11;</code>
@@ -35160,7 +35144,7 @@ public final class ClusterServiceOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -35172,7 +35156,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -35187,7 +35171,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the cluster
+       * Determines whether the cluster is protected from being deleted.
        * </pre>
        *
        * <code>bool deletion_protection = 12;</code>
@@ -35349,7 +35333,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object placementGroupId_ = "";
       /**
        * <pre>
-       * ID of placement group
+       * ID of the placement group.
        * </pre>
        *
        * <code>string placement_group_id = 14;</code>
@@ -35369,7 +35353,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of placement group
+       * ID of the placement group.
        * </pre>
        *
        * <code>string placement_group_id = 14;</code>
@@ -35390,7 +35374,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of placement group
+       * ID of the placement group.
        * </pre>
        *
        * <code>string placement_group_id = 14;</code>
@@ -35409,7 +35393,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of placement group
+       * ID of the placement group.
        * </pre>
        *
        * <code>string placement_group_id = 14;</code>
@@ -35423,7 +35407,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of placement group
+       * ID of the placement group.
        * </pre>
        *
        * <code>string placement_group_id = 14;</code>
@@ -35447,7 +35431,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.greenplum.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35458,7 +35442,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35473,7 +35457,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35493,7 +35477,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35511,7 +35495,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35533,7 +35517,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35551,7 +35535,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35563,7 +35547,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -35578,7 +35562,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * A Greenplum® cluster maintenance window. Should be defined by either one of the two options.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.MaintenanceWindow maintenance_window = 15;</code>
@@ -36633,7 +36617,7 @@ public final class ClusterServiceOuterClass {
       "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024List" +
       "ClustersResponse\0228\n\010clusters\030\001 \003(\0132&.yan" +
       "dex.cloud.mdb.greenplum.v1.Cluster\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\206\010\n\024CreateClusterReq" +
+      "xt_page_token\030\002 \001(\t\"\214\010\n\024CreateClusterReq" +
       "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n" +
       "\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
       "-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006" +
@@ -36650,201 +36634,201 @@ public final class ClusterServiceOuterClass {
       ".cloud.mdb.greenplum.v1.SegmentSubcluste" +
       "rConfigSpec\022\031\n\021master_host_count\030\t \001(\003\022\027" +
       "\n\017segment_in_host\030\n \001(\003\022\032\n\022segment_host_" +
-      "count\030\013 \001(\003\022\021\n\tuser_name\030\014 \001(\t\022$\n\ruser_p" +
-      "assword\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022 \n\nnetwork_" +
-      "id\030\016 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group" +
-      "_ids\030\017 \003(\t\022\033\n\023deletion_protection\030\020 \001(\010\022" +
-      "\026\n\016host_group_ids\030\021 \003(\t\022L\n\022maintenance_w" +
-      "indow\030\023 \001(\01320.yandex.cloud.mdb.greenplum" +
-      ".v1.MaintenanceWindow\022>\n\013config_spec\030\024 \001" +
-      "(\0132).yandex.cloud.mdb.greenplum.v1.Confi" +
-      "gSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\273\002\n\nConfigSpec\022i\n\025greenplum" +
-      "_config_6_17\030\001 \001(\01322.yandex.cloud.mdb.gr" +
-      "eenplum.v1.GreenplumConfig6_17H\000R\024greenp" +
-      "lumConfig_6_17\022i\n\025greenplum_config_6_19\030" +
-      "\002 \001(\01322.yandex.cloud.mdb.greenplum.v1.Gr" +
-      "eenplumConfig6_19H\000R\024greenplumConfig_6_1" +
-      "9\022C\n\004pool\030\004 \001(\01325.yandex.cloud.mdb.green" +
-      "plum.v1.ConnectionPoolerConfigB\022\n\020greenp" +
-      "lum_config\"+\n\025CreateClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\310\006\n\024UpdateClusterRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013up" +
-      "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
-      "ask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006" +
-      "labels\030\004 \003(\0132?.yandex.cloud.mdb.greenplu" +
-      "m.v1.UpdateClusterRequest.LabelsEntryB?\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63" +
-      "\262\3101\022\022\020[a-z][-_0-9a-z]*\022(\n\004name\030\005 \001(\tB\032\212\310" +
-      "1\004<=63\362\3071\016[a-zA-Z0-9_-]*\022>\n\006config\030\006 \001(\013" +
-      "2..yandex.cloud.mdb.greenplum.v1.Greenpl" +
-      "umConfig\022P\n\rmaster_config\030\007 \001(\01329.yandex" +
-      ".cloud.mdb.greenplum.v1.MasterSubcluster" +
-      "ConfigSpec\022R\n\016segment_config\030\010 \001(\0132:.yan" +
-      "dex.cloud.mdb.greenplum.v1.SegmentSubclu" +
-      "sterConfigSpec\022$\n\ruser_password\030\r \001(\tB\r\350" +
-      "\3071\001\212\3101\0058-128\022L\n\022maintenance_window\030\017 \001(\013" +
-      "20.yandex.cloud.mdb.greenplum.v1.Mainten" +
-      "anceWindow\022\032\n\022security_group_ids\030\021 \003(\t\022\033" +
-      "\n\023deletion_protection\030\022 \001(\010\022>\n\013config_sp" +
-      "ec\030\023 \001(\0132).yandex.cloud.mdb.greenplum.v1" +
+      "count\030\013 \001(\003\022\027\n\tuser_name\030\014 \001(\tB\004\350\3071\001\022$\n\r" +
+      "user_password\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022 \n\nne" +
+      "twork_id\030\016 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security" +
+      "_group_ids\030\017 \003(\t\022\033\n\023deletion_protection\030" +
+      "\020 \001(\010\022\026\n\016host_group_ids\030\021 \003(\t\022L\n\022mainten" +
+      "ance_window\030\023 \001(\01320.yandex.cloud.mdb.gre" +
+      "enplum.v1.MaintenanceWindow\022>\n\013config_sp" +
+      "ec\030\024 \001(\0132).yandex.cloud.mdb.greenplum.v1" +
       ".ConfigSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteCluster" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\")\n\023StopClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"~\n\034ListClusterOperationsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperationsR" +
-      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
-      "ud.operation.Operation\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\"g\n\030ListClusterHostsResponse\0222" +
-      "\n\005hosts\030\001 \003(\0132#.yandex.cloud.mdb.greenpl" +
-      "um.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"Y\n\032M" +
-      "asterSubclusterConfigSpec\022;\n\tresources\030\001" +
-      " \001(\0132(.yandex.cloud.mdb.greenplum.v1.Res" +
-      "ources\"Z\n\033SegmentSubclusterConfigSpec\022;\n" +
-      "\tresources\030\001 \001(\0132(.yandex.cloud.mdb.gree" +
-      "nplum.v1.Resources\"j\n\027ListClusterLogsRes" +
-      "ponse\0226\n\004logs\030\001 \003(\0132(.yandex.cloud.mdb.g" +
-      "reenplum.v1.LogRecord\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022F\n\007message\030\002" +
-      " \003(\01325.yandex.cloud.mdb.greenplum.v1.Log" +
-      "Record.MessageEntry\032.\n\014MessageEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\322\003\n\026ListClus" +
-      "terLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014servi" +
-      "ce_type\030\003 \001(\0162A.yandex.cloud.mdb.greenpl" +
-      "um.v1.ListClusterLogsRequest.ServiceType" +
-      "\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022+\n\007to_time\030\005 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026al" +
-      "ways_next_page_token\030\010 \001(\010\022\032\n\006filter\030\t \001" +
-      "(\tB\n\212\3101\006<=1000\"P\n\013ServiceType\022\034\n\030SERVICE" +
-      "_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GR" +
-      "EENPLUM_POOLER\020\002\"{\n\031ListClusterBackupsRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"f\n\017StreamLogRecord" +
-      "\0228\n\006record\030\001 \001(\0132(.yandex.cloud.mdb.gree" +
-      "nplum.v1.LogRecord\022\031\n\021next_record_token\030" +
-      "\002 \001(\t\"\231\003\n\030StreamClusterLogsRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_f" +
-      "ilter\030\002 \003(\t\022Y\n\014service_type\030\003 \001(\0162C.yand" +
-      "ex.cloud.mdb.greenplum.v1.StreamClusterL" +
-      "ogsRequest.ServiceType\022-\n\tfrom_time\030\004 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022+\n\007to_time" +
-      "\030\005 \001(\0132\032.google.protobuf.Timestamp\022\037\n\014re" +
-      "cord_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 " +
-      "\001(\tB\n\212\3101\006<=1000\"P\n\013ServiceType\022\034\n\030SERVIC" +
-      "E_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020G" +
-      "REENPLUM_POOLER\020\002\"m\n\032ListClusterBackupsR" +
-      "esponse\0226\n\007backups\030\001 \003(\0132%.yandex.cloud." +
-      "mdb.greenplum.v1.Backup\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"\336\006\n\025RestoreClusterRequest\022\027\n\tba" +
-      "ckup_id\030\001 \001(\tB\004\350\3071\001\022\037\n\tfolder_id\030\002 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022,\n\004name\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63" +
-      "\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\004 \001(\tB" +
-      "\t\212\3101\005<=256\022\221\001\n\006labels\030\005 \003(\0132@.yandex.clo" +
-      "ud.mdb.greenplum.v1.RestoreClusterReques" +
-      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
-      "9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022M" +
-      "\n\013environment\030\006 \001(\01622.yandex.cloud.mdb.g" +
-      "reenplum.v1.Cluster.EnvironmentB\004\350\3071\001\022E\n" +
-      "\006config\030\007 \001(\01325.yandex.cloud.mdb.greenpl" +
-      "um.v1.GreenplumRestoreConfig\022B\n\020master_r" +
-      "esources\030\010 \001(\0132(.yandex.cloud.mdb.greenp" +
-      "lum.v1.Resources\022C\n\021segment_resources\030\t " +
-      "\001(\0132(.yandex.cloud.mdb.greenplum.v1.Reso" +
-      "urces\022 \n\nnetwork_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\032\n\022security_group_ids\030\013 \003(\t\022\033\n\023deletion_" +
-      "protection\030\014 \001(\010\022\026\n\016host_group_ids\030\r \003(\t" +
-      "\022\032\n\022placement_group_id\030\016 \001(\t\022L\n\022maintena" +
-      "nce_window\030\017 \001(\01320.yandex.cloud.mdb.gree" +
-      "nplum.v1.MaintenanceWindow\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026Res" +
-      "toreClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
-      "\021\n\tbackup_id\030\002 \001(\t2\304\024\n\016ClusterService\022\224\001" +
-      "\n\003Get\0220.yandex.cloud.mdb.greenplum.v1.Ge" +
-      "tClusterRequest\032&.yandex.cloud.mdb.green" +
-      "plum.v1.Cluster\"3\202\323\344\223\002-\022+/managed-greenp" +
-      "lum/v1/clusters/{cluster_id}\022\227\001\n\004List\0222." +
-      "yandex.cloud.mdb.greenplum.v1.ListCluste" +
-      "rsRequest\0323.yandex.cloud.mdb.greenplum.v" +
-      "1.ListClustersResponse\"&\202\323\344\223\002 \022\036/managed" +
-      "-greenplum/v1/clusters\022\257\001\n\006Create\0223.yand" +
-      "ex.cloud.mdb.greenplum.v1.CreateClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"M\202\323\344\223\002#\"\036/managed-greenplum/v1/cluster" +
-      "s:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster" +
-      "\022\274\001\n\006Update\0223.yandex.cloud.mdb.greenplum" +
-      ".v1.UpdateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"Z\202\323\344\223\00202+/managed-gr" +
-      "eenplum/v1/clusters/{cluster_id}:\001*\262\322* \n" +
-      "\025UpdateClusterMetadata\022\007Cluster\022\307\001\n\006Dele" +
-      "te\0223.yandex.cloud.mdb.greenplum.v1.Delet" +
-      "eClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"e\202\323\344\223\002-*+/managed-greenplum/v" +
-      "1/clusters/{cluster_id}\262\322*.\n\025DeleteClust" +
-      "erMetadata\022\025google.protobuf.Empty\022\274\001\n\005St" +
-      "art\0222.yandex.cloud.mdb.greenplum.v1.Star" +
-      "tClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\\\202\323\344\223\0023\"1/managed-greenplum/v" +
-      "1/clusters/{cluster_id}:start\262\322*\037\n\024Start" +
-      "ClusterMetadata\022\007Cluster\022\270\001\n\004Stop\0221.yand" +
-      "ex.cloud.mdb.greenplum.v1.StopClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "Z\202\323\344\223\0022\"0/managed-greenplum/v1/clusters/" +
-      "{cluster_id}:stop\262\322*\036\n\023StopClusterMetada" +
-      "ta\022\007Cluster\022\313\001\n\016ListOperations\022;.yandex." +
-      "cloud.mdb.greenplum.v1.ListClusterOperat" +
-      "ionsRequest\032<.yandex.cloud.mdb.greenplum" +
-      ".v1.ListClusterOperationsResponse\">\202\323\344\223\002" +
-      "8\0226/managed-greenplum/v1/clusters/{clust" +
-      "er_id}/operations\022\304\001\n\017ListMasterHosts\0226." +
-      "yandex.cloud.mdb.greenplum.v1.ListCluste" +
-      "rHostsRequest\0327.yandex.cloud.mdb.greenpl" +
-      "um.v1.ListClusterHostsResponse\"@\202\323\344\223\002:\0228" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}/master-hosts\022\306\001\n\020ListSegmentHosts\0226." +
-      "yandex.cloud.mdb.greenplum.v1.ListCluste" +
-      "rHostsRequest\0327.yandex.cloud.mdb.greenpl" +
-      "um.v1.ListClusterHostsResponse\"A\202\323\344\223\002;\0229" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}/segment-hosts\022\263\001\n\010ListLogs\0225.yandex." +
-      "cloud.mdb.greenplum.v1.ListClusterLogsRe" +
-      "quest\0326.yandex.cloud.mdb.greenplum.v1.Li" +
-      "stClusterLogsResponse\"8\202\323\344\223\0022\0220/managed-" +
-      "greenplum/v1/clusters/{cluster_id}:logs\022" +
-      "\270\001\n\nStreamLogs\0227.yandex.cloud.mdb.greenp" +
-      "lum.v1.StreamClusterLogsRequest\032..yandex" +
-      ".cloud.mdb.greenplum.v1.StreamLogRecord\"" +
-      "?\202\323\344\223\0029\0227/managed-greenplum/v1/clusters/" +
-      "{cluster_id}:stream_logs0\001\022\277\001\n\013ListBacku" +
-      "ps\0228.yandex.cloud.mdb.greenplum.v1.ListC" +
-      "lusterBackupsRequest\0329.yandex.cloud.mdb." +
-      "greenplum.v1.ListClusterBackupsResponse\"" +
-      ";\202\323\344\223\0025\0223/managed-greenplum/v1/clusters/" +
-      "{cluster_id}/backups\022\272\001\n\007Restore\0224.yande" +
-      "x.cloud.mdb.greenplum.v1.RestoreClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"V\202\323\344\223\002+\"&/managed-greenplum/v1/cluster" +
-      "s:restore:\001*\262\322*!\n\026RestoreClusterMetadata" +
-      "\022\007ClusterBp\n!yandex.cloud.api.mdb.greenp" +
-      "lum.v1ZKgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/greenplum/v1;greenp" +
-      "lumb\006proto3"
+      "\r\n\005value\030\002 \001(\t:\0028\001\"\273\002\n\nConfigSpec\022i\n\025gre" +
+      "enplum_config_6_17\030\001 \001(\01322.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumConfig6_17H\000R\024" +
+      "greenplumConfig_6_17\022i\n\025greenplum_config" +
+      "_6_19\030\002 \001(\01322.yandex.cloud.mdb.greenplum" +
+      ".v1.GreenplumConfig6_19H\000R\024greenplumConf" +
+      "ig_6_19\022C\n\004pool\030\003 \001(\01325.yandex.cloud.mdb" +
+      ".greenplum.v1.ConnectionPoolerConfigB\022\n\020" +
+      "greenplum_config\"+\n\025CreateClusterMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\"\310\006\n\024UpdateClusterR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
+      "FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
+      "6\022\220\001\n\006labels\030\004 \003(\0132?.yandex.cloud.mdb.gr" +
+      "eenplum.v1.UpdateClusterRequest.LabelsEn" +
+      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
+      "\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022(\n\004name\030\005 \001" +
+      "(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022>\n\006config" +
+      "\030\006 \001(\0132..yandex.cloud.mdb.greenplum.v1.G" +
+      "reenplumConfig\022P\n\rmaster_config\030\007 \001(\01329." +
+      "yandex.cloud.mdb.greenplum.v1.MasterSubc" +
+      "lusterConfigSpec\022R\n\016segment_config\030\010 \001(\013" +
+      "2:.yandex.cloud.mdb.greenplum.v1.Segment" +
+      "SubclusterConfigSpec\022$\n\ruser_password\030\r " +
+      "\001(\tB\r\350\3071\001\212\3101\0058-128\022L\n\022maintenance_window" +
+      "\030\017 \001(\01320.yandex.cloud.mdb.greenplum.v1.M" +
+      "aintenanceWindow\022\032\n\022security_group_ids\030\021" +
+      " \003(\t\022\033\n\023deletion_protection\030\022 \001(\010\022>\n\013con" +
+      "fig_spec\030\023 \001(\0132).yandex.cloud.mdb.greenp" +
+      "lum.v1.ConfigSpec\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022Sto" +
+      "pClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\"~\n\034ListClusterOperationsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"y\n\027ListClusterHostsRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClusterHostsResp" +
+      "onse\0222\n\005hosts\030\001 \003(\0132#.yandex.cloud.mdb.g" +
+      "reenplum.v1.Host\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"Y\n\032MasterSubclusterConfigSpec\022;\n\tresou" +
+      "rces\030\001 \001(\0132(.yandex.cloud.mdb.greenplum." +
+      "v1.Resources\"Z\n\033SegmentSubclusterConfigS" +
+      "pec\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.md" +
+      "b.greenplum.v1.Resources\"j\n\027ListClusterL" +
+      "ogsResponse\0226\n\004logs\030\001 \003(\0132(.yandex.cloud" +
+      ".mdb.greenplum.v1.LogRecord\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030" +
+      "\001 \001(\0132\032.google.protobuf.Timestamp\022F\n\007mes" +
+      "sage\030\002 \003(\01325.yandex.cloud.mdb.greenplum." +
+      "v1.LogRecord.MessageEntry\032.\n\014MessageEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\322\003\n\026Li" +
+      "stClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n" +
+      "\014service_type\030\003 \001(\0162A.yandex.cloud.mdb.g" +
+      "reenplum.v1.ListClusterLogsRequest.Servi" +
+      "ceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google." +
+      "protobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100" +
+      "\022\036\n\026always_next_page_token\030\010 \001(\010\022\032\n\006filt" +
+      "er\030\t \001(\tB\n\212\3101\006<=1000\"P\n\013ServiceType\022\034\n\030S" +
+      "ERVICE_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001" +
+      "\022\024\n\020GREENPLUM_POOLER\020\002\"{\n\031ListClusterBac" +
+      "kupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\017StreamLog" +
+      "Record\0228\n\006record\030\001 \001(\0132(.yandex.cloud.md" +
+      "b.greenplum.v1.LogRecord\022\031\n\021next_record_" +
+      "token\030\002 \001(\t\"\231\003\n\030StreamClusterLogsRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rco" +
+      "lumn_filter\030\002 \003(\t\022Y\n\014service_type\030\003 \001(\0162" +
+      "C.yandex.cloud.mdb.greenplum.v1.StreamCl" +
+      "usterLogsRequest.ServiceType\022-\n\tfrom_tim" +
+      "e\030\004 \001(\0132\032.google.protobuf.Timestamp\022+\n\007t" +
+      "o_time\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006fil" +
+      "ter\030\007 \001(\tB\n\212\3101\006<=1000\"P\n\013ServiceType\022\034\n\030" +
+      "SERVICE_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020" +
+      "\001\022\024\n\020GREENPLUM_POOLER\020\002\"m\n\032ListClusterBa" +
+      "ckupsResponse\0226\n\007backups\030\001 \003(\0132%.yandex." +
+      "cloud.mdb.greenplum.v1.Backup\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"\336\006\n\025RestoreClusterRequest" +
+      "\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022\037\n\tfolder_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\003 \001(\tB\036\350\3071\001\212\310" +
+      "1\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030" +
+      "\004 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\005 \003(\0132@.yand" +
+      "ex.cloud.mdb.greenplum.v1.RestoreCluster" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\022M\n\013environment\030\006 \001(\01622.yandex.cloud" +
+      ".mdb.greenplum.v1.Cluster.EnvironmentB\004\350" +
+      "\3071\001\022E\n\006config\030\007 \001(\01325.yandex.cloud.mdb.g" +
+      "reenplum.v1.GreenplumRestoreConfig\022B\n\020ma" +
+      "ster_resources\030\010 \001(\0132(.yandex.cloud.mdb." +
+      "greenplum.v1.Resources\022C\n\021segment_resour" +
+      "ces\030\t \001(\0132(.yandex.cloud.mdb.greenplum.v" +
+      "1.Resources\022 \n\nnetwork_id\030\n \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\032\n\022security_group_ids\030\013 \003(\t\022\033\n\023del" +
+      "etion_protection\030\014 \001(\010\022\026\n\016host_group_ids" +
+      "\030\r \003(\t\022\032\n\022placement_group_id\030\016 \001(\t\022L\n\022ma" +
+      "intenance_window\030\017 \001(\01320.yandex.cloud.md" +
+      "b.greenplum.v1.MaintenanceWindow\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "?\n\026RestoreClusterMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\304\024\n\016ClusterServ" +
+      "ice\022\224\001\n\003Get\0220.yandex.cloud.mdb.greenplum" +
+      ".v1.GetClusterRequest\032&.yandex.cloud.mdb" +
+      ".greenplum.v1.Cluster\"3\202\323\344\223\002-\022+/managed-" +
+      "greenplum/v1/clusters/{cluster_id}\022\227\001\n\004L" +
+      "ist\0222.yandex.cloud.mdb.greenplum.v1.List" +
+      "ClustersRequest\0323.yandex.cloud.mdb.green" +
+      "plum.v1.ListClustersResponse\"&\202\323\344\223\002 \022\036/m" +
+      "anaged-greenplum/v1/clusters\022\257\001\n\006Create\022" +
+      "3.yandex.cloud.mdb.greenplum.v1.CreateCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"M\202\323\344\223\002#\"\036/managed-greenplum/v1/c" +
+      "lusters:\001*\262\322* \n\025CreateClusterMetadata\022\007C" +
+      "luster\022\274\001\n\006Update\0223.yandex.cloud.mdb.gre" +
+      "enplum.v1.UpdateClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"Z\202\323\344\223\00202+/mana" +
+      "ged-greenplum/v1/clusters/{cluster_id}:\001" +
+      "*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\307\001" +
+      "\n\006Delete\0223.yandex.cloud.mdb.greenplum.v1" +
+      ".DeleteClusterRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"e\202\323\344\223\002-*+/managed-green" +
+      "plum/v1/clusters/{cluster_id}\262\322*.\n\025Delet" +
+      "eClusterMetadata\022\025google.protobuf.Empty\022" +
+      "\274\001\n\005Start\0222.yandex.cloud.mdb.greenplum.v" +
+      "1.StartClusterRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\\\202\323\344\223\0023\"1/managed-green" +
+      "plum/v1/clusters/{cluster_id}:start\262\322*\037\n" +
+      "\024StartClusterMetadata\022\007Cluster\022\270\001\n\004Stop\022" +
+      "1.yandex.cloud.mdb.greenplum.v1.StopClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"Z\202\323\344\223\0022\"0/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
+      "Metadata\022\007Cluster\022\313\001\n\016ListOperations\022;.y" +
+      "andex.cloud.mdb.greenplum.v1.ListCluster" +
+      "OperationsRequest\032<.yandex.cloud.mdb.gre" +
+      "enplum.v1.ListClusterOperationsResponse\"" +
+      ">\202\323\344\223\0028\0226/managed-greenplum/v1/clusters/" +
+      "{cluster_id}/operations\022\304\001\n\017ListMasterHo" +
+      "sts\0226.yandex.cloud.mdb.greenplum.v1.List" +
+      "ClusterHostsRequest\0327.yandex.cloud.mdb.g" +
+      "reenplum.v1.ListClusterHostsResponse\"@\202\323" +
+      "\344\223\002:\0228/managed-greenplum/v1/clusters/{cl" +
+      "uster_id}/master-hosts\022\306\001\n\020ListSegmentHo" +
+      "sts\0226.yandex.cloud.mdb.greenplum.v1.List" +
+      "ClusterHostsRequest\0327.yandex.cloud.mdb.g" +
+      "reenplum.v1.ListClusterHostsResponse\"A\202\323" +
+      "\344\223\002;\0229/managed-greenplum/v1/clusters/{cl" +
+      "uster_id}/segment-hosts\022\263\001\n\010ListLogs\0225.y" +
+      "andex.cloud.mdb.greenplum.v1.ListCluster" +
+      "LogsRequest\0326.yandex.cloud.mdb.greenplum" +
+      ".v1.ListClusterLogsResponse\"8\202\323\344\223\0022\0220/ma" +
+      "naged-greenplum/v1/clusters/{cluster_id}" +
+      ":logs\022\270\001\n\nStreamLogs\0227.yandex.cloud.mdb." +
+      "greenplum.v1.StreamClusterLogsRequest\032.." +
+      "yandex.cloud.mdb.greenplum.v1.StreamLogR" +
+      "ecord\"?\202\323\344\223\0029\0227/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}:stream_logs0\001\022\277\001\n\013Lis" +
+      "tBackups\0228.yandex.cloud.mdb.greenplum.v1" +
+      ".ListClusterBackupsRequest\0329.yandex.clou" +
+      "d.mdb.greenplum.v1.ListClusterBackupsRes" +
+      "ponse\";\202\323\344\223\0025\0223/managed-greenplum/v1/clu" +
+      "sters/{cluster_id}/backups\022\272\001\n\007Restore\0224" +
+      ".yandex.cloud.mdb.greenplum.v1.RestoreCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"V\202\323\344\223\002+\"&/managed-greenplum/v1/c" +
+      "lusters:restore:\001*\262\322*!\n\026RestoreClusterMe" +
+      "tadata\022\007ClusterBp\n!yandex.cloud.api.mdb." +
+      "greenplum.v1ZKgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
+      "greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

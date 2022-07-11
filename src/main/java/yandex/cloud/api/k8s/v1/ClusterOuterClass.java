@@ -10352,6 +10352,26 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getExternalV4EndpointBytes();
+
+    /**
+     * <pre>
+     * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+     * </pre>
+     *
+     * <code>string external_v6_endpoint = 3;</code>
+     * @return The externalV6Endpoint.
+     */
+    java.lang.String getExternalV6Endpoint();
+    /**
+     * <pre>
+     * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+     * </pre>
+     *
+     * <code>string external_v6_endpoint = 3;</code>
+     * @return The bytes for externalV6Endpoint.
+     */
+    com.google.protobuf.ByteString
+        getExternalV6EndpointBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterEndpoints}
@@ -10368,6 +10388,7 @@ public final class ClusterOuterClass {
     private MasterEndpoints() {
       internalV4Endpoint_ = "";
       externalV4Endpoint_ = "";
+      externalV6Endpoint_ = "";
     }
 
     @java.lang.Override
@@ -10410,6 +10431,12 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               externalV4Endpoint_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalV6Endpoint_ = s;
               break;
             }
             default: {
@@ -10536,6 +10563,52 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int EXTERNAL_V6_ENDPOINT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object externalV6Endpoint_;
+    /**
+     * <pre>
+     * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+     * </pre>
+     *
+     * <code>string external_v6_endpoint = 3;</code>
+     * @return The externalV6Endpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalV6Endpoint() {
+      java.lang.Object ref = externalV6Endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalV6Endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+     * </pre>
+     *
+     * <code>string external_v6_endpoint = 3;</code>
+     * @return The bytes for externalV6Endpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalV6EndpointBytes() {
+      java.lang.Object ref = externalV6Endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalV6Endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10556,6 +10629,9 @@ public final class ClusterOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV4Endpoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalV4Endpoint_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV6Endpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalV6Endpoint_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10570,6 +10646,9 @@ public final class ClusterOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV4Endpoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalV4Endpoint_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV6Endpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalV6Endpoint_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10590,6 +10669,8 @@ public final class ClusterOuterClass {
           .equals(other.getInternalV4Endpoint())) return false;
       if (!getExternalV4Endpoint()
           .equals(other.getExternalV4Endpoint())) return false;
+      if (!getExternalV6Endpoint()
+          .equals(other.getExternalV6Endpoint())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10605,6 +10686,8 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getInternalV4Endpoint().hashCode();
       hash = (37 * hash) + EXTERNAL_V4_ENDPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getExternalV4Endpoint().hashCode();
+      hash = (37 * hash) + EXTERNAL_V6_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalV6Endpoint().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10742,6 +10825,8 @@ public final class ClusterOuterClass {
 
         externalV4Endpoint_ = "";
 
+        externalV6Endpoint_ = "";
+
         return this;
       }
 
@@ -10770,6 +10855,7 @@ public final class ClusterOuterClass {
         yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterEndpoints result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterEndpoints(this);
         result.internalV4Endpoint_ = internalV4Endpoint_;
         result.externalV4Endpoint_ = externalV4Endpoint_;
+        result.externalV6Endpoint_ = externalV6Endpoint_;
         onBuilt();
         return result;
       }
@@ -10824,6 +10910,10 @@ public final class ClusterOuterClass {
         }
         if (!other.getExternalV4Endpoint().isEmpty()) {
           externalV4Endpoint_ = other.externalV4Endpoint_;
+          onChanged();
+        }
+        if (!other.getExternalV6Endpoint().isEmpty()) {
+          externalV6Endpoint_ = other.externalV6Endpoint_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -11043,6 +11133,102 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         externalV4Endpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalV6Endpoint_ = "";
+      /**
+       * <pre>
+       * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+       * </pre>
+       *
+       * <code>string external_v6_endpoint = 3;</code>
+       * @return The externalV6Endpoint.
+       */
+      public java.lang.String getExternalV6Endpoint() {
+        java.lang.Object ref = externalV6Endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalV6Endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+       * </pre>
+       *
+       * <code>string external_v6_endpoint = 3;</code>
+       * @return The bytes for externalV6Endpoint.
+       */
+      public com.google.protobuf.ByteString
+          getExternalV6EndpointBytes() {
+        java.lang.Object ref = externalV6Endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalV6Endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+       * </pre>
+       *
+       * <code>string external_v6_endpoint = 3;</code>
+       * @param value The externalV6Endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalV6Endpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalV6Endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+       * </pre>
+       *
+       * <code>string external_v6_endpoint = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalV6Endpoint() {
+        
+        externalV6Endpoint_ = getDefaultInstance().getExternalV6Endpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External IPv6 endpoint that can be used to access Kubernetes cluster API from the internet (outside of the cloud).
+       * </pre>
+       *
+       * <code>string external_v6_endpoint = 3;</code>
+       * @param value The bytes for externalV6Endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalV6EndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalV6Endpoint_ = value;
         onChanged();
         return this;
       }
@@ -15172,29 +15358,30 @@ public final class ClusterOuterClass {
       " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"]\n\016Reg" +
       "ionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023intern" +
       "al_v4_address\030\002 \001(\t\022\033\n\023external_v4_addre" +
-      "ss\030\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024internal_" +
+      "ss\030\003 \001(\t\"k\n\017MasterEndpoints\022\034\n\024internal_" +
       "v4_endpoint\030\001 \001(\t\022\034\n\024external_v4_endpoin" +
-      "t\030\002 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n\027cluste" +
-      "r_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cid" +
-      "r_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022" +
-      "\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027clus" +
-      "ter_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service_ipv" +
-      "6_cidr_block\030\007 \001(\t\"s\n\027MasterMaintenanceP" +
-      "olicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenan" +
-      "ce_window\030\002 \001(\0132&.yandex.cloud.k8s.v1.Ma" +
-      "intenanceWindow\"\200\001\n\rNetworkPolicy\022=\n\010pro" +
-      "vider\030\001 \001(\0162+.yandex.cloud.k8s.v1.Networ" +
-      "kPolicy.Provider\"0\n\010Provider\022\030\n\024PROVIDER" +
-      "_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMSProvide" +
-      "r\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014routing_" +
-      "mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1.Cilium." +
-      "RoutingMode\"7\n\013RoutingMode\022\034\n\030ROUTING_MO" +
-      "DE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016ReleaseC" +
-      "hannel\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022" +
-      "\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027y" +
-      "andex.cloud.api.k8s.v1Z;github.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/k8s/v1;" +
-      "k8sb\006proto3"
+      "t\030\002 \001(\t\022\034\n\024external_v6_endpoint\030\003 \001(\t\"\320\001" +
+      "\n\022IPAllocationPolicy\022\037\n\027cluster_ipv4_cid" +
+      "r_block\030\001 \001(\t\0226\n\030node_ipv4_cidr_mask_siz" +
+      "e\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n\027service" +
+      "_ipv4_cidr_block\030\002 \001(\t\022\037\n\027cluster_ipv6_c" +
+      "idr_block\030\006 \001(\t\022\037\n\027service_ipv6_cidr_blo" +
+      "ck\030\007 \001(\t\"s\n\027MasterMaintenancePolicy\022\024\n\014a" +
+      "uto_upgrade\030\001 \001(\010\022B\n\022maintenance_window\030" +
+      "\002 \001(\0132&.yandex.cloud.k8s.v1.MaintenanceW" +
+      "indow\"\200\001\n\rNetworkPolicy\022=\n\010provider\030\001 \001(" +
+      "\0162+.yandex.cloud.k8s.v1.NetworkPolicy.Pr" +
+      "ovider\"0\n\010Provider\022\030\n\024PROVIDER_UNSPECIFI" +
+      "ED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_i" +
+      "d\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014routing_mode\030\001 \001(\016" +
+      "2\'.yandex.cloud.k8s.v1.Cilium.RoutingMod" +
+      "e\"7\n\013RoutingMode\022\034\n\030ROUTING_MODE_UNSPECI" +
+      "FIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016ReleaseChannel\022\037\n\033" +
+      "RELEASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001" +
+      "\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.clou" +
+      "d.api.k8s.v1Z;github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/k8s/v1;k8sb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15245,7 +15432,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterEndpoints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterEndpoints_descriptor,
-        new java.lang.String[] { "InternalV4Endpoint", "ExternalV4Endpoint", });
+        new java.lang.String[] { "InternalV4Endpoint", "ExternalV4Endpoint", "ExternalV6Endpoint", });
     internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_fieldAccessorTable = new

@@ -506,7 +506,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Returns the specified Greenplum® cluster.
-     * To get the list of available Greenplum® clusters, make a [List] request.
+     * To get the list of all available Greenplum® clusters, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -616,7 +616,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Same as [ListLogs] but using server-side streaming. Also allows for `tail -f` semantics.
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
@@ -626,7 +626,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified Greenplum cluster.
+     * Retrieves a list of available backups for the specified Greenplum® cluster.
      * </pre>
      */
     public void listBackups(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request,
@@ -768,7 +768,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Returns the specified Greenplum® cluster.
-     * To get the list of available Greenplum® clusters, make a [List] request.
+     * To get the list of all available Greenplum® clusters, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -889,7 +889,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Same as [ListLogs] but using server-side streaming. Also allows for `tail -f` semantics.
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
@@ -900,7 +900,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified Greenplum cluster.
+     * Retrieves a list of available backups for the specified Greenplum® cluster.
      * </pre>
      */
     public void listBackups(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request,
@@ -941,7 +941,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Returns the specified Greenplum® cluster.
-     * To get the list of available Greenplum® clusters, make a [List] request.
+     * To get the list of all available Greenplum® clusters, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.GetClusterRequest request) {
@@ -1051,7 +1051,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Same as [ListLogs] but using server-side streaming. Also allows for `tail -f` semantics.
      * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StreamLogRecord> streamLogs(
@@ -1062,7 +1062,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified Greenplum cluster.
+     * Retrieves a list of available backups for the specified Greenplum® cluster.
      * </pre>
      */
     public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsResponse listBackups(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request) {
@@ -1101,7 +1101,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Returns the specified Greenplum® cluster.
-     * To get the list of available Greenplum® clusters, make a [List] request.
+     * To get the list of all available Greenplum® clusters, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Cluster> get(
@@ -1222,7 +1222,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of available backups for the specified Greenplum cluster.
+     * Retrieves a list of available backups for the specified Greenplum® cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsResponse> listBackups(

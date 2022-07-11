@@ -24,18 +24,34 @@ public final class Config {
      */
     LOG_STATEMENT_UNSPECIFIED(0),
     /**
+     * <pre>
+     * None statements are logged.
+     * </pre>
+     *
      * <code>NONE = 1;</code>
      */
     NONE(1),
     /**
+     * <pre>
+     * Logs all data definition commands like `CREATE`, `ALTER`, and `DROP`. Default value.
+     * </pre>
+     *
      * <code>DDL = 2;</code>
      */
     DDL(2),
     /**
+     * <pre>
+     * Logs all `DDL` statements, plus `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY FROM`.
+     * </pre>
+     *
      * <code>MOD = 3;</code>
      */
     MOD(3),
     /**
+     * <pre>
+     * Logs all statements.
+     * </pre>
+     *
      * <code>ALL = 4;</code>
      */
     ALL(4),
@@ -47,18 +63,34 @@ public final class Config {
      */
     public static final int LOG_STATEMENT_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * None statements are logged.
+     * </pre>
+     *
      * <code>NONE = 1;</code>
      */
     public static final int NONE_VALUE = 1;
     /**
+     * <pre>
+     * Logs all data definition commands like `CREATE`, `ALTER`, and `DROP`. Default value.
+     * </pre>
+     *
      * <code>DDL = 2;</code>
      */
     public static final int DDL_VALUE = 2;
     /**
+     * <pre>
+     * Logs all `DDL` statements, plus `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY FROM`.
+     * </pre>
+     *
      * <code>MOD = 3;</code>
      */
     public static final int MOD_VALUE = 3;
     /**
+     * <pre>
+     * Logs all statements.
+     * </pre>
+     *
      * <code>ALL = 4;</code>
      */
     public static final int ALL_VALUE = 4;
@@ -206,10 +238,6 @@ public final class Config {
         getDiskTypeIdBytes();
   }
   /**
-   * <pre>
-   * A list of computational resources allocated to a host.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Resources}
    */
   public static final class Resources extends
@@ -591,10 +619,6 @@ public final class Config {
       return builder;
     }
     /**
-     * <pre>
-     * A list of computational resources allocated to a host.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Resources}
      */
     public static final class Builder extends
@@ -1102,7 +1126,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+     * Server pool idle timeout, in seconds.
+     * A server connection closes after being idle for the specified time.
      * Set to zero to disable the limit.
      * </pre>
      *
@@ -1112,7 +1137,8 @@ public final class Config {
     boolean hasClientIdleTimeout();
     /**
      * <pre>
-     * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+     * Server pool idle timeout, in seconds.
+     * A server connection closes after being idle for the specified time.
      * Set to zero to disable the limit.
      * </pre>
      *
@@ -1122,7 +1148,8 @@ public final class Config {
     com.google.protobuf.Int64Value getClientIdleTimeout();
     /**
      * <pre>
-     * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+     * Server pool idle timeout, in seconds.
+     * A server connection closes after being idle for the specified time.
      * Set to zero to disable the limit.
      * </pre>
      *
@@ -1131,10 +1158,6 @@ public final class Config {
     com.google.protobuf.Int64ValueOrBuilder getClientIdleTimeoutOrBuilder();
   }
   /**
-   * <pre>
-   * Route server configuration.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig}
    */
   public static final class ConnectionPoolerConfig extends
@@ -1245,10 +1268,6 @@ public final class Config {
     }
 
     /**
-     * <pre>
-     * Route server pool mode.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig.PoolMode}
      */
     public enum PoolMode
@@ -1453,7 +1472,8 @@ public final class Config {
     private com.google.protobuf.Int64Value clientIdleTimeout_;
     /**
      * <pre>
-     * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+     * Server pool idle timeout, in seconds.
+     * A server connection closes after being idle for the specified time.
      * Set to zero to disable the limit.
      * </pre>
      *
@@ -1466,7 +1486,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+     * Server pool idle timeout, in seconds.
+     * A server connection closes after being idle for the specified time.
      * Set to zero to disable the limit.
      * </pre>
      *
@@ -1479,7 +1500,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+     * Server pool idle timeout, in seconds.
+     * A server connection closes after being idle for the specified time.
      * Set to zero to disable the limit.
      * </pre>
      *
@@ -1677,10 +1699,6 @@ public final class Config {
       return builder;
     }
     /**
-     * <pre>
-     * Route server configuration.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig}
      */
     public static final class Builder extends
@@ -2098,7 +2116,8 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> clientIdleTimeoutBuilder_;
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2110,7 +2129,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2126,7 +2146,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2147,7 +2168,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2166,7 +2188,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2189,7 +2212,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2208,7 +2232,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2221,7 +2246,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2237,7 +2263,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Server pool idle timeout, in seconds. A server connection closes after it has been idle for the specified duration.
+       * Server pool idle timeout, in seconds.
+       * A server connection closes after being idle for the specified time.
        * Set to zero to disable the limit.
        * </pre>
        *
@@ -2341,10 +2368,6 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder();
   }
   /**
-   * <pre>
-   * Configuration of the master subcluster.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfig}
    */
   public static final class MasterSubclusterConfig extends
@@ -2633,10 +2656,6 @@ public final class Config {
       return builder;
     }
     /**
-     * <pre>
-     * Configuration of the master subcluster.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfig}
      */
     public static final class Builder extends
@@ -3030,10 +3049,6 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.ResourcesOrBuilder getResourcesOrBuilder();
   }
   /**
-   * <pre>
-   * Configuration of the segment subcluster.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfig}
    */
   public static final class SegmentSubclusterConfig extends
@@ -3322,10 +3337,6 @@ public final class Config {
       return builder;
     }
     /**
-     * <pre>
-     * Configuration of the segment subcluster.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.SegmentSubclusterConfig}
      */
     public static final class Builder extends
@@ -3693,7 +3704,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -3702,7 +3713,7 @@ public final class Config {
     boolean hasMaxConnections();
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -3711,7 +3722,7 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxConnections();
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -3720,8 +3731,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -3730,8 +3741,8 @@ public final class Config {
     boolean hasMaxSlotWalKeepSize();
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -3740,8 +3751,8 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxSlotWalKeepSize();
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -3750,9 +3761,9 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -3761,9 +3772,9 @@ public final class Config {
     boolean hasGpWorkfileLimitPerSegment();
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -3772,9 +3783,9 @@ public final class Config {
     com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment();
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -3783,9 +3794,9 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -3794,9 +3805,9 @@ public final class Config {
     boolean hasGpWorkfileLimitPerQuery();
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -3805,9 +3816,9 @@ public final class Config {
     com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery();
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -3816,12 +3827,13 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -3830,12 +3842,13 @@ public final class Config {
     boolean hasGpWorkfileLimitFilesPerQuery();
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -3844,12 +3857,13 @@ public final class Config {
     com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery();
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -3858,8 +3872,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -3868,8 +3882,8 @@ public final class Config {
     boolean hasMaxPreparedTransactions();
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -3878,8 +3892,8 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxPreparedTransactions();
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -3888,8 +3902,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -3898,8 +3912,8 @@ public final class Config {
     boolean hasGpWorkfileCompression();
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -3908,8 +3922,8 @@ public final class Config {
     com.google.protobuf.BoolValue getGpWorkfileCompression();
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4088,7 +4102,7 @@ public final class Config {
     private com.google.protobuf.Int64Value maxConnections_;
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4100,7 +4114,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4112,7 +4126,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4126,8 +4140,8 @@ public final class Config {
     private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -4139,8 +4153,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -4152,8 +4166,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -4167,9 +4181,9 @@ public final class Config {
     private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -4181,9 +4195,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -4195,9 +4209,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -4211,9 +4225,9 @@ public final class Config {
     private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -4225,9 +4239,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -4239,9 +4253,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -4255,12 +4269,13 @@ public final class Config {
     private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -4272,12 +4287,13 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -4289,12 +4305,13 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -4308,8 +4325,8 @@ public final class Config {
     private com.google.protobuf.Int64Value maxPreparedTransactions_;
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -4321,8 +4338,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -4334,8 +4351,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -4349,8 +4366,8 @@ public final class Config {
     private com.google.protobuf.BoolValue gpWorkfileCompression_;
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4362,8 +4379,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4375,8 +4392,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4886,7 +4903,7 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4897,7 +4914,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4912,7 +4929,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4932,7 +4949,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4950,7 +4967,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4972,7 +4989,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -4990,7 +5007,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -5002,7 +5019,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -5017,7 +5034,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -5041,8 +5058,8 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSlotWalKeepSizeBuilder_;
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5053,8 +5070,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5069,8 +5086,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5090,8 +5107,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5109,8 +5126,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5132,8 +5149,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5151,8 +5168,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5164,8 +5181,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5180,8 +5197,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -5205,9 +5222,9 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerSegmentBuilder_;
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5218,9 +5235,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5235,9 +5252,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5257,9 +5274,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5277,9 +5294,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5301,9 +5318,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5321,9 +5338,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5335,9 +5352,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5352,9 +5369,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5378,9 +5395,9 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerQueryBuilder_;
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5391,9 +5408,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5408,9 +5425,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5430,9 +5447,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5450,9 +5467,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5474,9 +5491,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5494,9 +5511,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5508,9 +5525,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5525,9 +5542,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5551,12 +5568,13 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitFilesPerQueryBuilder_;
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5567,12 +5585,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5587,12 +5606,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5612,12 +5632,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5635,12 +5656,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5662,12 +5684,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5685,12 +5708,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5702,12 +5726,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5722,12 +5747,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5751,8 +5777,8 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedTransactionsBuilder_;
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5763,8 +5789,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5779,8 +5805,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5800,8 +5826,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5819,8 +5845,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5842,8 +5868,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5861,8 +5887,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5874,8 +5900,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5890,8 +5916,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -5915,8 +5941,8 @@ public final class Config {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpWorkfileCompressionBuilder_;
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5927,8 +5953,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5943,8 +5969,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5964,8 +5990,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5983,8 +6009,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6006,8 +6032,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6025,8 +6051,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6038,8 +6064,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6054,8 +6080,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6132,7 +6158,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -6141,7 +6167,7 @@ public final class Config {
     boolean hasMaxConnections();
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -6150,7 +6176,7 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxConnections();
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -6159,8 +6185,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -6169,8 +6195,8 @@ public final class Config {
     boolean hasMaxSlotWalKeepSize();
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -6179,8 +6205,8 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxSlotWalKeepSize();
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -6189,9 +6215,9 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6200,9 +6226,9 @@ public final class Config {
     boolean hasGpWorkfileLimitPerSegment();
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6211,9 +6237,9 @@ public final class Config {
     com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment();
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6222,9 +6248,9 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6233,9 +6259,9 @@ public final class Config {
     boolean hasGpWorkfileLimitPerQuery();
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6244,9 +6270,9 @@ public final class Config {
     com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery();
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6255,12 +6281,13 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6269,12 +6296,13 @@ public final class Config {
     boolean hasGpWorkfileLimitFilesPerQuery();
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6283,12 +6311,13 @@ public final class Config {
     com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery();
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6297,8 +6326,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -6307,8 +6336,8 @@ public final class Config {
     boolean hasMaxPreparedTransactions();
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -6317,8 +6346,8 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxPreparedTransactions();
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -6327,8 +6356,8 @@ public final class Config {
 
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6337,8 +6366,8 @@ public final class Config {
     boolean hasGpWorkfileCompression();
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6347,8 +6376,8 @@ public final class Config {
     com.google.protobuf.BoolValue getGpWorkfileCompression();
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6357,12 +6386,12 @@ public final class Config {
 
     /**
      * <pre>
-     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-     * (seghost_physical_memory) / (average_number_concurrent_queries)
-     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-     * Default value is 2097152000 (2000MB)
+     * The maximum memory limit for a query, in bytes.
+     * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+     * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+     * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+     * Default value is 2097152000 (2000 MB).
+     * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -6371,12 +6400,12 @@ public final class Config {
     boolean hasMaxStatementMem();
     /**
      * <pre>
-     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-     * (seghost_physical_memory) / (average_number_concurrent_queries)
-     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-     * Default value is 2097152000 (2000MB)
+     * The maximum memory limit for a query, in bytes.
+     * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+     * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+     * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+     * Default value is 2097152000 (2000 MB).
+     * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -6385,12 +6414,12 @@ public final class Config {
     com.google.protobuf.Int64Value getMaxStatementMem();
     /**
      * <pre>
-     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-     * (seghost_physical_memory) / (average_number_concurrent_queries)
-     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-     * Default value is 2097152000 (2000MB)
+     * The maximum memory limit for a query, in bytes.
+     * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+     * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+     * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+     * Default value is 2097152000 (2000 MB).
+     * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -6399,11 +6428,9 @@ public final class Config {
 
     /**
      * <pre>
-     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-     * Default value is ddl
+     * Logged SQL statements.
+     * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -6412,11 +6439,9 @@ public final class Config {
     int getLogStatementValue();
     /**
      * <pre>
-     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-     * Default value is ddl
+     * Logged SQL statements.
+     * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -6616,7 +6641,7 @@ public final class Config {
     private com.google.protobuf.Int64Value maxConnections_;
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -6628,7 +6653,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -6640,7 +6665,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Maximum number of inbound connections on master segment
+     * Maximum number of inbound connections on master segment.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -6654,8 +6679,8 @@ public final class Config {
     private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -6667,8 +6692,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -6680,8 +6705,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -6695,9 +6720,9 @@ public final class Config {
     private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6709,9 +6734,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6723,9 +6748,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6739,9 +6764,9 @@ public final class Config {
     private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6753,9 +6778,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6767,9 +6792,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-     * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0 (no limit).
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6783,12 +6808,13 @@ public final class Config {
     private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6800,12 +6826,13 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6817,12 +6844,13 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-     * Spill files are created when executing a query that requires more memory than it is allocated.
-     * The current query is terminated when the limit is exceeded.
-     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-     * Default value is 10000
+     * The maximum number of temporary spill files allowed per query at each segment.
+     * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+     * The current query is terminated if the limit is exceeded.
+     * Set to zero to disable the limit.
+     * Master session reloads if the parameter changes.
+     * Default value is 10000.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6836,8 +6864,8 @@ public final class Config {
     private com.google.protobuf.Int64Value maxPreparedTransactions_;
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -6849,8 +6877,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -6862,8 +6890,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * The maximum number of transactions that can be in the `prepared` state simultaneously.
+     * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -6877,8 +6905,8 @@ public final class Config {
     private com.google.protobuf.BoolValue gpWorkfileCompression_;
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6890,8 +6918,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6903,8 +6931,8 @@ public final class Config {
     }
     /**
      * <pre>
-     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * Whether the spill files are compressed or not.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6918,12 +6946,12 @@ public final class Config {
     private com.google.protobuf.Int64Value maxStatementMem_;
     /**
      * <pre>
-     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-     * (seghost_physical_memory) / (average_number_concurrent_queries)
-     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-     * Default value is 2097152000 (2000MB)
+     * The maximum memory limit for a query, in bytes.
+     * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+     * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+     * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+     * Default value is 2097152000 (2000 MB).
+     * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -6935,12 +6963,12 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-     * (seghost_physical_memory) / (average_number_concurrent_queries)
-     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-     * Default value is 2097152000 (2000MB)
+     * The maximum memory limit for a query, in bytes.
+     * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+     * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+     * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+     * Default value is 2097152000 (2000 MB).
+     * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -6952,12 +6980,12 @@ public final class Config {
     }
     /**
      * <pre>
-     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-     * (seghost_physical_memory) / (average_number_concurrent_queries)
-     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-     * Default value is 2097152000 (2000MB)
+     * The maximum memory limit for a query, in bytes.
+     * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+     * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+     * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+     * Default value is 2097152000 (2000 MB).
+     * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -6971,11 +6999,9 @@ public final class Config {
     private int logStatement_;
     /**
      * <pre>
-     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-     * Default value is ddl
+     * Logged SQL statements.
+     * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -6986,11 +7012,9 @@ public final class Config {
     }
     /**
      * <pre>
-     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-     * Default value is ddl
+     * Logged SQL statements.
+     * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -7548,7 +7572,7 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7559,7 +7583,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7574,7 +7598,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7594,7 +7618,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7612,7 +7636,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7634,7 +7658,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7652,7 +7676,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7664,7 +7688,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7679,7 +7703,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Maximum number of inbound connections on master segment
+       * Maximum number of inbound connections on master segment.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_connections = 1;</code>
@@ -7703,8 +7727,8 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSlotWalKeepSizeBuilder_;
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7715,8 +7739,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7731,8 +7755,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7752,8 +7776,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7771,8 +7795,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7794,8 +7818,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7813,8 +7837,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7826,8 +7850,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7842,8 +7866,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
-       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * The maximum size of WAL files that replication slots are allowed to retain in the `pg_wal` directory at checkpoint time.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
@@ -7867,9 +7891,9 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerSegmentBuilder_;
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7880,9 +7904,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7897,9 +7921,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7919,9 +7943,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7939,9 +7963,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7963,9 +7987,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7983,9 +8007,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7997,9 +8021,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -8014,9 +8038,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -8040,9 +8064,9 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerQueryBuilder_;
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8053,9 +8077,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8070,9 +8094,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8092,9 +8116,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8112,9 +8136,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8136,9 +8160,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8156,9 +8180,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8170,9 +8194,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8187,9 +8211,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
-       * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0 (no limit).
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8213,12 +8237,13 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitFilesPerQueryBuilder_;
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8229,12 +8254,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8249,12 +8275,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8274,12 +8301,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8297,12 +8325,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8324,12 +8353,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8347,12 +8377,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8364,12 +8395,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8384,12 +8416,13 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
-       * Spill files are created when executing a query that requires more memory than it is allocated.
-       * The current query is terminated when the limit is exceeded.
-       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
-       * Default value is 10000
+       * The maximum number of temporary spill files allowed per query at each segment.
+       * Spill files, also known as workfiles, are created when a query requires more memory than there is allocated.
+       * The current query is terminated if the limit is exceeded.
+       * Set to zero to disable the limit.
+       * Master session reloads if the parameter changes.
+       * Default value is 10000.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8413,8 +8446,8 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedTransactionsBuilder_;
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8425,8 +8458,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8441,8 +8474,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8462,8 +8495,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8481,8 +8514,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8504,8 +8537,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8523,8 +8556,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8536,8 +8569,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8552,8 +8585,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
-       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * The maximum number of transactions that can be in the `prepared` state simultaneously.
+       * More info in [PostgreSQL® documentation](https://www.postgresql.org/docs/9.6/runtime-config-resource.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
@@ -8577,8 +8610,8 @@ public final class Config {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpWorkfileCompressionBuilder_;
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8589,8 +8622,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8605,8 +8638,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8626,8 +8659,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8645,8 +8678,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8668,8 +8701,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8687,8 +8720,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8700,8 +8733,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8716,8 +8749,8 @@ public final class Config {
       }
       /**
        * <pre>
-       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * Whether the spill files are compressed or not.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8741,12 +8774,12 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStatementMemBuilder_;
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8757,12 +8790,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8777,12 +8810,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8802,12 +8835,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8825,12 +8858,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8852,12 +8885,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8875,12 +8908,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8892,12 +8925,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8912,12 +8945,12 @@ public final class Config {
       }
       /**
        * <pre>
-       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
-       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
-       * (seghost_physical_memory) / (average_number_concurrent_queries)
-       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
-       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
-       * Default value is 2097152000 (2000MB)
+       * The maximum memory limit for a query, in bytes.
+       * Helps to avoid out-of-memory errors on a segment host during query processing as a result of setting `statement_mem` too high.
+       * Taking into account the configuration of a single segment host, calculate [max_statement_mem] as follows: `seghost_physical_memory` / `average_number_concurrent_queries`.
+       * When changing both [max_statement_mem] and `statement_mem`, [max_statement_mem] must be changed first, or listed first in the `postgresql.conf` file.
+       * Default value is 2097152000 (2000 MB).
+       * More info in [Greenplum® documentation](https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
@@ -8939,11 +8972,9 @@ public final class Config {
       private int logStatement_ = 0;
       /**
        * <pre>
-       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-       * Default value is ddl
+       * Logged SQL statements.
+       * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -8954,11 +8985,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-       * Default value is ddl
+       * Logged SQL statements.
+       * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -8973,11 +9002,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-       * Default value is ddl
+       * Logged SQL statements.
+       * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -8991,11 +9018,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-       * Default value is ddl
+       * Logged SQL statements.
+       * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -9013,11 +9038,9 @@ public final class Config {
       }
       /**
        * <pre>
-       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
-       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
-       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
-       * Default value is ddl
+       * Logged SQL statements.
+       * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
+       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -9088,8 +9111,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9098,8 +9120,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9108,8 +9129,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9118,7 +9138,7 @@ public final class Config {
 
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9127,7 +9147,7 @@ public final class Config {
     boolean hasUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9136,7 +9156,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9145,7 +9165,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -9154,7 +9174,7 @@ public final class Config {
     boolean hasDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -9163,7 +9183,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -9171,6 +9191,10 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder getDefaultConfigOrBuilder();
   }
   /**
+   * <pre>
+   * Configuration settings version 6.17
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_17}
    */
   public static final class GreenplumConfigSet6_17 extends
@@ -9290,8 +9314,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9303,8 +9326,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9316,8 +9338,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9331,7 +9352,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 userConfig_;
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9343,7 +9364,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9355,7 +9376,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9369,7 +9390,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 defaultConfig_;
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -9381,7 +9402,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -9393,7 +9414,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -9596,6 +9617,10 @@ public final class Config {
       return builder;
     }
     /**
+     * <pre>
+     * Configuration settings version 6.17
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_17}
      */
     public static final class Builder extends
@@ -9783,8 +9808,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9795,8 +9819,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9811,8 +9834,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9832,8 +9854,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9851,8 +9872,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9874,8 +9894,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9893,8 +9912,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9906,8 +9924,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9922,8 +9939,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -9947,7 +9963,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> userConfigBuilder_;
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9958,7 +9974,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9973,7 +9989,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -9993,7 +10009,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -10011,7 +10027,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -10033,7 +10049,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -10051,7 +10067,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -10063,7 +10079,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -10078,7 +10094,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 user_config = 2;</code>
@@ -10102,7 +10118,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> defaultConfigBuilder_;
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10113,7 +10129,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10128,7 +10144,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10148,7 +10164,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10166,7 +10182,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10188,7 +10204,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10206,7 +10222,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10218,7 +10234,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10233,7 +10249,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 default_config = 3;</code>
@@ -10310,8 +10326,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -10320,8 +10335,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -10330,8 +10344,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -10340,7 +10353,7 @@ public final class Config {
 
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -10349,7 +10362,7 @@ public final class Config {
     boolean hasUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -10358,7 +10371,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -10367,7 +10380,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -10376,7 +10389,7 @@ public final class Config {
     boolean hasDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -10385,7 +10398,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -10393,6 +10406,10 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder getDefaultConfigOrBuilder();
   }
   /**
+   * <pre>
+   * Configuration settings version 6.19
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_19}
    */
   public static final class GreenplumConfigSet6_19 extends
@@ -10512,8 +10529,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -10525,8 +10541,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -10538,8 +10553,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -10553,7 +10567,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 userConfig_;
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -10565,7 +10579,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -10577,7 +10591,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -10591,7 +10605,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 defaultConfig_;
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -10603,7 +10617,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -10615,7 +10629,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -10818,6 +10832,10 @@ public final class Config {
       return builder;
     }
     /**
+     * <pre>
+     * Configuration settings version 6.19
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_19}
      */
     public static final class Builder extends
@@ -11005,8 +11023,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11017,8 +11034,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11033,8 +11049,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11054,8 +11069,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11073,8 +11087,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11096,8 +11109,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11115,8 +11127,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11128,8 +11139,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11144,8 +11154,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11169,7 +11178,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> userConfigBuilder_;
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11180,7 +11189,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11195,7 +11204,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11215,7 +11224,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11233,7 +11242,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11255,7 +11264,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11273,7 +11282,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11285,7 +11294,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11300,7 +11309,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 user_config = 2;</code>
@@ -11324,7 +11333,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> defaultConfigBuilder_;
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11335,7 +11344,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11350,7 +11359,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11370,7 +11379,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11388,7 +11397,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11410,7 +11419,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11428,7 +11437,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11440,7 +11449,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11455,7 +11464,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 default_config = 3;</code>
@@ -11532,8 +11541,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a odyssey (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11542,8 +11550,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a odyssey (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11552,8 +11559,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a odyssey (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11562,7 +11568,7 @@ public final class Config {
 
     /**
      * <pre>
-     * User-defined settings for a odyssey.
+     * User-defined settings for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -11571,7 +11577,7 @@ public final class Config {
     boolean hasUserConfig();
     /**
      * <pre>
-     * User-defined settings for a odyssey.
+     * User-defined settings for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -11580,7 +11586,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getUserConfig();
     /**
      * <pre>
-     * User-defined settings for a odyssey.
+     * User-defined settings for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -11589,7 +11595,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Default configuration for a odyssey.
+     * Default configuration for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -11598,7 +11604,7 @@ public final class Config {
     boolean hasDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a odyssey.
+     * Default configuration for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -11607,7 +11613,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig getDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a odyssey.
+     * Default configuration for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -11734,8 +11740,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a odyssey (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11747,8 +11752,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a odyssey (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11760,8 +11764,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a odyssey (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -11775,7 +11778,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig userConfig_;
     /**
      * <pre>
-     * User-defined settings for a odyssey.
+     * User-defined settings for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -11787,7 +11790,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a odyssey.
+     * User-defined settings for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -11799,7 +11802,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a odyssey.
+     * User-defined settings for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -11813,7 +11816,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig defaultConfig_;
     /**
      * <pre>
-     * Default configuration for a odyssey.
+     * Default configuration for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -11825,7 +11828,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a odyssey.
+     * Default configuration for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -11837,7 +11840,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a odyssey.
+     * Default configuration for an Odyssey® pooler.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12227,8 +12230,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12239,8 +12241,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12255,8 +12256,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12276,8 +12276,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12295,8 +12294,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12318,8 +12316,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12337,8 +12334,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12350,8 +12346,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12366,8 +12361,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a odyssey (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for an Odyssey® pooler (a combination of settings defined in [ConnectionPoolerConfigSet.user_config] and [ConnectionPoolerConfigSet.default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -12391,7 +12385,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> userConfigBuilder_;
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12402,7 +12396,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12417,7 +12411,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12437,7 +12431,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12455,7 +12449,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12477,7 +12471,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12495,7 +12489,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12507,7 +12501,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12522,7 +12516,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a odyssey.
+       * User-defined settings for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig user_config = 2;</code>
@@ -12546,7 +12540,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder> defaultConfigBuilder_;
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12557,7 +12551,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12572,7 +12566,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12592,7 +12586,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12610,7 +12604,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12632,7 +12626,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12650,7 +12644,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12662,7 +12656,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>
@@ -12677,7 +12671,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a odyssey.
+       * Default configuration for an Odyssey® pooler.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfig default_config = 3;</code>

@@ -840,7 +840,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -849,7 +849,7 @@ public final class UserServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1019,7 +1019,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1040,7 +1040,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1540,7 +1540,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1560,7 +1560,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1581,7 +1581,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1600,7 +1600,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1614,7 +1614,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token] returned by the previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>

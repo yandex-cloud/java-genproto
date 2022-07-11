@@ -20,8 +20,8 @@ public final class HostOuterClass {
 
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-     * 1-63 characters long.
+     * Name of the Greenplum® host.
+     * The host name is assigned by the platform at creation time and cannot be changed.
      * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -31,8 +31,8 @@ public final class HostOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-     * 1-63 characters long.
+     * Name of the Greenplum® host.
+     * The host name is assigned by the platform at creation time and cannot be changed.
      * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -169,7 +169,7 @@ public final class HostOuterClass {
 
     /**
      * <pre>
-     * Whether or not a public IP is assigned to the host.
+     * Determines whether a public IP is assigned to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 8;</code>
@@ -515,7 +515,7 @@ public final class HostOuterClass {
       DEGRADED(3),
       /**
        * <pre>
-       * One or more segments are not in preferred role.
+       * One or more segments are not in the preferred role.
        * </pre>
        *
        * <code>UNBALANCED = 4;</code>
@@ -558,7 +558,7 @@ public final class HostOuterClass {
       public static final int DEGRADED_VALUE = 3;
       /**
        * <pre>
-       * One or more segments are not in preferred role.
+       * One or more segments are not in the preferred role.
        * </pre>
        *
        * <code>UNBALANCED = 4;</code>
@@ -655,8 +655,8 @@ public final class HostOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-     * 1-63 characters long.
+     * Name of the Greenplum® host.
+     * The host name is assigned by the platform at creation time and cannot be changed.
      * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -678,8 +678,8 @@ public final class HostOuterClass {
     }
     /**
      * <pre>
-     * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-     * 1-63 characters long.
+     * Name of the Greenplum® host.
+     * The host name is assigned by the platform at creation time and cannot be changed.
      * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -935,7 +935,7 @@ public final class HostOuterClass {
     private boolean assignPublicIp_;
     /**
      * <pre>
-     * Whether or not a public IP is assigned to the host.
+     * Determines whether a public IP is assigned to the host.
      * </pre>
      *
      * <code>bool assign_public_ip = 8;</code>
@@ -1386,8 +1386,8 @@ public final class HostOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-       * 1-63 characters long.
+       * Name of the Greenplum® host.
+       * The host name is assigned by the platform at creation time and cannot be changed.
        * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -1408,8 +1408,8 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-       * 1-63 characters long.
+       * Name of the Greenplum® host.
+       * The host name is assigned by the platform at creation time and cannot be changed.
        * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -1431,8 +1431,8 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-       * 1-63 characters long.
+       * Name of the Greenplum® host.
+       * The host name is assigned by the platform at creation time and cannot be changed.
        * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -1452,8 +1452,8 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-       * 1-63 characters long.
+       * Name of the Greenplum® host.
+       * The host name is assigned by the platform at creation time and cannot be changed.
        * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -1468,8 +1468,8 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Name of the Greenplum® host. The host name is assigned by the platform at creation time and cannot be changed.
-       * 1-63 characters long.
+       * Name of the Greenplum® host.
+       * The host name is assigned by the platform at creation time and cannot be changed.
        * The name is unique across all MDB hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -2083,7 +2083,7 @@ public final class HostOuterClass {
       private boolean assignPublicIp_ ;
       /**
        * <pre>
-       * Whether or not a public IP is assigned to the host.
+       * Determines whether a public IP is assigned to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
@@ -2095,7 +2095,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Whether or not a public IP is assigned to the host.
+       * Determines whether a public IP is assigned to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
@@ -2110,7 +2110,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Whether or not a public IP is assigned to the host.
+       * Determines whether a public IP is assigned to the host.
        * </pre>
        *
        * <code>bool assign_public_ip = 8;</code>
