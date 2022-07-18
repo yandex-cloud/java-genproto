@@ -2090,6 +2090,27 @@ public final class Mysql57 {
      * <code>.google.protobuf.Int64Value innodb_compression_level = 70 [(.yandex.cloud.value) = "0-9"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getInnodbCompressionLevelOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+     * @return The enum numeric value on the wire for binlogTransactionDependencyTracking.
+     */
+    int getBinlogTransactionDependencyTrackingValue();
+    /**
+     * <pre>
+     * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+     * @return The binlogTransactionDependencyTracking.
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking getBinlogTransactionDependencyTracking();
   }
   /**
    * <pre>
@@ -2118,6 +2139,7 @@ public final class Mysql57 {
       slaveParallelType_ = 0;
       logSlowRateType_ = 0;
       logSlowFilter_ = java.util.Collections.emptyList();
+      binlogTransactionDependencyTracking_ = 0;
     }
 
     @java.lang.Override
@@ -3023,6 +3045,12 @@ public final class Mysql57 {
                 innodbCompressionLevel_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 568: {
+              int rawValue = input.readEnum();
+
+              binlogTransactionDependencyTracking_ = rawValue;
               break;
             }
             default: {
@@ -4221,6 +4249,132 @@ public final class Mysql57 {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.LogSlowFilterType)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking}
+     */
+    public enum BinlogTransactionDependencyTracking
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED = 0;</code>
+       */
+      BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED(0),
+      /**
+       * <code>COMMIT_ORDER = 1;</code>
+       */
+      COMMIT_ORDER(1),
+      /**
+       * <code>WRITESET = 2;</code>
+       */
+      WRITESET(2),
+      /**
+       * <code>WRITESET_SESSION = 3;</code>
+       */
+      WRITESET_SESSION(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED = 0;</code>
+       */
+      public static final int BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>COMMIT_ORDER = 1;</code>
+       */
+      public static final int COMMIT_ORDER_VALUE = 1;
+      /**
+       * <code>WRITESET = 2;</code>
+       */
+      public static final int WRITESET_VALUE = 2;
+      /**
+       * <code>WRITESET_SESSION = 3;</code>
+       */
+      public static final int WRITESET_SESSION_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BinlogTransactionDependencyTracking valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BinlogTransactionDependencyTracking forNumber(int value) {
+        switch (value) {
+          case 0: return BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED;
+          case 1: return COMMIT_ORDER;
+          case 2: return WRITESET;
+          case 3: return WRITESET_SESSION;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BinlogTransactionDependencyTracking>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BinlogTransactionDependencyTracking> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BinlogTransactionDependencyTracking>() {
+              public BinlogTransactionDependencyTracking findValueByNumber(int number) {
+                return BinlogTransactionDependencyTracking.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.getDescriptor().getEnumTypes().get(7);
+      }
+
+      private static final BinlogTransactionDependencyTracking[] VALUES = values();
+
+      public static BinlogTransactionDependencyTracking valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BinlogTransactionDependencyTracking(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking)
     }
 
     public static final int INNODB_BUFFER_POOL_SIZE_FIELD_NUMBER = 1;
@@ -7132,6 +7286,35 @@ public final class Mysql57 {
       return getInnodbCompressionLevel();
     }
 
+    public static final int BINLOG_TRANSACTION_DEPENDENCY_TRACKING_FIELD_NUMBER = 71;
+    private int binlogTransactionDependencyTracking_;
+    /**
+     * <pre>
+     * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+     * @return The enum numeric value on the wire for binlogTransactionDependencyTracking.
+     */
+    @java.lang.Override public int getBinlogTransactionDependencyTrackingValue() {
+      return binlogTransactionDependencyTracking_;
+    }
+    /**
+     * <pre>
+     * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+     * @return The binlogTransactionDependencyTracking.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking getBinlogTransactionDependencyTracking() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking.valueOf(binlogTransactionDependencyTracking_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7364,6 +7547,9 @@ public final class Mysql57 {
       }
       if (innodbCompressionLevel_ != null) {
         output.writeMessage(70, getInnodbCompressionLevel());
+      }
+      if (binlogTransactionDependencyTracking_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking.BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(71, binlogTransactionDependencyTracking_);
       }
       unknownFields.writeTo(output);
     }
@@ -7666,6 +7852,10 @@ public final class Mysql57 {
       if (innodbCompressionLevel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(70, getInnodbCompressionLevel());
+      }
+      if (binlogTransactionDependencyTracking_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking.BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(71, binlogTransactionDependencyTracking_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7995,6 +8185,7 @@ public final class Mysql57 {
         if (!getInnodbCompressionLevel()
             .equals(other.getInnodbCompressionLevel())) return false;
       }
+      if (binlogTransactionDependencyTracking_ != other.binlogTransactionDependencyTracking_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8270,6 +8461,8 @@ public final class Mysql57 {
         hash = (37 * hash) + INNODB_COMPRESSION_LEVEL_FIELD_NUMBER;
         hash = (53 * hash) + getInnodbCompressionLevel().hashCode();
       }
+      hash = (37 * hash) + BINLOG_TRANSACTION_DEPENDENCY_TRACKING_FIELD_NUMBER;
+      hash = (53 * hash) + binlogTransactionDependencyTracking_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8787,6 +8980,8 @@ public final class Mysql57 {
           innodbCompressionLevel_ = null;
           innodbCompressionLevelBuilder_ = null;
         }
+        binlogTransactionDependencyTracking_ = 0;
+
         return this;
       }
 
@@ -9132,6 +9327,7 @@ public final class Mysql57 {
         } else {
           result.innodbCompressionLevel_ = innodbCompressionLevelBuilder_.build();
         }
+        result.binlogTransactionDependencyTracking_ = binlogTransactionDependencyTracking_;
         onBuilt();
         return result;
       }
@@ -9406,6 +9602,9 @@ public final class Mysql57 {
         }
         if (other.hasInnodbCompressionLevel()) {
           mergeInnodbCompressionLevel(other.getInnodbCompressionLevel());
+        }
+        if (other.binlogTransactionDependencyTracking_ != 0) {
+          setBinlogTransactionDependencyTrackingValue(other.getBinlogTransactionDependencyTrackingValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20356,6 +20555,85 @@ public final class Mysql57 {
         }
         return innodbCompressionLevelBuilder_;
       }
+
+      private int binlogTransactionDependencyTracking_ = 0;
+      /**
+       * <pre>
+       * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+       * @return The enum numeric value on the wire for binlogTransactionDependencyTracking.
+       */
+      @java.lang.Override public int getBinlogTransactionDependencyTrackingValue() {
+        return binlogTransactionDependencyTracking_;
+      }
+      /**
+       * <pre>
+       * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+       * @param value The enum numeric value on the wire for binlogTransactionDependencyTracking to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinlogTransactionDependencyTrackingValue(int value) {
+        
+        binlogTransactionDependencyTracking_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+       * @return The binlogTransactionDependencyTracking.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking getBinlogTransactionDependencyTracking() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking.valueOf(binlogTransactionDependencyTracking_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+       * @param value The binlogTransactionDependencyTracking to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinlogTransactionDependencyTracking(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogTransactionDependencyTracking value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        binlogTransactionDependencyTracking_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
+       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinlogTransactionDependencyTracking() {
+        
+        binlogTransactionDependencyTracking_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21653,7 +21931,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\3122\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\3474\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -21782,49 +22060,56 @@ public final class Mysql57 {
       "ursion_depth\030E \001(\0132\033.google.protobuf.Int" +
       "64ValueB\t\372\3071\0050-255\022F\n\030innodb_compression" +
       "_level\030F \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\0030-9\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPEC" +
-      "IFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI" +
-      "_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020" +
-      "\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPA" +
-      "CE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BA" +
-      "CKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUT" +
-      "ION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO" +
-      "_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_" +
-      "FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020N" +
-      "O_TABLE_OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020" +
-      "\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_" +
-      "AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT" +
-      "_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010" +
-      "\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MA" +
-      "XDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL4" +
-      "0\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AU" +
-      "TO_CREATE_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"x" +
-      "\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020" +
-      "\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING_" +
-      "SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003" +
-      "\"x\n\024TransactionIsolation\022%\n!TRANSACTION_" +
-      "ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTE" +
-      "D\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZABLE" +
-      "\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_IMAGE" +
-      "_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n" +
-      "\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE_" +
-      "PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020" +
-      "\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateType\022" +
-      "\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007S" +
-      "ESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterTyp" +
-      "e\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIED\020\000\022" +
-      "\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TAB" +
-      "LE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020" +
-      "\005\022\024\n\020FILESORT_ON_DISK\020\006\"\360\001\n\021MysqlConfigS" +
-      "et5_7\022J\n\020effective_config\030\001 \001(\01320.yandex" +
-      ".cloud.mdb.mysql.v1.config.MysqlConfig5_" +
-      "7\022E\n\013user_config\030\002 \001(\01320.yandex.cloud.md" +
-      "b.mysql.v1.config.MysqlConfig5_7\022H\n\016defa" +
-      "ult_config\030\003 \001(\01320.yandex.cloud.mdb.mysq" +
-      "l.v1.config.MysqlConfig5_7Br\n$yandex.clo" +
-      "ud.api.mdb.mysql.v1.configZJgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/mysql/v1/config;mysqlb\006proto3"
+      "eB\007\372\3071\0030-9\022\204\001\n&binlog_transaction_depend" +
+      "ency_tracking\030G \001(\0162T.yandex.cloud.mdb.m" +
+      "ysql.v1.config.MysqlConfig5_7.BinlogTran" +
+      "sactionDependencyTracking\"\231\005\n\007SQLMode\022\027\n" +
+      "\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_" +
+      "DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DI" +
+      "VISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020" +
+      "\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_" +
+      "ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_E" +
+      "NGINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBT" +
+      "RACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_I" +
+      "N_DATE\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KEY" +
+      "_OPTIONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONLY" +
+      "_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LEN" +
+      "GTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FL" +
+      "OAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_T" +
+      "RANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026" +
+      "\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL" +
+      "323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGR" +
+      "ESQL\020\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_DI" +
+      "R_IN_CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLUG" +
+      "IN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWOR" +
+      "D\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SH" +
+      "A256_PASSWORD\020\003\"x\n\024TransactionIsolation\022" +
+      "%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022\022" +
+      "\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022" +
+      "\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034B" +
+      "INLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022" +
+      "\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParalle" +
+      "lType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED" +
+      "\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017L" +
+      "ogSlowRateType\022\"\n\036LOG_SLOW_RATE_TYPE_UNS" +
+      "PECIFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021L" +
+      "ogSlowFilterType\022$\n LOG_SLOW_FILTER_TYPE" +
+      "_UNSPECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JO" +
+      "IN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK" +
+      "\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\223" +
+      "\001\n#BinlogTransactionDependencyTracking\0226" +
+      "\n2BINLOG_TRANSACTION_DEPENDENCY_TRACKING" +
+      "_UNSPECIFIED\020\000\022\020\n\014COMMIT_ORDER\020\001\022\014\n\010WRIT" +
+      "ESET\020\002\022\024\n\020WRITESET_SESSION\020\003\"\360\001\n\021MysqlCo" +
+      "nfigSet5_7\022J\n\020effective_config\030\001 \001(\01320.y" +
+      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
+      "fig5_7\022E\n\013user_config\030\002 \001(\01320.yandex.clo" +
+      "ud.mdb.mysql.v1.config.MysqlConfig5_7\022H\n" +
+      "\016default_config\030\003 \001(\01320.yandex.cloud.mdb" +
+      ".mysql.v1.config.MysqlConfig5_7Br\n$yande" +
+      "x.cloud.api.mdb.mysql.v1.configZJgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/mysql/v1/config;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21837,7 +22122,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new
