@@ -6087,6 +6087,33 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder getPerformanceDiagnosticsOrBuilder();
 
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+     * @return The backupRetainPeriodDays.
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
     public yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfig.MysqlConfigCase getMysqlConfigCase();
   }
   /**
@@ -6217,6 +6244,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(performanceDiagnostics_);
                 performanceDiagnostics_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6578,6 +6618,44 @@ public final class ClusterOuterClass {
       return getPerformanceDiagnostics();
     }
 
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+     * @return The backupRetainPeriodDays.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6612,6 +6690,9 @@ public final class ClusterOuterClass {
       }
       if (performanceDiagnostics_ != null) {
         output.writeMessage(7, getPerformanceDiagnostics());
+      }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(8, getBackupRetainPeriodDays());
       }
       unknownFields.writeTo(output);
     }
@@ -6649,6 +6730,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPerformanceDiagnostics());
       }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getBackupRetainPeriodDays());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6685,6 +6770,11 @@ public final class ClusterOuterClass {
       if (hasPerformanceDiagnostics()) {
         if (!getPerformanceDiagnostics()
             .equals(other.getPerformanceDiagnostics())) return false;
+      }
+      if (hasBackupRetainPeriodDays() != other.hasBackupRetainPeriodDays()) return false;
+      if (hasBackupRetainPeriodDays()) {
+        if (!getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays())) return false;
       }
       if (!getMysqlConfigCase().equals(other.getMysqlConfigCase())) return false;
       switch (mysqlConfigCase_) {
@@ -6727,6 +6817,10 @@ public final class ClusterOuterClass {
       if (hasPerformanceDiagnostics()) {
         hash = (37 * hash) + PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER;
         hash = (53 * hash) + getPerformanceDiagnostics().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       switch (mysqlConfigCase_) {
         case 2:
@@ -6899,6 +6993,12 @@ public final class ClusterOuterClass {
           performanceDiagnostics_ = null;
           performanceDiagnosticsBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         mysqlConfigCase_ = 0;
         mysqlConfig_ = null;
         return this;
@@ -6961,6 +7061,11 @@ public final class ClusterOuterClass {
           result.performanceDiagnostics_ = performanceDiagnostics_;
         } else {
           result.performanceDiagnostics_ = performanceDiagnosticsBuilder_.build();
+        }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
         }
         result.mysqlConfigCase_ = mysqlConfigCase_;
         onBuilt();
@@ -7026,6 +7131,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasPerformanceDiagnostics()) {
           mergePerformanceDiagnostics(other.getPerformanceDiagnostics());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         switch (other.getMysqlConfigCase()) {
           case MYSQL_CONFIG_5_7: {
@@ -8152,6 +8260,161 @@ public final class ClusterOuterClass {
           performanceDiagnostics_ = null;
         }
         return performanceDiagnosticsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       * @return Whether the backupRetainPeriodDays field is set.
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       * @return The backupRetainPeriodDays.
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 8 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14541,86 +14804,90 @@ public final class ClusterOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/mdb/mysql/v1/cluster.prot" +
       "o\022\031yandex.cloud.mdb.mysql.v1\032\037google/pro" +
-      "tobuf/timestamp.proto\032\033google/type/timeo" +
-      "fday.proto\032\035yandex/cloud/validation.prot" +
-      "o\032/yandex/cloud/mdb/mysql/v1/config/mysq" +
-      "l5_7.proto\032/yandex/cloud/mdb/mysql/v1/co" +
-      "nfig/mysql8_0.proto\032+yandex/cloud/mdb/my" +
-      "sql/v1/maintenance.proto\"\234\010\n\007Cluster\022\n\n\002" +
-      "id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_a" +
-      "t\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004n" +
-      "ame\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006labels" +
-      "\030\006 \003(\0132..yandex.cloud.mdb.mysql.v1.Clust" +
-      "er.LabelsEntry\022C\n\013environment\030\007 \001(\0162..ya" +
-      "ndex.cloud.mdb.mysql.v1.Cluster.Environm" +
-      "ent\0229\n\nmonitoring\030\010 \003(\0132%.yandex.cloud.m" +
-      "db.mysql.v1.Monitoring\0228\n\006config\030\t \001(\0132(" +
-      ".yandex.cloud.mdb.mysql.v1.ClusterConfig" +
-      "\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health\030\013 \001(\0162).y" +
-      "andex.cloud.mdb.mysql.v1.Cluster.Health\022" +
-      "9\n\006status\030\014 \001(\0162).yandex.cloud.mdb.mysql" +
-      ".v1.Cluster.Status\022H\n\022maintenance_window" +
-      "\030\r \001(\0132,.yandex.cloud.mdb.mysql.v1.Maint" +
-      "enanceWindow\022J\n\021planned_operation\030\016 \001(\0132" +
-      "/.yandex.cloud.mdb.mysql.v1.MaintenanceO" +
-      "peration\022\032\n\022security_group_ids\030\017 \003(\t\022\033\n\023" +
-      "deletion_protection\030\020 \001(\010\022\026\n\016host_group_" +
-      "ids\030\021 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIR" +
-      "ONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\t" +
-      "PRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020" +
-      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006" +
-      "Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001" +
-      "\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014" +
-      "\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"" +
-      "=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
-      "on\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\351\003\n\rClusterConfig" +
-      "\022\017\n\007version\030\001 \001(\t\022`\n\020mysql_config_5_7\030\002 " +
-      "\001(\01323.yandex.cloud.mdb.mysql.v1.config.M" +
-      "ysqlConfigSet5_7H\000R\017mysqlConfig_5_7\022`\n\020m" +
-      "ysql_config_8_0\030\006 \001(\01323.yandex.cloud.mdb" +
-      ".mysql.v1.config.MysqlConfigSet8_0H\000R\017my" +
-      "sqlConfig_8_0\0227\n\tresources\030\003 \001(\0132$.yande" +
-      "x.cloud.mdb.mysql.v1.Resources\0223\n\023backup" +
-      "_window_start\030\004 \001(\0132\026.google.type.TimeOf" +
-      "Day\0221\n\006access\030\005 \001(\0132!.yandex.cloud.mdb.m" +
-      "ysql.v1.Access\022R\n\027performance_diagnostic" +
-      "s\030\007 \001(\01321.yandex.cloud.mdb.mysql.v1.Perf" +
-      "ormanceDiagnosticsB\016\n\014mysql_config\"\222\004\n\004H" +
-      "ost\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n" +
-      "\007zone_id\030\003 \001(\t\0227\n\tresources\030\004 \001(\0132$.yand" +
-      "ex.cloud.mdb.mysql.v1.Resources\0222\n\004role\030" +
-      "\005 \001(\0162$.yandex.cloud.mdb.mysql.v1.Host.R" +
-      "ole\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb.m" +
-      "ysql.v1.Host.Health\0224\n\010services\030\007 \003(\0132\"." +
-      "yandex.cloud.mdb.mysql.v1.Service\022\021\n\tsub" +
-      "net_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\032" +
-      "\n\022replication_source\030\n \001(\t\022\"\n\017backup_pri" +
-      "ority\030\013 \001(\003B\t\372\3071\0050-100\022\033\n\010priority\030\014 \001(\003" +
-      "B\t\372\3071\0050-100\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n" +
-      "\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEAL" +
-      "TH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEG" +
-      "RADED\020\003\"\327\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yand" +
-      "ex.cloud.mdb.mysql.v1.Service.Type\0229\n\006he" +
-      "alth\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1.S" +
-      "ervice.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
-      "D\020\000\022\t\n\005MYSQL\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032" +
-      "\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030" +
-      "\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"C\n\006Access\022\021\n" +
-      "\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rdat" +
-      "a_transfer\030\003 \001(\010\"\215\001\n\026PerformanceDiagnost" +
-      "ics\022\017\n\007enabled\030\001 \001(\010\022/\n\032sessions_samplin" +
-      "g_interval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034stateme" +
-      "nts_sampling_interval\030\003 \001(\003B\013\372\3071\0071-86400" +
-      "Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/mysql/v1;mysqlb\006proto3"
+      "tobuf/timestamp.proto\032\036google/protobuf/w" +
+      "rappers.proto\032\033google/type/timeofday.pro" +
+      "to\032\035yandex/cloud/validation.proto\032/yande" +
+      "x/cloud/mdb/mysql/v1/config/mysql5_7.pro" +
+      "to\032/yandex/cloud/mdb/mysql/v1/config/mys" +
+      "ql8_0.proto\032+yandex/cloud/mdb/mysql/v1/m" +
+      "aintenance.proto\"\234\010\n\007Cluster\022\n\n\002id\030\001 \001(\t" +
+      "\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\014\n\004name\030\004 \001(" +
+      "\t\022\023\n\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132." +
+      ".yandex.cloud.mdb.mysql.v1.Cluster.Label" +
+      "sEntry\022C\n\013environment\030\007 \001(\0162..yandex.clo" +
+      "ud.mdb.mysql.v1.Cluster.Environment\0229\n\nm" +
+      "onitoring\030\010 \003(\0132%.yandex.cloud.mdb.mysql" +
+      ".v1.Monitoring\0228\n\006config\030\t \001(\0132(.yandex." +
+      "cloud.mdb.mysql.v1.ClusterConfig\022\022\n\nnetw" +
+      "ork_id\030\n \001(\t\0229\n\006health\030\013 \001(\0162).yandex.cl" +
+      "oud.mdb.mysql.v1.Cluster.Health\0229\n\006statu" +
+      "s\030\014 \001(\0162).yandex.cloud.mdb.mysql.v1.Clus" +
+      "ter.Status\022H\n\022maintenance_window\030\r \001(\0132," +
+      ".yandex.cloud.mdb.mysql.v1.MaintenanceWi" +
+      "ndow\022J\n\021planned_operation\030\016 \001(\0132/.yandex" +
+      ".cloud.mdb.mysql.v1.MaintenanceOperation" +
+      "\022\032\n\022security_group_ids\030\017 \003(\t\022\033\n\023deletion" +
+      "_protection\030\020 \001(\010\022\026\n\016host_group_ids\030\021 \003(" +
+      "\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_U" +
+      "NSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABL" +
+      "E\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
+      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022" +
+      "\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNN" +
+      "ING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPI" +
+      "NG\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonit" +
+      "oring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t" +
+      "\022\014\n\004link\030\003 \001(\t\"\263\004\n\rClusterConfig\022\017\n\007vers" +
+      "ion\030\001 \001(\t\022`\n\020mysql_config_5_7\030\002 \001(\01323.ya" +
+      "ndex.cloud.mdb.mysql.v1.config.MysqlConf" +
+      "igSet5_7H\000R\017mysqlConfig_5_7\022`\n\020mysql_con" +
+      "fig_8_0\030\006 \001(\01323.yandex.cloud.mdb.mysql.v" +
+      "1.config.MysqlConfigSet8_0H\000R\017mysqlConfi" +
+      "g_8_0\0227\n\tresources\030\003 \001(\0132$.yandex.cloud." +
+      "mdb.mysql.v1.Resources\0223\n\023backup_window_" +
+      "start\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006a" +
+      "ccess\030\005 \001(\0132!.yandex.cloud.mdb.mysql.v1." +
+      "Access\022R\n\027performance_diagnostics\030\007 \001(\0132" +
+      "1.yandex.cloud.mdb.mysql.v1.PerformanceD" +
+      "iagnostics\022H\n\031backup_retain_period_days\030" +
+      "\010 \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071\004" +
+      "7-60B\016\n\014mysql_config\"\222\004\n\004Host\022\014\n\004name\030\001 " +
+      "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t" +
+      "\0227\n\tresources\030\004 \001(\0132$.yandex.cloud.mdb.m" +
+      "ysql.v1.Resources\0222\n\004role\030\005 \001(\0162$.yandex" +
+      ".cloud.mdb.mysql.v1.Host.Role\0226\n\006health\030" +
+      "\006 \001(\0162&.yandex.cloud.mdb.mysql.v1.Host.H" +
+      "ealth\0224\n\010services\030\007 \003(\0132\".yandex.cloud.m" +
+      "db.mysql.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030" +
+      "\n\020assign_public_ip\030\t \001(\010\022\032\n\022replication_" +
+      "source\030\n \001(\t\022\"\n\017backup_priority\030\013 \001(\003B\t\372" +
+      "\3071\0050-100\022\033\n\010priority\030\014 \001(\003B\t\372\3071\0050-100\"1\n" +
+      "\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007R" +
+      "EPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t" +
+      "\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\327\001\n\007Se" +
+      "rvice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb.m" +
+      "ysql.v1.Service.Type\0229\n\006health\030\002 \001(\0162).y" +
+      "andex.cloud.mdb.mysql.v1.Service.Health\"" +
+      "\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005MYSQL\020\001" +
+      "\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020" +
+      "\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_pre" +
+      "set_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_" +
+      "type_id\030\003 \001(\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001" +
+      "(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001" +
+      "(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007enabled" +
+      "\030\001 \001(\010\022/\n\032sessions_sampling_interval\030\002 \001" +
+      "(\003B\013\372\3071\0071-86400\0221\n\034statements_sampling_i" +
+      "nterval\030\003 \001(\003B\013\372\3071\0071-86400Bd\n\035yandex.clo" +
+      "ud.api.mdb.mysql.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/mysql/" +
+      "v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor(),
@@ -14650,7 +14917,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "MysqlConfig57", "MysqlConfig80", "Resources", "BackupWindowStart", "Access", "PerformanceDiagnostics", "MysqlConfig", });
+        new java.lang.String[] { "Version", "MysqlConfig57", "MysqlConfig80", "Resources", "BackupWindowStart", "Access", "PerformanceDiagnostics", "BackupRetainPeriodDays", "MysqlConfig", });
     internal_static_yandex_cloud_mdb_mysql_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_mysql_v1_Host_fieldAccessorTable = new
@@ -14687,6 +14954,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor();

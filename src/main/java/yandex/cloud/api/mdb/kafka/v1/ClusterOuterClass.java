@@ -6365,6 +6365,21 @@ public final class ClusterOuterClass {
        */
       yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8OrBuilder getKafkaConfig28OrBuilder();
 
+      /**
+       * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+       * @return Whether the kafkaConfig3 field is set.
+       */
+      boolean hasKafkaConfig3();
+      /**
+       * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+       * @return The kafkaConfig3.
+       */
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 getKafkaConfig3();
+      /**
+       * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+       */
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder getKafkaConfig3OrBuilder();
+
       public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.Kafka.KafkaConfigCase getKafkaConfigCase();
     }
     /**
@@ -6467,6 +6482,20 @@ public final class ClusterOuterClass {
                 kafkaConfigCase_ = 4;
                 break;
               }
+              case 42: {
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder subBuilder = null;
+                if (kafkaConfigCase_ == 5) {
+                  subBuilder = ((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_).toBuilder();
+                }
+                kafkaConfig_ =
+                    input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_);
+                  kafkaConfig_ = subBuilder.buildPartial();
+                }
+                kafkaConfigCase_ = 5;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -6507,6 +6536,7 @@ public final class ClusterOuterClass {
         KAFKA_CONFIG_2_1(2),
         KAFKA_CONFIG_2_6(3),
         KAFKA_CONFIG_2_8(4),
+        KAFKA_CONFIG_3(5),
         KAFKACONFIG_NOT_SET(0);
         private final int value;
         private KafkaConfigCase(int value) {
@@ -6527,6 +6557,7 @@ public final class ClusterOuterClass {
             case 2: return KAFKA_CONFIG_2_1;
             case 3: return KAFKA_CONFIG_2_6;
             case 4: return KAFKA_CONFIG_2_8;
+            case 5: return KAFKA_CONFIG_3;
             case 0: return KAFKACONFIG_NOT_SET;
             default: return null;
           }
@@ -6673,6 +6704,37 @@ public final class ClusterOuterClass {
         return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8.getDefaultInstance();
       }
 
+      public static final int KAFKA_CONFIG_3_FIELD_NUMBER = 5;
+      /**
+       * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+       * @return Whether the kafkaConfig3 field is set.
+       */
+      @java.lang.Override
+      public boolean hasKafkaConfig3() {
+        return kafkaConfigCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+       * @return The kafkaConfig3.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 getKafkaConfig3() {
+        if (kafkaConfigCase_ == 5) {
+           return (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_;
+        }
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder getKafkaConfig3OrBuilder() {
+        if (kafkaConfigCase_ == 5) {
+           return (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_;
+        }
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -6699,6 +6761,9 @@ public final class ClusterOuterClass {
         if (kafkaConfigCase_ == 4) {
           output.writeMessage(4, (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8) kafkaConfig_);
         }
+        if (kafkaConfigCase_ == 5) {
+          output.writeMessage(5, (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -6723,6 +6788,10 @@ public final class ClusterOuterClass {
         if (kafkaConfigCase_ == 4) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig2_8) kafkaConfig_);
+        }
+        if (kafkaConfigCase_ == 5) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -6758,6 +6827,10 @@ public final class ClusterOuterClass {
             if (!getKafkaConfig28()
                 .equals(other.getKafkaConfig28())) return false;
             break;
+          case 5:
+            if (!getKafkaConfig3()
+                .equals(other.getKafkaConfig3())) return false;
+            break;
           case 0:
           default:
         }
@@ -6788,6 +6861,10 @@ public final class ClusterOuterClass {
           case 4:
             hash = (37 * hash) + KAFKA_CONFIG_2_8_FIELD_NUMBER;
             hash = (53 * hash) + getKafkaConfig28().hashCode();
+            break;
+          case 5:
+            hash = (37 * hash) + KAFKA_CONFIG_3_FIELD_NUMBER;
+            hash = (53 * hash) + getKafkaConfig3().hashCode();
             break;
           case 0:
           default:
@@ -6985,6 +7062,13 @@ public final class ClusterOuterClass {
               result.kafkaConfig_ = kafkaConfig28Builder_.build();
             }
           }
+          if (kafkaConfigCase_ == 5) {
+            if (kafkaConfig3Builder_ == null) {
+              result.kafkaConfig_ = kafkaConfig_;
+            } else {
+              result.kafkaConfig_ = kafkaConfig3Builder_.build();
+            }
+          }
           result.kafkaConfigCase_ = kafkaConfigCase_;
           onBuilt();
           return result;
@@ -7048,6 +7132,10 @@ public final class ClusterOuterClass {
             }
             case KAFKA_CONFIG_2_8: {
               mergeKafkaConfig28(other.getKafkaConfig28());
+              break;
+            }
+            case KAFKA_CONFIG_3: {
+              mergeKafkaConfig3(other.getKafkaConfig3());
               break;
             }
             case KAFKACONFIG_NOT_SET: {
@@ -7674,6 +7762,147 @@ public final class ClusterOuterClass {
           kafkaConfigCase_ = 4;
           onChanged();;
           return kafkaConfig28Builder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder> kafkaConfig3Builder_;
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         * @return Whether the kafkaConfig3 field is set.
+         */
+        @java.lang.Override
+        public boolean hasKafkaConfig3() {
+          return kafkaConfigCase_ == 5;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         * @return The kafkaConfig3.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 getKafkaConfig3() {
+          if (kafkaConfig3Builder_ == null) {
+            if (kafkaConfigCase_ == 5) {
+              return (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_;
+            }
+            return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+          } else {
+            if (kafkaConfigCase_ == 5) {
+              return kafkaConfig3Builder_.getMessage();
+            }
+            return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        public Builder setKafkaConfig3(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 value) {
+          if (kafkaConfig3Builder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            kafkaConfig_ = value;
+            onChanged();
+          } else {
+            kafkaConfig3Builder_.setMessage(value);
+          }
+          kafkaConfigCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        public Builder setKafkaConfig3(
+            yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder builderForValue) {
+          if (kafkaConfig3Builder_ == null) {
+            kafkaConfig_ = builderForValue.build();
+            onChanged();
+          } else {
+            kafkaConfig3Builder_.setMessage(builderForValue.build());
+          }
+          kafkaConfigCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        public Builder mergeKafkaConfig3(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 value) {
+          if (kafkaConfig3Builder_ == null) {
+            if (kafkaConfigCase_ == 5 &&
+                kafkaConfig_ != yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance()) {
+              kafkaConfig_ = yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.newBuilder((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              kafkaConfig_ = value;
+            }
+            onChanged();
+          } else {
+            if (kafkaConfigCase_ == 5) {
+              kafkaConfig3Builder_.mergeFrom(value);
+            }
+            kafkaConfig3Builder_.setMessage(value);
+          }
+          kafkaConfigCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        public Builder clearKafkaConfig3() {
+          if (kafkaConfig3Builder_ == null) {
+            if (kafkaConfigCase_ == 5) {
+              kafkaConfigCase_ = 0;
+              kafkaConfig_ = null;
+              onChanged();
+            }
+          } else {
+            if (kafkaConfigCase_ == 5) {
+              kafkaConfigCase_ = 0;
+              kafkaConfig_ = null;
+            }
+            kafkaConfig3Builder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder getKafkaConfig3Builder() {
+          return getKafkaConfig3FieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder getKafkaConfig3OrBuilder() {
+          if ((kafkaConfigCase_ == 5) && (kafkaConfig3Builder_ != null)) {
+            return kafkaConfig3Builder_.getMessageOrBuilder();
+          } else {
+            if (kafkaConfigCase_ == 5) {
+              return (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_;
+            }
+            return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.kafka.v1.KafkaConfig3 kafka_config_3 = 5 [json_name = "kafkaConfig_3"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder> 
+            getKafkaConfig3FieldBuilder() {
+          if (kafkaConfig3Builder_ == null) {
+            if (!(kafkaConfigCase_ == 5)) {
+              kafkaConfig_ = yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+            }
+            kafkaConfig3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder>(
+                    (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) kafkaConfig_,
+                    getParentForChildren(),
+                    isClean());
+            kafkaConfig_ = null;
+          }
+          kafkaConfigCase_ = 5;
+          onChanged();;
+          return kafkaConfig3Builder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -27631,6 +27860,5499 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface KafkaConfig3OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.KafkaConfig3)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Cluster topics compression type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+     * @return The enum numeric value on the wire for compressionType.
+     */
+    int getCompressionTypeValue();
+    /**
+     * <pre>
+     * Cluster topics compression type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+     * @return The compressionType.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType();
+
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+     * @return Whether the logFlushIntervalMessages field is set.
+     */
+    boolean hasLogFlushIntervalMessages();
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+     * @return The logFlushIntervalMessages.
+     */
+    com.google.protobuf.Int64Value getLogFlushIntervalMessages();
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogFlushIntervalMessagesOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+     * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+     * @return Whether the logFlushIntervalMs field is set.
+     */
+    boolean hasLogFlushIntervalMs();
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+     * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+     * @return The logFlushIntervalMs.
+     */
+    com.google.protobuf.Int64Value getLogFlushIntervalMs();
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+     * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogFlushIntervalMsOrBuilder();
+
+    /**
+     * <pre>
+     * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+     * This check is done by the log flusher.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+     * @return Whether the logFlushSchedulerIntervalMs field is set.
+     */
+    boolean hasLogFlushSchedulerIntervalMs();
+    /**
+     * <pre>
+     * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+     * This check is done by the log flusher.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+     * @return The logFlushSchedulerIntervalMs.
+     */
+    com.google.protobuf.Int64Value getLogFlushSchedulerIntervalMs();
+    /**
+     * <pre>
+     * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+     * This check is done by the log flusher.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogFlushSchedulerIntervalMsOrBuilder();
+
+    /**
+     * <pre>
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+     * This setting is helpful if you need to control the size of a log due to limited disk space.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+     * @return Whether the logRetentionBytes field is set.
+     */
+    boolean hasLogRetentionBytes();
+    /**
+     * <pre>
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+     * This setting is helpful if you need to control the size of a log due to limited disk space.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+     * @return The logRetentionBytes.
+     */
+    com.google.protobuf.Int64Value getLogRetentionBytes();
+    /**
+     * <pre>
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+     * This setting is helpful if you need to control the size of a log due to limited disk space.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogRetentionBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of hours to keep a log segment file before deleting it.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+     * @return Whether the logRetentionHours field is set.
+     */
+    boolean hasLogRetentionHours();
+    /**
+     * <pre>
+     * The number of hours to keep a log segment file before deleting it.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+     * @return The logRetentionHours.
+     */
+    com.google.protobuf.Int64Value getLogRetentionHours();
+    /**
+     * <pre>
+     * The number of hours to keep a log segment file before deleting it.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogRetentionHoursOrBuilder();
+
+    /**
+     * <pre>
+     * The number of minutes to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_hours] is used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+     * @return Whether the logRetentionMinutes field is set.
+     */
+    boolean hasLogRetentionMinutes();
+    /**
+     * <pre>
+     * The number of minutes to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_hours] is used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+     * @return The logRetentionMinutes.
+     */
+    com.google.protobuf.Int64Value getLogRetentionMinutes();
+    /**
+     * <pre>
+     * The number of minutes to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_hours] is used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogRetentionMinutesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_minutes] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+     * @return Whether the logRetentionMs field is set.
+     */
+    boolean hasLogRetentionMs();
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_minutes] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+     * @return The logRetentionMs.
+     */
+    com.google.protobuf.Int64Value getLogRetentionMs();
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_minutes] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     * @return Whether the logSegmentBytes field is set.
+     */
+    boolean hasLogSegmentBytes();
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     * @return The logSegmentBytes.
+     */
+    com.google.protobuf.Int64Value getLogSegmentBytes();
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * @return Whether the logPreallocate field is set.
+     */
+    boolean hasLogPreallocate();
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * @return The logPreallocate.
+     */
+    com.google.protobuf.BoolValue getLogPreallocate();
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
+
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     * @return Whether the socketSendBufferBytes field is set.
+     */
+    boolean hasSocketSendBufferBytes();
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     * @return The socketSendBufferBytes.
+     */
+    com.google.protobuf.Int64Value getSocketSendBufferBytes();
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     * @return Whether the socketReceiveBufferBytes field is set.
+     */
+    boolean hasSocketReceiveBufferBytes();
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     * @return The socketReceiveBufferBytes.
+     */
+    com.google.protobuf.Int64Value getSocketReceiveBufferBytes();
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     * @return Whether the autoCreateTopicsEnable field is set.
+     */
+    boolean hasAutoCreateTopicsEnable();
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     * @return The autoCreateTopicsEnable.
+     */
+    com.google.protobuf.BoolValue getAutoCreateTopicsEnable();
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder();
+
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     * @return Whether the numPartitions field is set.
+     */
+    boolean hasNumPartitions();
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     * @return The numPartitions.
+     */
+    com.google.protobuf.Int64Value getNumPartitions();
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder();
+
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     * @return Whether the defaultReplicationFactor field is set.
+     */
+    boolean hasDefaultReplicationFactor();
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     * @return The defaultReplicationFactor.
+     */
+    com.google.protobuf.Int64Value getDefaultReplicationFactor();
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    boolean hasMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    com.google.protobuf.Int64Value getMessageMaxBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    boolean hasReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    com.google.protobuf.Int64Value getReplicaFetchMaxBytes();
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder();
+
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    java.util.List<java.lang.String>
+        getSslCipherSuitesList();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    int getSslCipherSuitesCount();
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    java.lang.String getSslCipherSuites(int index);
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index);
+
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    boolean hasOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    com.google.protobuf.Int64Value getOffsetsRetentionMinutes();
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder();
+  }
+  /**
+   * <pre>
+   * Kafka version 3.x broker configuration.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.KafkaConfig3}
+   */
+  public static final class KafkaConfig3 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.KafkaConfig3)
+      KafkaConfig3OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KafkaConfig3.newBuilder() to construct.
+    private KafkaConfig3(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KafkaConfig3() {
+      compressionType_ = 0;
+      sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KafkaConfig3();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KafkaConfig3(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              compressionType_ = rawValue;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logFlushIntervalMessages_ != null) {
+                subBuilder = logFlushIntervalMessages_.toBuilder();
+              }
+              logFlushIntervalMessages_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logFlushIntervalMessages_);
+                logFlushIntervalMessages_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logFlushIntervalMs_ != null) {
+                subBuilder = logFlushIntervalMs_.toBuilder();
+              }
+              logFlushIntervalMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logFlushIntervalMs_);
+                logFlushIntervalMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logFlushSchedulerIntervalMs_ != null) {
+                subBuilder = logFlushSchedulerIntervalMs_.toBuilder();
+              }
+              logFlushSchedulerIntervalMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logFlushSchedulerIntervalMs_);
+                logFlushSchedulerIntervalMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logRetentionBytes_ != null) {
+                subBuilder = logRetentionBytes_.toBuilder();
+              }
+              logRetentionBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logRetentionBytes_);
+                logRetentionBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logRetentionHours_ != null) {
+                subBuilder = logRetentionHours_.toBuilder();
+              }
+              logRetentionHours_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logRetentionHours_);
+                logRetentionHours_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logRetentionMinutes_ != null) {
+                subBuilder = logRetentionMinutes_.toBuilder();
+              }
+              logRetentionMinutes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logRetentionMinutes_);
+                logRetentionMinutes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logRetentionMs_ != null) {
+                subBuilder = logRetentionMs_.toBuilder();
+              }
+              logRetentionMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logRetentionMs_);
+                logRetentionMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logSegmentBytes_ != null) {
+                subBuilder = logSegmentBytes_.toBuilder();
+              }
+              logSegmentBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logSegmentBytes_);
+                logSegmentBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logPreallocate_ != null) {
+                subBuilder = logPreallocate_.toBuilder();
+              }
+              logPreallocate_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logPreallocate_);
+                logPreallocate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (socketSendBufferBytes_ != null) {
+                subBuilder = socketSendBufferBytes_.toBuilder();
+              }
+              socketSendBufferBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(socketSendBufferBytes_);
+                socketSendBufferBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (socketReceiveBufferBytes_ != null) {
+                subBuilder = socketReceiveBufferBytes_.toBuilder();
+              }
+              socketReceiveBufferBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(socketReceiveBufferBytes_);
+                socketReceiveBufferBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (autoCreateTopicsEnable_ != null) {
+                subBuilder = autoCreateTopicsEnable_.toBuilder();
+              }
+              autoCreateTopicsEnable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoCreateTopicsEnable_);
+                autoCreateTopicsEnable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (numPartitions_ != null) {
+                subBuilder = numPartitions_.toBuilder();
+              }
+              numPartitions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(numPartitions_);
+                numPartitions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (defaultReplicationFactor_ != null) {
+                subBuilder = defaultReplicationFactor_.toBuilder();
+              }
+              defaultReplicationFactor_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaultReplicationFactor_);
+                defaultReplicationFactor_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (messageMaxBytes_ != null) {
+                subBuilder = messageMaxBytes_.toBuilder();
+              }
+              messageMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(messageMaxBytes_);
+                messageMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (replicaFetchMaxBytes_ != null) {
+                subBuilder = replicaFetchMaxBytes_.toBuilder();
+              }
+              replicaFetchMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replicaFetchMaxBytes_);
+                replicaFetchMaxBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sslCipherSuites_.add(s);
+              break;
+            }
+            case 154: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (offsetsRetentionMinutes_ != null) {
+                subBuilder = offsetsRetentionMinutes_.toBuilder();
+              }
+              offsetsRetentionMinutes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(offsetsRetentionMinutes_);
+                offsetsRetentionMinutes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder.class);
+    }
+
+    public static final int COMPRESSION_TYPE_FIELD_NUMBER = 1;
+    private int compressionType_;
+    /**
+     * <pre>
+     * Cluster topics compression type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+     * @return The enum numeric value on the wire for compressionType.
+     */
+    @java.lang.Override public int getCompressionTypeValue() {
+      return compressionType_;
+    }
+    /**
+     * <pre>
+     * Cluster topics compression type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+     * @return The compressionType.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
+    }
+
+    public static final int LOG_FLUSH_INTERVAL_MESSAGES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value logFlushIntervalMessages_;
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+     * @return Whether the logFlushIntervalMessages field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogFlushIntervalMessages() {
+      return logFlushIntervalMessages_ != null;
+    }
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+     * @return The logFlushIntervalMessages.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogFlushIntervalMessages() {
+      return logFlushIntervalMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logFlushIntervalMessages_;
+    }
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogFlushIntervalMessagesOrBuilder() {
+      return getLogFlushIntervalMessages();
+    }
+
+    public static final int LOG_FLUSH_INTERVAL_MS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value logFlushIntervalMs_;
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+     * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+     * @return Whether the logFlushIntervalMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogFlushIntervalMs() {
+      return logFlushIntervalMs_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+     * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+     * @return The logFlushIntervalMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogFlushIntervalMs() {
+      return logFlushIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logFlushIntervalMs_;
+    }
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+     * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogFlushIntervalMsOrBuilder() {
+      return getLogFlushIntervalMs();
+    }
+
+    public static final int LOG_FLUSH_SCHEDULER_INTERVAL_MS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value logFlushSchedulerIntervalMs_;
+    /**
+     * <pre>
+     * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+     * This check is done by the log flusher.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+     * @return Whether the logFlushSchedulerIntervalMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogFlushSchedulerIntervalMs() {
+      return logFlushSchedulerIntervalMs_ != null;
+    }
+    /**
+     * <pre>
+     * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+     * This check is done by the log flusher.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+     * @return The logFlushSchedulerIntervalMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogFlushSchedulerIntervalMs() {
+      return logFlushSchedulerIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logFlushSchedulerIntervalMs_;
+    }
+    /**
+     * <pre>
+     * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+     * This check is done by the log flusher.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogFlushSchedulerIntervalMsOrBuilder() {
+      return getLogFlushSchedulerIntervalMs();
+    }
+
+    public static final int LOG_RETENTION_BYTES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value logRetentionBytes_;
+    /**
+     * <pre>
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+     * This setting is helpful if you need to control the size of a log due to limited disk space.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+     * @return Whether the logRetentionBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogRetentionBytes() {
+      return logRetentionBytes_ != null;
+    }
+    /**
+     * <pre>
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+     * This setting is helpful if you need to control the size of a log due to limited disk space.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+     * @return The logRetentionBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogRetentionBytes() {
+      return logRetentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionBytes_;
+    }
+    /**
+     * <pre>
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+     * This setting is helpful if you need to control the size of a log due to limited disk space.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogRetentionBytesOrBuilder() {
+      return getLogRetentionBytes();
+    }
+
+    public static final int LOG_RETENTION_HOURS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value logRetentionHours_;
+    /**
+     * <pre>
+     * The number of hours to keep a log segment file before deleting it.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+     * @return Whether the logRetentionHours field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogRetentionHours() {
+      return logRetentionHours_ != null;
+    }
+    /**
+     * <pre>
+     * The number of hours to keep a log segment file before deleting it.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+     * @return The logRetentionHours.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogRetentionHours() {
+      return logRetentionHours_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionHours_;
+    }
+    /**
+     * <pre>
+     * The number of hours to keep a log segment file before deleting it.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogRetentionHoursOrBuilder() {
+      return getLogRetentionHours();
+    }
+
+    public static final int LOG_RETENTION_MINUTES_FIELD_NUMBER = 7;
+    private com.google.protobuf.Int64Value logRetentionMinutes_;
+    /**
+     * <pre>
+     * The number of minutes to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_hours] is used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+     * @return Whether the logRetentionMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogRetentionMinutes() {
+      return logRetentionMinutes_ != null;
+    }
+    /**
+     * <pre>
+     * The number of minutes to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_hours] is used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+     * @return The logRetentionMinutes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogRetentionMinutes() {
+      return logRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionMinutes_;
+    }
+    /**
+     * <pre>
+     * The number of minutes to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_hours] is used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogRetentionMinutesOrBuilder() {
+      return getLogRetentionMinutes();
+    }
+
+    public static final int LOG_RETENTION_MS_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value logRetentionMs_;
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_minutes] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+     * @return Whether the logRetentionMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogRetentionMs() {
+      return logRetentionMs_ != null;
+    }
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_minutes] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+     * @return The logRetentionMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogRetentionMs() {
+      return logRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionMs_;
+    }
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment file before deleting it.
+     * If not set, the value of [log_retention_minutes] is used.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogRetentionMsOrBuilder() {
+      return getLogRetentionMs();
+    }
+
+    public static final int LOG_SEGMENT_BYTES_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value logSegmentBytes_;
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     * @return Whether the logSegmentBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogSegmentBytes() {
+      return logSegmentBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     * @return The logSegmentBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogSegmentBytes() {
+      return logSegmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+    }
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder() {
+      return getLogSegmentBytes();
+    }
+
+    public static final int LOG_PREALLOCATE_FIELD_NUMBER = 10;
+    private com.google.protobuf.BoolValue logPreallocate_;
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * @return Whether the logPreallocate field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogPreallocate() {
+      return logPreallocate_ != null;
+    }
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * @return The logPreallocate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getLogPreallocate() {
+      return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+    }
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+      return getLogPreallocate();
+    }
+
+    public static final int SOCKET_SEND_BUFFER_BYTES_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value socketSendBufferBytes_;
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     * @return Whether the socketSendBufferBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasSocketSendBufferBytes() {
+      return socketSendBufferBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     * @return The socketSendBufferBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSocketSendBufferBytes() {
+      return socketSendBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+    }
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder() {
+      return getSocketSendBufferBytes();
+    }
+
+    public static final int SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value socketReceiveBufferBytes_;
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     * @return Whether the socketReceiveBufferBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasSocketReceiveBufferBytes() {
+      return socketReceiveBufferBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     * @return The socketReceiveBufferBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSocketReceiveBufferBytes() {
+      return socketReceiveBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+    }
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder() {
+      return getSocketReceiveBufferBytes();
+    }
+
+    public static final int AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue autoCreateTopicsEnable_;
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     * @return Whether the autoCreateTopicsEnable field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoCreateTopicsEnable() {
+      return autoCreateTopicsEnable_ != null;
+    }
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     * @return The autoCreateTopicsEnable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAutoCreateTopicsEnable() {
+      return autoCreateTopicsEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+    }
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder() {
+      return getAutoCreateTopicsEnable();
+    }
+
+    public static final int NUM_PARTITIONS_FIELD_NUMBER = 14;
+    private com.google.protobuf.Int64Value numPartitions_;
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     * @return Whether the numPartitions field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumPartitions() {
+      return numPartitions_ != null;
+    }
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     * @return The numPartitions.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getNumPartitions() {
+      return numPartitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+    }
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder() {
+      return getNumPartitions();
+    }
+
+    public static final int DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER = 15;
+    private com.google.protobuf.Int64Value defaultReplicationFactor_;
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     * @return Whether the defaultReplicationFactor field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultReplicationFactor() {
+      return defaultReplicationFactor_ != null;
+    }
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     * @return The defaultReplicationFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getDefaultReplicationFactor() {
+      return defaultReplicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+    }
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder() {
+      return getDefaultReplicationFactor();
+    }
+
+    public static final int MESSAGE_MAX_BYTES_FIELD_NUMBER = 16;
+    private com.google.protobuf.Int64Value messageMaxBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return Whether the messageMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessageMaxBytes() {
+      return messageMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     * @return The messageMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMessageMaxBytes() {
+      return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed by Kafka. Default value: 1048588.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+      return getMessageMaxBytes();
+    }
+
+    public static final int REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return Whether the replicaFetchMaxBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     * @return The replicaFetchMaxBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+      return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+    }
+    /**
+     * <pre>
+     * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+      return getReplicaFetchMaxBytes();
+    }
+
+    public static final int SSL_CIPHER_SUITES_FIELD_NUMBER = 18;
+    private com.google.protobuf.LazyStringList sslCipherSuites_;
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return A list containing the sslCipherSuites.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSslCipherSuitesList() {
+      return sslCipherSuites_;
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @return The count of sslCipherSuites.
+     */
+    public int getSslCipherSuitesCount() {
+      return sslCipherSuites_.size();
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the element to return.
+     * @return The sslCipherSuites at the given index.
+     */
+    public java.lang.String getSslCipherSuites(int index) {
+      return sslCipherSuites_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of cipher suites.
+     * </pre>
+     *
+     * <code>repeated string ssl_cipher_suites = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sslCipherSuites at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSslCipherSuitesBytes(int index) {
+      return sslCipherSuites_.getByteString(index);
+    }
+
+    public static final int OFFSETS_RETENTION_MINUTES_FIELD_NUMBER = 19;
+    private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return Whether the offsetsRetentionMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ != null;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     * @return The offsetsRetentionMinutes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+      return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+    }
+    /**
+     * <pre>
+     * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+      return getOffsetsRetentionMinutes();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (compressionType_ != yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, compressionType_);
+      }
+      if (logFlushIntervalMessages_ != null) {
+        output.writeMessage(2, getLogFlushIntervalMessages());
+      }
+      if (logFlushIntervalMs_ != null) {
+        output.writeMessage(3, getLogFlushIntervalMs());
+      }
+      if (logFlushSchedulerIntervalMs_ != null) {
+        output.writeMessage(4, getLogFlushSchedulerIntervalMs());
+      }
+      if (logRetentionBytes_ != null) {
+        output.writeMessage(5, getLogRetentionBytes());
+      }
+      if (logRetentionHours_ != null) {
+        output.writeMessage(6, getLogRetentionHours());
+      }
+      if (logRetentionMinutes_ != null) {
+        output.writeMessage(7, getLogRetentionMinutes());
+      }
+      if (logRetentionMs_ != null) {
+        output.writeMessage(8, getLogRetentionMs());
+      }
+      if (logSegmentBytes_ != null) {
+        output.writeMessage(9, getLogSegmentBytes());
+      }
+      if (logPreallocate_ != null) {
+        output.writeMessage(10, getLogPreallocate());
+      }
+      if (socketSendBufferBytes_ != null) {
+        output.writeMessage(11, getSocketSendBufferBytes());
+      }
+      if (socketReceiveBufferBytes_ != null) {
+        output.writeMessage(12, getSocketReceiveBufferBytes());
+      }
+      if (autoCreateTopicsEnable_ != null) {
+        output.writeMessage(13, getAutoCreateTopicsEnable());
+      }
+      if (numPartitions_ != null) {
+        output.writeMessage(14, getNumPartitions());
+      }
+      if (defaultReplicationFactor_ != null) {
+        output.writeMessage(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        output.writeMessage(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        output.writeMessage(17, getReplicaFetchMaxBytes());
+      }
+      for (int i = 0; i < sslCipherSuites_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, sslCipherSuites_.getRaw(i));
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        output.writeMessage(19, getOffsetsRetentionMinutes());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (compressionType_ != yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, compressionType_);
+      }
+      if (logFlushIntervalMessages_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLogFlushIntervalMessages());
+      }
+      if (logFlushIntervalMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getLogFlushIntervalMs());
+      }
+      if (logFlushSchedulerIntervalMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLogFlushSchedulerIntervalMs());
+      }
+      if (logRetentionBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLogRetentionBytes());
+      }
+      if (logRetentionHours_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getLogRetentionHours());
+      }
+      if (logRetentionMinutes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLogRetentionMinutes());
+      }
+      if (logRetentionMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLogRetentionMs());
+      }
+      if (logSegmentBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getLogSegmentBytes());
+      }
+      if (logPreallocate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getLogPreallocate());
+      }
+      if (socketSendBufferBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getSocketSendBufferBytes());
+      }
+      if (socketReceiveBufferBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSocketReceiveBufferBytes());
+      }
+      if (autoCreateTopicsEnable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getAutoCreateTopicsEnable());
+      }
+      if (numPartitions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getNumPartitions());
+      }
+      if (defaultReplicationFactor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getDefaultReplicationFactor());
+      }
+      if (messageMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getMessageMaxBytes());
+      }
+      if (replicaFetchMaxBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getReplicaFetchMaxBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sslCipherSuites_.size(); i++) {
+          dataSize += computeStringSizeNoTag(sslCipherSuites_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSslCipherSuitesList().size();
+      }
+      if (offsetsRetentionMinutes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getOffsetsRetentionMinutes());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) obj;
+
+      if (compressionType_ != other.compressionType_) return false;
+      if (hasLogFlushIntervalMessages() != other.hasLogFlushIntervalMessages()) return false;
+      if (hasLogFlushIntervalMessages()) {
+        if (!getLogFlushIntervalMessages()
+            .equals(other.getLogFlushIntervalMessages())) return false;
+      }
+      if (hasLogFlushIntervalMs() != other.hasLogFlushIntervalMs()) return false;
+      if (hasLogFlushIntervalMs()) {
+        if (!getLogFlushIntervalMs()
+            .equals(other.getLogFlushIntervalMs())) return false;
+      }
+      if (hasLogFlushSchedulerIntervalMs() != other.hasLogFlushSchedulerIntervalMs()) return false;
+      if (hasLogFlushSchedulerIntervalMs()) {
+        if (!getLogFlushSchedulerIntervalMs()
+            .equals(other.getLogFlushSchedulerIntervalMs())) return false;
+      }
+      if (hasLogRetentionBytes() != other.hasLogRetentionBytes()) return false;
+      if (hasLogRetentionBytes()) {
+        if (!getLogRetentionBytes()
+            .equals(other.getLogRetentionBytes())) return false;
+      }
+      if (hasLogRetentionHours() != other.hasLogRetentionHours()) return false;
+      if (hasLogRetentionHours()) {
+        if (!getLogRetentionHours()
+            .equals(other.getLogRetentionHours())) return false;
+      }
+      if (hasLogRetentionMinutes() != other.hasLogRetentionMinutes()) return false;
+      if (hasLogRetentionMinutes()) {
+        if (!getLogRetentionMinutes()
+            .equals(other.getLogRetentionMinutes())) return false;
+      }
+      if (hasLogRetentionMs() != other.hasLogRetentionMs()) return false;
+      if (hasLogRetentionMs()) {
+        if (!getLogRetentionMs()
+            .equals(other.getLogRetentionMs())) return false;
+      }
+      if (hasLogSegmentBytes() != other.hasLogSegmentBytes()) return false;
+      if (hasLogSegmentBytes()) {
+        if (!getLogSegmentBytes()
+            .equals(other.getLogSegmentBytes())) return false;
+      }
+      if (hasLogPreallocate() != other.hasLogPreallocate()) return false;
+      if (hasLogPreallocate()) {
+        if (!getLogPreallocate()
+            .equals(other.getLogPreallocate())) return false;
+      }
+      if (hasSocketSendBufferBytes() != other.hasSocketSendBufferBytes()) return false;
+      if (hasSocketSendBufferBytes()) {
+        if (!getSocketSendBufferBytes()
+            .equals(other.getSocketSendBufferBytes())) return false;
+      }
+      if (hasSocketReceiveBufferBytes() != other.hasSocketReceiveBufferBytes()) return false;
+      if (hasSocketReceiveBufferBytes()) {
+        if (!getSocketReceiveBufferBytes()
+            .equals(other.getSocketReceiveBufferBytes())) return false;
+      }
+      if (hasAutoCreateTopicsEnable() != other.hasAutoCreateTopicsEnable()) return false;
+      if (hasAutoCreateTopicsEnable()) {
+        if (!getAutoCreateTopicsEnable()
+            .equals(other.getAutoCreateTopicsEnable())) return false;
+      }
+      if (hasNumPartitions() != other.hasNumPartitions()) return false;
+      if (hasNumPartitions()) {
+        if (!getNumPartitions()
+            .equals(other.getNumPartitions())) return false;
+      }
+      if (hasDefaultReplicationFactor() != other.hasDefaultReplicationFactor()) return false;
+      if (hasDefaultReplicationFactor()) {
+        if (!getDefaultReplicationFactor()
+            .equals(other.getDefaultReplicationFactor())) return false;
+      }
+      if (hasMessageMaxBytes() != other.hasMessageMaxBytes()) return false;
+      if (hasMessageMaxBytes()) {
+        if (!getMessageMaxBytes()
+            .equals(other.getMessageMaxBytes())) return false;
+      }
+      if (hasReplicaFetchMaxBytes() != other.hasReplicaFetchMaxBytes()) return false;
+      if (hasReplicaFetchMaxBytes()) {
+        if (!getReplicaFetchMaxBytes()
+            .equals(other.getReplicaFetchMaxBytes())) return false;
+      }
+      if (!getSslCipherSuitesList()
+          .equals(other.getSslCipherSuitesList())) return false;
+      if (hasOffsetsRetentionMinutes() != other.hasOffsetsRetentionMinutes()) return false;
+      if (hasOffsetsRetentionMinutes()) {
+        if (!getOffsetsRetentionMinutes()
+            .equals(other.getOffsetsRetentionMinutes())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMPRESSION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + compressionType_;
+      if (hasLogFlushIntervalMessages()) {
+        hash = (37 * hash) + LOG_FLUSH_INTERVAL_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogFlushIntervalMessages().hashCode();
+      }
+      if (hasLogFlushIntervalMs()) {
+        hash = (37 * hash) + LOG_FLUSH_INTERVAL_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogFlushIntervalMs().hashCode();
+      }
+      if (hasLogFlushSchedulerIntervalMs()) {
+        hash = (37 * hash) + LOG_FLUSH_SCHEDULER_INTERVAL_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogFlushSchedulerIntervalMs().hashCode();
+      }
+      if (hasLogRetentionBytes()) {
+        hash = (37 * hash) + LOG_RETENTION_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogRetentionBytes().hashCode();
+      }
+      if (hasLogRetentionHours()) {
+        hash = (37 * hash) + LOG_RETENTION_HOURS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogRetentionHours().hashCode();
+      }
+      if (hasLogRetentionMinutes()) {
+        hash = (37 * hash) + LOG_RETENTION_MINUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogRetentionMinutes().hashCode();
+      }
+      if (hasLogRetentionMs()) {
+        hash = (37 * hash) + LOG_RETENTION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogRetentionMs().hashCode();
+      }
+      if (hasLogSegmentBytes()) {
+        hash = (37 * hash) + LOG_SEGMENT_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogSegmentBytes().hashCode();
+      }
+      if (hasLogPreallocate()) {
+        hash = (37 * hash) + LOG_PREALLOCATE_FIELD_NUMBER;
+        hash = (53 * hash) + getLogPreallocate().hashCode();
+      }
+      if (hasSocketSendBufferBytes()) {
+        hash = (37 * hash) + SOCKET_SEND_BUFFER_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSocketSendBufferBytes().hashCode();
+      }
+      if (hasSocketReceiveBufferBytes()) {
+        hash = (37 * hash) + SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSocketReceiveBufferBytes().hashCode();
+      }
+      if (hasAutoCreateTopicsEnable()) {
+        hash = (37 * hash) + AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoCreateTopicsEnable().hashCode();
+      }
+      if (hasNumPartitions()) {
+        hash = (37 * hash) + NUM_PARTITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumPartitions().hashCode();
+      }
+      if (hasDefaultReplicationFactor()) {
+        hash = (37 * hash) + DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultReplicationFactor().hashCode();
+      }
+      if (hasMessageMaxBytes()) {
+        hash = (37 * hash) + MESSAGE_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessageMaxBytes().hashCode();
+      }
+      if (hasReplicaFetchMaxBytes()) {
+        hash = (37 * hash) + REPLICA_FETCH_MAX_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicaFetchMaxBytes().hashCode();
+      }
+      if (getSslCipherSuitesCount() > 0) {
+        hash = (37 * hash) + SSL_CIPHER_SUITES_FIELD_NUMBER;
+        hash = (53 * hash) + getSslCipherSuitesList().hashCode();
+      }
+      if (hasOffsetsRetentionMinutes()) {
+        hash = (37 * hash) + OFFSETS_RETENTION_MINUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getOffsetsRetentionMinutes().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Kafka version 3.x broker configuration.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.KafkaConfig3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.KafkaConfig3)
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        compressionType_ = 0;
+
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          logFlushIntervalMessages_ = null;
+        } else {
+          logFlushIntervalMessages_ = null;
+          logFlushIntervalMessagesBuilder_ = null;
+        }
+        if (logFlushIntervalMsBuilder_ == null) {
+          logFlushIntervalMs_ = null;
+        } else {
+          logFlushIntervalMs_ = null;
+          logFlushIntervalMsBuilder_ = null;
+        }
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          logFlushSchedulerIntervalMs_ = null;
+        } else {
+          logFlushSchedulerIntervalMs_ = null;
+          logFlushSchedulerIntervalMsBuilder_ = null;
+        }
+        if (logRetentionBytesBuilder_ == null) {
+          logRetentionBytes_ = null;
+        } else {
+          logRetentionBytes_ = null;
+          logRetentionBytesBuilder_ = null;
+        }
+        if (logRetentionHoursBuilder_ == null) {
+          logRetentionHours_ = null;
+        } else {
+          logRetentionHours_ = null;
+          logRetentionHoursBuilder_ = null;
+        }
+        if (logRetentionMinutesBuilder_ == null) {
+          logRetentionMinutes_ = null;
+        } else {
+          logRetentionMinutes_ = null;
+          logRetentionMinutesBuilder_ = null;
+        }
+        if (logRetentionMsBuilder_ == null) {
+          logRetentionMs_ = null;
+        } else {
+          logRetentionMs_ = null;
+          logRetentionMsBuilder_ = null;
+        }
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = null;
+        } else {
+          logSegmentBytes_ = null;
+          logSegmentBytesBuilder_ = null;
+        }
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = null;
+        } else {
+          logPreallocate_ = null;
+          logPreallocateBuilder_ = null;
+        }
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = null;
+        } else {
+          socketSendBufferBytes_ = null;
+          socketSendBufferBytesBuilder_ = null;
+        }
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = null;
+        } else {
+          socketReceiveBufferBytes_ = null;
+          socketReceiveBufferBytesBuilder_ = null;
+        }
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = null;
+        } else {
+          autoCreateTopicsEnable_ = null;
+          autoCreateTopicsEnableBuilder_ = null;
+        }
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = null;
+        } else {
+          numPartitions_ = null;
+          numPartitionsBuilder_ = null;
+        }
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = null;
+        } else {
+          defaultReplicationFactor_ = null;
+          defaultReplicationFactorBuilder_ = null;
+        }
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 build() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3(this);
+        int from_bitField0_ = bitField0_;
+        result.compressionType_ = compressionType_;
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          result.logFlushIntervalMessages_ = logFlushIntervalMessages_;
+        } else {
+          result.logFlushIntervalMessages_ = logFlushIntervalMessagesBuilder_.build();
+        }
+        if (logFlushIntervalMsBuilder_ == null) {
+          result.logFlushIntervalMs_ = logFlushIntervalMs_;
+        } else {
+          result.logFlushIntervalMs_ = logFlushIntervalMsBuilder_.build();
+        }
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          result.logFlushSchedulerIntervalMs_ = logFlushSchedulerIntervalMs_;
+        } else {
+          result.logFlushSchedulerIntervalMs_ = logFlushSchedulerIntervalMsBuilder_.build();
+        }
+        if (logRetentionBytesBuilder_ == null) {
+          result.logRetentionBytes_ = logRetentionBytes_;
+        } else {
+          result.logRetentionBytes_ = logRetentionBytesBuilder_.build();
+        }
+        if (logRetentionHoursBuilder_ == null) {
+          result.logRetentionHours_ = logRetentionHours_;
+        } else {
+          result.logRetentionHours_ = logRetentionHoursBuilder_.build();
+        }
+        if (logRetentionMinutesBuilder_ == null) {
+          result.logRetentionMinutes_ = logRetentionMinutes_;
+        } else {
+          result.logRetentionMinutes_ = logRetentionMinutesBuilder_.build();
+        }
+        if (logRetentionMsBuilder_ == null) {
+          result.logRetentionMs_ = logRetentionMs_;
+        } else {
+          result.logRetentionMs_ = logRetentionMsBuilder_.build();
+        }
+        if (logSegmentBytesBuilder_ == null) {
+          result.logSegmentBytes_ = logSegmentBytes_;
+        } else {
+          result.logSegmentBytes_ = logSegmentBytesBuilder_.build();
+        }
+        if (logPreallocateBuilder_ == null) {
+          result.logPreallocate_ = logPreallocate_;
+        } else {
+          result.logPreallocate_ = logPreallocateBuilder_.build();
+        }
+        if (socketSendBufferBytesBuilder_ == null) {
+          result.socketSendBufferBytes_ = socketSendBufferBytes_;
+        } else {
+          result.socketSendBufferBytes_ = socketSendBufferBytesBuilder_.build();
+        }
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          result.socketReceiveBufferBytes_ = socketReceiveBufferBytes_;
+        } else {
+          result.socketReceiveBufferBytes_ = socketReceiveBufferBytesBuilder_.build();
+        }
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          result.autoCreateTopicsEnable_ = autoCreateTopicsEnable_;
+        } else {
+          result.autoCreateTopicsEnable_ = autoCreateTopicsEnableBuilder_.build();
+        }
+        if (numPartitionsBuilder_ == null) {
+          result.numPartitions_ = numPartitions_;
+        } else {
+          result.numPartitions_ = numPartitionsBuilder_.build();
+        }
+        if (defaultReplicationFactorBuilder_ == null) {
+          result.defaultReplicationFactor_ = defaultReplicationFactor_;
+        } else {
+          result.defaultReplicationFactor_ = defaultReplicationFactorBuilder_.build();
+        }
+        if (messageMaxBytesBuilder_ == null) {
+          result.messageMaxBytes_ = messageMaxBytes_;
+        } else {
+          result.messageMaxBytes_ = messageMaxBytesBuilder_.build();
+        }
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytes_;
+        } else {
+          result.replicaFetchMaxBytes_ = replicaFetchMaxBytesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sslCipherSuites_ = sslCipherSuites_;
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutes_;
+        } else {
+          result.offsetsRetentionMinutes_ = offsetsRetentionMinutesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3.getDefaultInstance()) return this;
+        if (other.compressionType_ != 0) {
+          setCompressionTypeValue(other.getCompressionTypeValue());
+        }
+        if (other.hasLogFlushIntervalMessages()) {
+          mergeLogFlushIntervalMessages(other.getLogFlushIntervalMessages());
+        }
+        if (other.hasLogFlushIntervalMs()) {
+          mergeLogFlushIntervalMs(other.getLogFlushIntervalMs());
+        }
+        if (other.hasLogFlushSchedulerIntervalMs()) {
+          mergeLogFlushSchedulerIntervalMs(other.getLogFlushSchedulerIntervalMs());
+        }
+        if (other.hasLogRetentionBytes()) {
+          mergeLogRetentionBytes(other.getLogRetentionBytes());
+        }
+        if (other.hasLogRetentionHours()) {
+          mergeLogRetentionHours(other.getLogRetentionHours());
+        }
+        if (other.hasLogRetentionMinutes()) {
+          mergeLogRetentionMinutes(other.getLogRetentionMinutes());
+        }
+        if (other.hasLogRetentionMs()) {
+          mergeLogRetentionMs(other.getLogRetentionMs());
+        }
+        if (other.hasLogSegmentBytes()) {
+          mergeLogSegmentBytes(other.getLogSegmentBytes());
+        }
+        if (other.hasLogPreallocate()) {
+          mergeLogPreallocate(other.getLogPreallocate());
+        }
+        if (other.hasSocketSendBufferBytes()) {
+          mergeSocketSendBufferBytes(other.getSocketSendBufferBytes());
+        }
+        if (other.hasSocketReceiveBufferBytes()) {
+          mergeSocketReceiveBufferBytes(other.getSocketReceiveBufferBytes());
+        }
+        if (other.hasAutoCreateTopicsEnable()) {
+          mergeAutoCreateTopicsEnable(other.getAutoCreateTopicsEnable());
+        }
+        if (other.hasNumPartitions()) {
+          mergeNumPartitions(other.getNumPartitions());
+        }
+        if (other.hasDefaultReplicationFactor()) {
+          mergeDefaultReplicationFactor(other.getDefaultReplicationFactor());
+        }
+        if (other.hasMessageMaxBytes()) {
+          mergeMessageMaxBytes(other.getMessageMaxBytes());
+        }
+        if (other.hasReplicaFetchMaxBytes()) {
+          mergeReplicaFetchMaxBytes(other.getReplicaFetchMaxBytes());
+        }
+        if (!other.sslCipherSuites_.isEmpty()) {
+          if (sslCipherSuites_.isEmpty()) {
+            sslCipherSuites_ = other.sslCipherSuites_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSslCipherSuitesIsMutable();
+            sslCipherSuites_.addAll(other.sslCipherSuites_);
+          }
+          onChanged();
+        }
+        if (other.hasOffsetsRetentionMinutes()) {
+          mergeOffsetsRetentionMinutes(other.getOffsetsRetentionMinutes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int compressionType_ = 0;
+      /**
+       * <pre>
+       * Cluster topics compression type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+       * @return The enum numeric value on the wire for compressionType.
+       */
+      @java.lang.Override public int getCompressionTypeValue() {
+        return compressionType_;
+      }
+      /**
+       * <pre>
+       * Cluster topics compression type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+       * @param value The enum numeric value on the wire for compressionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionTypeValue(int value) {
+        
+        compressionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cluster topics compression type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+       * @return The compressionType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Cluster topics compression type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+       * @param value The compressionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionType(yandex.cloud.api.mdb.kafka.v1.Common.CompressionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        compressionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cluster topics compression type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompressionType() {
+        
+        compressionType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value logFlushIntervalMessages_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logFlushIntervalMessagesBuilder_;
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       * @return Whether the logFlushIntervalMessages field is set.
+       */
+      public boolean hasLogFlushIntervalMessages() {
+        return logFlushIntervalMessagesBuilder_ != null || logFlushIntervalMessages_ != null;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       * @return The logFlushIntervalMessages.
+       */
+      public com.google.protobuf.Int64Value getLogFlushIntervalMessages() {
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          return logFlushIntervalMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logFlushIntervalMessages_;
+        } else {
+          return logFlushIntervalMessagesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      public Builder setLogFlushIntervalMessages(com.google.protobuf.Int64Value value) {
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logFlushIntervalMessages_ = value;
+          onChanged();
+        } else {
+          logFlushIntervalMessagesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      public Builder setLogFlushIntervalMessages(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          logFlushIntervalMessages_ = builderForValue.build();
+          onChanged();
+        } else {
+          logFlushIntervalMessagesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      public Builder mergeLogFlushIntervalMessages(com.google.protobuf.Int64Value value) {
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          if (logFlushIntervalMessages_ != null) {
+            logFlushIntervalMessages_ =
+              com.google.protobuf.Int64Value.newBuilder(logFlushIntervalMessages_).mergeFrom(value).buildPartial();
+          } else {
+            logFlushIntervalMessages_ = value;
+          }
+          onChanged();
+        } else {
+          logFlushIntervalMessagesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      public Builder clearLogFlushIntervalMessages() {
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          logFlushIntervalMessages_ = null;
+          onChanged();
+        } else {
+          logFlushIntervalMessages_ = null;
+          logFlushIntervalMessagesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogFlushIntervalMessagesBuilder() {
+        
+        onChanged();
+        return getLogFlushIntervalMessagesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogFlushIntervalMessagesOrBuilder() {
+        if (logFlushIntervalMessagesBuilder_ != null) {
+          return logFlushIntervalMessagesBuilder_.getMessageOrBuilder();
+        } else {
+          return logFlushIntervalMessages_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logFlushIntervalMessages_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_messages] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogFlushIntervalMessagesFieldBuilder() {
+        if (logFlushIntervalMessagesBuilder_ == null) {
+          logFlushIntervalMessagesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogFlushIntervalMessages(),
+                  getParentForChildren(),
+                  isClean());
+          logFlushIntervalMessages_ = null;
+        }
+        return logFlushIntervalMessagesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logFlushIntervalMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logFlushIntervalMsBuilder_;
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       * @return Whether the logFlushIntervalMs field is set.
+       */
+      public boolean hasLogFlushIntervalMs() {
+        return logFlushIntervalMsBuilder_ != null || logFlushIntervalMs_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       * @return The logFlushIntervalMs.
+       */
+      public com.google.protobuf.Int64Value getLogFlushIntervalMs() {
+        if (logFlushIntervalMsBuilder_ == null) {
+          return logFlushIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logFlushIntervalMs_;
+        } else {
+          return logFlushIntervalMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      public Builder setLogFlushIntervalMs(com.google.protobuf.Int64Value value) {
+        if (logFlushIntervalMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logFlushIntervalMs_ = value;
+          onChanged();
+        } else {
+          logFlushIntervalMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      public Builder setLogFlushIntervalMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logFlushIntervalMsBuilder_ == null) {
+          logFlushIntervalMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          logFlushIntervalMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      public Builder mergeLogFlushIntervalMs(com.google.protobuf.Int64Value value) {
+        if (logFlushIntervalMsBuilder_ == null) {
+          if (logFlushIntervalMs_ != null) {
+            logFlushIntervalMs_ =
+              com.google.protobuf.Int64Value.newBuilder(logFlushIntervalMs_).mergeFrom(value).buildPartial();
+          } else {
+            logFlushIntervalMs_ = value;
+          }
+          onChanged();
+        } else {
+          logFlushIntervalMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      public Builder clearLogFlushIntervalMs() {
+        if (logFlushIntervalMsBuilder_ == null) {
+          logFlushIntervalMs_ = null;
+          onChanged();
+        } else {
+          logFlushIntervalMs_ = null;
+          logFlushIntervalMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogFlushIntervalMsBuilder() {
+        
+        onChanged();
+        return getLogFlushIntervalMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogFlushIntervalMsOrBuilder() {
+        if (logFlushIntervalMsBuilder_ != null) {
+          return logFlushIntervalMsBuilder_.getMessageOrBuilder();
+        } else {
+          return logFlushIntervalMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logFlushIntervalMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
+       * If not set, the value of [log_flush_scheduler_interval_ms] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.flush_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogFlushIntervalMsFieldBuilder() {
+        if (logFlushIntervalMsBuilder_ == null) {
+          logFlushIntervalMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogFlushIntervalMs(),
+                  getParentForChildren(),
+                  isClean());
+          logFlushIntervalMs_ = null;
+        }
+        return logFlushIntervalMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logFlushSchedulerIntervalMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logFlushSchedulerIntervalMsBuilder_;
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       * @return Whether the logFlushSchedulerIntervalMs field is set.
+       */
+      public boolean hasLogFlushSchedulerIntervalMs() {
+        return logFlushSchedulerIntervalMsBuilder_ != null || logFlushSchedulerIntervalMs_ != null;
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       * @return The logFlushSchedulerIntervalMs.
+       */
+      public com.google.protobuf.Int64Value getLogFlushSchedulerIntervalMs() {
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          return logFlushSchedulerIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logFlushSchedulerIntervalMs_;
+        } else {
+          return logFlushSchedulerIntervalMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      public Builder setLogFlushSchedulerIntervalMs(com.google.protobuf.Int64Value value) {
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logFlushSchedulerIntervalMs_ = value;
+          onChanged();
+        } else {
+          logFlushSchedulerIntervalMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      public Builder setLogFlushSchedulerIntervalMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          logFlushSchedulerIntervalMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          logFlushSchedulerIntervalMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      public Builder mergeLogFlushSchedulerIntervalMs(com.google.protobuf.Int64Value value) {
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          if (logFlushSchedulerIntervalMs_ != null) {
+            logFlushSchedulerIntervalMs_ =
+              com.google.protobuf.Int64Value.newBuilder(logFlushSchedulerIntervalMs_).mergeFrom(value).buildPartial();
+          } else {
+            logFlushSchedulerIntervalMs_ = value;
+          }
+          onChanged();
+        } else {
+          logFlushSchedulerIntervalMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      public Builder clearLogFlushSchedulerIntervalMs() {
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          logFlushSchedulerIntervalMs_ = null;
+          onChanged();
+        } else {
+          logFlushSchedulerIntervalMs_ = null;
+          logFlushSchedulerIntervalMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogFlushSchedulerIntervalMsBuilder() {
+        
+        onChanged();
+        return getLogFlushSchedulerIntervalMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogFlushSchedulerIntervalMsOrBuilder() {
+        if (logFlushSchedulerIntervalMsBuilder_ != null) {
+          return logFlushSchedulerIntervalMsBuilder_.getMessageOrBuilder();
+        } else {
+          return logFlushSchedulerIntervalMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logFlushSchedulerIntervalMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The frequency of checks (in milliseconds) for any logs that need to be flushed to disk.
+       * This check is done by the log flusher.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_flush_scheduler_interval_ms = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogFlushSchedulerIntervalMsFieldBuilder() {
+        if (logFlushSchedulerIntervalMsBuilder_ == null) {
+          logFlushSchedulerIntervalMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogFlushSchedulerIntervalMs(),
+                  getParentForChildren(),
+                  isClean());
+          logFlushSchedulerIntervalMs_ = null;
+        }
+        return logFlushSchedulerIntervalMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logRetentionBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logRetentionBytesBuilder_;
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       * @return Whether the logRetentionBytes field is set.
+       */
+      public boolean hasLogRetentionBytes() {
+        return logRetentionBytesBuilder_ != null || logRetentionBytes_ != null;
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       * @return The logRetentionBytes.
+       */
+      public com.google.protobuf.Int64Value getLogRetentionBytes() {
+        if (logRetentionBytesBuilder_ == null) {
+          return logRetentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionBytes_;
+        } else {
+          return logRetentionBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      public Builder setLogRetentionBytes(com.google.protobuf.Int64Value value) {
+        if (logRetentionBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logRetentionBytes_ = value;
+          onChanged();
+        } else {
+          logRetentionBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      public Builder setLogRetentionBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logRetentionBytesBuilder_ == null) {
+          logRetentionBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          logRetentionBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      public Builder mergeLogRetentionBytes(com.google.protobuf.Int64Value value) {
+        if (logRetentionBytesBuilder_ == null) {
+          if (logRetentionBytes_ != null) {
+            logRetentionBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(logRetentionBytes_).mergeFrom(value).buildPartial();
+          } else {
+            logRetentionBytes_ = value;
+          }
+          onChanged();
+        } else {
+          logRetentionBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      public Builder clearLogRetentionBytes() {
+        if (logRetentionBytesBuilder_ == null) {
+          logRetentionBytes_ = null;
+          onChanged();
+        } else {
+          logRetentionBytes_ = null;
+          logRetentionBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogRetentionBytesBuilder() {
+        
+        onChanged();
+        return getLogRetentionBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogRetentionBytesOrBuilder() {
+        if (logRetentionBytesBuilder_ != null) {
+          return logRetentionBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return logRetentionBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig3.cleanup_policy] is in effect.
+       * This setting is helpful if you need to control the size of a log due to limited disk space.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogRetentionBytesFieldBuilder() {
+        if (logRetentionBytesBuilder_ == null) {
+          logRetentionBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogRetentionBytes(),
+                  getParentForChildren(),
+                  isClean());
+          logRetentionBytes_ = null;
+        }
+        return logRetentionBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logRetentionHours_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logRetentionHoursBuilder_;
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       * @return Whether the logRetentionHours field is set.
+       */
+      public boolean hasLogRetentionHours() {
+        return logRetentionHoursBuilder_ != null || logRetentionHours_ != null;
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       * @return The logRetentionHours.
+       */
+      public com.google.protobuf.Int64Value getLogRetentionHours() {
+        if (logRetentionHoursBuilder_ == null) {
+          return logRetentionHours_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionHours_;
+        } else {
+          return logRetentionHoursBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      public Builder setLogRetentionHours(com.google.protobuf.Int64Value value) {
+        if (logRetentionHoursBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logRetentionHours_ = value;
+          onChanged();
+        } else {
+          logRetentionHoursBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      public Builder setLogRetentionHours(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logRetentionHoursBuilder_ == null) {
+          logRetentionHours_ = builderForValue.build();
+          onChanged();
+        } else {
+          logRetentionHoursBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      public Builder mergeLogRetentionHours(com.google.protobuf.Int64Value value) {
+        if (logRetentionHoursBuilder_ == null) {
+          if (logRetentionHours_ != null) {
+            logRetentionHours_ =
+              com.google.protobuf.Int64Value.newBuilder(logRetentionHours_).mergeFrom(value).buildPartial();
+          } else {
+            logRetentionHours_ = value;
+          }
+          onChanged();
+        } else {
+          logRetentionHoursBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      public Builder clearLogRetentionHours() {
+        if (logRetentionHoursBuilder_ == null) {
+          logRetentionHours_ = null;
+          onChanged();
+        } else {
+          logRetentionHours_ = null;
+          logRetentionHoursBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogRetentionHoursBuilder() {
+        
+        onChanged();
+        return getLogRetentionHoursFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogRetentionHoursOrBuilder() {
+        if (logRetentionHoursBuilder_ != null) {
+          return logRetentionHoursBuilder_.getMessageOrBuilder();
+        } else {
+          return logRetentionHours_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionHours_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of hours to keep a log segment file before deleting it.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_hours = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogRetentionHoursFieldBuilder() {
+        if (logRetentionHoursBuilder_ == null) {
+          logRetentionHoursBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogRetentionHours(),
+                  getParentForChildren(),
+                  isClean());
+          logRetentionHours_ = null;
+        }
+        return logRetentionHoursBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logRetentionMinutes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logRetentionMinutesBuilder_;
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       * @return Whether the logRetentionMinutes field is set.
+       */
+      public boolean hasLogRetentionMinutes() {
+        return logRetentionMinutesBuilder_ != null || logRetentionMinutes_ != null;
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       * @return The logRetentionMinutes.
+       */
+      public com.google.protobuf.Int64Value getLogRetentionMinutes() {
+        if (logRetentionMinutesBuilder_ == null) {
+          return logRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionMinutes_;
+        } else {
+          return logRetentionMinutesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      public Builder setLogRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (logRetentionMinutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logRetentionMinutes_ = value;
+          onChanged();
+        } else {
+          logRetentionMinutesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      public Builder setLogRetentionMinutes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logRetentionMinutesBuilder_ == null) {
+          logRetentionMinutes_ = builderForValue.build();
+          onChanged();
+        } else {
+          logRetentionMinutesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      public Builder mergeLogRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (logRetentionMinutesBuilder_ == null) {
+          if (logRetentionMinutes_ != null) {
+            logRetentionMinutes_ =
+              com.google.protobuf.Int64Value.newBuilder(logRetentionMinutes_).mergeFrom(value).buildPartial();
+          } else {
+            logRetentionMinutes_ = value;
+          }
+          onChanged();
+        } else {
+          logRetentionMinutesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      public Builder clearLogRetentionMinutes() {
+        if (logRetentionMinutesBuilder_ == null) {
+          logRetentionMinutes_ = null;
+          onChanged();
+        } else {
+          logRetentionMinutes_ = null;
+          logRetentionMinutesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogRetentionMinutesBuilder() {
+        
+        onChanged();
+        return getLogRetentionMinutesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogRetentionMinutesOrBuilder() {
+        if (logRetentionMinutesBuilder_ != null) {
+          return logRetentionMinutesBuilder_.getMessageOrBuilder();
+        } else {
+          return logRetentionMinutes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionMinutes_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of minutes to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_hours] is used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_minutes = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogRetentionMinutesFieldBuilder() {
+        if (logRetentionMinutesBuilder_ == null) {
+          logRetentionMinutesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogRetentionMinutes(),
+                  getParentForChildren(),
+                  isClean());
+          logRetentionMinutes_ = null;
+        }
+        return logRetentionMinutesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logRetentionMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logRetentionMsBuilder_;
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       * @return Whether the logRetentionMs field is set.
+       */
+      public boolean hasLogRetentionMs() {
+        return logRetentionMsBuilder_ != null || logRetentionMs_ != null;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       * @return The logRetentionMs.
+       */
+      public com.google.protobuf.Int64Value getLogRetentionMs() {
+        if (logRetentionMsBuilder_ == null) {
+          return logRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionMs_;
+        } else {
+          return logRetentionMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      public Builder setLogRetentionMs(com.google.protobuf.Int64Value value) {
+        if (logRetentionMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logRetentionMs_ = value;
+          onChanged();
+        } else {
+          logRetentionMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      public Builder setLogRetentionMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logRetentionMsBuilder_ == null) {
+          logRetentionMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          logRetentionMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      public Builder mergeLogRetentionMs(com.google.protobuf.Int64Value value) {
+        if (logRetentionMsBuilder_ == null) {
+          if (logRetentionMs_ != null) {
+            logRetentionMs_ =
+              com.google.protobuf.Int64Value.newBuilder(logRetentionMs_).mergeFrom(value).buildPartial();
+          } else {
+            logRetentionMs_ = value;
+          }
+          onChanged();
+        } else {
+          logRetentionMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      public Builder clearLogRetentionMs() {
+        if (logRetentionMsBuilder_ == null) {
+          logRetentionMs_ = null;
+          onChanged();
+        } else {
+          logRetentionMs_ = null;
+          logRetentionMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogRetentionMsBuilder() {
+        
+        onChanged();
+        return getLogRetentionMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogRetentionMsOrBuilder() {
+        if (logRetentionMsBuilder_ != null) {
+          return logRetentionMsBuilder_.getMessageOrBuilder();
+        } else {
+          return logRetentionMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logRetentionMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment file before deleting it.
+       * If not set, the value of [log_retention_minutes] is used.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.retention_ms] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogRetentionMsFieldBuilder() {
+        if (logRetentionMsBuilder_ == null) {
+          logRetentionMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogRetentionMs(),
+                  getParentForChildren(),
+                  isClean());
+          logRetentionMs_ = null;
+        }
+        return logRetentionMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logSegmentBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logSegmentBytesBuilder_;
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       * @return Whether the logSegmentBytes field is set.
+       */
+      public boolean hasLogSegmentBytes() {
+        return logSegmentBytesBuilder_ != null || logSegmentBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       * @return The logSegmentBytes.
+       */
+      public com.google.protobuf.Int64Value getLogSegmentBytes() {
+        if (logSegmentBytesBuilder_ == null) {
+          return logSegmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+        } else {
+          return logSegmentBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder setLogSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (logSegmentBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logSegmentBytes_ = value;
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder setLogSegmentBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder mergeLogSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (logSegmentBytesBuilder_ == null) {
+          if (logSegmentBytes_ != null) {
+            logSegmentBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(logSegmentBytes_).mergeFrom(value).buildPartial();
+          } else {
+            logSegmentBytes_ = value;
+          }
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder clearLogSegmentBytes() {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = null;
+          onChanged();
+        } else {
+          logSegmentBytes_ = null;
+          logSegmentBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogSegmentBytesBuilder() {
+        
+        onChanged();
+        return getLogSegmentBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder() {
+        if (logSegmentBytesBuilder_ != null) {
+          return logSegmentBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return logSegmentBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogSegmentBytesFieldBuilder() {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogSegmentBytes(),
+                  getParentForChildren(),
+                  isClean());
+          logSegmentBytes_ = null;
+        }
+        return logSegmentBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue logPreallocate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logPreallocateBuilder_;
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * @return Whether the logPreallocate field is set.
+       */
+      public boolean hasLogPreallocate() {
+        return logPreallocateBuilder_ != null || logPreallocate_ != null;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * @return The logPreallocate.
+       */
+      public com.google.protobuf.BoolValue getLogPreallocate() {
+        if (logPreallocateBuilder_ == null) {
+          return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+        } else {
+          return logPreallocateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
+        if (logPreallocateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logPreallocate_ = value;
+          onChanged();
+        } else {
+          logPreallocateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder setLogPreallocate(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = builderForValue.build();
+          onChanged();
+        } else {
+          logPreallocateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
+        if (logPreallocateBuilder_ == null) {
+          if (logPreallocate_ != null) {
+            logPreallocate_ =
+              com.google.protobuf.BoolValue.newBuilder(logPreallocate_).mergeFrom(value).buildPartial();
+          } else {
+            logPreallocate_ = value;
+          }
+          onChanged();
+        } else {
+          logPreallocateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder clearLogPreallocate() {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = null;
+          onChanged();
+        } else {
+          logPreallocate_ = null;
+          logPreallocateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
+        
+        onChanged();
+        return getLogPreallocateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+        if (logPreallocateBuilder_ != null) {
+          return logPreallocateBuilder_.getMessageOrBuilder();
+        } else {
+          return logPreallocate_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+        }
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogPreallocateFieldBuilder() {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogPreallocate(),
+                  getParentForChildren(),
+                  isClean());
+          logPreallocate_ = null;
+        }
+        return logPreallocateBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value socketSendBufferBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> socketSendBufferBytesBuilder_;
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       * @return Whether the socketSendBufferBytes field is set.
+       */
+      public boolean hasSocketSendBufferBytes() {
+        return socketSendBufferBytesBuilder_ != null || socketSendBufferBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       * @return The socketSendBufferBytes.
+       */
+      public com.google.protobuf.Int64Value getSocketSendBufferBytes() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          return socketSendBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+        } else {
+          return socketSendBufferBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder setSocketSendBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          socketSendBufferBytes_ = value;
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder setSocketSendBufferBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder mergeSocketSendBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          if (socketSendBufferBytes_ != null) {
+            socketSendBufferBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(socketSendBufferBytes_).mergeFrom(value).buildPartial();
+          } else {
+            socketSendBufferBytes_ = value;
+          }
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder clearSocketSendBufferBytes() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = null;
+          onChanged();
+        } else {
+          socketSendBufferBytes_ = null;
+          socketSendBufferBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSocketSendBufferBytesBuilder() {
+        
+        onChanged();
+        return getSocketSendBufferBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder() {
+        if (socketSendBufferBytesBuilder_ != null) {
+          return socketSendBufferBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return socketSendBufferBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSocketSendBufferBytesFieldBuilder() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSocketSendBufferBytes(),
+                  getParentForChildren(),
+                  isClean());
+          socketSendBufferBytes_ = null;
+        }
+        return socketSendBufferBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value socketReceiveBufferBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> socketReceiveBufferBytesBuilder_;
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       * @return Whether the socketReceiveBufferBytes field is set.
+       */
+      public boolean hasSocketReceiveBufferBytes() {
+        return socketReceiveBufferBytesBuilder_ != null || socketReceiveBufferBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       * @return The socketReceiveBufferBytes.
+       */
+      public com.google.protobuf.Int64Value getSocketReceiveBufferBytes() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          return socketReceiveBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+        } else {
+          return socketReceiveBufferBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder setSocketReceiveBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          socketReceiveBufferBytes_ = value;
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder setSocketReceiveBufferBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder mergeSocketReceiveBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          if (socketReceiveBufferBytes_ != null) {
+            socketReceiveBufferBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(socketReceiveBufferBytes_).mergeFrom(value).buildPartial();
+          } else {
+            socketReceiveBufferBytes_ = value;
+          }
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder clearSocketReceiveBufferBytes() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = null;
+          onChanged();
+        } else {
+          socketReceiveBufferBytes_ = null;
+          socketReceiveBufferBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSocketReceiveBufferBytesBuilder() {
+        
+        onChanged();
+        return getSocketReceiveBufferBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder() {
+        if (socketReceiveBufferBytesBuilder_ != null) {
+          return socketReceiveBufferBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return socketReceiveBufferBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSocketReceiveBufferBytesFieldBuilder() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSocketReceiveBufferBytes(),
+                  getParentForChildren(),
+                  isClean());
+          socketReceiveBufferBytes_ = null;
+        }
+        return socketReceiveBufferBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue autoCreateTopicsEnable_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoCreateTopicsEnableBuilder_;
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       * @return Whether the autoCreateTopicsEnable field is set.
+       */
+      public boolean hasAutoCreateTopicsEnable() {
+        return autoCreateTopicsEnableBuilder_ != null || autoCreateTopicsEnable_ != null;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       * @return The autoCreateTopicsEnable.
+       */
+      public com.google.protobuf.BoolValue getAutoCreateTopicsEnable() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          return autoCreateTopicsEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+        } else {
+          return autoCreateTopicsEnableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder setAutoCreateTopicsEnable(com.google.protobuf.BoolValue value) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoCreateTopicsEnable_ = value;
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder setAutoCreateTopicsEnable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder mergeAutoCreateTopicsEnable(com.google.protobuf.BoolValue value) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          if (autoCreateTopicsEnable_ != null) {
+            autoCreateTopicsEnable_ =
+              com.google.protobuf.BoolValue.newBuilder(autoCreateTopicsEnable_).mergeFrom(value).buildPartial();
+          } else {
+            autoCreateTopicsEnable_ = value;
+          }
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder clearAutoCreateTopicsEnable() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = null;
+          onChanged();
+        } else {
+          autoCreateTopicsEnable_ = null;
+          autoCreateTopicsEnableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAutoCreateTopicsEnableBuilder() {
+        
+        onChanged();
+        return getAutoCreateTopicsEnableFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder() {
+        if (autoCreateTopicsEnableBuilder_ != null) {
+          return autoCreateTopicsEnableBuilder_.getMessageOrBuilder();
+        } else {
+          return autoCreateTopicsEnable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAutoCreateTopicsEnableFieldBuilder() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAutoCreateTopicsEnable(),
+                  getParentForChildren(),
+                  isClean());
+          autoCreateTopicsEnable_ = null;
+        }
+        return autoCreateTopicsEnableBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value numPartitions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numPartitionsBuilder_;
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       * @return Whether the numPartitions field is set.
+       */
+      public boolean hasNumPartitions() {
+        return numPartitionsBuilder_ != null || numPartitions_ != null;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       * @return The numPartitions.
+       */
+      public com.google.protobuf.Int64Value getNumPartitions() {
+        if (numPartitionsBuilder_ == null) {
+          return numPartitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+        } else {
+          return numPartitionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder setNumPartitions(com.google.protobuf.Int64Value value) {
+        if (numPartitionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          numPartitions_ = value;
+          onChanged();
+        } else {
+          numPartitionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder setNumPartitions(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = builderForValue.build();
+          onChanged();
+        } else {
+          numPartitionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder mergeNumPartitions(com.google.protobuf.Int64Value value) {
+        if (numPartitionsBuilder_ == null) {
+          if (numPartitions_ != null) {
+            numPartitions_ =
+              com.google.protobuf.Int64Value.newBuilder(numPartitions_).mergeFrom(value).buildPartial();
+          } else {
+            numPartitions_ = value;
+          }
+          onChanged();
+        } else {
+          numPartitionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder clearNumPartitions() {
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = null;
+          onChanged();
+        } else {
+          numPartitions_ = null;
+          numPartitionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getNumPartitionsBuilder() {
+        
+        onChanged();
+        return getNumPartitionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder() {
+        if (numPartitionsBuilder_ != null) {
+          return numPartitionsBuilder_.getMessageOrBuilder();
+        } else {
+          return numPartitions_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+        }
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getNumPartitionsFieldBuilder() {
+        if (numPartitionsBuilder_ == null) {
+          numPartitionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getNumPartitions(),
+                  getParentForChildren(),
+                  isClean());
+          numPartitions_ = null;
+        }
+        return numPartitionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value defaultReplicationFactor_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> defaultReplicationFactorBuilder_;
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       * @return Whether the defaultReplicationFactor field is set.
+       */
+      public boolean hasDefaultReplicationFactor() {
+        return defaultReplicationFactorBuilder_ != null || defaultReplicationFactor_ != null;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       * @return The defaultReplicationFactor.
+       */
+      public com.google.protobuf.Int64Value getDefaultReplicationFactor() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          return defaultReplicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+        } else {
+          return defaultReplicationFactorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder setDefaultReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultReplicationFactor_ = value;
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder setDefaultReplicationFactor(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = builderForValue.build();
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder mergeDefaultReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          if (defaultReplicationFactor_ != null) {
+            defaultReplicationFactor_ =
+              com.google.protobuf.Int64Value.newBuilder(defaultReplicationFactor_).mergeFrom(value).buildPartial();
+          } else {
+            defaultReplicationFactor_ = value;
+          }
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder clearDefaultReplicationFactor() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = null;
+          onChanged();
+        } else {
+          defaultReplicationFactor_ = null;
+          defaultReplicationFactorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDefaultReplicationFactorBuilder() {
+        
+        onChanged();
+        return getDefaultReplicationFactorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder() {
+        if (defaultReplicationFactorBuilder_ != null) {
+          return defaultReplicationFactorBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultReplicationFactor_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+        }
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDefaultReplicationFactorFieldBuilder() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDefaultReplicationFactor(),
+                  getParentForChildren(),
+                  isClean());
+          defaultReplicationFactor_ = null;
+        }
+        return defaultReplicationFactorBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value messageMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> messageMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return Whether the messageMaxBytes field is set.
+       */
+      public boolean hasMessageMaxBytes() {
+        return messageMaxBytesBuilder_ != null || messageMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       * @return The messageMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        } else {
+          return messageMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          messageMaxBytes_ = value;
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder setMessageMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder mergeMessageMaxBytes(com.google.protobuf.Int64Value value) {
+        if (messageMaxBytesBuilder_ == null) {
+          if (messageMaxBytes_ != null) {
+            messageMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(messageMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            messageMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          messageMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public Builder clearMessageMaxBytes() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytes_ = null;
+          onChanged();
+        } else {
+          messageMaxBytes_ = null;
+          messageMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMessageMaxBytesBuilder() {
+        
+        onChanged();
+        return getMessageMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+        if (messageMaxBytesBuilder_ != null) {
+          return messageMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return messageMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed by Kafka. Default value: 1048588.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMessageMaxBytesFieldBuilder() {
+        if (messageMaxBytesBuilder_ == null) {
+          messageMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMessageMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          messageMaxBytes_ = null;
+        }
+        return messageMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value replicaFetchMaxBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicaFetchMaxBytesBuilder_;
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return Whether the replicaFetchMaxBytes field is set.
+       */
+      public boolean hasReplicaFetchMaxBytes() {
+        return replicaFetchMaxBytesBuilder_ != null || replicaFetchMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       * @return The replicaFetchMaxBytes.
+       */
+      public com.google.protobuf.Int64Value getReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          return replicaFetchMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        } else {
+          return replicaFetchMaxBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicaFetchMaxBytes_ = value;
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder setReplicaFetchMaxBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder mergeReplicaFetchMaxBytes(com.google.protobuf.Int64Value value) {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          if (replicaFetchMaxBytes_ != null) {
+            replicaFetchMaxBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(replicaFetchMaxBytes_).mergeFrom(value).buildPartial();
+          } else {
+            replicaFetchMaxBytes_ = value;
+          }
+          onChanged();
+        } else {
+          replicaFetchMaxBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public Builder clearReplicaFetchMaxBytes() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytes_ = null;
+          onChanged();
+        } else {
+          replicaFetchMaxBytes_ = null;
+          replicaFetchMaxBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicaFetchMaxBytesBuilder() {
+        
+        onChanged();
+        return getReplicaFetchMaxBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicaFetchMaxBytesOrBuilder() {
+        if (replicaFetchMaxBytesBuilder_ != null) {
+          return replicaFetchMaxBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return replicaFetchMaxBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicaFetchMaxBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of bytes of messages to attempt to fetch for each partition. Default value: 1048576.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replica_fetch_max_bytes = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicaFetchMaxBytesFieldBuilder() {
+        if (replicaFetchMaxBytesBuilder_ == null) {
+          replicaFetchMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicaFetchMaxBytes(),
+                  getParentForChildren(),
+                  isClean());
+          replicaFetchMaxBytes_ = null;
+        }
+        return replicaFetchMaxBytesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSslCipherSuitesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sslCipherSuites_ = new com.google.protobuf.LazyStringArrayList(sslCipherSuites_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return A list containing the sslCipherSuites.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSslCipherSuitesList() {
+        return sslCipherSuites_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return The count of sslCipherSuites.
+       */
+      public int getSslCipherSuitesCount() {
+        return sslCipherSuites_.size();
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the element to return.
+       * @return The sslCipherSuites at the given index.
+       */
+      public java.lang.String getSslCipherSuites(int index) {
+        return sslCipherSuites_.get(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sslCipherSuites at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSslCipherSuitesBytes(int index) {
+        return sslCipherSuites_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param index The index to set the value at.
+       * @param value The sslCipherSuites to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSslCipherSuites(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuites(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param values The sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSslCipherSuites(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSslCipherSuitesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sslCipherSuites_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSslCipherSuites() {
+        sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of cipher suites.
+       * </pre>
+       *
+       * <code>repeated string ssl_cipher_suites = 18;</code>
+       * @param value The bytes of the sslCipherSuites to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSslCipherSuitesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSslCipherSuitesIsMutable();
+        sslCipherSuites_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value offsetsRetentionMinutes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> offsetsRetentionMinutesBuilder_;
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return Whether the offsetsRetentionMinutes field is set.
+       */
+      public boolean hasOffsetsRetentionMinutes() {
+        return offsetsRetentionMinutesBuilder_ != null || offsetsRetentionMinutes_ != null;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       * @return The offsetsRetentionMinutes.
+       */
+      public com.google.protobuf.Int64Value getOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          return offsetsRetentionMinutes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        } else {
+          return offsetsRetentionMinutesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offsetsRetentionMinutes_ = value;
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder setOffsetsRetentionMinutes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = builderForValue.build();
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder mergeOffsetsRetentionMinutes(com.google.protobuf.Int64Value value) {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          if (offsetsRetentionMinutes_ != null) {
+            offsetsRetentionMinutes_ =
+              com.google.protobuf.Int64Value.newBuilder(offsetsRetentionMinutes_).mergeFrom(value).buildPartial();
+          } else {
+            offsetsRetentionMinutes_ = value;
+          }
+          onChanged();
+        } else {
+          offsetsRetentionMinutesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public Builder clearOffsetsRetentionMinutes() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutes_ = null;
+          onChanged();
+        } else {
+          offsetsRetentionMinutes_ = null;
+          offsetsRetentionMinutesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOffsetsRetentionMinutesBuilder() {
+        
+        onChanged();
+        return getOffsetsRetentionMinutesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder() {
+        if (offsetsRetentionMinutesBuilder_ != null) {
+          return offsetsRetentionMinutesBuilder_.getMessageOrBuilder();
+        } else {
+          return offsetsRetentionMinutes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : offsetsRetentionMinutes_;
+        }
+      }
+      /**
+       * <pre>
+       * Offset storage time after a consumer group loses all its consumers. Default: 10080.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOffsetsRetentionMinutesFieldBuilder() {
+        if (offsetsRetentionMinutesBuilder_ == null) {
+          offsetsRetentionMinutesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOffsetsRetentionMinutes(),
+                  getParentForChildren(),
+                  isClean());
+          offsetsRetentionMinutes_ = null;
+        }
+        return offsetsRetentionMinutesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.KafkaConfig3)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.KafkaConfig3)
+    private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KafkaConfig3>
+        PARSER = new com.google.protobuf.AbstractParser<KafkaConfig3>() {
+      @java.lang.Override
+      public KafkaConfig3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KafkaConfig3(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<KafkaConfig3> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KafkaConfig3> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.KafkaConfig3 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HostOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.Host)
       com.google.protobuf.MessageOrBuilder {
@@ -30297,6 +36019,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -30348,7 +36075,7 @@ public final class ClusterOuterClass {
       "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
       "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonito" +
       "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "\014\n\004link\030\003 \001(\t\"\203\006\n\nConfigSpec\022\017\n\007version\030" +
+      "\014\n\004link\030\003 \001(\t\"\325\006\n\nConfigSpec\022\017\n\007version\030" +
       "\001 \001(\t\022:\n\005kafka\030\002 \001(\0132+.yandex.cloud.mdb." +
       "kafka.v1.ConfigSpec.Kafka\022B\n\tzookeeper\030\003" +
       " \001(\0132/.yandex.cloud.mdb.kafka.v1.ConfigS" +
@@ -30357,7 +36084,7 @@ public final class ClusterOuterClass {
       "ue\022\030\n\020assign_public_ip\030\006 \001(\010\022\030\n\020unmanage" +
       "d_topics\030\007 \001(\010\022\027\n\017schema_registry\030\010 \001(\010\022" +
       "1\n\006access\030\t \001(\0132!.yandex.cloud.mdb.kafka" +
-      ".v1.Access\032\330\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132" +
+      ".v1.Access\032\252\003\n\005Kafka\0227\n\tresources\030\001 \001(\0132" +
       "$.yandex.cloud.mdb.kafka.v1.Resources\022V\n" +
       "\020kafka_config_2_1\030\002 \001(\0132).yandex.cloud.m" +
       "db.kafka.v1.KafkaConfig2_1H\000R\017kafkaConfi" +
@@ -30365,110 +36092,141 @@ public final class ClusterOuterClass {
       ".cloud.mdb.kafka.v1.KafkaConfig2_6H\000R\017ka" +
       "fkaConfig_2_6\022V\n\020kafka_config_2_8\030\004 \001(\0132" +
       ").yandex.cloud.mdb.kafka.v1.KafkaConfig2" +
-      "_8H\000R\017kafkaConfig_2_8B\016\n\014kafka_config\032D\n" +
-      "\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex.c" +
-      "loud.mdb.kafka.v1.Resources\"P\n\tResources" +
-      "\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_siz" +
-      "e\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\365\010\n\016KafkaC" +
-      "onfig2_1\022D\n\020compression_type\030\001 \001(\0162*.yan" +
-      "dex.cloud.mdb.kafka.v1.CompressionType\022@" +
-      "\n\033log_flush_interval_messages\030\002 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022:\n\025log_flush_in" +
-      "terval_ms\030\003 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022D\n\037log_flush_scheduler_interval_ms\030" +
-      "\004 \001(\0132\033.google.protobuf.Int64Value\0228\n\023lo" +
-      "g_retention_bytes\030\005 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0228\n\023log_retention_hours\030\006 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022:\n\025log_re" +
-      "tention_minutes\030\007 \001(\0132\033.google.protobuf." +
-      "Int64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\0226\n\021log_segment" +
-      "_bytes\030\t \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0223\n\017log_preallocate\030\n \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022=\n\030socket_send_buffer_byt" +
-      "es\030\013 \001(\0132\033.google.protobuf.Int64Value\022@\n" +
-      "\033socket_receive_buffer_bytes\030\014 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022=\n\031auto_create_t" +
-      "opics_enable\030\r \001(\0132\032.google.protobuf.Boo" +
-      "lValue\0223\n\016num_partitions\030\016 \001(\0132\033.google." +
-      "protobuf.Int64Value\022?\n\032default_replicati" +
-      "on_factor\030\017 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0226\n\021message_max_bytes\030\020 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022<\n\027replica_fetch_ma" +
-      "x_bytes\030\021 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets" +
-      "_retention_minutes\030\023 \001(\0132\033.google.protob" +
-      "uf.Int64Value\"\365\010\n\016KafkaConfig2_6\022D\n\020comp" +
-      "ression_type\030\001 \001(\0162*.yandex.cloud.mdb.ka" +
-      "fka.v1.CompressionType\022@\n\033log_flush_inte" +
-      "rval_messages\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022:\n\025log_flush_interval_ms\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022D\n\037log_flus" +
-      "h_scheduler_interval_ms\030\004 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\0228\n\023log_retention_byte" +
-      "s\030\005 \001(\0132\033.google.protobuf.Int64Value\0228\n\023" +
-      "log_retention_hours\030\006 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022:\n\025log_retention_minutes\030" +
-      "\007 \001(\0132\033.google.protobuf.Int64Value\0225\n\020lo" +
-      "g_retention_ms\030\010 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0226\n\021log_segment_bytes\030\t \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\0223\n\017log_preallo" +
-      "cate\030\n \001(\0132\032.google.protobuf.BoolValue\022=" +
-      "\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022@\n\033socket_receive_" +
-      "buffer_bytes\030\014 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022=\n\031auto_create_topics_enable\030\r \001" +
-      "(\0132\032.google.protobuf.BoolValue\0223\n\016num_pa" +
-      "rtitions\030\016 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022?\n\032default_replication_factor\030\017 \001(\0132" +
-      "\033.google.protobuf.Int64Value\0226\n\021message_" +
-      "max_bytes\030\020 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033." +
-      "google.protobuf.Int64Value\022\031\n\021ssl_cipher" +
-      "_suites\030\022 \003(\t\022>\n\031offsets_retention_minut" +
-      "es\030\023 \001(\0132\033.google.protobuf.Int64Value\"\365\010" +
-      "\n\016KafkaConfig2_8\022D\n\020compression_type\030\001 \001" +
-      "(\0162*.yandex.cloud.mdb.kafka.v1.Compressi" +
-      "onType\022@\n\033log_flush_interval_messages\030\002 " +
+      "_8H\000R\017kafkaConfig_2_8\022P\n\016kafka_config_3\030" +
+      "\005 \001(\0132\'.yandex.cloud.mdb.kafka.v1.KafkaC" +
+      "onfig3H\000R\rkafkaConfig_3B\016\n\014kafka_config\032" +
+      "D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex" +
+      ".cloud.mdb.kafka.v1.Resources\"P\n\tResourc" +
+      "es\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_s" +
+      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\365\010\n\016Kafk" +
+      "aConfig2_1\022D\n\020compression_type\030\001 \001(\0162*.y" +
+      "andex.cloud.mdb.kafka.v1.CompressionType" +
+      "\022@\n\033log_flush_interval_messages\030\002 \001(\0132\033." +
+      "google.protobuf.Int64Value\022:\n\025log_flush_" +
+      "interval_ms\030\003 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022D\n\037log_flush_scheduler_interval_m" +
+      "s\030\004 \001(\0132\033.google.protobuf.Int64Value\0228\n\023" +
+      "log_retention_bytes\030\005 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0228\n\023log_retention_hours\030\006 " +
       "\001(\0132\033.google.protobuf.Int64Value\022:\n\025log_" +
-      "flush_interval_ms\030\003 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022D\n\037log_flush_scheduler_inte" +
-      "rval_ms\030\004 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0228\n\023log_retention_bytes\030\005 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0228\n\023log_retention_ho" +
-      "urs\030\006 \001(\0132\033.google.protobuf.Int64Value\022:" +
-      "\n\025log_retention_minutes\030\007 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\0225\n\020log_retention_ms\030\010" +
-      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021log" +
-      "_segment_bytes\030\t \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0223\n\017log_preallocate\030\n \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022=\n\030socket_send_bu" +
-      "ffer_bytes\030\013 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022@\n\033socket_receive_buffer_bytes\030\014 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022=\n\031auto_" +
-      "create_topics_enable\030\r \001(\0132\032.google.prot" +
-      "obuf.BoolValue\0223\n\016num_partitions\030\016 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022?\n\032default_r" +
-      "eplication_factor\030\017 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0226\n\021message_max_bytes\030\020 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022<\n\027replica_" +
-      "fetch_max_bytes\030\021 \001(\0132\033.google.protobuf." +
-      "Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n" +
-      "\031offsets_retention_minutes\030\023 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\"\375\002\n\004Host\022\014\n\004name\030\001" +
-      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(" +
-      "\t\0222\n\004role\030\004 \001(\0162$.yandex.cloud.mdb.kafka" +
-      ".v1.Host.Role\0227\n\tresources\030\005 \001(\0132$.yande" +
-      "x.cloud.mdb.kafka.v1.Resources\0226\n\006health" +
-      "\030\006 \001(\0162&.yandex.cloud.mdb.kafka.v1.Host." +
-      "Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_publ" +
-      "ic_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020" +
-      "\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n" +
-      "\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRA" +
-      "DED\020\003\"\037\n\006Access\022\025\n\rdata_transfer\030\001 \001(\010Bd" +
-      "\n\035yandex.cloud.api.mdb.kafka.v1ZCgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/kafka/v1;kafkab\006proto3"
+      "retention_minutes\030\007 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0226\n\021log_segme" +
+      "nt_bytes\030\t \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\0223\n\017log_preallocate\030\n \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022=\n\030socket_send_buffer_b" +
+      "ytes\030\013 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022=\n\031auto_create" +
+      "_topics_enable\030\r \001(\0132\032.google.protobuf.B" +
+      "oolValue\0223\n\016num_partitions\030\016 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022?\n\032default_replica" +
+      "tion_factor\030\017 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0226\n\021message_max_bytes\030\020 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022<\n\027replica_fetch_" +
+      "max_bytes\030\021 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offse" +
+      "ts_retention_minutes\030\023 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\"\365\010\n\016KafkaConfig2_6\022D\n\020co" +
+      "mpression_type\030\001 \001(\0162*.yandex.cloud.mdb." +
+      "kafka.v1.CompressionType\022@\n\033log_flush_in" +
+      "terval_messages\030\002 \001(\0132\033.google.protobuf." +
+      "Int64Value\022:\n\025log_flush_interval_ms\030\003 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022D\n\037log_fl" +
+      "ush_scheduler_interval_ms\030\004 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0228\n\023log_retention_by" +
+      "tes\030\005 \001(\0132\033.google.protobuf.Int64Value\0228" +
+      "\n\023log_retention_hours\030\006 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022:\n\025log_retention_minute" +
+      "s\030\007 \001(\0132\033.google.protobuf.Int64Value\0225\n\020" +
+      "log_retention_ms\030\010 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0226\n\021log_segment_bytes\030\t \001(\0132\033" +
+      ".google.protobuf.Int64Value\0223\n\017log_preal" +
+      "locate\030\n \001(\0132\032.google.protobuf.BoolValue" +
+      "\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022@\n\033socket_receiv" +
+      "e_buffer_bytes\030\014 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022=\n\031auto_create_topics_enable\030\r" +
+      " \001(\0132\032.google.protobuf.BoolValue\0223\n\016num_" +
+      "partitions\030\016 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022?\n\032default_replication_factor\030\017 \001(" +
+      "\0132\033.google.protobuf.Int64Value\0226\n\021messag" +
+      "e_max_bytes\030\020 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022\031\n\021ssl_ciph" +
+      "er_suites\030\022 \003(\t\022>\n\031offsets_retention_min" +
+      "utes\030\023 \001(\0132\033.google.protobuf.Int64Value\"" +
+      "\365\010\n\016KafkaConfig2_8\022D\n\020compression_type\030\001" +
+      " \001(\0162*.yandex.cloud.mdb.kafka.v1.Compres" +
+      "sionType\022@\n\033log_flush_interval_messages\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025lo" +
+      "g_flush_interval_ms\030\003 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022D\n\037log_flush_scheduler_in" +
+      "terval_ms\030\004 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0228\n\023log_retention_bytes\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0228\n\023log_retention_" +
+      "hours\030\006 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022:\n\025log_retention_minutes\030\007 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0225\n\020log_retention_ms" +
+      "\030\010 \001(\0132\033.google.protobuf.Int64Value\0226\n\021l" +
+      "og_segment_bytes\030\t \001(\0132\033.google.protobuf" +
+      ".Int64Value\0223\n\017log_preallocate\030\n \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022=\n\030socket_send_" +
+      "buffer_bytes\030\013 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022@\n\033socket_receive_buffer_bytes\030\014" +
+      " \001(\0132\033.google.protobuf.Int64Value\022=\n\031aut" +
+      "o_create_topics_enable\030\r \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\0223\n\016num_partitions\030\016 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022?\n\032default" +
+      "_replication_factor\030\017 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0226\n\021message_max_bytes\030\020 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022<\n\027replic" +
+      "a_fetch_max_bytes\030\021 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022" +
+      ">\n\031offsets_retention_minutes\030\023 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\"\363\010\n\014KafkaConfig3" +
+      "\022D\n\020compression_type\030\001 \001(\0162*.yandex.clou" +
+      "d.mdb.kafka.v1.CompressionType\022@\n\033log_fl" +
+      "ush_interval_messages\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022:\n\025log_flush_interval_m" +
+      "s\030\003 \001(\0132\033.google.protobuf.Int64Value\022D\n\037" +
+      "log_flush_scheduler_interval_ms\030\004 \001(\0132\033." +
+      "google.protobuf.Int64Value\0228\n\023log_retent" +
+      "ion_bytes\030\005 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0228\n\023log_retention_hours\030\006 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022:\n\025log_retention_" +
+      "minutes\030\007 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\0225\n\020log_retention_ms\030\010 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0226\n\021log_segment_bytes\030\t" +
+      " \001(\0132\033.google.protobuf.Int64Value\0223\n\017log" +
+      "_preallocate\030\n \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022=\n\030socket_send_buffer_bytes\030\013 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022@\n\033socket_" +
+      "receive_buffer_bytes\030\014 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022=\n\031auto_create_topics_en" +
+      "able\030\r \001(\0132\032.google.protobuf.BoolValue\0223" +
+      "\n\016num_partitions\030\016 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022?\n\032default_replication_facto" +
+      "r\030\017 \001(\0132\033.google.protobuf.Int64Value\0226\n\021" +
+      "message_max_bytes\030\020 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022<\n\027replica_fetch_max_bytes\030" +
+      "\021 \001(\0132\033.google.protobuf.Int64Value\022\031\n\021ss" +
+      "l_cipher_suites\030\022 \003(\t\022>\n\031offsets_retenti" +
+      "on_minutes\030\023 \001(\0132\033.google.protobuf.Int64" +
+      "Value\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_" +
+      "id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162" +
+      "$.yandex.cloud.mdb.kafka.v1.Host.Role\0227\n" +
+      "\tresources\030\005 \001(\0132$.yandex.cloud.mdb.kafk" +
+      "a.v1.Resources\0226\n\006health\030\006 \001(\0162&.yandex." +
+      "cloud.mdb.kafka.v1.Host.Health\022\021\n\tsubnet" +
+      "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004R" +
+      "ole\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\t" +
+      "ZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005AL" +
+      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022" +
+      "\025\n\rdata_transfer\030\001 \001(\010Bd\n\035yandex.cloud.a" +
+      "pi.mdb.kafka.v1ZCgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/kafka/v1;k" +
+      "afkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30507,7 +36265,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor,
-        new java.lang.String[] { "Resources", "KafkaConfig21", "KafkaConfig26", "KafkaConfig28", "KafkaConfig", });
+        new java.lang.String[] { "Resources", "KafkaConfig21", "KafkaConfig26", "KafkaConfig28", "KafkaConfig3", "KafkaConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Zookeeper_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Zookeeper_fieldAccessorTable = new
@@ -30538,14 +36296,20 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_descriptor,
         new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
-    internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
+    internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor,
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
+    internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor,
         new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Role", "Resources", "Health", "SubnetId", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_mdb_kafka_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor,
