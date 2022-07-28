@@ -14,6 +14,1514 @@ public final class DatabaseServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface MoveDatabaseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.MoveDatabaseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the YDB instance to move.
+     * </pre>
+     *
+     * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The databaseId.
+     */
+    java.lang.String getDatabaseId();
+    /**
+     * <pre>
+     * ID of the YDB instance to move.
+     * </pre>
+     *
+     * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for databaseId.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseIdBytes();
+
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.MoveDatabaseRequest}
+   */
+  public static final class MoveDatabaseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.MoveDatabaseRequest)
+      MoveDatabaseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveDatabaseRequest.newBuilder() to construct.
+    private MoveDatabaseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveDatabaseRequest() {
+      databaseId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveDatabaseRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveDatabaseRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.class, yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.Builder.class);
+    }
+
+    public static final int DATABASE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object databaseId_;
+    /**
+     * <pre>
+     * ID of the YDB instance to move.
+     * </pre>
+     *
+     * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The databaseId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabaseId() {
+      java.lang.Object ref = databaseId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the YDB instance to move.
+     * </pre>
+     *
+     * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for databaseId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseIdBytes() {
+      java.lang.Object ref = databaseId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the destination folder.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, databaseId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, databaseId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest other = (yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest) obj;
+
+      if (!getDatabaseId()
+          .equals(other.getDatabaseId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATABASE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.MoveDatabaseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.MoveDatabaseRequest)
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.class, yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        databaseId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest build() {
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest buildPartial() {
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest result = new yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest(this);
+        result.databaseId_ = databaseId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest other) {
+        if (other == yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.getDefaultInstance()) return this;
+        if (!other.getDatabaseId().isEmpty()) {
+          databaseId_ = other.databaseId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object databaseId_ = "";
+      /**
+       * <pre>
+       * ID of the YDB instance to move.
+       * </pre>
+       *
+       * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The databaseId.
+       */
+      public java.lang.String getDatabaseId() {
+        java.lang.Object ref = databaseId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the YDB instance to move.
+       * </pre>
+       *
+       * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for databaseId.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseIdBytes() {
+        java.lang.Object ref = databaseId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the YDB instance to move.
+       * </pre>
+       *
+       * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The databaseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the YDB instance to move.
+       * </pre>
+       *
+       * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabaseId() {
+        
+        databaseId_ = getDefaultInstance().getDatabaseId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the YDB instance to move.
+       * </pre>
+       *
+       * <code>string database_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for databaseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The destinationFolderId.
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for destinationFolderId.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the destination folder.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.MoveDatabaseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.MoveDatabaseRequest)
+    private static final yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest();
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveDatabaseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MoveDatabaseRequest>() {
+      @java.lang.Override
+      public MoveDatabaseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveDatabaseRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveDatabaseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveDatabaseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MoveDatabaseMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.MoveDatabaseMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string database_id = 1;</code>
+     * @return The databaseId.
+     */
+    java.lang.String getDatabaseId();
+    /**
+     * <code>string database_id = 1;</code>
+     * @return The bytes for databaseId.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseIdBytes();
+
+    /**
+     * <code>string database_name = 2;</code>
+     * @return The databaseName.
+     */
+    java.lang.String getDatabaseName();
+    /**
+     * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.MoveDatabaseMetadata}
+   */
+  public static final class MoveDatabaseMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.MoveDatabaseMetadata)
+      MoveDatabaseMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveDatabaseMetadata.newBuilder() to construct.
+    private MoveDatabaseMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveDatabaseMetadata() {
+      databaseId_ = "";
+      databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveDatabaseMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveDatabaseMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.class, yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.Builder.class);
+    }
+
+    public static final int DATABASE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object databaseId_;
+    /**
+     * <code>string database_id = 1;</code>
+     * @return The databaseId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabaseId() {
+      java.lang.Object ref = databaseId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database_id = 1;</code>
+     * @return The bytes for databaseId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseIdBytes() {
+      java.lang.Object ref = databaseId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object databaseName_;
+    /**
+     * <code>string database_name = 2;</code>
+     * @return The databaseName.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabaseName() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseNameBytes() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, databaseId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, databaseId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata other = (yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata) obj;
+
+      if (!getDatabaseId()
+          .equals(other.getDatabaseId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATABASE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseId().hashCode();
+      hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.MoveDatabaseMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.MoveDatabaseMetadata)
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.class, yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        databaseId_ = "";
+
+        databaseName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata build() {
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata buildPartial() {
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata result = new yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata(this);
+        result.databaseId_ = databaseId_;
+        result.databaseName_ = databaseName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata other) {
+        if (other == yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata.getDefaultInstance()) return this;
+        if (!other.getDatabaseId().isEmpty()) {
+          databaseId_ = other.databaseId_;
+          onChanged();
+        }
+        if (!other.getDatabaseName().isEmpty()) {
+          databaseName_ = other.databaseName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object databaseId_ = "";
+      /**
+       * <code>string database_id = 1;</code>
+       * @return The databaseId.
+       */
+      public java.lang.String getDatabaseId() {
+        java.lang.Object ref = databaseId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database_id = 1;</code>
+       * @return The bytes for databaseId.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseIdBytes() {
+        java.lang.Object ref = databaseId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database_id = 1;</code>
+       * @param value The databaseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabaseId() {
+        
+        databaseId_ = getDefaultInstance().getDatabaseId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database_id = 1;</code>
+       * @param value The bytes for databaseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object databaseName_ = "";
+      /**
+       * <code>string database_name = 2;</code>
+       * @return The databaseName.
+       */
+      public java.lang.String getDatabaseName() {
+        java.lang.Object ref = databaseName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database_name = 2;</code>
+       * @return The bytes for databaseName.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseNameBytes() {
+        java.lang.Object ref = databaseName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database_name = 2;</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabaseName() {
+        
+        databaseName_ = getDefaultInstance().getDatabaseName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database_name = 2;</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.MoveDatabaseMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.MoveDatabaseMetadata)
+    private static final yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata();
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveDatabaseMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MoveDatabaseMetadata>() {
+      @java.lang.Override
+      public MoveDatabaseMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveDatabaseMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveDatabaseMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveDatabaseMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RestoreBackupRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.RestoreBackupRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -8907,6 +10415,12 @@ public final class DatabaseServiceOuterClass {
      */
     yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder getMonitoringConfigOrBuilder();
 
+    /**
+     * <code>bool deletion_protection = 18;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
+
     public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.CreateDatabaseRequest.DatabaseTypeCase getDatabaseTypeCase();
   }
   /**
@@ -9131,6 +10645,11 @@ public final class DatabaseServiceOuterClass {
                 monitoringConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 144: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -9832,6 +11351,17 @@ public final class DatabaseServiceOuterClass {
       return getMonitoringConfig();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 18;
+    private boolean deletionProtection_;
+    /**
+     * <code>bool deletion_protection = 18;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9899,6 +11429,9 @@ public final class DatabaseServiceOuterClass {
       }
       if (monitoringConfig_ != null) {
         output.writeMessage(17, getMonitoringConfig());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(18, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -9981,6 +11514,10 @@ public final class DatabaseServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getMonitoringConfig());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10034,6 +11571,8 @@ public final class DatabaseServiceOuterClass {
         if (!getMonitoringConfig()
             .equals(other.getMonitoringConfig())) return false;
       }
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!getDatabaseTypeCase().equals(other.getDatabaseTypeCase())) return false;
       switch (databaseTypeCase_) {
         case 9:
@@ -10105,6 +11644,9 @@ public final class DatabaseServiceOuterClass {
         hash = (37 * hash) + MONITORING_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getMonitoringConfig().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       switch (databaseTypeCase_) {
         case 9:
           hash = (37 * hash) + ZONAL_DATABASE_FIELD_NUMBER;
@@ -10321,6 +11863,8 @@ public final class DatabaseServiceOuterClass {
           monitoringConfig_ = null;
           monitoringConfigBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         databaseTypeCase_ = 0;
         databaseType_ = null;
         return this;
@@ -10412,6 +11956,7 @@ public final class DatabaseServiceOuterClass {
         } else {
           result.monitoringConfig_ = monitoringConfigBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         result.databaseTypeCase_ = databaseTypeCase_;
         onBuilt();
         return result;
@@ -10511,6 +12056,9 @@ public final class DatabaseServiceOuterClass {
         }
         if (other.hasMonitoringConfig()) {
           mergeMonitoringConfig(other.getMonitoringConfig());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         switch (other.getDatabaseTypeCase()) {
           case ZONAL_DATABASE: {
@@ -12417,6 +13965,37 @@ public final class DatabaseServiceOuterClass {
         }
         return monitoringConfigBuilder_;
       }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <code>bool deletion_protection = 18;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <code>bool deletion_protection = 18;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool deletion_protection = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13548,6 +15127,12 @@ public final class DatabaseServiceOuterClass {
      */
     yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder getMonitoringConfigOrBuilder();
 
+    /**
+     * <code>bool deletion_protection = 20;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
+
     public yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.DatabaseTypeCase getDatabaseTypeCase();
   }
   /**
@@ -13792,6 +15377,11 @@ public final class DatabaseServiceOuterClass {
                 monitoringConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 160: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -14533,6 +16123,17 @@ public final class DatabaseServiceOuterClass {
       return getMonitoringConfig();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 20;
+    private boolean deletionProtection_;
+    /**
+     * <code>bool deletion_protection = 20;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14606,6 +16207,9 @@ public final class DatabaseServiceOuterClass {
       }
       if (monitoringConfig_ != null) {
         output.writeMessage(19, getMonitoringConfig());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(20, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -14695,6 +16299,10 @@ public final class DatabaseServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getMonitoringConfig());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(20, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14755,6 +16363,8 @@ public final class DatabaseServiceOuterClass {
         if (!getMonitoringConfig()
             .equals(other.getMonitoringConfig())) return false;
       }
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!getDatabaseTypeCase().equals(other.getDatabaseTypeCase())) return false;
       switch (databaseTypeCase_) {
         case 11:
@@ -14832,6 +16442,9 @@ public final class DatabaseServiceOuterClass {
         hash = (37 * hash) + MONITORING_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getMonitoringConfig().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       switch (databaseTypeCase_) {
         case 11:
           hash = (37 * hash) + ZONAL_DATABASE_FIELD_NUMBER;
@@ -15056,6 +16669,8 @@ public final class DatabaseServiceOuterClass {
           monitoringConfig_ = null;
           monitoringConfigBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         databaseTypeCase_ = 0;
         databaseType_ = null;
         return this;
@@ -15153,6 +16768,7 @@ public final class DatabaseServiceOuterClass {
         } else {
           result.monitoringConfig_ = monitoringConfigBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         result.databaseTypeCase_ = databaseTypeCase_;
         onBuilt();
         return result;
@@ -15259,6 +16875,9 @@ public final class DatabaseServiceOuterClass {
         }
         if (other.hasMonitoringConfig()) {
           mergeMonitoringConfig(other.getMonitoringConfig());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         switch (other.getDatabaseTypeCase()) {
           case ZONAL_DATABASE: {
@@ -17287,6 +18906,37 @@ public final class DatabaseServiceOuterClass {
           monitoringConfig_ = null;
         }
         return monitoringConfigBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <code>bool deletion_protection = 20;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <code>bool deletion_protection = 20;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool deletion_protection = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19346,6 +20996,16 @@ public final class DatabaseServiceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ydb_v1_RestoreBackupRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19457,52 +21117,57 @@ public final class DatabaseServiceOuterClass {
       "andex/cloud/operation/operation.proto\032\035y" +
       "andex/cloud/validation.proto\032\"yandex/clo" +
       "ud/ydb/v1/database.proto\032 yandex/cloud/y" +
-      "db/v1/backup.proto\"\211\001\n\024RestoreBackupRequ" +
-      "est\022\037\n\tbackup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013" +
-      "database_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020paths" +
-      "_to_restore\030\003 \003(\t\022\023\n\013target_path\030\004 \001(\t\"?" +
-      "\n\025RestoreBackupMetadata\022\021\n\tbackup_id\030\001 \001" +
-      "(\t\022\023\n\013database_id\030\002 \001(\t\"j\n\025BackupDatabas" +
-      "eRequest\022\023\n\013database_id\030\001 \001(\t\022<\n\017backup_" +
-      "settings\030\002 \001(\0132#.yandex.cloud.ydb.v1.Bac" +
-      "kupSettings\"@\n\026BackupDatabaseMetadata\022\021\n" +
-      "\tbackup_id\030\001 \001(\t\022\023\n\013database_id\030\002 \001(\t\"9\n" +
-      "\024StartDatabaseRequest\022!\n\013database_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\"C\n\025StartDatabaseMetadat" +
-      "a\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase_name\030" +
-      "\002 \001(\t\"8\n\023StopDatabaseRequest\022!\n\013database" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\024StopDatabaseM" +
-      "etadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase" +
-      "_name\030\002 \001(\t\"7\n\022GetDatabaseRequest\022!\n\013dat" +
-      "abase_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"g\n\024ListData" +
-      "basesRequest\022\021\n\tfolder_id\030\001 \001(\t\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"b\n\025ListDatabasesResponse\0220" +
-      "\n\tdatabases\030\001 \003(\0132\035.yandex.cloud.ydb.v1." +
-      "Database\022\027\n\017next_page_token\030\002 \001(\t\"\311\006\n\025Cr" +
-      "eateDatabaseRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\032\n\022res" +
-      "ource_preset_id\030\004 \001(\t\022:\n\016storage_config\030" +
-      "\005 \001(\0132\".yandex.cloud.ydb.v1.StorageConfi" +
-      "g\0226\n\014scale_policy\030\006 \001(\0132 .yandex.cloud.y" +
-      "db.v1.ScalePolicy\022\022\n\nnetwork_id\030\007 \001(\t\022\022\n" +
-      "\nsubnet_ids\030\010 \003(\t\022<\n\016zonal_database\030\t \001(" +
-      "\0132\".yandex.cloud.ydb.v1.ZonalDatabaseH\000\022" +
-      "B\n\021regional_database\030\n \001(\0132%.yandex.clou" +
-      "d.ydb.v1.RegionalDatabaseH\000\022D\n\022dedicated" +
-      "_database\030\r \001(\0132&.yandex.cloud.ydb.v1.De" +
-      "dicatedDatabaseH\000\022F\n\023serverless_database" +
-      "\030\016 \001(\0132\'.yandex.cloud.ydb.v1.ServerlessD" +
-      "atabaseH\000\022\031\n\021assign_public_ips\030\013 \001(\010\022\023\n\013" +
-      "location_id\030\014 \001(\t\022F\n\006labels\030\017 \003(\01326.yand" +
-      "ex.cloud.ydb.v1.CreateDatabaseRequest.La" +
-      "belsEntry\0228\n\rbackup_config\030\020 \001(\0132!.yande" +
-      "x.cloud.ydb.v1.BackupConfig\022@\n\021monitorin" +
-      "g_config\030\021 \001(\0132%.yandex.cloud.ydb.v1.Mon" +
-      "itoringConfig\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "db/v1/backup.proto\"e\n\023MoveDatabaseReques" +
+      "t\022!\n\013database_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025" +
+      "destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"B\n\024MoveDatabaseMetadata\022\023\n\013database_id" +
+      "\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\211\001\n\024Restor" +
+      "eBackupRequest\022\037\n\tbackup_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022!\n\013database_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\030\n\020paths_to_restore\030\003 \003(\t\022\023\n\013target_p" +
+      "ath\030\004 \001(\t\"?\n\025RestoreBackupMetadata\022\021\n\tba" +
+      "ckup_id\030\001 \001(\t\022\023\n\013database_id\030\002 \001(\t\"j\n\025Ba" +
+      "ckupDatabaseRequest\022\023\n\013database_id\030\001 \001(\t" +
+      "\022<\n\017backup_settings\030\002 \001(\0132#.yandex.cloud" +
+      ".ydb.v1.BackupSettings\"@\n\026BackupDatabase" +
+      "Metadata\022\021\n\tbackup_id\030\001 \001(\t\022\023\n\013database_" +
+      "id\030\002 \001(\t\"9\n\024StartDatabaseRequest\022!\n\013data" +
+      "base_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n\025StartData" +
+      "baseMetadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdat" +
+      "abase_name\030\002 \001(\t\"8\n\023StopDatabaseRequest\022" +
+      "!\n\013database_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\024St" +
+      "opDatabaseMetadata\022\023\n\013database_id\030\001 \001(\t\022" +
+      "\025\n\rdatabase_name\030\002 \001(\t\"7\n\022GetDatabaseReq" +
+      "uest\022!\n\013database_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "g\n\024ListDatabasesRequest\022\021\n\tfolder_id\030\001 \001" +
+      "(\t\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"b\n\025ListDatabase" +
+      "sResponse\0220\n\tdatabases\030\001 \003(\0132\035.yandex.cl" +
+      "oud.ydb.v1.Database\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"\346\006\n\025CreateDatabaseRequest\022\021\n\tfolder" +
+      "_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003" +
+      " \001(\t\022\032\n\022resource_preset_id\030\004 \001(\t\022:\n\016stor" +
+      "age_config\030\005 \001(\0132\".yandex.cloud.ydb.v1.S" +
+      "torageConfig\0226\n\014scale_policy\030\006 \001(\0132 .yan" +
+      "dex.cloud.ydb.v1.ScalePolicy\022\022\n\nnetwork_" +
+      "id\030\007 \001(\t\022\022\n\nsubnet_ids\030\010 \003(\t\022<\n\016zonal_da" +
+      "tabase\030\t \001(\0132\".yandex.cloud.ydb.v1.Zonal" +
+      "DatabaseH\000\022B\n\021regional_database\030\n \001(\0132%." +
+      "yandex.cloud.ydb.v1.RegionalDatabaseH\000\022D" +
+      "\n\022dedicated_database\030\r \001(\0132&.yandex.clou" +
+      "d.ydb.v1.DedicatedDatabaseH\000\022F\n\023serverle" +
+      "ss_database\030\016 \001(\0132\'.yandex.cloud.ydb.v1." +
+      "ServerlessDatabaseH\000\022\031\n\021assign_public_ip" +
+      "s\030\013 \001(\010\022\023\n\013location_id\030\014 \001(\t\022F\n\006labels\030\017" +
+      " \003(\01326.yandex.cloud.ydb.v1.CreateDatabas" +
+      "eRequest.LabelsEntry\0228\n\rbackup_config\030\020 " +
+      "\001(\0132!.yandex.cloud.ydb.v1.BackupConfig\022@" +
+      "\n\021monitoring_config\030\021 \001(\0132%.yandex.cloud" +
+      ".ydb.v1.MonitoringConfig\022\033\n\023deletion_pro" +
+      "tection\030\022 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
       "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rdatabase_type\"D\n" +
       "\026CreateDatabaseMetadata\022\023\n\013database_id\030\001" +
-      " \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\217\007\n\025UpdateDa" +
+      " \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\254\007\n\025UpdateDa" +
       "tabaseRequest\022\021\n\tfolder_id\030\001 \001(\t\022/\n\013upda" +
       "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
       "k\022\023\n\013database_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
@@ -19523,36 +21188,41 @@ public final class DatabaseServiceOuterClass {
       "UpdateDatabaseRequest.LabelsEntry\0228\n\rbac" +
       "kup_config\030\022 \001(\0132!.yandex.cloud.ydb.v1.B" +
       "ackupConfig\022@\n\021monitoring_config\030\023 \001(\0132%" +
-      ".yandex.cloud.ydb.v1.MonitoringConfig\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001B\017\n\rdatabase_type\"D\n\026UpdateDatabaseM" +
-      "etadata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase" +
-      "_name\030\002 \001(\t\",\n\025DeleteDatabaseRequest\022\023\n\013" +
-      "database_id\030\001 \001(\t\"D\n\026DeleteDatabaseMetad" +
-      "ata\022\023\n\013database_id\030\001 \001(\t\022\025\n\rdatabase_nam" +
-      "e\030\002 \001(\t2\357\016\n\017DatabaseService\022v\n\003Get\022\'.yan" +
-      "dex.cloud.ydb.v1.GetDatabaseRequest\032\035.ya" +
-      "ndex.cloud.ydb.v1.Database\"\'\202\323\344\223\002!\022\037/ydb" +
-      "/v1/databases/{database_id}\022x\n\004List\022).ya" +
-      "ndex.cloud.ydb.v1.ListDatabasesRequest\032*" +
-      ".yandex.cloud.ydb.v1.ListDatabasesRespon" +
-      "se\"\031\202\323\344\223\002\023\022\021/ydb/v1/databases\022\233\001\n\006Create" +
-      "\022*.yandex.cloud.ydb.v1.CreateDatabaseReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "B\202\323\344\223\002\026\"\021/ydb/v1/databases:\001*\262\322*\"\n\026Creat" +
-      "eDatabaseMetadata\022\010Database\022\251\001\n\006Update\022*" +
-      ".yandex.cloud.ydb.v1.UpdateDatabaseReque" +
-      "st\032!.yandex.cloud.operation.Operation\"P\202" +
-      "\323\344\223\002$2\037/ydb/v1/databases/{database_id}:\001" +
-      "*\262\322*\"\n\026UpdateDatabaseMetadata\022\010Database\022" +
-      "\251\001\n\005Start\022).yandex.cloud.ydb.v1.StartDat" +
-      "abaseRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"R\202\323\344\223\002\'\"%/ydb/v1/databases/{data" +
-      "base_id}:start\262\322*!\n\025StartDatabaseMetadat" +
-      "a\022\010Database\022\245\001\n\004Stop\022(.yandex.cloud.ydb." +
-      "v1.StopDatabaseRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"P\202\323\344\223\002&\"$/ydb/v1/datab" +
-      "ases/{database_id}:stop\262\322* \n\024StopDatabas" +
+      ".yandex.cloud.ydb.v1.MonitoringConfig\022\033\n" +
+      "\023deletion_protection\030\024 \001(\010\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rdat" +
+      "abase_type\"D\n\026UpdateDatabaseMetadata\022\023\n\013" +
+      "database_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t" +
+      "\",\n\025DeleteDatabaseRequest\022\023\n\013database_id" +
+      "\030\001 \001(\t\"D\n\026DeleteDatabaseMetadata\022\023\n\013data" +
+      "base_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t2\232\020\n" +
+      "\017DatabaseService\022v\n\003Get\022\'.yandex.cloud.y" +
+      "db.v1.GetDatabaseRequest\032\035.yandex.cloud." +
+      "ydb.v1.Database\"\'\202\323\344\223\002!\022\037/ydb/v1/databas" +
+      "es/{database_id}\022x\n\004List\022).yandex.cloud." +
+      "ydb.v1.ListDatabasesRequest\032*.yandex.clo" +
+      "ud.ydb.v1.ListDatabasesResponse\"\031\202\323\344\223\002\023\022" +
+      "\021/ydb/v1/databases\022\233\001\n\006Create\022*.yandex.c" +
+      "loud.ydb.v1.CreateDatabaseRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"B\202\323\344\223\002\026\"\021/y" +
+      "db/v1/databases:\001*\262\322*\"\n\026CreateDatabaseMe" +
+      "tadata\022\010Database\022\251\001\n\006Update\022*.yandex.clo" +
+      "ud.ydb.v1.UpdateDatabaseRequest\032!.yandex" +
+      ".cloud.operation.Operation\"P\202\323\344\223\002$2\037/ydb" +
+      "/v1/databases/{database_id}:\001*\262\322*\"\n\026Upda" +
+      "teDatabaseMetadata\022\010Database\022\251\001\n\005Start\022)" +
+      ".yandex.cloud.ydb.v1.StartDatabaseReques" +
+      "t\032!.yandex.cloud.operation.Operation\"R\202\323" +
+      "\344\223\002\'\"%/ydb/v1/databases/{database_id}:st" +
+      "art\262\322*!\n\025StartDatabaseMetadata\022\010Database" +
+      "\022\245\001\n\004Stop\022(.yandex.cloud.ydb.v1.StopData" +
+      "baseRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"P\202\323\344\223\002&\"$/ydb/v1/databases/{datab" +
+      "ase_id}:stop\262\322* \n\024StopDatabaseMetadata\022\010" +
+      "Database\022\250\001\n\004Move\022(.yandex.cloud.ydb.v1." +
+      "MoveDatabaseRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"S\202\323\344\223\002)\"$/ydb/v1/database" +
+      "s/{database_id}:move:\001*\262\322* \n\024MoveDatabas" +
       "eMetadata\022\010Database\022u\n\022ListAccessBinding" +
       "s\022..yandex.cloud.access.ListAccessBindin" +
       "gsRequest\032/.yandex.cloud.access.ListAcce" +
@@ -19594,78 +21264,90 @@ public final class DatabaseServiceOuterClass {
           yandex.cloud.api.ydb.v1.DatabaseOuterClass.getDescriptor(),
           yandex.cloud.api.ydb.v1.BackupOuterClass.getDescriptor(),
         });
-    internal_static_yandex_cloud_ydb_v1_RestoreBackupRequest_descriptor =
+    internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_MoveDatabaseRequest_descriptor,
+        new java.lang.String[] { "DatabaseId", "DestinationFolderId", });
+    internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_MoveDatabaseMetadata_descriptor,
+        new java.lang.String[] { "DatabaseId", "DatabaseName", });
+    internal_static_yandex_cloud_ydb_v1_RestoreBackupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ydb_v1_RestoreBackupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_RestoreBackupRequest_descriptor,
         new java.lang.String[] { "BackupId", "DatabaseId", "PathsToRestore", "TargetPath", });
     internal_static_yandex_cloud_ydb_v1_RestoreBackupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ydb_v1_RestoreBackupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_RestoreBackupMetadata_descriptor,
         new java.lang.String[] { "BackupId", "DatabaseId", });
     internal_static_yandex_cloud_ydb_v1_BackupDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ydb_v1_BackupDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_BackupDatabaseRequest_descriptor,
         new java.lang.String[] { "DatabaseId", "BackupSettings", });
     internal_static_yandex_cloud_ydb_v1_BackupDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ydb_v1_BackupDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_BackupDatabaseMetadata_descriptor,
         new java.lang.String[] { "BackupId", "DatabaseId", });
     internal_static_yandex_cloud_ydb_v1_StartDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ydb_v1_StartDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StartDatabaseRequest_descriptor,
         new java.lang.String[] { "DatabaseId", });
     internal_static_yandex_cloud_ydb_v1_StartDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ydb_v1_StartDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StartDatabaseMetadata_descriptor,
         new java.lang.String[] { "DatabaseId", "DatabaseName", });
     internal_static_yandex_cloud_ydb_v1_StopDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ydb_v1_StopDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StopDatabaseRequest_descriptor,
         new java.lang.String[] { "DatabaseId", });
     internal_static_yandex_cloud_ydb_v1_StopDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_ydb_v1_StopDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StopDatabaseMetadata_descriptor,
         new java.lang.String[] { "DatabaseId", "DatabaseName", });
     internal_static_yandex_cloud_ydb_v1_GetDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_ydb_v1_GetDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_GetDatabaseRequest_descriptor,
         new java.lang.String[] { "DatabaseId", });
     internal_static_yandex_cloud_ydb_v1_ListDatabasesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_ydb_v1_ListDatabasesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ListDatabasesRequest_descriptor,
         new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_ydb_v1_ListDatabasesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_ydb_v1_ListDatabasesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ListDatabasesResponse_descriptor,
         new java.lang.String[] { "Databases", "NextPageToken", });
     internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "MonitoringConfig", "DatabaseType", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "MonitoringConfig", "DeletionProtection", "DatabaseType", });
     internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_LabelsEntry_fieldAccessorTable = new
@@ -19673,17 +21355,17 @@ public final class DatabaseServiceOuterClass {
         internal_static_yandex_cloud_ydb_v1_CreateDatabaseRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_ydb_v1_CreateDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_ydb_v1_CreateDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_CreateDatabaseMetadata_descriptor,
         new java.lang.String[] { "DatabaseId", "DatabaseName", });
     internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_descriptor,
-        new java.lang.String[] { "FolderId", "UpdateMask", "DatabaseId", "Name", "Description", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "MonitoringConfig", "DatabaseType", });
+        new java.lang.String[] { "FolderId", "UpdateMask", "DatabaseId", "Name", "Description", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "MonitoringConfig", "DeletionProtection", "DatabaseType", });
     internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_LabelsEntry_fieldAccessorTable = new
@@ -19691,19 +21373,19 @@ public final class DatabaseServiceOuterClass {
         internal_static_yandex_cloud_ydb_v1_UpdateDatabaseRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_ydb_v1_UpdateDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_ydb_v1_UpdateDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_UpdateDatabaseMetadata_descriptor,
         new java.lang.String[] { "DatabaseId", "DatabaseName", });
     internal_static_yandex_cloud_ydb_v1_DeleteDatabaseRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_ydb_v1_DeleteDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_DeleteDatabaseRequest_descriptor,
         new java.lang.String[] { "DatabaseId", });
     internal_static_yandex_cloud_ydb_v1_DeleteDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_ydb_v1_DeleteDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_DeleteDatabaseMetadata_descriptor,

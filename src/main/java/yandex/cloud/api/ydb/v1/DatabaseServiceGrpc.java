@@ -204,6 +204,37 @@ public final class DatabaseServiceGrpc {
     return getStopMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = DatabaseServiceGrpc.getMoveMethod) == null) {
+      synchronized (DatabaseServiceGrpc.class) {
+        if ((getMoveMethod = DatabaseServiceGrpc.getMoveMethod) == null) {
+          DatabaseServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
       yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
 
@@ -503,6 +534,13 @@ public final class DatabaseServiceGrpc {
 
     /**
      */
+    public void move(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
@@ -593,6 +631,13 @@ public final class DatabaseServiceGrpc {
                 yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.StopDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .addMethod(
             getListAccessBindingsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -720,6 +765,14 @@ public final class DatabaseServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void move(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -856,6 +909,13 @@ public final class DatabaseServiceGrpc {
 
     /**
      */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
@@ -988,6 +1048,14 @@ public final class DatabaseServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1047,12 +1115,13 @@ public final class DatabaseServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_START = 4;
   private static final int METHODID_STOP = 5;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 6;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 7;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 8;
-  private static final int METHODID_DELETE = 9;
-  private static final int METHODID_RESTORE = 10;
-  private static final int METHODID_BACKUP = 11;
+  private static final int METHODID_MOVE = 6;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 7;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 8;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 9;
+  private static final int METHODID_DELETE = 10;
+  private static final int METHODID_RESTORE = 11;
+  private static final int METHODID_BACKUP = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1093,6 +1162,10 @@ public final class DatabaseServiceGrpc {
           break;
         case METHODID_STOP:
           serviceImpl.stop((yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.StopDatabaseRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.ydb.v1.DatabaseServiceOuterClass.MoveDatabaseRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_ACCESS_BINDINGS:
@@ -1186,6 +1259,7 @@ public final class DatabaseServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getStartMethod())
               .addMethod(getStopMethod())
+              .addMethod(getMoveMethod())
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
