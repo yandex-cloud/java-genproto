@@ -3170,6 +3170,47 @@ public final class DiskServiceOuterClass {
      */
     yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder();
 
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @return A list containing the snapshotScheduleIds.
+     */
+    java.util.List<java.lang.String>
+        getSnapshotScheduleIdsList();
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @return The count of snapshotScheduleIds.
+     */
+    int getSnapshotScheduleIdsCount();
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @param index The index of the element to return.
+     * @return The snapshotScheduleIds at the given index.
+     */
+    java.lang.String getSnapshotScheduleIds(int index);
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the snapshotScheduleIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSnapshotScheduleIdsBytes(int index);
+
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest.SourceCase getSourceCase();
   }
   /**
@@ -3190,6 +3231,7 @@ public final class DiskServiceOuterClass {
       description_ = "";
       typeId_ = "";
       zoneId_ = "";
+      snapshotScheduleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -3301,6 +3343,15 @@ public final class DiskServiceOuterClass {
 
               break;
             }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                snapshotScheduleIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              snapshotScheduleIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3316,6 +3367,9 @@ public final class DiskServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          snapshotScheduleIds_ = snapshotScheduleIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3917,6 +3971,57 @@ public final class DiskServiceOuterClass {
       return getDiskPlacementPolicy();
     }
 
+    public static final int SNAPSHOT_SCHEDULE_IDS_FIELD_NUMBER = 12;
+    private com.google.protobuf.LazyStringList snapshotScheduleIds_;
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @return A list containing the snapshotScheduleIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSnapshotScheduleIdsList() {
+      return snapshotScheduleIds_;
+    }
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @return The count of snapshotScheduleIds.
+     */
+    public int getSnapshotScheduleIdsCount() {
+      return snapshotScheduleIds_.size();
+    }
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @param index The index of the element to return.
+     * @return The snapshotScheduleIds at the given index.
+     */
+    public java.lang.String getSnapshotScheduleIds(int index) {
+      return snapshotScheduleIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Snapshot schedules
+     * </pre>
+     *
+     * <code>repeated string snapshot_schedule_ids = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the snapshotScheduleIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSnapshotScheduleIdsBytes(int index) {
+      return snapshotScheduleIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3966,6 +4071,9 @@ public final class DiskServiceOuterClass {
       }
       if (diskPlacementPolicy_ != null) {
         output.writeMessage(11, getDiskPlacementPolicy());
+      }
+      for (int i = 0; i < snapshotScheduleIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, snapshotScheduleIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -4019,6 +4127,14 @@ public final class DiskServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getDiskPlacementPolicy());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < snapshotScheduleIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(snapshotScheduleIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSnapshotScheduleIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4055,6 +4171,8 @@ public final class DiskServiceOuterClass {
         if (!getDiskPlacementPolicy()
             .equals(other.getDiskPlacementPolicy())) return false;
       }
+      if (!getSnapshotScheduleIdsList()
+          .equals(other.getSnapshotScheduleIdsList())) return false;
       if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
         case 8:
@@ -4102,6 +4220,10 @@ public final class DiskServiceOuterClass {
       if (hasDiskPlacementPolicy()) {
         hash = (37 * hash) + DISK_PLACEMENT_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getDiskPlacementPolicy().hashCode();
+      }
+      if (getSnapshotScheduleIdsCount() > 0) {
+        hash = (37 * hash) + SNAPSHOT_SCHEDULE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotScheduleIdsList().hashCode();
       }
       switch (sourceCase_) {
         case 8:
@@ -4291,6 +4413,8 @@ public final class DiskServiceOuterClass {
           diskPlacementPolicy_ = null;
           diskPlacementPolicyBuilder_ = null;
         }
+        snapshotScheduleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         sourceCase_ = 0;
         source_ = null;
         return this;
@@ -4340,6 +4464,11 @@ public final class DiskServiceOuterClass {
         } else {
           result.diskPlacementPolicy_ = diskPlacementPolicyBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          snapshotScheduleIds_ = snapshotScheduleIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.snapshotScheduleIds_ = snapshotScheduleIds_;
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -4419,6 +4548,16 @@ public final class DiskServiceOuterClass {
         }
         if (other.hasDiskPlacementPolicy()) {
           mergeDiskPlacementPolicy(other.getDiskPlacementPolicy());
+        }
+        if (!other.snapshotScheduleIds_.isEmpty()) {
+          if (snapshotScheduleIds_.isEmpty()) {
+            snapshotScheduleIds_ = other.snapshotScheduleIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSnapshotScheduleIdsIsMutable();
+            snapshotScheduleIds_.addAll(other.snapshotScheduleIds_);
+          }
+          onChanged();
         }
         switch (other.getSourceCase()) {
           case IMAGE_ID: {
@@ -5623,6 +5762,152 @@ public final class DiskServiceOuterClass {
           diskPlacementPolicy_ = null;
         }
         return diskPlacementPolicyBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList snapshotScheduleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSnapshotScheduleIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          snapshotScheduleIds_ = new com.google.protobuf.LazyStringArrayList(snapshotScheduleIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @return A list containing the snapshotScheduleIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSnapshotScheduleIdsList() {
+        return snapshotScheduleIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @return The count of snapshotScheduleIds.
+       */
+      public int getSnapshotScheduleIdsCount() {
+        return snapshotScheduleIds_.size();
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @param index The index of the element to return.
+       * @return The snapshotScheduleIds at the given index.
+       */
+      public java.lang.String getSnapshotScheduleIds(int index) {
+        return snapshotScheduleIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the snapshotScheduleIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSnapshotScheduleIdsBytes(int index) {
+        return snapshotScheduleIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @param index The index to set the value at.
+       * @param value The snapshotScheduleIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSnapshotScheduleIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSnapshotScheduleIdsIsMutable();
+        snapshotScheduleIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @param value The snapshotScheduleIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSnapshotScheduleIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSnapshotScheduleIdsIsMutable();
+        snapshotScheduleIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @param values The snapshotScheduleIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSnapshotScheduleIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSnapshotScheduleIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, snapshotScheduleIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSnapshotScheduleIds() {
+        snapshotScheduleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot schedules
+       * </pre>
+       *
+       * <code>repeated string snapshot_schedule_ids = 12;</code>
+       * @param value The bytes of the snapshotScheduleIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSnapshotScheduleIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSnapshotScheduleIdsIsMutable();
+        snapshotScheduleIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13909,6 +14194,2024 @@ public final class DiskServiceOuterClass {
 
   }
 
+  public interface ListDiskSnapshotSchedulesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Disk resource to list snapshot schedules for.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     * @return The diskId.
+     */
+    java.lang.String getDiskId();
+    /**
+     * <pre>
+     * ID of the Disk resource to list snapshot schedules for.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     * @return The bytes for diskId.
+     */
+    com.google.protobuf.ByteString
+        getDiskIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest}
+   */
+  public static final class ListDiskSnapshotSchedulesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest)
+      ListDiskSnapshotSchedulesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDiskSnapshotSchedulesRequest.newBuilder() to construct.
+    private ListDiskSnapshotSchedulesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDiskSnapshotSchedulesRequest() {
+      diskId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskSnapshotSchedulesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDiskSnapshotSchedulesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              diskId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.Builder.class);
+    }
+
+    public static final int DISK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object diskId_;
+    /**
+     * <pre>
+     * ID of the Disk resource to list snapshot schedules for.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     * @return The diskId.
+     */
+    @java.lang.Override
+    public java.lang.String getDiskId() {
+      java.lang.Object ref = diskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        diskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Disk resource to list snapshot schedules for.
+     * </pre>
+     *
+     * <code>string disk_id = 1;</code>
+     * @return The bytes for diskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDiskIdBytes() {
+      java.lang.Object ref = diskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        diskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, diskId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, diskId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest other = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest) obj;
+
+      if (!getDiskId()
+          .equals(other.getDiskId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DISK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDiskId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest)
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        diskId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest build() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest buildPartial() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest result = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest(this);
+        result.diskId_ = diskId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest other) {
+        if (other == yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.getDefaultInstance()) return this;
+        if (!other.getDiskId().isEmpty()) {
+          diskId_ = other.diskId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object diskId_ = "";
+      /**
+       * <pre>
+       * ID of the Disk resource to list snapshot schedules for.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       * @return The diskId.
+       */
+      public java.lang.String getDiskId() {
+        java.lang.Object ref = diskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          diskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Disk resource to list snapshot schedules for.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       * @return The bytes for diskId.
+       */
+      public com.google.protobuf.ByteString
+          getDiskIdBytes() {
+        java.lang.Object ref = diskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          diskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Disk resource to list snapshot schedules for.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       * @param value The diskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        diskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Disk resource to list snapshot schedules for.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiskId() {
+        
+        diskId_ = getDefaultInstance().getDiskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Disk resource to list snapshot schedules for.
+       * </pre>
+       *
+       * <code>string disk_id = 1;</code>
+       * @param value The bytes for diskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        diskId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesRequest)
+    private static final yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDiskSnapshotSchedulesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListDiskSnapshotSchedulesRequest>() {
+      @java.lang.Override
+      public ListDiskSnapshotSchedulesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDiskSnapshotSchedulesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDiskSnapshotSchedulesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDiskSnapshotSchedulesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListDiskSnapshotSchedulesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> 
+        getSnapshotSchedulesList();
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule getSnapshotSchedules(int index);
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    int getSnapshotSchedulesCount();
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder> 
+        getSnapshotSchedulesOrBuilderList();
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder getSnapshotSchedulesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse}
+   */
+  public static final class ListDiskSnapshotSchedulesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse)
+      ListDiskSnapshotSchedulesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDiskSnapshotSchedulesResponse.newBuilder() to construct.
+    private ListDiskSnapshotSchedulesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDiskSnapshotSchedulesResponse() {
+      snapshotSchedules_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDiskSnapshotSchedulesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDiskSnapshotSchedulesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                snapshotSchedules_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              snapshotSchedules_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          snapshotSchedules_ = java.util.Collections.unmodifiableList(snapshotSchedules_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.Builder.class);
+    }
+
+    public static final int SNAPSHOT_SCHEDULES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> snapshotSchedules_;
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> getSnapshotSchedulesList() {
+      return snapshotSchedules_;
+    }
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder> 
+        getSnapshotSchedulesOrBuilderList() {
+      return snapshotSchedules_;
+    }
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    @java.lang.Override
+    public int getSnapshotSchedulesCount() {
+      return snapshotSchedules_.size();
+    }
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule getSnapshotSchedules(int index) {
+      return snapshotSchedules_.get(index);
+    }
+    /**
+     * <pre>
+     * List of snapshot schedules for the specified disk.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder getSnapshotSchedulesOrBuilder(
+        int index) {
+      return snapshotSchedules_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < snapshotSchedules_.size(); i++) {
+        output.writeMessage(1, snapshotSchedules_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < snapshotSchedules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, snapshotSchedules_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse other = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse) obj;
+
+      if (!getSnapshotSchedulesList()
+          .equals(other.getSnapshotSchedulesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSnapshotSchedulesCount() > 0) {
+        hash = (37 * hash) + SNAPSHOT_SCHEDULES_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotSchedulesList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse)
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.class, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSnapshotSchedulesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (snapshotSchedulesBuilder_ == null) {
+          snapshotSchedules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          snapshotSchedulesBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse build() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse buildPartial() {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse result = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (snapshotSchedulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            snapshotSchedules_ = java.util.Collections.unmodifiableList(snapshotSchedules_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.snapshotSchedules_ = snapshotSchedules_;
+        } else {
+          result.snapshotSchedules_ = snapshotSchedulesBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse) {
+          return mergeFrom((yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse other) {
+        if (other == yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.getDefaultInstance()) return this;
+        if (snapshotSchedulesBuilder_ == null) {
+          if (!other.snapshotSchedules_.isEmpty()) {
+            if (snapshotSchedules_.isEmpty()) {
+              snapshotSchedules_ = other.snapshotSchedules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSnapshotSchedulesIsMutable();
+              snapshotSchedules_.addAll(other.snapshotSchedules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.snapshotSchedules_.isEmpty()) {
+            if (snapshotSchedulesBuilder_.isEmpty()) {
+              snapshotSchedulesBuilder_.dispose();
+              snapshotSchedulesBuilder_ = null;
+              snapshotSchedules_ = other.snapshotSchedules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              snapshotSchedulesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSnapshotSchedulesFieldBuilder() : null;
+            } else {
+              snapshotSchedulesBuilder_.addAllMessages(other.snapshotSchedules_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> snapshotSchedules_ =
+        java.util.Collections.emptyList();
+      private void ensureSnapshotSchedulesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          snapshotSchedules_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule>(snapshotSchedules_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder> snapshotSchedulesBuilder_;
+
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> getSnapshotSchedulesList() {
+        if (snapshotSchedulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(snapshotSchedules_);
+        } else {
+          return snapshotSchedulesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public int getSnapshotSchedulesCount() {
+        if (snapshotSchedulesBuilder_ == null) {
+          return snapshotSchedules_.size();
+        } else {
+          return snapshotSchedulesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule getSnapshotSchedules(int index) {
+        if (snapshotSchedulesBuilder_ == null) {
+          return snapshotSchedules_.get(index);
+        } else {
+          return snapshotSchedulesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder setSnapshotSchedules(
+          int index, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule value) {
+        if (snapshotSchedulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.set(index, value);
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder setSnapshotSchedules(
+          int index, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder builderForValue) {
+        if (snapshotSchedulesBuilder_ == null) {
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder addSnapshotSchedules(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule value) {
+        if (snapshotSchedulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.add(value);
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder addSnapshotSchedules(
+          int index, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule value) {
+        if (snapshotSchedulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.add(index, value);
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder addSnapshotSchedules(
+          yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder builderForValue) {
+        if (snapshotSchedulesBuilder_ == null) {
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder addSnapshotSchedules(
+          int index, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder builderForValue) {
+        if (snapshotSchedulesBuilder_ == null) {
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder addAllSnapshotSchedules(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> values) {
+        if (snapshotSchedulesBuilder_ == null) {
+          ensureSnapshotSchedulesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, snapshotSchedules_);
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder clearSnapshotSchedules() {
+        if (snapshotSchedulesBuilder_ == null) {
+          snapshotSchedules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public Builder removeSnapshotSchedules(int index) {
+        if (snapshotSchedulesBuilder_ == null) {
+          ensureSnapshotSchedulesIsMutable();
+          snapshotSchedules_.remove(index);
+          onChanged();
+        } else {
+          snapshotSchedulesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder getSnapshotSchedulesBuilder(
+          int index) {
+        return getSnapshotSchedulesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder getSnapshotSchedulesOrBuilder(
+          int index) {
+        if (snapshotSchedulesBuilder_ == null) {
+          return snapshotSchedules_.get(index);  } else {
+          return snapshotSchedulesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder> 
+           getSnapshotSchedulesOrBuilderList() {
+        if (snapshotSchedulesBuilder_ != null) {
+          return snapshotSchedulesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(snapshotSchedules_);
+        }
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder addSnapshotSchedulesBuilder() {
+        return getSnapshotSchedulesFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder addSnapshotSchedulesBuilder(
+          int index) {
+        return getSnapshotSchedulesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of snapshot schedules for the specified disk.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder> 
+           getSnapshotSchedulesBuilderList() {
+        return getSnapshotSchedulesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder> 
+          getSnapshotSchedulesFieldBuilder() {
+        if (snapshotSchedulesBuilder_ == null) {
+          snapshotSchedulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotScheduleOrBuilder>(
+                  snapshotSchedules_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          snapshotSchedules_ = null;
+        }
+        return snapshotSchedulesBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.ListDiskSnapshotSchedulesResponse)
+    private static final yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse();
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDiskSnapshotSchedulesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListDiskSnapshotSchedulesResponse>() {
+      @java.lang.Override
+      public ListDiskSnapshotSchedulesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDiskSnapshotSchedulesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDiskSnapshotSchedulesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDiskSnapshotSchedulesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_GetDiskRequest_descriptor;
   private static final 
@@ -13984,6 +16287,16 @@ public final class DiskServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13998,29 +16311,31 @@ public final class DiskServiceOuterClass {
       "i/annotations.proto\032 google/protobuf/fie" +
       "ld_mask.proto\032 yandex/cloud/api/operatio" +
       "n.proto\032\"yandex/cloud/compute/v1/disk.pr" +
-      "oto\032&yandex/cloud/operation/operation.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"/\n\016Ge" +
-      "tDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"\215\001\n\020ListDisksRequest\022\037\n\tfolder_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
-      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022" +
-      "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"Z\n\021ListDisks" +
-      "Response\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.c" +
-      "ompute.v1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\333\004\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
-      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
-      "n\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326.ya" +
-      "ndex.cloud.compute.v1.CreateDiskRequest." +
-      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
-      "-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_" +
-      "id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B\036\350\307" +
-      "1\001\372\3071\0264194304-28587302322176\022\034\n\010image_id" +
-      "\030\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB" +
-      "\010\212\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025disk_" +
-      "placement_policy\030\013 \001(\0132,.yandex.cloud.co" +
-      "mpute.v1.DiskPlacementPolicy\032-\n\013LabelsEn" +
+      "oto\032/yandex/cloud/compute/v1/snapshot_sc" +
+      "hedule.proto\032&yandex/cloud/operation/ope" +
+      "ration.proto\032\035yandex/cloud/validation.pr" +
+      "oto\"/\n\016GetDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"\215\001\n\020ListDisksRequest\022\037\n\tfol" +
+      "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"Z\n\021" +
+      "ListDisksResponse\022,\n\005disks\030\001 \003(\0132\035.yande" +
+      "x.cloud.compute.v1.Disk\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\372\004\n\021CreateDiskRequest\022\037\n\tfolder" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362" +
+      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
+      "escription\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004" +
+      " \003(\01326.yandex.cloud.compute.v1.CreateDis" +
+      "kRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\307" +
+      "1\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-" +
+      "_./\\@0-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50" +
+      "\022\035\n\007zone_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030" +
+      "\007 \001(\003B\036\350\3071\001\372\3071\0264194304-28587302322176\022\034\n" +
+      "\010image_id\030\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_" +
+      "id\030\t \001(\tB\010\212\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003" +
+      "\022K\n\025disk_placement_policy\030\013 \001(\0132,.yandex" +
+      ".cloud.compute.v1.DiskPlacementPolicy\022\035\n" +
+      "\025snapshot_schedule_ids\030\014 \003(\t\032-\n\013LabelsEn" +
       "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006s" +
       "ource\"%\n\022CreateDiskMetadata\022\017\n\007disk_id\030\001" +
       " \001(\t\"\356\003\n\021UpdateDiskRequest\022\035\n\007disk_id\030\001 " +
@@ -14049,36 +16364,45 @@ public final class DiskServiceOuterClass {
       "tination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\" +
       "\n\020MoveDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\022\030\n\020s" +
       "ource_folder_id\030\002 \001(\t\022\035\n\025destination_fol" +
-      "der_id\030\003 \001(\t2\252\010\n\013DiskService\022r\n\003Get\022\'.ya" +
-      "ndex.cloud.compute.v1.GetDiskRequest\032\035.y" +
-      "andex.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/co" +
-      "mpute/v1/disks/{disk_id}\022x\n\004List\022).yande" +
-      "x.cloud.compute.v1.ListDisksRequest\032*.ya" +
-      "ndex.cloud.compute.v1.ListDisksResponse\"" +
-      "\031\202\323\344\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*." +
-      "yandex.cloud.compute.v1.CreateDiskReques" +
-      "t\032!.yandex.cloud.operation.Operation\":\202\323" +
-      "\344\223\002\026\"\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDi" +
-      "skMetadata\022\004Disk\022\235\001\n\006Update\022*.yandex.clo" +
-      "ud.compute.v1.UpdateDiskRequest\032!.yandex" +
-      ".cloud.operation.Operation\"D\202\323\344\223\002 2\033/com" +
-      "pute/v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDi" +
-      "skMetadata\022\004Disk\022\253\001\n\006Delete\022*.yandex.clo" +
-      "ud.compute.v1.DeleteDiskRequest\032!.yandex" +
-      ".cloud.operation.Operation\"R\202\323\344\223\002\035*\033/com" +
-      "pute/v1/disks/{disk_id}\262\322*+\n\022DeleteDiskM" +
-      "etadata\022\025google.protobuf.Empty\022\251\001\n\016ListO" +
-      "perations\0222.yandex.cloud.compute.v1.List" +
-      "DiskOperationsRequest\0323.yandex.cloud.com" +
-      "pute.v1.ListDiskOperationsResponse\".\202\323\344\223" +
-      "\002(\022&/compute/v1/disks/{disk_id}/operatio" +
-      "ns\022\234\001\n\004Move\022(.yandex.cloud.compute.v1.Mo" +
-      "veDiskRequest\032!.yandex.cloud.operation.O" +
-      "peration\"G\202\323\344\223\002%\" /compute/v1/disks/{dis" +
-      "k_id}:move:\001*\262\322*\030\n\020MoveDiskMetadata\022\004Dis" +
-      "kBb\n\033yandex.cloud.api.compute.v1ZCgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/compute/v1;computeb\006proto3"
+      "der_id\030\003 \001(\t\"Z\n ListDiskSnapshotSchedule" +
+      "sRequest\022\017\n\007disk_id\030\001 \001(\t\022\021\n\tpage_size\030\002" +
+      " \001(\003\022\022\n\npage_token\030\003 \001(\t\"\203\001\n!ListDiskSna" +
+      "pshotSchedulesResponse\022E\n\022snapshot_sched" +
+      "ules\030\001 \003(\0132).yandex.cloud.compute.v1.Sna" +
+      "pshotSchedule\022\027\n\017next_page_token\030\002 \001(\t2\273" +
+      "\t\n\013DiskService\022r\n\003Get\022\'.yandex.cloud.com" +
+      "pute.v1.GetDiskRequest\032\035.yandex.cloud.co" +
+      "mpute.v1.Disk\"#\202\323\344\223\002\035\022\033/compute/v1/disks" +
+      "/{disk_id}\022x\n\004List\022).yandex.cloud.comput" +
+      "e.v1.ListDisksRequest\032*.yandex.cloud.com" +
+      "pute.v1.ListDisksResponse\"\031\202\323\344\223\002\023\022\021/comp" +
+      "ute/v1/disks\022\223\001\n\006Create\022*.yandex.cloud.c" +
+      "ompute.v1.CreateDiskRequest\032!.yandex.clo" +
+      "ud.operation.Operation\":\202\323\344\223\002\026\"\021/compute" +
+      "/v1/disks:\001*\262\322*\032\n\022CreateDiskMetadata\022\004Di" +
+      "sk\022\235\001\n\006Update\022*.yandex.cloud.compute.v1." +
+      "UpdateDiskRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"D\202\323\344\223\002 2\033/compute/v1/disks/" +
+      "{disk_id}:\001*\262\322*\032\n\022UpdateDiskMetadata\022\004Di" +
+      "sk\022\253\001\n\006Delete\022*.yandex.cloud.compute.v1." +
+      "DeleteDiskRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"R\202\323\344\223\002\035*\033/compute/v1/disks/" +
+      "{disk_id}\262\322*+\n\022DeleteDiskMetadata\022\025googl" +
+      "e.protobuf.Empty\022\251\001\n\016ListOperations\0222.ya" +
+      "ndex.cloud.compute.v1.ListDiskOperations" +
+      "Request\0323.yandex.cloud.compute.v1.ListDi" +
+      "skOperationsResponse\".\202\323\344\223\002(\022&/compute/v" +
+      "1/disks/{disk_id}/operations\022\234\001\n\004Move\022(." +
+      "yandex.cloud.compute.v1.MoveDiskRequest\032" +
+      "!.yandex.cloud.operation.Operation\"G\202\323\344\223" +
+      "\002%\" /compute/v1/disks/{disk_id}:move:\001*\262" +
+      "\322*\030\n\020MoveDiskMetadata\022\004Disk\022\216\001\n\025ListSnap" +
+      "shotSchedules\0229.yandex.cloud.compute.v1." +
+      "ListDiskSnapshotSchedulesRequest\032:.yande" +
+      "x.cloud.compute.v1.ListDiskSnapshotSched" +
+      "ulesResponseBb\n\033yandex.cloud.api.compute" +
+      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14087,6 +16411,7 @@ public final class DiskServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor(),
+          yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -14113,7 +16438,7 @@ public final class DiskServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateDiskRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "ImageId", "SnapshotId", "BlockSize", "DiskPlacementPolicy", "Source", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "ImageId", "SnapshotId", "BlockSize", "DiskPlacementPolicy", "SnapshotScheduleIds", "Source", });
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateDiskRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_LabelsEntry_fieldAccessorTable = new
@@ -14180,6 +16505,18 @@ public final class DiskServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_MoveDiskMetadata_descriptor,
         new java.lang.String[] { "DiskId", "SourceFolderId", "DestinationFolderId", });
+    internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesRequest_descriptor,
+        new java.lang.String[] { "DiskId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_ListDiskSnapshotSchedulesResponse_descriptor,
+        new java.lang.String[] { "SnapshotSchedules", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -14196,6 +16533,7 @@ public final class DiskServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor();
+    yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

@@ -20,7 +20,7 @@ public final class ConnectorServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the cluster the connector belongs to.
+     * ID of the Apache Kafka® cluster the connector belongs to.
      * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -30,7 +30,7 @@ public final class ConnectorServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the cluster the connector belongs to.
+     * ID of the Apache Kafka® cluster the connector belongs to.
      * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -157,7 +157,7 @@ public final class ConnectorServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the cluster the connector belongs to.
+     * ID of the Apache Kafka® cluster the connector belongs to.
      * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -179,7 +179,7 @@ public final class ConnectorServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the cluster the connector belongs to.
+     * ID of the Apache Kafka® cluster the connector belongs to.
      * To get this ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -571,7 +571,7 @@ public final class ConnectorServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the cluster the connector belongs to.
+       * ID of the Apache Kafka® cluster the connector belongs to.
        * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -592,7 +592,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster the connector belongs to.
+       * ID of the Apache Kafka® cluster the connector belongs to.
        * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -614,7 +614,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster the connector belongs to.
+       * ID of the Apache Kafka® cluster the connector belongs to.
        * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -634,7 +634,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster the connector belongs to.
+       * ID of the Apache Kafka® cluster the connector belongs to.
        * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -649,7 +649,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster the connector belongs to.
+       * ID of the Apache Kafka® cluster the connector belongs to.
        * To get this ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -5852,7 +5852,7 @@ public final class ConnectorServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the Apache Kafka connector that is being updated.
+     * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
      * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -5861,7 +5861,7 @@ public final class ConnectorServiceOuterClass {
     java.lang.String getConnectorName();
     /**
      * <pre>
-     * Name of the Apache Kafka connector that is being updated.
+     * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
      * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6011,7 +6011,7 @@ public final class ConnectorServiceOuterClass {
     private volatile java.lang.Object connectorName_;
     /**
      * <pre>
-     * Name of the Apache Kafka connector that is being updated.
+     * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
      * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6032,7 +6032,7 @@ public final class ConnectorServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the Apache Kafka connector that is being updated.
+     * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
      * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6471,7 +6471,7 @@ public final class ConnectorServiceOuterClass {
       private java.lang.Object connectorName_ = "";
       /**
        * <pre>
-       * Name of the Apache Kafka connector that is being updated.
+       * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
        * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6491,7 +6491,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Apache Kafka connector that is being updated.
+       * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
        * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6512,7 +6512,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Apache Kafka connector that is being updated.
+       * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
        * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6531,7 +6531,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Apache Kafka connector that is being updated.
+       * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
        * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6545,7 +6545,7 @@ public final class ConnectorServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Apache Kafka connector that is being updated.
+       * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
        * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>

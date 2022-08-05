@@ -235,6 +235,37 @@ public final class DiskServiceGrpc {
     return getMoveMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest,
+      yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> getListSnapshotSchedulesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSnapshotSchedules",
+      requestType = yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.class,
+      responseType = yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest,
+      yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> getListSnapshotSchedulesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> getListSnapshotSchedulesMethod;
+    if ((getListSnapshotSchedulesMethod = DiskServiceGrpc.getListSnapshotSchedulesMethod) == null) {
+      synchronized (DiskServiceGrpc.class) {
+        if ((getListSnapshotSchedulesMethod = DiskServiceGrpc.getListSnapshotSchedulesMethod) == null) {
+          DiskServiceGrpc.getListSnapshotSchedulesMethod = getListSnapshotSchedulesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest, yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSnapshotSchedules"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("ListSnapshotSchedules"))
+              .build();
+        }
+      }
+    }
+    return getListSnapshotSchedulesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -362,6 +393,16 @@ public final class DiskServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * List snapshot schedules containing the disk
+     * </pre>
+     */
+    public void listSnapshotSchedules(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSnapshotSchedulesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -413,6 +454,13 @@ public final class DiskServiceGrpc {
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
+          .addMethod(
+            getListSnapshotSchedulesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest,
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse>(
+                  this, METHODID_LIST_SNAPSHOT_SCHEDULES)))
           .build();
     }
   }
@@ -516,6 +564,17 @@ public final class DiskServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * List snapshot schedules containing the disk
+     * </pre>
+     */
+    public void listSnapshotSchedules(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSnapshotSchedulesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -609,6 +668,16 @@ public final class DiskServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List snapshot schedules containing the disk
+     * </pre>
+     */
+    public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse listSnapshotSchedules(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSnapshotSchedulesMethod(), getCallOptions(), request);
     }
   }
 
@@ -711,6 +780,17 @@ public final class DiskServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List snapshot schedules containing the disk
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> listSnapshotSchedules(
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSnapshotSchedulesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -720,6 +800,7 @@ public final class DiskServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST_OPERATIONS = 5;
   private static final int METHODID_MOVE = 6;
+  private static final int METHODID_LIST_SNAPSHOT_SCHEDULES = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -765,6 +846,10 @@ public final class DiskServiceGrpc {
         case METHODID_MOVE:
           serviceImpl.move((yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_SNAPSHOT_SCHEDULES:
+          serviceImpl.listSnapshotSchedules((yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -834,6 +919,7 @@ public final class DiskServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())
+              .addMethod(getListSnapshotSchedulesMethod())
               .build();
         }
       }

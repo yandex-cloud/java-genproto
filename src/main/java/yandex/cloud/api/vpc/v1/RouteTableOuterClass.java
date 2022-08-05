@@ -2568,6 +2568,35 @@ public final class RouteTableOuterClass {
 
     /**
      * <pre>
+     * Next hop gateway id
+     * </pre>
+     *
+     * <code>string gateway_id = 4;</code>
+     * @return Whether the gatewayId field is set.
+     */
+    boolean hasGatewayId();
+    /**
+     * <pre>
+     * Next hop gateway id
+     * </pre>
+     *
+     * <code>string gateway_id = 4;</code>
+     * @return The gatewayId.
+     */
+    java.lang.String getGatewayId();
+    /**
+     * <pre>
+     * Next hop gateway id
+     * </pre>
+     *
+     * <code>string gateway_id = 4;</code>
+     * @return The bytes for gatewayId.
+     */
+    com.google.protobuf.ByteString
+        getGatewayIdBytes();
+
+    /**
+     * <pre>
      * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
@@ -2699,6 +2728,12 @@ public final class RouteTableOuterClass {
                   labels__.getKey(), labels__.getValue());
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              nextHopCase_ = 4;
+              nextHop_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2788,6 +2823,7 @@ public final class RouteTableOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       NEXT_HOP_ADDRESS(2),
+      GATEWAY_ID(4),
       NEXTHOP_NOT_SET(0);
       private final int value;
       private NextHopCase(int value) {
@@ -2806,6 +2842,7 @@ public final class RouteTableOuterClass {
       public static NextHopCase forNumber(int value) {
         switch (value) {
           case 2: return NEXT_HOP_ADDRESS;
+          case 4: return GATEWAY_ID;
           case 0: return NEXTHOP_NOT_SET;
           default: return null;
         }
@@ -2949,6 +2986,70 @@ public final class RouteTableOuterClass {
       }
     }
 
+    public static final int GATEWAY_ID_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * Next hop gateway id
+     * </pre>
+     *
+     * <code>string gateway_id = 4;</code>
+     * @return Whether the gatewayId field is set.
+     */
+    public boolean hasGatewayId() {
+      return nextHopCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Next hop gateway id
+     * </pre>
+     *
+     * <code>string gateway_id = 4;</code>
+     * @return The gatewayId.
+     */
+    public java.lang.String getGatewayId() {
+      java.lang.Object ref = "";
+      if (nextHopCase_ == 4) {
+        ref = nextHop_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (nextHopCase_ == 4) {
+          nextHop_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Next hop gateway id
+     * </pre>
+     *
+     * <code>string gateway_id = 4;</code>
+     * @return The bytes for gatewayId.
+     */
+    public com.google.protobuf.ByteString
+        getGatewayIdBytes() {
+      java.lang.Object ref = "";
+      if (nextHopCase_ == 4) {
+        ref = nextHop_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (nextHopCase_ == 4) {
+          nextHop_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int LABELS_FIELD_NUMBER = 3;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -3072,6 +3173,9 @@ public final class RouteTableOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           3);
+      if (nextHopCase_ == 4) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, nextHop_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3096,6 +3200,9 @@ public final class RouteTableOuterClass {
             .build();
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, labels__);
+      }
+      if (nextHopCase_ == 4) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, nextHop_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3129,6 +3236,10 @@ public final class RouteTableOuterClass {
           if (!getNextHopAddress()
               .equals(other.getNextHopAddress())) return false;
           break;
+        case 4:
+          if (!getGatewayId()
+              .equals(other.getGatewayId())) return false;
+          break;
         case 0:
         default:
       }
@@ -3159,6 +3270,10 @@ public final class RouteTableOuterClass {
         case 2:
           hash = (37 * hash) + NEXT_HOP_ADDRESS_FIELD_NUMBER;
           hash = (53 * hash) + getNextHopAddress().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + GATEWAY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getGatewayId().hashCode();
           break;
         case 0:
         default:
@@ -3360,6 +3475,9 @@ public final class RouteTableOuterClass {
         if (nextHopCase_ == 2) {
           result.nextHop_ = nextHop_;
         }
+        if (nextHopCase_ == 4) {
+          result.nextHop_ = nextHop_;
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.destinationCase_ = destinationCase_;
@@ -3428,6 +3546,12 @@ public final class RouteTableOuterClass {
         switch (other.getNextHopCase()) {
           case NEXT_HOP_ADDRESS: {
             nextHopCase_ = 2;
+            nextHop_ = other.nextHop_;
+            onChanged();
+            break;
+          }
+          case GATEWAY_ID: {
+            nextHopCase_ = 4;
             nextHop_ = other.nextHop_;
             onChanged();
             break;
@@ -3738,6 +3862,127 @@ public final class RouteTableOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * Next hop gateway id
+       * </pre>
+       *
+       * <code>string gateway_id = 4;</code>
+       * @return Whether the gatewayId field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayId() {
+        return nextHopCase_ == 4;
+      }
+      /**
+       * <pre>
+       * Next hop gateway id
+       * </pre>
+       *
+       * <code>string gateway_id = 4;</code>
+       * @return The gatewayId.
+       */
+      @java.lang.Override
+      public java.lang.String getGatewayId() {
+        java.lang.Object ref = "";
+        if (nextHopCase_ == 4) {
+          ref = nextHop_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (nextHopCase_ == 4) {
+            nextHop_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Next hop gateway id
+       * </pre>
+       *
+       * <code>string gateway_id = 4;</code>
+       * @return The bytes for gatewayId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getGatewayIdBytes() {
+        java.lang.Object ref = "";
+        if (nextHopCase_ == 4) {
+          ref = nextHop_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (nextHopCase_ == 4) {
+            nextHop_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Next hop gateway id
+       * </pre>
+       *
+       * <code>string gateway_id = 4;</code>
+       * @param value The gatewayId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  nextHopCase_ = 4;
+        nextHop_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Next hop gateway id
+       * </pre>
+       *
+       * <code>string gateway_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGatewayId() {
+        if (nextHopCase_ == 4) {
+          nextHopCase_ = 0;
+          nextHop_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Next hop gateway id
+       * </pre>
+       *
+       * <code>string gateway_id = 4;</code>
+       * @param value The bytes for gatewayId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        nextHopCase_ = 4;
+        nextHop_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> labels_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -3988,14 +4233,15 @@ public final class RouteTableOuterClass {
       "try\022\022\n\nnetwork_id\030\007 \001(\t\0227\n\rstatic_routes" +
       "\030\010 \003(\0132 .yandex.cloud.vpc.v1.StaticRoute" +
       "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"\317\001\n\013StaticRoute\022\034\n\022destination_p" +
+      "\001(\t:\0028\001\"\345\001\n\013StaticRoute\022\034\n\022destination_p" +
       "refix\030\001 \001(\tH\000\022\032\n\020next_hop_address\030\002 \001(\tH" +
-      "\001\022<\n\006labels\030\003 \003(\0132,.yandex.cloud.vpc.v1." +
-      "StaticRoute.LabelsEntry\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\r\n\013destin" +
-      "ationB\n\n\010next_hopBV\n\027yandex.cloud.api.vp" +
-      "c.v1Z;github.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "\001\022\024\n\ngateway_id\030\004 \001(\tH\001\022<\n\006labels\030\003 \003(\0132" +
+      ",.yandex.cloud.vpc.v1.StaticRoute.Labels" +
+      "Entry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001B\r\n\013destinationB\n\n\010next_hopB" +
+      "V\n\027yandex.cloud.api.vpc.v1Z;github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/vpc" +
+      "/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4019,7 +4265,7 @@ public final class RouteTableOuterClass {
     internal_static_yandex_cloud_vpc_v1_StaticRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_StaticRoute_descriptor,
-        new java.lang.String[] { "DestinationPrefix", "NextHopAddress", "Labels", "Destination", "NextHop", });
+        new java.lang.String[] { "DestinationPrefix", "NextHopAddress", "GatewayId", "Labels", "Destination", "NextHop", });
     internal_static_yandex_cloud_vpc_v1_StaticRoute_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_StaticRoute_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_StaticRoute_LabelsEntry_fieldAccessorTable = new

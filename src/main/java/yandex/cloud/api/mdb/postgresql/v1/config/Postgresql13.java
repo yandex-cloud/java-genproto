@@ -6009,6 +6009,10 @@ public final class Postgresql13 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS(4),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_CRON = 5;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_PG_CRON(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -6032,6 +6036,10 @@ public final class Postgresql13 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS_VALUE = 4;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_CRON = 5;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_PG_CRON_VALUE = 5;
 
 
       public final int getNumber() {
@@ -6063,6 +6071,7 @@ public final class Postgresql13 {
           case 2: return SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN;
           case 3: return SHARED_PRELOAD_LIBRARIES_TIMESCALEDB;
           case 4: return SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS;
+          case 5: return SHARED_PRELOAD_LIBRARIES_PG_CRON;
           default: return null;
         }
       }
@@ -31670,7 +31679,7 @@ public final class Postgresql13 {
       "postgresql13.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\323]\n\022PostgresqlConfig13\0224\n\017max_connectio" +
+      "\"\371]\n\022PostgresqlConfig13\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -31963,24 +31972,25 @@ public final class Postgresql13 {
       "FIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRINT_OFF\020\001" +
       "\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_" +
       "HINT_PLAN_DEBUG_PRINT_DETAILED\020\003\022$\n PG_H" +
-      "INT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\355\001\n\026Share" +
+      "INT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\223\002\n\026Share" +
       "dPreloadLibraries\022(\n$SHARED_PRELOAD_LIBR" +
       "ARIES_UNSPECIFIED\020\000\022)\n%SHARED_PRELOAD_LI" +
       "BRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD" +
       "_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$SHARED_PREL" +
       "OAD_LIBRARIES_TIMESCALEDB\020\003\022)\n%SHARED_PR" +
-      "ELOAD_LIBRARIES_PG_QUALSTATS\020\004\"\217\002\n\025Postg" +
-      "resqlConfigSet13\022S\n\020effective_config\030\001 \001" +
-      "(\01329.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlConfig13\022N\n\013user_config\030\002 \001" +
-      "(\01329.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlConfig13\022Q\n\016default_config\030" +
-      "\003 \001(\01329.yandex.cloud.mdb.postgresql.v1.c" +
-      "onfig.PostgresqlConfig13B\201\001\n)yandex.clou" +
-      "d.api.mdb.postgresql.v1.configZTgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/mdb/postgresql/v1/config;postgresqlb\006pr" +
-      "oto3"
+      "ELOAD_LIBRARIES_PG_QUALSTATS\020\004\022$\n SHARED" +
+      "_PRELOAD_LIBRARIES_PG_CRON\020\005\"\217\002\n\025Postgre" +
+      "sqlConfigSet13\022S\n\020effective_config\030\001 \001(\013" +
+      "29.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlConfig13\022N\n\013user_config\030\002 \001(\013" +
+      "29.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlConfig13\022Q\n\016default_config\030\003 " +
+      "\001(\01329.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlConfig13B\201\001\n)yandex.cloud." +
+      "api.mdb.postgresql.v1.configZTgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/postgresql/v1/config;postgresqlb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

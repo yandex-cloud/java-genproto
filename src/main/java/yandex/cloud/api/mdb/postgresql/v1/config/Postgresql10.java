@@ -5205,6 +5205,10 @@ public final class Postgresql10 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS(4),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_CRON = 5;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_PG_CRON(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -5228,6 +5232,10 @@ public final class Postgresql10 {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS = 4;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS_VALUE = 4;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_CRON = 5;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_PG_CRON_VALUE = 5;
 
 
       public final int getNumber() {
@@ -5259,6 +5267,7 @@ public final class Postgresql10 {
           case 2: return SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN;
           case 3: return SHARED_PRELOAD_LIBRARIES_TIMESCALEDB;
           case 4: return SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS;
+          case 5: return SHARED_PRELOAD_LIBRARIES_PG_CRON;
           default: return null;
         }
       }
@@ -26814,7 +26823,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\215O\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\263O\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -27061,23 +27070,24 @@ public final class Postgresql10 {
       "_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG" +
       "_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_" +
       "DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_V" +
-      "ERBOSE\020\004\"\355\001\n\026SharedPreloadLibraries\022(\n$S" +
+      "ERBOSE\020\004\"\223\002\n\026SharedPreloadLibraries\022(\n$S" +
       "HARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n" +
       "%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001" +
       "\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_PLA" +
       "N\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMESCAL" +
       "EDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_QUA" +
-      "LSTATS\020\004\"\225\002\n\025PostgresqlConfigSet10\022Y\n\020ef" +
-      "fective_config\030\001 \001(\01329.yandex.cloud.mdb." +
-      "postgresql.v1.config.PostgresqlConfig10B" +
-      "\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.yandex.clou" +
-      "d.mdb.postgresql.v1.config.PostgresqlCon" +
-      "fig10\022Q\n\016default_config\030\003 \001(\01329.yandex.c" +
-      "loud.mdb.postgresql.v1.config.Postgresql" +
-      "Config10B\201\001\n)yandex.cloud.api.mdb.postgr" +
-      "esql.v1.configZTgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/postgresql/" +
-      "v1/config;postgresqlb\006proto3"
+      "LSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_PG_" +
+      "CRON\020\005\"\225\002\n\025PostgresqlConfigSet10\022Y\n\020effe" +
+      "ctive_config\030\001 \001(\01329.yandex.cloud.mdb.po" +
+      "stgresql.v1.config.PostgresqlConfig10B\004\350" +
+      "\3071\001\022N\n\013user_config\030\002 \001(\01329.yandex.cloud." +
+      "mdb.postgresql.v1.config.PostgresqlConfi" +
+      "g10\022Q\n\016default_config\030\003 \001(\01329.yandex.clo" +
+      "ud.mdb.postgresql.v1.config.PostgresqlCo" +
+      "nfig10B\201\001\n)yandex.cloud.api.mdb.postgres" +
+      "ql.v1.configZTgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/postgresql/v1" +
+      "/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

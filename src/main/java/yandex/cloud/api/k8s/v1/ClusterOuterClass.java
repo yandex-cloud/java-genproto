@@ -9396,6 +9396,26 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getExternalV4AddressBytes();
+
+    /**
+     * <pre>
+     * IPv6 external network address that is assigned to the master.
+     * </pre>
+     *
+     * <code>string external_v6_address = 4;</code>
+     * @return The externalV6Address.
+     */
+    java.lang.String getExternalV6Address();
+    /**
+     * <pre>
+     * IPv6 external network address that is assigned to the master.
+     * </pre>
+     *
+     * <code>string external_v6_address = 4;</code>
+     * @return The bytes for externalV6Address.
+     */
+    com.google.protobuf.ByteString
+        getExternalV6AddressBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.RegionalMaster}
@@ -9413,6 +9433,7 @@ public final class ClusterOuterClass {
       regionId_ = "";
       internalV4Address_ = "";
       externalV4Address_ = "";
+      externalV6Address_ = "";
     }
 
     @java.lang.Override
@@ -9461,6 +9482,12 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               externalV4Address_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalV6Address_ = s;
               break;
             }
             default: {
@@ -9633,6 +9660,52 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int EXTERNAL_V6_ADDRESS_FIELD_NUMBER = 4;
+    private volatile java.lang.Object externalV6Address_;
+    /**
+     * <pre>
+     * IPv6 external network address that is assigned to the master.
+     * </pre>
+     *
+     * <code>string external_v6_address = 4;</code>
+     * @return The externalV6Address.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalV6Address() {
+      java.lang.Object ref = externalV6Address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalV6Address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * IPv6 external network address that is assigned to the master.
+     * </pre>
+     *
+     * <code>string external_v6_address = 4;</code>
+     * @return The bytes for externalV6Address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalV6AddressBytes() {
+      java.lang.Object ref = externalV6Address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalV6Address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9656,6 +9729,9 @@ public final class ClusterOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV4Address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalV4Address_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV6Address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, externalV6Address_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9673,6 +9749,9 @@ public final class ClusterOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV4Address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalV4Address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalV6Address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, externalV6Address_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9695,6 +9774,8 @@ public final class ClusterOuterClass {
           .equals(other.getInternalV4Address())) return false;
       if (!getExternalV4Address()
           .equals(other.getExternalV4Address())) return false;
+      if (!getExternalV6Address()
+          .equals(other.getExternalV6Address())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9712,6 +9793,8 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getInternalV4Address().hashCode();
       hash = (37 * hash) + EXTERNAL_V4_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getExternalV4Address().hashCode();
+      hash = (37 * hash) + EXTERNAL_V6_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalV6Address().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9851,6 +9934,8 @@ public final class ClusterOuterClass {
 
         externalV4Address_ = "";
 
+        externalV6Address_ = "";
+
         return this;
       }
 
@@ -9880,6 +9965,7 @@ public final class ClusterOuterClass {
         result.regionId_ = regionId_;
         result.internalV4Address_ = internalV4Address_;
         result.externalV4Address_ = externalV4Address_;
+        result.externalV6Address_ = externalV6Address_;
         onBuilt();
         return result;
       }
@@ -9938,6 +10024,10 @@ public final class ClusterOuterClass {
         }
         if (!other.getExternalV4Address().isEmpty()) {
           externalV4Address_ = other.externalV4Address_;
+          onChanged();
+        }
+        if (!other.getExternalV6Address().isEmpty()) {
+          externalV6Address_ = other.externalV6Address_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -10253,6 +10343,102 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         externalV4Address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalV6Address_ = "";
+      /**
+       * <pre>
+       * IPv6 external network address that is assigned to the master.
+       * </pre>
+       *
+       * <code>string external_v6_address = 4;</code>
+       * @return The externalV6Address.
+       */
+      public java.lang.String getExternalV6Address() {
+        java.lang.Object ref = externalV6Address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalV6Address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv6 external network address that is assigned to the master.
+       * </pre>
+       *
+       * <code>string external_v6_address = 4;</code>
+       * @return The bytes for externalV6Address.
+       */
+      public com.google.protobuf.ByteString
+          getExternalV6AddressBytes() {
+        java.lang.Object ref = externalV6Address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalV6Address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv6 external network address that is assigned to the master.
+       * </pre>
+       *
+       * <code>string external_v6_address = 4;</code>
+       * @param value The externalV6Address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalV6Address(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalV6Address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv6 external network address that is assigned to the master.
+       * </pre>
+       *
+       * <code>string external_v6_address = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalV6Address() {
+        
+        externalV6Address_ = getDefaultInstance().getExternalV6Address();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv6 external network address that is assigned to the master.
+       * </pre>
+       *
+       * <code>string external_v6_address = 4;</code>
+       * @param value The bytes for externalV6Address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalV6AddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalV6Address_ = value;
         onChanged();
         return this;
       }
@@ -15355,33 +15541,33 @@ public final class ClusterOuterClass {
       "(\tB\r\n\013master_type\",\n\nMasterAuth\022\036\n\026clust" +
       "er_ca_certificate\030\001 \001(\t\"X\n\013ZonalMaster\022\017" +
       "\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002" +
-      " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"]\n\016Reg" +
+      " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"z\n\016Reg" +
       "ionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023intern" +
       "al_v4_address\030\002 \001(\t\022\033\n\023external_v4_addre" +
-      "ss\030\003 \001(\t\"k\n\017MasterEndpoints\022\034\n\024internal_" +
-      "v4_endpoint\030\001 \001(\t\022\034\n\024external_v4_endpoin" +
-      "t\030\002 \001(\t\022\034\n\024external_v6_endpoint\030\003 \001(\t\"\320\001" +
-      "\n\022IPAllocationPolicy\022\037\n\027cluster_ipv4_cid" +
-      "r_block\030\001 \001(\t\0226\n\030node_ipv4_cidr_mask_siz" +
-      "e\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n\027service" +
-      "_ipv4_cidr_block\030\002 \001(\t\022\037\n\027cluster_ipv6_c" +
-      "idr_block\030\006 \001(\t\022\037\n\027service_ipv6_cidr_blo" +
-      "ck\030\007 \001(\t\"s\n\027MasterMaintenancePolicy\022\024\n\014a" +
-      "uto_upgrade\030\001 \001(\010\022B\n\022maintenance_window\030" +
-      "\002 \001(\0132&.yandex.cloud.k8s.v1.MaintenanceW" +
-      "indow\"\200\001\n\rNetworkPolicy\022=\n\010provider\030\001 \001(" +
-      "\0162+.yandex.cloud.k8s.v1.NetworkPolicy.Pr" +
-      "ovider\"0\n\010Provider\022\030\n\024PROVIDER_UNSPECIFI" +
-      "ED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_i" +
-      "d\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014routing_mode\030\001 \001(\016" +
-      "2\'.yandex.cloud.k8s.v1.Cilium.RoutingMod" +
-      "e\"7\n\013RoutingMode\022\034\n\030ROUTING_MODE_UNSPECI" +
-      "FIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016ReleaseChannel\022\037\n\033" +
-      "RELEASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001" +
-      "\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.clou" +
-      "d.api.k8s.v1Z;github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/k8s/v1;k8sb\006proto" +
-      "3"
+      "ss\030\003 \001(\t\022\033\n\023external_v6_address\030\004 \001(\t\"k\n" +
+      "\017MasterEndpoints\022\034\n\024internal_v4_endpoint" +
+      "\030\001 \001(\t\022\034\n\024external_v4_endpoint\030\002 \001(\t\022\034\n\024" +
+      "external_v6_endpoint\030\003 \001(\t\"\320\001\n\022IPAllocat" +
+      "ionPolicy\022\037\n\027cluster_ipv4_cidr_block\030\001 \001" +
+      "(\t\0226\n\030node_ipv4_cidr_mask_size\030\005 \001(\003B\024\372\307" +
+      "1\0200,24,25,26,27,28\022\037\n\027service_ipv4_cidr_" +
+      "block\030\002 \001(\t\022\037\n\027cluster_ipv6_cidr_block\030\006" +
+      " \001(\t\022\037\n\027service_ipv6_cidr_block\030\007 \001(\t\"s\n" +
+      "\027MasterMaintenancePolicy\022\024\n\014auto_upgrade" +
+      "\030\001 \001(\010\022B\n\022maintenance_window\030\002 \001(\0132&.yan" +
+      "dex.cloud.k8s.v1.MaintenanceWindow\"\200\001\n\rN" +
+      "etworkPolicy\022=\n\010provider\030\001 \001(\0162+.yandex." +
+      "cloud.k8s.v1.NetworkPolicy.Provider\"0\n\010P" +
+      "rovider\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CAL" +
+      "ICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n" +
+      "\006Cilium\022=\n\014routing_mode\030\001 \001(\0162\'.yandex.c" +
+      "loud.k8s.v1.Cilium.RoutingMode\"7\n\013Routin" +
+      "gMode\022\034\n\030ROUTING_MODE_UNSPECIFIED\020\000\022\n\n\006T" +
+      "UNNEL\020\001*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHA" +
+      "NNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR" +
+      "\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15426,7 +15612,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_RegionalMaster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_RegionalMaster_descriptor,
-        new java.lang.String[] { "RegionId", "InternalV4Address", "ExternalV4Address", });
+        new java.lang.String[] { "RegionId", "InternalV4Address", "ExternalV4Address", "ExternalV6Address", });
     internal_static_yandex_cloud_k8s_v1_MasterEndpoints_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_k8s_v1_MasterEndpoints_fieldAccessorTable = new
