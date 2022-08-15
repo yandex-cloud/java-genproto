@@ -142,6 +142,37 @@ public final class ClusterServiceGrpc {
     return getUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getExpandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Expand",
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getExpandMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getExpandMethod;
+    if ((getExpandMethod = ClusterServiceGrpc.getExpandMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getExpandMethod = ClusterServiceGrpc.getExpandMethod) == null) {
+          ClusterServiceGrpc.getExpandMethod = getExpandMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Expand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Expand"))
+              .build();
+        }
+      }
+    }
+    return getExpandMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.DeleteClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -546,6 +577,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Expands the specified Greenplum® cluster.
+     * </pre>
+     */
+    public void expand(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExpandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified Greenplum® cluster.
      * </pre>
      */
@@ -674,6 +715,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getExpandMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_EXPAND)))
           .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -808,6 +856,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Expands the specified Greenplum® cluster.
+     * </pre>
+     */
+    public void expand(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExpandMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -981,6 +1040,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Expands the specified Greenplum® cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation expand(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExpandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified Greenplum® cluster.
      * </pre>
      */
@@ -1145,6 +1214,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Expands the specified Greenplum® cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> expand(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExpandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified Greenplum® cluster.
      * </pre>
      */
@@ -1247,16 +1327,17 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_START = 5;
-  private static final int METHODID_STOP = 6;
-  private static final int METHODID_LIST_OPERATIONS = 7;
-  private static final int METHODID_LIST_MASTER_HOSTS = 8;
-  private static final int METHODID_LIST_SEGMENT_HOSTS = 9;
-  private static final int METHODID_LIST_LOGS = 10;
-  private static final int METHODID_STREAM_LOGS = 11;
-  private static final int METHODID_LIST_BACKUPS = 12;
-  private static final int METHODID_RESTORE = 13;
+  private static final int METHODID_EXPAND = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_START = 6;
+  private static final int METHODID_STOP = 7;
+  private static final int METHODID_LIST_OPERATIONS = 8;
+  private static final int METHODID_LIST_MASTER_HOSTS = 9;
+  private static final int METHODID_LIST_SEGMENT_HOSTS = 10;
+  private static final int METHODID_LIST_LOGS = 11;
+  private static final int METHODID_STREAM_LOGS = 12;
+  private static final int METHODID_LIST_BACKUPS = 13;
+  private static final int METHODID_RESTORE = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1289,6 +1370,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.UpdateClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_EXPAND:
+          serviceImpl.expand((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ExpandRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -1396,6 +1481,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getExpandMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getStartMethod())
               .addMethod(getStopMethod())

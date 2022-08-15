@@ -1355,6 +1355,21 @@ public final class Postgresql111C {
     com.google.protobuf.Int64ValueOrBuilder getTrackActivityQuerySizeOrBuilder();
 
     /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+     * @return Whether the onlineAnalyzeEnable field is set.
+     */
+    boolean hasOnlineAnalyzeEnable();
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+     * @return The onlineAnalyzeEnable.
+     */
+    com.google.protobuf.BoolValue getOnlineAnalyzeEnable();
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getOnlineAnalyzeEnableOrBuilder();
+
+    /**
      * <code>.google.protobuf.BoolValue enable_bitmapscan = 80;</code>
      * @return Whether the enableBitmapscan field is set.
      */
@@ -2073,6 +2088,21 @@ public final class Postgresql111C {
      * <code>.google.protobuf.DoubleValue pg_qualstats_sample_rate = 126;</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getPgQualstatsSampleRateOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+     * @return Whether the plantunerFixEmptyTable field is set.
+     */
+    boolean hasPlantunerFixEmptyTable();
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+     * @return The plantunerFixEmptyTable.
+     */
+    com.google.protobuf.BoolValue getPlantunerFixEmptyTable();
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder();
   }
   /**
    * <pre>
@@ -3041,6 +3071,19 @@ public final class Postgresql111C {
 
               break;
             }
+            case 634: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (onlineAnalyzeEnable_ != null) {
+                subBuilder = onlineAnalyzeEnable_.toBuilder();
+              }
+              onlineAnalyzeEnable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(onlineAnalyzeEnable_);
+                onlineAnalyzeEnable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 642: {
               com.google.protobuf.BoolValue.Builder subBuilder = null;
               if (enableBitmapscan_ != null) {
@@ -3641,6 +3684,19 @@ public final class Postgresql111C {
 
               break;
             }
+            case 1194: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (plantunerFixEmptyTable_ != null) {
+                subBuilder = plantunerFixEmptyTable_.toBuilder();
+              }
+              plantunerFixEmptyTable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plantunerFixEmptyTable_);
+                plantunerFixEmptyTable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3677,37 +3733,53 @@ public final class Postgresql111C {
     }
 
     /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.WalLevel}
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.BackslashQuote}
      */
-    public enum WalLevel
+    public enum BackslashQuote
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>WAL_LEVEL_UNSPECIFIED = 0;</code>
+       * <code>BACKSLASH_QUOTE_UNSPECIFIED = 0;</code>
        */
-      WAL_LEVEL_UNSPECIFIED(0),
+      BACKSLASH_QUOTE_UNSPECIFIED(0),
       /**
-       * <code>WAL_LEVEL_REPLICA = 1;</code>
+       * <code>BACKSLASH_QUOTE = 1;</code>
        */
-      WAL_LEVEL_REPLICA(1),
+      BACKSLASH_QUOTE(1),
       /**
-       * <code>WAL_LEVEL_LOGICAL = 2;</code>
+       * <code>BACKSLASH_QUOTE_ON = 2;</code>
        */
-      WAL_LEVEL_LOGICAL(2),
+      BACKSLASH_QUOTE_ON(2),
+      /**
+       * <code>BACKSLASH_QUOTE_OFF = 3;</code>
+       */
+      BACKSLASH_QUOTE_OFF(3),
+      /**
+       * <code>BACKSLASH_QUOTE_SAFE_ENCODING = 4;</code>
+       */
+      BACKSLASH_QUOTE_SAFE_ENCODING(4),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>WAL_LEVEL_UNSPECIFIED = 0;</code>
+       * <code>BACKSLASH_QUOTE_UNSPECIFIED = 0;</code>
        */
-      public static final int WAL_LEVEL_UNSPECIFIED_VALUE = 0;
+      public static final int BACKSLASH_QUOTE_UNSPECIFIED_VALUE = 0;
       /**
-       * <code>WAL_LEVEL_REPLICA = 1;</code>
+       * <code>BACKSLASH_QUOTE = 1;</code>
        */
-      public static final int WAL_LEVEL_REPLICA_VALUE = 1;
+      public static final int BACKSLASH_QUOTE_VALUE = 1;
       /**
-       * <code>WAL_LEVEL_LOGICAL = 2;</code>
+       * <code>BACKSLASH_QUOTE_ON = 2;</code>
        */
-      public static final int WAL_LEVEL_LOGICAL_VALUE = 2;
+      public static final int BACKSLASH_QUOTE_ON_VALUE = 2;
+      /**
+       * <code>BACKSLASH_QUOTE_OFF = 3;</code>
+       */
+      public static final int BACKSLASH_QUOTE_OFF_VALUE = 3;
+      /**
+       * <code>BACKSLASH_QUOTE_SAFE_ENCODING = 4;</code>
+       */
+      public static final int BACKSLASH_QUOTE_SAFE_ENCODING_VALUE = 4;
 
 
       public final int getNumber() {
@@ -3724,7 +3796,7 @@ public final class Postgresql111C {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static WalLevel valueOf(int value) {
+      public static BackslashQuote valueOf(int value) {
         return forNumber(value);
       }
 
@@ -3732,24 +3804,26 @@ public final class Postgresql111C {
        * @param value The numeric wire value of the corresponding enum entry.
        * @return The enum associated with the given numeric wire value.
        */
-      public static WalLevel forNumber(int value) {
+      public static BackslashQuote forNumber(int value) {
         switch (value) {
-          case 0: return WAL_LEVEL_UNSPECIFIED;
-          case 1: return WAL_LEVEL_REPLICA;
-          case 2: return WAL_LEVEL_LOGICAL;
+          case 0: return BACKSLASH_QUOTE_UNSPECIFIED;
+          case 1: return BACKSLASH_QUOTE;
+          case 2: return BACKSLASH_QUOTE_ON;
+          case 3: return BACKSLASH_QUOTE_OFF;
+          case 4: return BACKSLASH_QUOTE_SAFE_ENCODING;
           default: return null;
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<WalLevel>
+      public static com.google.protobuf.Internal.EnumLiteMap<BackslashQuote>
           internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          WalLevel> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<WalLevel>() {
-              public WalLevel findValueByNumber(int number) {
-                return WalLevel.forNumber(number);
+          BackslashQuote> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackslashQuote>() {
+              public BackslashQuote findValueByNumber(int number) {
+                return BackslashQuote.forNumber(number);
               }
             };
 
@@ -3770,9 +3844,9 @@ public final class Postgresql111C {
         return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(0);
       }
 
-      private static final WalLevel[] VALUES = values();
+      private static final BackslashQuote[] VALUES = values();
 
-      public static WalLevel valueOf(
+      public static BackslashQuote valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -3786,69 +3860,45 @@ public final class Postgresql111C {
 
       private final int value;
 
-      private WalLevel(int value) {
+      private BackslashQuote(int value) {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.WalLevel)
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.BackslashQuote)
     }
 
     /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.SynchronousCommit}
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.ByteaOutput}
      */
-    public enum SynchronousCommit
+    public enum ByteaOutput
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>SYNCHRONOUS_COMMIT_UNSPECIFIED = 0;</code>
+       * <code>BYTEA_OUTPUT_UNSPECIFIED = 0;</code>
        */
-      SYNCHRONOUS_COMMIT_UNSPECIFIED(0),
+      BYTEA_OUTPUT_UNSPECIFIED(0),
       /**
-       * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
+       * <code>BYTEA_OUTPUT_HEX = 1;</code>
        */
-      SYNCHRONOUS_COMMIT_ON(1),
+      BYTEA_OUTPUT_HEX(1),
       /**
-       * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
+       * <code>BYTEA_OUTPUT_ESCAPED = 2;</code>
        */
-      SYNCHRONOUS_COMMIT_OFF(2),
-      /**
-       * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
-       */
-      SYNCHRONOUS_COMMIT_LOCAL(3),
-      /**
-       * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
-       */
-      SYNCHRONOUS_COMMIT_REMOTE_WRITE(4),
-      /**
-       * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
-       */
-      SYNCHRONOUS_COMMIT_REMOTE_APPLY(5),
+      BYTEA_OUTPUT_ESCAPED(2),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>SYNCHRONOUS_COMMIT_UNSPECIFIED = 0;</code>
+       * <code>BYTEA_OUTPUT_UNSPECIFIED = 0;</code>
        */
-      public static final int SYNCHRONOUS_COMMIT_UNSPECIFIED_VALUE = 0;
+      public static final int BYTEA_OUTPUT_UNSPECIFIED_VALUE = 0;
       /**
-       * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
+       * <code>BYTEA_OUTPUT_HEX = 1;</code>
        */
-      public static final int SYNCHRONOUS_COMMIT_ON_VALUE = 1;
+      public static final int BYTEA_OUTPUT_HEX_VALUE = 1;
       /**
-       * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
+       * <code>BYTEA_OUTPUT_ESCAPED = 2;</code>
        */
-      public static final int SYNCHRONOUS_COMMIT_OFF_VALUE = 2;
-      /**
-       * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
-       */
-      public static final int SYNCHRONOUS_COMMIT_LOCAL_VALUE = 3;
-      /**
-       * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
-       */
-      public static final int SYNCHRONOUS_COMMIT_REMOTE_WRITE_VALUE = 4;
-      /**
-       * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
-       */
-      public static final int SYNCHRONOUS_COMMIT_REMOTE_APPLY_VALUE = 5;
+      public static final int BYTEA_OUTPUT_ESCAPED_VALUE = 2;
 
 
       public final int getNumber() {
@@ -3865,7 +3915,7 @@ public final class Postgresql111C {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static SynchronousCommit valueOf(int value) {
+      public static ByteaOutput valueOf(int value) {
         return forNumber(value);
       }
 
@@ -3873,27 +3923,24 @@ public final class Postgresql111C {
        * @param value The numeric wire value of the corresponding enum entry.
        * @return The enum associated with the given numeric wire value.
        */
-      public static SynchronousCommit forNumber(int value) {
+      public static ByteaOutput forNumber(int value) {
         switch (value) {
-          case 0: return SYNCHRONOUS_COMMIT_UNSPECIFIED;
-          case 1: return SYNCHRONOUS_COMMIT_ON;
-          case 2: return SYNCHRONOUS_COMMIT_OFF;
-          case 3: return SYNCHRONOUS_COMMIT_LOCAL;
-          case 4: return SYNCHRONOUS_COMMIT_REMOTE_WRITE;
-          case 5: return SYNCHRONOUS_COMMIT_REMOTE_APPLY;
+          case 0: return BYTEA_OUTPUT_UNSPECIFIED;
+          case 1: return BYTEA_OUTPUT_HEX;
+          case 2: return BYTEA_OUTPUT_ESCAPED;
           default: return null;
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<SynchronousCommit>
+      public static com.google.protobuf.Internal.EnumLiteMap<ByteaOutput>
           internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          SynchronousCommit> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<SynchronousCommit>() {
-              public SynchronousCommit findValueByNumber(int number) {
-                return SynchronousCommit.forNumber(number);
+          ByteaOutput> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ByteaOutput>() {
+              public ByteaOutput findValueByNumber(int number) {
+                return ByteaOutput.forNumber(number);
               }
             };
 
@@ -3914,9 +3961,9 @@ public final class Postgresql111C {
         return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(1);
       }
 
-      private static final SynchronousCommit[] VALUES = values();
+      private static final ByteaOutput[] VALUES = values();
 
-      public static SynchronousCommit valueOf(
+      public static ByteaOutput valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -3930,11 +3977,11 @@ public final class Postgresql111C {
 
       private final int value;
 
-      private SynchronousCommit(int value) {
+      private ByteaOutput(int value) {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.SynchronousCommit)
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.ByteaOutput)
     }
 
     /**
@@ -4190,6 +4237,132 @@ public final class Postgresql111C {
     }
 
     /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.LogErrorVerbosity}
+     */
+    public enum LogErrorVerbosity
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOG_ERROR_VERBOSITY_UNSPECIFIED = 0;</code>
+       */
+      LOG_ERROR_VERBOSITY_UNSPECIFIED(0),
+      /**
+       * <code>LOG_ERROR_VERBOSITY_TERSE = 1;</code>
+       */
+      LOG_ERROR_VERBOSITY_TERSE(1),
+      /**
+       * <code>LOG_ERROR_VERBOSITY_DEFAULT = 2;</code>
+       */
+      LOG_ERROR_VERBOSITY_DEFAULT(2),
+      /**
+       * <code>LOG_ERROR_VERBOSITY_VERBOSE = 3;</code>
+       */
+      LOG_ERROR_VERBOSITY_VERBOSE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOG_ERROR_VERBOSITY_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOG_ERROR_VERBOSITY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>LOG_ERROR_VERBOSITY_TERSE = 1;</code>
+       */
+      public static final int LOG_ERROR_VERBOSITY_TERSE_VALUE = 1;
+      /**
+       * <code>LOG_ERROR_VERBOSITY_DEFAULT = 2;</code>
+       */
+      public static final int LOG_ERROR_VERBOSITY_DEFAULT_VALUE = 2;
+      /**
+       * <code>LOG_ERROR_VERBOSITY_VERBOSE = 3;</code>
+       */
+      public static final int LOG_ERROR_VERBOSITY_VERBOSE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LogErrorVerbosity valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static LogErrorVerbosity forNumber(int value) {
+        switch (value) {
+          case 0: return LOG_ERROR_VERBOSITY_UNSPECIFIED;
+          case 1: return LOG_ERROR_VERBOSITY_TERSE;
+          case 2: return LOG_ERROR_VERBOSITY_DEFAULT;
+          case 3: return LOG_ERROR_VERBOSITY_VERBOSE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LogErrorVerbosity>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LogErrorVerbosity> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LogErrorVerbosity>() {
+              public LogErrorVerbosity findValueByNumber(int number) {
+                return LogErrorVerbosity.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final LogErrorVerbosity[] VALUES = values();
+
+      public static LogErrorVerbosity valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LogErrorVerbosity(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.LogErrorVerbosity)
+    }
+
+    /**
      * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.LogLevel}
      */
     public enum LogLevel
@@ -4361,7 +4534,7 @@ public final class Postgresql111C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(4);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(5);
       }
 
       private static final LogLevel[] VALUES = values();
@@ -4385,132 +4558,6 @@ public final class Postgresql111C {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.LogLevel)
-    }
-
-    /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.LogErrorVerbosity}
-     */
-    public enum LogErrorVerbosity
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>LOG_ERROR_VERBOSITY_UNSPECIFIED = 0;</code>
-       */
-      LOG_ERROR_VERBOSITY_UNSPECIFIED(0),
-      /**
-       * <code>LOG_ERROR_VERBOSITY_TERSE = 1;</code>
-       */
-      LOG_ERROR_VERBOSITY_TERSE(1),
-      /**
-       * <code>LOG_ERROR_VERBOSITY_DEFAULT = 2;</code>
-       */
-      LOG_ERROR_VERBOSITY_DEFAULT(2),
-      /**
-       * <code>LOG_ERROR_VERBOSITY_VERBOSE = 3;</code>
-       */
-      LOG_ERROR_VERBOSITY_VERBOSE(3),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>LOG_ERROR_VERBOSITY_UNSPECIFIED = 0;</code>
-       */
-      public static final int LOG_ERROR_VERBOSITY_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>LOG_ERROR_VERBOSITY_TERSE = 1;</code>
-       */
-      public static final int LOG_ERROR_VERBOSITY_TERSE_VALUE = 1;
-      /**
-       * <code>LOG_ERROR_VERBOSITY_DEFAULT = 2;</code>
-       */
-      public static final int LOG_ERROR_VERBOSITY_DEFAULT_VALUE = 2;
-      /**
-       * <code>LOG_ERROR_VERBOSITY_VERBOSE = 3;</code>
-       */
-      public static final int LOG_ERROR_VERBOSITY_VERBOSE_VALUE = 3;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static LogErrorVerbosity valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static LogErrorVerbosity forNumber(int value) {
-        switch (value) {
-          case 0: return LOG_ERROR_VERBOSITY_UNSPECIFIED;
-          case 1: return LOG_ERROR_VERBOSITY_TERSE;
-          case 2: return LOG_ERROR_VERBOSITY_DEFAULT;
-          case 3: return LOG_ERROR_VERBOSITY_VERBOSE;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<LogErrorVerbosity>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          LogErrorVerbosity> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<LogErrorVerbosity>() {
-              public LogErrorVerbosity findValueByNumber(int number) {
-                return LogErrorVerbosity.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(5);
-      }
-
-      private static final LogErrorVerbosity[] VALUES = values();
-
-      public static LogErrorVerbosity valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private LogErrorVerbosity(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.LogErrorVerbosity)
     }
 
     /**
@@ -4649,627 +4696,6 @@ public final class Postgresql111C {
     }
 
     /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.TransactionIsolation}
-     */
-    public enum TransactionIsolation
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>TRANSACTION_ISOLATION_UNSPECIFIED = 0;</code>
-       */
-      TRANSACTION_ISOLATION_UNSPECIFIED(0),
-      /**
-       * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
-       */
-      TRANSACTION_ISOLATION_READ_UNCOMMITTED(1),
-      /**
-       * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
-       */
-      TRANSACTION_ISOLATION_READ_COMMITTED(2),
-      /**
-       * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
-       */
-      TRANSACTION_ISOLATION_REPEATABLE_READ(3),
-      /**
-       * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
-       */
-      TRANSACTION_ISOLATION_SERIALIZABLE(4),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>TRANSACTION_ISOLATION_UNSPECIFIED = 0;</code>
-       */
-      public static final int TRANSACTION_ISOLATION_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
-       */
-      public static final int TRANSACTION_ISOLATION_READ_UNCOMMITTED_VALUE = 1;
-      /**
-       * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
-       */
-      public static final int TRANSACTION_ISOLATION_READ_COMMITTED_VALUE = 2;
-      /**
-       * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
-       */
-      public static final int TRANSACTION_ISOLATION_REPEATABLE_READ_VALUE = 3;
-      /**
-       * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
-       */
-      public static final int TRANSACTION_ISOLATION_SERIALIZABLE_VALUE = 4;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static TransactionIsolation valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static TransactionIsolation forNumber(int value) {
-        switch (value) {
-          case 0: return TRANSACTION_ISOLATION_UNSPECIFIED;
-          case 1: return TRANSACTION_ISOLATION_READ_UNCOMMITTED;
-          case 2: return TRANSACTION_ISOLATION_READ_COMMITTED;
-          case 3: return TRANSACTION_ISOLATION_REPEATABLE_READ;
-          case 4: return TRANSACTION_ISOLATION_SERIALIZABLE;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<TransactionIsolation>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          TransactionIsolation> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<TransactionIsolation>() {
-              public TransactionIsolation findValueByNumber(int number) {
-                return TransactionIsolation.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(7);
-      }
-
-      private static final TransactionIsolation[] VALUES = values();
-
-      public static TransactionIsolation valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private TransactionIsolation(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.TransactionIsolation)
-    }
-
-    /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.ByteaOutput}
-     */
-    public enum ByteaOutput
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>BYTEA_OUTPUT_UNSPECIFIED = 0;</code>
-       */
-      BYTEA_OUTPUT_UNSPECIFIED(0),
-      /**
-       * <code>BYTEA_OUTPUT_HEX = 1;</code>
-       */
-      BYTEA_OUTPUT_HEX(1),
-      /**
-       * <code>BYTEA_OUTPUT_ESCAPED = 2;</code>
-       */
-      BYTEA_OUTPUT_ESCAPED(2),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>BYTEA_OUTPUT_UNSPECIFIED = 0;</code>
-       */
-      public static final int BYTEA_OUTPUT_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>BYTEA_OUTPUT_HEX = 1;</code>
-       */
-      public static final int BYTEA_OUTPUT_HEX_VALUE = 1;
-      /**
-       * <code>BYTEA_OUTPUT_ESCAPED = 2;</code>
-       */
-      public static final int BYTEA_OUTPUT_ESCAPED_VALUE = 2;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ByteaOutput valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static ByteaOutput forNumber(int value) {
-        switch (value) {
-          case 0: return BYTEA_OUTPUT_UNSPECIFIED;
-          case 1: return BYTEA_OUTPUT_HEX;
-          case 2: return BYTEA_OUTPUT_ESCAPED;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<ByteaOutput>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          ByteaOutput> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ByteaOutput>() {
-              public ByteaOutput findValueByNumber(int number) {
-                return ByteaOutput.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(8);
-      }
-
-      private static final ByteaOutput[] VALUES = values();
-
-      public static ByteaOutput valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private ByteaOutput(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.ByteaOutput)
-    }
-
-    /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlBinary}
-     */
-    public enum XmlBinary
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>XML_BINARY_UNSPECIFIED = 0;</code>
-       */
-      XML_BINARY_UNSPECIFIED(0),
-      /**
-       * <code>XML_BINARY_BASE64 = 1;</code>
-       */
-      XML_BINARY_BASE64(1),
-      /**
-       * <code>XML_BINARY_HEX = 2;</code>
-       */
-      XML_BINARY_HEX(2),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>XML_BINARY_UNSPECIFIED = 0;</code>
-       */
-      public static final int XML_BINARY_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>XML_BINARY_BASE64 = 1;</code>
-       */
-      public static final int XML_BINARY_BASE64_VALUE = 1;
-      /**
-       * <code>XML_BINARY_HEX = 2;</code>
-       */
-      public static final int XML_BINARY_HEX_VALUE = 2;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static XmlBinary valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static XmlBinary forNumber(int value) {
-        switch (value) {
-          case 0: return XML_BINARY_UNSPECIFIED;
-          case 1: return XML_BINARY_BASE64;
-          case 2: return XML_BINARY_HEX;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<XmlBinary>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          XmlBinary> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<XmlBinary>() {
-              public XmlBinary findValueByNumber(int number) {
-                return XmlBinary.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(9);
-      }
-
-      private static final XmlBinary[] VALUES = values();
-
-      public static XmlBinary valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private XmlBinary(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlBinary)
-    }
-
-    /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlOption}
-     */
-    public enum XmlOption
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>XML_OPTION_UNSPECIFIED = 0;</code>
-       */
-      XML_OPTION_UNSPECIFIED(0),
-      /**
-       * <code>XML_OPTION_DOCUMENT = 1;</code>
-       */
-      XML_OPTION_DOCUMENT(1),
-      /**
-       * <code>XML_OPTION_CONTENT = 2;</code>
-       */
-      XML_OPTION_CONTENT(2),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>XML_OPTION_UNSPECIFIED = 0;</code>
-       */
-      public static final int XML_OPTION_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>XML_OPTION_DOCUMENT = 1;</code>
-       */
-      public static final int XML_OPTION_DOCUMENT_VALUE = 1;
-      /**
-       * <code>XML_OPTION_CONTENT = 2;</code>
-       */
-      public static final int XML_OPTION_CONTENT_VALUE = 2;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static XmlOption valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static XmlOption forNumber(int value) {
-        switch (value) {
-          case 0: return XML_OPTION_UNSPECIFIED;
-          case 1: return XML_OPTION_DOCUMENT;
-          case 2: return XML_OPTION_CONTENT;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<XmlOption>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          XmlOption> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<XmlOption>() {
-              public XmlOption findValueByNumber(int number) {
-                return XmlOption.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(10);
-      }
-
-      private static final XmlOption[] VALUES = values();
-
-      public static XmlOption valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private XmlOption(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlOption)
-    }
-
-    /**
-     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.BackslashQuote}
-     */
-    public enum BackslashQuote
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>BACKSLASH_QUOTE_UNSPECIFIED = 0;</code>
-       */
-      BACKSLASH_QUOTE_UNSPECIFIED(0),
-      /**
-       * <code>BACKSLASH_QUOTE = 1;</code>
-       */
-      BACKSLASH_QUOTE(1),
-      /**
-       * <code>BACKSLASH_QUOTE_ON = 2;</code>
-       */
-      BACKSLASH_QUOTE_ON(2),
-      /**
-       * <code>BACKSLASH_QUOTE_OFF = 3;</code>
-       */
-      BACKSLASH_QUOTE_OFF(3),
-      /**
-       * <code>BACKSLASH_QUOTE_SAFE_ENCODING = 4;</code>
-       */
-      BACKSLASH_QUOTE_SAFE_ENCODING(4),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>BACKSLASH_QUOTE_UNSPECIFIED = 0;</code>
-       */
-      public static final int BACKSLASH_QUOTE_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>BACKSLASH_QUOTE = 1;</code>
-       */
-      public static final int BACKSLASH_QUOTE_VALUE = 1;
-      /**
-       * <code>BACKSLASH_QUOTE_ON = 2;</code>
-       */
-      public static final int BACKSLASH_QUOTE_ON_VALUE = 2;
-      /**
-       * <code>BACKSLASH_QUOTE_OFF = 3;</code>
-       */
-      public static final int BACKSLASH_QUOTE_OFF_VALUE = 3;
-      /**
-       * <code>BACKSLASH_QUOTE_SAFE_ENCODING = 4;</code>
-       */
-      public static final int BACKSLASH_QUOTE_SAFE_ENCODING_VALUE = 4;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static BackslashQuote valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static BackslashQuote forNumber(int value) {
-        switch (value) {
-          case 0: return BACKSLASH_QUOTE_UNSPECIFIED;
-          case 1: return BACKSLASH_QUOTE;
-          case 2: return BACKSLASH_QUOTE_ON;
-          case 3: return BACKSLASH_QUOTE_OFF;
-          case 4: return BACKSLASH_QUOTE_SAFE_ENCODING;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<BackslashQuote>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          BackslashQuote> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<BackslashQuote>() {
-              public BackslashQuote findValueByNumber(int number) {
-                return BackslashQuote.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(11);
-      }
-
-      private static final BackslashQuote[] VALUES = values();
-
-      public static BackslashQuote valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private BackslashQuote(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.BackslashQuote)
-    }
-
-    /**
      * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.PgHintPlanDebugPrint}
      */
     public enum PgHintPlanDebugPrint
@@ -5378,7 +4804,7 @@ public final class Postgresql111C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(12);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(7);
       }
 
       private static final PgHintPlanDebugPrint[] VALUES = values();
@@ -5522,7 +4948,7 @@ public final class Postgresql111C {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(13);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(8);
       }
 
       private static final SharedPreloadLibraries[] VALUES = values();
@@ -5546,6 +4972,636 @@ public final class Postgresql111C {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.SharedPreloadLibraries)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.SynchronousCommit}
+     */
+    public enum SynchronousCommit
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SYNCHRONOUS_COMMIT_UNSPECIFIED = 0;</code>
+       */
+      SYNCHRONOUS_COMMIT_UNSPECIFIED(0),
+      /**
+       * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
+       */
+      SYNCHRONOUS_COMMIT_ON(1),
+      /**
+       * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
+       */
+      SYNCHRONOUS_COMMIT_OFF(2),
+      /**
+       * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
+       */
+      SYNCHRONOUS_COMMIT_LOCAL(3),
+      /**
+       * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
+       */
+      SYNCHRONOUS_COMMIT_REMOTE_WRITE(4),
+      /**
+       * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
+       */
+      SYNCHRONOUS_COMMIT_REMOTE_APPLY(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SYNCHRONOUS_COMMIT_UNSPECIFIED = 0;</code>
+       */
+      public static final int SYNCHRONOUS_COMMIT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
+       */
+      public static final int SYNCHRONOUS_COMMIT_ON_VALUE = 1;
+      /**
+       * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
+       */
+      public static final int SYNCHRONOUS_COMMIT_OFF_VALUE = 2;
+      /**
+       * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
+       */
+      public static final int SYNCHRONOUS_COMMIT_LOCAL_VALUE = 3;
+      /**
+       * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
+       */
+      public static final int SYNCHRONOUS_COMMIT_REMOTE_WRITE_VALUE = 4;
+      /**
+       * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
+       */
+      public static final int SYNCHRONOUS_COMMIT_REMOTE_APPLY_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SynchronousCommit valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static SynchronousCommit forNumber(int value) {
+        switch (value) {
+          case 0: return SYNCHRONOUS_COMMIT_UNSPECIFIED;
+          case 1: return SYNCHRONOUS_COMMIT_ON;
+          case 2: return SYNCHRONOUS_COMMIT_OFF;
+          case 3: return SYNCHRONOUS_COMMIT_LOCAL;
+          case 4: return SYNCHRONOUS_COMMIT_REMOTE_WRITE;
+          case 5: return SYNCHRONOUS_COMMIT_REMOTE_APPLY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SynchronousCommit>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SynchronousCommit> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SynchronousCommit>() {
+              public SynchronousCommit findValueByNumber(int number) {
+                return SynchronousCommit.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(9);
+      }
+
+      private static final SynchronousCommit[] VALUES = values();
+
+      public static SynchronousCommit valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SynchronousCommit(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.SynchronousCommit)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.TransactionIsolation}
+     */
+    public enum TransactionIsolation
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TRANSACTION_ISOLATION_UNSPECIFIED = 0;</code>
+       */
+      TRANSACTION_ISOLATION_UNSPECIFIED(0),
+      /**
+       * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
+       */
+      TRANSACTION_ISOLATION_READ_UNCOMMITTED(1),
+      /**
+       * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
+       */
+      TRANSACTION_ISOLATION_READ_COMMITTED(2),
+      /**
+       * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
+       */
+      TRANSACTION_ISOLATION_REPEATABLE_READ(3),
+      /**
+       * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
+       */
+      TRANSACTION_ISOLATION_SERIALIZABLE(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>TRANSACTION_ISOLATION_UNSPECIFIED = 0;</code>
+       */
+      public static final int TRANSACTION_ISOLATION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
+       */
+      public static final int TRANSACTION_ISOLATION_READ_UNCOMMITTED_VALUE = 1;
+      /**
+       * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
+       */
+      public static final int TRANSACTION_ISOLATION_READ_COMMITTED_VALUE = 2;
+      /**
+       * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
+       */
+      public static final int TRANSACTION_ISOLATION_REPEATABLE_READ_VALUE = 3;
+      /**
+       * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
+       */
+      public static final int TRANSACTION_ISOLATION_SERIALIZABLE_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TransactionIsolation valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static TransactionIsolation forNumber(int value) {
+        switch (value) {
+          case 0: return TRANSACTION_ISOLATION_UNSPECIFIED;
+          case 1: return TRANSACTION_ISOLATION_READ_UNCOMMITTED;
+          case 2: return TRANSACTION_ISOLATION_READ_COMMITTED;
+          case 3: return TRANSACTION_ISOLATION_REPEATABLE_READ;
+          case 4: return TRANSACTION_ISOLATION_SERIALIZABLE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<TransactionIsolation>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          TransactionIsolation> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<TransactionIsolation>() {
+              public TransactionIsolation findValueByNumber(int number) {
+                return TransactionIsolation.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(10);
+      }
+
+      private static final TransactionIsolation[] VALUES = values();
+
+      public static TransactionIsolation valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private TransactionIsolation(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.TransactionIsolation)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.WalLevel}
+     */
+    public enum WalLevel
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>WAL_LEVEL_UNSPECIFIED = 0;</code>
+       */
+      WAL_LEVEL_UNSPECIFIED(0),
+      /**
+       * <code>WAL_LEVEL_REPLICA = 1;</code>
+       */
+      WAL_LEVEL_REPLICA(1),
+      /**
+       * <code>WAL_LEVEL_LOGICAL = 2;</code>
+       */
+      WAL_LEVEL_LOGICAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>WAL_LEVEL_UNSPECIFIED = 0;</code>
+       */
+      public static final int WAL_LEVEL_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>WAL_LEVEL_REPLICA = 1;</code>
+       */
+      public static final int WAL_LEVEL_REPLICA_VALUE = 1;
+      /**
+       * <code>WAL_LEVEL_LOGICAL = 2;</code>
+       */
+      public static final int WAL_LEVEL_LOGICAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static WalLevel valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static WalLevel forNumber(int value) {
+        switch (value) {
+          case 0: return WAL_LEVEL_UNSPECIFIED;
+          case 1: return WAL_LEVEL_REPLICA;
+          case 2: return WAL_LEVEL_LOGICAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<WalLevel>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          WalLevel> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<WalLevel>() {
+              public WalLevel findValueByNumber(int number) {
+                return WalLevel.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(11);
+      }
+
+      private static final WalLevel[] VALUES = values();
+
+      public static WalLevel valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private WalLevel(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.WalLevel)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlBinary}
+     */
+    public enum XmlBinary
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>XML_BINARY_UNSPECIFIED = 0;</code>
+       */
+      XML_BINARY_UNSPECIFIED(0),
+      /**
+       * <code>XML_BINARY_BASE64 = 1;</code>
+       */
+      XML_BINARY_BASE64(1),
+      /**
+       * <code>XML_BINARY_HEX = 2;</code>
+       */
+      XML_BINARY_HEX(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>XML_BINARY_UNSPECIFIED = 0;</code>
+       */
+      public static final int XML_BINARY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>XML_BINARY_BASE64 = 1;</code>
+       */
+      public static final int XML_BINARY_BASE64_VALUE = 1;
+      /**
+       * <code>XML_BINARY_HEX = 2;</code>
+       */
+      public static final int XML_BINARY_HEX_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static XmlBinary valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static XmlBinary forNumber(int value) {
+        switch (value) {
+          case 0: return XML_BINARY_UNSPECIFIED;
+          case 1: return XML_BINARY_BASE64;
+          case 2: return XML_BINARY_HEX;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<XmlBinary>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          XmlBinary> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<XmlBinary>() {
+              public XmlBinary findValueByNumber(int number) {
+                return XmlBinary.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(12);
+      }
+
+      private static final XmlBinary[] VALUES = values();
+
+      public static XmlBinary valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private XmlBinary(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlBinary)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlOption}
+     */
+    public enum XmlOption
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>XML_OPTION_UNSPECIFIED = 0;</code>
+       */
+      XML_OPTION_UNSPECIFIED(0),
+      /**
+       * <code>XML_OPTION_DOCUMENT = 1;</code>
+       */
+      XML_OPTION_DOCUMENT(1),
+      /**
+       * <code>XML_OPTION_CONTENT = 2;</code>
+       */
+      XML_OPTION_CONTENT(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>XML_OPTION_UNSPECIFIED = 0;</code>
+       */
+      public static final int XML_OPTION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>XML_OPTION_DOCUMENT = 1;</code>
+       */
+      public static final int XML_OPTION_DOCUMENT_VALUE = 1;
+      /**
+       * <code>XML_OPTION_CONTENT = 2;</code>
+       */
+      public static final int XML_OPTION_CONTENT_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static XmlOption valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static XmlOption forNumber(int value) {
+        switch (value) {
+          case 0: return XML_OPTION_UNSPECIFIED;
+          case 1: return XML_OPTION_DOCUMENT;
+          case 2: return XML_OPTION_CONTENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<XmlOption>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          XmlOption> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<XmlOption>() {
+              public XmlOption findValueByNumber(int number) {
+                return XmlOption.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.PostgresqlConfig11_1C.getDescriptor().getEnumTypes().get(13);
+      }
+
+      private static final XmlOption[] VALUES = values();
+
+      public static XmlOption valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private XmlOption(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig11_1C.XmlOption)
     }
 
     public static final int MAX_CONNECTIONS_FIELD_NUMBER = 1;
@@ -7704,6 +7760,32 @@ public final class Postgresql111C {
       return getTrackActivityQuerySize();
     }
 
+    public static final int ONLINE_ANALYZE_ENABLE_FIELD_NUMBER = 79;
+    private com.google.protobuf.BoolValue onlineAnalyzeEnable_;
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+     * @return Whether the onlineAnalyzeEnable field is set.
+     */
+    @java.lang.Override
+    public boolean hasOnlineAnalyzeEnable() {
+      return onlineAnalyzeEnable_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+     * @return The onlineAnalyzeEnable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getOnlineAnalyzeEnable() {
+      return onlineAnalyzeEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : onlineAnalyzeEnable_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getOnlineAnalyzeEnableOrBuilder() {
+      return getOnlineAnalyzeEnable();
+    }
+
     public static final int ENABLE_BITMAPSCAN_FIELD_NUMBER = 80;
     private com.google.protobuf.BoolValue enableBitmapscan_;
     /**
@@ -8968,6 +9050,32 @@ public final class Postgresql111C {
       return getPgQualstatsSampleRate();
     }
 
+    public static final int PLANTUNER_FIX_EMPTY_TABLE_FIELD_NUMBER = 149;
+    private com.google.protobuf.BoolValue plantunerFixEmptyTable_;
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+     * @return Whether the plantunerFixEmptyTable field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlantunerFixEmptyTable() {
+      return plantunerFixEmptyTable_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+     * @return The plantunerFixEmptyTable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPlantunerFixEmptyTable() {
+      return plantunerFixEmptyTable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : plantunerFixEmptyTable_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder() {
+      return getPlantunerFixEmptyTable();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9214,6 +9322,9 @@ public final class Postgresql111C {
       if (trackActivityQuerySize_ != null) {
         output.writeMessage(77, getTrackActivityQuerySize());
       }
+      if (onlineAnalyzeEnable_ != null) {
+        output.writeMessage(79, getOnlineAnalyzeEnable());
+      }
       if (enableBitmapscan_ != null) {
         output.writeMessage(80, getEnableBitmapscan());
       }
@@ -9358,6 +9469,9 @@ public final class Postgresql111C {
       }
       if (pgQualstatsSampleRate_ != null) {
         output.writeMessage(126, getPgQualstatsSampleRate());
+      }
+      if (plantunerFixEmptyTable_ != null) {
+        output.writeMessage(149, getPlantunerFixEmptyTable());
       }
       unknownFields.writeTo(output);
     }
@@ -9675,6 +9789,10 @@ public final class Postgresql111C {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(77, getTrackActivityQuerySize());
       }
+      if (onlineAnalyzeEnable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(79, getOnlineAnalyzeEnable());
+      }
       if (enableBitmapscan_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(80, getEnableBitmapscan());
@@ -9869,6 +9987,10 @@ public final class Postgresql111C {
       if (pgQualstatsSampleRate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(126, getPgQualstatsSampleRate());
+      }
+      if (plantunerFixEmptyTable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(149, getPlantunerFixEmptyTable());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10211,6 +10333,11 @@ public final class Postgresql111C {
         if (!getTrackActivityQuerySize()
             .equals(other.getTrackActivityQuerySize())) return false;
       }
+      if (hasOnlineAnalyzeEnable() != other.hasOnlineAnalyzeEnable()) return false;
+      if (hasOnlineAnalyzeEnable()) {
+        if (!getOnlineAnalyzeEnable()
+            .equals(other.getOnlineAnalyzeEnable())) return false;
+      }
       if (hasEnableBitmapscan() != other.hasEnableBitmapscan()) return false;
       if (hasEnableBitmapscan()) {
         if (!getEnableBitmapscan()
@@ -10430,6 +10557,11 @@ public final class Postgresql111C {
       if (hasPgQualstatsSampleRate()) {
         if (!getPgQualstatsSampleRate()
             .equals(other.getPgQualstatsSampleRate())) return false;
+      }
+      if (hasPlantunerFixEmptyTable() != other.hasPlantunerFixEmptyTable()) return false;
+      if (hasPlantunerFixEmptyTable()) {
+        if (!getPlantunerFixEmptyTable()
+            .equals(other.getPlantunerFixEmptyTable())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -10720,6 +10852,10 @@ public final class Postgresql111C {
         hash = (37 * hash) + TRACK_ACTIVITY_QUERY_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getTrackActivityQuerySize().hashCode();
       }
+      if (hasOnlineAnalyzeEnable()) {
+        hash = (37 * hash) + ONLINE_ANALYZE_ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getOnlineAnalyzeEnable().hashCode();
+      }
       if (hasEnableBitmapscan()) {
         hash = (37 * hash) + ENABLE_BITMAPSCAN_FIELD_NUMBER;
         hash = (53 * hash) + getEnableBitmapscan().hashCode();
@@ -10901,6 +11037,10 @@ public final class Postgresql111C {
       if (hasPgQualstatsSampleRate()) {
         hash = (37 * hash) + PG_QUALSTATS_SAMPLE_RATE_FIELD_NUMBER;
         hash = (53 * hash) + getPgQualstatsSampleRate().hashCode();
+      }
+      if (hasPlantunerFixEmptyTable()) {
+        hash = (37 * hash) + PLANTUNER_FIX_EMPTY_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getPlantunerFixEmptyTable().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11443,6 +11583,12 @@ public final class Postgresql111C {
           trackActivityQuerySize_ = null;
           trackActivityQuerySizeBuilder_ = null;
         }
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnable_ = null;
+        } else {
+          onlineAnalyzeEnable_ = null;
+          onlineAnalyzeEnableBuilder_ = null;
+        }
         if (enableBitmapscanBuilder_ == null) {
           enableBitmapscan_ = null;
         } else {
@@ -11708,6 +11854,12 @@ public final class Postgresql111C {
         } else {
           pgQualstatsSampleRate_ = null;
           pgQualstatsSampleRateBuilder_ = null;
+        }
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTable_ = null;
+        } else {
+          plantunerFixEmptyTable_ = null;
+          plantunerFixEmptyTableBuilder_ = null;
         }
         return this;
       }
@@ -12061,6 +12213,11 @@ public final class Postgresql111C {
         } else {
           result.trackActivityQuerySize_ = trackActivityQuerySizeBuilder_.build();
         }
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          result.onlineAnalyzeEnable_ = onlineAnalyzeEnable_;
+        } else {
+          result.onlineAnalyzeEnable_ = onlineAnalyzeEnableBuilder_.build();
+        }
         if (enableBitmapscanBuilder_ == null) {
           result.enableBitmapscan_ = enableBitmapscan_;
         } else {
@@ -12283,6 +12440,11 @@ public final class Postgresql111C {
           result.pgQualstatsSampleRate_ = pgQualstatsSampleRate_;
         } else {
           result.pgQualstatsSampleRate_ = pgQualstatsSampleRateBuilder_.build();
+        }
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          result.plantunerFixEmptyTable_ = plantunerFixEmptyTable_;
+        } else {
+          result.plantunerFixEmptyTable_ = plantunerFixEmptyTableBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12564,6 +12726,9 @@ public final class Postgresql111C {
         if (other.hasTrackActivityQuerySize()) {
           mergeTrackActivityQuerySize(other.getTrackActivityQuerySize());
         }
+        if (other.hasOnlineAnalyzeEnable()) {
+          mergeOnlineAnalyzeEnable(other.getOnlineAnalyzeEnable());
+        }
         if (other.hasEnableBitmapscan()) {
           mergeEnableBitmapscan(other.getEnableBitmapscan());
         }
@@ -12712,6 +12877,9 @@ public final class Postgresql111C {
         }
         if (other.hasPgQualstatsSampleRate()) {
           mergePgQualstatsSampleRate(other.getPgQualstatsSampleRate());
+        }
+        if (other.hasPlantunerFixEmptyTable()) {
+          mergePlantunerFixEmptyTable(other.getPlantunerFixEmptyTable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -21673,6 +21841,125 @@ public final class Postgresql111C {
         return trackActivityQuerySizeBuilder_;
       }
 
+      private com.google.protobuf.BoolValue onlineAnalyzeEnable_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> onlineAnalyzeEnableBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       * @return Whether the onlineAnalyzeEnable field is set.
+       */
+      public boolean hasOnlineAnalyzeEnable() {
+        return onlineAnalyzeEnableBuilder_ != null || onlineAnalyzeEnable_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       * @return The onlineAnalyzeEnable.
+       */
+      public com.google.protobuf.BoolValue getOnlineAnalyzeEnable() {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          return onlineAnalyzeEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : onlineAnalyzeEnable_;
+        } else {
+          return onlineAnalyzeEnableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      public Builder setOnlineAnalyzeEnable(com.google.protobuf.BoolValue value) {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          onlineAnalyzeEnable_ = value;
+          onChanged();
+        } else {
+          onlineAnalyzeEnableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      public Builder setOnlineAnalyzeEnable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnable_ = builderForValue.build();
+          onChanged();
+        } else {
+          onlineAnalyzeEnableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      public Builder mergeOnlineAnalyzeEnable(com.google.protobuf.BoolValue value) {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          if (onlineAnalyzeEnable_ != null) {
+            onlineAnalyzeEnable_ =
+              com.google.protobuf.BoolValue.newBuilder(onlineAnalyzeEnable_).mergeFrom(value).buildPartial();
+          } else {
+            onlineAnalyzeEnable_ = value;
+          }
+          onChanged();
+        } else {
+          onlineAnalyzeEnableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      public Builder clearOnlineAnalyzeEnable() {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnable_ = null;
+          onChanged();
+        } else {
+          onlineAnalyzeEnable_ = null;
+          onlineAnalyzeEnableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getOnlineAnalyzeEnableBuilder() {
+        
+        onChanged();
+        return getOnlineAnalyzeEnableFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getOnlineAnalyzeEnableOrBuilder() {
+        if (onlineAnalyzeEnableBuilder_ != null) {
+          return onlineAnalyzeEnableBuilder_.getMessageOrBuilder();
+        } else {
+          return onlineAnalyzeEnable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : onlineAnalyzeEnable_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 79;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getOnlineAnalyzeEnableFieldBuilder() {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getOnlineAnalyzeEnable(),
+                  getParentForChildren(),
+                  isClean());
+          onlineAnalyzeEnable_ = null;
+        }
+        return onlineAnalyzeEnableBuilder_;
+      }
+
       private com.google.protobuf.BoolValue enableBitmapscan_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableBitmapscanBuilder_;
@@ -27149,6 +27436,125 @@ public final class Postgresql111C {
         }
         return pgQualstatsSampleRateBuilder_;
       }
+
+      private com.google.protobuf.BoolValue plantunerFixEmptyTable_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> plantunerFixEmptyTableBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       * @return Whether the plantunerFixEmptyTable field is set.
+       */
+      public boolean hasPlantunerFixEmptyTable() {
+        return plantunerFixEmptyTableBuilder_ != null || plantunerFixEmptyTable_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       * @return The plantunerFixEmptyTable.
+       */
+      public com.google.protobuf.BoolValue getPlantunerFixEmptyTable() {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          return plantunerFixEmptyTable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : plantunerFixEmptyTable_;
+        } else {
+          return plantunerFixEmptyTableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      public Builder setPlantunerFixEmptyTable(com.google.protobuf.BoolValue value) {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plantunerFixEmptyTable_ = value;
+          onChanged();
+        } else {
+          plantunerFixEmptyTableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      public Builder setPlantunerFixEmptyTable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTable_ = builderForValue.build();
+          onChanged();
+        } else {
+          plantunerFixEmptyTableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      public Builder mergePlantunerFixEmptyTable(com.google.protobuf.BoolValue value) {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          if (plantunerFixEmptyTable_ != null) {
+            plantunerFixEmptyTable_ =
+              com.google.protobuf.BoolValue.newBuilder(plantunerFixEmptyTable_).mergeFrom(value).buildPartial();
+          } else {
+            plantunerFixEmptyTable_ = value;
+          }
+          onChanged();
+        } else {
+          plantunerFixEmptyTableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      public Builder clearPlantunerFixEmptyTable() {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTable_ = null;
+          onChanged();
+        } else {
+          plantunerFixEmptyTable_ = null;
+          plantunerFixEmptyTableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPlantunerFixEmptyTableBuilder() {
+        
+        onChanged();
+        return getPlantunerFixEmptyTableFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder() {
+        if (plantunerFixEmptyTableBuilder_ != null) {
+          return plantunerFixEmptyTableBuilder_.getMessageOrBuilder();
+        } else {
+          return plantunerFixEmptyTable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : plantunerFixEmptyTable_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPlantunerFixEmptyTableFieldBuilder() {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPlantunerFixEmptyTable(),
+                  getParentForChildren(),
+                  isClean());
+          plantunerFixEmptyTable_ = null;
+        }
+        return plantunerFixEmptyTableBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -28447,7 +28853,7 @@ public final class Postgresql111C {
       "postgresql11_1c.proto\022%yandex.cloud.mdb." +
       "postgresql.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\376S\n\025PostgresqlConfig11_1C\0224\n\017max_con" +
+      "oto\"\371T\n\025PostgresqlConfig11_1C\0224\n\017max_con" +
       "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pro" +
       "tobuf.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033" +
@@ -28579,154 +28985,157 @@ public final class Postgresql111C {
       " \001(\0132\033.google.protobuf.Int64ValueB\022\372\3071\0161" +
       "0000-86400000\022N\n\031track_activity_query_si" +
       "ze\030M \001(\0132\033.google.protobuf.Int64ValueB\016\372" +
-      "\3071\n100-102400\0225\n\021enable_bitmapscan\030P \001(\013" +
-      "2\032.google.protobuf.BoolValue\0222\n\016enable_h" +
-      "ashagg\030Q \001(\0132\032.google.protobuf.BoolValue" +
-      "\0223\n\017enable_hashjoin\030R \001(\0132\032.google.proto" +
-      "buf.BoolValue\0224\n\020enable_indexscan\030S \001(\0132" +
-      "\032.google.protobuf.BoolValue\0228\n\024enable_in" +
-      "dexonlyscan\030T \001(\0132\032.google.protobuf.Bool" +
-      "Value\0223\n\017enable_material\030U \001(\0132\032.google." +
-      "protobuf.BoolValue\0224\n\020enable_mergejoin\030V" +
-      " \001(\0132\032.google.protobuf.BoolValue\0223\n\017enab" +
-      "le_nestloop\030W \001(\0132\032.google.protobuf.Bool" +
-      "Value\0222\n\016enable_seqscan\030X \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022/\n\013enable_sort\030Y \001(\0132\032" +
-      ".google.protobuf.BoolValue\0222\n\016enable_tid" +
-      "scan\030Z \001(\0132\032.google.protobuf.BoolValue\022E" +
-      "\n\024max_worker_processes\030[ \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\n\372\3071\0060-1024\022E\n\024max_par" +
-      "allel_workers\030\\ \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\n\372\3071\0060-1024\022P\n\037max_parallel_wor" +
-      "kers_per_gather\030] \001(\0132\033.google.protobuf." +
-      "Int64ValueB\n\372\3071\0060-1024\022Q\n\036autovacuum_vac" +
-      "uum_scale_factor\030^ \001(\0132\034.google.protobuf" +
-      ".DoubleValueB\013\372\3071\0070.0-1.0\022R\n\037autovacuum_" +
-      "analyze_scale_factor\030_ \001(\0132\034.google.prot" +
-      "obuf.DoubleValueB\013\372\3071\0070.0-1.0\022A\n\035default" +
-      "_transaction_read_only\030` \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022\020\n\010timezone\030a \001(\t\022:\n\026en" +
-      "able_parallel_append\030b \001(\0132\032.google.prot" +
-      "obuf.BoolValue\0228\n\024enable_parallel_hash\030c" +
-      " \001(\0132\032.google.protobuf.BoolValue\022<\n\030enab" +
-      "le_partition_pruning\030d \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022B\n\036enable_partitionwise_a" +
-      "ggregate\030e \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022=\n\031enable_partitionwise_join\030f \001(\0132\032." +
-      "google.protobuf.BoolValue\022\'\n\003jit\030g \001(\0132\032" +
-      ".google.protobuf.BoolValue\022N\n max_parall" +
-      "el_maintenance_workers\030h \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\007\372\3071\003>=0\022A\n\035parallel_l" +
-      "eader_participation\030i \001(\0132\032.google.proto" +
-      "buf.BoolValue\022^\n!vacuum_cleanup_index_sc" +
-      "ale_factor\030j \001(\0132\034.google.protobuf.Doubl" +
-      "eValueB\025\372\3071\0210.0-10000000000.0\022I\n\030effecti" +
-      "ve_io_concurrency\030k \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\n\372\3071\0060-1000\022M\n\024effective_ca" +
-      "che_size\030l \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\022\372\3071\0160-549755813888\022u\n\030shared_preloa" +
-      "d_libraries\030m \003(\0162S.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlConfig11_1C." +
-      "SharedPreloadLibraries\022U\n\035auto_explain_l" +
-      "og_min_duration\030n \001(\0132\033.google.protobuf." +
-      "Int64ValueB\021\372\3071\r-1-2147483647\022<\n\030auto_ex" +
-      "plain_log_analyze\030o \001(\0132\032.google.protobu" +
-      "f.BoolValue\022<\n\030auto_explain_log_buffers\030" +
-      "p \001(\0132\032.google.protobuf.BoolValue\022;\n\027aut" +
-      "o_explain_log_timing\030q \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022=\n\031auto_explain_log_trigg" +
-      "ers\030r \001(\0132\032.google.protobuf.BoolValue\022<\n" +
-      "\030auto_explain_log_verbose\030s \001(\0132\032.google" +
-      ".protobuf.BoolValue\022F\n\"auto_explain_log_" +
-      "nested_statements\030t \001(\0132\032.google.protobu" +
-      "f.BoolValue\022K\n\030auto_explain_sample_rate\030" +
-      "u \001(\0132\034.google.protobuf.DoubleValueB\013\372\3071" +
-      "\0070.0-1.0\022<\n\030pg_hint_plan_enable_hint\030v \001" +
-      "(\0132\032.google.protobuf.BoolValue\022B\n\036pg_hin" +
-      "t_plan_enable_hint_table\030w \001(\0132\032.google." +
-      "protobuf.BoolValue\022s\n\030pg_hint_plan_debug" +
-      "_print\030x \001(\0162Q.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlConfig11_1C.PgHin" +
-      "tPlanDebugPrint\022i\n\032pg_hint_plan_message_" +
-      "level\030y \001(\0162E.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlConfig11_1C.LogLev" +
-      "el\0228\n\024pg_qualstats_enabled\030z \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\022@\n\034pg_qualstats_tra" +
-      "ck_constants\030{ \001(\0132\032.google.protobuf.Boo" +
-      "lValue\0225\n\020pg_qualstats_max\030| \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022=\n\031pg_qualstats_re" +
-      "solve_oids\030} \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022>\n\030pg_qualstats_sample_rate\030~ \001(\0132\034" +
-      ".google.protobuf.DoubleValue\"S\n\010WalLevel" +
-      "\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL" +
-      "_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"\326\001\n\021Sy" +
-      "nchronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UN" +
-      "SPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032" +
-      "\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOU" +
-      "S_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_R" +
-      "EMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMO" +
-      "TE_APPLY\020\005\"\232\001\n\023ConstraintExclusion\022$\n CO" +
-      "NSTRAINT_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CONS" +
-      "TRAINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXCL" +
-      "USION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PART" +
-      "ITION\020\003\"\222\001\n\021ForceParallelMode\022#\n\037FORCE_P" +
-      "ARALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026FORCE_PARA" +
-      "LLEL_MODE_ON\020\001\022\033\n\027FORCE_PARALLEL_MODE_OF" +
-      "F\020\002\022\037\n\033FORCE_PARALLEL_MODE_REGRESS\020\003\"\222\002\n" +
-      "\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020" +
-      "LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002" +
-      "\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBU" +
-      "G2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_" +
-      "LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL" +
-      "_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_L" +
-      "EVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\231\001\n\021Lo" +
-      "gErrorVerbosity\022#\n\037LOG_ERROR_VERBOSITY_U" +
-      "NSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TERS" +
-      "E\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n\033" +
-      "LOG_ERROR_VERBOSITY_VERBOSE\020\003\"\212\001\n\014LogSta" +
-      "tement\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n" +
-      "\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_D" +
-      "DL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATE" +
-      "MENT_ALL\020\004\"\346\001\n\024TransactionIsolation\022%\n!T" +
-      "RANSACTION_ISOLATION_UNSPECIFIED\020\000\022*\n&TR" +
-      "ANSACTION_ISOLATION_READ_UNCOMMITTED\020\001\022(" +
-      "\n$TRANSACTION_ISOLATION_READ_COMMITTED\020\002" +
-      "\022)\n%TRANSACTION_ISOLATION_REPEATABLE_REA" +
-      "D\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALIZABL" +
-      "E\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_UNSPE" +
-      "CIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_" +
-      "OUTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022\032\n\026XML_BIN" +
-      "ARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001" +
-      "\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML" +
-      "_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCU" +
-      "MENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\232\001\n\016Backs" +
-      "lashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIED" +
-      "\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUO" +
-      "TE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACK" +
-      "SLASH_QUOTE_SAFE_ENCODING\020\004\"\320\001\n\024PgHintPl" +
-      "anDebugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRINT" +
-      "_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRI" +
-      "NT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020" +
-      "\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020\003" +
-      "\022$\n PG_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\223" +
-      "\002\n\026SharedPreloadLibraries\022(\n$SHARED_PREL" +
-      "OAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_PR" +
-      "ELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED" +
-      "_PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$SHA" +
-      "RED_PRELOAD_LIBRARIES_TIMESCALEDB\020\003\022)\n%S" +
-      "HARED_PRELOAD_LIBRARIES_PG_QUALSTATS\020\004\022$" +
-      "\n SHARED_PRELOAD_LIBRARIES_PG_CRON\020\005\"\233\002\n" +
-      "\030PostgresqlConfigSet11_1C\022V\n\020effective_c" +
-      "onfig\030\001 \001(\0132<.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlConfig11_1C\022Q\n\013use" +
-      "r_config\030\002 \001(\0132<.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlConfig11_1C\022T\n\016" +
-      "default_config\030\003 \001(\0132<.yandex.cloud.mdb." +
-      "postgresql.v1.config.PostgresqlConfig11_" +
-      "1CB\201\001\n)yandex.cloud.api.mdb.postgresql.v" +
-      "1.configZTgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/postgresql/v1/con" +
-      "fig;postgresqlb\006proto3"
+      "\3071\n100-102400\0229\n\025online_analyze_enable\030O" +
+      " \001(\0132\032.google.protobuf.BoolValue\0225\n\021enab" +
+      "le_bitmapscan\030P \001(\0132\032.google.protobuf.Bo" +
+      "olValue\0222\n\016enable_hashagg\030Q \001(\0132\032.google" +
+      ".protobuf.BoolValue\0223\n\017enable_hashjoin\030R" +
+      " \001(\0132\032.google.protobuf.BoolValue\0224\n\020enab" +
+      "le_indexscan\030S \001(\0132\032.google.protobuf.Boo" +
+      "lValue\0228\n\024enable_indexonlyscan\030T \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\0223\n\017enable_mater" +
+      "ial\030U \001(\0132\032.google.protobuf.BoolValue\0224\n" +
+      "\020enable_mergejoin\030V \001(\0132\032.google.protobu" +
+      "f.BoolValue\0223\n\017enable_nestloop\030W \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\0222\n\016enable_seqsc" +
+      "an\030X \001(\0132\032.google.protobuf.BoolValue\022/\n\013" +
+      "enable_sort\030Y \001(\0132\032.google.protobuf.Bool" +
+      "Value\0222\n\016enable_tidscan\030Z \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022E\n\024max_worker_processe" +
+      "s\030[ \001(\0132\033.google.protobuf.Int64ValueB\n\372\307" +
+      "1\0060-1024\022E\n\024max_parallel_workers\030\\ \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\n\372\3071\0060-1024\022" +
+      "P\n\037max_parallel_workers_per_gather\030] \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\n\372\3071\0060-102" +
+      "4\022Q\n\036autovacuum_vacuum_scale_factor\030^ \001(" +
+      "\0132\034.google.protobuf.DoubleValueB\013\372\3071\0070.0" +
+      "-1.0\022R\n\037autovacuum_analyze_scale_factor\030" +
+      "_ \001(\0132\034.google.protobuf.DoubleValueB\013\372\3071" +
+      "\0070.0-1.0\022A\n\035default_transaction_read_onl" +
+      "y\030` \001(\0132\032.google.protobuf.BoolValue\022\020\n\010t" +
+      "imezone\030a \001(\t\022:\n\026enable_parallel_append\030" +
+      "b \001(\0132\032.google.protobuf.BoolValue\0228\n\024ena" +
+      "ble_parallel_hash\030c \001(\0132\032.google.protobu" +
+      "f.BoolValue\022<\n\030enable_partition_pruning\030" +
+      "d \001(\0132\032.google.protobuf.BoolValue\022B\n\036ena" +
+      "ble_partitionwise_aggregate\030e \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022=\n\031enable_partitio" +
+      "nwise_join\030f \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022\'\n\003jit\030g \001(\0132\032.google.protobuf.Bool" +
+      "Value\022N\n max_parallel_maintenance_worker" +
+      "s\030h \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022A\n\035parallel_leader_participation\030i" +
+      " \001(\0132\032.google.protobuf.BoolValue\022^\n!vacu" +
+      "um_cleanup_index_scale_factor\030j \001(\0132\034.go" +
+      "ogle.protobuf.DoubleValueB\025\372\3071\0210.0-10000" +
+      "000000.0\022I\n\030effective_io_concurrency\030k \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\n\372\3071\0060-1" +
+      "000\022M\n\024effective_cache_size\030l \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\022\372\3071\0160-5497558138" +
+      "88\022u\n\030shared_preload_libraries\030m \003(\0162S.y" +
+      "andex.cloud.mdb.postgresql.v1.config.Pos" +
+      "tgresqlConfig11_1C.SharedPreloadLibrarie" +
+      "s\022U\n\035auto_explain_log_min_duration\030n \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\021\372\3071\r-1-21" +
+      "47483647\022<\n\030auto_explain_log_analyze\030o \001" +
+      "(\0132\032.google.protobuf.BoolValue\022<\n\030auto_e" +
+      "xplain_log_buffers\030p \001(\0132\032.google.protob" +
+      "uf.BoolValue\022;\n\027auto_explain_log_timing\030" +
+      "q \001(\0132\032.google.protobuf.BoolValue\022=\n\031aut" +
+      "o_explain_log_triggers\030r \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022<\n\030auto_explain_log_ver" +
+      "bose\030s \001(\0132\032.google.protobuf.BoolValue\022F" +
+      "\n\"auto_explain_log_nested_statements\030t \001" +
+      "(\0132\032.google.protobuf.BoolValue\022K\n\030auto_e" +
+      "xplain_sample_rate\030u \001(\0132\034.google.protob" +
+      "uf.DoubleValueB\013\372\3071\0070.0-1.0\022<\n\030pg_hint_p" +
+      "lan_enable_hint\030v \001(\0132\032.google.protobuf." +
+      "BoolValue\022B\n\036pg_hint_plan_enable_hint_ta" +
+      "ble\030w \001(\0132\032.google.protobuf.BoolValue\022s\n" +
+      "\030pg_hint_plan_debug_print\030x \001(\0162Q.yandex" +
+      ".cloud.mdb.postgresql.v1.config.Postgres" +
+      "qlConfig11_1C.PgHintPlanDebugPrint\022i\n\032pg" +
+      "_hint_plan_message_level\030y \001(\0162E.yandex." +
+      "cloud.mdb.postgresql.v1.config.Postgresq" +
+      "lConfig11_1C.LogLevel\0228\n\024pg_qualstats_en" +
+      "abled\030z \001(\0132\032.google.protobuf.BoolValue\022" +
+      "@\n\034pg_qualstats_track_constants\030{ \001(\0132\032." +
+      "google.protobuf.BoolValue\0225\n\020pg_qualstat" +
+      "s_max\030| \001(\0132\033.google.protobuf.Int64Value" +
+      "\022=\n\031pg_qualstats_resolve_oids\030} \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022>\n\030pg_qualstats_" +
+      "sample_rate\030~ \001(\0132\034.google.protobuf.Doub" +
+      "leValue\022>\n\031plantuner_fix_empty_table\030\225\001 " +
+      "\001(\0132\032.google.protobuf.BoolValue\"\232\001\n\016Back" +
+      "slashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIE" +
+      "D\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QU" +
+      "OTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BAC" +
+      "KSLASH_QUOTE_SAFE_ENCODING\020\004\"[\n\013ByteaOut" +
+      "put\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYT" +
+      "EA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020" +
+      "\002\"\232\001\n\023ConstraintExclusion\022$\n CONSTRAINT_" +
+      "EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EX" +
+      "CLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF" +
+      "\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PARTITION\020\003\"\222" +
+      "\001\n\021ForceParallelMode\022#\n\037FORCE_PARALLEL_M" +
+      "ODE_UNSPECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE" +
+      "_ON\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FO" +
+      "RCE_PARALLEL_MODE_REGRESS\020\003\"\231\001\n\021LogError" +
+      "Verbosity\022#\n\037LOG_ERROR_VERBOSITY_UNSPECI" +
+      "FIED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n" +
+      "\033LOG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ER" +
+      "ROR_VERBOSITY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025" +
+      "LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEB" +
+      "UG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL" +
+      "_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_L" +
+      "EVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_" +
+      "LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n" +
+      "\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022" +
+      "\023\n\017LOG_LEVEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n" +
+      "\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STAT" +
+      "EMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021L" +
+      "OG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020" +
+      "\004\"\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PL" +
+      "AN_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_" +
+      "PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_D" +
+      "EBUG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PR" +
+      "INT_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRI" +
+      "NT_VERBOSE\020\004\"\223\002\n\026SharedPreloadLibraries\022" +
+      "(\n$SHARED_PRELOAD_LIBRARIES_UNSPECIFIED\020" +
+      "\000\022)\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLA" +
+      "IN\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT" +
+      "_PLAN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIME" +
+      "SCALEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG" +
+      "_QUALSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES" +
+      "_PG_CRON\020\005\"\326\001\n\021SynchronousCommit\022\"\n\036SYNC" +
+      "HRONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRON" +
+      "OUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OF" +
+      "F\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYN" +
+      "CHRONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHR" +
+      "ONOUS_COMMIT_REMOTE_APPLY\020\005\"\346\001\n\024Transact" +
+      "ionIsolation\022%\n!TRANSACTION_ISOLATION_UN" +
+      "SPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_REA" +
+      "D_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION" +
+      "_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATI" +
+      "ON_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOL" +
+      "ATION_SERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_" +
+      "LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA" +
+      "\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032" +
+      "\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY" +
+      "_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOpti" +
+      "on\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OP" +
+      "TION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"" +
+      "\233\002\n\030PostgresqlConfigSet11_1C\022V\n\020effectiv" +
+      "e_config\030\001 \001(\0132<.yandex.cloud.mdb.postgr" +
+      "esql.v1.config.PostgresqlConfig11_1C\022Q\n\013" +
+      "user_config\030\002 \001(\0132<.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlConfig11_1C\022" +
+      "T\n\016default_config\030\003 \001(\0132<.yandex.cloud.m" +
+      "db.postgresql.v1.config.PostgresqlConfig" +
+      "11_1CB\201\001\n)yandex.cloud.api.mdb.postgresq" +
+      "l.v1.configZTgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/postgresql/v1/" +
+      "config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28739,7 +29148,7 @@ public final class Postgresql111C {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig11_1C_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig11_1C_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "VacuumCleanupIndexScaleFactor", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "OnlineAnalyzeEnable", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "VacuumCleanupIndexScaleFactor", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "PlantunerFixEmptyTable", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet11_1C_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet11_1C_fieldAccessorTable = new

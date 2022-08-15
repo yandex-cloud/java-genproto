@@ -12077,6 +12077,35 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.ByteString
         getPrefixMatchBytes();
 
+    /**
+     * <pre>
+     * Regular expression match string.
+     * </pre>
+     *
+     * <code>string regex_match = 3;</code>
+     * @return Whether the regexMatch field is set.
+     */
+    boolean hasRegexMatch();
+    /**
+     * <pre>
+     * Regular expression match string.
+     * </pre>
+     *
+     * <code>string regex_match = 3;</code>
+     * @return The regexMatch.
+     */
+    java.lang.String getRegexMatch();
+    /**
+     * <pre>
+     * Regular expression match string.
+     * </pre>
+     *
+     * <code>string regex_match = 3;</code>
+     * @return The bytes for regexMatch.
+     */
+    com.google.protobuf.ByteString
+        getRegexMatchBytes();
+
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.MatchCase getMatchCase();
   }
   /**
@@ -12140,6 +12169,12 @@ public final class VirtualHostOuterClass {
               match_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              matchCase_ = 3;
+              match_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12179,6 +12214,7 @@ public final class VirtualHostOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       EXACT_MATCH(1),
       PREFIX_MATCH(2),
+      REGEX_MATCH(3),
       MATCH_NOT_SET(0);
       private final int value;
       private MatchCase(int value) {
@@ -12198,6 +12234,7 @@ public final class VirtualHostOuterClass {
         switch (value) {
           case 1: return EXACT_MATCH;
           case 2: return PREFIX_MATCH;
+          case 3: return REGEX_MATCH;
           case 0: return MATCH_NOT_SET;
           default: return null;
         }
@@ -12341,6 +12378,70 @@ public final class VirtualHostOuterClass {
       }
     }
 
+    public static final int REGEX_MATCH_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Regular expression match string.
+     * </pre>
+     *
+     * <code>string regex_match = 3;</code>
+     * @return Whether the regexMatch field is set.
+     */
+    public boolean hasRegexMatch() {
+      return matchCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Regular expression match string.
+     * </pre>
+     *
+     * <code>string regex_match = 3;</code>
+     * @return The regexMatch.
+     */
+    public java.lang.String getRegexMatch() {
+      java.lang.Object ref = "";
+      if (matchCase_ == 3) {
+        ref = match_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (matchCase_ == 3) {
+          match_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Regular expression match string.
+     * </pre>
+     *
+     * <code>string regex_match = 3;</code>
+     * @return The bytes for regexMatch.
+     */
+    public com.google.protobuf.ByteString
+        getRegexMatchBytes() {
+      java.lang.Object ref = "";
+      if (matchCase_ == 3) {
+        ref = match_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (matchCase_ == 3) {
+          match_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12361,6 +12462,9 @@ public final class VirtualHostOuterClass {
       if (matchCase_ == 2) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, match_);
       }
+      if (matchCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, match_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12375,6 +12479,9 @@ public final class VirtualHostOuterClass {
       }
       if (matchCase_ == 2) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, match_);
+      }
+      if (matchCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, match_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12401,6 +12508,10 @@ public final class VirtualHostOuterClass {
           if (!getPrefixMatch()
               .equals(other.getPrefixMatch())) return false;
           break;
+        case 3:
+          if (!getRegexMatch()
+              .equals(other.getRegexMatch())) return false;
+          break;
         case 0:
         default:
       }
@@ -12423,6 +12534,10 @@ public final class VirtualHostOuterClass {
         case 2:
           hash = (37 * hash) + PREFIX_MATCH_FIELD_NUMBER;
           hash = (53 * hash) + getPrefixMatch().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + REGEX_MATCH_FIELD_NUMBER;
+          hash = (53 * hash) + getRegexMatch().hashCode();
           break;
         case 0:
         default:
@@ -12598,6 +12713,9 @@ public final class VirtualHostOuterClass {
         if (matchCase_ == 2) {
           result.match_ = match_;
         }
+        if (matchCase_ == 3) {
+          result.match_ = match_;
+        }
         result.matchCase_ = matchCase_;
         onBuilt();
         return result;
@@ -12656,6 +12774,12 @@ public final class VirtualHostOuterClass {
           }
           case PREFIX_MATCH: {
             matchCase_ = 2;
+            match_ = other.match_;
+            onChanged();
+            break;
+          }
+          case REGEX_MATCH: {
+            matchCase_ = 3;
             match_ = other.match_;
             onChanged();
             break;
@@ -12945,6 +13069,127 @@ public final class VirtualHostOuterClass {
   }
   checkByteStringIsUtf8(value);
         matchCase_ = 2;
+        match_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Regular expression match string.
+       * </pre>
+       *
+       * <code>string regex_match = 3;</code>
+       * @return Whether the regexMatch field is set.
+       */
+      @java.lang.Override
+      public boolean hasRegexMatch() {
+        return matchCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Regular expression match string.
+       * </pre>
+       *
+       * <code>string regex_match = 3;</code>
+       * @return The regexMatch.
+       */
+      @java.lang.Override
+      public java.lang.String getRegexMatch() {
+        java.lang.Object ref = "";
+        if (matchCase_ == 3) {
+          ref = match_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (matchCase_ == 3) {
+            match_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regular expression match string.
+       * </pre>
+       *
+       * <code>string regex_match = 3;</code>
+       * @return The bytes for regexMatch.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRegexMatchBytes() {
+        java.lang.Object ref = "";
+        if (matchCase_ == 3) {
+          ref = match_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (matchCase_ == 3) {
+            match_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regular expression match string.
+       * </pre>
+       *
+       * <code>string regex_match = 3;</code>
+       * @param value The regexMatch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegexMatch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  matchCase_ = 3;
+        match_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular expression match string.
+       * </pre>
+       *
+       * <code>string regex_match = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegexMatch() {
+        if (matchCase_ == 3) {
+          matchCase_ = 0;
+          match_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular expression match string.
+       * </pre>
+       *
+       * <code>string regex_match = 3;</code>
+       * @param value The bytes for regexMatch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegexMatchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        matchCase_ = 3;
         match_ = value;
         onChanged();
         return this;
@@ -20616,44 +20861,44 @@ public final class VirtualHostOuterClass {
       "thod\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud." +
       "apploadbalancer.v1.StringMatch\"L\n\016GrpcRo" +
       "uteMatch\022:\n\004fqmn\030\001 \001(\0132,.yandex.cloud.ap" +
-      "ploadbalancer.v1.StringMatch\"K\n\013StringMa" +
+      "ploadbalancer.v1.StringMatch\"b\n\013StringMa" +
       "tch\022\025\n\013exact_match\030\001 \001(\tH\000\022\026\n\014prefix_mat" +
-      "ch\030\002 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAc" +
-      "tion\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replace_" +
-      "host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014repl" +
-      "ace_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\t" +
-      "H\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_cod" +
-      "e\030\007 \001(\0162D.yandex.cloud.apploadbalancer.v" +
-      "1.RedirectAction.RedirectResponseCode\"w\n" +
-      "\024RedirectResponseCode\022\025\n\021MOVED_PERMANENT" +
-      "LY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPOR" +
-      "ARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006" +
-      "\n\004path\"k\n\024DirectResponseAction\022\033\n\006status" +
-      "\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yand" +
-      "ex.cloud.apploadbalancer.v1.Payload\"\202\002\n\030" +
-      "GrpcStatusResponseAction\022P\n\006status\030\001 \001(\016" +
-      "2@.yandex.cloud.apploadbalancer.v1.GrpcS" +
-      "tatusResponseAction.Status\"\223\001\n\006Status\022\006\n" +
-      "\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND" +
-      "\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENTIC" +
-      "ATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022" +
-      "\017\n\013UNAVAILABLE\020\007\"\214\002\n\017HttpRouteAction\022\036\n\020" +
-      "backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030" +
-      "\002 \001(\0132\031.google.protobuf.Duration\022/\n\014idle" +
-      "_timeout\030\003 \001(\0132\031.google.protobuf.Duratio" +
-      "n\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_r" +
-      "ewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025" +
-      "\n\rupgrade_types\030\007 \003(\tB\030\n\026host_rewrite_sp" +
-      "ecifier\"\341\001\n\017GrpcRouteAction\022\036\n\020backend_g" +
-      "roup_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout\030\002 \001(\013" +
-      "2\031.google.protobuf.Duration\022/\n\014idle_time" +
-      "out\030\003 \001(\0132\031.google.protobuf.Duration\022\026\n\014" +
-      "host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_rewrit" +
-      "e\030\005 \001(\010H\000B\030\n\026host_rewrite_specifierBz\n#y" +
-      "andex.cloud.api.apploadbalancer.v1ZSgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/apploadbalancer/v1;apploadbalancerb" +
-      "\006proto3"
+      "ch\030\002 \001(\tH\000\022\025\n\013regex_match\030\003 \001(\tH\000B\r\n\005mat" +
+      "ch\022\004\300\3011\001\"\372\002\n\016RedirectAction\022\026\n\016replace_s" +
+      "cheme\030\001 \001(\t\022\024\n\014replace_host\030\002 \001(\t\022\024\n\014rep" +
+      "lace_port\030\003 \001(\003\022\026\n\014replace_path\030\004 \001(\tH\000\022" +
+      "\030\n\016replace_prefix\030\005 \001(\tH\000\022\024\n\014remove_quer" +
+      "y\030\006 \001(\010\022[\n\rresponse_code\030\007 \001(\0162D.yandex." +
+      "cloud.apploadbalancer.v1.RedirectAction." +
+      "RedirectResponseCode\"w\n\024RedirectResponse" +
+      "Code\022\025\n\021MOVED_PERMANENTLY\020\000\022\t\n\005FOUND\020\001\022\r" +
+      "\n\tSEE_OTHER\020\002\022\026\n\022TEMPORARY_REDIRECT\020\003\022\026\n" +
+      "\022PERMANENT_REDIRECT\020\004B\006\n\004path\"k\n\024DirectR" +
+      "esponseAction\022\033\n\006status\030\001 \001(\003B\013\372\3071\007100-5" +
+      "99\0226\n\004body\030\002 \001(\0132(.yandex.cloud.apploadb" +
+      "alancer.v1.Payload\"\202\002\n\030GrpcStatusRespons" +
+      "eAction\022P\n\006status\030\001 \001(\0162@.yandex.cloud.a" +
+      "pploadbalancer.v1.GrpcStatusResponseActi" +
+      "on.Status\"\223\001\n\006Status\022\006\n\002OK\020\000\022\024\n\020INVALID_" +
+      "ARGUMENT\020\001\022\r\n\tNOT_FOUND\020\002\022\025\n\021PERMISSION_" +
+      "DENIED\020\003\022\023\n\017UNAUTHENTICATED\020\004\022\021\n\rUNIMPLE" +
+      "MENTED\020\005\022\014\n\010INTERNAL\020\006\022\017\n\013UNAVAILABLE\020\007\"" +
+      "\214\002\n\017HttpRouteAction\022\036\n\020backend_group_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002 \001(\0132\031.google.pr" +
+      "otobuf.Duration\022/\n\014idle_timeout\030\003 \001(\0132\031." +
+      "google.protobuf.Duration\022\026\n\014host_rewrite" +
+      "\030\004 \001(\tH\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000\022\026\n" +
+      "\016prefix_rewrite\030\006 \001(\t\022\025\n\rupgrade_types\030\007" +
+      " \003(\tB\030\n\026host_rewrite_specifier\"\341\001\n\017GrpcR" +
+      "outeAction\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022.\n\013max_timeout\030\002 \001(\0132\031.google.protobu" +
+      "f.Duration\022/\n\014idle_timeout\030\003 \001(\0132\031.googl" +
+      "e.protobuf.Duration\022\026\n\014host_rewrite\030\004 \001(" +
+      "\tH\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000B\030\n\026host" +
+      "_rewrite_specifierBz\n#yandex.cloud.api.a" +
+      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/apploadbalan" +
+      "cer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20715,7 +20960,7 @@ public final class VirtualHostOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor,
-        new java.lang.String[] { "ExactMatch", "PrefixMatch", "Match", });
+        new java.lang.String[] { "ExactMatch", "PrefixMatch", "RegexMatch", "Match", });
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_fieldAccessorTable = new

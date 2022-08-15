@@ -6151,6 +6151,33 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Configuration of a Redis 7.0 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+     * @return Whether the redisConfig70 field is set.
+     */
+    boolean hasRedisConfig70();
+    /**
+     * <pre>
+     * Configuration of a Redis 7.0 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+     * @return The redisConfig70.
+     */
+    yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0 getRedisConfig70();
+    /**
+     * <pre>
+     * Configuration of a Redis 7.0 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0OrBuilder getRedisConfig70OrBuilder();
+
+    /**
+     * <pre>
      * Resources allocated to Redis hosts.
      * </pre>
      *
@@ -6365,6 +6392,20 @@ public final class ClusterOuterClass {
               redisConfigCase_ = 7;
               break;
             }
+            case 66: {
+              yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.Builder subBuilder = null;
+              if (redisConfigCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_).toBuilder();
+              }
+              redisConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_);
+                redisConfig_ = subBuilder.buildPartial();
+              }
+              redisConfigCase_ = 8;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6405,6 +6446,7 @@ public final class ClusterOuterClass {
       REDIS_CONFIG_5_0(2),
       REDIS_CONFIG_6_0(6),
       REDIS_CONFIG_6_2(7),
+      REDIS_CONFIG_7_0(8),
       REDISCONFIG_NOT_SET(0);
       private final int value;
       private RedisConfigCase(int value) {
@@ -6425,6 +6467,7 @@ public final class ClusterOuterClass {
           case 2: return REDIS_CONFIG_5_0;
           case 6: return REDIS_CONFIG_6_0;
           case 7: return REDIS_CONFIG_6_2;
+          case 8: return REDIS_CONFIG_7_0;
           case 0: return REDISCONFIG_NOT_SET;
           default: return null;
         }
@@ -6615,6 +6658,49 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.redis.v1.config.Redis62.RedisConfigSet6_2.getDefaultInstance();
     }
 
+    public static final int REDIS_CONFIG_7_0_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Configuration of a Redis 7.0 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+     * @return Whether the redisConfig70 field is set.
+     */
+    @java.lang.Override
+    public boolean hasRedisConfig70() {
+      return redisConfigCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Configuration of a Redis 7.0 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+     * @return The redisConfig70.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0 getRedisConfig70() {
+      if (redisConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_;
+      }
+      return yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of a Redis 7.0 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0OrBuilder getRedisConfig70OrBuilder() {
+      if (redisConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_;
+      }
+      return yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance();
+    }
+
     public static final int RESOURCES_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Resources resources_;
     /**
@@ -6764,6 +6850,9 @@ public final class ClusterOuterClass {
       if (redisConfigCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.mdb.redis.v1.config.Redis62.RedisConfigSet6_2) redisConfig_);
       }
+      if (redisConfigCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6799,6 +6888,10 @@ public final class ClusterOuterClass {
       if (redisConfigCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.mdb.redis.v1.config.Redis62.RedisConfigSet6_2) redisConfig_);
+      }
+      if (redisConfigCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6846,6 +6939,10 @@ public final class ClusterOuterClass {
           if (!getRedisConfig62()
               .equals(other.getRedisConfig62())) return false;
           break;
+        case 8:
+          if (!getRedisConfig70()
+              .equals(other.getRedisConfig70())) return false;
+          break;
         case 0:
         default:
       }
@@ -6886,6 +6983,10 @@ public final class ClusterOuterClass {
         case 7:
           hash = (37 * hash) + REDIS_CONFIG_6_2_FIELD_NUMBER;
           hash = (53 * hash) + getRedisConfig62().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + REDIS_CONFIG_7_0_FIELD_NUMBER;
+          hash = (53 * hash) + getRedisConfig70().hashCode();
           break;
         case 0:
         default:
@@ -7093,6 +7194,13 @@ public final class ClusterOuterClass {
             result.redisConfig_ = redisConfig62Builder_.build();
           }
         }
+        if (redisConfigCase_ == 8) {
+          if (redisConfig70Builder_ == null) {
+            result.redisConfig_ = redisConfig_;
+          } else {
+            result.redisConfig_ = redisConfig70Builder_.build();
+          }
+        }
         if (resourcesBuilder_ == null) {
           result.resources_ = resources_;
         } else {
@@ -7181,6 +7289,10 @@ public final class ClusterOuterClass {
           }
           case REDIS_CONFIG_6_2: {
             mergeRedisConfig62(other.getRedisConfig62());
+            break;
+          }
+          case REDIS_CONFIG_7_0: {
+            mergeRedisConfig70(other.getRedisConfig70());
             break;
           }
           case REDISCONFIG_NOT_SET: {
@@ -7856,6 +7968,183 @@ public final class ClusterOuterClass {
         redisConfigCase_ = 7;
         onChanged();;
         return redisConfig62Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0, yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0OrBuilder> redisConfig70Builder_;
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       * @return Whether the redisConfig70 field is set.
+       */
+      @java.lang.Override
+      public boolean hasRedisConfig70() {
+        return redisConfigCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       * @return The redisConfig70.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0 getRedisConfig70() {
+        if (redisConfig70Builder_ == null) {
+          if (redisConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_;
+          }
+          return yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance();
+        } else {
+          if (redisConfigCase_ == 8) {
+            return redisConfig70Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      public Builder setRedisConfig70(yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0 value) {
+        if (redisConfig70Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          redisConfig_ = value;
+          onChanged();
+        } else {
+          redisConfig70Builder_.setMessage(value);
+        }
+        redisConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      public Builder setRedisConfig70(
+          yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.Builder builderForValue) {
+        if (redisConfig70Builder_ == null) {
+          redisConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          redisConfig70Builder_.setMessage(builderForValue.build());
+        }
+        redisConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      public Builder mergeRedisConfig70(yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0 value) {
+        if (redisConfig70Builder_ == null) {
+          if (redisConfigCase_ == 8 &&
+              redisConfig_ != yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance()) {
+            redisConfig_ = yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.newBuilder((yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            redisConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (redisConfigCase_ == 8) {
+            redisConfig70Builder_.mergeFrom(value);
+          }
+          redisConfig70Builder_.setMessage(value);
+        }
+        redisConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      public Builder clearRedisConfig70() {
+        if (redisConfig70Builder_ == null) {
+          if (redisConfigCase_ == 8) {
+            redisConfigCase_ = 0;
+            redisConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (redisConfigCase_ == 8) {
+            redisConfigCase_ = 0;
+            redisConfig_ = null;
+          }
+          redisConfig70Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.Builder getRedisConfig70Builder() {
+        return getRedisConfig70FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0OrBuilder getRedisConfig70OrBuilder() {
+        if ((redisConfigCase_ == 8) && (redisConfig70Builder_ != null)) {
+          return redisConfig70Builder_.getMessageOrBuilder();
+        } else {
+          if (redisConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_;
+          }
+          return yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of a Redis 7.0 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfigSet7_0 redis_config_7_0 = 8 [json_name = "redisConfig_7_0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0, yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0OrBuilder> 
+          getRedisConfig70FieldBuilder() {
+        if (redisConfig70Builder_ == null) {
+          if (!(redisConfigCase_ == 8)) {
+            redisConfig_ = yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.getDefaultInstance();
+          }
+          redisConfig70Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0, yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0.Builder, yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0OrBuilder>(
+                  (yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfigSet7_0) redisConfig_,
+                  getParentForChildren(),
+                  isClean());
+          redisConfig_ = null;
+        }
+        redisConfigCase_ = 8;
+        onChanged();;
+        return redisConfig70Builder_;
       }
 
       private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Resources resources_;
@@ -14705,78 +14994,82 @@ public final class ClusterOuterClass {
       "to\032/yandex/cloud/mdb/redis/v1/config/red" +
       "is5_0.proto\032/yandex/cloud/mdb/redis/v1/c" +
       "onfig/redis6_0.proto\032/yandex/cloud/mdb/r" +
-      "edis/v1/config/redis6_2.proto\032+yandex/cl" +
-      "oud/mdb/redis/v1/maintenance.proto\"\234\t\n\007C" +
-      "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
-      "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
-      "\022>\n\006labels\030\006 \003(\0132..yandex.cloud.mdb.redi" +
-      "s.v1.Cluster.LabelsEntry\022C\n\013environment\030" +
-      "\007 \001(\0162..yandex.cloud.mdb.redis.v1.Cluste" +
-      "r.Environment\0229\n\nmonitoring\030\010 \003(\0132%.yand" +
-      "ex.cloud.mdb.redis.v1.Monitoring\0228\n\006conf" +
-      "ig\030\t \001(\0132(.yandex.cloud.mdb.redis.v1.Clu" +
-      "sterConfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health" +
-      "\030\013 \001(\0162).yandex.cloud.mdb.redis.v1.Clust" +
-      "er.Health\0229\n\006status\030\014 \001(\0162).yandex.cloud" +
-      ".mdb.redis.v1.Cluster.Status\022\017\n\007sharded\030" +
-      "\r \001(\010\022H\n\022maintenance_window\030\016 \001(\0132,.yand" +
-      "ex.cloud.mdb.redis.v1.MaintenanceWindow\022" +
-      "J\n\021planned_operation\030\017 \001(\0132/.yandex.clou" +
-      "d.mdb.redis.v1.MaintenanceOperation\022\032\n\022s" +
-      "ecurity_group_ids\030\020 \003(\t\022\023\n\013tls_enabled\030\021" +
-      " \001(\010\022\033\n\023deletion_protection\030\022 \001(\010\022L\n\020per" +
-      "sistence_mode\030\023 \001(\01622.yandex.cloud.mdb.r" +
-      "edis.v1.Cluster.PersistenceMode\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I" +
-      "\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIED" +
-      "\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Hea" +
-      "lth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
-      "AD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_U" +
-      "NKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005E" +
-      "RROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007ST" +
-      "OPPED\020\006\022\014\n\010STARTING\020\007\"\"\n\017PersistenceMode" +
-      "\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022\014\n\004name\030" +
-      "\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t" +
-      "\"\367\003\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020r" +
-      "edis_config_5_0\030\002 \001(\01323.yandex.cloud.mdb" +
-      ".redis.v1.config.RedisConfigSet5_0H\000R\017re" +
-      "disConfig_5_0\022`\n\020redis_config_6_0\030\006 \001(\0132" +
-      "3.yandex.cloud.mdb.redis.v1.config.Redis" +
-      "ConfigSet6_0H\000R\017redisConfig_6_0\022`\n\020redis" +
-      "_config_6_2\030\007 \001(\01323.yandex.cloud.mdb.red" +
-      "is.v1.config.RedisConfigSet6_2H\000R\017redisC" +
-      "onfig_6_2\0227\n\tresources\030\003 \001(\0132$.yandex.cl" +
-      "oud.mdb.redis.v1.Resources\0223\n\023backup_win" +
-      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDay\022" +
-      "1\n\006access\030\005 \001(\0132!.yandex.cloud.mdb.redis" +
-      ".v1.AccessB\016\n\014redis_config\")\n\005Shard\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014" +
-      "\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone" +
-      "_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresource" +
-      "s\030\005 \001(\0132$.yandex.cloud.mdb.redis.v1.Reso" +
-      "urces\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.r" +
-      "edis.v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yand" +
-      "ex.cloud.mdb.redis.v1.Host.Health\0224\n\010ser" +
-      "vices\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1." +
-      "Service\022\022\n\nshard_name\030\t \001(\t\0225\n\020replica_p" +
-      "riority\030\n \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022\030\n\020assign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014" +
-      "ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"" +
-      "?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
-      "\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004" +
-      "type\030\001 \001(\0162\'.yandex.cloud.mdb.redis.v1.S" +
-      "ervice.Type\0229\n\006health\030\002 \001(\0162).yandex.clo" +
-      "ud.mdb.redis.v1.Service.Health\"G\n\004Type\022\024" +
-      "\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBIT" +
-      "ER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEA" +
-      "LTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tRe" +
-      "sources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\td" +
-      "isk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006" +
-      "Access\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yandex.clou" +
-      "d.api.mdb.redis.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/redis/v" +
-      "1;redisb\006proto3"
+      "edis/v1/config/redis6_2.proto\032/yandex/cl" +
+      "oud/mdb/redis/v1/config/redis7_0.proto\032+" +
+      "yandex/cloud/mdb/redis/v1/maintenance.pr" +
+      "oto\"\234\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
+      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
+      "ion\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud" +
+      ".mdb.redis.v1.Cluster.LabelsEntry\022C\n\013env" +
+      "ironment\030\007 \001(\0162..yandex.cloud.mdb.redis." +
+      "v1.Cluster.Environment\0229\n\nmonitoring\030\010 \003" +
+      "(\0132%.yandex.cloud.mdb.redis.v1.Monitorin" +
+      "g\0228\n\006config\030\t \001(\0132(.yandex.cloud.mdb.red" +
+      "is.v1.ClusterConfig\022\022\n\nnetwork_id\030\n \001(\t\022" +
+      "9\n\006health\030\013 \001(\0162).yandex.cloud.mdb.redis" +
+      ".v1.Cluster.Health\0229\n\006status\030\014 \001(\0162).yan" +
+      "dex.cloud.mdb.redis.v1.Cluster.Status\022\017\n" +
+      "\007sharded\030\r \001(\010\022H\n\022maintenance_window\030\016 \001" +
+      "(\0132,.yandex.cloud.mdb.redis.v1.Maintenan" +
+      "ceWindow\022J\n\021planned_operation\030\017 \001(\0132/.ya" +
+      "ndex.cloud.mdb.redis.v1.MaintenanceOpera" +
+      "tion\022\032\n\022security_group_ids\030\020 \003(\t\022\023\n\013tls_" +
+      "enabled\030\021 \001(\010\022\033\n\023deletion_protection\030\022 \001" +
+      "(\010\022L\n\020persistence_mode\030\023 \001(\01622.yandex.cl" +
+      "oud.mdb.redis.v1.Cluster.PersistenceMode" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UN" +
+      "SPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE" +
+      "\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
+      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n" +
+      "\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNI" +
+      "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
+      "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\"\n\017Persis" +
+      "tenceMode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring" +
+      "\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004l" +
+      "ink\030\003 \001(\t\"\331\004\n\rClusterConfig\022\017\n\007version\030\001" +
+      " \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323.yandex." +
+      "cloud.mdb.redis.v1.config.RedisConfigSet" +
+      "5_0H\000R\017redisConfig_5_0\022`\n\020redis_config_6" +
+      "_0\030\006 \001(\01323.yandex.cloud.mdb.redis.v1.con" +
+      "fig.RedisConfigSet6_0H\000R\017redisConfig_6_0" +
+      "\022`\n\020redis_config_6_2\030\007 \001(\01323.yandex.clou" +
+      "d.mdb.redis.v1.config.RedisConfigSet6_2H" +
+      "\000R\017redisConfig_6_2\022`\n\020redis_config_7_0\030\010" +
+      " \001(\01323.yandex.cloud.mdb.redis.v1.config." +
+      "RedisConfigSet7_0H\000R\017redisConfig_7_0\0227\n\t" +
+      "resources\030\003 \001(\0132$.yandex.cloud.mdb.redis" +
+      ".v1.Resources\0223\n\023backup_window_start\030\004 \001" +
+      "(\0132\026.google.type.TimeOfDay\0221\n\006access\030\005 \001" +
+      "(\0132!.yandex.cloud.mdb.redis.v1.AccessB\016\n" +
+      "\014redis_config\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\n" +
+      "cluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001 \001(\t\022" +
+      "\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\t" +
+      "subnet_id\030\004 \001(\t\0227\n\tresources\030\005 \001(\0132$.yan" +
+      "dex.cloud.mdb.redis.v1.Resources\0222\n\004role" +
+      "\030\006 \001(\0162$.yandex.cloud.mdb.redis.v1.Host." +
+      "Role\0226\n\006health\030\007 \001(\0162&.yandex.cloud.mdb." +
+      "redis.v1.Host.Health\0224\n\010services\030\010 \003(\0132\"" +
+      ".yandex.cloud.mdb.redis.v1.Service\022\022\n\nsh" +
+      "ard_name\030\t \001(\t\0225\n\020replica_priority\030\n \001(\013" +
+      "2\033.google.protobuf.Int64Value\022\030\n\020assign_" +
+      "public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020" +
+      "\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016" +
+      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
+      "\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type\030\001 \001(\0162\'." +
+      "yandex.cloud.mdb.redis.v1.Service.Type\0229" +
+      "\n\006health\030\002 \001(\0162).yandex.cloud.mdb.redis." +
+      "v1.Service.Health\"G\n\004Type\022\024\n\020TYPE_UNSPEC" +
+      "IFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS" +
+      "_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022re" +
+      "source_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(" +
+      "\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tdat" +
+      "a_lens\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.red" +
+      "is.v1ZCgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/redis/v1;redisb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14787,6 +15080,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis62.getDescriptor(),
+          yandex.cloud.api.mdb.redis.v1.config.Redis70.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.Maintenance.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor =
@@ -14812,7 +15106,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "Resources", "BackupWindowStart", "Access", "RedisConfig", });
+        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "RedisConfig", });
     internal_static_yandex_cloud_mdb_redis_v1_Shard_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_redis_v1_Shard_fieldAccessorTable = new
@@ -14849,6 +15143,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis62.getDescriptor();
+    yandex.cloud.api.mdb.redis.v1.config.Redis70.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.Maintenance.getDescriptor();
   }
 
