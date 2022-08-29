@@ -2514,8 +2514,8 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -2525,8 +2525,8 @@ public final class BucketServiceOuterClass {
     java.lang.String getDefaultStorageClass();
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -2838,8 +2838,8 @@ public final class BucketServiceOuterClass {
     private volatile java.lang.Object defaultStorageClass_;
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -2861,8 +2861,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -3606,8 +3606,8 @@ public final class BucketServiceOuterClass {
       private java.lang.Object defaultStorageClass_ = "";
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -3628,8 +3628,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -3651,8 +3651,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -3672,8 +3672,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -3688,8 +3688,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -4826,8 +4826,8 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -4837,8 +4837,8 @@ public final class BucketServiceOuterClass {
     java.lang.String getDefaultStorageClass();
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -5396,8 +5396,8 @@ public final class BucketServiceOuterClass {
     private volatile java.lang.Object defaultStorageClass_;
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -5419,8 +5419,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -6783,8 +6783,8 @@ public final class BucketServiceOuterClass {
       private java.lang.Object defaultStorageClass_ = "";
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -6805,8 +6805,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -6828,8 +6828,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -6849,8 +6849,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -6865,8 +6865,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *

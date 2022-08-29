@@ -1367,6 +1367,14 @@ public final class Mongodb44 {
              * <code>ZLIB = 3;</code>
              */
             ZLIB(3),
+            /**
+             * <pre>
+             * The [zstd](https://docs.mongodb.com/v4.4/reference/glossary/#term-zstd) compression.
+             * </pre>
+             *
+             * <code>ZSTD = 4;</code>
+             */
+            ZSTD(4),
             UNRECOGNIZED(-1),
             ;
 
@@ -1398,6 +1406,14 @@ public final class Mongodb44 {
              * <code>ZLIB = 3;</code>
              */
             public static final int ZLIB_VALUE = 3;
+            /**
+             * <pre>
+             * The [zstd](https://docs.mongodb.com/v4.4/reference/glossary/#term-zstd) compression.
+             * </pre>
+             *
+             * <code>ZSTD = 4;</code>
+             */
+            public static final int ZSTD_VALUE = 4;
 
 
             public final int getNumber() {
@@ -1428,6 +1444,7 @@ public final class Mongodb44 {
                 case 1: return NONE;
                 case 2: return SNAPPY;
                 case 3: return ZLIB;
+                case 4: return ZSTD;
                 default: return null;
               }
             }
@@ -16978,19 +16995,19 @@ public final class Mongodb44 {
       "\n3yandex/cloud/mdb/mongodb/v1/config/mon" +
       "godb4_4.proto\022\"yandex.cloud.mdb.mongodb." +
       "v1.config\032\036google/protobuf/wrappers.prot" +
-      "o\032\035yandex/cloud/validation.proto\"\361\n\n\017Mon" +
+      "o\032\035yandex/cloud/validation.proto\"\373\n\n\017Mon" +
       "godConfig4_4\022L\n\007storage\030\001 \001(\0132;.yandex.c" +
       "loud.mdb.mongodb.v1.config.MongodConfig4" +
       "_4.Storage\022c\n\023operation_profiling\030\002 \001(\0132" +
       "F.yandex.cloud.mdb.mongodb.v1.config.Mon" +
       "godConfig4_4.OperationProfiling\022H\n\003net\030\003" +
       " \001(\0132;.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongodConfig4_4.Network\032\231\006\n\007Storage\022[\n" +
+      "g.MongodConfig4_4.Network\032\243\006\n\007Storage\022[\n" +
       "\013wired_tiger\030\001 \001(\0132F.yandex.cloud.mdb.mo" +
       "ngodb.v1.config.MongodConfig4_4.Storage." +
       "WiredTiger\022T\n\007journal\030\002 \001(\0132C.yandex.clo" +
       "ud.mdb.mongodb.v1.config.MongodConfig4_4" +
-      ".Storage.Journal\032\216\004\n\nWiredTiger\022j\n\rengin" +
+      ".Storage.Journal\032\230\004\n\nWiredTiger\022j\n\rengin" +
       "e_config\030\001 \001(\0132S.yandex.cloud.mdb.mongod" +
       "b.v1.config.MongodConfig4_4.Storage.Wire" +
       "dTiger.EngineConfig\022r\n\021collection_config" +
@@ -16998,72 +17015,72 @@ public final class Mongodb44 {
       "fig.MongodConfig4_4.Storage.WiredTiger.C" +
       "ollectionConfig\032C\n\014EngineConfig\0223\n\rcache" +
       "_size_gb\030\001 \001(\0132\034.google.protobuf.DoubleV" +
-      "alue\032\332\001\n\020CollectionConfig\022|\n\020block_compr" +
+      "alue\032\344\001\n\020CollectionConfig\022|\n\020block_compr" +
       "essor\030\001 \001(\0162b.yandex.cloud.mdb.mongodb.v" +
       "1.config.MongodConfig4_4.Storage.WiredTi" +
-      "ger.CollectionConfig.Compressor\"H\n\nCompr" +
+      "ger.CollectionConfig.Compressor\"R\n\nCompr" +
       "essor\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\010\n\004NON" +
-      "E\020\001\022\n\n\006SNAPPY\020\002\022\010\n\004ZLIB\020\003\032J\n\007Journal\022?\n\017" +
-      "commit_interval\030\001 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\t\372\3071\0051-500\032\354\001\n\022OperationProfi" +
-      "ling\022Y\n\004mode\030\001 \001(\0162K.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongodConfig4_4.Operatio" +
-      "nProfiling.Mode\022>\n\021slow_op_threshold\030\002 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\"" +
-      ";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013" +
-      "\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_i" +
-      "ncoming_connections\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\014\372\3071\01010-16384\"\214\007\n\021MongoCf" +
-      "gConfig4_4\022N\n\007storage\030\001 \001(\0132=.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongoCfgConfig4" +
-      "_4.Storage\022e\n\023operation_profiling\030\002 \001(\0132" +
-      "H.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfig4_4.OperationProfiling\022J\n\003net" +
-      "\030\003 \001(\0132=.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongoCfgConfig4_4.Network\032\252\002\n\007Storag" +
-      "e\022]\n\013wired_tiger\030\001 \001(\0132H.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongoCfgConfig4_4.St" +
-      "orage.WiredTiger\032\277\001\n\nWiredTiger\022l\n\rengin" +
-      "e_config\030\001 \001(\0132U.yandex.cloud.mdb.mongod" +
-      "b.v1.config.MongoCfgConfig4_4.Storage.Wi" +
-      "redTiger.EngineConfig\032C\n\014EngineConfig\0223\n" +
-      "\rcache_size_gb\030\001 \001(\0132\034.google.protobuf.D" +
-      "oubleValue\032\356\001\n\022OperationProfiling\022[\n\004mod" +
-      "e\030\001 \001(\0162M.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongoCfgConfig4_4.OperationProfilin" +
-      "g.Mode\022>\n\021slow_op_threshold\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024" +
-      "\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP" +
-      "\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_incoming_c" +
-      "onnections\030\001 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\014\372\3071\01010-16384\"\263\001\n\017MongosConfig4_4\022" +
-      "H\n\003net\030\001 \001(\0132;.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongosConfig4_4.Network\032V\n\007Net" +
-      "work\022K\n\030max_incoming_connections\030\001 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\014\372\3071\01010-1638" +
-      "4\"\372\001\n\022MongodConfigSet4_4\022M\n\020effective_co" +
-      "nfig\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongodConfig4_4\022H\n\013user_config\030\002" +
-      " \001(\01323.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongodConfig4_4\022K\n\016default_config\030\003 \001(" +
-      "\01323.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongodConfig4_4\"\202\002\n\024MongoCfgConfigSet4_4\022" +
-      "O\n\020effective_config\030\001 \001(\01325.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongoCfgConfig4_4" +
-      "\022J\n\013user_config\030\002 \001(\01325.yandex.cloud.mdb" +
-      ".mongodb.v1.config.MongoCfgConfig4_4\022M\n\016" +
-      "default_config\030\003 \001(\01325.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongoCfgConfig4_4\"\372\001\n\022" +
-      "MongosConfigSet4_4\022M\n\020effective_config\030\001" +
-      " \001(\01323.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongosConfig4_4\022H\n\013user_config\030\002 \001(\01323" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "osConfig4_4\022K\n\016default_config\030\003 \001(\01323.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
-      "onfig4_4Bx\n&yandex.cloud.api.mdb.mongodb" +
-      ".v1.configZNgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/mongodb/v1/conf" +
-      "ig;mongodbb\006proto3"
+      "E\020\001\022\n\n\006SNAPPY\020\002\022\010\n\004ZLIB\020\003\022\010\n\004ZSTD\020\004\032J\n\007J" +
+      "ournal\022?\n\017commit_interval\030\001 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\t\372\3071\0051-500\032\354\001\n\022Oper" +
+      "ationProfiling\022Y\n\004mode\030\001 \001(\0162K.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongodConfig4_" +
+      "4.OperationProfiling.Mode\022>\n\021slow_op_thr" +
+      "eshold\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022" +
+      "\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Networ" +
+      "k\022K\n\030max_incoming_connections\030\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\014\372\3071\01010-16384\"\214" +
+      "\007\n\021MongoCfgConfig4_4\022N\n\007storage\030\001 \001(\0132=." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "CfgConfig4_4.Storage\022e\n\023operation_profil" +
+      "ing\030\002 \001(\0132H.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfig4_4.OperationProfil" +
+      "ing\022J\n\003net\030\003 \001(\0132=.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig4_4.Network\032" +
+      "\252\002\n\007Storage\022]\n\013wired_tiger\030\001 \001(\0132H.yande" +
+      "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
+      "nfig4_4.Storage.WiredTiger\032\277\001\n\nWiredTige" +
+      "r\022l\n\rengine_config\030\001 \001(\0132U.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongoCfgConfig4_4." +
+      "Storage.WiredTiger.EngineConfig\032C\n\014Engin" +
+      "eConfig\0223\n\rcache_size_gb\030\001 \001(\0132\034.google." +
+      "protobuf.DoubleValue\032\356\001\n\022OperationProfil" +
+      "ing\022[\n\004mode\030\001 \001(\0162M.yandex.cloud.mdb.mon" +
+      "godb.v1.config.MongoCfgConfig4_4.Operati" +
+      "onProfiling.Mode\022>\n\021slow_op_threshold\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0" +
+      "\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022" +
+      "\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_" +
+      "incoming_connections\030\001 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\014\372\3071\01010-16384\"\263\001\n\017Mongos" +
+      "Config4_4\022H\n\003net\030\001 \001(\0132;.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongosConfig4_4.Netw" +
+      "ork\032V\n\007Network\022K\n\030max_incoming_connectio" +
+      "ns\030\001 \001(\0132\033.google.protobuf.Int64ValueB\014\372" +
+      "\3071\01010-16384\"\372\001\n\022MongodConfigSet4_4\022M\n\020ef" +
+      "fective_config\030\001 \001(\01323.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongodConfig4_4\022H\n\013use" +
+      "r_config\030\002 \001(\01323.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongodConfig4_4\022K\n\016default_c" +
+      "onfig\030\003 \001(\01323.yandex.cloud.mdb.mongodb.v" +
+      "1.config.MongodConfig4_4\"\202\002\n\024MongoCfgCon" +
+      "figSet4_4\022O\n\020effective_config\030\001 \001(\01325.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
+      "gConfig4_4\022J\n\013user_config\030\002 \001(\01325.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongoCfgCon" +
+      "fig4_4\022M\n\016default_config\030\003 \001(\01325.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongoCfgConf" +
+      "ig4_4\"\372\001\n\022MongosConfigSet4_4\022M\n\020effectiv" +
+      "e_config\030\001 \001(\01323.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongosConfig4_4\022H\n\013user_conf" +
+      "ig\030\002 \001(\01323.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongosConfig4_4\022K\n\016default_config\030" +
+      "\003 \001(\01323.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongosConfig4_4Bx\n&yandex.cloud.api.m" +
+      "db.mongodb.v1.configZNgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/mongo" +
+      "db/v1/config;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

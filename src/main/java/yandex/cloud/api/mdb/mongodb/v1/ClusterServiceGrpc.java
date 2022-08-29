@@ -990,6 +990,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
+     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1059,7 +1060,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
+     * Enables sharding for the cluster:
+     * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */
@@ -1469,6 +1471,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
+     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1545,7 +1548,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
+     * Enables sharding for the cluster:
+     * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */
@@ -1765,6 +1769,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
+     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
@@ -1835,7 +1840,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
+     * Enables sharding for the cluster:
+     * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */
@@ -2058,6 +2064,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified MongoDB cluster.
+     * See the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developers guide for detailed logs description.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(
@@ -2123,7 +2130,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
+     * Enables sharding for the cluster:
+     * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */

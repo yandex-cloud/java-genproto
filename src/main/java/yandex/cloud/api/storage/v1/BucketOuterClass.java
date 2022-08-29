@@ -284,8 +284,8 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -295,8 +295,8 @@ public final class BucketOuterClass {
     java.lang.String getDefaultStorageClass();
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -954,8 +954,8 @@ public final class BucketOuterClass {
     private volatile java.lang.Object defaultStorageClass_;
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -977,8 +977,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -2455,8 +2455,8 @@ public final class BucketOuterClass {
       private java.lang.Object defaultStorageClass_ = "";
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -2477,8 +2477,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -2500,8 +2500,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -2521,8 +2521,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -2537,8 +2537,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -17477,9 +17477,9 @@ public final class BucketOuterClass {
 
       /**
        * <pre>
-       * Storage class to which a non-current version of an object is transitioned.
+       * Storage class to which a non-current version of an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -17488,9 +17488,9 @@ public final class BucketOuterClass {
       java.lang.String getStorageClass();
       /**
        * <pre>
-       * Storage class to which a non-current version of an object is transitioned.
+       * Storage class to which a non-current version of an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -17647,9 +17647,9 @@ public final class BucketOuterClass {
       private volatile java.lang.Object storageClass_;
       /**
        * <pre>
-       * Storage class to which a non-current version of an object is transitioned.
+       * Storage class to which a non-current version of an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -17670,9 +17670,9 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class to which a non-current version of an object is transitioned.
+       * Storage class to which a non-current version of an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -18198,9 +18198,9 @@ public final class BucketOuterClass {
         private java.lang.Object storageClass_ = "";
         /**
          * <pre>
-         * Storage class to which a non-current version of an object is transitioned.
+         * Storage class to which a non-current version of an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -18220,9 +18220,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which a non-current version of an object is transitioned.
+         * Storage class to which a non-current version of an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -18243,9 +18243,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which a non-current version of an object is transitioned.
+         * Storage class to which a non-current version of an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -18264,9 +18264,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which a non-current version of an object is transitioned.
+         * Storage class to which a non-current version of an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -18280,9 +18280,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which a non-current version of an object is transitioned.
+         * Storage class to which a non-current version of an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 2 [(.yandex.cloud.required) = true];</code>
@@ -18428,9 +18428,9 @@ public final class BucketOuterClass {
 
       /**
        * <pre>
-       * Storage class to which an object is transitioned.
+       * Storage class to which an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -18439,9 +18439,9 @@ public final class BucketOuterClass {
       java.lang.String getStorageClass();
       /**
        * <pre>
-       * Storage class to which an object is transitioned.
+       * Storage class to which an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -18664,9 +18664,9 @@ public final class BucketOuterClass {
       private volatile java.lang.Object storageClass_;
       /**
        * <pre>
-       * Storage class to which an object is transitioned.
+       * Storage class to which an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -18687,9 +18687,9 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class to which an object is transitioned.
+       * Storage class to which an object is transitioned from standard storage.
        * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-       * to standard storage are not allowed.
+       * to standard storage and transitions to or from ice storage are not allowed.
        * </pre>
        *
        * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -19439,9 +19439,9 @@ public final class BucketOuterClass {
         private java.lang.Object storageClass_ = "";
         /**
          * <pre>
-         * Storage class to which an object is transitioned.
+         * Storage class to which an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -19461,9 +19461,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which an object is transitioned.
+         * Storage class to which an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -19484,9 +19484,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which an object is transitioned.
+         * Storage class to which an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -19505,9 +19505,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which an object is transitioned.
+         * Storage class to which an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -19521,9 +19521,9 @@ public final class BucketOuterClass {
         }
         /**
          * <pre>
-         * Storage class to which an object is transitioned.
+         * Storage class to which an object is transitioned from standard storage.
          * The only supported class is cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms). Transitions from cold
-         * to standard storage are not allowed.
+         * to standard storage and transitions to or from ice storage are not allowed.
          * </pre>
          *
          * <code>string storage_class = 4 [(.yandex.cloud.required) = true];</code>
@@ -25250,8 +25250,8 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -25261,8 +25261,8 @@ public final class BucketOuterClass {
     java.lang.String getStorageClass();
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -25404,8 +25404,8 @@ public final class BucketOuterClass {
     private volatile java.lang.Object storageClass_;
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -25427,8 +25427,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -25827,8 +25827,8 @@ public final class BucketOuterClass {
       private java.lang.Object storageClass_ = "";
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -25849,8 +25849,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -25872,8 +25872,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -25893,8 +25893,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -25909,8 +25909,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -26143,8 +26143,8 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -26154,8 +26154,8 @@ public final class BucketOuterClass {
     java.lang.String getStorageClass();
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -26272,8 +26272,8 @@ public final class BucketOuterClass {
     private volatile java.lang.Object storageClass_;
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -26295,8 +26295,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -26660,8 +26660,8 @@ public final class BucketOuterClass {
       private java.lang.Object storageClass_ = "";
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -26682,8 +26682,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -26705,8 +26705,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -26726,8 +26726,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -26742,8 +26742,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -26864,8 +26864,8 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -26875,8 +26875,8 @@ public final class BucketOuterClass {
     java.lang.String getStorageClass();
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -27018,8 +27018,8 @@ public final class BucketOuterClass {
     private volatile java.lang.Object storageClass_;
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -27041,8 +27041,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-     * `NEARLINE` all synonyms).
+     * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+     * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -27441,8 +27441,8 @@ public final class BucketOuterClass {
       private java.lang.Object storageClass_ = "";
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -27463,8 +27463,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -27486,8 +27486,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -27507,8 +27507,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -27523,8 +27523,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Storage class. Supported classes are standard storage (`STANDARD`) and cold storage (`COLD`, `STANDARD_IA`,
-       * `NEARLINE` all synonyms).
+       * Storage class. Supported classes are standard storage (`STANDARD`), cold storage (`COLD`, `STANDARD_IA`, `NEARLINE`
+       * all synonyms), and ice storage (`ice` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -27946,8 +27946,8 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -27957,8 +27957,8 @@ public final class BucketOuterClass {
     boolean hasDefaultStorageClass();
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -27968,8 +27968,8 @@ public final class BucketOuterClass {
     com.google.protobuf.StringValue getDefaultStorageClass();
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -28542,8 +28542,8 @@ public final class BucketOuterClass {
     private com.google.protobuf.StringValue defaultStorageClass_;
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -28556,8 +28556,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -28570,8 +28570,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-     * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+     * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+     * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
      * For details, see [documentation](/docs/storage/concepts/storage-class).
      * </pre>
      *
@@ -30575,8 +30575,8 @@ public final class BucketOuterClass {
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> defaultStorageClassBuilder_;
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30588,8 +30588,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30605,8 +30605,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30627,8 +30627,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30647,8 +30647,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30671,8 +30671,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30691,8 +30691,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30705,8 +30705,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *
@@ -30722,8 +30722,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`) and
-       * cold storage (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms).
+       * Default storage class for objects in the bucket. Supported classes are standard storage (`STANDARD`), cold storage
+       * (`COLD`, `STANDARD_IA`, `NEARLINE` all synonyms), and ice storage (`ICE` and `GLACIER` are synonyms).
        * For details, see [documentation](/docs/storage/concepts/storage-class).
        * </pre>
        *

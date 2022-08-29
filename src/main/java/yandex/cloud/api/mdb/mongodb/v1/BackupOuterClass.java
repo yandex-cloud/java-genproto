@@ -20,7 +20,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * ID of the backup.
+     * ID of the backup. Required.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class BackupOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the backup.
+     * ID of the backup. Required.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -497,7 +497,7 @@ public final class BackupOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the backup.
+     * ID of the backup. Required.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -518,7 +518,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * ID of the backup.
+     * ID of the backup. Required.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1277,7 +1277,7 @@ public final class BackupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the backup.
+       * ID of the backup. Required.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1297,7 +1297,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * ID of the backup. Required.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1318,7 +1318,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * ID of the backup. Required.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1337,7 +1337,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * ID of the backup. Required.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1351,7 +1351,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * ID of the backup. Required.
        * </pre>
        *
        * <code>string id = 1;</code>

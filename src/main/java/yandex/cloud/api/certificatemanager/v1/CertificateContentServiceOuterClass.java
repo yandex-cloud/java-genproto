@@ -14,6 +14,123 @@ public final class CertificateContentServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.certificatemanager.v1.PrivateKeyFormat}
+   */
+  public enum PrivateKeyFormat
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PRIVATE_KEY_FORMAT_UNSPECIFIED = 0;</code>
+     */
+    PRIVATE_KEY_FORMAT_UNSPECIFIED(0),
+    /**
+     * <code>PKCS1 = 1;</code>
+     */
+    PKCS1(1),
+    /**
+     * <code>PKCS8 = 2;</code>
+     */
+    PKCS8(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PRIVATE_KEY_FORMAT_UNSPECIFIED = 0;</code>
+     */
+    public static final int PRIVATE_KEY_FORMAT_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>PKCS1 = 1;</code>
+     */
+    public static final int PKCS1_VALUE = 1;
+    /**
+     * <code>PKCS8 = 2;</code>
+     */
+    public static final int PKCS8_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PrivateKeyFormat valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PrivateKeyFormat forNumber(int value) {
+      switch (value) {
+        case 0: return PRIVATE_KEY_FORMAT_UNSPECIFIED;
+        case 1: return PKCS1;
+        case 2: return PKCS8;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PrivateKeyFormat>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PrivateKeyFormat> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PrivateKeyFormat>() {
+            public PrivateKeyFormat findValueByNumber(int number) {
+              return PrivateKeyFormat.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PrivateKeyFormat[] VALUES = values();
+
+    public static PrivateKeyFormat valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PrivateKeyFormat(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.certificatemanager.v1.PrivateKeyFormat)
+  }
+
   public interface GetCertificateContentResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.certificatemanager.v1.GetCertificateContentResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -1135,6 +1252,25 @@ public final class CertificateContentServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getVersionIdBytes();
+
+    /**
+     * <pre>
+     * Desired format of private key
+     * </pre>
+     *
+     * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+     * @return The enum numeric value on the wire for privateKeyFormat.
+     */
+    int getPrivateKeyFormatValue();
+    /**
+     * <pre>
+     * Desired format of private key
+     * </pre>
+     *
+     * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+     * @return The privateKeyFormat.
+     */
+    yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat getPrivateKeyFormat();
   }
   /**
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.GetCertificateContentRequest}
@@ -1151,6 +1287,7 @@ public final class CertificateContentServiceOuterClass {
     private GetCertificateContentRequest() {
       certificateId_ = "";
       versionId_ = "";
+      privateKeyFormat_ = 0;
     }
 
     @java.lang.Override
@@ -1193,6 +1330,12 @@ public final class CertificateContentServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               versionId_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              privateKeyFormat_ = rawValue;
               break;
             }
             default: {
@@ -1319,6 +1462,33 @@ public final class CertificateContentServiceOuterClass {
       }
     }
 
+    public static final int PRIVATE_KEY_FORMAT_FIELD_NUMBER = 3;
+    private int privateKeyFormat_;
+    /**
+     * <pre>
+     * Desired format of private key
+     * </pre>
+     *
+     * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+     * @return The enum numeric value on the wire for privateKeyFormat.
+     */
+    @java.lang.Override public int getPrivateKeyFormatValue() {
+      return privateKeyFormat_;
+    }
+    /**
+     * <pre>
+     * Desired format of private key
+     * </pre>
+     *
+     * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+     * @return The privateKeyFormat.
+     */
+    @java.lang.Override public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat getPrivateKeyFormat() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat result = yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat.valueOf(privateKeyFormat_);
+      return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1339,6 +1509,9 @@ public final class CertificateContentServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, versionId_);
       }
+      if (privateKeyFormat_ != yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat.PRIVATE_KEY_FORMAT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, privateKeyFormat_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1353,6 +1526,10 @@ public final class CertificateContentServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(versionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, versionId_);
+      }
+      if (privateKeyFormat_ != yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat.PRIVATE_KEY_FORMAT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, privateKeyFormat_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1373,6 +1550,7 @@ public final class CertificateContentServiceOuterClass {
           .equals(other.getCertificateId())) return false;
       if (!getVersionId()
           .equals(other.getVersionId())) return false;
+      if (privateKeyFormat_ != other.privateKeyFormat_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1388,6 +1566,8 @@ public final class CertificateContentServiceOuterClass {
       hash = (53 * hash) + getCertificateId().hashCode();
       hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getVersionId().hashCode();
+      hash = (37 * hash) + PRIVATE_KEY_FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + privateKeyFormat_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1525,6 +1705,8 @@ public final class CertificateContentServiceOuterClass {
 
         versionId_ = "";
 
+        privateKeyFormat_ = 0;
+
         return this;
       }
 
@@ -1553,6 +1735,7 @@ public final class CertificateContentServiceOuterClass {
         yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest result = new yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest(this);
         result.certificateId_ = certificateId_;
         result.versionId_ = versionId_;
+        result.privateKeyFormat_ = privateKeyFormat_;
         onBuilt();
         return result;
       }
@@ -1608,6 +1791,9 @@ public final class CertificateContentServiceOuterClass {
         if (!other.getVersionId().isEmpty()) {
           versionId_ = other.versionId_;
           onChanged();
+        }
+        if (other.privateKeyFormat_ != 0) {
+          setPrivateKeyFormatValue(other.getPrivateKeyFormatValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1829,6 +2015,80 @@ public final class CertificateContentServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private int privateKeyFormat_ = 0;
+      /**
+       * <pre>
+       * Desired format of private key
+       * </pre>
+       *
+       * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+       * @return The enum numeric value on the wire for privateKeyFormat.
+       */
+      @java.lang.Override public int getPrivateKeyFormatValue() {
+        return privateKeyFormat_;
+      }
+      /**
+       * <pre>
+       * Desired format of private key
+       * </pre>
+       *
+       * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+       * @param value The enum numeric value on the wire for privateKeyFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateKeyFormatValue(int value) {
+        
+        privateKeyFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desired format of private key
+       * </pre>
+       *
+       * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+       * @return The privateKeyFormat.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat getPrivateKeyFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat result = yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat.valueOf(privateKeyFormat_);
+        return result == null ? yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Desired format of private key
+       * </pre>
+       *
+       * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+       * @param value The privateKeyFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateKeyFormat(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.PrivateKeyFormat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        privateKeyFormat_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desired format of private key
+       * </pre>
+       *
+       * <code>.yandex.cloud.certificatemanager.v1.PrivateKeyFormat private_key_format = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateKeyFormat() {
+        
+        privateKeyFormat_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1907,18 +2167,22 @@ public final class CertificateContentServiceOuterClass {
       "nnotations.proto\"g\n\035GetCertificateConten" +
       "tResponse\022\026\n\016certificate_id\030\001 \001(\t\022\031\n\021cer" +
       "tificate_chain\030\003 \003(\t\022\023\n\013private_key\030\004 \001(" +
-      "\t\"J\n\034GetCertificateContentRequest\022\026\n\016cer" +
-      "tificate_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t2\362\001" +
-      "\n\031CertificateContentService\022\324\001\n\003Get\022@.ya" +
-      "ndex.cloud.certificatemanager.v1.GetCert" +
-      "ificateContentRequest\032A.yandex.cloud.cer" +
-      "tificatemanager.v1.GetCertificateContent" +
-      "Response\"H\202\323\344\223\002B\022@/certificate-manager/v" +
-      "1/certificates/{certificate_id}:getConte" +
-      "ntB\203\001\n&yandex.cloud.api.certificatemanag" +
-      "er.v1ZYgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/certificatemanager/v1;ce" +
-      "rtificatemanagerb\006proto3"
+      "\t\"\234\001\n\034GetCertificateContentRequest\022\026\n\016ce" +
+      "rtificate_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022P" +
+      "\n\022private_key_format\030\003 \001(\01624.yandex.clou" +
+      "d.certificatemanager.v1.PrivateKeyFormat" +
+      "*L\n\020PrivateKeyFormat\022\"\n\036PRIVATE_KEY_FORM" +
+      "AT_UNSPECIFIED\020\000\022\t\n\005PKCS1\020\001\022\t\n\005PKCS8\020\0022\362" +
+      "\001\n\031CertificateContentService\022\324\001\n\003Get\022@.y" +
+      "andex.cloud.certificatemanager.v1.GetCer" +
+      "tificateContentRequest\032A.yandex.cloud.ce" +
+      "rtificatemanager.v1.GetCertificateConten" +
+      "tResponse\"H\202\323\344\223\002B\022@/certificate-manager/" +
+      "v1/certificates/{certificate_id}:getCont" +
+      "entB\203\001\n&yandex.cloud.api.certificatemana" +
+      "ger.v1ZYgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/certificatemanager/v1;c" +
+      "ertificatemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1936,7 +2200,7 @@ public final class CertificateContentServiceOuterClass {
     internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_GetCertificateContentRequest_descriptor,
-        new java.lang.String[] { "CertificateId", "VersionId", });
+        new java.lang.String[] { "CertificateId", "VersionId", "PrivateKeyFormat", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

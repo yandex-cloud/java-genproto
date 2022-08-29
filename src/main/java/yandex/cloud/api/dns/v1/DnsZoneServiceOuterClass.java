@@ -17459,6 +17459,1395 @@ public final class DnsZoneServiceOuterClass {
 
   }
 
+  public interface RecordSetDiffOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.RecordSetDiff)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> 
+        getAdditionsList();
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index);
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    int getAdditionsCount();
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+        getAdditionsOrBuilderList();
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> 
+        getDeletionsList();
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index);
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    int getDeletionsCount();
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+        getDeletionsOrBuilderList();
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dns.v1.RecordSetDiff}
+   */
+  public static final class RecordSetDiff extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.RecordSetDiff)
+      RecordSetDiffOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecordSetDiff.newBuilder() to construct.
+    private RecordSetDiff(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecordSetDiff() {
+      additions_ = java.util.Collections.emptyList();
+      deletions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordSetDiff();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecordSetDiff(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                additions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              additions_.add(
+                  input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                deletions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              deletions_.add(
+                  input.readMessage(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          additions_ = java.util.Collections.unmodifiableList(additions_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          deletions_ = java.util.Collections.unmodifiableList(deletions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_RecordSetDiff_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.Builder.class);
+    }
+
+    public static final int ADDITIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> additions_;
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getAdditionsList() {
+      return additions_;
+    }
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+        getAdditionsOrBuilderList() {
+      return additions_;
+    }
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    @java.lang.Override
+    public int getAdditionsCount() {
+      return additions_.size();
+    }
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index) {
+      return additions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of record sets that were added
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
+        int index) {
+      return additions_.get(index);
+    }
+
+    public static final int DELETIONS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_;
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getDeletionsList() {
+      return deletions_;
+    }
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+        getDeletionsOrBuilderList() {
+      return deletions_;
+    }
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    @java.lang.Override
+    public int getDeletionsCount() {
+      return deletions_.size();
+    }
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index) {
+      return deletions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of record sets that were deleted
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
+        int index) {
+      return deletions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < additions_.size(); i++) {
+        output.writeMessage(1, additions_.get(i));
+      }
+      for (int i = 0; i < deletions_.size(); i++) {
+        output.writeMessage(2, deletions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < additions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, additions_.get(i));
+      }
+      for (int i = 0; i < deletions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, deletions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff) obj;
+
+      if (!getAdditionsList()
+          .equals(other.getAdditionsList())) return false;
+      if (!getDeletionsList()
+          .equals(other.getDeletionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAdditionsCount() > 0) {
+        hash = (37 * hash) + ADDITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAdditionsList().hashCode();
+      }
+      if (getDeletionsCount() > 0) {
+        hash = (37 * hash) + DELETIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dns.v1.RecordSetDiff}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dns.v1.RecordSetDiff)
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiffOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_RecordSetDiff_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAdditionsFieldBuilder();
+          getDeletionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (additionsBuilder_ == null) {
+          additions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          additionsBuilder_.clear();
+        }
+        if (deletionsBuilder_ == null) {
+          deletions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          deletionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff getDefaultInstanceForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff build() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff buildPartial() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff(this);
+        int from_bitField0_ = bitField0_;
+        if (additionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            additions_ = java.util.Collections.unmodifiableList(additions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.additions_ = additions_;
+        } else {
+          result.additions_ = additionsBuilder_.build();
+        }
+        if (deletionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            deletions_ = java.util.Collections.unmodifiableList(deletions_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.deletions_ = deletions_;
+        } else {
+          result.deletions_ = deletionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff) {
+          return mergeFrom((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff other) {
+        if (other == yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff.getDefaultInstance()) return this;
+        if (additionsBuilder_ == null) {
+          if (!other.additions_.isEmpty()) {
+            if (additions_.isEmpty()) {
+              additions_ = other.additions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAdditionsIsMutable();
+              additions_.addAll(other.additions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.additions_.isEmpty()) {
+            if (additionsBuilder_.isEmpty()) {
+              additionsBuilder_.dispose();
+              additionsBuilder_ = null;
+              additions_ = other.additions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              additionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAdditionsFieldBuilder() : null;
+            } else {
+              additionsBuilder_.addAllMessages(other.additions_);
+            }
+          }
+        }
+        if (deletionsBuilder_ == null) {
+          if (!other.deletions_.isEmpty()) {
+            if (deletions_.isEmpty()) {
+              deletions_ = other.deletions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDeletionsIsMutable();
+              deletions_.addAll(other.deletions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deletions_.isEmpty()) {
+            if (deletionsBuilder_.isEmpty()) {
+              deletionsBuilder_.dispose();
+              deletionsBuilder_ = null;
+              deletions_ = other.deletions_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              deletionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeletionsFieldBuilder() : null;
+            } else {
+              deletionsBuilder_.addAllMessages(other.deletions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> additions_ =
+        java.util.Collections.emptyList();
+      private void ensureAdditionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          additions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(additions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> additionsBuilder_;
+
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getAdditionsList() {
+        if (additionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(additions_);
+        } else {
+          return additionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public int getAdditionsCount() {
+        if (additionsBuilder_ == null) {
+          return additions_.size();
+        } else {
+          return additionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index) {
+        if (additionsBuilder_ == null) {
+          return additions_.get(index);
+        } else {
+          return additionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder setAdditions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
+        if (additionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdditionsIsMutable();
+          additions_.set(index, value);
+          onChanged();
+        } else {
+          additionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder setAdditions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder builderForValue) {
+        if (additionsBuilder_ == null) {
+          ensureAdditionsIsMutable();
+          additions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          additionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder addAdditions(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
+        if (additionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdditionsIsMutable();
+          additions_.add(value);
+          onChanged();
+        } else {
+          additionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder addAdditions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
+        if (additionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdditionsIsMutable();
+          additions_.add(index, value);
+          onChanged();
+        } else {
+          additionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder addAdditions(
+          yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder builderForValue) {
+        if (additionsBuilder_ == null) {
+          ensureAdditionsIsMutable();
+          additions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          additionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder addAdditions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder builderForValue) {
+        if (additionsBuilder_ == null) {
+          ensureAdditionsIsMutable();
+          additions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          additionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder addAllAdditions(
+          java.lang.Iterable<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> values) {
+        if (additionsBuilder_ == null) {
+          ensureAdditionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, additions_);
+          onChanged();
+        } else {
+          additionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder clearAdditions() {
+        if (additionsBuilder_ == null) {
+          additions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          additionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public Builder removeAdditions(int index) {
+        if (additionsBuilder_ == null) {
+          ensureAdditionsIsMutable();
+          additions_.remove(index);
+          onChanged();
+        } else {
+          additionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder getAdditionsBuilder(
+          int index) {
+        return getAdditionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
+          int index) {
+        if (additionsBuilder_ == null) {
+          return additions_.get(index);  } else {
+          return additionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+           getAdditionsOrBuilderList() {
+        if (additionsBuilder_ != null) {
+          return additionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(additions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addAdditionsBuilder() {
+        return getAdditionsFieldBuilder().addBuilder(
+            yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addAdditionsBuilder(
+          int index) {
+        return getAdditionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of record sets that were added
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder> 
+           getAdditionsBuilderList() {
+        return getAdditionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+          getAdditionsFieldBuilder() {
+        if (additionsBuilder_ == null) {
+          additionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
+                  additions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          additions_ = null;
+        }
+        return additionsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_ =
+        java.util.Collections.emptyList();
+      private void ensureDeletionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          deletions_ = new java.util.ArrayList<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet>(deletions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> deletionsBuilder_;
+
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getDeletionsList() {
+        if (deletionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deletions_);
+        } else {
+          return deletionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public int getDeletionsCount() {
+        if (deletionsBuilder_ == null) {
+          return deletions_.size();
+        } else {
+          return deletionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index) {
+        if (deletionsBuilder_ == null) {
+          return deletions_.get(index);
+        } else {
+          return deletionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder setDeletions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
+        if (deletionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeletionsIsMutable();
+          deletions_.set(index, value);
+          onChanged();
+        } else {
+          deletionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder setDeletions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder builderForValue) {
+        if (deletionsBuilder_ == null) {
+          ensureDeletionsIsMutable();
+          deletions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          deletionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder addDeletions(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
+        if (deletionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeletionsIsMutable();
+          deletions_.add(value);
+          onChanged();
+        } else {
+          deletionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder addDeletions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
+        if (deletionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeletionsIsMutable();
+          deletions_.add(index, value);
+          onChanged();
+        } else {
+          deletionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder addDeletions(
+          yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder builderForValue) {
+        if (deletionsBuilder_ == null) {
+          ensureDeletionsIsMutable();
+          deletions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          deletionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder addDeletions(
+          int index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder builderForValue) {
+        if (deletionsBuilder_ == null) {
+          ensureDeletionsIsMutable();
+          deletions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          deletionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder addAllDeletions(
+          java.lang.Iterable<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> values) {
+        if (deletionsBuilder_ == null) {
+          ensureDeletionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deletions_);
+          onChanged();
+        } else {
+          deletionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder clearDeletions() {
+        if (deletionsBuilder_ == null) {
+          deletions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          deletionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public Builder removeDeletions(int index) {
+        if (deletionsBuilder_ == null) {
+          ensureDeletionsIsMutable();
+          deletions_.remove(index);
+          onChanged();
+        } else {
+          deletionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder getDeletionsBuilder(
+          int index) {
+        return getDeletionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
+          int index) {
+        if (deletionsBuilder_ == null) {
+          return deletions_.get(index);  } else {
+          return deletionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+           getDeletionsOrBuilderList() {
+        if (deletionsBuilder_ != null) {
+          return deletionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deletions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addDeletionsBuilder() {
+        return getDeletionsFieldBuilder().addBuilder(
+            yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addDeletionsBuilder(
+          int index) {
+        return getDeletionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of record sets that were deleted
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder> 
+           getDeletionsBuilderList() {
+        return getDeletionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
+          getDeletionsFieldBuilder() {
+        if (deletionsBuilder_ == null) {
+          deletionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder>(
+                  deletions_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deletions_ = null;
+        }
+        return deletionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dns.v1.RecordSetDiff)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dns.v1.RecordSetDiff)
+    private static final yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff();
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecordSetDiff>
+        PARSER = new com.google.protobuf.AbstractParser<RecordSetDiff>() {
+      @java.lang.Override
+      public RecordSetDiff parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecordSetDiff(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecordSetDiff> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecordSetDiff> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.RecordSetDiff getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListDnsZoneOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.ListDnsZoneOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -19808,6 +21197,11 @@ public final class DnsZoneServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dns_v1_RecordSetDiff_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19893,73 +21287,76 @@ public final class DnsZoneServiceOuterClass {
       "ex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022:\n" +
       "\006merges\030\004 \003(\0132\036.yandex.cloud.dns.v1.Reco" +
       "rdSetB\n\202\3101\006<=1000\"\032\n\030UpsertRecordSetsMet" +
-      "adata\"\226\001\n\034ListDnsZoneOperationsRequest\022\033" +
-      "\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n" +
-      "\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o" +
-      "\n\035ListDnsZoneOperationsResponse\0225\n\nopera" +
-      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t2\360\021\n\016DnsZ" +
-      "oneService\022p\n\003Get\022&.yandex.cloud.dns.v1." +
-      "GetDnsZoneRequest\032\034.yandex.cloud.dns.v1." +
-      "DnsZone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone" +
-      "_id}\022r\n\004List\022(.yandex.cloud.dns.v1.ListD" +
-      "nsZonesRequest\032).yandex.cloud.dns.v1.Lis" +
-      "tDnsZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones" +
-      "\022\224\001\n\006Create\022).yandex.cloud.dns.v1.Create" +
-      "DnsZoneRequest\032!.yandex.cloud.operation." +
-      "Operation\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n" +
-      "\025CreateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Upda" +
-      "te\022).yandex.cloud.dns.v1.UpdateDnsZoneRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"J\202\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*" +
-      "\262\322* \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\255\001\n" +
-      "\006Delete\022).yandex.cloud.dns.v1.DeleteDnsZ" +
-      "oneRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zone_i" +
-      "d}\262\322*.\n\025DeleteDnsZoneMetadata\022\025google.pr" +
-      "otobuf.Empty\022\221\001\n\014GetRecordSet\022/.yandex.c" +
-      "loud.dns.v1.GetDnsZoneRecordSetRequest\032\036" +
-      ".yandex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002*\022(" +
-      "/dns/v1/zones/{dns_zone_id}:getRecordSet" +
-      "\022\253\001\n\016ListRecordSets\0221.yandex.cloud.dns.v" +
-      "1.ListDnsZoneRecordSetsRequest\0322.yandex." +
-      "cloud.dns.v1.ListDnsZoneRecordSetsRespon" +
-      "se\"2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_id}:" +
-      "listRecordSets\022\321\001\n\020UpdateRecordSets\022,.ya" +
-      "ndex.cloud.dns.v1.UpdateRecordSetsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"l\202\323" +
-      "\344\223\0021\",/dns/v1/zones/{dns_zone_id}:update" +
-      "RecordSets:\001*\262\322*1\n\030UpdateRecordSetsMetad" +
-      "ata\022\025google.protobuf.Empty\022\321\001\n\020UpsertRec" +
-      "ordSets\022,.yandex.cloud.dns.v1.UpsertReco" +
-      "rdSetsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"l\202\323\344\223\0021\",/dns/v1/zones/{dns_zon" +
-      "e_id}:upsertRecordSets:\001*\262\322*1\n\030UpsertRec" +
-      "ordSetsMetadata\022\025google.protobuf.Empty\022\247" +
-      "\001\n\016ListOperations\0221.yandex.cloud.dns.v1." +
-      "ListDnsZoneOperationsRequest\0322.yandex.cl" +
-      "oud.dns.v1.ListDnsZoneOperationsResponse" +
-      "\".\202\323\344\223\002(\022&/dns/v1/zones/{dns_zone_id}/op" +
-      "erations\022\255\001\n\022ListAccessBindings\022..yandex" +
-      ".cloud.access.ListAccessBindingsRequest\032" +
-      "/.yandex.cloud.access.ListAccessBindings" +
-      "Response\"6\202\323\344\223\0020\022./dns/v1/zones/{resourc" +
-      "e_id}:listAccessBindings\022\334\001\n\021SetAccessBi" +
-      "ndings\022-.yandex.cloud.access.SetAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"u\202\323\344\223\0022\"-/dns/v1/zones/{resourc" +
-      "e_id}:setAccessBindings:\001*\262\322*9\n access.S" +
-      "etAccessBindingsMetadata\022\025google.protobu" +
-      "f.Empty\022\350\001\n\024UpdateAccessBindings\0220.yande" +
-      "x.cloud.access.UpdateAccessBindingsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"{\202" +
-      "\323\344\223\0025\"0/dns/v1/zones/{resource_id}:updat" +
-      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
-      "essBindingsMetadata\022\025google.protobuf.Emp" +
-      "tyBV\n\027yandex.cloud.api.dns.v1Z;github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "dns/v1;dnsb\006proto3"
+      "adata\"u\n\rRecordSetDiff\0221\n\tadditions\030\001 \003(" +
+      "\0132\036.yandex.cloud.dns.v1.RecordSet\0221\n\tdel" +
+      "etions\030\002 \003(\0132\036.yandex.cloud.dns.v1.Recor" +
+      "dSet\"\226\001\n\034ListDnsZoneOperationsRequest\022\033\n" +
+      "\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212" +
+      "\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n" +
+      "\035ListDnsZoneOperationsResponse\0225\n\noperat" +
+      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
+      "ation\022\027\n\017next_page_token\030\002 \001(\t2\340\021\n\016DnsZo" +
+      "neService\022p\n\003Get\022&.yandex.cloud.dns.v1.G" +
+      "etDnsZoneRequest\032\034.yandex.cloud.dns.v1.D" +
+      "nsZone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone_" +
+      "id}\022r\n\004List\022(.yandex.cloud.dns.v1.ListDn" +
+      "sZonesRequest\032).yandex.cloud.dns.v1.List" +
+      "DnsZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones\022" +
+      "\224\001\n\006Create\022).yandex.cloud.dns.v1.CreateD" +
+      "nsZoneRequest\032!.yandex.cloud.operation.O" +
+      "peration\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n\025" +
+      "CreateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Updat" +
+      "e\022).yandex.cloud.dns.v1.UpdateDnsZoneReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "J\202\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*\262" +
+      "\322* \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\255\001\n\006" +
+      "Delete\022).yandex.cloud.dns.v1.DeleteDnsZo" +
+      "neRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zone_id" +
+      "}\262\322*.\n\025DeleteDnsZoneMetadata\022\025google.pro" +
+      "tobuf.Empty\022\221\001\n\014GetRecordSet\022/.yandex.cl" +
+      "oud.dns.v1.GetDnsZoneRecordSetRequest\032\036." +
+      "yandex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002*\022(/" +
+      "dns/v1/zones/{dns_zone_id}:getRecordSet\022" +
+      "\253\001\n\016ListRecordSets\0221.yandex.cloud.dns.v1" +
+      ".ListDnsZoneRecordSetsRequest\0322.yandex.c" +
+      "loud.dns.v1.ListDnsZoneRecordSetsRespons" +
+      "e\"2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_id}:l" +
+      "istRecordSets\022\311\001\n\020UpdateRecordSets\022,.yan" +
+      "dex.cloud.dns.v1.UpdateRecordSetsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"d\202\323\344" +
+      "\223\0021\",/dns/v1/zones/{dns_zone_id}:updateR" +
+      "ecordSets:\001*\262\322*)\n\030UpdateRecordSetsMetada" +
+      "ta\022\rRecordSetDiff\022\311\001\n\020UpsertRecordSets\022," +
+      ".yandex.cloud.dns.v1.UpsertRecordSetsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "d\202\323\344\223\0021\",/dns/v1/zones/{dns_zone_id}:ups" +
+      "ertRecordSets:\001*\262\322*)\n\030UpsertRecordSetsMe" +
+      "tadata\022\rRecordSetDiff\022\247\001\n\016ListOperations" +
+      "\0221.yandex.cloud.dns.v1.ListDnsZoneOperat" +
+      "ionsRequest\0322.yandex.cloud.dns.v1.ListDn" +
+      "sZoneOperationsResponse\".\202\323\344\223\002(\022&/dns/v1" +
+      "/zones/{dns_zone_id}/operations\022\255\001\n\022List" +
+      "AccessBindings\022..yandex.cloud.access.Lis" +
+      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
+      "cess.ListAccessBindingsResponse\"6\202\323\344\223\0020\022" +
+      "./dns/v1/zones/{resource_id}:listAccessB" +
+      "indings\022\334\001\n\021SetAccessBindings\022-.yandex.c" +
+      "loud.access.SetAccessBindingsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"u\202\323\344\223\0022\"" +
+      "-/dns/v1/zones/{resource_id}:setAccessBi" +
+      "ndings:\001*\262\322*9\n access.SetAccessBindingsM" +
+      "etadata\022\025google.protobuf.Empty\022\350\001\n\024Updat" +
+      "eAccessBindings\0220.yandex.cloud.access.Up" +
+      "dateAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"{\202\323\344\223\0025\"0/dns/v1/zo" +
+      "nes/{resource_id}:updateAccessBindings:\001" +
+      "*\262\322*<\n#access.UpdateAccessBindingsMetada" +
+      "ta\022\025google.protobuf.EmptyBV\n\027yandex.clou" +
+      "d.api.dns.v1Z;github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/dns/v1;dnsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20080,14 +21477,20 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_descriptor,
         new java.lang.String[] { });
-    internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor =
+    internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor =
       getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_dns_v1_RecordSetDiff_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor,
+        new java.lang.String[] { "Additions", "Deletions", });
+    internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_descriptor,

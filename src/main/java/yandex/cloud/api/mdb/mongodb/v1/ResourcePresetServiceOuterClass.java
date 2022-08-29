@@ -636,6 +636,7 @@ public final class ResourcePresetServiceOuterClass {
      * The maximum number of results per page to return. If the number of available
      * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -761,6 +762,7 @@ public final class ResourcePresetServiceOuterClass {
      * The maximum number of results per page to return. If the number of available
      * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1145,6 +1147,7 @@ public final class ResourcePresetServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1159,6 +1162,7 @@ public final class ResourcePresetServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1176,6 +1180,7 @@ public final class ResourcePresetServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListResourcePresetsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>

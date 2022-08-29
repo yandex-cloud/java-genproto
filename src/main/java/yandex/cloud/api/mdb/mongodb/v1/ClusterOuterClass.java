@@ -698,6 +698,10 @@ public final class ClusterOuterClass {
     }
 
     /**
+     * <pre>
+     * Deployment environment.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.mdb.mongodb.v1.Cluster.Environment}
      */
     public enum Environment
@@ -5718,7 +5722,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5727,7 +5731,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5745,6 +5749,7 @@ public final class ClusterOuterClass {
      * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
      * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+     * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -5760,6 +5765,7 @@ public final class ClusterOuterClass {
      * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
      * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+     * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -5905,6 +5911,33 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+     * @return Whether the mongodb60 field is set.
+     */
+    boolean hasMongodb60();
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+     * @return The mongodb60.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 getMongodb60();
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder getMongodb60OrBuilder();
+
+    /**
+     * <pre>
      * Configuration and resource allocation for a MongoDB 4.4 Enterprise cluster.
      * </pre>
      *
@@ -5959,6 +5992,33 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+     * @return Whether the mongodb60Enterprise field is set.
+     */
+    boolean hasMongodb60Enterprise();
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+     * @return The mongodb60Enterprise.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise getMongodb60Enterprise();
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder getMongodb60EnterpriseOrBuilder();
+
+    /**
+     * <pre>
      * Time to start the daily backup, in the UTC timezone.
      * </pre>
      *
@@ -6010,6 +6070,33 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 9;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
+    /**
+     * <pre>
+     * Performance Diagnostic
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+     * @return Whether the performanceDiagnostics field is set.
+     */
+    boolean hasPerformanceDiagnostics();
+    /**
+     * <pre>
+     * Performance Diagnostic
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+     * @return The performanceDiagnostics.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig getPerformanceDiagnostics();
+    /**
+     * <pre>
+     * Performance Diagnostic
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder getPerformanceDiagnosticsOrBuilder();
 
     /**
      * <pre>
@@ -6236,6 +6323,47 @@ public final class ClusterOuterClass {
               mongodbCase_ = 12;
               break;
             }
+            case 106: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder subBuilder = null;
+              if (performanceDiagnostics_ != null) {
+                subBuilder = performanceDiagnostics_.toBuilder();
+              }
+              performanceDiagnostics_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(performanceDiagnostics_);
+                performanceDiagnostics_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder subBuilder = null;
+              if (mongodbCase_ == 14) {
+                subBuilder = ((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_).toBuilder();
+              }
+              mongodb_ =
+                  input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_);
+                mongodb_ = subBuilder.buildPartial();
+              }
+              mongodbCase_ = 14;
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder subBuilder = null;
+              if (mongodbCase_ == 15) {
+                subBuilder = ((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_).toBuilder();
+              }
+              mongodb_ =
+                  input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_);
+                mongodb_ = subBuilder.buildPartial();
+              }
+              mongodbCase_ = 15;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6278,8 +6406,10 @@ public final class ClusterOuterClass {
       MONGODB_4_2(7),
       MONGODB_4_4(8),
       MONGODB_5_0(10),
+      MONGODB_6_0(14),
       MONGODB_4_4_ENTERPRISE(11),
       MONGODB_5_0_ENTERPRISE(12),
+      MONGODB_6_0_ENTERPRISE(15),
       MONGODB_NOT_SET(0);
       private final int value;
       private MongodbCase(int value) {
@@ -6302,8 +6432,10 @@ public final class ClusterOuterClass {
           case 7: return MONGODB_4_2;
           case 8: return MONGODB_4_4;
           case 10: return MONGODB_5_0;
+          case 14: return MONGODB_6_0;
           case 11: return MONGODB_4_4_ENTERPRISE;
           case 12: return MONGODB_5_0_ENTERPRISE;
+          case 15: return MONGODB_6_0_ENTERPRISE;
           case 0: return MONGODB_NOT_SET;
           default: return null;
         }
@@ -6323,7 +6455,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6344,7 +6476,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+     * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6376,6 +6508,7 @@ public final class ClusterOuterClass {
      * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
      * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+     * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -6403,6 +6536,7 @@ public final class ClusterOuterClass {
      * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
      * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+     * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -6638,6 +6772,49 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0.getDefaultInstance();
     }
 
+    public static final int MONGODB_6_0_FIELD_NUMBER = 14;
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+     * @return Whether the mongodb60 field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongodb60() {
+      return mongodbCase_ == 14;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+     * @return The mongodb60.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 getMongodb60() {
+      if (mongodbCase_ == 14) {
+         return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_;
+      }
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder getMongodb60OrBuilder() {
+      if (mongodbCase_ == 14) {
+         return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_;
+      }
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+    }
+
     public static final int MONGODB_4_4_ENTERPRISE_FIELD_NUMBER = 11;
     /**
      * <pre>
@@ -6724,6 +6901,49 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise.getDefaultInstance();
     }
 
+    public static final int MONGODB_6_0_ENTERPRISE_FIELD_NUMBER = 15;
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+     * @return Whether the mongodb60Enterprise field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongodb60Enterprise() {
+      return mongodbCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+     * @return The mongodb60Enterprise.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise getMongodb60Enterprise() {
+      if (mongodbCase_ == 15) {
+         return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_;
+      }
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder getMongodb60EnterpriseOrBuilder() {
+      if (mongodbCase_ == 15) {
+         return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_;
+      }
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+    }
+
     public static final int BACKUP_WINDOW_START_FIELD_NUMBER = 3;
     private com.google.type.TimeOfDay backupWindowStart_;
     /**
@@ -6798,6 +7018,44 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
       return getBackupRetainPeriodDays();
+    }
+
+    public static final int PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER = 13;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig performanceDiagnostics_;
+    /**
+     * <pre>
+     * Performance Diagnostic
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+     * @return Whether the performanceDiagnostics field is set.
+     */
+    @java.lang.Override
+    public boolean hasPerformanceDiagnostics() {
+      return performanceDiagnostics_ != null;
+    }
+    /**
+     * <pre>
+     * Performance Diagnostic
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+     * @return The performanceDiagnostics.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig getPerformanceDiagnostics() {
+      return performanceDiagnostics_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.getDefaultInstance() : performanceDiagnostics_;
+    }
+    /**
+     * <pre>
+     * Performance Diagnostic
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder getPerformanceDiagnosticsOrBuilder() {
+      return getPerformanceDiagnostics();
     }
 
     public static final int ACCESS_FIELD_NUMBER = 6;
@@ -6888,6 +7146,15 @@ public final class ClusterOuterClass {
       if (mongodbCase_ == 12) {
         output.writeMessage(12, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise) mongodb_);
       }
+      if (performanceDiagnostics_ != null) {
+        output.writeMessage(13, getPerformanceDiagnostics());
+      }
+      if (mongodbCase_ == 14) {
+        output.writeMessage(14, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_);
+      }
+      if (mongodbCase_ == 15) {
+        output.writeMessage(15, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6943,6 +7210,18 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb5_0_enterprise) mongodb_);
       }
+      if (performanceDiagnostics_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getPerformanceDiagnostics());
+      }
+      if (mongodbCase_ == 14) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_);
+      }
+      if (mongodbCase_ == 15) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6972,6 +7251,11 @@ public final class ClusterOuterClass {
         if (!getBackupRetainPeriodDays()
             .equals(other.getBackupRetainPeriodDays())) return false;
       }
+      if (hasPerformanceDiagnostics() != other.hasPerformanceDiagnostics()) return false;
+      if (hasPerformanceDiagnostics()) {
+        if (!getPerformanceDiagnostics()
+            .equals(other.getPerformanceDiagnostics())) return false;
+      }
       if (hasAccess() != other.hasAccess()) return false;
       if (hasAccess()) {
         if (!getAccess()
@@ -6999,6 +7283,10 @@ public final class ClusterOuterClass {
           if (!getMongodb50()
               .equals(other.getMongodb50())) return false;
           break;
+        case 14:
+          if (!getMongodb60()
+              .equals(other.getMongodb60())) return false;
+          break;
         case 11:
           if (!getMongodb44Enterprise()
               .equals(other.getMongodb44Enterprise())) return false;
@@ -7006,6 +7294,10 @@ public final class ClusterOuterClass {
         case 12:
           if (!getMongodb50Enterprise()
               .equals(other.getMongodb50Enterprise())) return false;
+          break;
+        case 15:
+          if (!getMongodb60Enterprise()
+              .equals(other.getMongodb60Enterprise())) return false;
           break;
         case 0:
         default:
@@ -7033,6 +7325,10 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
         hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
+      if (hasPerformanceDiagnostics()) {
+        hash = (37 * hash) + PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER;
+        hash = (53 * hash) + getPerformanceDiagnostics().hashCode();
+      }
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
         hash = (53 * hash) + getAccess().hashCode();
@@ -7058,6 +7354,10 @@ public final class ClusterOuterClass {
           hash = (37 * hash) + MONGODB_5_0_FIELD_NUMBER;
           hash = (53 * hash) + getMongodb50().hashCode();
           break;
+        case 14:
+          hash = (37 * hash) + MONGODB_6_0_FIELD_NUMBER;
+          hash = (53 * hash) + getMongodb60().hashCode();
+          break;
         case 11:
           hash = (37 * hash) + MONGODB_4_4_ENTERPRISE_FIELD_NUMBER;
           hash = (53 * hash) + getMongodb44Enterprise().hashCode();
@@ -7065,6 +7365,10 @@ public final class ClusterOuterClass {
         case 12:
           hash = (37 * hash) + MONGODB_5_0_ENTERPRISE_FIELD_NUMBER;
           hash = (53 * hash) + getMongodb50Enterprise().hashCode();
+          break;
+        case 15:
+          hash = (37 * hash) + MONGODB_6_0_ENTERPRISE_FIELD_NUMBER;
+          hash = (53 * hash) + getMongodb60Enterprise().hashCode();
           break;
         case 0:
         default:
@@ -7218,6 +7522,12 @@ public final class ClusterOuterClass {
           backupRetainPeriodDays_ = null;
           backupRetainPeriodDaysBuilder_ = null;
         }
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnostics_ = null;
+        } else {
+          performanceDiagnostics_ = null;
+          performanceDiagnosticsBuilder_ = null;
+        }
         if (accessBuilder_ == null) {
           access_ = null;
         } else {
@@ -7289,6 +7599,13 @@ public final class ClusterOuterClass {
             result.mongodb_ = mongodb50Builder_.build();
           }
         }
+        if (mongodbCase_ == 14) {
+          if (mongodb60Builder_ == null) {
+            result.mongodb_ = mongodb_;
+          } else {
+            result.mongodb_ = mongodb60Builder_.build();
+          }
+        }
         if (mongodbCase_ == 11) {
           if (mongodb44EnterpriseBuilder_ == null) {
             result.mongodb_ = mongodb_;
@@ -7303,6 +7620,13 @@ public final class ClusterOuterClass {
             result.mongodb_ = mongodb50EnterpriseBuilder_.build();
           }
         }
+        if (mongodbCase_ == 15) {
+          if (mongodb60EnterpriseBuilder_ == null) {
+            result.mongodb_ = mongodb_;
+          } else {
+            result.mongodb_ = mongodb60EnterpriseBuilder_.build();
+          }
+        }
         if (backupWindowStartBuilder_ == null) {
           result.backupWindowStart_ = backupWindowStart_;
         } else {
@@ -7312,6 +7636,11 @@ public final class ClusterOuterClass {
           result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
         } else {
           result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
+        }
+        if (performanceDiagnosticsBuilder_ == null) {
+          result.performanceDiagnostics_ = performanceDiagnostics_;
+        } else {
+          result.performanceDiagnostics_ = performanceDiagnosticsBuilder_.build();
         }
         if (accessBuilder_ == null) {
           result.access_ = access_;
@@ -7381,6 +7710,9 @@ public final class ClusterOuterClass {
         if (other.hasBackupRetainPeriodDays()) {
           mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
+        if (other.hasPerformanceDiagnostics()) {
+          mergePerformanceDiagnostics(other.getPerformanceDiagnostics());
+        }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
         }
@@ -7405,12 +7737,20 @@ public final class ClusterOuterClass {
             mergeMongodb50(other.getMongodb50());
             break;
           }
+          case MONGODB_6_0: {
+            mergeMongodb60(other.getMongodb60());
+            break;
+          }
           case MONGODB_4_4_ENTERPRISE: {
             mergeMongodb44Enterprise(other.getMongodb44Enterprise());
             break;
           }
           case MONGODB_5_0_ENTERPRISE: {
             mergeMongodb50Enterprise(other.getMongodb50Enterprise());
+            break;
+          }
+          case MONGODB_6_0_ENTERPRISE: {
+            mergeMongodb60Enterprise(other.getMongodb60Enterprise());
             break;
           }
           case MONGODB_NOT_SET: {
@@ -7464,7 +7804,7 @@ public final class ClusterOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7484,7 +7824,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7505,7 +7845,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7524,7 +7864,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7538,7 +7878,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`.
+       * Version of MongoDB server software. Possible values: `3.6`, `4.0`, `4.2`, `4.4`, `4.4-enterprise`, `5.0`, `5.0-enterprise`, `6.0`, `6.0-enterprise`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7567,6 +7907,7 @@ public final class ClusterOuterClass {
        * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
        * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+       * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -7593,6 +7934,7 @@ public final class ClusterOuterClass {
        * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
        * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+       * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -7620,6 +7962,7 @@ public final class ClusterOuterClass {
        * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
        * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+       * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -7645,6 +7988,7 @@ public final class ClusterOuterClass {
        * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
        * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+       * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -7665,6 +8009,7 @@ public final class ClusterOuterClass {
        * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
        * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * * `5.0` - persist data compatibility for version 5.0. After setting this option the data will not be compatible with 5.0 or lower.
+       * * `6.0` - persist data compatibility for version 6.0. After setting this option the data will not be compatible with 6.0 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -8569,6 +8914,183 @@ public final class ClusterOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder> mongodb60Builder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       * @return Whether the mongodb60 field is set.
+       */
+      @java.lang.Override
+      public boolean hasMongodb60() {
+        return mongodbCase_ == 14;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       * @return The mongodb60.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 getMongodb60() {
+        if (mongodb60Builder_ == null) {
+          if (mongodbCase_ == 14) {
+            return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_;
+          }
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+        } else {
+          if (mongodbCase_ == 14) {
+            return mongodb60Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      public Builder setMongodb60(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 value) {
+        if (mongodb60Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongodb_ = value;
+          onChanged();
+        } else {
+          mongodb60Builder_.setMessage(value);
+        }
+        mongodbCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      public Builder setMongodb60(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder builderForValue) {
+        if (mongodb60Builder_ == null) {
+          mongodb_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongodb60Builder_.setMessage(builderForValue.build());
+        }
+        mongodbCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      public Builder mergeMongodb60(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 value) {
+        if (mongodb60Builder_ == null) {
+          if (mongodbCase_ == 14 &&
+              mongodb_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance()) {
+            mongodb_ = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.newBuilder((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            mongodb_ = value;
+          }
+          onChanged();
+        } else {
+          if (mongodbCase_ == 14) {
+            mongodb60Builder_.mergeFrom(value);
+          }
+          mongodb60Builder_.setMessage(value);
+        }
+        mongodbCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      public Builder clearMongodb60() {
+        if (mongodb60Builder_ == null) {
+          if (mongodbCase_ == 14) {
+            mongodbCase_ = 0;
+            mongodb_ = null;
+            onChanged();
+          }
+        } else {
+          if (mongodbCase_ == 14) {
+            mongodbCase_ = 0;
+            mongodb_ = null;
+          }
+          mongodb60Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder getMongodb60Builder() {
+        return getMongodb60FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder getMongodb60OrBuilder() {
+        if ((mongodbCase_ == 14) && (mongodb60Builder_ != null)) {
+          return mongodb60Builder_.getMessageOrBuilder();
+        } else {
+          if (mongodbCase_ == 14) {
+            return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_;
+          }
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0 mongodb_6_0 = 14 [json_name = "mongodb_6_0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder> 
+          getMongodb60FieldBuilder() {
+        if (mongodb60Builder_ == null) {
+          if (!(mongodbCase_ == 14)) {
+            mongodb_ = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+          }
+          mongodb60Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder>(
+                  (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) mongodb_,
+                  getParentForChildren(),
+                  isClean());
+          mongodb_ = null;
+        }
+        mongodbCase_ = 14;
+        onChanged();;
+        return mongodb60Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb4_4_enterpriseOrBuilder> mongodb44EnterpriseBuilder_;
       /**
        * <pre>
@@ -8922,6 +9444,183 @@ public final class ClusterOuterClass {
         return mongodb50EnterpriseBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder> mongodb60EnterpriseBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       * @return Whether the mongodb60Enterprise field is set.
+       */
+      @java.lang.Override
+      public boolean hasMongodb60Enterprise() {
+        return mongodbCase_ == 15;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       * @return The mongodb60Enterprise.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise getMongodb60Enterprise() {
+        if (mongodb60EnterpriseBuilder_ == null) {
+          if (mongodbCase_ == 15) {
+            return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_;
+          }
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+        } else {
+          if (mongodbCase_ == 15) {
+            return mongodb60EnterpriseBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      public Builder setMongodb60Enterprise(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise value) {
+        if (mongodb60EnterpriseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongodb_ = value;
+          onChanged();
+        } else {
+          mongodb60EnterpriseBuilder_.setMessage(value);
+        }
+        mongodbCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      public Builder setMongodb60Enterprise(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder builderForValue) {
+        if (mongodb60EnterpriseBuilder_ == null) {
+          mongodb_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongodb60EnterpriseBuilder_.setMessage(builderForValue.build());
+        }
+        mongodbCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      public Builder mergeMongodb60Enterprise(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise value) {
+        if (mongodb60EnterpriseBuilder_ == null) {
+          if (mongodbCase_ == 15 &&
+              mongodb_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance()) {
+            mongodb_ = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.newBuilder((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            mongodb_ = value;
+          }
+          onChanged();
+        } else {
+          if (mongodbCase_ == 15) {
+            mongodb60EnterpriseBuilder_.mergeFrom(value);
+          }
+          mongodb60EnterpriseBuilder_.setMessage(value);
+        }
+        mongodbCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      public Builder clearMongodb60Enterprise() {
+        if (mongodb60EnterpriseBuilder_ == null) {
+          if (mongodbCase_ == 15) {
+            mongodbCase_ = 0;
+            mongodb_ = null;
+            onChanged();
+          }
+        } else {
+          if (mongodbCase_ == 15) {
+            mongodbCase_ = 0;
+            mongodb_ = null;
+          }
+          mongodb60EnterpriseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder getMongodb60EnterpriseBuilder() {
+        return getMongodb60EnterpriseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder getMongodb60EnterpriseOrBuilder() {
+        if ((mongodbCase_ == 15) && (mongodb60EnterpriseBuilder_ != null)) {
+          return mongodb60EnterpriseBuilder_.getMessageOrBuilder();
+        } else {
+          if (mongodbCase_ == 15) {
+            return (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_;
+          }
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for a MongoDB 6.0 Enterprise cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise mongodb_6_0_enterprise = 15 [json_name = "mongodb_6_0_enterprise"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder> 
+          getMongodb60EnterpriseFieldBuilder() {
+        if (mongodb60EnterpriseBuilder_ == null) {
+          if (!(mongodbCase_ == 15)) {
+            mongodb_ = yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+          }
+          mongodb60EnterpriseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder>(
+                  (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) mongodb_,
+                  getParentForChildren(),
+                  isClean());
+          mongodb_ = null;
+        }
+        mongodbCase_ = 15;
+        onChanged();;
+        return mongodb60EnterpriseBuilder_;
+      }
+
       private com.google.type.TimeOfDay backupWindowStart_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> backupWindowStartBuilder_;
@@ -9230,6 +9929,161 @@ public final class ClusterOuterClass {
           backupRetainPeriodDays_ = null;
         }
         return backupRetainPeriodDaysBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig performanceDiagnostics_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder> performanceDiagnosticsBuilder_;
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       * @return Whether the performanceDiagnostics field is set.
+       */
+      public boolean hasPerformanceDiagnostics() {
+        return performanceDiagnosticsBuilder_ != null || performanceDiagnostics_ != null;
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       * @return The performanceDiagnostics.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig getPerformanceDiagnostics() {
+        if (performanceDiagnosticsBuilder_ == null) {
+          return performanceDiagnostics_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.getDefaultInstance() : performanceDiagnostics_;
+        } else {
+          return performanceDiagnosticsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      public Builder setPerformanceDiagnostics(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig value) {
+        if (performanceDiagnosticsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          performanceDiagnostics_ = value;
+          onChanged();
+        } else {
+          performanceDiagnosticsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      public Builder setPerformanceDiagnostics(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder builderForValue) {
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnostics_ = builderForValue.build();
+          onChanged();
+        } else {
+          performanceDiagnosticsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      public Builder mergePerformanceDiagnostics(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig value) {
+        if (performanceDiagnosticsBuilder_ == null) {
+          if (performanceDiagnostics_ != null) {
+            performanceDiagnostics_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.newBuilder(performanceDiagnostics_).mergeFrom(value).buildPartial();
+          } else {
+            performanceDiagnostics_ = value;
+          }
+          onChanged();
+        } else {
+          performanceDiagnosticsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      public Builder clearPerformanceDiagnostics() {
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnostics_ = null;
+          onChanged();
+        } else {
+          performanceDiagnostics_ = null;
+          performanceDiagnosticsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder getPerformanceDiagnosticsBuilder() {
+        
+        onChanged();
+        return getPerformanceDiagnosticsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder getPerformanceDiagnosticsOrBuilder() {
+        if (performanceDiagnosticsBuilder_ != null) {
+          return performanceDiagnosticsBuilder_.getMessageOrBuilder();
+        } else {
+          return performanceDiagnostics_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.getDefaultInstance() : performanceDiagnostics_;
+        }
+      }
+      /**
+       * <pre>
+       * Performance Diagnostic
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig performance_diagnostics = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder> 
+          getPerformanceDiagnosticsFieldBuilder() {
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnosticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder>(
+                  getPerformanceDiagnostics(),
+                  getParentForChildren(),
+                  isClean());
+          performanceDiagnostics_ = null;
+        }
+        return performanceDiagnosticsBuilder_;
       }
 
       private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access access_;
@@ -11529,7 +12383,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Resources allocated to mongocfg hosts.
+       * Resources allocated to mongos hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -11538,7 +12392,7 @@ public final class ClusterOuterClass {
       boolean hasResources();
       /**
        * <pre>
-       * Resources allocated to mongocfg hosts.
+       * Resources allocated to mongos hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -11547,7 +12401,7 @@ public final class ClusterOuterClass {
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
       /**
        * <pre>
-       * Resources allocated to mongocfg hosts.
+       * Resources allocated to mongos hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -11687,7 +12541,7 @@ public final class ClusterOuterClass {
       private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
       /**
        * <pre>
-       * Resources allocated to mongocfg hosts.
+       * Resources allocated to mongos hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -11699,7 +12553,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to mongocfg hosts.
+       * Resources allocated to mongos hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -11711,7 +12565,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to mongocfg hosts.
+       * Resources allocated to mongos hosts.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12190,7 +13044,7 @@ public final class ClusterOuterClass {
             yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12201,7 +13055,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12216,7 +13070,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12236,7 +13090,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12254,7 +13108,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12276,7 +13130,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12294,7 +13148,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12306,7 +13160,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -12321,7 +13175,7 @@ public final class ClusterOuterClass {
         }
         /**
          * <pre>
-         * Resources allocated to mongocfg hosts.
+         * Resources allocated to mongos hosts.
          * </pre>
          *
          * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
@@ -47042,6 +47896,10784 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface Mongodb6_0OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
+     */
+    boolean hasMongod();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+     * @return The mongod.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod getMongod();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder getMongodOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
+     */
+    boolean hasMongocfg();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg getMongocfg();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder getMongocfgOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
+     */
+    boolean hasMongos();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+     * @return The mongos.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos getMongos();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder getMongosOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
+     */
+    boolean hasMongoinfra();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra getMongoinfra();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder getMongoinfraOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0}
+   */
+  public static final class Mongodb6_0 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0)
+      Mongodb6_0OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Mongodb6_0.newBuilder() to construct.
+    private Mongodb6_0(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Mongodb6_0() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb6_0();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Mongodb6_0(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder subBuilder = null;
+              if (mongod_ != null) {
+                subBuilder = mongod_.toBuilder();
+              }
+              mongod_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongod_);
+                mongod_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder subBuilder = null;
+              if (mongocfg_ != null) {
+                subBuilder = mongocfg_.toBuilder();
+              }
+              mongocfg_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongocfg_);
+                mongocfg_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder subBuilder = null;
+              if (mongos_ != null) {
+                subBuilder = mongos_.toBuilder();
+              }
+              mongos_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongos_);
+                mongos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder subBuilder = null;
+              if (mongoinfra_ != null) {
+                subBuilder = mongoinfra_.toBuilder();
+              }
+              mongoinfra_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongoinfra_);
+                mongoinfra_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder.class);
+    }
+
+    public interface MongodOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+       * @return The config.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 getConfig();
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0OrBuilder getConfigOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod}
+     */
+    public static final class Mongod extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod)
+        MongodOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Mongod.newBuilder() to construct.
+      private Mongod(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Mongod(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder.class);
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 config_;
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 getConfig() {
+        return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.getDefaultInstance() : config_;
+      }
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0OrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (config_ != null) {
+          output.writeMessage(1, getConfig());
+        }
+        if (resources_ != null) {
+          output.writeMessage(2, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfig());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod) obj;
+
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod(this);
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.getDefaultInstance()) return this;
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0OrBuilder> configBuilder_;
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         * @return The config.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        public Builder setConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        public Builder setConfig(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        public Builder mergeConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0 value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0OrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0 config = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0OrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfigSet6_0OrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Mongod>
+          PARSER = new com.google.protobuf.AbstractParser<Mongod>() {
+        @java.lang.Override
+        public Mongod parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Mongod(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Mongod> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Mongod> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MongoCfgOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+       * @return The config.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 getConfig();
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder getConfigOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg}
+     */
+    public static final class MongoCfg extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg)
+        MongoCfgOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MongoCfg.newBuilder() to construct.
+      private MongoCfg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MongoCfg(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder.class);
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 config_;
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 getConfig() {
+        return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.getDefaultInstance() : config_;
+      }
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (config_ != null) {
+          output.writeMessage(1, getConfig());
+        }
+        if (resources_ != null) {
+          output.writeMessage(2, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfig());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg) obj;
+
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg(this);
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.getDefaultInstance()) return this;
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder> configBuilder_;
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         * @return The config.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        public Builder setConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        public Builder setConfig(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        public Builder mergeConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MongoCfg>
+          PARSER = new com.google.protobuf.AbstractParser<MongoCfg>() {
+        @java.lang.Override
+        public MongoCfg parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MongoCfg(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MongoCfg> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MongoCfg> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MongosOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+       * @return The config.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 getConfig();
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder getConfigOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos}
+     */
+    public static final class Mongos extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos)
+        MongosOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Mongos.newBuilder() to construct.
+      private Mongos(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Mongos(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder.class);
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 config_;
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 getConfig() {
+        return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.getDefaultInstance() : config_;
+      }
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (config_ != null) {
+          output.writeMessage(1, getConfig());
+        }
+        if (resources_ != null) {
+          output.writeMessage(2, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfig());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos) obj;
+
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos(this);
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.getDefaultInstance()) return this;
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder> configBuilder_;
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         * @return The config.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        public Builder setConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        public Builder setConfig(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        public Builder mergeConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Mongos>
+          PARSER = new com.google.protobuf.AbstractParser<Mongos>() {
+        @java.lang.Override
+        public Mongos parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Mongos(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Mongos> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Mongos> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MongoInfraOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
+       */
+      boolean hasConfigMongos();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+       * @return The configMongos.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 getConfigMongos();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder getConfigMongosOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
+       */
+      boolean hasConfigMongocfg();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 getConfigMongocfg();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder getConfigMongocfgOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra}
+     */
+    public static final class MongoInfra extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra)
+        MongoInfraOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MongoInfra.newBuilder() to construct.
+      private MongoInfra(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MongoInfra(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder subBuilder = null;
+                if (configMongos_ != null) {
+                  subBuilder = configMongos_.toBuilder();
+                }
+                configMongos_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(configMongos_);
+                  configMongos_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder subBuilder = null;
+                if (configMongocfg_ != null) {
+                  subBuilder = configMongocfg_.toBuilder();
+                }
+                configMongocfg_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(configMongocfg_);
+                  configMongocfg_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder.class);
+      }
+
+      public static final int CONFIG_MONGOS_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 configMongos_;
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfigMongos() {
+        return configMongos_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+       * @return The configMongos.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 getConfigMongos() {
+        return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.getDefaultInstance() : configMongos_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder getConfigMongosOrBuilder() {
+        return getConfigMongos();
+      }
+
+      public static final int CONFIG_MONGOCFG_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 configMongocfg_;
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfigMongocfg() {
+        return configMongocfg_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+       * @return The configMongocfg.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 getConfigMongocfg() {
+        return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.getDefaultInstance() : configMongocfg_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder getConfigMongocfgOrBuilder() {
+        return getConfigMongocfg();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (configMongos_ != null) {
+          output.writeMessage(1, getConfigMongos());
+        }
+        if (configMongocfg_ != null) {
+          output.writeMessage(2, getConfigMongocfg());
+        }
+        if (resources_ != null) {
+          output.writeMessage(3, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (configMongos_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfigMongos());
+        }
+        if (configMongocfg_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getConfigMongocfg());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra) obj;
+
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
+        if (hasConfigMongos()) {
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
+        }
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
+        if (hasConfigMongocfg()) {
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfigMongos()) {
+          hash = (37 * hash) + CONFIG_MONGOS_FIELD_NUMBER;
+          hash = (53 * hash) + getConfigMongos().hashCode();
+        }
+        if (hasConfigMongocfg()) {
+          hash = (37 * hash) + CONFIG_MONGOCFG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfigMongocfg().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configMongosBuilder_ == null) {
+            configMongos_ = null;
+          } else {
+            configMongos_ = null;
+            configMongosBuilder_ = null;
+          }
+          if (configMongocfgBuilder_ == null) {
+            configMongocfg_ = null;
+          } else {
+            configMongocfg_ = null;
+            configMongocfgBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra(this);
+          if (configMongosBuilder_ == null) {
+            result.configMongos_ = configMongos_;
+          } else {
+            result.configMongos_ = configMongosBuilder_.build();
+          }
+          if (configMongocfgBuilder_ == null) {
+            result.configMongocfg_ = configMongocfg_;
+          } else {
+            result.configMongocfg_ = configMongocfgBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.getDefaultInstance()) return this;
+          if (other.hasConfigMongos()) {
+            mergeConfigMongos(other.getConfigMongos());
+          }
+          if (other.hasConfigMongocfg()) {
+            mergeConfigMongocfg(other.getConfigMongocfg());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 configMongos_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder> configMongosBuilder_;
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
+         */
+        public boolean hasConfigMongos() {
+          return configMongosBuilder_ != null || configMongos_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         * @return The configMongos.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 getConfigMongos() {
+          if (configMongosBuilder_ == null) {
+            return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.getDefaultInstance() : configMongos_;
+          } else {
+            return configMongosBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        public Builder setConfigMongos(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 value) {
+          if (configMongosBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            configMongos_ = value;
+            onChanged();
+          } else {
+            configMongosBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        public Builder setConfigMongos(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder builderForValue) {
+          if (configMongosBuilder_ == null) {
+            configMongos_ = builderForValue.build();
+            onChanged();
+          } else {
+            configMongosBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        public Builder mergeConfigMongos(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0 value) {
+          if (configMongosBuilder_ == null) {
+            if (configMongos_ != null) {
+              configMongos_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.newBuilder(configMongos_).mergeFrom(value).buildPartial();
+            } else {
+              configMongos_ = value;
+            }
+            onChanged();
+          } else {
+            configMongosBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        public Builder clearConfigMongos() {
+          if (configMongosBuilder_ == null) {
+            configMongos_ = null;
+            onChanged();
+          } else {
+            configMongos_ = null;
+            configMongosBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder getConfigMongosBuilder() {
+          
+          onChanged();
+          return getConfigMongosFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder getConfigMongosOrBuilder() {
+          if (configMongosBuilder_ != null) {
+            return configMongosBuilder_.getMessageOrBuilder();
+          } else {
+            return configMongos_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.getDefaultInstance() : configMongos_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0 config_mongos = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder> 
+            getConfigMongosFieldBuilder() {
+          if (configMongosBuilder_ == null) {
+            configMongosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongosConfigSet6_0OrBuilder>(
+                    getConfigMongos(),
+                    getParentForChildren(),
+                    isClean());
+            configMongos_ = null;
+          }
+          return configMongosBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 configMongocfg_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder> configMongocfgBuilder_;
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
+         */
+        public boolean hasConfigMongocfg() {
+          return configMongocfgBuilder_ != null || configMongocfg_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         * @return The configMongocfg.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 getConfigMongocfg() {
+          if (configMongocfgBuilder_ == null) {
+            return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.getDefaultInstance() : configMongocfg_;
+          } else {
+            return configMongocfgBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        public Builder setConfigMongocfg(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 value) {
+          if (configMongocfgBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            configMongocfg_ = value;
+            onChanged();
+          } else {
+            configMongocfgBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        public Builder setConfigMongocfg(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder builderForValue) {
+          if (configMongocfgBuilder_ == null) {
+            configMongocfg_ = builderForValue.build();
+            onChanged();
+          } else {
+            configMongocfgBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        public Builder mergeConfigMongocfg(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0 value) {
+          if (configMongocfgBuilder_ == null) {
+            if (configMongocfg_ != null) {
+              configMongocfg_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.newBuilder(configMongocfg_).mergeFrom(value).buildPartial();
+            } else {
+              configMongocfg_ = value;
+            }
+            onChanged();
+          } else {
+            configMongocfgBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        public Builder clearConfigMongocfg() {
+          if (configMongocfgBuilder_ == null) {
+            configMongocfg_ = null;
+            onChanged();
+          } else {
+            configMongocfg_ = null;
+            configMongocfgBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder getConfigMongocfgBuilder() {
+          
+          onChanged();
+          return getConfigMongocfgFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder getConfigMongocfgOrBuilder() {
+          if (configMongocfgBuilder_ != null) {
+            return configMongocfgBuilder_.getMessageOrBuilder();
+          } else {
+            return configMongocfg_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.getDefaultInstance() : configMongocfg_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0 config_mongocfg = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder> 
+            getConfigMongocfgFieldBuilder() {
+          if (configMongocfgBuilder_ == null) {
+            configMongocfgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongoCfgConfigSet6_0OrBuilder>(
+                    getConfigMongocfg(),
+                    getParentForChildren(),
+                    isClean());
+            configMongocfg_ = null;
+          }
+          return configMongocfgBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MongoInfra>
+          PARSER = new com.google.protobuf.AbstractParser<MongoInfra>() {
+        @java.lang.Override
+        public MongoInfra parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MongoInfra(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MongoInfra> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MongoInfra> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int MONGOD_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod mongod_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongod() {
+      return mongod_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+     * @return The mongod.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod getMongod() {
+      return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.getDefaultInstance() : mongod_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder getMongodOrBuilder() {
+      return getMongod();
+    }
+
+    public static final int MONGOCFG_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg mongocfg_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongocfg() {
+      return mongocfg_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg getMongocfg() {
+      return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.getDefaultInstance() : mongocfg_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder getMongocfgOrBuilder() {
+      return getMongocfg();
+    }
+
+    public static final int MONGOS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos mongos_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongos() {
+      return mongos_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+     * @return The mongos.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos getMongos() {
+      return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.getDefaultInstance() : mongos_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder getMongosOrBuilder() {
+      return getMongos();
+    }
+
+    public static final int MONGOINFRA_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra mongoinfra_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongoinfra() {
+      return mongoinfra_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra getMongoinfra() {
+      return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.getDefaultInstance() : mongoinfra_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder getMongoinfraOrBuilder() {
+      return getMongoinfra();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mongod_ != null) {
+        output.writeMessage(1, getMongod());
+      }
+      if (mongocfg_ != null) {
+        output.writeMessage(2, getMongocfg());
+      }
+      if (mongos_ != null) {
+        output.writeMessage(3, getMongos());
+      }
+      if (mongoinfra_ != null) {
+        output.writeMessage(4, getMongoinfra());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mongod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMongod());
+      }
+      if (mongocfg_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMongocfg());
+      }
+      if (mongos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMongos());
+      }
+      if (mongoinfra_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMongoinfra());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) obj;
+
+      if (hasMongod() != other.hasMongod()) return false;
+      if (hasMongod()) {
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
+      }
+      if (hasMongocfg() != other.hasMongocfg()) return false;
+      if (hasMongocfg()) {
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
+      }
+      if (hasMongos() != other.hasMongos()) return false;
+      if (hasMongos()) {
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
+      }
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
+      if (hasMongoinfra()) {
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMongod()) {
+        hash = (37 * hash) + MONGOD_FIELD_NUMBER;
+        hash = (53 * hash) + getMongod().hashCode();
+      }
+      if (hasMongocfg()) {
+        hash = (37 * hash) + MONGOCFG_FIELD_NUMBER;
+        hash = (53 * hash) + getMongocfg().hashCode();
+      }
+      if (hasMongos()) {
+        hash = (37 * hash) + MONGOS_FIELD_NUMBER;
+        hash = (53 * hash) + getMongos().hashCode();
+      }
+      if (hasMongoinfra()) {
+        hash = (37 * hash) + MONGOINFRA_FIELD_NUMBER;
+        hash = (53 * hash) + getMongoinfra().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (mongodBuilder_ == null) {
+          mongod_ = null;
+        } else {
+          mongod_ = null;
+          mongodBuilder_ = null;
+        }
+        if (mongocfgBuilder_ == null) {
+          mongocfg_ = null;
+        } else {
+          mongocfg_ = null;
+          mongocfgBuilder_ = null;
+        }
+        if (mongosBuilder_ == null) {
+          mongos_ = null;
+        } else {
+          mongos_ = null;
+          mongosBuilder_ = null;
+        }
+        if (mongoinfraBuilder_ == null) {
+          mongoinfra_ = null;
+        } else {
+          mongoinfra_ = null;
+          mongoinfraBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0(this);
+        if (mongodBuilder_ == null) {
+          result.mongod_ = mongod_;
+        } else {
+          result.mongod_ = mongodBuilder_.build();
+        }
+        if (mongocfgBuilder_ == null) {
+          result.mongocfg_ = mongocfg_;
+        } else {
+          result.mongocfg_ = mongocfgBuilder_.build();
+        }
+        if (mongosBuilder_ == null) {
+          result.mongos_ = mongos_;
+        } else {
+          result.mongos_ = mongosBuilder_.build();
+        }
+        if (mongoinfraBuilder_ == null) {
+          result.mongoinfra_ = mongoinfra_;
+        } else {
+          result.mongoinfra_ = mongoinfraBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.getDefaultInstance()) return this;
+        if (other.hasMongod()) {
+          mergeMongod(other.getMongod());
+        }
+        if (other.hasMongocfg()) {
+          mergeMongocfg(other.getMongocfg());
+        }
+        if (other.hasMongos()) {
+          mergeMongos(other.getMongos());
+        }
+        if (other.hasMongoinfra()) {
+          mergeMongoinfra(other.getMongoinfra());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod mongod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder> mongodBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
+       */
+      public boolean hasMongod() {
+        return mongodBuilder_ != null || mongod_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       * @return The mongod.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod getMongod() {
+        if (mongodBuilder_ == null) {
+          return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.getDefaultInstance() : mongod_;
+        } else {
+          return mongodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      public Builder setMongod(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod value) {
+        if (mongodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongod_ = value;
+          onChanged();
+        } else {
+          mongodBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      public Builder setMongod(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder builderForValue) {
+        if (mongodBuilder_ == null) {
+          mongod_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongodBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      public Builder mergeMongod(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod value) {
+        if (mongodBuilder_ == null) {
+          if (mongod_ != null) {
+            mongod_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.newBuilder(mongod_).mergeFrom(value).buildPartial();
+          } else {
+            mongod_ = value;
+          }
+          onChanged();
+        } else {
+          mongodBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      public Builder clearMongod() {
+        if (mongodBuilder_ == null) {
+          mongod_ = null;
+          onChanged();
+        } else {
+          mongod_ = null;
+          mongodBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder getMongodBuilder() {
+        
+        onChanged();
+        return getMongodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder getMongodOrBuilder() {
+        if (mongodBuilder_ != null) {
+          return mongodBuilder_.getMessageOrBuilder();
+        } else {
+          return mongod_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.getDefaultInstance() : mongod_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod mongod = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder> 
+          getMongodFieldBuilder() {
+        if (mongodBuilder_ == null) {
+          mongodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongodOrBuilder>(
+                  getMongod(),
+                  getParentForChildren(),
+                  isClean());
+          mongod_ = null;
+        }
+        return mongodBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg mongocfg_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder> mongocfgBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
+       */
+      public boolean hasMongocfg() {
+        return mongocfgBuilder_ != null || mongocfg_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg getMongocfg() {
+        if (mongocfgBuilder_ == null) {
+          return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.getDefaultInstance() : mongocfg_;
+        } else {
+          return mongocfgBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder setMongocfg(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg value) {
+        if (mongocfgBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongocfg_ = value;
+          onChanged();
+        } else {
+          mongocfgBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder setMongocfg(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder builderForValue) {
+        if (mongocfgBuilder_ == null) {
+          mongocfg_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongocfgBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder mergeMongocfg(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg value) {
+        if (mongocfgBuilder_ == null) {
+          if (mongocfg_ != null) {
+            mongocfg_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.newBuilder(mongocfg_).mergeFrom(value).buildPartial();
+          } else {
+            mongocfg_ = value;
+          }
+          onChanged();
+        } else {
+          mongocfgBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder clearMongocfg() {
+        if (mongocfgBuilder_ == null) {
+          mongocfg_ = null;
+          onChanged();
+        } else {
+          mongocfg_ = null;
+          mongocfgBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder getMongocfgBuilder() {
+        
+        onChanged();
+        return getMongocfgFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder getMongocfgOrBuilder() {
+        if (mongocfgBuilder_ != null) {
+          return mongocfgBuilder_.getMessageOrBuilder();
+        } else {
+          return mongocfg_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.getDefaultInstance() : mongocfg_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg mongocfg = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder> 
+          getMongocfgFieldBuilder() {
+        if (mongocfgBuilder_ == null) {
+          mongocfgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoCfgOrBuilder>(
+                  getMongocfg(),
+                  getParentForChildren(),
+                  isClean());
+          mongocfg_ = null;
+        }
+        return mongocfgBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos mongos_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder> mongosBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
+       */
+      public boolean hasMongos() {
+        return mongosBuilder_ != null || mongos_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       * @return The mongos.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos getMongos() {
+        if (mongosBuilder_ == null) {
+          return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.getDefaultInstance() : mongos_;
+        } else {
+          return mongosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      public Builder setMongos(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos value) {
+        if (mongosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongos_ = value;
+          onChanged();
+        } else {
+          mongosBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      public Builder setMongos(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder builderForValue) {
+        if (mongosBuilder_ == null) {
+          mongos_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongosBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      public Builder mergeMongos(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos value) {
+        if (mongosBuilder_ == null) {
+          if (mongos_ != null) {
+            mongos_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.newBuilder(mongos_).mergeFrom(value).buildPartial();
+          } else {
+            mongos_ = value;
+          }
+          onChanged();
+        } else {
+          mongosBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      public Builder clearMongos() {
+        if (mongosBuilder_ == null) {
+          mongos_ = null;
+          onChanged();
+        } else {
+          mongos_ = null;
+          mongosBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder getMongosBuilder() {
+        
+        onChanged();
+        return getMongosFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder getMongosOrBuilder() {
+        if (mongosBuilder_ != null) {
+          return mongosBuilder_.getMessageOrBuilder();
+        } else {
+          return mongos_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.getDefaultInstance() : mongos_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos mongos = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder> 
+          getMongosFieldBuilder() {
+        if (mongosBuilder_ == null) {
+          mongosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongosOrBuilder>(
+                  getMongos(),
+                  getParentForChildren(),
+                  isClean());
+          mongos_ = null;
+        }
+        return mongosBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra mongoinfra_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder> mongoinfraBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
+       */
+      public boolean hasMongoinfra() {
+        return mongoinfraBuilder_ != null || mongoinfra_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra getMongoinfra() {
+        if (mongoinfraBuilder_ == null) {
+          return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.getDefaultInstance() : mongoinfra_;
+        } else {
+          return mongoinfraBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder setMongoinfra(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra value) {
+        if (mongoinfraBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongoinfra_ = value;
+          onChanged();
+        } else {
+          mongoinfraBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder setMongoinfra(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder builderForValue) {
+        if (mongoinfraBuilder_ == null) {
+          mongoinfra_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongoinfraBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder mergeMongoinfra(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra value) {
+        if (mongoinfraBuilder_ == null) {
+          if (mongoinfra_ != null) {
+            mongoinfra_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.newBuilder(mongoinfra_).mergeFrom(value).buildPartial();
+          } else {
+            mongoinfra_ = value;
+          }
+          onChanged();
+        } else {
+          mongoinfraBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder clearMongoinfra() {
+        if (mongoinfraBuilder_ == null) {
+          mongoinfra_ = null;
+          onChanged();
+        } else {
+          mongoinfra_ = null;
+          mongoinfraBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder getMongoinfraBuilder() {
+        
+        onChanged();
+        return getMongoinfraFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder getMongoinfraOrBuilder() {
+        if (mongoinfraBuilder_ != null) {
+          return mongoinfraBuilder_.getMessageOrBuilder();
+        } else {
+          return mongoinfra_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.getDefaultInstance() : mongoinfra_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra mongoinfra = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder> 
+          getMongoinfraFieldBuilder() {
+        if (mongoinfraBuilder_ == null) {
+          mongoinfraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0.MongoInfraOrBuilder>(
+                  getMongoinfra(),
+                  getParentForChildren(),
+                  isClean());
+          mongoinfra_ = null;
+        }
+        return mongoinfraBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Mongodb6_0>
+        PARSER = new com.google.protobuf.AbstractParser<Mongodb6_0>() {
+      @java.lang.Override
+      public Mongodb6_0 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Mongodb6_0(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Mongodb6_0> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Mongodb6_0> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Mongodb6_0_enterpriseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
+     */
+    boolean hasMongod();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+     * @return The mongod.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod getMongod();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder getMongodOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
+     */
+    boolean hasMongocfg();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg getMongocfg();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder getMongocfgOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
+     */
+    boolean hasMongos();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+     * @return The mongos.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos getMongos();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder getMongosOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
+     */
+    boolean hasMongoinfra();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra getMongoinfra();
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder getMongoinfraOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise}
+   */
+  public static final class Mongodb6_0_enterprise extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise)
+      Mongodb6_0_enterpriseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Mongodb6_0_enterprise.newBuilder() to construct.
+    private Mongodb6_0_enterprise(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Mongodb6_0_enterprise() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mongodb6_0_enterprise();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Mongodb6_0_enterprise(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder subBuilder = null;
+              if (mongod_ != null) {
+                subBuilder = mongod_.toBuilder();
+              }
+              mongod_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongod_);
+                mongod_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder subBuilder = null;
+              if (mongocfg_ != null) {
+                subBuilder = mongocfg_.toBuilder();
+              }
+              mongocfg_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongocfg_);
+                mongocfg_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder subBuilder = null;
+              if (mongos_ != null) {
+                subBuilder = mongos_.toBuilder();
+              }
+              mongos_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongos_);
+                mongos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder subBuilder = null;
+              if (mongoinfra_ != null) {
+                subBuilder = mongoinfra_.toBuilder();
+              }
+              mongoinfra_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mongoinfra_);
+                mongoinfra_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder.class);
+    }
+
+    public interface MongodOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+       * @return The config.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise getConfig();
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod}
+     */
+    public static final class Mongod extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod)
+        MongodOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Mongod.newBuilder() to construct.
+      private Mongod(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Mongod() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongod();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Mongod(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder.class);
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise config_;
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise getConfig() {
+        return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.getDefaultInstance() : config_;
+      }
+      /**
+       * <pre>
+       * Configuration for mongod 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongod hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (config_ != null) {
+          output.writeMessage(1, getConfig());
+        }
+        if (resources_ != null) {
+          output.writeMessage(2, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfig());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod) obj;
+
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod(this);
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.getDefaultInstance()) return this;
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterpriseOrBuilder> configBuilder_;
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         * @return The config.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder setConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder setConfig(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder mergeConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongod 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongodConfigSet6_0_enterprise config = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterpriseOrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongodConfigSet6_0_enterpriseOrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongod hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Mongod>
+          PARSER = new com.google.protobuf.AbstractParser<Mongod>() {
+        @java.lang.Override
+        public Mongod parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Mongod(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Mongod> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Mongod> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MongoCfgOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+       * @return The config.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise getConfig();
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg}
+     */
+    public static final class MongoCfg extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg)
+        MongoCfgOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MongoCfg.newBuilder() to construct.
+      private MongoCfg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MongoCfg() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoCfg();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MongoCfg(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder.class);
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise config_;
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise getConfig() {
+        return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.getDefaultInstance() : config_;
+      }
+      /**
+       * <pre>
+       * Configuration for mongocfg 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongocfg hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (config_ != null) {
+          output.writeMessage(1, getConfig());
+        }
+        if (resources_ != null) {
+          output.writeMessage(2, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfig());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg) obj;
+
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg(this);
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.getDefaultInstance()) return this;
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder> configBuilder_;
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         * @return The config.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder setConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder setConfig(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder mergeConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongocfg 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongocfg hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MongoCfg>
+          PARSER = new com.google.protobuf.AbstractParser<MongoCfg>() {
+        @java.lang.Override
+        public MongoCfg parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MongoCfg(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MongoCfg> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MongoCfg> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MongosOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      boolean hasConfig();
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+       * @return The config.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise getConfig();
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos}
+     */
+    public static final class Mongos extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos)
+        MongosOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Mongos.newBuilder() to construct.
+      private Mongos(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Mongos() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Mongos();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Mongos(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder subBuilder = null;
+                if (config_ != null) {
+                  subBuilder = config_.toBuilder();
+                }
+                config_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(config_);
+                  config_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder.class);
+      }
+
+      public static final int CONFIG_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise config_;
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+       * @return Whether the config field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfig() {
+        return config_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+       * @return The config.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise getConfig() {
+        return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.getDefaultInstance() : config_;
+      }
+      /**
+       * <pre>
+       * Configuration for mongos 6.0 hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder() {
+        return getConfig();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongos hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (config_ != null) {
+          output.writeMessage(1, getConfig());
+        }
+        if (resources_ != null) {
+          output.writeMessage(2, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (config_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfig());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos) obj;
+
+        if (hasConfig() != other.hasConfig()) return false;
+        if (hasConfig()) {
+          if (!getConfig()
+              .equals(other.getConfig())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfig()) {
+          hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfig().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configBuilder_ == null) {
+            config_ = null;
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos(this);
+          if (configBuilder_ == null) {
+            result.config_ = config_;
+          } else {
+            result.config_ = configBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.getDefaultInstance()) return this;
+          if (other.hasConfig()) {
+            mergeConfig(other.getConfig());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise config_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder> configBuilder_;
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         * @return Whether the config field is set.
+         */
+        public boolean hasConfig() {
+          return configBuilder_ != null || config_ != null;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         * @return The config.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise getConfig() {
+          if (configBuilder_ == null) {
+            return config_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.getDefaultInstance() : config_;
+          } else {
+            return configBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder setConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise value) {
+          if (configBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            config_ = value;
+            onChanged();
+          } else {
+            configBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder setConfig(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder builderForValue) {
+          if (configBuilder_ == null) {
+            config_ = builderForValue.build();
+            onChanged();
+          } else {
+            configBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder mergeConfig(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise value) {
+          if (configBuilder_ == null) {
+            if (config_ != null) {
+              config_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.newBuilder(config_).mergeFrom(value).buildPartial();
+            } else {
+              config_ = value;
+            }
+            onChanged();
+          } else {
+            configBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        public Builder clearConfig() {
+          if (configBuilder_ == null) {
+            config_ = null;
+            onChanged();
+          } else {
+            config_ = null;
+            configBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder getConfigBuilder() {
+          
+          onChanged();
+          return getConfigFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder getConfigOrBuilder() {
+          if (configBuilder_ != null) {
+            return configBuilder_.getMessageOrBuilder();
+          } else {
+            return config_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.getDefaultInstance() : config_;
+          }
+        }
+        /**
+         * <pre>
+         * Configuration for mongos 6.0 hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder> 
+            getConfigFieldBuilder() {
+          if (configBuilder_ == null) {
+            configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder>(
+                    getConfig(),
+                    getParentForChildren(),
+                    isClean());
+            config_ = null;
+          }
+          return configBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongos hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Mongos>
+          PARSER = new com.google.protobuf.AbstractParser<Mongos>() {
+        @java.lang.Override
+        public Mongos parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Mongos(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Mongos> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Mongos> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MongoInfraOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
+       */
+      boolean hasConfigMongos();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+       * @return The configMongos.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise getConfigMongos();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder getConfigMongosOrBuilder();
+
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
+       */
+      boolean hasConfigMongocfg();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+       * @return The configMongocfg.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise getConfigMongocfg();
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder getConfigMongocfgOrBuilder();
+
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra}
+     */
+    public static final class MongoInfra extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra)
+        MongoInfraOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MongoInfra.newBuilder() to construct.
+      private MongoInfra(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MongoInfra() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MongoInfra();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MongoInfra(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder subBuilder = null;
+                if (configMongos_ != null) {
+                  subBuilder = configMongos_.toBuilder();
+                }
+                configMongos_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(configMongos_);
+                  configMongos_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder subBuilder = null;
+                if (configMongocfg_ != null) {
+                  subBuilder = configMongocfg_.toBuilder();
+                }
+                configMongocfg_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(configMongocfg_);
+                  configMongocfg_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder.class);
+      }
+
+      public static final int CONFIG_MONGOS_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise configMongos_;
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+       * @return Whether the configMongos field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfigMongos() {
+        return configMongos_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+       * @return The configMongos.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise getConfigMongos() {
+        return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.getDefaultInstance() : configMongos_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder getConfigMongosOrBuilder() {
+        return getConfigMongos();
+      }
+
+      public static final int CONFIG_MONGOCFG_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise configMongocfg_;
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+       * @return Whether the configMongocfg field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfigMongocfg() {
+        return configMongocfg_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+       * @return The configMongocfg.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise getConfigMongocfg() {
+        return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.getDefaultInstance() : configMongocfg_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder getConfigMongocfgOrBuilder() {
+        return getConfigMongocfg();
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (configMongos_ != null) {
+          output.writeMessage(1, getConfigMongos());
+        }
+        if (configMongocfg_ != null) {
+          output.writeMessage(2, getConfigMongocfg());
+        }
+        if (resources_ != null) {
+          output.writeMessage(3, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (configMongos_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getConfigMongos());
+        }
+        if (configMongocfg_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getConfigMongocfg());
+        }
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra) obj;
+
+        if (hasConfigMongos() != other.hasConfigMongos()) return false;
+        if (hasConfigMongos()) {
+          if (!getConfigMongos()
+              .equals(other.getConfigMongos())) return false;
+        }
+        if (hasConfigMongocfg() != other.hasConfigMongocfg()) return false;
+        if (hasConfigMongocfg()) {
+          if (!getConfigMongocfg()
+              .equals(other.getConfigMongocfg())) return false;
+        }
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasConfigMongos()) {
+          hash = (37 * hash) + CONFIG_MONGOS_FIELD_NUMBER;
+          hash = (53 * hash) + getConfigMongos().hashCode();
+        }
+        if (hasConfigMongocfg()) {
+          hash = (37 * hash) + CONFIG_MONGOCFG_FIELD_NUMBER;
+          hash = (53 * hash) + getConfigMongocfg().hashCode();
+        }
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (configMongosBuilder_ == null) {
+            configMongos_ = null;
+          } else {
+            configMongos_ = null;
+            configMongosBuilder_ = null;
+          }
+          if (configMongocfgBuilder_ == null) {
+            configMongocfg_ = null;
+          } else {
+            configMongocfg_ = null;
+            configMongocfgBuilder_ = null;
+          }
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra(this);
+          if (configMongosBuilder_ == null) {
+            result.configMongos_ = configMongos_;
+          } else {
+            result.configMongos_ = configMongosBuilder_.build();
+          }
+          if (configMongocfgBuilder_ == null) {
+            result.configMongocfg_ = configMongocfg_;
+          } else {
+            result.configMongocfg_ = configMongocfgBuilder_.build();
+          }
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.getDefaultInstance()) return this;
+          if (other.hasConfigMongos()) {
+            mergeConfigMongos(other.getConfigMongos());
+          }
+          if (other.hasConfigMongocfg()) {
+            mergeConfigMongocfg(other.getConfigMongocfg());
+          }
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise configMongos_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder> configMongosBuilder_;
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         * @return Whether the configMongos field is set.
+         */
+        public boolean hasConfigMongos() {
+          return configMongosBuilder_ != null || configMongos_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         * @return The configMongos.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise getConfigMongos() {
+          if (configMongosBuilder_ == null) {
+            return configMongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.getDefaultInstance() : configMongos_;
+          } else {
+            return configMongosBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        public Builder setConfigMongos(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise value) {
+          if (configMongosBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            configMongos_ = value;
+            onChanged();
+          } else {
+            configMongosBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        public Builder setConfigMongos(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder builderForValue) {
+          if (configMongosBuilder_ == null) {
+            configMongos_ = builderForValue.build();
+            onChanged();
+          } else {
+            configMongosBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        public Builder mergeConfigMongos(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise value) {
+          if (configMongosBuilder_ == null) {
+            if (configMongos_ != null) {
+              configMongos_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.newBuilder(configMongos_).mergeFrom(value).buildPartial();
+            } else {
+              configMongos_ = value;
+            }
+            onChanged();
+          } else {
+            configMongosBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        public Builder clearConfigMongos() {
+          if (configMongosBuilder_ == null) {
+            configMongos_ = null;
+            onChanged();
+          } else {
+            configMongos_ = null;
+            configMongosBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder getConfigMongosBuilder() {
+          
+          onChanged();
+          return getConfigMongosFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder getConfigMongosOrBuilder() {
+          if (configMongosBuilder_ != null) {
+            return configMongosBuilder_.getMessageOrBuilder();
+          } else {
+            return configMongos_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.getDefaultInstance() : configMongos_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongosConfigSet6_0_enterprise config_mongos = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder> 
+            getConfigMongosFieldBuilder() {
+          if (configMongosBuilder_ == null) {
+            configMongosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongosConfigSet6_0_enterpriseOrBuilder>(
+                    getConfigMongos(),
+                    getParentForChildren(),
+                    isClean());
+            configMongos_ = null;
+          }
+          return configMongosBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise configMongocfg_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder> configMongocfgBuilder_;
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         * @return Whether the configMongocfg field is set.
+         */
+        public boolean hasConfigMongocfg() {
+          return configMongocfgBuilder_ != null || configMongocfg_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         * @return The configMongocfg.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise getConfigMongocfg() {
+          if (configMongocfgBuilder_ == null) {
+            return configMongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.getDefaultInstance() : configMongocfg_;
+          } else {
+            return configMongocfgBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        public Builder setConfigMongocfg(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise value) {
+          if (configMongocfgBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            configMongocfg_ = value;
+            onChanged();
+          } else {
+            configMongocfgBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        public Builder setConfigMongocfg(
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder builderForValue) {
+          if (configMongocfgBuilder_ == null) {
+            configMongocfg_ = builderForValue.build();
+            onChanged();
+          } else {
+            configMongocfgBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        public Builder mergeConfigMongocfg(yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise value) {
+          if (configMongocfgBuilder_ == null) {
+            if (configMongocfg_ != null) {
+              configMongocfg_ =
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.newBuilder(configMongocfg_).mergeFrom(value).buildPartial();
+            } else {
+              configMongocfg_ = value;
+            }
+            onChanged();
+          } else {
+            configMongocfgBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        public Builder clearConfigMongocfg() {
+          if (configMongocfgBuilder_ == null) {
+            configMongocfg_ = null;
+            onChanged();
+          } else {
+            configMongocfg_ = null;
+            configMongocfgBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder getConfigMongocfgBuilder() {
+          
+          onChanged();
+          return getConfigMongocfgFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder getConfigMongocfgOrBuilder() {
+          if (configMongocfgBuilder_ != null) {
+            return configMongocfgBuilder_.getMessageOrBuilder();
+          } else {
+            return configMongocfg_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.getDefaultInstance() : configMongocfg_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.mongodb.v1.config.MongoCfgConfigSet6_0_enterprise config_mongocfg = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder> 
+            getConfigMongocfgFieldBuilder() {
+          if (configMongocfgBuilder_ == null) {
+            configMongocfgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterprise.Builder, yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.MongoCfgConfigSet6_0_enterpriseOrBuilder>(
+                    getConfigMongocfg(),
+                    getParentForChildren(),
+                    isClean());
+            configMongocfg_ = null;
+          }
+          return configMongocfgBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to mongoinfra (mongos+mongocfg) hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MongoInfra>
+          PARSER = new com.google.protobuf.AbstractParser<MongoInfra>() {
+        @java.lang.Override
+        public MongoInfra parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MongoInfra(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MongoInfra> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MongoInfra> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int MONGOD_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod mongod_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+     * @return Whether the mongod field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongod() {
+      return mongod_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+     * @return The mongod.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod getMongod() {
+      return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.getDefaultInstance() : mongod_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder getMongodOrBuilder() {
+      return getMongod();
+    }
+
+    public static final int MONGOCFG_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg mongocfg_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return Whether the mongocfg field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongocfg() {
+      return mongocfg_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+     * @return The mongocfg.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg getMongocfg() {
+      return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.getDefaultInstance() : mongocfg_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder getMongocfgOrBuilder() {
+      return getMongocfg();
+    }
+
+    public static final int MONGOS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos mongos_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+     * @return Whether the mongos field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongos() {
+      return mongos_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+     * @return The mongos.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos getMongos() {
+      return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.getDefaultInstance() : mongos_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder getMongosOrBuilder() {
+      return getMongos();
+    }
+
+    public static final int MONGOINFRA_FIELD_NUMBER = 4;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra mongoinfra_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return Whether the mongoinfra field is set.
+     */
+    @java.lang.Override
+    public boolean hasMongoinfra() {
+      return mongoinfra_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     * @return The mongoinfra.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra getMongoinfra() {
+      return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.getDefaultInstance() : mongoinfra_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder getMongoinfraOrBuilder() {
+      return getMongoinfra();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mongod_ != null) {
+        output.writeMessage(1, getMongod());
+      }
+      if (mongocfg_ != null) {
+        output.writeMessage(2, getMongocfg());
+      }
+      if (mongos_ != null) {
+        output.writeMessage(3, getMongos());
+      }
+      if (mongoinfra_ != null) {
+        output.writeMessage(4, getMongoinfra());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mongod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMongod());
+      }
+      if (mongocfg_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMongocfg());
+      }
+      if (mongos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMongos());
+      }
+      if (mongoinfra_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMongoinfra());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) obj;
+
+      if (hasMongod() != other.hasMongod()) return false;
+      if (hasMongod()) {
+        if (!getMongod()
+            .equals(other.getMongod())) return false;
+      }
+      if (hasMongocfg() != other.hasMongocfg()) return false;
+      if (hasMongocfg()) {
+        if (!getMongocfg()
+            .equals(other.getMongocfg())) return false;
+      }
+      if (hasMongos() != other.hasMongos()) return false;
+      if (hasMongos()) {
+        if (!getMongos()
+            .equals(other.getMongos())) return false;
+      }
+      if (hasMongoinfra() != other.hasMongoinfra()) return false;
+      if (hasMongoinfra()) {
+        if (!getMongoinfra()
+            .equals(other.getMongoinfra())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMongod()) {
+        hash = (37 * hash) + MONGOD_FIELD_NUMBER;
+        hash = (53 * hash) + getMongod().hashCode();
+      }
+      if (hasMongocfg()) {
+        hash = (37 * hash) + MONGOCFG_FIELD_NUMBER;
+        hash = (53 * hash) + getMongocfg().hashCode();
+      }
+      if (hasMongos()) {
+        hash = (37 * hash) + MONGOS_FIELD_NUMBER;
+        hash = (53 * hash) + getMongos().hashCode();
+      }
+      if (hasMongoinfra()) {
+        hash = (37 * hash) + MONGOINFRA_FIELD_NUMBER;
+        hash = (53 * hash) + getMongoinfra().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterpriseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (mongodBuilder_ == null) {
+          mongod_ = null;
+        } else {
+          mongod_ = null;
+          mongodBuilder_ = null;
+        }
+        if (mongocfgBuilder_ == null) {
+          mongocfg_ = null;
+        } else {
+          mongocfg_ = null;
+          mongocfgBuilder_ = null;
+        }
+        if (mongosBuilder_ == null) {
+          mongos_ = null;
+        } else {
+          mongos_ = null;
+          mongosBuilder_ = null;
+        }
+        if (mongoinfraBuilder_ == null) {
+          mongoinfra_ = null;
+        } else {
+          mongoinfra_ = null;
+          mongoinfraBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise(this);
+        if (mongodBuilder_ == null) {
+          result.mongod_ = mongod_;
+        } else {
+          result.mongod_ = mongodBuilder_.build();
+        }
+        if (mongocfgBuilder_ == null) {
+          result.mongocfg_ = mongocfg_;
+        } else {
+          result.mongocfg_ = mongocfgBuilder_.build();
+        }
+        if (mongosBuilder_ == null) {
+          result.mongos_ = mongos_;
+        } else {
+          result.mongos_ = mongosBuilder_.build();
+        }
+        if (mongoinfraBuilder_ == null) {
+          result.mongoinfra_ = mongoinfra_;
+        } else {
+          result.mongoinfra_ = mongoinfraBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.getDefaultInstance()) return this;
+        if (other.hasMongod()) {
+          mergeMongod(other.getMongod());
+        }
+        if (other.hasMongocfg()) {
+          mergeMongocfg(other.getMongocfg());
+        }
+        if (other.hasMongos()) {
+          mergeMongos(other.getMongos());
+        }
+        if (other.hasMongoinfra()) {
+          mergeMongoinfra(other.getMongoinfra());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod mongod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder> mongodBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       * @return Whether the mongod field is set.
+       */
+      public boolean hasMongod() {
+        return mongodBuilder_ != null || mongod_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       * @return The mongod.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod getMongod() {
+        if (mongodBuilder_ == null) {
+          return mongod_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.getDefaultInstance() : mongod_;
+        } else {
+          return mongodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      public Builder setMongod(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod value) {
+        if (mongodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongod_ = value;
+          onChanged();
+        } else {
+          mongodBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      public Builder setMongod(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder builderForValue) {
+        if (mongodBuilder_ == null) {
+          mongod_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongodBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      public Builder mergeMongod(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod value) {
+        if (mongodBuilder_ == null) {
+          if (mongod_ != null) {
+            mongod_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.newBuilder(mongod_).mergeFrom(value).buildPartial();
+          } else {
+            mongod_ = value;
+          }
+          onChanged();
+        } else {
+          mongodBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      public Builder clearMongod() {
+        if (mongodBuilder_ == null) {
+          mongod_ = null;
+          onChanged();
+        } else {
+          mongod_ = null;
+          mongodBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder getMongodBuilder() {
+        
+        onChanged();
+        return getMongodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder getMongodOrBuilder() {
+        if (mongodBuilder_ != null) {
+          return mongodBuilder_.getMessageOrBuilder();
+        } else {
+          return mongod_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.getDefaultInstance() : mongod_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongod in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod mongod = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder> 
+          getMongodFieldBuilder() {
+        if (mongodBuilder_ == null) {
+          mongodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongod.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongodOrBuilder>(
+                  getMongod(),
+                  getParentForChildren(),
+                  isClean());
+          mongod_ = null;
+        }
+        return mongodBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg mongocfg_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder> mongocfgBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       * @return Whether the mongocfg field is set.
+       */
+      public boolean hasMongocfg() {
+        return mongocfgBuilder_ != null || mongocfg_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       * @return The mongocfg.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg getMongocfg() {
+        if (mongocfgBuilder_ == null) {
+          return mongocfg_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.getDefaultInstance() : mongocfg_;
+        } else {
+          return mongocfgBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder setMongocfg(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg value) {
+        if (mongocfgBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongocfg_ = value;
+          onChanged();
+        } else {
+          mongocfgBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder setMongocfg(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder builderForValue) {
+        if (mongocfgBuilder_ == null) {
+          mongocfg_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongocfgBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder mergeMongocfg(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg value) {
+        if (mongocfgBuilder_ == null) {
+          if (mongocfg_ != null) {
+            mongocfg_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.newBuilder(mongocfg_).mergeFrom(value).buildPartial();
+          } else {
+            mongocfg_ = value;
+          }
+          onChanged();
+        } else {
+          mongocfgBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      public Builder clearMongocfg() {
+        if (mongocfgBuilder_ == null) {
+          mongocfg_ = null;
+          onChanged();
+        } else {
+          mongocfg_ = null;
+          mongocfgBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder getMongocfgBuilder() {
+        
+        onChanged();
+        return getMongocfgFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder getMongocfgOrBuilder() {
+        if (mongocfgBuilder_ != null) {
+          return mongocfgBuilder_.getMessageOrBuilder();
+        } else {
+          return mongocfg_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.getDefaultInstance() : mongocfg_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongocfg in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg mongocfg = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder> 
+          getMongocfgFieldBuilder() {
+        if (mongocfgBuilder_ == null) {
+          mongocfgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfg.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoCfgOrBuilder>(
+                  getMongocfg(),
+                  getParentForChildren(),
+                  isClean());
+          mongocfg_ = null;
+        }
+        return mongocfgBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos mongos_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder> mongosBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       * @return Whether the mongos field is set.
+       */
+      public boolean hasMongos() {
+        return mongosBuilder_ != null || mongos_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       * @return The mongos.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos getMongos() {
+        if (mongosBuilder_ == null) {
+          return mongos_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.getDefaultInstance() : mongos_;
+        } else {
+          return mongosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      public Builder setMongos(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos value) {
+        if (mongosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongos_ = value;
+          onChanged();
+        } else {
+          mongosBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      public Builder setMongos(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder builderForValue) {
+        if (mongosBuilder_ == null) {
+          mongos_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongosBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      public Builder mergeMongos(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos value) {
+        if (mongosBuilder_ == null) {
+          if (mongos_ != null) {
+            mongos_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.newBuilder(mongos_).mergeFrom(value).buildPartial();
+          } else {
+            mongos_ = value;
+          }
+          onChanged();
+        } else {
+          mongosBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      public Builder clearMongos() {
+        if (mongosBuilder_ == null) {
+          mongos_ = null;
+          onChanged();
+        } else {
+          mongos_ = null;
+          mongosBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder getMongosBuilder() {
+        
+        onChanged();
+        return getMongosFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder getMongosOrBuilder() {
+        if (mongosBuilder_ != null) {
+          return mongosBuilder_.getMessageOrBuilder();
+        } else {
+          return mongos_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.getDefaultInstance() : mongos_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongos in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos mongos = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder> 
+          getMongosFieldBuilder() {
+        if (mongosBuilder_ == null) {
+          mongosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.Mongos.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongosOrBuilder>(
+                  getMongos(),
+                  getParentForChildren(),
+                  isClean());
+          mongos_ = null;
+        }
+        return mongosBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra mongoinfra_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder> mongoinfraBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       * @return Whether the mongoinfra field is set.
+       */
+      public boolean hasMongoinfra() {
+        return mongoinfraBuilder_ != null || mongoinfra_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       * @return The mongoinfra.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra getMongoinfra() {
+        if (mongoinfraBuilder_ == null) {
+          return mongoinfra_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.getDefaultInstance() : mongoinfra_;
+        } else {
+          return mongoinfraBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder setMongoinfra(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra value) {
+        if (mongoinfraBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mongoinfra_ = value;
+          onChanged();
+        } else {
+          mongoinfraBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder setMongoinfra(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder builderForValue) {
+        if (mongoinfraBuilder_ == null) {
+          mongoinfra_ = builderForValue.build();
+          onChanged();
+        } else {
+          mongoinfraBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder mergeMongoinfra(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra value) {
+        if (mongoinfraBuilder_ == null) {
+          if (mongoinfra_ != null) {
+            mongoinfra_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.newBuilder(mongoinfra_).mergeFrom(value).buildPartial();
+          } else {
+            mongoinfra_ = value;
+          }
+          onChanged();
+        } else {
+          mongoinfraBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      public Builder clearMongoinfra() {
+        if (mongoinfraBuilder_ == null) {
+          mongoinfra_ = null;
+          onChanged();
+        } else {
+          mongoinfra_ = null;
+          mongoinfraBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder getMongoinfraBuilder() {
+        
+        onChanged();
+        return getMongoinfraFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder getMongoinfraOrBuilder() {
+        if (mongoinfraBuilder_ != null) {
+          return mongoinfraBuilder_.getMessageOrBuilder();
+        } else {
+          return mongoinfra_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.getDefaultInstance() : mongoinfra_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for mongoinfra (mongos+mongocfg) in a MongoDB 6.0 cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra mongoinfra = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder> 
+          getMongoinfraFieldBuilder() {
+        if (mongoinfraBuilder_ == null) {
+          mongoinfraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfra.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise.MongoInfraOrBuilder>(
+                  getMongoinfra(),
+                  getParentForChildren(),
+                  isClean());
+          mongoinfra_ = null;
+        }
+        return mongoinfraBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Mongodb6_0_enterprise>
+        PARSER = new com.google.protobuf.AbstractParser<Mongodb6_0_enterprise>() {
+      @java.lang.Override
+      public Mongodb6_0_enterprise parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Mongodb6_0_enterprise(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Mongodb6_0_enterprise> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Mongodb6_0_enterprise> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Mongodb6_0_enterprise getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ShardOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Shard)
       com.google.protobuf.MessageOrBuilder {
@@ -52861,7 +64493,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allow access for DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -52970,7 +64602,7 @@ public final class ClusterOuterClass {
     private boolean dataLens_;
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allow access for DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -53320,7 +64952,7 @@ public final class ClusterOuterClass {
       private boolean dataLens_ ;
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allow access for DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -53332,7 +64964,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allow access for DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -53347,7 +64979,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allow access for DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -53450,6 +65082,495 @@ public final class ClusterOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Access getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PerformanceDiagnosticsConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool profiling_enabled = 1;</code>
+     * @return The profilingEnabled.
+     */
+    boolean getProfilingEnabled();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig}
+   */
+  public static final class PerformanceDiagnosticsConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig)
+      PerformanceDiagnosticsConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PerformanceDiagnosticsConfig.newBuilder() to construct.
+    private PerformanceDiagnosticsConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PerformanceDiagnosticsConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PerformanceDiagnosticsConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PerformanceDiagnosticsConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              profilingEnabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder.class);
+    }
+
+    public static final int PROFILING_ENABLED_FIELD_NUMBER = 1;
+    private boolean profilingEnabled_;
+    /**
+     * <code>bool profiling_enabled = 1;</code>
+     * @return The profilingEnabled.
+     */
+    @java.lang.Override
+    public boolean getProfilingEnabled() {
+      return profilingEnabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (profilingEnabled_ != false) {
+        output.writeBool(1, profilingEnabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (profilingEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, profilingEnabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig) obj;
+
+      if (getProfilingEnabled()
+          != other.getProfilingEnabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROFILING_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getProfilingEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        profilingEnabled_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig(this);
+        result.profilingEnabled_ = profilingEnabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig.getDefaultInstance()) return this;
+        if (other.getProfilingEnabled() != false) {
+          setProfilingEnabled(other.getProfilingEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean profilingEnabled_ ;
+      /**
+       * <code>bool profiling_enabled = 1;</code>
+       * @return The profilingEnabled.
+       */
+      @java.lang.Override
+      public boolean getProfilingEnabled() {
+        return profilingEnabled_;
+      }
+      /**
+       * <code>bool profiling_enabled = 1;</code>
+       * @param value The profilingEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProfilingEnabled(boolean value) {
+        
+        profilingEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool profiling_enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProfilingEnabled() {
+        
+        profilingEnabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.PerformanceDiagnosticsConfig)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PerformanceDiagnosticsConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PerformanceDiagnosticsConfig>() {
+      @java.lang.Override
+      public PerformanceDiagnosticsConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PerformanceDiagnosticsConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PerformanceDiagnosticsConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PerformanceDiagnosticsConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.PerformanceDiagnosticsConfig getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -53651,6 +65772,56 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoInfra_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_Shard_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -53675,6 +65846,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_Access_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -53698,258 +65874,319 @@ public final class ClusterOuterClass {
       "to\0323yandex/cloud/mdb/mongodb/v1/config/m" +
       "ongodb5_0.proto\032>yandex/cloud/mdb/mongod" +
       "b/v1/config/mongodb5_0_enterprise.proto\032" +
-      "-yandex/cloud/mdb/mongodb/v1/maintenance" +
-      ".proto\"\245\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder" +
-      "_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descr" +
-      "iption\030\005 \001(\t\022@\n\006labels\030\006 \003(\01320.yandex.cl" +
-      "oud.mdb.mongodb.v1.Cluster.LabelsEntry\022E" +
-      "\n\013environment\030\007 \001(\01620.yandex.cloud.mdb.m" +
-      "ongodb.v1.Cluster.Environment\022;\n\nmonitor" +
-      "ing\030\010 \003(\0132\'.yandex.cloud.mdb.mongodb.v1." +
-      "Monitoring\022:\n\006config\030\t \001(\0132*.yandex.clou" +
-      "d.mdb.mongodb.v1.ClusterConfig\022\022\n\nnetwor" +
-      "k_id\030\n \001(\t\022;\n\006health\030\013 \001(\0162+.yandex.clou" +
-      "d.mdb.mongodb.v1.Cluster.Health\022;\n\006statu" +
-      "s\030\014 \001(\0162+.yandex.cloud.mdb.mongodb.v1.Cl" +
-      "uster.Status\022\017\n\007sharded\030\r \001(\010\022J\n\022mainten" +
-      "ance_window\030\016 \001(\0132..yandex.cloud.mdb.mon" +
-      "godb.v1.MaintenanceWindow\022L\n\021planned_ope" +
-      "ration\030\017 \001(\01321.yandex.cloud.mdb.mongodb." +
-      "v1.MaintenanceOperation\022\032\n\022security_grou" +
-      "p_ids\030\020 \003(\t\022\033\n\023deletion_protection\030\021 \001(\010" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UN" +
-      "SPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE" +
-      "\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n" +
-      "\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNI" +
-      "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
-      "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonito" +
-      "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "\014\n\004link\030\003 \001(\t\"\331\006\n\rClusterConfig\022\017\n\007versi" +
-      "on\030\001 \001(\t\022%\n\035feature_compatibility_versio" +
-      "n\030\005 \001(\t\022K\n\013mongodb_3_6\030\002 \001(\0132\'.yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb3_6H\000R\013mongodb" +
-      "_3_6\022K\n\013mongodb_4_0\030\004 \001(\0132\'.yandex.cloud" +
-      ".mdb.mongodb.v1.Mongodb4_0H\000R\013mongodb_4_" +
-      "0\022K\n\013mongodb_4_2\030\007 \001(\0132\'.yandex.cloud.md" +
-      "b.mongodb.v1.Mongodb4_2H\000R\013mongodb_4_2\022K" +
-      "\n\013mongodb_4_4\030\010 \001(\0132\'.yandex.cloud.mdb.m" +
-      "ongodb.v1.Mongodb4_4H\000R\013mongodb_4_4\022K\n\013m" +
-      "ongodb_5_0\030\n \001(\0132\'.yandex.cloud.mdb.mong" +
-      "odb.v1.Mongodb5_0H\000R\013mongodb_5_0\022l\n\026mong" +
-      "odb_4_4_enterprise\030\013 \001(\01322.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb4_4_enterpriseH\000R\026" +
-      "mongodb_4_4_enterprise\022l\n\026mongodb_5_0_en" +
-      "terprise\030\014 \001(\01322.yandex.cloud.mdb.mongod" +
-      "b.v1.Mongodb5_0_enterpriseH\000R\026mongodb_5_" +
-      "0_enterprise\0223\n\023backup_window_start\030\003 \001(" +
-      "\0132\026.google.type.TimeOfDay\022>\n\031backup_reta" +
-      "in_period_days\030\t \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0223\n\006access\030\006 \001(\0132#.yandex.cloud" +
-      ".mdb.mongodb.v1.AccessB\t\n\007mongodb\"\262\007\n\nMo" +
-      "ngodb3_6\022>\n\006mongod\030\001 \001(\0132..yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb3_6.Mongod\022B\n\010mong" +
-      "ocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1" +
-      ".Mongodb3_6.MongoCfg\022>\n\006mongos\030\003 \001(\0132..y" +
-      "andex.cloud.mdb.mongodb.v1.Mongodb3_6.Mo" +
-      "ngos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb3_6.MongoInfra\032\213\001\n" +
-      "\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongodConfigSet3_6\022" +
-      "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006confi" +
-      "g\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongoCfgConfigSet3_6\0229\n\tresources\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
-      "gSet3_6\0229\n\tresources\030\002 \001(\0132&.yandex.clou" +
-      "d.mdb.mongodb.v1.Resources\032\351\001\n\nMongoInfr" +
-      "a\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.cloud." +
-      "mdb.mongodb.v1.config.MongosConfigSet3_6" +
-      "\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongoCfgConfigSet" +
-      "3_6\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\"\262\007\n\nMongodb4_0\022>\n" +
-      "\006mongod\030\001 \001(\0132..yandex.cloud.mdb.mongodb" +
-      ".v1.Mongodb4_0.Mongod\022B\n\010mongocfg\030\002 \001(\0132" +
-      "0.yandex.cloud.mdb.mongodb.v1.Mongodb4_0" +
-      ".MongoCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud" +
-      ".mdb.mongodb.v1.Mongodb4_0.Mongos\022F\n\nmon" +
-      "goinfra\030\004 \001(\01322.yandex.cloud.mdb.mongodb" +
-      ".v1.Mongodb4_0.MongoInfra\032\213\001\n\006Mongod\022F\n\006" +
-      "config\030\001 \001(\01326.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongodConfigSet4_0\0229\n\tresource" +
-      "s\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\032\217\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.y" +
-      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
-      "fgConfigSet4_0\0229\n\tresources\030\002 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\032\213\001\n\006Mo" +
-      "ngos\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongosConfigSet4_0\0229\n\t" +
-      "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
-      "db.v1.Resources\032\351\001\n\nMongoInfra\022M\n\rconfig" +
-      "_mongos\030\001 \001(\01326.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongosConfigSet4_0\022Q\n\017config_" +
-      "mongocfg\030\002 \001(\01328.yandex.cloud.mdb.mongod" +
-      "b.v1.config.MongoCfgConfigSet4_0\0229\n\treso" +
-      "urces\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
-      "1.Resources\"\262\007\n\nMongodb4_2\022>\n\006mongod\030\001 \001" +
-      "(\0132..yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "4_2.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb4_2.MongoCfg\022>" +
-      "\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mongod" +
-      "b.v1.Mongodb4_2.Mongos\022F\n\nmongoinfra\030\004 \001" +
-      "(\01322.yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "4_2.MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(" +
-      "\01326.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongodConfigSet4_2\0229\n\tresources\030\002 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\032\217\001\n" +
-      "\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongoCfgConfigSet" +
-      "4_2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006con" +
-      "fig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfigSet4_2\0229\n\tresources\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001" +
-      "(\01326.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongosConfigSet4_2\022Q\n\017config_mongocfg\030\002 " +
+      "3yandex/cloud/mdb/mongodb/v1/config/mong" +
+      "odb6_0.proto\032>yandex/cloud/mdb/mongodb/v" +
+      "1/config/mongodb6_0_enterprise.proto\032-ya" +
+      "ndex/cloud/mdb/mongodb/v1/maintenance.pr" +
+      "oto\"\245\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
+      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
+      "ion\030\005 \001(\t\022@\n\006labels\030\006 \003(\01320.yandex.cloud" +
+      ".mdb.mongodb.v1.Cluster.LabelsEntry\022E\n\013e" +
+      "nvironment\030\007 \001(\01620.yandex.cloud.mdb.mong" +
+      "odb.v1.Cluster.Environment\022;\n\nmonitoring" +
+      "\030\010 \003(\0132\'.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "itoring\022:\n\006config\030\t \001(\0132*.yandex.cloud.m" +
+      "db.mongodb.v1.ClusterConfig\022\022\n\nnetwork_i" +
+      "d\030\n \001(\t\022;\n\006health\030\013 \001(\0162+.yandex.cloud.m" +
+      "db.mongodb.v1.Cluster.Health\022;\n\006status\030\014" +
+      " \001(\0162+.yandex.cloud.mdb.mongodb.v1.Clust" +
+      "er.Status\022\017\n\007sharded\030\r \001(\010\022J\n\022maintenanc" +
+      "e_window\030\016 \001(\0132..yandex.cloud.mdb.mongod" +
+      "b.v1.MaintenanceWindow\022L\n\021planned_operat" +
+      "ion\030\017 \001(\01321.yandex.cloud.mdb.mongodb.v1." +
+      "MaintenanceOperation\022\032\n\022security_group_i" +
+      "ds\030\020 \003(\t\022\033\n\023deletion_protection\030\021 \001(\010\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPE" +
+      "CIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"" +
+      "?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
+      "\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016ST" +
+      "ATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020" +
+      "\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005" +
+      "\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitorin" +
+      "g\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004" +
+      "link\030\003 \001(\t\"\360\010\n\rClusterConfig\022\017\n\007version\030" +
+      "\001 \001(\t\022%\n\035feature_compatibility_version\030\005" +
+      " \001(\t\022K\n\013mongodb_3_6\030\002 \001(\0132\'.yandex.cloud" +
+      ".mdb.mongodb.v1.Mongodb3_6H\000R\013mongodb_3_" +
+      "6\022K\n\013mongodb_4_0\030\004 \001(\0132\'.yandex.cloud.md" +
+      "b.mongodb.v1.Mongodb4_0H\000R\013mongodb_4_0\022K" +
+      "\n\013mongodb_4_2\030\007 \001(\0132\'.yandex.cloud.mdb.m" +
+      "ongodb.v1.Mongodb4_2H\000R\013mongodb_4_2\022K\n\013m" +
+      "ongodb_4_4\030\010 \001(\0132\'.yandex.cloud.mdb.mong" +
+      "odb.v1.Mongodb4_4H\000R\013mongodb_4_4\022K\n\013mong" +
+      "odb_5_0\030\n \001(\0132\'.yandex.cloud.mdb.mongodb" +
+      ".v1.Mongodb5_0H\000R\013mongodb_5_0\022K\n\013mongodb" +
+      "_6_0\030\016 \001(\0132\'.yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb6_0H\000R\013mongodb_6_0\022l\n\026mongodb_4_" +
+      "4_enterprise\030\013 \001(\01322.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Mongodb4_4_enterpriseH\000R\026mongod" +
+      "b_4_4_enterprise\022l\n\026mongodb_5_0_enterpri" +
+      "se\030\014 \001(\01322.yandex.cloud.mdb.mongodb.v1.M" +
+      "ongodb5_0_enterpriseH\000R\026mongodb_5_0_ente" +
+      "rprise\022l\n\026mongodb_6_0_enterprise\030\017 \001(\01322" +
+      ".yandex.cloud.mdb.mongodb.v1.Mongodb6_0_" +
+      "enterpriseH\000R\026mongodb_6_0_enterprise\0223\n\023" +
+      "backup_window_start\030\003 \001(\0132\026.google.type." +
+      "TimeOfDay\022>\n\031backup_retain_period_days\030\t" +
+      " \001(\0132\033.google.protobuf.Int64Value\022Z\n\027per" +
+      "formance_diagnostics\030\r \001(\01329.yandex.clou" +
+      "d.mdb.mongodb.v1.PerformanceDiagnosticsC" +
+      "onfig\0223\n\006access\030\006 \001(\0132#.yandex.cloud.mdb" +
+      ".mongodb.v1.AccessB\t\n\007mongodb\"\262\007\n\nMongod" +
+      "b3_6\022>\n\006mongod\030\001 \001(\0132..yandex.cloud.mdb." +
+      "mongodb.v1.Mongodb3_6.Mongod\022B\n\010mongocfg" +
+      "\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godb3_6.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yande" +
+      "x.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos" +
+      "\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cloud.mdb." +
+      "mongodb.v1.Mongodb3_6.MongoInfra\032\213\001\n\006Mon" +
+      "god\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.m" +
+      "ongodb.v1.config.MongodConfigSet3_6\0229\n\tr" +
+      "esources\030\002 \001(\0132&.yandex.cloud.mdb.mongod" +
+      "b.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006config\030\001 " +
       "\001(\01328.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongoCfgConfigSet4_2\0229\n\tresources\030\003 \001(\013" +
+      ".MongoCfgConfigSet3_6\0229\n\tresources\030\002 \001(\013" +
       "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
-      "\"\262\007\n\nMongodb4_4\022>\n\006mongod\030\001 \001(\0132..yandex" +
-      ".cloud.mdb.mongodb.v1.Mongodb4_4.Mongod\022" +
-      "B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.mdb.mon" +
-      "godb.v1.Mongodb4_4.MongoCfg\022>\n\006mongos\030\003 " +
-      "\001(\0132..yandex.cloud.mdb.mongodb.v1.Mongod" +
-      "b4_4.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex" +
-      ".cloud.mdb.mongodb.v1.Mongodb4_4.MongoIn" +
-      "fra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex." +
-      "cloud.mdb.mongodb.v1.config.MongodConfig" +
-      "Set4_4\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
-      ".mdb.mongodb.v1.Resources\032\217\001\n\010MongoCfg\022H" +
-      "\n\006config\030\001 \001(\01328.yandex.cloud.mdb.mongod" +
-      "b.v1.config.MongoCfgConfigSet4_4\0229\n\treso" +
-      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
-      "1.Resources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "osConfigSet4_4\0229\n\tresources\030\002 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\032\351\001\n\nMo" +
-      "ngoInfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
-      "gSet4_4\022Q\n\017config_mongocfg\030\002 \001(\01328.yande" +
+      "\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
+      "3_6\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.md" +
+      "b.mongodb.v1.Resources\032\351\001\n\nMongoInfra\022M\n" +
+      "\rconfig_mongos\030\001 \001(\01326.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongosConfigSet3_6\022Q\n\017" +
+      "config_mongocfg\030\002 \001(\01328.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongoCfgConfigSet3_6\022" +
+      "9\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Resources\"\262\007\n\nMongodb4_0\022>\n\006mon" +
+      "god\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v1." +
+      "Mongodb4_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Mongodb4_0.Mon" +
+      "goCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb" +
+      ".mongodb.v1.Mongodb4_0.Mongos\022F\n\nmongoin" +
+      "fra\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
+      "Mongodb4_0.MongoInfra\032\213\001\n\006Mongod\022F\n\006conf" +
+      "ig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongodConfigSet4_0\0229\n\tresources\030\002 " +
+      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
+      "ces\032\217\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yande" +
       "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
-      "nfigSet4_4\0229\n\tresources\030\003 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\"\240\010\n\025Mongod" +
-      "b4_4_enterprise\022I\n\006mongod\030\001 \001(\01329.yandex" +
-      ".cloud.mdb.mongodb.v1.Mongodb4_4_enterpr" +
-      "ise.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb4_4_enterprise" +
-      ".MongoCfg\022I\n\006mongos\030\003 \001(\01329.yandex.cloud" +
-      ".mdb.mongodb.v1.Mongodb4_4_enterprise.Mo" +
-      "ngos\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb4_4_enterprise.Mon" +
-      "goInfra\032\226\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.yan" +
-      "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
-      "nfigSet4_4_enterprise\0229\n\tresources\030\002 \001(\013" +
-      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
-      "\032\232\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yandex.c" +
-      "loud.mdb.mongodb.v1.config.MongoCfgConfi" +
-      "gSet4_4_enterprise\0229\n\tresources\030\002 \001(\0132&." +
-      "yandex.cloud.mdb.mongodb.v1.Resources\032\226\001" +
-      "\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yandex.cloud." +
-      "mdb.mongodb.v1.config.MongosConfigSet4_4" +
-      "_enterprise\0229\n\tresources\030\002 \001(\0132&.yandex." +
-      "cloud.mdb.mongodb.v1.Resources\032\377\001\n\nMongo" +
-      "Infra\022X\n\rconfig_mongos\030\001 \001(\0132A.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongosConfigSe" +
-      "t4_4_enterprise\022\\\n\017config_mongocfg\030\002 \001(\013" +
-      "2C.yandex.cloud.mdb.mongodb.v1.config.Mo" +
-      "ngoCfgConfigSet4_4_enterprise\0229\n\tresourc" +
-      "es\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.R" +
-      "esources\"\262\007\n\nMongodb5_0\022>\n\006mongod\030\001 \001(\0132" +
-      "..yandex.cloud.mdb.mongodb.v1.Mongodb5_0" +
-      ".Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud" +
-      ".mdb.mongodb.v1.Mongodb5_0.MongoCfg\022>\n\006m" +
-      "ongos\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v" +
-      "1.Mongodb5_0.Mongos\022F\n\nmongoinfra\030\004 \001(\0132" +
-      "2.yandex.cloud.mdb.mongodb.v1.Mongodb5_0" +
-      ".MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "odConfigSet5_0\0229\n\tresources\030\002 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\032\217\001\n\010Mo" +
-      "ngoCfg\022H\n\006config\030\001 \001(\01328.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongoCfgConfigSet5_0" +
-      "\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.m" +
-      "ongodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006config" +
-      "\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongosConfigSet5_0\0229\n\tresources\030\002 \001(" +
-      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
-      "s\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\0132" +
-      "6.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "gosConfigSet5_0\022Q\n\017config_mongocfg\030\002 \001(\013" +
-      "28.yandex.cloud.mdb.mongodb.v1.config.Mo" +
-      "ngoCfgConfigSet5_0\0229\n\tresources\030\003 \001(\0132&." +
-      "yandex.cloud.mdb.mongodb.v1.Resources\"\240\010" +
-      "\n\025Mongodb5_0_enterprise\022I\n\006mongod\030\001 \001(\0132" +
-      "9.yandex.cloud.mdb.mongodb.v1.Mongodb5_0" +
-      "_enterprise.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.y" +
-      "andex.cloud.mdb.mongodb.v1.Mongodb5_0_en" +
-      "terprise.MongoCfg\022I\n\006mongos\030\003 \001(\01329.yand" +
-      "ex.cloud.mdb.mongodb.v1.Mongodb5_0_enter" +
-      "prise.Mongos\022Q\n\nmongoinfra\030\004 \001(\0132=.yande" +
-      "x.cloud.mdb.mongodb.v1.Mongodb5_0_enterp" +
-      "rise.MongoInfra\032\226\001\n\006Mongod\022Q\n\006config\030\001 \001" +
-      "(\0132A.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongodConfigSet5_0_enterprise\0229\n\tresourc" +
-      "es\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.R" +
-      "esources\032\232\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C." +
+      "nfigSet4_0\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
+      "loud.mdb.mongodb.v1.Resources\032\213\001\n\006Mongos" +
+      "\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongosConfigSet4_0\0229\n\treso" +
+      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
+      "1.Resources\032\351\001\n\nMongoInfra\022M\n\rconfig_mon" +
+      "gos\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongosConfigSet4_0\022Q\n\017config_mong" +
+      "ocfg\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongoCfgConfigSet4_0\0229\n\tresource" +
+      "s\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
+      "sources\"\262\007\n\nMongodb4_2\022>\n\006mongod\030\001 \001(\0132." +
+      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_2." +
+      "Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud." +
+      "mdb.mongodb.v1.Mongodb4_2.MongoCfg\022>\n\006mo" +
+      "ngos\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb4_2.Mongos\022F\n\nmongoinfra\030\004 \001(\01322" +
+      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_2." +
+      "MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326." +
       "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
-      "CfgConfigSet5_0_enterprise\0229\n\tresources\030" +
-      "\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
-      "urces\032\226\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yande" +
+      "dConfigSet4_2\0229\n\tresources\030\002 \001(\0132&.yande" +
+      "x.cloud.mdb.mongodb.v1.Resources\032\217\001\n\010Mon" +
+      "goCfg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongoCfgConfigSet4_2\022" +
+      "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006config\030" +
+      "\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongosConfigSet4_2\0229\n\tresources\030\002 \001(\013" +
+      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
+      "\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "osConfigSet4_2\022Q\n\017config_mongocfg\030\002 \001(\0132" +
+      "8.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "goCfgConfigSet4_2\0229\n\tresources\030\003 \001(\0132&.y" +
+      "andex.cloud.mdb.mongodb.v1.Resources\"\262\007\n" +
+      "\nMongodb4_4\022>\n\006mongod\030\001 \001(\0132..yandex.clo" +
+      "ud.mdb.mongodb.v1.Mongodb4_4.Mongod\022B\n\010m" +
+      "ongocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb" +
+      ".v1.Mongodb4_4.MongoCfg\022>\n\006mongos\030\003 \001(\0132" +
+      "..yandex.cloud.mdb.mongodb.v1.Mongodb4_4" +
+      ".Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.clo" +
+      "ud.mdb.mongodb.v1.Mongodb4_4.MongoInfra\032" +
+      "\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongodConfigSet4" +
+      "_4\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
+      ".mongodb.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006co" +
+      "nfig\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongoCfgConfigSet4_4\0229\n\tresource" +
+      "s\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
+      "sources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongosCo" +
+      "nfigSet4_4\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
+      "loud.mdb.mongodb.v1.Resources\032\351\001\n\nMongoI" +
+      "nfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
+      "4_4\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
+      "Set4_4\0229\n\tresources\030\003 \001(\0132&.yandex.cloud" +
+      ".mdb.mongodb.v1.Resources\"\240\010\n\025Mongodb4_4" +
+      "_enterprise\022I\n\006mongod\030\001 \001(\01329.yandex.clo" +
+      "ud.mdb.mongodb.v1.Mongodb4_4_enterprise." +
+      "Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex.cloud." +
+      "mdb.mongodb.v1.Mongodb4_4_enterprise.Mon" +
+      "goCfg\022I\n\006mongos\030\003 \001(\01329.yandex.cloud.mdb" +
+      ".mongodb.v1.Mongodb4_4_enterprise.Mongos" +
+      "\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cloud.mdb." +
+      "mongodb.v1.Mongodb4_4_enterprise.MongoIn" +
+      "fra\032\226\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongodConfig" +
+      "Set4_4_enterprise\0229\n\tresources\030\002 \001(\0132&.y" +
+      "andex.cloud.mdb.mongodb.v1.Resources\032\232\001\n" +
+      "\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongoCfgConfigSet" +
+      "4_4_enterprise\0229\n\tresources\030\002 \001(\0132&.yand" +
+      "ex.cloud.mdb.mongodb.v1.Resources\032\226\001\n\006Mo" +
+      "ngos\022Q\n\006config\030\001 \001(\0132A.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongosConfigSet4_4_ent" +
+      "erprise\0229\n\tresources\030\002 \001(\0132&.yandex.clou" +
+      "d.mdb.mongodb.v1.Resources\032\377\001\n\nMongoInfr" +
+      "a\022X\n\rconfig_mongos\030\001 \001(\0132A.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongosConfigSet4_4" +
+      "_enterprise\022\\\n\017config_mongocfg\030\002 \001(\0132C.y" +
+      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
+      "fgConfigSet4_4_enterprise\0229\n\tresources\030\003" +
+      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
+      "rces\"\262\007\n\nMongodb5_0\022>\n\006mongod\030\001 \001(\0132..ya" +
+      "ndex.cloud.mdb.mongodb.v1.Mongodb5_0.Mon" +
+      "god\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.mdb" +
+      ".mongodb.v1.Mongodb5_0.MongoCfg\022>\n\006mongo" +
+      "s\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1.Mo" +
+      "ngodb5_0.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Mongodb5_0.Mon" +
+      "goInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
+      "nfigSet5_0\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
+      "loud.mdb.mongodb.v1.Resources\032\217\001\n\010MongoC" +
+      "fg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongoCfgConfigSet5_0\0229\n\t" +
+      "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
+      "db.v1.Resources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001" +
+      "(\01326.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongosConfigSet5_0\0229\n\tresources\030\002 \001(\0132&." +
+      "yandex.cloud.mdb.mongodb.v1.Resources\032\351\001" +
+      "\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
+      "onfigSet5_0\022Q\n\017config_mongocfg\030\002 \001(\01328.y" +
+      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
+      "fgConfigSet5_0\0229\n\tresources\030\003 \001(\0132&.yand" +
+      "ex.cloud.mdb.mongodb.v1.Resources\"\240\010\n\025Mo" +
+      "ngodb5_0_enterprise\022I\n\006mongod\030\001 \001(\01329.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Mongodb5_0_ent" +
+      "erprise.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yande" +
+      "x.cloud.mdb.mongodb.v1.Mongodb5_0_enterp" +
+      "rise.MongoCfg\022I\n\006mongos\030\003 \001(\01329.yandex.c" +
+      "loud.mdb.mongodb.v1.Mongodb5_0_enterpris" +
+      "e.Mongos\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cl" +
+      "oud.mdb.mongodb.v1.Mongodb5_0_enterprise" +
+      ".MongoInfra\032\226\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "odConfigSet5_0_enterprise\0229\n\tresources\030\002" +
+      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
+      "rces\032\232\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
+      "onfigSet5_0_enterprise\0229\n\tresources\030\002 \001(" +
+      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
+      "s\032\226\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongosConfigSe" +
+      "t5_0_enterprise\0229\n\tresources\030\002 \001(\0132&.yan" +
+      "dex.cloud.mdb.mongodb.v1.Resources\032\377\001\n\nM" +
+      "ongoInfra\022X\n\rconfig_mongos\030\001 \001(\0132A.yande" +
       "x.cloud.mdb.mongodb.v1.config.MongosConf" +
-      "igSet5_0_enterprise\0229\n\tresources\030\002 \001(\0132&" +
-      ".yandex.cloud.mdb.mongodb.v1.Resources\032\377" +
-      "\001\n\nMongoInfra\022X\n\rconfig_mongos\030\001 \001(\0132A.y" +
+      "igSet5_0_enterprise\022\\\n\017config_mongocfg\030\002" +
+      " \001(\0132C.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongoCfgConfigSet5_0_enterprise\0229\n\tres" +
+      "ources\030\003 \001(\0132&.yandex.cloud.mdb.mongodb." +
+      "v1.Resources\"\262\007\n\nMongodb6_0\022>\n\006mongod\030\001 " +
+      "\001(\0132..yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b6_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.c" +
+      "loud.mdb.mongodb.v1.Mongodb6_0.MongoCfg\022" +
+      ">\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mongo" +
+      "db.v1.Mongodb6_0.Mongos\022F\n\nmongoinfra\030\004 " +
+      "\001(\01322.yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b6_0.MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001" +
+      "(\01326.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongodConfigSet6_0\0229\n\tresources\030\002 \001(\0132&." +
+      "yandex.cloud.mdb.mongodb.v1.Resources\032\217\001" +
+      "\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongoCfgConfigSe" +
+      "t6_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.m" +
+      "db.mongodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006co" +
+      "nfig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongosConfigSet6_0\0229\n\tresources\030" +
+      "\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
+      "urces\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 " +
+      "\001(\01326.yandex.cloud.mdb.mongodb.v1.config" +
+      ".MongosConfigSet6_0\022Q\n\017config_mongocfg\030\002" +
+      " \001(\01328.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongoCfgConfigSet6_0\0229\n\tresources\030\003 \001(" +
+      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
+      "s\"\240\010\n\025Mongodb6_0_enterprise\022I\n\006mongod\030\001 " +
+      "\001(\01329.yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b6_0_enterprise.Mongod\022M\n\010mongocfg\030\002 \001(\013" +
+      "2;.yandex.cloud.mdb.mongodb.v1.Mongodb6_" +
+      "0_enterprise.MongoCfg\022I\n\006mongos\030\003 \001(\01329." +
+      "yandex.cloud.mdb.mongodb.v1.Mongodb6_0_e" +
+      "nterprise.Mongos\022Q\n\nmongoinfra\030\004 \001(\0132=.y" +
+      "andex.cloud.mdb.mongodb.v1.Mongodb6_0_en" +
+      "terprise.MongoInfra\032\226\001\n\006Mongod\022Q\n\006config" +
+      "\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongodConfigSet6_0_enterprise\0229\n\tres" +
+      "ources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb." +
+      "v1.Resources\032\232\001\n\010MongoCfg\022S\n\006config\030\001 \001(" +
+      "\0132C.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfigSet6_0_enterprise\0229\n\tresour" +
+      "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
+      "Resources\032\226\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.y" +
       "andex.cloud.mdb.mongodb.v1.config.Mongos" +
-      "ConfigSet5_0_enterprise\022\\\n\017config_mongoc" +
-      "fg\030\002 \001(\0132C.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongoCfgConfigSet5_0_enterprise\0229\n" +
-      "\tresources\030\003 \001(\0132&.yandex.cloud.mdb.mong" +
-      "odb.v1.Resources\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022" +
-      "\022\n\ncluster_id\030\002 \001(\t\"\336\004\n\004Host\022\014\n\004name\030\001 \001" +
-      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022" +
-      "9\n\tresources\030\004 \001(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Resources\0224\n\004role\030\005 \001(\0162&.yande" +
-      "x.cloud.mdb.mongodb.v1.Host.Role\0228\n\006heal" +
-      "th\030\006 \001(\0162(.yandex.cloud.mdb.mongodb.v1.H" +
-      "ost.Health\0226\n\010services\030\007 \003(\0132$.yandex.cl" +
-      "oud.mdb.mongodb.v1.Service\022\021\n\tsubnet_id\030" +
-      "\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\nshard" +
-      "_name\030\n \001(\t\0224\n\004type\030\013 \001(\0162&.yandex.cloud" +
-      ".mdb.mongodb.v1.Host.Type\"R\n\004Type\022\024\n\020TYP" +
-      "E_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022" +
-      "\014\n\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020\n" +
-      "\014ROLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDAR" +
-      "Y\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
-      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Service" +
-      "\0227\n\004type\030\001 \001(\0162).yandex.cloud.mdb.mongod" +
-      "b.v1.Service.Type\022;\n\006health\030\002 \001(\0162+.yand" +
-      "ex.cloud.mdb.mongodb.v1.Service.Health\"B" +
-      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001" +
-      "\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n\016" +
-      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n" +
-      "\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021" +
-      "\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"" +
-      "2\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_tra" +
-      "nsfer\030\003 \001(\010Bj\n\037yandex.cloud.api.mdb.mong" +
-      "odb.v1ZGgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/mongodb/v1;mongodbb" +
-      "\006proto3"
+      "ConfigSet6_0_enterprise\0229\n\tresources\030\002 \001" +
+      "(\0132&.yandex.cloud.mdb.mongodb.v1.Resourc" +
+      "es\032\377\001\n\nMongoInfra\022X\n\rconfig_mongos\030\001 \001(\013" +
+      "2A.yandex.cloud.mdb.mongodb.v1.config.Mo" +
+      "ngosConfigSet6_0_enterprise\022\\\n\017config_mo" +
+      "ngocfg\030\002 \001(\0132C.yandex.cloud.mdb.mongodb." +
+      "v1.config.MongoCfgConfigSet6_0_enterpris" +
+      "e\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb." +
+      "mongodb.v1.Resources\")\n\005Shard\022\014\n\004name\030\001 " +
+      "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\336\004\n\004Host\022\014\n\004name" +
+      "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 " +
+      "\001(\t\0229\n\tresources\030\004 \001(\0132&.yandex.cloud.md" +
+      "b.mongodb.v1.Resources\0224\n\004role\030\005 \001(\0162&.y" +
+      "andex.cloud.mdb.mongodb.v1.Host.Role\0228\n\006" +
+      "health\030\006 \001(\0162(.yandex.cloud.mdb.mongodb." +
+      "v1.Host.Health\0226\n\010services\030\007 \003(\0132$.yande" +
+      "x.cloud.mdb.mongodb.v1.Service\022\021\n\tsubnet" +
+      "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\ns" +
+      "hard_name\030\n \001(\t\0224\n\004type\030\013 \001(\0162&.yandex.c" +
+      "loud.mdb.mongodb.v1.Host.Type\"R\n\004Type\022\024\n" +
+      "\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGO" +
+      "S\020\002\022\014\n\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Rol" +
+      "e\022\020\n\014ROLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECO" +
+      "NDARY\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
+      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Ser" +
+      "vice\0227\n\004type\030\001 \001(\0162).yandex.cloud.mdb.mo" +
+      "ngodb.v1.Service.Type\022;\n\006health\030\002 \001(\0162+." +
+      "yandex.cloud.mdb.mongodb.v1.Service.Heal" +
+      "th\"B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONG" +
+      "OD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health" +
+      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
+      "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
+      "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
+      "\001(\t\"2\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata" +
+      "_transfer\030\003 \001(\010\"9\n\034PerformanceDiagnostic" +
+      "sConfig\022\031\n\021profiling_enabled\030\001 \001(\010Bj\n\037ya" +
+      "ndex.cloud.api.mdb.mongodb.v1ZGgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "mdb/mongodb/v1;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -53964,6 +66201,8 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.getDescriptor(),
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.getDescriptor(),
+          yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.Maintenance.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor =
@@ -53989,7 +66228,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "FeatureCompatibilityVersion", "Mongodb36", "Mongodb40", "Mongodb42", "Mongodb44", "Mongodb50", "Mongodb44Enterprise", "Mongodb50Enterprise", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "Mongodb", });
+        new java.lang.String[] { "Version", "FeatureCompatibilityVersion", "Mongodb36", "Mongodb40", "Mongodb42", "Mongodb44", "Mongodb50", "Mongodb60", "Mongodb44Enterprise", "Mongodb50Enterprise", "Mongodb60Enterprise", "BackupWindowStart", "BackupRetainPeriodDays", "PerformanceDiagnostics", "Access", "Mongodb", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_fieldAccessorTable = new
@@ -54200,36 +66439,102 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoInfra_descriptor,
         new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
-    internal_static_yandex_cloud_mdb_mongodb_v1_Shard_descriptor =
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor,
+        new java.lang.String[] { "Mongod", "Mongocfg", "Mongos", "Mongoinfra", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor,
+        new java.lang.String[] { "Config", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor,
+        new java.lang.String[] { "Config", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor,
+        new java.lang.String[] { "Config", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor,
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor,
+        new java.lang.String[] { "Mongod", "Mongocfg", "Mongos", "Mongoinfra", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor,
+        new java.lang.String[] { "Config", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor,
+        new java.lang.String[] { "Config", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor,
+        new java.lang.String[] { "Config", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor,
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Shard_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_mdb_mongodb_v1_Shard_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Shard_descriptor,
         new java.lang.String[] { "Name", "ClusterId", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Host_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_mdb_mongodb_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Host_descriptor,
         new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", "ShardName", "Type", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Service_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_mdb_mongodb_v1_Service_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Service_descriptor,
         new java.lang.String[] { "Type", "Health", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Resources_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_mdb_mongodb_v1_Resources_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Resources_descriptor,
         new java.lang.String[] { "ResourcePresetId", "DiskSize", "DiskTypeId", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Access_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_mdb_mongodb_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Access_descriptor,
         new java.lang.String[] { "DataLens", "DataTransfer", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor,
+        new java.lang.String[] { "ProfilingEnabled", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
@@ -54240,6 +66545,8 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb44Enterprise.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb50Enterprise.getDescriptor();
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.getDescriptor();
+    yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60Enterprise.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.Maintenance.getDescriptor();
   }
 
