@@ -16568,6 +16568,16 @@ public final class DatabaseOuterClass {
      * @return The provisionedRcuLimit.
      */
     long getProvisionedRcuLimit();
+
+    /**
+     * <pre>
+     * write quota for topic service, defined in bytes per second.
+     * </pre>
+     *
+     * <code>int64 topic_write_quota = 5;</code>
+     * @return The topicWriteQuota.
+     */
+    long getTopicWriteQuota();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.ServerlessDatabase}
@@ -16632,6 +16642,11 @@ public final class DatabaseOuterClass {
             case 32: {
 
               provisionedRcuLimit_ = input.readInt64();
+              break;
+            }
+            case 40: {
+
+              topicWriteQuota_ = input.readInt64();
               break;
             }
             default: {
@@ -16732,6 +16747,21 @@ public final class DatabaseOuterClass {
       return provisionedRcuLimit_;
     }
 
+    public static final int TOPIC_WRITE_QUOTA_FIELD_NUMBER = 5;
+    private long topicWriteQuota_;
+    /**
+     * <pre>
+     * write quota for topic service, defined in bytes per second.
+     * </pre>
+     *
+     * <code>int64 topic_write_quota = 5;</code>
+     * @return The topicWriteQuota.
+     */
+    @java.lang.Override
+    public long getTopicWriteQuota() {
+      return topicWriteQuota_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16758,6 +16788,9 @@ public final class DatabaseOuterClass {
       if (provisionedRcuLimit_ != 0L) {
         output.writeInt64(4, provisionedRcuLimit_);
       }
+      if (topicWriteQuota_ != 0L) {
+        output.writeInt64(5, topicWriteQuota_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16783,6 +16816,10 @@ public final class DatabaseOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, provisionedRcuLimit_);
       }
+      if (topicWriteQuota_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, topicWriteQuota_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16806,6 +16843,8 @@ public final class DatabaseOuterClass {
           != other.getEnableThrottlingRcuLimit()) return false;
       if (getProvisionedRcuLimit()
           != other.getProvisionedRcuLimit()) return false;
+      if (getTopicWriteQuota()
+          != other.getTopicWriteQuota()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16829,6 +16868,9 @@ public final class DatabaseOuterClass {
       hash = (37 * hash) + PROVISIONED_RCU_LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getProvisionedRcuLimit());
+      hash = (37 * hash) + TOPIC_WRITE_QUOTA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTopicWriteQuota());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16970,6 +17012,8 @@ public final class DatabaseOuterClass {
 
         provisionedRcuLimit_ = 0L;
 
+        topicWriteQuota_ = 0L;
+
         return this;
       }
 
@@ -17000,6 +17044,7 @@ public final class DatabaseOuterClass {
         result.storageSizeLimit_ = storageSizeLimit_;
         result.enableThrottlingRcuLimit_ = enableThrottlingRcuLimit_;
         result.provisionedRcuLimit_ = provisionedRcuLimit_;
+        result.topicWriteQuota_ = topicWriteQuota_;
         onBuilt();
         return result;
       }
@@ -17059,6 +17104,9 @@ public final class DatabaseOuterClass {
         }
         if (other.getProvisionedRcuLimit() != 0L) {
           setProvisionedRcuLimit(other.getProvisionedRcuLimit());
+        }
+        if (other.getTopicWriteQuota() != 0L) {
+          setTopicWriteQuota(other.getTopicWriteQuota());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17275,6 +17323,49 @@ public final class DatabaseOuterClass {
       public Builder clearProvisionedRcuLimit() {
         
         provisionedRcuLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long topicWriteQuota_ ;
+      /**
+       * <pre>
+       * write quota for topic service, defined in bytes per second.
+       * </pre>
+       *
+       * <code>int64 topic_write_quota = 5;</code>
+       * @return The topicWriteQuota.
+       */
+      @java.lang.Override
+      public long getTopicWriteQuota() {
+        return topicWriteQuota_;
+      }
+      /**
+       * <pre>
+       * write quota for topic service, defined in bytes per second.
+       * </pre>
+       *
+       * <code>int64 topic_write_quota = 5;</code>
+       * @param value The topicWriteQuota to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicWriteQuota(long value) {
+        
+        topicWriteQuota_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * write quota for topic service, defined in bytes per second.
+       * </pre>
+       *
+       * <code>int64 topic_write_quota = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicWriteQuota() {
+        
+        topicWriteQuota_ = 0L;
         onChanged();
         return this;
       }
@@ -21372,29 +21463,30 @@ public final class DatabaseOuterClass {
       "geConfig\0226\n\014scale_policy\030\003 \001(\0132 .yandex." +
       "cloud.ydb.v1.ScalePolicy\022\022\n\nnetwork_id\030\004" +
       " \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031\n\021assign_publi" +
-      "c_ips\030\006 \001(\010\"\222\001\n\022ServerlessDatabase\022\034\n\024th" +
+      "c_ips\030\006 \001(\010\"\255\001\n\022ServerlessDatabase\022\034\n\024th" +
       "rottling_rcu_limit\030\001 \001(\003\022\032\n\022storage_size" +
       "_limit\030\002 \001(\003\022#\n\033enable_throttling_rcu_li" +
       "mit\030\003 \001(\010\022\035\n\025provisioned_rcu_limit\030\004 \001(\003" +
-      "\"&\n\rZonalDatabase\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"+\n\020RegionalDatabase\022\027\n\tregion_id\030\001 \001(\tB" +
-      "\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013fixed_scale\030\001 \001" +
-      "(\0132+.yandex.cloud.ydb.v1.ScalePolicy.Fix" +
-      "edScaleH\000\032#\n\nFixedScale\022\025\n\004size\030\001 \001(\003B\007\372" +
-      "\3071\003>=1B\022\n\nscale_type\022\004\300\3011\001\"q\n\rStorageCon" +
-      "fig\022D\n\017storage_options\030\001 \003(\0132\".yandex.cl" +
-      "oud.ydb.v1.StorageOptionB\007\202\3101\003>=1\022\032\n\022sto" +
-      "rage_size_limit\030\002 \001(\003\"=\n\rStorageOption\022\027" +
-      "\n\017storage_type_id\030\001 \001(\t\022\023\n\013group_count\030\002" +
-      " \001(\003*\355\001\n\025AlertEvaluationStatus\022\'\n#ALERT_" +
-      "EVALUATION_STATUS_UNSPECIFIED\020\000\022\036\n\032ALERT" +
-      "_EVALUATION_STATUS_OK\020\001\022#\n\037ALERT_EVALUAT" +
-      "ION_STATUS_NO_DATA\020\002\022!\n\035ALERT_EVALUATION" +
-      "_STATUS_ERROR\020\003\022!\n\035ALERT_EVALUATION_STAT" +
-      "US_ALARM\020\004\022 \n\034ALERT_EVALUATION_STATUS_WA" +
-      "RN\020\005BV\n\027yandex.cloud.api.ydb.v1Z;github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/ydb/v1;ydbb\006proto3"
+      "\022\031\n\021topic_write_quota\030\005 \001(\003\"&\n\rZonalData" +
+      "base\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalD" +
+      "atabase\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013Sca" +
+      "lePolicy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.c" +
+      "loud.ydb.v1.ScalePolicy.FixedScaleH\000\032#\n\n" +
+      "FixedScale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nsca" +
+      "le_type\022\004\300\3011\001\"q\n\rStorageConfig\022D\n\017storag" +
+      "e_options\030\001 \003(\0132\".yandex.cloud.ydb.v1.St" +
+      "orageOptionB\007\202\3101\003>=1\022\032\n\022storage_size_lim" +
+      "it\030\002 \001(\003\"=\n\rStorageOption\022\027\n\017storage_typ" +
+      "e_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003*\355\001\n\025Aler" +
+      "tEvaluationStatus\022\'\n#ALERT_EVALUATION_ST" +
+      "ATUS_UNSPECIFIED\020\000\022\036\n\032ALERT_EVALUATION_S" +
+      "TATUS_OK\020\001\022#\n\037ALERT_EVALUATION_STATUS_NO" +
+      "_DATA\020\002\022!\n\035ALERT_EVALUATION_STATUS_ERROR" +
+      "\020\003\022!\n\035ALERT_EVALUATION_STATUS_ALARM\020\004\022 \n" +
+      "\034ALERT_EVALUATION_STATUS_WARN\020\005BV\n\027yande" +
+      "x.cloud.api.ydb.v1Z;github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/ydb/v1;ydbb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21480,7 +21572,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_descriptor,
-        new java.lang.String[] { "ThrottlingRcuLimit", "StorageSizeLimit", "EnableThrottlingRcuLimit", "ProvisionedRcuLimit", });
+        new java.lang.String[] { "ThrottlingRcuLimit", "StorageSizeLimit", "EnableThrottlingRcuLimit", "ProvisionedRcuLimit", "TopicWriteQuota", });
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_fieldAccessorTable = new

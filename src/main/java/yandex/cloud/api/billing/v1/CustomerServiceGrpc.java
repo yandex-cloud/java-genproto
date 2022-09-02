@@ -80,6 +80,37 @@ public final class CustomerServiceGrpc {
     return getInviteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateResellerServedMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateResellerServed",
+      requestType = yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateResellerServedMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateResellerServedMethod;
+    if ((getCreateResellerServedMethod = CustomerServiceGrpc.getCreateResellerServedMethod) == null) {
+      synchronized (CustomerServiceGrpc.class) {
+        if ((getCreateResellerServedMethod = CustomerServiceGrpc.getCreateResellerServedMethod) == null) {
+          CustomerServiceGrpc.getCreateResellerServedMethod = getCreateResellerServedMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateResellerServed"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("CreateResellerServed"))
+              .build();
+        }
+      }
+    }
+    return getCreateResellerServedMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.billing.v1.CustomerServiceOuterClass.ActivateCustomerRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getActivateMethod;
 
@@ -215,6 +246,16 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Creates new reseller-served customer.
+     * </pre>
+     */
+    public void createResellerServed(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateResellerServedMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Activates specified customer. After customer is activated, he can use resources associated with his billing account.
      * </pre>
      */
@@ -249,6 +290,13 @@ public final class CustomerServiceGrpc {
                 yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_INVITE)))
+          .addMethod(
+            getCreateResellerServedMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CREATE_RESELLER_SERVED)))
           .addMethod(
             getActivateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -304,6 +352,17 @@ public final class CustomerServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInviteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates new reseller-served customer.
+     * </pre>
+     */
+    public void createResellerServed(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateResellerServedMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -368,6 +427,16 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Creates new reseller-served customer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation createResellerServed(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateResellerServedMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Activates specified customer. After customer is activated, he can use resources associated with his billing account.
      * </pre>
      */
@@ -428,6 +497,17 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Creates new reseller-served customer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> createResellerServed(
+        yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateResellerServedMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Activates specified customer. After customer is activated, he can use resources associated with his billing account.
      * </pre>
      */
@@ -451,8 +531,9 @@ public final class CustomerServiceGrpc {
 
   private static final int METHODID_LIST = 0;
   private static final int METHODID_INVITE = 1;
-  private static final int METHODID_ACTIVATE = 2;
-  private static final int METHODID_SUSPEND = 3;
+  private static final int METHODID_CREATE_RESELLER_SERVED = 2;
+  private static final int METHODID_ACTIVATE = 3;
+  private static final int METHODID_SUSPEND = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -477,6 +558,10 @@ public final class CustomerServiceGrpc {
           break;
         case METHODID_INVITE:
           serviceImpl.invite((yandex.cloud.api.billing.v1.CustomerServiceOuterClass.InviteCustomerRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_CREATE_RESELLER_SERVED:
+          serviceImpl.createResellerServed((yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_ACTIVATE:
@@ -550,6 +635,7 @@ public final class CustomerServiceGrpc {
               .setSchemaDescriptor(new CustomerServiceFileDescriptorSupplier())
               .addMethod(getListMethod())
               .addMethod(getInviteMethod())
+              .addMethod(getCreateResellerServedMethod())
               .addMethod(getActivateMethod())
               .addMethod(getSuspendMethod())
               .build();

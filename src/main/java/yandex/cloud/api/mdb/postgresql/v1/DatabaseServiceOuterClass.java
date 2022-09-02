@@ -4565,6 +4565,26 @@ public final class DatabaseServiceOuterClass {
 
     /**
      * <pre>
+     * Optional. New name of the database.
+     * </pre>
+     *
+     * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The newDatabaseName.
+     */
+    java.lang.String getNewDatabaseName();
+    /**
+     * <pre>
+     * Optional. New name of the database.
+     * </pre>
+     *
+     * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for newDatabaseName.
+     */
+    com.google.protobuf.ByteString
+        getNewDatabaseNameBytes();
+
+    /**
+     * <pre>
      * Field mask that specifies which fields of the Database resource should be updated.
      * </pre>
      *
@@ -4659,6 +4679,7 @@ public final class DatabaseServiceOuterClass {
     private UpdateDatabaseRequest() {
       clusterId_ = "";
       databaseName_ = "";
+      newDatabaseName_ = "";
       extensions_ = java.util.Collections.emptyList();
     }
 
@@ -4725,6 +4746,12 @@ public final class DatabaseServiceOuterClass {
               }
               extensions_.add(
                   input.readMessage(yandex.cloud.api.mdb.postgresql.v1.DatabaseOuterClass.Extension.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              newDatabaseName_ = s;
               break;
             }
             default: {
@@ -4852,6 +4879,52 @@ public final class DatabaseServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         databaseName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_DATABASE_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object newDatabaseName_;
+    /**
+     * <pre>
+     * Optional. New name of the database.
+     * </pre>
+     *
+     * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The newDatabaseName.
+     */
+    @java.lang.Override
+    public java.lang.String getNewDatabaseName() {
+      java.lang.Object ref = newDatabaseName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newDatabaseName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. New name of the database.
+     * </pre>
+     *
+     * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for newDatabaseName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewDatabaseNameBytes() {
+      java.lang.Object ref = newDatabaseName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newDatabaseName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -4992,6 +5065,9 @@ public final class DatabaseServiceOuterClass {
       for (int i = 0; i < extensions_.size(); i++) {
         output.writeMessage(4, extensions_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newDatabaseName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, newDatabaseName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5015,6 +5091,9 @@ public final class DatabaseServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, extensions_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newDatabaseName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, newDatabaseName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5034,6 +5113,8 @@ public final class DatabaseServiceOuterClass {
           .equals(other.getClusterId())) return false;
       if (!getDatabaseName()
           .equals(other.getDatabaseName())) return false;
+      if (!getNewDatabaseName()
+          .equals(other.getNewDatabaseName())) return false;
       if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
         if (!getUpdateMask()
@@ -5056,6 +5137,8 @@ public final class DatabaseServiceOuterClass {
       hash = (53 * hash) + getClusterId().hashCode();
       hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatabaseName().hashCode();
+      hash = (37 * hash) + NEW_DATABASE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getNewDatabaseName().hashCode();
       if (hasUpdateMask()) {
         hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateMask().hashCode();
@@ -5202,6 +5285,8 @@ public final class DatabaseServiceOuterClass {
 
         databaseName_ = "";
 
+        newDatabaseName_ = "";
+
         if (updateMaskBuilder_ == null) {
           updateMask_ = null;
         } else {
@@ -5243,6 +5328,7 @@ public final class DatabaseServiceOuterClass {
         int from_bitField0_ = bitField0_;
         result.clusterId_ = clusterId_;
         result.databaseName_ = databaseName_;
+        result.newDatabaseName_ = newDatabaseName_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
         } else {
@@ -5311,6 +5397,10 @@ public final class DatabaseServiceOuterClass {
         }
         if (!other.getDatabaseName().isEmpty()) {
           databaseName_ = other.databaseName_;
+          onChanged();
+        }
+        if (!other.getNewDatabaseName().isEmpty()) {
+          newDatabaseName_ = other.newDatabaseName_;
           onChanged();
         }
         if (other.hasUpdateMask()) {
@@ -5570,6 +5660,102 @@ public final class DatabaseServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         databaseName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newDatabaseName_ = "";
+      /**
+       * <pre>
+       * Optional. New name of the database.
+       * </pre>
+       *
+       * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The newDatabaseName.
+       */
+      public java.lang.String getNewDatabaseName() {
+        java.lang.Object ref = newDatabaseName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newDatabaseName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. New name of the database.
+       * </pre>
+       *
+       * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for newDatabaseName.
+       */
+      public com.google.protobuf.ByteString
+          getNewDatabaseNameBytes() {
+        java.lang.Object ref = newDatabaseName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newDatabaseName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. New name of the database.
+       * </pre>
+       *
+       * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The newDatabaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewDatabaseName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        newDatabaseName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. New name of the database.
+       * </pre>
+       *
+       * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewDatabaseName() {
+        
+        newDatabaseName_ = getDefaultInstance().getNewDatabaseName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. New name of the database.
+       * </pre>
+       *
+       * <code>string new_database_name = 5 [(.yandex.cloud.required) = false, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for newDatabaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewDatabaseNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        newDatabaseName_ = value;
         onChanged();
         return this;
       }
@@ -8592,48 +8778,49 @@ public final class DatabaseServiceOuterClass {
       "ec\030\002 \001(\0132,.yandex.cloud.mdb.postgresql.v" +
       "1.DatabaseSpecB\004\350\3071\001\"C\n\026CreateDatabaseMe" +
       "tadata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabase_n" +
-      "ame\030\002 \001(\t\"\340\001\n\025UpdateDatabaseRequest\022 \n\nc" +
+      "ame\030\002 \001(\t\"\233\002\n\025UpdateDatabaseRequest\022 \n\nc" +
       "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rdatabas" +
       "e_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google.proto" +
-      "buf.FieldMask\022=\n\nextensions\030\004 \003(\0132).yand" +
-      "ex.cloud.mdb.postgresql.v1.Extension\"C\n\026" +
-      "UpdateDatabaseMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\022\025\n\rdatabase_name\030\002 \001(\t\"p\n\025DeleteDatab" +
-      "aseRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\0225\n\rdatabase_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=6" +
-      "3\362\3071\016[a-zA-Z0-9_-]*\"C\n\026DeleteDatabaseMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabase_na" +
-      "me\030\002 \001(\t2\222\010\n\017DatabaseService\022\263\001\n\003Get\0222.y" +
-      "andex.cloud.mdb.postgresql.v1.GetDatabas" +
-      "eRequest\032(.yandex.cloud.mdb.postgresql.v" +
-      "1.Database\"N\202\323\344\223\002H\022F/managed-postgresql/" +
-      "v1/clusters/{cluster_id}/databases/{data" +
-      "base_name}\022\263\001\n\004List\0224.yandex.cloud.mdb.p" +
-      "ostgresql.v1.ListDatabasesRequest\0325.yand" +
-      "ex.cloud.mdb.postgresql.v1.ListDatabases" +
-      "Response\">\202\323\344\223\0028\0226/managed-postgresql/v1" +
-      "/clusters/{cluster_id}/databases\022\313\001\n\006Cre" +
-      "ate\0225.yandex.cloud.mdb.postgresql.v1.Cre" +
-      "ateDatabaseRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"g\202\323\344\223\002;\"6/managed-postgres" +
-      "ql/v1/clusters/{cluster_id}/databases:\001*" +
-      "\262\322*\"\n\026CreateDatabaseMetadata\022\010Database\022\333" +
-      "\001\n\006Update\0225.yandex.cloud.mdb.postgresql." +
-      "v1.UpdateDatabaseRequest\032!.yandex.cloud." +
-      "operation.Operation\"w\202\323\344\223\002K2F/managed-po" +
-      "stgresql/v1/clusters/{cluster_id}/databa" +
-      "ses/{database_name}:\001*\262\322*\"\n\026UpdateDataba" +
-      "seMetadata\022\010Database\022\346\001\n\006Delete\0225.yandex" +
-      ".cloud.mdb.postgresql.v1.DeleteDatabaseR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\201\001\202\323\344\223\002H*F/managed-postgresql/v1/clust" +
-      "ers/{cluster_id}/databases/{database_nam" +
-      "e}\262\322*/\n\026DeleteDatabaseMetadata\022\025google.p" +
-      "rotobuf.EmptyBs\n\"yandex.cloud.api.mdb.po" +
-      "stgresql.v1ZMgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/postgresql/v1;" +
-      "postgresqlb\006proto3"
+      "_-]*\0229\n\021new_database_name\030\005 \001(\tB\036\350\3071\000\212\3101" +
+      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003" +
+      " \001(\0132\032.google.protobuf.FieldMask\022=\n\nexte" +
+      "nsions\030\004 \003(\0132).yandex.cloud.mdb.postgres" +
+      "ql.v1.Extension\"C\n\026UpdateDatabaseMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002" +
+      " \001(\t\"p\n\025DeleteDatabaseRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rdatabase_name" +
+      "\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"C" +
+      "\n\026DeleteDatabaseMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\022\025\n\rdatabase_name\030\002 \001(\t2\222\010\n\017Database" +
+      "Service\022\263\001\n\003Get\0222.yandex.cloud.mdb.postg" +
+      "resql.v1.GetDatabaseRequest\032(.yandex.clo" +
+      "ud.mdb.postgresql.v1.Database\"N\202\323\344\223\002H\022F/" +
+      "managed-postgresql/v1/clusters/{cluster_" +
+      "id}/databases/{database_name}\022\263\001\n\004List\0224" +
+      ".yandex.cloud.mdb.postgresql.v1.ListData" +
+      "basesRequest\0325.yandex.cloud.mdb.postgres" +
+      "ql.v1.ListDatabasesResponse\">\202\323\344\223\0028\0226/ma" +
+      "naged-postgresql/v1/clusters/{cluster_id" +
+      "}/databases\022\313\001\n\006Create\0225.yandex.cloud.md" +
+      "b.postgresql.v1.CreateDatabaseRequest\032!." +
+      "yandex.cloud.operation.Operation\"g\202\323\344\223\002;" +
+      "\"6/managed-postgresql/v1/clusters/{clust" +
+      "er_id}/databases:\001*\262\322*\"\n\026CreateDatabaseM" +
+      "etadata\022\010Database\022\333\001\n\006Update\0225.yandex.cl" +
+      "oud.mdb.postgresql.v1.UpdateDatabaseRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"w" +
+      "\202\323\344\223\002K2F/managed-postgresql/v1/clusters/" +
+      "{cluster_id}/databases/{database_name}:\001" +
+      "*\262\322*\"\n\026UpdateDatabaseMetadata\022\010Database\022" +
+      "\346\001\n\006Delete\0225.yandex.cloud.mdb.postgresql" +
+      ".v1.DeleteDatabaseRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\201\001\202\323\344\223\002H*F/managed-" +
+      "postgresql/v1/clusters/{cluster_id}/data" +
+      "bases/{database_name}\262\322*/\n\026DeleteDatabas" +
+      "eMetadata\022\025google.protobuf.EmptyBs\n\"yand" +
+      "ex.cloud.api.mdb.postgresql.v1ZMgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8680,7 +8867,7 @@ public final class DatabaseServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateDatabaseRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "DatabaseName", "UpdateMask", "Extensions", });
+        new java.lang.String[] { "ClusterId", "DatabaseName", "NewDatabaseName", "UpdateMask", "Extensions", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateDatabaseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateDatabaseMetadata_fieldAccessorTable = new

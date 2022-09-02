@@ -2129,6 +2129,141 @@ public final class Postgresql121C {
      * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 149;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder();
+
+    /**
+     * <pre>
+     * in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+     * @return Whether the maxStackDepth field is set.
+     */
+    boolean hasMaxStackDepth();
+    /**
+     * <pre>
+     * in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+     * @return The maxStackDepth.
+     */
+    com.google.protobuf.Int64Value getMaxStackDepth();
+    /**
+     * <pre>
+     * in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxStackDepthOrBuilder();
+
+    /**
+     * <pre>
+     * enable Genetic Query Optimizer, by default is on
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geqo = 152;</code>
+     * @return Whether the geqo field is set.
+     */
+    boolean hasGeqo();
+    /**
+     * <pre>
+     * enable Genetic Query Optimizer, by default is on
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geqo = 152;</code>
+     * @return The geqo.
+     */
+    com.google.protobuf.BoolValue getGeqo();
+    /**
+     * <pre>
+     * enable Genetic Query Optimizer, by default is on
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geqo = 152;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGeqoOrBuilder();
+
+    /**
+     * <pre>
+     * The number of tables to use geqo, default is 12
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+     * @return Whether the geqoThreshold field is set.
+     */
+    boolean hasGeqoThreshold();
+    /**
+     * <pre>
+     * The number of tables to use geqo, default is 12
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+     * @return The geqoThreshold.
+     */
+    com.google.protobuf.Int64Value getGeqoThreshold();
+    /**
+     * <pre>
+     * The number of tables to use geqo, default is 12
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGeqoThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * tradeoff between planning time and query plan quality, default is 5
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+     * @return Whether the geqoEffort field is set.
+     */
+    boolean hasGeqoEffort();
+    /**
+     * <pre>
+     * tradeoff between planning time and query plan quality, default is 5
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+     * @return The geqoEffort.
+     */
+    com.google.protobuf.Int64Value getGeqoEffort();
+    /**
+     * <pre>
+     * tradeoff between planning time and query plan quality, default is 5
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGeqoEffortOrBuilder();
+
+    /**
+     * <pre>
+     * initial value of the random number generator used by GEQO
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the geqoSeed field is set.
+     */
+    boolean hasGeqoSeed();
+    /**
+     * <pre>
+     * initial value of the random number generator used by GEQO
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The geqoSeed.
+     */
+    com.google.protobuf.DoubleValue getGeqoSeed();
+    /**
+     * <pre>
+     * initial value of the random number generator used by GEQO
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getGeqoSeedOrBuilder();
   }
   /**
    * <pre>
@@ -3743,6 +3878,71 @@ public final class Postgresql121C {
 
               break;
             }
+            case 1202: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxStackDepth_ != null) {
+                subBuilder = maxStackDepth_.toBuilder();
+              }
+              maxStackDepth_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxStackDepth_);
+                maxStackDepth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1218: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (geqo_ != null) {
+                subBuilder = geqo_.toBuilder();
+              }
+              geqo_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(geqo_);
+                geqo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1226: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (geqoThreshold_ != null) {
+                subBuilder = geqoThreshold_.toBuilder();
+              }
+              geqoThreshold_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(geqoThreshold_);
+                geqoThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1234: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (geqoEffort_ != null) {
+                subBuilder = geqoEffort_.toBuilder();
+              }
+              geqoEffort_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(geqoEffort_);
+                geqoEffort_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1266: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (geqoSeed_ != null) {
+                subBuilder = geqoSeed_.toBuilder();
+              }
+              geqoSeed_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(geqoSeed_);
+                geqoSeed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5031,6 +5231,10 @@ public final class Postgresql121C {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_CRON = 5;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PG_CRON(5),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PGLOGICAL = 6;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_PGLOGICAL(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -5058,6 +5262,10 @@ public final class Postgresql121C {
        * <code>SHARED_PRELOAD_LIBRARIES_PG_CRON = 5;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PG_CRON_VALUE = 5;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PGLOGICAL = 6;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_PGLOGICAL_VALUE = 6;
 
 
       public final int getNumber() {
@@ -5090,6 +5298,7 @@ public final class Postgresql121C {
           case 3: return SHARED_PRELOAD_LIBRARIES_TIMESCALEDB;
           case 4: return SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS;
           case 5: return SHARED_PRELOAD_LIBRARIES_PG_CRON;
+          case 6: return SHARED_PRELOAD_LIBRARIES_PGLOGICAL;
           default: return null;
         }
       }
@@ -9293,6 +9502,196 @@ public final class Postgresql121C {
       return getPlantunerFixEmptyTable();
     }
 
+    public static final int MAX_STACK_DEPTH_FIELD_NUMBER = 150;
+    private com.google.protobuf.Int64Value maxStackDepth_;
+    /**
+     * <pre>
+     * in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+     * @return Whether the maxStackDepth field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxStackDepth() {
+      return maxStackDepth_ != null;
+    }
+    /**
+     * <pre>
+     * in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+     * @return The maxStackDepth.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxStackDepth() {
+      return maxStackDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStackDepth_;
+    }
+    /**
+     * <pre>
+     * in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxStackDepthOrBuilder() {
+      return getMaxStackDepth();
+    }
+
+    public static final int GEQO_FIELD_NUMBER = 152;
+    private com.google.protobuf.BoolValue geqo_;
+    /**
+     * <pre>
+     * enable Genetic Query Optimizer, by default is on
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geqo = 152;</code>
+     * @return Whether the geqo field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeqo() {
+      return geqo_ != null;
+    }
+    /**
+     * <pre>
+     * enable Genetic Query Optimizer, by default is on
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geqo = 152;</code>
+     * @return The geqo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGeqo() {
+      return geqo_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geqo_;
+    }
+    /**
+     * <pre>
+     * enable Genetic Query Optimizer, by default is on
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geqo = 152;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGeqoOrBuilder() {
+      return getGeqo();
+    }
+
+    public static final int GEQO_THRESHOLD_FIELD_NUMBER = 153;
+    private com.google.protobuf.Int64Value geqoThreshold_;
+    /**
+     * <pre>
+     * The number of tables to use geqo, default is 12
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+     * @return Whether the geqoThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeqoThreshold() {
+      return geqoThreshold_ != null;
+    }
+    /**
+     * <pre>
+     * The number of tables to use geqo, default is 12
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+     * @return The geqoThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getGeqoThreshold() {
+      return geqoThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : geqoThreshold_;
+    }
+    /**
+     * <pre>
+     * The number of tables to use geqo, default is 12
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getGeqoThresholdOrBuilder() {
+      return getGeqoThreshold();
+    }
+
+    public static final int GEQO_EFFORT_FIELD_NUMBER = 154;
+    private com.google.protobuf.Int64Value geqoEffort_;
+    /**
+     * <pre>
+     * tradeoff between planning time and query plan quality, default is 5
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+     * @return Whether the geqoEffort field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeqoEffort() {
+      return geqoEffort_ != null;
+    }
+    /**
+     * <pre>
+     * tradeoff between planning time and query plan quality, default is 5
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+     * @return The geqoEffort.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getGeqoEffort() {
+      return geqoEffort_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : geqoEffort_;
+    }
+    /**
+     * <pre>
+     * tradeoff between planning time and query plan quality, default is 5
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getGeqoEffortOrBuilder() {
+      return getGeqoEffort();
+    }
+
+    public static final int GEQO_SEED_FIELD_NUMBER = 158;
+    private com.google.protobuf.DoubleValue geqoSeed_;
+    /**
+     * <pre>
+     * initial value of the random number generator used by GEQO
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the geqoSeed field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeqoSeed() {
+      return geqoSeed_ != null;
+    }
+    /**
+     * <pre>
+     * initial value of the random number generator used by GEQO
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The geqoSeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValue getGeqoSeed() {
+      return geqoSeed_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : geqoSeed_;
+    }
+    /**
+     * <pre>
+     * initial value of the random number generator used by GEQO
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getGeqoSeedOrBuilder() {
+      return getGeqoSeed();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9695,6 +10094,21 @@ public final class Postgresql121C {
       }
       if (plantunerFixEmptyTable_ != null) {
         output.writeMessage(149, getPlantunerFixEmptyTable());
+      }
+      if (maxStackDepth_ != null) {
+        output.writeMessage(150, getMaxStackDepth());
+      }
+      if (geqo_ != null) {
+        output.writeMessage(152, getGeqo());
+      }
+      if (geqoThreshold_ != null) {
+        output.writeMessage(153, getGeqoThreshold());
+      }
+      if (geqoEffort_ != null) {
+        output.writeMessage(154, getGeqoEffort());
+      }
+      if (geqoSeed_ != null) {
+        output.writeMessage(158, getGeqoSeed());
       }
       unknownFields.writeTo(output);
     }
@@ -10222,6 +10636,26 @@ public final class Postgresql121C {
       if (plantunerFixEmptyTable_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(149, getPlantunerFixEmptyTable());
+      }
+      if (maxStackDepth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(150, getMaxStackDepth());
+      }
+      if (geqo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(152, getGeqo());
+      }
+      if (geqoThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(153, getGeqoThreshold());
+      }
+      if (geqoEffort_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(154, getGeqoEffort());
+      }
+      if (geqoSeed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(158, getGeqoSeed());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10800,6 +11234,31 @@ public final class Postgresql121C {
         if (!getPlantunerFixEmptyTable()
             .equals(other.getPlantunerFixEmptyTable())) return false;
       }
+      if (hasMaxStackDepth() != other.hasMaxStackDepth()) return false;
+      if (hasMaxStackDepth()) {
+        if (!getMaxStackDepth()
+            .equals(other.getMaxStackDepth())) return false;
+      }
+      if (hasGeqo() != other.hasGeqo()) return false;
+      if (hasGeqo()) {
+        if (!getGeqo()
+            .equals(other.getGeqo())) return false;
+      }
+      if (hasGeqoThreshold() != other.hasGeqoThreshold()) return false;
+      if (hasGeqoThreshold()) {
+        if (!getGeqoThreshold()
+            .equals(other.getGeqoThreshold())) return false;
+      }
+      if (hasGeqoEffort() != other.hasGeqoEffort()) return false;
+      if (hasGeqoEffort()) {
+        if (!getGeqoEffort()
+            .equals(other.getGeqoEffort())) return false;
+      }
+      if (hasGeqoSeed() != other.hasGeqoSeed()) return false;
+      if (hasGeqoSeed()) {
+        if (!getGeqoSeed()
+            .equals(other.getGeqoSeed())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11284,6 +11743,26 @@ public final class Postgresql121C {
       if (hasPlantunerFixEmptyTable()) {
         hash = (37 * hash) + PLANTUNER_FIX_EMPTY_TABLE_FIELD_NUMBER;
         hash = (53 * hash) + getPlantunerFixEmptyTable().hashCode();
+      }
+      if (hasMaxStackDepth()) {
+        hash = (37 * hash) + MAX_STACK_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxStackDepth().hashCode();
+      }
+      if (hasGeqo()) {
+        hash = (37 * hash) + GEQO_FIELD_NUMBER;
+        hash = (53 * hash) + getGeqo().hashCode();
+      }
+      if (hasGeqoThreshold()) {
+        hash = (37 * hash) + GEQO_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getGeqoThreshold().hashCode();
+      }
+      if (hasGeqoEffort()) {
+        hash = (37 * hash) + GEQO_EFFORT_FIELD_NUMBER;
+        hash = (53 * hash) + getGeqoEffort().hashCode();
+      }
+      if (hasGeqoSeed()) {
+        hash = (37 * hash) + GEQO_SEED_FIELD_NUMBER;
+        hash = (53 * hash) + getGeqoSeed().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12112,6 +12591,36 @@ public final class Postgresql121C {
           plantunerFixEmptyTable_ = null;
           plantunerFixEmptyTableBuilder_ = null;
         }
+        if (maxStackDepthBuilder_ == null) {
+          maxStackDepth_ = null;
+        } else {
+          maxStackDepth_ = null;
+          maxStackDepthBuilder_ = null;
+        }
+        if (geqoBuilder_ == null) {
+          geqo_ = null;
+        } else {
+          geqo_ = null;
+          geqoBuilder_ = null;
+        }
+        if (geqoThresholdBuilder_ == null) {
+          geqoThreshold_ = null;
+        } else {
+          geqoThreshold_ = null;
+          geqoThresholdBuilder_ = null;
+        }
+        if (geqoEffortBuilder_ == null) {
+          geqoEffort_ = null;
+        } else {
+          geqoEffort_ = null;
+          geqoEffortBuilder_ = null;
+        }
+        if (geqoSeedBuilder_ == null) {
+          geqoSeed_ = null;
+        } else {
+          geqoSeed_ = null;
+          geqoSeedBuilder_ = null;
+        }
         return this;
       }
 
@@ -12703,6 +13212,31 @@ public final class Postgresql121C {
         } else {
           result.plantunerFixEmptyTable_ = plantunerFixEmptyTableBuilder_.build();
         }
+        if (maxStackDepthBuilder_ == null) {
+          result.maxStackDepth_ = maxStackDepth_;
+        } else {
+          result.maxStackDepth_ = maxStackDepthBuilder_.build();
+        }
+        if (geqoBuilder_ == null) {
+          result.geqo_ = geqo_;
+        } else {
+          result.geqo_ = geqoBuilder_.build();
+        }
+        if (geqoThresholdBuilder_ == null) {
+          result.geqoThreshold_ = geqoThreshold_;
+        } else {
+          result.geqoThreshold_ = geqoThresholdBuilder_.build();
+        }
+        if (geqoEffortBuilder_ == null) {
+          result.geqoEffort_ = geqoEffort_;
+        } else {
+          result.geqoEffort_ = geqoEffortBuilder_.build();
+        }
+        if (geqoSeedBuilder_ == null) {
+          result.geqoSeed_ = geqoSeed_;
+        } else {
+          result.geqoSeed_ = geqoSeedBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13143,6 +13677,21 @@ public final class Postgresql121C {
         }
         if (other.hasPlantunerFixEmptyTable()) {
           mergePlantunerFixEmptyTable(other.getPlantunerFixEmptyTable());
+        }
+        if (other.hasMaxStackDepth()) {
+          mergeMaxStackDepth(other.getMaxStackDepth());
+        }
+        if (other.hasGeqo()) {
+          mergeGeqo(other.getGeqo());
+        }
+        if (other.hasGeqoThreshold()) {
+          mergeGeqoThreshold(other.getGeqoThreshold());
+        }
+        if (other.hasGeqoEffort()) {
+          mergeGeqoEffort(other.getGeqoEffort());
+        }
+        if (other.hasGeqoSeed()) {
+          mergeGeqoSeed(other.getGeqoSeed());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -27991,6 +28540,781 @@ public final class Postgresql121C {
         }
         return plantunerFixEmptyTableBuilder_;
       }
+
+      private com.google.protobuf.Int64Value maxStackDepth_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStackDepthBuilder_;
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       * @return Whether the maxStackDepth field is set.
+       */
+      public boolean hasMaxStackDepth() {
+        return maxStackDepthBuilder_ != null || maxStackDepth_ != null;
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       * @return The maxStackDepth.
+       */
+      public com.google.protobuf.Int64Value getMaxStackDepth() {
+        if (maxStackDepthBuilder_ == null) {
+          return maxStackDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStackDepth_;
+        } else {
+          return maxStackDepthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      public Builder setMaxStackDepth(com.google.protobuf.Int64Value value) {
+        if (maxStackDepthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxStackDepth_ = value;
+          onChanged();
+        } else {
+          maxStackDepthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      public Builder setMaxStackDepth(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxStackDepthBuilder_ == null) {
+          maxStackDepth_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxStackDepthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      public Builder mergeMaxStackDepth(com.google.protobuf.Int64Value value) {
+        if (maxStackDepthBuilder_ == null) {
+          if (maxStackDepth_ != null) {
+            maxStackDepth_ =
+              com.google.protobuf.Int64Value.newBuilder(maxStackDepth_).mergeFrom(value).buildPartial();
+          } else {
+            maxStackDepth_ = value;
+          }
+          onChanged();
+        } else {
+          maxStackDepthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      public Builder clearMaxStackDepth() {
+        if (maxStackDepthBuilder_ == null) {
+          maxStackDepth_ = null;
+          onChanged();
+        } else {
+          maxStackDepth_ = null;
+          maxStackDepthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxStackDepthBuilder() {
+        
+        onChanged();
+        return getMaxStackDepthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxStackDepthOrBuilder() {
+        if (maxStackDepthBuilder_ != null) {
+          return maxStackDepthBuilder_.getMessageOrBuilder();
+        } else {
+          return maxStackDepth_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxStackDepth_;
+        }
+      }
+      /**
+       * <pre>
+       * in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_stack_depth = 150 [(.yandex.cloud.value) = "65536-134217728"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxStackDepthFieldBuilder() {
+        if (maxStackDepthBuilder_ == null) {
+          maxStackDepthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxStackDepth(),
+                  getParentForChildren(),
+                  isClean());
+          maxStackDepth_ = null;
+        }
+        return maxStackDepthBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue geqo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> geqoBuilder_;
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       * @return Whether the geqo field is set.
+       */
+      public boolean hasGeqo() {
+        return geqoBuilder_ != null || geqo_ != null;
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       * @return The geqo.
+       */
+      public com.google.protobuf.BoolValue getGeqo() {
+        if (geqoBuilder_ == null) {
+          return geqo_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geqo_;
+        } else {
+          return geqoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      public Builder setGeqo(com.google.protobuf.BoolValue value) {
+        if (geqoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geqo_ = value;
+          onChanged();
+        } else {
+          geqoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      public Builder setGeqo(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (geqoBuilder_ == null) {
+          geqo_ = builderForValue.build();
+          onChanged();
+        } else {
+          geqoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      public Builder mergeGeqo(com.google.protobuf.BoolValue value) {
+        if (geqoBuilder_ == null) {
+          if (geqo_ != null) {
+            geqo_ =
+              com.google.protobuf.BoolValue.newBuilder(geqo_).mergeFrom(value).buildPartial();
+          } else {
+            geqo_ = value;
+          }
+          onChanged();
+        } else {
+          geqoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      public Builder clearGeqo() {
+        if (geqoBuilder_ == null) {
+          geqo_ = null;
+          onChanged();
+        } else {
+          geqo_ = null;
+          geqoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGeqoBuilder() {
+        
+        onChanged();
+        return getGeqoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGeqoOrBuilder() {
+        if (geqoBuilder_ != null) {
+          return geqoBuilder_.getMessageOrBuilder();
+        } else {
+          return geqo_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : geqo_;
+        }
+      }
+      /**
+       * <pre>
+       * enable Genetic Query Optimizer, by default is on
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geqo = 152;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGeqoFieldBuilder() {
+        if (geqoBuilder_ == null) {
+          geqoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGeqo(),
+                  getParentForChildren(),
+                  isClean());
+          geqo_ = null;
+        }
+        return geqoBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value geqoThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> geqoThresholdBuilder_;
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       * @return Whether the geqoThreshold field is set.
+       */
+      public boolean hasGeqoThreshold() {
+        return geqoThresholdBuilder_ != null || geqoThreshold_ != null;
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       * @return The geqoThreshold.
+       */
+      public com.google.protobuf.Int64Value getGeqoThreshold() {
+        if (geqoThresholdBuilder_ == null) {
+          return geqoThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : geqoThreshold_;
+        } else {
+          return geqoThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      public Builder setGeqoThreshold(com.google.protobuf.Int64Value value) {
+        if (geqoThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geqoThreshold_ = value;
+          onChanged();
+        } else {
+          geqoThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      public Builder setGeqoThreshold(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (geqoThresholdBuilder_ == null) {
+          geqoThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          geqoThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      public Builder mergeGeqoThreshold(com.google.protobuf.Int64Value value) {
+        if (geqoThresholdBuilder_ == null) {
+          if (geqoThreshold_ != null) {
+            geqoThreshold_ =
+              com.google.protobuf.Int64Value.newBuilder(geqoThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            geqoThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          geqoThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      public Builder clearGeqoThreshold() {
+        if (geqoThresholdBuilder_ == null) {
+          geqoThreshold_ = null;
+          onChanged();
+        } else {
+          geqoThreshold_ = null;
+          geqoThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGeqoThresholdBuilder() {
+        
+        onChanged();
+        return getGeqoThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGeqoThresholdOrBuilder() {
+        if (geqoThresholdBuilder_ != null) {
+          return geqoThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return geqoThreshold_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : geqoThreshold_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of tables to use geqo, default is 12
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_threshold = 153 [(.yandex.cloud.value) = "2-2147483647"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGeqoThresholdFieldBuilder() {
+        if (geqoThresholdBuilder_ == null) {
+          geqoThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGeqoThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          geqoThreshold_ = null;
+        }
+        return geqoThresholdBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value geqoEffort_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> geqoEffortBuilder_;
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       * @return Whether the geqoEffort field is set.
+       */
+      public boolean hasGeqoEffort() {
+        return geqoEffortBuilder_ != null || geqoEffort_ != null;
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       * @return The geqoEffort.
+       */
+      public com.google.protobuf.Int64Value getGeqoEffort() {
+        if (geqoEffortBuilder_ == null) {
+          return geqoEffort_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : geqoEffort_;
+        } else {
+          return geqoEffortBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      public Builder setGeqoEffort(com.google.protobuf.Int64Value value) {
+        if (geqoEffortBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geqoEffort_ = value;
+          onChanged();
+        } else {
+          geqoEffortBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      public Builder setGeqoEffort(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (geqoEffortBuilder_ == null) {
+          geqoEffort_ = builderForValue.build();
+          onChanged();
+        } else {
+          geqoEffortBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      public Builder mergeGeqoEffort(com.google.protobuf.Int64Value value) {
+        if (geqoEffortBuilder_ == null) {
+          if (geqoEffort_ != null) {
+            geqoEffort_ =
+              com.google.protobuf.Int64Value.newBuilder(geqoEffort_).mergeFrom(value).buildPartial();
+          } else {
+            geqoEffort_ = value;
+          }
+          onChanged();
+        } else {
+          geqoEffortBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      public Builder clearGeqoEffort() {
+        if (geqoEffortBuilder_ == null) {
+          geqoEffort_ = null;
+          onChanged();
+        } else {
+          geqoEffort_ = null;
+          geqoEffortBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGeqoEffortBuilder() {
+        
+        onChanged();
+        return getGeqoEffortFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGeqoEffortOrBuilder() {
+        if (geqoEffortBuilder_ != null) {
+          return geqoEffortBuilder_.getMessageOrBuilder();
+        } else {
+          return geqoEffort_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : geqoEffort_;
+        }
+      }
+      /**
+       * <pre>
+       * tradeoff between planning time and query plan quality, default is 5
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value geqo_effort = 154 [(.yandex.cloud.value) = "1-10"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGeqoEffortFieldBuilder() {
+        if (geqoEffortBuilder_ == null) {
+          geqoEffortBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGeqoEffort(),
+                  getParentForChildren(),
+                  isClean());
+          geqoEffort_ = null;
+        }
+        return geqoEffortBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue geqoSeed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> geqoSeedBuilder_;
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return Whether the geqoSeed field is set.
+       */
+      public boolean hasGeqoSeed() {
+        return geqoSeedBuilder_ != null || geqoSeed_ != null;
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return The geqoSeed.
+       */
+      public com.google.protobuf.DoubleValue getGeqoSeed() {
+        if (geqoSeedBuilder_ == null) {
+          return geqoSeed_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : geqoSeed_;
+        } else {
+          return geqoSeedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setGeqoSeed(com.google.protobuf.DoubleValue value) {
+        if (geqoSeedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geqoSeed_ = value;
+          onChanged();
+        } else {
+          geqoSeedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setGeqoSeed(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (geqoSeedBuilder_ == null) {
+          geqoSeed_ = builderForValue.build();
+          onChanged();
+        } else {
+          geqoSeedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder mergeGeqoSeed(com.google.protobuf.DoubleValue value) {
+        if (geqoSeedBuilder_ == null) {
+          if (geqoSeed_ != null) {
+            geqoSeed_ =
+              com.google.protobuf.DoubleValue.newBuilder(geqoSeed_).mergeFrom(value).buildPartial();
+          } else {
+            geqoSeed_ = value;
+          }
+          onChanged();
+        } else {
+          geqoSeedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder clearGeqoSeed() {
+        if (geqoSeedBuilder_ == null) {
+          geqoSeed_ = null;
+          onChanged();
+        } else {
+          geqoSeed_ = null;
+          geqoSeedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getGeqoSeedBuilder() {
+        
+        onChanged();
+        return getGeqoSeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getGeqoSeedOrBuilder() {
+        if (geqoSeedBuilder_ != null) {
+          return geqoSeedBuilder_.getMessageOrBuilder();
+        } else {
+          return geqoSeed_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : geqoSeed_;
+        }
+      }
+      /**
+       * <pre>
+       * initial value of the random number generator used by GEQO
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getGeqoSeedFieldBuilder() {
+        if (geqoSeedBuilder_ == null) {
+          geqoSeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getGeqoSeed(),
+                  getParentForChildren(),
+                  isClean());
+          geqoSeed_ = null;
+        }
+        return geqoSeedBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29289,7 +30613,7 @@ public final class Postgresql121C {
       "postgresql12_1c.proto\022%yandex.cloud.mdb." +
       "postgresql.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\313W\n\025PostgresqlConfig12_1C\0224\n\017max_con" +
+      "oto\"\256Z\n\025PostgresqlConfig12_1C\0224\n\017max_con" +
       "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pro" +
       "tobuf.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033" +
@@ -29507,80 +30831,88 @@ public final class Postgresql121C {
       "alue\022?\n\030pg_qualstats_sample_rate\030\200\001 \001(\0132" +
       "\034.google.protobuf.DoubleValue\022>\n\031plantun" +
       "er_fix_empty_table\030\225\001 \001(\0132\032.google.proto" +
-      "buf.BoolValue\"\232\001\n\016BackslashQuote\022\037\n\033BACK" +
-      "SLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_Q" +
-      "UOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSL" +
-      "ASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_" +
-      "ENCODING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPU" +
-      "T_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n" +
-      "\024BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023ConstraintEx" +
-      "clusion\022$\n CONSTRAINT_EXCLUSION_UNSPECIF" +
-      "IED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CO" +
-      "NSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_E" +
-      "XCLUSION_PARTITION\020\003\"\222\001\n\021ForceParallelMo" +
-      "de\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022" +
-      "\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PAR" +
-      "ALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_" +
-      "REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_E" +
-      "RROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERRO" +
-      "R_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSI" +
-      "TY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERB" +
-      "OSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
-      "IED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL" +
-      "_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_L" +
-      "EVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rL" +
-      "OG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021" +
-      "LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t" +
-      "\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC" +
-      "\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNS" +
-      "PECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LO" +
-      "G_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003" +
-      "\022\025\n\021LOG_STATEMENT_ALL\020\004\"\320\001\n\024PgHintPlanDe" +
-      "bugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRINT_UNS" +
-      "PECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRINT_O" +
-      "FF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020\002\022%\n" +
-      "!PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020\003\022$\n " +
-      "PG_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\231\001\n\rP" +
-      "lanCacheMode\022\037\n\033PLAN_CACHE_MODE_UNSPECIF" +
-      "IED\020\000\022\030\n\024PLAN_CACHE_MODE_AUTO\020\001\022%\n!PLAN_" +
-      "CACHE_MODE_FORCE_CUSTOM_PLAN\020\002\022&\n\"PLAN_C" +
-      "ACHE_MODE_FORCE_GENERIC_PLAN\020\003\"\223\002\n\026Share" +
-      "dPreloadLibraries\022(\n$SHARED_PRELOAD_LIBR" +
-      "ARIES_UNSPECIFIED\020\000\022)\n%SHARED_PRELOAD_LI" +
-      "BRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD" +
-      "_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$SHARED_PREL" +
-      "OAD_LIBRARIES_TIMESCALEDB\020\003\022)\n%SHARED_PR" +
-      "ELOAD_LIBRARIES_PG_QUALSTATS\020\004\022$\n SHARED" +
-      "_PRELOAD_LIBRARIES_PG_CRON\020\005\"\326\001\n\021Synchro" +
-      "nousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECI" +
-      "FIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYN" +
-      "CHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COM" +
-      "MIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE" +
-      "_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_AP" +
-      "PLY\020\005\"\346\001\n\024TransactionIsolation\022%\n!TRANSA" +
-      "CTION_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSAC" +
-      "TION_ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRA" +
-      "NSACTION_ISOLATION_READ_COMMITTED\020\002\022)\n%T" +
-      "RANSACTION_ISOLATION_REPEATABLE_READ\020\003\022&" +
-      "\n\"TRANSACTION_ISOLATION_SERIALIZABLE\020\004\"S" +
-      "\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n" +
-      "\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICA" +
-      "L\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIFI" +
-      "ED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINAR" +
-      "Y_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPE" +
-      "CIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML" +
-      "_OPTION_CONTENT\020\002\"\233\002\n\030PostgresqlConfigSe" +
-      "t12_1C\022V\n\020effective_config\030\001 \001(\0132<.yande" +
-      "x.cloud.mdb.postgresql.v1.config.Postgre" +
-      "sqlConfig12_1C\022Q\n\013user_config\030\002 \001(\0132<.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig12_1C\022T\n\016default_config\030\003 \001(" +
-      "\0132<.yandex.cloud.mdb.postgresql.v1.confi" +
-      "g.PostgresqlConfig12_1CB\201\001\n)yandex.cloud" +
-      ".api.mdb.postgresql.v1.configZTgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/postgresql/v1/config;postgresqlb\006pro" +
-      "to3"
+      "buf.BoolValue\022J\n\017max_stack_depth\030\226\001 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\023\372\3071\01765536-" +
+      "134217728\022)\n\004geqo\030\230\001 \001(\0132\032.google.protob" +
+      "uf.BoolValue\022F\n\016geqo_threshold\030\231\001 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\020\372\3071\0142-214748" +
+      "3647\022;\n\013geqo_effort\030\232\001 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\010\372\3071\0041-10\022=\n\tgeqo_seed\030\236" +
+      "\001 \001(\0132\034.google.protobuf.DoubleValueB\013\372\3071" +
+      "\0070.0-1.0\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH" +
+      "_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020" +
+      "\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_Q" +
+      "UOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCOD" +
+      "ING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_UNS" +
+      "PECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTE" +
+      "A_OUTPUT_ESCAPED\020\002\"\232\001\n\023ConstraintExclusi" +
+      "on\022$\n CONSTRAINT_EXCLUSION_UNSPECIFIED\020\000" +
+      "\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRA" +
+      "INT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUS" +
+      "ION_PARTITION\020\003\"\222\001\n\021ForceParallelMode\022#\n" +
+      "\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026FO" +
+      "RCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARALLEL" +
+      "_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_REGRE" +
+      "SS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ERROR_" +
+      "VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VER" +
+      "BOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DE" +
+      "FAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBOSE\020\003" +
+      "\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000" +
+      "\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBU" +
+      "G4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_" +
+      "DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG_LE" +
+      "VEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_L" +
+      "EVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017L" +
+      "OG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\212\001" +
+      "\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPECIF" +
+      "IED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_STA" +
+      "TEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021L" +
+      "OG_STATEMENT_ALL\020\004\"\320\001\n\024PgHintPlanDebugPr" +
+      "int\022(\n$PG_HINT_PLAN_DEBUG_PRINT_UNSPECIF" +
+      "IED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRINT_OFF\020\001\022" +
+      "\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_H" +
+      "INT_PLAN_DEBUG_PRINT_DETAILED\020\003\022$\n PG_HI" +
+      "NT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\231\001\n\rPlanCa" +
+      "cheMode\022\037\n\033PLAN_CACHE_MODE_UNSPECIFIED\020\000" +
+      "\022\030\n\024PLAN_CACHE_MODE_AUTO\020\001\022%\n!PLAN_CACHE" +
+      "_MODE_FORCE_CUSTOM_PLAN\020\002\022&\n\"PLAN_CACHE_" +
+      "MODE_FORCE_GENERIC_PLAN\020\003\"\273\002\n\026SharedPrel" +
+      "oadLibraries\022(\n$SHARED_PRELOAD_LIBRARIES" +
+      "_UNSPECIFIED\020\000\022)\n%SHARED_PRELOAD_LIBRARI" +
+      "ES_AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD_LIBR" +
+      "ARIES_PG_HINT_PLAN\020\002\022(\n$SHARED_PRELOAD_L" +
+      "IBRARIES_TIMESCALEDB\020\003\022)\n%SHARED_PRELOAD" +
+      "_LIBRARIES_PG_QUALSTATS\020\004\022$\n SHARED_PREL" +
+      "OAD_LIBRARIES_PG_CRON\020\005\022&\n\"SHARED_PRELOA" +
+      "D_LIBRARIES_PGLOGICAL\020\006\"\326\001\n\021SynchronousC" +
+      "ommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020" +
+      "\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRON" +
+      "OUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_L" +
+      "OCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRIT" +
+      "E\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005" +
+      "\"\346\001\n\024TransactionIsolation\022%\n!TRANSACTION" +
+      "_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTION_" +
+      "ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRANSACT" +
+      "ION_ISOLATION_READ_COMMITTED\020\002\022)\n%TRANSA" +
+      "CTION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"TRA" +
+      "NSACTION_ISOLATION_SERIALIZABLE\020\004\"S\n\010Wal" +
+      "Level\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_" +
+      "LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"R" +
+      "\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022" +
+      "\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX" +
+      "\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIE" +
+      "D\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTI" +
+      "ON_CONTENT\020\002\"\233\002\n\030PostgresqlConfigSet12_1" +
+      "C\022V\n\020effective_config\030\001 \001(\0132<.yandex.clo" +
+      "ud.mdb.postgresql.v1.config.PostgresqlCo" +
+      "nfig12_1C\022Q\n\013user_config\030\002 \001(\0132<.yandex." +
+      "cloud.mdb.postgresql.v1.config.Postgresq" +
+      "lConfig12_1C\022T\n\016default_config\030\003 \001(\0132<.y" +
+      "andex.cloud.mdb.postgresql.v1.config.Pos" +
+      "tgresqlConfig12_1CB\201\001\n)yandex.cloud.api." +
+      "mdb.postgresql.v1.configZTgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/p" +
+      "ostgresql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29593,7 +30925,7 @@ public final class Postgresql121C {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig12_1C_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig12_1C_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "OnlineAnalyzeEnable", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "VacuumCleanupIndexScaleFactor", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "PlantunerFixEmptyTable", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "OnlineAnalyzeEnable", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "VacuumCleanupIndexScaleFactor", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "PlantunerFixEmptyTable", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoSeed", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet12_1C_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet12_1C_fieldAccessorTable = new

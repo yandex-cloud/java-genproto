@@ -3303,6 +3303,1059 @@ public final class CustomerServiceOuterClass {
 
   }
 
+  public interface CreateResellerServedCustomerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.billing.v1.CreateResellerServedCustomerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the reseller that customer will be associated with.
+     * </pre>
+     *
+     * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resellerId.
+     */
+    java.lang.String getResellerId();
+    /**
+     * <pre>
+     * ID of the reseller that customer will be associated with.
+     * </pre>
+     *
+     * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resellerId.
+     */
+    com.google.protobuf.ByteString
+        getResellerIdBytes();
+
+    /**
+     * <pre>
+     * Name of the customer.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the customer.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Person of the customer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the person field is set.
+     */
+    boolean hasPerson();
+    /**
+     * <pre>
+     * Person of the customer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The person.
+     */
+    yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson getPerson();
+    /**
+     * <pre>
+     * Person of the customer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder getPersonOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.billing.v1.CreateResellerServedCustomerRequest}
+   */
+  public static final class CreateResellerServedCustomerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.billing.v1.CreateResellerServedCustomerRequest)
+      CreateResellerServedCustomerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateResellerServedCustomerRequest.newBuilder() to construct.
+    private CreateResellerServedCustomerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateResellerServedCustomerRequest() {
+      resellerId_ = "";
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateResellerServedCustomerRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateResellerServedCustomerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resellerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder subBuilder = null;
+              if (person_ != null) {
+                subBuilder = person_.toBuilder();
+              }
+              person_ = input.readMessage(yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(person_);
+                person_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.billing.v1.CustomerServiceOuterClass.internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.billing.v1.CustomerServiceOuterClass.internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.class, yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.Builder.class);
+    }
+
+    public static final int RESELLER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resellerId_;
+    /**
+     * <pre>
+     * ID of the reseller that customer will be associated with.
+     * </pre>
+     *
+     * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resellerId.
+     */
+    @java.lang.Override
+    public java.lang.String getResellerId() {
+      java.lang.Object ref = resellerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resellerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the reseller that customer will be associated with.
+     * </pre>
+     *
+     * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resellerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResellerIdBytes() {
+      java.lang.Object ref = resellerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resellerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the customer.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the customer.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERSON_FIELD_NUMBER = 3;
+    private yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson person_;
+    /**
+     * <pre>
+     * Person of the customer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the person field is set.
+     */
+    @java.lang.Override
+    public boolean hasPerson() {
+      return person_ != null;
+    }
+    /**
+     * <pre>
+     * Person of the customer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The person.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson getPerson() {
+      return person_ == null ? yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.getDefaultInstance() : person_;
+    }
+    /**
+     * <pre>
+     * Person of the customer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder getPersonOrBuilder() {
+      return getPerson();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resellerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (person_ != null) {
+        output.writeMessage(3, getPerson());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resellerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resellerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (person_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPerson());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest other = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest) obj;
+
+      if (!getResellerId()
+          .equals(other.getResellerId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasPerson() != other.hasPerson()) return false;
+      if (hasPerson()) {
+        if (!getPerson()
+            .equals(other.getPerson())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESELLER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResellerId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasPerson()) {
+        hash = (37 * hash) + PERSON_FIELD_NUMBER;
+        hash = (53 * hash) + getPerson().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.billing.v1.CreateResellerServedCustomerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.billing.v1.CreateResellerServedCustomerRequest)
+        yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.billing.v1.CustomerServiceOuterClass.internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.billing.v1.CustomerServiceOuterClass.internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.class, yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resellerId_ = "";
+
+        name_ = "";
+
+        if (personBuilder_ == null) {
+          person_ = null;
+        } else {
+          person_ = null;
+          personBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.billing.v1.CustomerServiceOuterClass.internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest build() {
+        yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest buildPartial() {
+        yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest result = new yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest(this);
+        result.resellerId_ = resellerId_;
+        result.name_ = name_;
+        if (personBuilder_ == null) {
+          result.person_ = person_;
+        } else {
+          result.person_ = personBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest) {
+          return mergeFrom((yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest other) {
+        if (other == yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest.getDefaultInstance()) return this;
+        if (!other.getResellerId().isEmpty()) {
+          resellerId_ = other.resellerId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasPerson()) {
+          mergePerson(other.getPerson());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resellerId_ = "";
+      /**
+       * <pre>
+       * ID of the reseller that customer will be associated with.
+       * </pre>
+       *
+       * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resellerId.
+       */
+      public java.lang.String getResellerId() {
+        java.lang.Object ref = resellerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resellerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reseller that customer will be associated with.
+       * </pre>
+       *
+       * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resellerId.
+       */
+      public com.google.protobuf.ByteString
+          getResellerIdBytes() {
+        java.lang.Object ref = resellerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resellerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reseller that customer will be associated with.
+       * </pre>
+       *
+       * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resellerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResellerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resellerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reseller that customer will be associated with.
+       * </pre>
+       *
+       * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResellerId() {
+        
+        resellerId_ = getDefaultInstance().getResellerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reseller that customer will be associated with.
+       * </pre>
+       *
+       * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resellerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResellerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resellerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the customer.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the customer.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the customer.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the customer.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the customer.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson person_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder> personBuilder_;
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the person field is set.
+       */
+      public boolean hasPerson() {
+        return personBuilder_ != null || person_ != null;
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The person.
+       */
+      public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson getPerson() {
+        if (personBuilder_ == null) {
+          return person_ == null ? yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.getDefaultInstance() : person_;
+        } else {
+          return personBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setPerson(yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson value) {
+        if (personBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          person_ = value;
+          onChanged();
+        } else {
+          personBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setPerson(
+          yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder builderForValue) {
+        if (personBuilder_ == null) {
+          person_ = builderForValue.build();
+          onChanged();
+        } else {
+          personBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergePerson(yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson value) {
+        if (personBuilder_ == null) {
+          if (person_ != null) {
+            person_ =
+              yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.newBuilder(person_).mergeFrom(value).buildPartial();
+          } else {
+            person_ = value;
+          }
+          onChanged();
+        } else {
+          personBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearPerson() {
+        if (personBuilder_ == null) {
+          person_ = null;
+          onChanged();
+        } else {
+          person_ = null;
+          personBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder getPersonBuilder() {
+        
+        onChanged();
+        return getPersonFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder getPersonOrBuilder() {
+        if (personBuilder_ != null) {
+          return personBuilder_.getMessageOrBuilder();
+        } else {
+          return person_ == null ?
+              yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.getDefaultInstance() : person_;
+        }
+      }
+      /**
+       * <pre>
+       * Person of the customer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.billing.v1.CustomerPerson person = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder> 
+          getPersonFieldBuilder() {
+        if (personBuilder_ == null) {
+          personBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPerson.Builder, yandex.cloud.api.billing.v1.CustomerOuterClass.CustomerPersonOrBuilder>(
+                  getPerson(),
+                  getParentForChildren(),
+                  isClean());
+          person_ = null;
+        }
+        return personBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.billing.v1.CreateResellerServedCustomerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.billing.v1.CreateResellerServedCustomerRequest)
+    private static final yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest();
+    }
+
+    public static yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateResellerServedCustomerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateResellerServedCustomerRequest>() {
+      @java.lang.Override
+      public CreateResellerServedCustomerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateResellerServedCustomerRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateResellerServedCustomerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateResellerServedCustomerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.billing.v1.CustomerServiceOuterClass.CreateResellerServedCustomerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ActivateCustomerRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.billing.v1.ActivateCustomerRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -5335,6 +6388,11 @@ public final class CustomerServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_billing_v1_InviteCustomerRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_billing_v1_ActivateCustomerRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5374,31 +6432,41 @@ public final class CustomerServiceOuterClass {
       "B\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\022\036\n\020in" +
       "vitation_email\030\003 \001(\tB\004\350\3071\001\022=\n\006person\030\004 \001" +
       "(\0132\'.yandex.cloud.billing.v1.CustomerPer" +
-      "sonB\004\350\3071\001\"<\n\027ActivateCustomerRequest\022!\n\013" +
-      "customer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\";\n\026Suspe" +
-      "ndCustomerRequest\022!\n\013customer_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"<\n\020CustomerMetadata\022\023\n\013rese" +
-      "ller_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t2\254\005\n\017C" +
-      "ustomerService\022\204\001\n\004List\022-.yandex.cloud.b" +
-      "illing.v1.ListCustomersRequest\032..yandex." +
-      "cloud.billing.v1.ListCustomersResponse\"\035" +
-      "\202\323\344\223\002\027\022\025/billing/v1/customers\022\244\001\n\006Invite" +
-      "\022..yandex.cloud.billing.v1.InviteCustome" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"G\202\323\344\223\002!\"\034/billing/v1/customers:invit" +
-      "e:\001*\262\322*\034\n\020CustomerMetadata\022\010Customer\022\265\001\n" +
-      "\010Activate\0220.yandex.cloud.billing.v1.Acti" +
-      "vateCustomerRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"T\202\323\344\223\002.\",/billing/v1/cust" +
-      "omers/{customer_id}:activate\262\322*\034\n\020Custom" +
-      "erMetadata\022\010Customer\022\262\001\n\007Suspend\022/.yande" +
-      "x.cloud.billing.v1.SuspendCustomerReques" +
-      "t\032!.yandex.cloud.operation.Operation\"S\202\323" +
-      "\344\223\002-\"+/billing/v1/customers/{customer_id" +
-      "}:suspend\262\322*\034\n\020CustomerMetadata\022\010Custome" +
-      "rBb\n\033yandex.cloud.api.billing.v1ZCgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/billing/v1;billingb\006proto3"
+      "sonB\004\350\3071\001\"\233\001\n#CreateResellerServedCustom" +
+      "erRequest\022!\n\013reseller_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\022=\n\006person\030\003 \001(\013" +
+      "2\'.yandex.cloud.billing.v1.CustomerPerso" +
+      "nB\004\350\3071\001\"<\n\027ActivateCustomerRequest\022!\n\013cu" +
+      "stomer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\";\n\026Suspend" +
+      "CustomerRequest\022!\n\013customer_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"<\n\020CustomerMetadata\022\023\n\013resell" +
+      "er_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t2\205\007\n\017Cus" +
+      "tomerService\022\204\001\n\004List\022-.yandex.cloud.bil" +
+      "ling.v1.ListCustomersRequest\032..yandex.cl" +
+      "oud.billing.v1.ListCustomersResponse\"\035\202\323" +
+      "\344\223\002\027\022\025/billing/v1/customers\022\244\001\n\006Invite\022." +
+      ".yandex.cloud.billing.v1.InviteCustomerR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"G\202\323\344\223\002!\"\034/billing/v1/customers:invite:" +
+      "\001*\262\322*\034\n\020CustomerMetadata\022\010Customer\022\326\001\n\024C" +
+      "reateResellerServed\022<.yandex.cloud.billi" +
+      "ng.v1.CreateResellerServedCustomerReques" +
+      "t\032!.yandex.cloud.operation.Operation\"]\202\323" +
+      "\344\223\0027\"2/billing/v1/customers:createResell" +
+      "erServedCustomer:\001*\262\322*\034\n\020CustomerMetadat" +
+      "a\022\010Customer\022\265\001\n\010Activate\0220.yandex.cloud." +
+      "billing.v1.ActivateCustomerRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"T\202\323\344\223\002.\",/" +
+      "billing/v1/customers/{customer_id}:activ" +
+      "ate\262\322*\034\n\020CustomerMetadata\022\010Customer\022\262\001\n\007" +
+      "Suspend\022/.yandex.cloud.billing.v1.Suspen" +
+      "dCustomerRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"S\202\323\344\223\002-\"+/billing/v1/custome" +
+      "rs/{customer_id}:suspend\262\322*\034\n\020CustomerMe" +
+      "tadata\022\010CustomerBb\n\033yandex.cloud.api.bil" +
+      "ling.v1ZCgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/billing/v1;billingb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5427,20 +6495,26 @@ public final class CustomerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_billing_v1_InviteCustomerRequest_descriptor,
         new java.lang.String[] { "ResellerId", "Name", "InvitationEmail", "Person", });
-    internal_static_yandex_cloud_billing_v1_ActivateCustomerRequest_descriptor =
+    internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_billing_v1_CreateResellerServedCustomerRequest_descriptor,
+        new java.lang.String[] { "ResellerId", "Name", "Person", });
+    internal_static_yandex_cloud_billing_v1_ActivateCustomerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_billing_v1_ActivateCustomerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_billing_v1_ActivateCustomerRequest_descriptor,
         new java.lang.String[] { "CustomerId", });
     internal_static_yandex_cloud_billing_v1_SuspendCustomerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_billing_v1_SuspendCustomerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_billing_v1_SuspendCustomerRequest_descriptor,
         new java.lang.String[] { "CustomerId", });
     internal_static_yandex_cloud_billing_v1_CustomerMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_billing_v1_CustomerMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_billing_v1_CustomerMetadata_descriptor,
