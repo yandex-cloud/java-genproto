@@ -13306,6 +13306,654 @@ public final class Stt {
 
   }
 
+  public interface LanguageEstimationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.LanguageEstimation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string language_code = 1;</code>
+     * @return The languageCode.
+     */
+    java.lang.String getLanguageCode();
+    /**
+     * <code>string language_code = 1;</code>
+     * @return The bytes for languageCode.
+     */
+    com.google.protobuf.ByteString
+        getLanguageCodeBytes();
+
+    /**
+     * <code>double probability = 2;</code>
+     * @return The probability.
+     */
+    double getProbability();
+  }
+  /**
+   * <pre>
+   * Estimation of language probability
+   * </pre>
+   *
+   * Protobuf type {@code speechkit.stt.v3.LanguageEstimation}
+   */
+  public static final class LanguageEstimation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.LanguageEstimation)
+      LanguageEstimationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LanguageEstimation.newBuilder() to construct.
+    private LanguageEstimation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LanguageEstimation() {
+      languageCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LanguageEstimation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LanguageEstimation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              languageCode_ = s;
+              break;
+            }
+            case 17: {
+
+              probability_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_LanguageEstimation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.class, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder.class);
+    }
+
+    public static final int LANGUAGE_CODE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object languageCode_;
+    /**
+     * <code>string language_code = 1;</code>
+     * @return The languageCode.
+     */
+    @java.lang.Override
+    public java.lang.String getLanguageCode() {
+      java.lang.Object ref = languageCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        languageCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string language_code = 1;</code>
+     * @return The bytes for languageCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLanguageCodeBytes() {
+      java.lang.Object ref = languageCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        languageCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROBABILITY_FIELD_NUMBER = 2;
+    private double probability_;
+    /**
+     * <code>double probability = 2;</code>
+     * @return The probability.
+     */
+    @java.lang.Override
+    public double getProbability() {
+      return probability_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, languageCode_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(probability_) != 0) {
+        output.writeDouble(2, probability_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, languageCode_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(probability_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, probability_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation other = (yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation) obj;
+
+      if (!getLanguageCode()
+          .equals(other.getLanguageCode())) return false;
+      if (java.lang.Double.doubleToLongBits(getProbability())
+          != java.lang.Double.doubleToLongBits(
+              other.getProbability())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getLanguageCode().hashCode();
+      hash = (37 * hash) + PROBABILITY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getProbability()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Estimation of language probability
+     * </pre>
+     *
+     * Protobuf type {@code speechkit.stt.v3.LanguageEstimation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.LanguageEstimation)
+        yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_LanguageEstimation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.class, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        languageCode_ = "";
+
+        probability_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_LanguageEstimation_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation build() {
+        yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation result = new yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation(this);
+        result.languageCode_ = languageCode_;
+        result.probability_ = probability_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.getDefaultInstance()) return this;
+        if (!other.getLanguageCode().isEmpty()) {
+          languageCode_ = other.languageCode_;
+          onChanged();
+        }
+        if (other.getProbability() != 0D) {
+          setProbability(other.getProbability());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object languageCode_ = "";
+      /**
+       * <code>string language_code = 1;</code>
+       * @return The languageCode.
+       */
+      public java.lang.String getLanguageCode() {
+        java.lang.Object ref = languageCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          languageCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string language_code = 1;</code>
+       * @return The bytes for languageCode.
+       */
+      public com.google.protobuf.ByteString
+          getLanguageCodeBytes() {
+        java.lang.Object ref = languageCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          languageCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string language_code = 1;</code>
+       * @param value The languageCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        languageCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string language_code = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLanguageCode() {
+        
+        languageCode_ = getDefaultInstance().getLanguageCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string language_code = 1;</code>
+       * @param value The bytes for languageCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLanguageCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        languageCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double probability_ ;
+      /**
+       * <code>double probability = 2;</code>
+       * @return The probability.
+       */
+      @java.lang.Override
+      public double getProbability() {
+        return probability_;
+      }
+      /**
+       * <code>double probability = 2;</code>
+       * @param value The probability to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProbability(double value) {
+        
+        probability_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double probability = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProbability() {
+        
+        probability_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.LanguageEstimation)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.LanguageEstimation)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LanguageEstimation>
+        PARSER = new com.google.protobuf.AbstractParser<LanguageEstimation>() {
+      @java.lang.Override
+      public LanguageEstimation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LanguageEstimation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LanguageEstimation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LanguageEstimation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AlternativeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.Alternative)
       com.google.protobuf.MessageOrBuilder {
@@ -13403,6 +14051,50 @@ public final class Stt {
      * @return The confidence.
      */
     double getConfidence();
+
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> 
+        getLanguagesList();
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getLanguages(int index);
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    int getLanguagesCount();
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder> 
+        getLanguagesOrBuilderList();
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder getLanguagesOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -13423,6 +14115,7 @@ public final class Stt {
     private Alternative() {
       words_ = java.util.Collections.emptyList();
       text_ = "";
+      languages_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -13486,6 +14179,15 @@ public final class Stt {
               confidence_ = input.readDouble();
               break;
             }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                languages_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              languages_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -13503,6 +14205,9 @@ public final class Stt {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           words_ = java.util.Collections.unmodifiableList(words_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          languages_ = java.util.Collections.unmodifiableList(languages_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13672,6 +14377,66 @@ public final class Stt {
       return confidence_;
     }
 
+    public static final int LANGUAGES_FIELD_NUMBER = 6;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> languages_;
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> getLanguagesList() {
+      return languages_;
+    }
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder> 
+        getLanguagesOrBuilderList() {
+      return languages_;
+    }
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    @java.lang.Override
+    public int getLanguagesCount() {
+      return languages_.size();
+    }
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getLanguages(int index) {
+      return languages_.get(index);
+    }
+    /**
+     * <pre>
+     * Distribution over possible languages
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder getLanguagesOrBuilder(
+        int index) {
+      return languages_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13701,6 +14466,9 @@ public final class Stt {
       if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
         output.writeDouble(5, confidence_);
       }
+      for (int i = 0; i < languages_.size(); i++) {
+        output.writeMessage(6, languages_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13729,6 +14497,10 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, confidence_);
       }
+      for (int i = 0; i < languages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, languages_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13755,6 +14527,8 @@ public final class Stt {
       if (java.lang.Double.doubleToLongBits(getConfidence())
           != java.lang.Double.doubleToLongBits(
               other.getConfidence())) return false;
+      if (!getLanguagesList()
+          .equals(other.getLanguagesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13781,6 +14555,10 @@ public final class Stt {
       hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getConfidence()));
+      if (getLanguagesCount() > 0) {
+        hash = (37 * hash) + LANGUAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguagesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13914,6 +14692,7 @@ public final class Stt {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getWordsFieldBuilder();
+          getLanguagesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -13933,6 +14712,12 @@ public final class Stt {
 
         confidence_ = 0D;
 
+        if (languagesBuilder_ == null) {
+          languages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          languagesBuilder_.clear();
+        }
         return this;
       }
 
@@ -13973,6 +14758,15 @@ public final class Stt {
         result.startTimeMs_ = startTimeMs_;
         result.endTimeMs_ = endTimeMs_;
         result.confidence_ = confidence_;
+        if (languagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            languages_ = java.util.Collections.unmodifiableList(languages_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.languages_ = languages_;
+        } else {
+          result.languages_ = languagesBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -14059,6 +14853,32 @@ public final class Stt {
         }
         if (other.getConfidence() != 0D) {
           setConfidence(other.getConfidence());
+        }
+        if (languagesBuilder_ == null) {
+          if (!other.languages_.isEmpty()) {
+            if (languages_.isEmpty()) {
+              languages_ = other.languages_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureLanguagesIsMutable();
+              languages_.addAll(other.languages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.languages_.isEmpty()) {
+            if (languagesBuilder_.isEmpty()) {
+              languagesBuilder_.dispose();
+              languagesBuilder_ = null;
+              languages_ = other.languages_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              languagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLanguagesFieldBuilder() : null;
+            } else {
+              languagesBuilder_.addAllMessages(other.languages_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14625,6 +15445,318 @@ public final class Stt {
         confidence_ = 0D;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> languages_ =
+        java.util.Collections.emptyList();
+      private void ensureLanguagesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          languages_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation>(languages_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder> languagesBuilder_;
+
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> getLanguagesList() {
+        if (languagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(languages_);
+        } else {
+          return languagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public int getLanguagesCount() {
+        if (languagesBuilder_ == null) {
+          return languages_.size();
+        } else {
+          return languagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getLanguages(int index) {
+        if (languagesBuilder_ == null) {
+          return languages_.get(index);
+        } else {
+          return languagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder setLanguages(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation value) {
+        if (languagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLanguagesIsMutable();
+          languages_.set(index, value);
+          onChanged();
+        } else {
+          languagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder setLanguages(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder builderForValue) {
+        if (languagesBuilder_ == null) {
+          ensureLanguagesIsMutable();
+          languages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          languagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder addLanguages(yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation value) {
+        if (languagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLanguagesIsMutable();
+          languages_.add(value);
+          onChanged();
+        } else {
+          languagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder addLanguages(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation value) {
+        if (languagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLanguagesIsMutable();
+          languages_.add(index, value);
+          onChanged();
+        } else {
+          languagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder addLanguages(
+          yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder builderForValue) {
+        if (languagesBuilder_ == null) {
+          ensureLanguagesIsMutable();
+          languages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          languagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder addLanguages(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder builderForValue) {
+        if (languagesBuilder_ == null) {
+          ensureLanguagesIsMutable();
+          languages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          languagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder addAllLanguages(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> values) {
+        if (languagesBuilder_ == null) {
+          ensureLanguagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, languages_);
+          onChanged();
+        } else {
+          languagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder clearLanguages() {
+        if (languagesBuilder_ == null) {
+          languages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          languagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public Builder removeLanguages(int index) {
+        if (languagesBuilder_ == null) {
+          ensureLanguagesIsMutable();
+          languages_.remove(index);
+          onChanged();
+        } else {
+          languagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder getLanguagesBuilder(
+          int index) {
+        return getLanguagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder getLanguagesOrBuilder(
+          int index) {
+        if (languagesBuilder_ == null) {
+          return languages_.get(index);  } else {
+          return languagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder> 
+           getLanguagesOrBuilderList() {
+        if (languagesBuilder_ != null) {
+          return languagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(languages_);
+        }
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder addLanguagesBuilder() {
+        return getLanguagesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder addLanguagesBuilder(
+          int index) {
+        return getLanguagesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Distribution over possible languages
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder> 
+           getLanguagesBuilderList() {
+        return getLanguagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder> 
+          getLanguagesFieldBuilder() {
+        if (languagesBuilder_ == null) {
+          languagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation.Builder, yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimationOrBuilder>(
+                  languages_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          languages_ = null;
+        }
+        return languagesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22403,6 +23535,11 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_Word_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_LanguageEstimation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_Alternative_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22513,40 +23650,43 @@ public final class Stt {
       "chunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceCh" +
       "unkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.Eo" +
       "uH\000B\007\n\005Event\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rst" +
-      "art_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"\202" +
-      "\001\n\013Alternative\022%\n\005words\030\001 \003(\0132\026.speechki" +
-      "t.stt.v3.Word\022\014\n\004text\030\002 \001(\t\022\025\n\rstart_tim" +
-      "e_ms\030\003 \001(\003\022\023\n\013end_time_ms\030\004 \001(\003\022\022\n\nconfi" +
-      "dence\030\005 \001(\001\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(" +
-      "\003\"]\n\021AlternativeUpdate\0223\n\014alternatives\030\001" +
-      " \003(\0132\035.speechkit.stt.v3.Alternative\022\023\n\013c" +
-      "hannel_tag\030\002 \001(\t\"\231\001\n\014AudioCursors\022\030\n\020rec" +
-      "eived_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001" +
-      "(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_tim" +
-      "e_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_t" +
-      "ime_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013final" +
-      "_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\0132#." +
-      "speechkit.stt.v3.AlternativeUpdateH\000B\006\n\004" +
-      "Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\0162\032." +
-      "speechkit.stt.v3.CodeType\022\017\n\007message\030\002 \001" +
-      "(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_" +
-      "request_id\030\002 \001(\t\"\274\003\n\021StreamingResponse\0223" +
-      "\n\014session_uuid\030\001 \001(\0132\035.speechkit.stt.v3." +
-      "SessionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036.spe" +
-      "echkit.stt.v3.AudioCursors\022\035\n\025response_w" +
-      "all_time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.spe" +
-      "echkit.stt.v3.AlternativeUpdateH\000\0224\n\005fin" +
-      "al\030\005 \001(\0132#.speechkit.stt.v3.AlternativeU" +
-      "pdateH\000\0221\n\neou_update\030\006 \001(\0132\033.speechkit." +
-      "stt.v3.EouUpdateH\000\022=\n\020final_refinement\030\007" +
-      " \001(\0132!.speechkit.stt.v3.FinalRefinementH" +
-      "\000\0223\n\013status_code\030\010 \001(\0132\034.speechkit.stt.v" +
-      "3.StatusCodeH\000B\007\n\005Event*K\n\010CodeType\022\031\n\025C" +
-      "ODE_TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022\013\n\007W" +
-      "ARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud.api" +
-      ".ai.stt.v3Z>github.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/ai/stt/v3;sttb\006prot" +
-      "o3"
+      "art_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@" +
+      "\n\022LanguageEstimation\022\025\n\rlanguage_code\030\001 " +
+      "\001(\t\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Alternative" +
+      "\022%\n\005words\030\001 \003(\0132\026.speechkit.stt.v3.Word\022" +
+      "\014\n\004text\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013" +
+      "end_time_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n" +
+      "\tlanguages\030\006 \003(\0132$.speechkit.stt.v3.Lang" +
+      "uageEstimation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002" +
+      " \001(\003\"]\n\021AlternativeUpdate\0223\n\014alternative" +
+      "s\030\001 \003(\0132\035.speechkit.stt.v3.Alternative\022\023" +
+      "\n\013channel_tag\030\002 \001(\t\"\231\001\n\014AudioCursors\022\030\n\020" +
+      "received_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030" +
+      "\002 \001(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_" +
+      "time_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eo" +
+      "u_time_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013fi" +
+      "nal_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\013" +
+      "2#.speechkit.stt.v3.AlternativeUpdateH\000B" +
+      "\006\n\004Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\016" +
+      "2\032.speechkit.stt.v3.CodeType\022\017\n\007message\030" +
+      "\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017us" +
+      "er_request_id\030\002 \001(\t\"\274\003\n\021StreamingRespons" +
+      "e\0223\n\014session_uuid\030\001 \001(\0132\035.speechkit.stt." +
+      "v3.SessionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036." +
+      "speechkit.stt.v3.AudioCursors\022\035\n\025respons" +
+      "e_wall_time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#." +
+      "speechkit.stt.v3.AlternativeUpdateH\000\0224\n\005" +
+      "final\030\005 \001(\0132#.speechkit.stt.v3.Alternati" +
+      "veUpdateH\000\0221\n\neou_update\030\006 \001(\0132\033.speechk" +
+      "it.stt.v3.EouUpdateH\000\022=\n\020final_refinemen" +
+      "t\030\007 \001(\0132!.speechkit.stt.v3.FinalRefineme" +
+      "ntH\000\0223\n\013status_code\030\010 \001(\0132\034.speechkit.st" +
+      "t.v3.StatusCodeH\000B\007\n\005Event*K\n\010CodeType\022\031" +
+      "\n\025CODE_TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022\013" +
+      "\n\007WARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud." +
+      "api.ai.stt.v3Z>github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/ai/stt/v3;sttb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22642,50 +23782,56 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Word_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
-    internal_static_speechkit_stt_v3_Alternative_descriptor =
+    internal_static_speechkit_stt_v3_LanguageEstimation_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_LanguageEstimation_descriptor,
+        new java.lang.String[] { "LanguageCode", "Probability", });
+    internal_static_speechkit_stt_v3_Alternative_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_speechkit_stt_v3_Alternative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Alternative_descriptor,
-        new java.lang.String[] { "Words", "Text", "StartTimeMs", "EndTimeMs", "Confidence", });
+        new java.lang.String[] { "Words", "Text", "StartTimeMs", "EndTimeMs", "Confidence", "Languages", });
     internal_static_speechkit_stt_v3_EouUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_speechkit_stt_v3_EouUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_EouUpdate_descriptor,
         new java.lang.String[] { "TimeMs", });
     internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_speechkit_stt_v3_AlternativeUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor,
         new java.lang.String[] { "Alternatives", "ChannelTag", });
     internal_static_speechkit_stt_v3_AudioCursors_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_speechkit_stt_v3_AudioCursors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioCursors_descriptor,
         new java.lang.String[] { "ReceivedDataMs", "ResetTimeMs", "PartialTimeMs", "FinalTimeMs", "FinalIndex", "EouTimeMs", });
     internal_static_speechkit_stt_v3_FinalRefinement_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_speechkit_stt_v3_FinalRefinement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_FinalRefinement_descriptor,
         new java.lang.String[] { "FinalIndex", "NormalizedText", "Type", });
     internal_static_speechkit_stt_v3_StatusCode_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_speechkit_stt_v3_StatusCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StatusCode_descriptor,
         new java.lang.String[] { "CodeType", "Message", });
     internal_static_speechkit_stt_v3_SessionUuid_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_speechkit_stt_v3_SessionUuid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SessionUuid_descriptor,
         new java.lang.String[] { "Uuid", "UserRequestId", });
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,

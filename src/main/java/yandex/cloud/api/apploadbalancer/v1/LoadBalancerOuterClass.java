@@ -392,6 +392,33 @@ public final class LoadBalancerOuterClass {
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+     * @return Whether the autoScalePolicy field is set.
+     */
+    boolean hasAutoScalePolicy();
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+     * @return The autoScalePolicy.
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy();
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder();
   }
   /**
    * <pre>
@@ -555,6 +582,19 @@ public final class LoadBalancerOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(createdAt_);
                 createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder subBuilder = null;
+              if (autoScalePolicy_ != null) {
+                subBuilder = autoScalePolicy_.toBuilder();
+              }
+              autoScalePolicy_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoScalePolicy_);
+                autoScalePolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1465,6 +1505,44 @@ public final class LoadBalancerOuterClass {
       return getCreatedAt();
     }
 
+    public static final int AUTO_SCALE_POLICY_FIELD_NUMBER = 14;
+    private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+     * @return Whether the autoScalePolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoScalePolicy() {
+      return autoScalePolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+     * @return The autoScalePolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy() {
+      return autoScalePolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+    }
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder() {
+      return getAutoScalePolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1520,6 +1598,9 @@ public final class LoadBalancerOuterClass {
       }
       if (createdAt_ != null) {
         output.writeMessage(13, getCreatedAt());
+      }
+      if (autoScalePolicy_ != null) {
+        output.writeMessage(14, getAutoScalePolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -1585,6 +1666,10 @@ public final class LoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getCreatedAt());
       }
+      if (autoScalePolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getAutoScalePolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1630,6 +1715,11 @@ public final class LoadBalancerOuterClass {
       if (hasCreatedAt()) {
         if (!getCreatedAt()
             .equals(other.getCreatedAt())) return false;
+      }
+      if (hasAutoScalePolicy() != other.hasAutoScalePolicy()) return false;
+      if (hasAutoScalePolicy()) {
+        if (!getAutoScalePolicy()
+            .equals(other.getAutoScalePolicy())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1677,6 +1767,10 @@ public final class LoadBalancerOuterClass {
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasAutoScalePolicy()) {
+        hash = (37 * hash) + AUTO_SCALE_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoScalePolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1876,6 +1970,12 @@ public final class LoadBalancerOuterClass {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = null;
+        } else {
+          autoScalePolicy_ = null;
+          autoScalePolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -1936,6 +2036,11 @@ public final class LoadBalancerOuterClass {
           result.createdAt_ = createdAt_;
         } else {
           result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (autoScalePolicyBuilder_ == null) {
+          result.autoScalePolicy_ = autoScalePolicy_;
+        } else {
+          result.autoScalePolicy_ = autoScalePolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2059,6 +2164,9 @@ public final class LoadBalancerOuterClass {
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasAutoScalePolicy()) {
+          mergeAutoScalePolicy(other.getAutoScalePolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3818,6 +3926,161 @@ public final class LoadBalancerOuterClass {
           createdAt_ = null;
         }
         return createdAtBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> autoScalePolicyBuilder_;
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       * @return Whether the autoScalePolicy field is set.
+       */
+      public boolean hasAutoScalePolicy() {
+        return autoScalePolicyBuilder_ != null || autoScalePolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       * @return The autoScalePolicy.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy() {
+        if (autoScalePolicyBuilder_ == null) {
+          return autoScalePolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+        } else {
+          return autoScalePolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      public Builder setAutoScalePolicy(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy value) {
+        if (autoScalePolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoScalePolicy_ = value;
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      public Builder setAutoScalePolicy(
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder builderForValue) {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      public Builder mergeAutoScalePolicy(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy value) {
+        if (autoScalePolicyBuilder_ == null) {
+          if (autoScalePolicy_ != null) {
+            autoScalePolicy_ =
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.newBuilder(autoScalePolicy_).mergeFrom(value).buildPartial();
+          } else {
+            autoScalePolicy_ = value;
+          }
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      public Builder clearAutoScalePolicy() {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = null;
+          onChanged();
+        } else {
+          autoScalePolicy_ = null;
+          autoScalePolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder getAutoScalePolicyBuilder() {
+        
+        onChanged();
+        return getAutoScalePolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder() {
+        if (autoScalePolicyBuilder_ != null) {
+          return autoScalePolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return autoScalePolicy_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> 
+          getAutoScalePolicyFieldBuilder() {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder>(
+                  getAutoScalePolicy(),
+                  getParentForChildren(),
+                  isClean());
+          autoScalePolicy_ = null;
+        }
+        return autoScalePolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23560,6 +23823,606 @@ public final class LoadBalancerOuterClass {
 
   }
 
+  public interface AutoScalePolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.AutoScalePolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Lower limit for the number of resource units in each zone.
+     * </pre>
+     *
+     * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The minZoneSize.
+     */
+    long getMinZoneSize();
+
+    /**
+     * <pre>
+     * Upper limit for the total number of resource units across all zones.
+     * </pre>
+     *
+     * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The maxSize.
+     */
+    long getMaxSize();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AutoScalePolicy}
+   */
+  public static final class AutoScalePolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.AutoScalePolicy)
+      AutoScalePolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AutoScalePolicy.newBuilder() to construct.
+    private AutoScalePolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AutoScalePolicy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AutoScalePolicy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AutoScalePolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              minZoneSize_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              maxSize_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder.class);
+    }
+
+    public static final int MIN_ZONE_SIZE_FIELD_NUMBER = 1;
+    private long minZoneSize_;
+    /**
+     * <pre>
+     * Lower limit for the number of resource units in each zone.
+     * </pre>
+     *
+     * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The minZoneSize.
+     */
+    @java.lang.Override
+    public long getMinZoneSize() {
+      return minZoneSize_;
+    }
+
+    public static final int MAX_SIZE_FIELD_NUMBER = 2;
+    private long maxSize_;
+    /**
+     * <pre>
+     * Upper limit for the total number of resource units across all zones.
+     * </pre>
+     *
+     * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The maxSize.
+     */
+    @java.lang.Override
+    public long getMaxSize() {
+      return maxSize_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minZoneSize_ != 0L) {
+        output.writeInt64(1, minZoneSize_);
+      }
+      if (maxSize_ != 0L) {
+        output.writeInt64(2, maxSize_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minZoneSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, minZoneSize_);
+      }
+      if (maxSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, maxSize_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy) obj;
+
+      if (getMinZoneSize()
+          != other.getMinZoneSize()) return false;
+      if (getMaxSize()
+          != other.getMaxSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MIN_ZONE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinZoneSize());
+      hash = (37 * hash) + MAX_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxSize());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AutoScalePolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.AutoScalePolicy)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        minZoneSize_ = 0L;
+
+        maxSize_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy(this);
+        result.minZoneSize_ = minZoneSize_;
+        result.maxSize_ = maxSize_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance()) return this;
+        if (other.getMinZoneSize() != 0L) {
+          setMinZoneSize(other.getMinZoneSize());
+        }
+        if (other.getMaxSize() != 0L) {
+          setMaxSize(other.getMaxSize());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long minZoneSize_ ;
+      /**
+       * <pre>
+       * Lower limit for the number of resource units in each zone.
+       * </pre>
+       *
+       * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The minZoneSize.
+       */
+      @java.lang.Override
+      public long getMinZoneSize() {
+        return minZoneSize_;
+      }
+      /**
+       * <pre>
+       * Lower limit for the number of resource units in each zone.
+       * </pre>
+       *
+       * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The minZoneSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinZoneSize(long value) {
+        
+        minZoneSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Lower limit for the number of resource units in each zone.
+       * </pre>
+       *
+       * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinZoneSize() {
+        
+        minZoneSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxSize_ ;
+      /**
+       * <pre>
+       * Upper limit for the total number of resource units across all zones.
+       * </pre>
+       *
+       * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The maxSize.
+       */
+      @java.lang.Override
+      public long getMaxSize() {
+        return maxSize_;
+      }
+      /**
+       * <pre>
+       * Upper limit for the total number of resource units across all zones.
+       * </pre>
+       *
+       * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The maxSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSize(long value) {
+        
+        maxSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Upper limit for the total number of resource units across all zones.
+       * </pre>
+       *
+       * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSize() {
+        
+        maxSize_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.AutoScalePolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.AutoScalePolicy)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AutoScalePolicy>
+        PARSER = new com.google.protobuf.AbstractParser<AutoScalePolicy>() {
+      @java.lang.Override
+      public AutoScalePolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AutoScalePolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AutoScalePolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AutoScalePolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_descriptor;
   private static final 
@@ -23670,6 +24533,11 @@ public final class LoadBalancerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_TargetState_ZoneHealthcheckStatus_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -23684,7 +24552,7 @@ public final class LoadBalancerOuterClass {
       "cer.v1\032\037google/protobuf/timestamp.proto\032" +
       "\035yandex/cloud/validation.proto\0322yandex/c" +
       "loud/apploadbalancer/v1/target_group.pro" +
-      "to\"\230\005\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "to\"\345\005\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
       "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030" +
       "\004 \001(\t\022I\n\006labels\030\005 \003(\01329.yandex.cloud.app" +
       "loadbalancer.v1.LoadBalancer.LabelsEntry" +
@@ -23696,79 +24564,83 @@ public final class LoadBalancerOuterClass {
       ".yandex.cloud.apploadbalancer.v1.Allocat" +
       "ionPolicy\022\024\n\014log_group_id\030\013 \001(\t\022\032\n\022secur" +
       "ity_group_ids\030\014 \003(\t\022.\n\ncreated_at\030\r \001(\0132" +
-      "\032.google.protobuf.Timestamp\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"q\n\006St" +
-      "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING" +
-      "\020\001\022\014\n\010STARTING\020\002\022\n\n\006ACTIVE\020\003\022\014\n\010STOPPING" +
-      "\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\"\237\002\n\007Addres" +
-      "s\022U\n\025external_ipv4_address\030\001 \001(\01324.yande" +
-      "x.cloud.apploadbalancer.v1.ExternalIpv4A" +
-      "ddressH\000\022U\n\025internal_ipv4_address\030\002 \001(\0132" +
-      "4.yandex.cloud.apploadbalancer.v1.Intern" +
-      "alIpv4AddressH\000\022U\n\025external_ipv6_address" +
-      "\030\003 \001(\01324.yandex.cloud.apploadbalancer.v1" +
-      ".ExternalIpv6AddressH\000B\017\n\007address\022\004\300\3011\001\"" +
-      "&\n\023ExternalIpv4Address\022\017\n\007address\030\001 \001(\t\"" +
-      "9\n\023InternalIpv4Address\022\017\n\007address\030\001 \001(\t\022" +
-      "\021\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalIpv6Addres" +
-      "s\022\017\n\007address\030\001 \001(\t\"M\n\010Location\022\025\n\007zone_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t\022\027\n\017disa" +
-      "ble_traffic\030\003 \001(\010\"]\n\020AllocationPolicy\022I\n" +
-      "\tlocations\030\001 \003(\0132).yandex.cloud.apploadb" +
-      "alancer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Lis" +
-      "tener\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002" +
-      " \003(\0132).yandex.cloud.apploadbalancer.v1.E" +
-      "ndpoint\022=\n\004http\030\003 \001(\0132-.yandex.cloud.app" +
-      "loadbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004 " +
-      "\001(\0132,.yandex.cloud.apploadbalancer.v1.Tl" +
-      "sListenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.clo" +
-      "ud.apploadbalancer.v1.StreamListenerH\000B\020" +
-      "\n\010listener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresse" +
-      "s\030\001 \003(\0132(.yandex.cloud.apploadbalancer.v" +
-      "1.AddressB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0" +
-      "\372\3071\0071-65535\"\214\001\n\014HttpListener\022=\n\007handler\030" +
-      "\001 \001(\0132,.yandex.cloud.apploadbalancer.v1." +
-      "HttpHandler\022=\n\tredirects\030\002 \001(\0132*.yandex." +
-      "cloud.apploadbalancer.v1.Redirects\"\232\001\n\013T" +
-      "lsListener\022J\n\017default_handler\030\001 \001(\0132+.ya" +
-      "ndex.cloud.apploadbalancer.v1.TlsHandler" +
-      "B\004\350\3071\001\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cl" +
-      "oud.apploadbalancer.v1.SniMatch\"W\n\016Strea" +
-      "mListener\022E\n\007handler\030\001 \001(\0132..yandex.clou" +
-      "d.apploadbalancer.v1.StreamHandlerB\004\350\3071\001" +
-      "\".\n\014Http2Options\022\036\n\026max_concurrent_strea" +
-      "ms\030\001 \001(\003\"/\n\rStreamHandler\022\036\n\020backend_gro" +
-      "up_id\030\001 \001(\tB\004\350\3071\001\"\232\001\n\013HttpHandler\022\026\n\016htt" +
-      "p_router_id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\013" +
-      "2-.yandex.cloud.apploadbalancer.v1.Http2" +
-      "OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000B\023\n\021pro" +
-      "tocol_settings\"\"\n\tRedirects\022\025\n\rhttp_to_h" +
-      "ttps\030\001 \001(\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350" +
-      "\3071\001\022\034\n\014server_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007han" +
-      "dler\030\003 \001(\0132+.yandex.cloud.apploadbalance" +
-      "r.v1.TlsHandlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014" +
-      "http_handler\030\002 \001(\0132,.yandex.cloud.apploa" +
-      "dbalancer.v1.HttpHandlerH\000\022H\n\016stream_han" +
-      "dler\030\004 \001(\0132..yandex.cloud.apploadbalance" +
-      "r.v1.StreamHandlerH\000\022\037\n\017certificate_ids\030" +
-      "\003 \003(\tB\006\202\3101\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013Targe" +
-      "tState\022N\n\006status\030\001 \001(\0132>.yandex.cloud.ap" +
-      "ploadbalancer.v1.TargetState.Healthcheck" +
-      "Status\022=\n\006target\030\002 \001(\0132\'.yandex.cloud.ap" +
-      "ploadbalancer.v1.TargetB\004\350\3071\001\032n\n\021Healthc" +
-      "heckStatus\022Y\n\rzone_statuses\030\001 \003(\0132B.yand" +
-      "ex.cloud.apploadbalancer.v1.TargetState." +
-      "ZoneHealthcheckStatus\032\215\001\n\025ZoneHealthchec" +
-      "kStatus\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status" +
-      "\030\002 \001(\01623.yandex.cloud.apploadbalancer.v1" +
-      ".TargetState.Status\022\030\n\020failed_active_hc\030" +
-      "\003 \001(\010\"n\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
-      "\013\n\007HEALTHY\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tU" +
-      "NHEALTHY\020\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005Bz\n" +
-      "#yandex.cloud.api.apploadbalancer.v1ZSgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/apploadbalancer/v1;apploadbalance" +
-      "rb\006proto3"
+      "\032.google.protobuf.Timestamp\022K\n\021auto_scal" +
+      "e_policy\030\016 \001(\01320.yandex.cloud.apploadbal" +
+      "ancer.v1.AutoScalePolicy\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"q\n\006Statu" +
+      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022" +
+      "\014\n\010STARTING\020\002\022\n\n\006ACTIVE\020\003\022\014\n\010STOPPING\020\004\022" +
+      "\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\"\237\002\n\007Address\022U" +
+      "\n\025external_ipv4_address\030\001 \001(\01324.yandex.c" +
+      "loud.apploadbalancer.v1.ExternalIpv4Addr" +
+      "essH\000\022U\n\025internal_ipv4_address\030\002 \001(\01324.y" +
+      "andex.cloud.apploadbalancer.v1.InternalI" +
+      "pv4AddressH\000\022U\n\025external_ipv6_address\030\003 " +
+      "\001(\01324.yandex.cloud.apploadbalancer.v1.Ex" +
+      "ternalIpv6AddressH\000B\017\n\007address\022\004\300\3011\001\"&\n\023" +
+      "ExternalIpv4Address\022\017\n\007address\030\001 \001(\t\"9\n\023" +
+      "InternalIpv4Address\022\017\n\007address\030\001 \001(\t\022\021\n\t" +
+      "subnet_id\030\002 \001(\t\"&\n\023ExternalIpv6Address\022\017" +
+      "\n\007address\030\001 \001(\t\"M\n\010Location\022\025\n\007zone_id\030\001" +
+      " \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t\022\027\n\017disable" +
+      "_traffic\030\003 \001(\010\"]\n\020AllocationPolicy\022I\n\tlo" +
+      "cations\030\001 \003(\0132).yandex.cloud.apploadbala" +
+      "ncer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listen" +
+      "er\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(" +
+      "\0132).yandex.cloud.apploadbalancer.v1.Endp" +
+      "oint\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploa" +
+      "dbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\013" +
+      "2,.yandex.cloud.apploadbalancer.v1.TlsLi" +
+      "stenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud." +
+      "apploadbalancer.v1.StreamListenerH\000B\020\n\010l" +
+      "istener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001" +
+      " \003(\0132(.yandex.cloud.apploadbalancer.v1.A" +
+      "ddressB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071" +
+      "\0071-65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001" +
+      "(\0132,.yandex.cloud.apploadbalancer.v1.Htt" +
+      "pHandler\022=\n\tredirects\030\002 \001(\0132*.yandex.clo" +
+      "ud.apploadbalancer.v1.Redirects\"\232\001\n\013TlsL" +
+      "istener\022J\n\017default_handler\030\001 \001(\0132+.yande" +
+      "x.cloud.apploadbalancer.v1.TlsHandlerB\004\350" +
+      "\3071\001\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud" +
+      ".apploadbalancer.v1.SniMatch\"W\n\016StreamLi" +
+      "stener\022E\n\007handler\030\001 \001(\0132..yandex.cloud.a" +
+      "pploadbalancer.v1.StreamHandlerB\004\350\3071\001\".\n" +
+      "\014Http2Options\022\036\n\026max_concurrent_streams\030" +
+      "\001 \001(\003\"/\n\rStreamHandler\022\036\n\020backend_group_" +
+      "id\030\001 \001(\tB\004\350\3071\001\"\232\001\n\013HttpHandler\022\026\n\016http_r" +
+      "outer_id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-." +
+      "yandex.cloud.apploadbalancer.v1.Http2Opt" +
+      "ionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000B\023\n\021protoc" +
+      "ol_settings\"\"\n\tRedirects\022\025\n\rhttp_to_http" +
+      "s\030\001 \001(\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
+      "\022\034\n\014server_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handle" +
+      "r\030\003 \001(\0132+.yandex.cloud.apploadbalancer.v" +
+      "1.TlsHandlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014htt" +
+      "p_handler\030\002 \001(\0132,.yandex.cloud.apploadba" +
+      "lancer.v1.HttpHandlerH\000\022H\n\016stream_handle" +
+      "r\030\004 \001(\0132..yandex.cloud.apploadbalancer.v" +
+      "1.StreamHandlerH\000\022\037\n\017certificate_ids\030\003 \003" +
+      "(\tB\006\202\3101\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetSt" +
+      "ate\022N\n\006status\030\001 \001(\0132>.yandex.cloud.applo" +
+      "adbalancer.v1.TargetState.HealthcheckSta" +
+      "tus\022=\n\006target\030\002 \001(\0132\'.yandex.cloud.applo" +
+      "adbalancer.v1.TargetB\004\350\3071\001\032n\n\021Healthchec" +
+      "kStatus\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex." +
+      "cloud.apploadbalancer.v1.TargetState.Zon" +
+      "eHealthcheckStatus\032\215\001\n\025ZoneHealthcheckSt" +
+      "atus\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 " +
+      "\001(\01623.yandex.cloud.apploadbalancer.v1.Ta" +
+      "rgetState.Status\022\030\n\020failed_active_hc\030\003 \001" +
+      "(\010\"n\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007" +
+      "HEALTHY\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHE" +
+      "ALTHY\020\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017Au" +
+      "toScalePolicy\022!\n\rmin_zone_size\030\001 \001(\003B\n\372\307" +
+      "1\0060-1000\022\034\n\010max_size\030\002 \001(\003B\n\372\3071\0060-1000Bz" +
+      "\n#yandex.cloud.api.apploadbalancer.v1ZSg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/apploadbalancer/v1;apploadbalanc" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23782,7 +24654,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "Labels", "Status", "RegionId", "NetworkId", "Listeners", "AllocationPolicy", "LogGroupId", "SecurityGroupIds", "CreatedAt", });
+        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "Labels", "Status", "RegionId", "NetworkId", "Listeners", "AllocationPolicy", "LogGroupId", "SecurityGroupIds", "CreatedAt", "AutoScalePolicy", });
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_LabelsEntry_fieldAccessorTable = new
@@ -23909,6 +24781,12 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_TargetState_ZoneHealthcheckStatus_descriptor,
         new java.lang.String[] { "ZoneId", "Status", "FailedActiveHc", });
+    internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_AutoScalePolicy_descriptor,
+        new java.lang.String[] { "MinZoneSize", "MaxSize", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

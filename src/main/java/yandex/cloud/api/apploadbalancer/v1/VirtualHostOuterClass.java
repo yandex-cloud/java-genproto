@@ -2960,6 +2960,21 @@ public final class VirtualHostOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * @return Whether the rbac field is set.
+     */
+    boolean hasRbac();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * @return The rbac.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getRbac();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RouteOptions}
@@ -3025,6 +3040,19 @@ public final class VirtualHostOuterClass {
               }
               modifyResponseHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder subBuilder = null;
+              if (rbac_ != null) {
+                subBuilder = rbac_.toBuilder();
+              }
+              rbac_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rbac_);
+                rbac_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3185,6 +3213,32 @@ public final class VirtualHostOuterClass {
       return modifyResponseHeaders_.get(index);
     }
 
+    public static final int RBAC_FIELD_NUMBER = 5;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC rbac_;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * @return Whether the rbac field is set.
+     */
+    @java.lang.Override
+    public boolean hasRbac() {
+      return rbac_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * @return The rbac.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getRbac() {
+      return rbac_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDefaultInstance() : rbac_;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder() {
+      return getRbac();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3205,6 +3259,9 @@ public final class VirtualHostOuterClass {
       for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
         output.writeMessage(2, modifyResponseHeaders_.get(i));
       }
+      if (rbac_ != null) {
+        output.writeMessage(5, getRbac());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3221,6 +3278,10 @@ public final class VirtualHostOuterClass {
       for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, modifyResponseHeaders_.get(i));
+      }
+      if (rbac_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getRbac());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3241,6 +3302,11 @@ public final class VirtualHostOuterClass {
           .equals(other.getModifyRequestHeadersList())) return false;
       if (!getModifyResponseHeadersList()
           .equals(other.getModifyResponseHeadersList())) return false;
+      if (hasRbac() != other.hasRbac()) return false;
+      if (hasRbac()) {
+        if (!getRbac()
+            .equals(other.getRbac())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3259,6 +3325,10 @@ public final class VirtualHostOuterClass {
       if (getModifyResponseHeadersCount() > 0) {
         hash = (37 * hash) + MODIFY_RESPONSE_HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + getModifyResponseHeadersList().hashCode();
+      }
+      if (hasRbac()) {
+        hash = (37 * hash) + RBAC_FIELD_NUMBER;
+        hash = (53 * hash) + getRbac().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3407,6 +3477,12 @@ public final class VirtualHostOuterClass {
         } else {
           modifyResponseHeadersBuilder_.clear();
         }
+        if (rbacBuilder_ == null) {
+          rbac_ = null;
+        } else {
+          rbac_ = null;
+          rbacBuilder_ = null;
+        }
         return this;
       }
 
@@ -3451,6 +3527,11 @@ public final class VirtualHostOuterClass {
           result.modifyResponseHeaders_ = modifyResponseHeaders_;
         } else {
           result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
+        }
+        if (rbacBuilder_ == null) {
+          result.rbac_ = rbac_;
+        } else {
+          result.rbac_ = rbacBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3551,6 +3632,9 @@ public final class VirtualHostOuterClass {
               modifyResponseHeadersBuilder_.addAllMessages(other.modifyResponseHeaders_);
             }
           }
+        }
+        if (other.hasRbac()) {
+          mergeRbac(other.getRbac());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4205,6 +4289,125 @@ public final class VirtualHostOuterClass {
         }
         return modifyResponseHeadersBuilder_;
       }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC rbac_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder> rbacBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * @return Whether the rbac field is set.
+       */
+      public boolean hasRbac() {
+        return rbacBuilder_ != null || rbac_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * @return The rbac.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getRbac() {
+        if (rbacBuilder_ == null) {
+          return rbac_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDefaultInstance() : rbac_;
+        } else {
+          return rbacBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      public Builder setRbac(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC value) {
+        if (rbacBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rbac_ = value;
+          onChanged();
+        } else {
+          rbacBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      public Builder setRbac(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder builderForValue) {
+        if (rbacBuilder_ == null) {
+          rbac_ = builderForValue.build();
+          onChanged();
+        } else {
+          rbacBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      public Builder mergeRbac(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC value) {
+        if (rbacBuilder_ == null) {
+          if (rbac_ != null) {
+            rbac_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.newBuilder(rbac_).mergeFrom(value).buildPartial();
+          } else {
+            rbac_ = value;
+          }
+          onChanged();
+        } else {
+          rbacBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      public Builder clearRbac() {
+        if (rbacBuilder_ == null) {
+          rbac_ = null;
+          onChanged();
+        } else {
+          rbac_ = null;
+          rbacBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder getRbacBuilder() {
+        
+        onChanged();
+        return getRbacFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder() {
+        if (rbacBuilder_ != null) {
+          return rbacBuilder_.getMessageOrBuilder();
+        } else {
+          return rbac_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDefaultInstance() : rbac_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder> 
+          getRbacFieldBuilder() {
+        if (rbacBuilder_ == null) {
+          rbacBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder>(
+                  getRbac(),
+                  getParentForChildren(),
+                  isClean());
+          rbac_ = null;
+        }
+        return rbacBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4253,6 +4456,4179 @@ public final class VirtualHostOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RBACOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.RBAC)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The action to take if a principal matches. Every action either allows or denies a request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <pre>
+     * The action to take if a principal matches. Every action either allows or denies a request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The action.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action getAction();
+
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals> 
+        getPrincipalsList();
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals getPrincipals(int index);
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    int getPrincipalsCount();
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder> 
+        getPrincipalsOrBuilderList();
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder getPrincipalsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Role Based Access Control (RBAC) provides router, virtual host, and route access control for the ALB
+   * service. Requests are allowed or denied based on the `action` and whether a matching principal is
+   * found. For instance, if the action is ALLOW and a matching principal is found the request should be
+   * allowed.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RBAC}
+   */
+  public static final class RBAC extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RBAC)
+      RBACOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RBAC.newBuilder() to construct.
+    private RBAC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RBAC() {
+      action_ = 0;
+      principals_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RBAC();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RBAC(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              action_ = rawValue;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                principals_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              principals_.add(
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          principals_ = java.util.Collections.unmodifiableList(principals_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RBAC_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.apploadbalancer.v1.RBAC.Action}
+     */
+    public enum Action
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ACTION_UNSPECIFIED = 0;</code>
+       */
+      ACTION_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Allows the request if and only if there is a principal that matches the request.
+       * </pre>
+       *
+       * <code>ALLOW = 1;</code>
+       */
+      ALLOW(1),
+      /**
+       * <pre>
+       * Allows the request if and only if there are no principal that match the request.
+       * </pre>
+       *
+       * <code>DENY = 2;</code>
+       */
+      DENY(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>ACTION_UNSPECIFIED = 0;</code>
+       */
+      public static final int ACTION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Allows the request if and only if there is a principal that matches the request.
+       * </pre>
+       *
+       * <code>ALLOW = 1;</code>
+       */
+      public static final int ALLOW_VALUE = 1;
+      /**
+       * <pre>
+       * Allows the request if and only if there are no principal that match the request.
+       * </pre>
+       *
+       * <code>DENY = 2;</code>
+       */
+      public static final int DENY_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Action valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Action forNumber(int value) {
+        switch (value) {
+          case 0: return ACTION_UNSPECIFIED;
+          case 1: return ALLOW;
+          case 2: return DENY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Action>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Action> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+              public Action findValueByNumber(int number) {
+                return Action.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Action[] VALUES = values();
+
+      public static Action valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Action(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.apploadbalancer.v1.RBAC.Action)
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_;
+    /**
+     * <pre>
+     * The action to take if a principal matches. Every action either allows or denies a request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @java.lang.Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <pre>
+     * The action to take if a principal matches. Every action either allows or denies a request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The action.
+     */
+    @java.lang.Override public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action getAction() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action result = yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action.valueOf(action_);
+      return result == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action.UNRECOGNIZED : result;
+    }
+
+    public static final int PRINCIPALS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals> principals_;
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals> getPrincipalsList() {
+      return principals_;
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder> 
+        getPrincipalsOrBuilderList() {
+      return principals_;
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public int getPrincipalsCount() {
+      return principals_.size();
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals getPrincipals(int index) {
+      return principals_.get(index);
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when at least one matches the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder getPrincipalsOrBuilder(
+        int index) {
+      return principals_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action.ACTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      for (int i = 0; i < principals_.size(); i++) {
+        output.writeMessage(2, principals_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action.ACTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      for (int i = 0; i < principals_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, principals_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC) obj;
+
+      if (action_ != other.action_) return false;
+      if (!getPrincipalsList()
+          .equals(other.getPrincipalsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      if (getPrincipalsCount() > 0) {
+        hash = (37 * hash) + PRINCIPALS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrincipalsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Role Based Access Control (RBAC) provides router, virtual host, and route access control for the ALB
+     * service. Requests are allowed or denied based on the `action` and whether a matching principal is
+     * found. For instance, if the action is ALLOW and a matching principal is found the request should be
+     * allowed.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RBAC}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.RBAC)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RBAC_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPrincipalsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = 0;
+
+        if (principalsBuilder_ == null) {
+          principals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          principalsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC(this);
+        int from_bitField0_ = bitField0_;
+        result.action_ = action_;
+        if (principalsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            principals_ = java.util.Collections.unmodifiableList(principals_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.principals_ = principals_;
+        } else {
+          result.principals_ = principalsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (principalsBuilder_ == null) {
+          if (!other.principals_.isEmpty()) {
+            if (principals_.isEmpty()) {
+              principals_ = other.principals_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePrincipalsIsMutable();
+              principals_.addAll(other.principals_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.principals_.isEmpty()) {
+            if (principalsBuilder_.isEmpty()) {
+              principalsBuilder_.dispose();
+              principalsBuilder_ = null;
+              principals_ = other.principals_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              principalsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPrincipalsFieldBuilder() : null;
+            } else {
+              principalsBuilder_.addAllMessages(other.principals_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int action_ = 0;
+      /**
+       * <pre>
+       * The action to take if a principal matches. Every action either allows or denies a request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @java.lang.Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <pre>
+       * The action to take if a principal matches. Every action either allows or denies a request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The action to take if a principal matches. Every action either allows or denies a request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action getAction() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action result = yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action.valueOf(action_);
+        return result == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The action to take if a principal matches. Every action either allows or denies a request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Action value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The action to take if a principal matches. Every action either allows or denies a request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC.Action action = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals> principals_ =
+        java.util.Collections.emptyList();
+      private void ensurePrincipalsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          principals_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals>(principals_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder> principalsBuilder_;
+
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals> getPrincipalsList() {
+        if (principalsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(principals_);
+        } else {
+          return principalsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public int getPrincipalsCount() {
+        if (principalsBuilder_ == null) {
+          return principals_.size();
+        } else {
+          return principalsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals getPrincipals(int index) {
+        if (principalsBuilder_ == null) {
+          return principals_.get(index);
+        } else {
+          return principalsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder setPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals value) {
+        if (principalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrincipalsIsMutable();
+          principals_.set(index, value);
+          onChanged();
+        } else {
+          principalsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder setPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder builderForValue) {
+        if (principalsBuilder_ == null) {
+          ensurePrincipalsIsMutable();
+          principals_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          principalsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder addPrincipals(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals value) {
+        if (principalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrincipalsIsMutable();
+          principals_.add(value);
+          onChanged();
+        } else {
+          principalsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder addPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals value) {
+        if (principalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrincipalsIsMutable();
+          principals_.add(index, value);
+          onChanged();
+        } else {
+          principalsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder addPrincipals(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder builderForValue) {
+        if (principalsBuilder_ == null) {
+          ensurePrincipalsIsMutable();
+          principals_.add(builderForValue.build());
+          onChanged();
+        } else {
+          principalsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder addPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder builderForValue) {
+        if (principalsBuilder_ == null) {
+          ensurePrincipalsIsMutable();
+          principals_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          principalsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder addAllPrincipals(
+          java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals> values) {
+        if (principalsBuilder_ == null) {
+          ensurePrincipalsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, principals_);
+          onChanged();
+        } else {
+          principalsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder clearPrincipals() {
+        if (principalsBuilder_ == null) {
+          principals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          principalsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder removePrincipals(int index) {
+        if (principalsBuilder_ == null) {
+          ensurePrincipalsIsMutable();
+          principals_.remove(index);
+          onChanged();
+        } else {
+          principalsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder getPrincipalsBuilder(
+          int index) {
+        return getPrincipalsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder getPrincipalsOrBuilder(
+          int index) {
+        if (principalsBuilder_ == null) {
+          return principals_.get(index);  } else {
+          return principalsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder> 
+           getPrincipalsOrBuilderList() {
+        if (principalsBuilder_ != null) {
+          return principalsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(principals_);
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder addPrincipalsBuilder() {
+        return getPrincipalsFieldBuilder().addBuilder(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder addPrincipalsBuilder(
+          int index) {
+        return getPrincipalsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when at least one matches the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principals principals = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder> 
+           getPrincipalsBuilderList() {
+        return getPrincipalsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder> 
+          getPrincipalsFieldBuilder() {
+        if (principalsBuilder_ == null) {
+          principalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder>(
+                  principals_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          principals_ = null;
+        }
+        return principalsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.RBAC)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.RBAC)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RBAC>
+        PARSER = new com.google.protobuf.AbstractParser<RBAC>() {
+      @java.lang.Override
+      public RBAC parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RBAC(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RBAC> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RBAC> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrincipalsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.Principals)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> 
+        getAndPrincipalsList();
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getAndPrincipals(int index);
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    int getAndPrincipalsCount();
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
+        getAndPrincipalsOrBuilderList();
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder getAndPrincipalsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Principals define a group of identities for a request.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Principals}
+   */
+  public static final class Principals extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.Principals)
+      PrincipalsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Principals.newBuilder() to construct.
+    private Principals(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Principals() {
+      andPrincipals_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Principals();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Principals(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                andPrincipals_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              andPrincipals_.add(
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          andPrincipals_ = java.util.Collections.unmodifiableList(andPrincipals_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principals_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principals_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder.class);
+    }
+
+    public static final int AND_PRINCIPALS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> andPrincipals_;
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> getAndPrincipalsList() {
+      return andPrincipals_;
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
+        getAndPrincipalsOrBuilderList() {
+      return andPrincipals_;
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    @java.lang.Override
+    public int getAndPrincipalsCount() {
+      return andPrincipals_.size();
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getAndPrincipals(int index) {
+      return andPrincipals_.get(index);
+    }
+    /**
+     * <pre>
+     * Required. A match occurs when all principals match the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder getAndPrincipalsOrBuilder(
+        int index) {
+      return andPrincipals_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < andPrincipals_.size(); i++) {
+        output.writeMessage(1, andPrincipals_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < andPrincipals_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, andPrincipals_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals) obj;
+
+      if (!getAndPrincipalsList()
+          .equals(other.getAndPrincipalsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAndPrincipalsCount() > 0) {
+        hash = (37 * hash) + AND_PRINCIPALS_FIELD_NUMBER;
+        hash = (53 * hash) + getAndPrincipalsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Principals define a group of identities for a request.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Principals}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.Principals)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principals_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principals_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAndPrincipalsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (andPrincipalsBuilder_ == null) {
+          andPrincipals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          andPrincipalsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principals_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals(this);
+        int from_bitField0_ = bitField0_;
+        if (andPrincipalsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            andPrincipals_ = java.util.Collections.unmodifiableList(andPrincipals_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.andPrincipals_ = andPrincipals_;
+        } else {
+          result.andPrincipals_ = andPrincipalsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals.getDefaultInstance()) return this;
+        if (andPrincipalsBuilder_ == null) {
+          if (!other.andPrincipals_.isEmpty()) {
+            if (andPrincipals_.isEmpty()) {
+              andPrincipals_ = other.andPrincipals_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAndPrincipalsIsMutable();
+              andPrincipals_.addAll(other.andPrincipals_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.andPrincipals_.isEmpty()) {
+            if (andPrincipalsBuilder_.isEmpty()) {
+              andPrincipalsBuilder_.dispose();
+              andPrincipalsBuilder_ = null;
+              andPrincipals_ = other.andPrincipals_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              andPrincipalsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAndPrincipalsFieldBuilder() : null;
+            } else {
+              andPrincipalsBuilder_.addAllMessages(other.andPrincipals_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> andPrincipals_ =
+        java.util.Collections.emptyList();
+      private void ensureAndPrincipalsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          andPrincipals_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal>(andPrincipals_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> andPrincipalsBuilder_;
+
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> getAndPrincipalsList() {
+        if (andPrincipalsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(andPrincipals_);
+        } else {
+          return andPrincipalsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public int getAndPrincipalsCount() {
+        if (andPrincipalsBuilder_ == null) {
+          return andPrincipals_.size();
+        } else {
+          return andPrincipalsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getAndPrincipals(int index) {
+        if (andPrincipalsBuilder_ == null) {
+          return andPrincipals_.get(index);
+        } else {
+          return andPrincipalsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder setAndPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal value) {
+        if (andPrincipalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.set(index, value);
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder setAndPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder builderForValue) {
+        if (andPrincipalsBuilder_ == null) {
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder addAndPrincipals(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal value) {
+        if (andPrincipalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.add(value);
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder addAndPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal value) {
+        if (andPrincipalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.add(index, value);
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder addAndPrincipals(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder builderForValue) {
+        if (andPrincipalsBuilder_ == null) {
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.add(builderForValue.build());
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder addAndPrincipals(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder builderForValue) {
+        if (andPrincipalsBuilder_ == null) {
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder addAllAndPrincipals(
+          java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> values) {
+        if (andPrincipalsBuilder_ == null) {
+          ensureAndPrincipalsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, andPrincipals_);
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder clearAndPrincipals() {
+        if (andPrincipalsBuilder_ == null) {
+          andPrincipals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public Builder removeAndPrincipals(int index) {
+        if (andPrincipalsBuilder_ == null) {
+          ensureAndPrincipalsIsMutable();
+          andPrincipals_.remove(index);
+          onChanged();
+        } else {
+          andPrincipalsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder getAndPrincipalsBuilder(
+          int index) {
+        return getAndPrincipalsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder getAndPrincipalsOrBuilder(
+          int index) {
+        if (andPrincipalsBuilder_ == null) {
+          return andPrincipals_.get(index);  } else {
+          return andPrincipalsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
+           getAndPrincipalsOrBuilderList() {
+        if (andPrincipalsBuilder_ != null) {
+          return andPrincipalsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(andPrincipals_);
+        }
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder addAndPrincipalsBuilder() {
+        return getAndPrincipalsFieldBuilder().addBuilder(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder addAndPrincipalsBuilder(
+          int index) {
+        return getAndPrincipalsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Required. A match occurs when all principals match the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder> 
+           getAndPrincipalsBuilderList() {
+        return getAndPrincipalsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
+          getAndPrincipalsFieldBuilder() {
+        if (andPrincipalsBuilder_ == null) {
+          andPrincipalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder>(
+                  andPrincipals_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          andPrincipals_ = null;
+        }
+        return andPrincipalsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.Principals)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.Principals)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Principals>
+        PARSER = new com.google.protobuf.AbstractParser<Principals>() {
+      @java.lang.Override
+      public Principals parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Principals(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Principals> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Principals> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principals getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrincipalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.Principal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+     * @return Whether the header field is set.
+     */
+    boolean hasHeader();
+    /**
+     * <pre>
+     * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+     * @return The header.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher getHeader();
+    /**
+     * <pre>
+     * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder getHeaderOrBuilder();
+
+    /**
+     * <pre>
+     * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+     * </pre>
+     *
+     * <code>string remote_ip = 2;</code>
+     * @return Whether the remoteIp field is set.
+     */
+    boolean hasRemoteIp();
+    /**
+     * <pre>
+     * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+     * </pre>
+     *
+     * <code>string remote_ip = 2;</code>
+     * @return The remoteIp.
+     */
+    java.lang.String getRemoteIp();
+    /**
+     * <pre>
+     * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+     * </pre>
+     *
+     * <code>string remote_ip = 2;</code>
+     * @return The bytes for remoteIp.
+     */
+    com.google.protobuf.ByteString
+        getRemoteIpBytes();
+
+    /**
+     * <pre>
+     * When any is set, it matches any request.
+     * </pre>
+     *
+     * <code>bool any = 3;</code>
+     * @return Whether the any field is set.
+     */
+    boolean hasAny();
+    /**
+     * <pre>
+     * When any is set, it matches any request.
+     * </pre>
+     *
+     * <code>bool any = 3;</code>
+     * @return The any.
+     */
+    boolean getAny();
+
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.IdentifierCase getIdentifierCase();
+  }
+  /**
+   * <pre>
+   * Principal defines an identity for a request.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Principal}
+   */
+  public static final class Principal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.Principal)
+      PrincipalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Principal.newBuilder() to construct.
+    private Principal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Principal() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Principal();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Principal(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder subBuilder = null;
+              if (identifierCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_).toBuilder();
+              }
+              identifier_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_);
+                identifier_ = subBuilder.buildPartial();
+              }
+              identifierCase_ = 1;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              identifierCase_ = 2;
+              identifier_ = s;
+              break;
+            }
+            case 24: {
+              identifier_ = input.readBool();
+              identifierCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder.class);
+    }
+
+    public interface HeaderMatcherOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Specifies the name of the header in the request.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Specifies the name of the header in the request.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Specifies how the header match will be performed to route the request.
+       * In the absence of value a request that has specified header name will match,
+       * regardless of the header's value.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <pre>
+       * Specifies how the header match will be performed to route the request.
+       * In the absence of value a request that has specified header name will match,
+       * regardless of the header's value.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return The value.
+       */
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue();
+      /**
+       * <pre>
+       * Specifies how the header match will be performed to route the request.
+       * In the absence of value a request that has specified header name will match,
+       * regardless of the header's value.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher}
+     */
+    public static final class HeaderMatcher extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher)
+        HeaderMatcherOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use HeaderMatcher.newBuilder() to construct.
+      private HeaderMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private HeaderMatcher() {
+        name_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HeaderMatcher();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private HeaderMatcher(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder subBuilder = null;
+                if (value_ != null) {
+                  subBuilder = value_.toBuilder();
+                }
+                value_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(value_);
+                  value_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Specifies the name of the header in the request.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the name of the header in the request.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value_;
+      /**
+       * <pre>
+       * Specifies how the header match will be performed to route the request.
+       * In the absence of value a request that has specified header name will match,
+       * regardless of the header's value.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return value_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies how the header match will be performed to route the request.
+       * In the absence of value a request that has specified header name will match,
+       * regardless of the header's value.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue() {
+        return value_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+      }
+      /**
+       * <pre>
+       * Specifies how the header match will be performed to route the request.
+       * In the absence of value a request that has specified header name will match,
+       * regardless of the header's value.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder() {
+        return getValue();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (value_ != null) {
+          output.writeMessage(2, getValue());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (value_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getValue());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (!getValue()
+              .equals(other.getValue())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher)
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          if (valueBuilder_ == null) {
+            value_ = null;
+          } else {
+            value_ = null;
+            valueBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher getDefaultInstanceForType() {
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher build() {
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher buildPartial() {
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher(this);
+          result.name_ = name_;
+          if (valueBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = valueBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) {
+            return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher other) {
+          if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasValue()) {
+            mergeValue(other.getValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Specifies the name of the header in the request.
+         * </pre>
+         *
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the name of the header in the request.
+         * </pre>
+         *
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies the name of the header in the request.
+         * </pre>
+         *
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the name of the header in the request.
+         * </pre>
+         *
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the name of the header in the request.
+         * </pre>
+         *
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> valueBuilder_;
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         * @return Whether the value field is set.
+         */
+        public boolean hasValue() {
+          return valueBuilder_ != null || value_ != null;
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         * @return The value.
+         */
+        public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getValue() {
+          if (valueBuilder_ == null) {
+            return value_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+          } else {
+            return valueBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        public Builder setValue(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value) {
+          if (valueBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            value_ = value;
+            onChanged();
+          } else {
+            valueBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        public Builder setValue(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder builderForValue) {
+          if (valueBuilder_ == null) {
+            value_ = builderForValue.build();
+            onChanged();
+          } else {
+            valueBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        public Builder mergeValue(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch value) {
+          if (valueBuilder_ == null) {
+            if (value_ != null) {
+              value_ =
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.newBuilder(value_).mergeFrom(value).buildPartial();
+            } else {
+              value_ = value;
+            }
+            onChanged();
+          } else {
+            valueBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        public Builder clearValue() {
+          if (valueBuilder_ == null) {
+            value_ = null;
+            onChanged();
+          } else {
+            value_ = null;
+            valueBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder getValueBuilder() {
+          
+          onChanged();
+          return getValueFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getValueOrBuilder() {
+          if (valueBuilder_ != null) {
+            return valueBuilder_.getMessageOrBuilder();
+          } else {
+            return value_ == null ?
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.getDefaultInstance() : value_;
+          }
+        }
+        /**
+         * <pre>
+         * Specifies how the header match will be performed to route the request.
+         * In the absence of value a request that has specified header name will match,
+         * regardless of the header's value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.apploadbalancer.v1.StringMatch value = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> 
+            getValueFieldBuilder() {
+          if (valueBuilder_ == null) {
+            valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder>(
+                    getValue(),
+                    getParentForChildren(),
+                    isClean());
+            value_ = null;
+          }
+          return valueBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher)
+      private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher();
+      }
+
+      public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<HeaderMatcher>
+          PARSER = new com.google.protobuf.AbstractParser<HeaderMatcher>() {
+        @java.lang.Override
+        public HeaderMatcher parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HeaderMatcher(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<HeaderMatcher> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<HeaderMatcher> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int identifierCase_ = 0;
+    private java.lang.Object identifier_;
+    public enum IdentifierCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      HEADER(1),
+      REMOTE_IP(2),
+      ANY(3),
+      IDENTIFIER_NOT_SET(0);
+      private final int value;
+      private IdentifierCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IdentifierCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IdentifierCase forNumber(int value) {
+        switch (value) {
+          case 1: return HEADER;
+          case 2: return REMOTE_IP;
+          case 3: return ANY;
+          case 0: return IDENTIFIER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public IdentifierCase
+    getIdentifierCase() {
+      return IdentifierCase.forNumber(
+          identifierCase_);
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+     * @return Whether the header field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeader() {
+      return identifierCase_ == 1;
+    }
+    /**
+     * <pre>
+     * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+     * @return The header.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher getHeader() {
+      if (identifierCase_ == 1) {
+         return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder getHeaderOrBuilder() {
+      if (identifierCase_ == 1) {
+         return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+    }
+
+    public static final int REMOTE_IP_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+     * </pre>
+     *
+     * <code>string remote_ip = 2;</code>
+     * @return Whether the remoteIp field is set.
+     */
+    public boolean hasRemoteIp() {
+      return identifierCase_ == 2;
+    }
+    /**
+     * <pre>
+     * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+     * </pre>
+     *
+     * <code>string remote_ip = 2;</code>
+     * @return The remoteIp.
+     */
+    public java.lang.String getRemoteIp() {
+      java.lang.Object ref = "";
+      if (identifierCase_ == 2) {
+        ref = identifier_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (identifierCase_ == 2) {
+          identifier_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+     * </pre>
+     *
+     * <code>string remote_ip = 2;</code>
+     * @return The bytes for remoteIp.
+     */
+    public com.google.protobuf.ByteString
+        getRemoteIpBytes() {
+      java.lang.Object ref = "";
+      if (identifierCase_ == 2) {
+        ref = identifier_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (identifierCase_ == 2) {
+          identifier_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ANY_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * When any is set, it matches any request.
+     * </pre>
+     *
+     * <code>bool any = 3;</code>
+     * @return Whether the any field is set.
+     */
+    @java.lang.Override
+    public boolean hasAny() {
+      return identifierCase_ == 3;
+    }
+    /**
+     * <pre>
+     * When any is set, it matches any request.
+     * </pre>
+     *
+     * <code>bool any = 3;</code>
+     * @return The any.
+     */
+    @java.lang.Override
+    public boolean getAny() {
+      if (identifierCase_ == 3) {
+        return (java.lang.Boolean) identifier_;
+      }
+      return false;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (identifierCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_);
+      }
+      if (identifierCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, identifier_);
+      }
+      if (identifierCase_ == 3) {
+        output.writeBool(
+            3, (boolean)((java.lang.Boolean) identifier_));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (identifierCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_);
+      }
+      if (identifierCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, identifier_);
+      }
+      if (identifierCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              3, (boolean)((java.lang.Boolean) identifier_));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal) obj;
+
+      if (!getIdentifierCase().equals(other.getIdentifierCase())) return false;
+      switch (identifierCase_) {
+        case 1:
+          if (!getHeader()
+              .equals(other.getHeader())) return false;
+          break;
+        case 2:
+          if (!getRemoteIp()
+              .equals(other.getRemoteIp())) return false;
+          break;
+        case 3:
+          if (getAny()
+              != other.getAny()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (identifierCase_) {
+        case 1:
+          hash = (37 * hash) + HEADER_FIELD_NUMBER;
+          hash = (53 * hash) + getHeader().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + REMOTE_IP_FIELD_NUMBER;
+          hash = (53 * hash) + getRemoteIp().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAny());
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Principal defines an identity for a request.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Principal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.Principal)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        identifierCase_ = 0;
+        identifier_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal(this);
+        if (identifierCase_ == 1) {
+          if (headerBuilder_ == null) {
+            result.identifier_ = identifier_;
+          } else {
+            result.identifier_ = headerBuilder_.build();
+          }
+        }
+        if (identifierCase_ == 2) {
+          result.identifier_ = identifier_;
+        }
+        if (identifierCase_ == 3) {
+          result.identifier_ = identifier_;
+        }
+        result.identifierCase_ = identifierCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.getDefaultInstance()) return this;
+        switch (other.getIdentifierCase()) {
+          case HEADER: {
+            mergeHeader(other.getHeader());
+            break;
+          }
+          case REMOTE_IP: {
+            identifierCase_ = 2;
+            identifier_ = other.identifier_;
+            onChanged();
+            break;
+          }
+          case ANY: {
+            setAny(other.getAny());
+            break;
+          }
+          case IDENTIFIER_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int identifierCase_ = 0;
+      private java.lang.Object identifier_;
+      public IdentifierCase
+          getIdentifierCase() {
+        return IdentifierCase.forNumber(
+            identifierCase_);
+      }
+
+      public Builder clearIdentifier() {
+        identifierCase_ = 0;
+        identifier_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder> headerBuilder_;
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       * @return Whether the header field is set.
+       */
+      @java.lang.Override
+      public boolean hasHeader() {
+        return identifierCase_ == 1;
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       * @return The header.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher getHeader() {
+        if (headerBuilder_ == null) {
+          if (identifierCase_ == 1) {
+            return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+        } else {
+          if (identifierCase_ == 1) {
+            return headerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      public Builder setHeader(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identifier_ = value;
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        identifierCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      public Builder setHeader(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          identifier_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        identifierCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      public Builder mergeHeader(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher value) {
+        if (headerBuilder_ == null) {
+          if (identifierCase_ == 1 &&
+              identifier_ != yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance()) {
+            identifier_ = yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.newBuilder((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            identifier_ = value;
+          }
+          onChanged();
+        } else {
+          if (identifierCase_ == 1) {
+            headerBuilder_.mergeFrom(value);
+          }
+          headerBuilder_.setMessage(value);
+        }
+        identifierCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          if (identifierCase_ == 1) {
+            identifierCase_ = 0;
+            identifier_ = null;
+            onChanged();
+          }
+        } else {
+          if (identifierCase_ == 1) {
+            identifierCase_ = 0;
+            identifier_ = null;
+          }
+          headerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder getHeaderBuilder() {
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder getHeaderOrBuilder() {
+        if ((identifierCase_ == 1) && (headerBuilder_ != null)) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          if (identifierCase_ == 1) {
+            return (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A header (or pseudo-header such as :path or :method) of the incoming HTTP request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.Principal.HeaderMatcher header = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          if (!(identifierCase_ == 1)) {
+            identifier_ = yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.getDefaultInstance();
+          }
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcherOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.HeaderMatcher) identifier_,
+                  getParentForChildren(),
+                  isClean());
+          identifier_ = null;
+        }
+        identifierCase_ = 1;
+        onChanged();;
+        return headerBuilder_;
+      }
+
+      /**
+       * <pre>
+       * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+       * </pre>
+       *
+       * <code>string remote_ip = 2;</code>
+       * @return Whether the remoteIp field is set.
+       */
+      @java.lang.Override
+      public boolean hasRemoteIp() {
+        return identifierCase_ == 2;
+      }
+      /**
+       * <pre>
+       * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+       * </pre>
+       *
+       * <code>string remote_ip = 2;</code>
+       * @return The remoteIp.
+       */
+      @java.lang.Override
+      public java.lang.String getRemoteIp() {
+        java.lang.Object ref = "";
+        if (identifierCase_ == 2) {
+          ref = identifier_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (identifierCase_ == 2) {
+            identifier_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+       * </pre>
+       *
+       * <code>string remote_ip = 2;</code>
+       * @return The bytes for remoteIp.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRemoteIpBytes() {
+        java.lang.Object ref = "";
+        if (identifierCase_ == 2) {
+          ref = identifier_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (identifierCase_ == 2) {
+            identifier_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+       * </pre>
+       *
+       * <code>string remote_ip = 2;</code>
+       * @param value The remoteIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteIp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  identifierCase_ = 2;
+        identifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+       * </pre>
+       *
+       * <code>string remote_ip = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteIp() {
+        if (identifierCase_ == 2) {
+          identifierCase_ = 0;
+          identifier_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A CIDR block or IP that describes the request remote/origin address, e.g. ``192.0.0.0/24`` or``192.0.0.4`` .
+       * </pre>
+       *
+       * <code>string remote_ip = 2;</code>
+       * @param value The bytes for remoteIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        identifierCase_ = 2;
+        identifier_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * When any is set, it matches any request.
+       * </pre>
+       *
+       * <code>bool any = 3;</code>
+       * @return Whether the any field is set.
+       */
+      public boolean hasAny() {
+        return identifierCase_ == 3;
+      }
+      /**
+       * <pre>
+       * When any is set, it matches any request.
+       * </pre>
+       *
+       * <code>bool any = 3;</code>
+       * @return The any.
+       */
+      public boolean getAny() {
+        if (identifierCase_ == 3) {
+          return (java.lang.Boolean) identifier_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * When any is set, it matches any request.
+       * </pre>
+       *
+       * <code>bool any = 3;</code>
+       * @param value The any to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAny(boolean value) {
+        identifierCase_ = 3;
+        identifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When any is set, it matches any request.
+       * </pre>
+       *
+       * <code>bool any = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAny() {
+        if (identifierCase_ == 3) {
+          identifierCase_ = 0;
+          identifier_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.Principal)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.Principal)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Principal>
+        PARSER = new com.google.protobuf.AbstractParser<Principal>() {
+      @java.lang.Override
+      public Principal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Principal(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Principal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Principal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20748,6 +25124,26 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_RBAC_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_Principals_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_Principals_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_Principal_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20829,76 +25225,91 @@ public final class VirtualHostOuterClass {
       "y_response_headers\030\005 \003(\01323.yandex.cloud." +
       "apploadbalancer.v1.HeaderModification\022D\n" +
       "\rroute_options\030\006 \001(\0132-.yandex.cloud.appl" +
-      "oadbalancer.v1.RouteOptions\"\271\001\n\014RouteOpt" +
+      "oadbalancer.v1.RouteOptions\"\356\001\n\014RouteOpt" +
       "ions\022S\n\026modify_request_headers\030\001 \003(\01323.y" +
       "andex.cloud.apploadbalancer.v1.HeaderMod" +
       "ification\022T\n\027modify_response_headers\030\002 \003" +
       "(\01323.yandex.cloud.apploadbalancer.v1.Hea" +
-      "derModification\"x\n\022HeaderModification\022\014\n" +
-      "\004name\030\001 \001(\t\022\020\n\006append\030\002 \001(\tH\000\022\021\n\007replace" +
-      "\030\003 \001(\tH\000\022\020\n\006remove\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001" +
-      "(\tH\000B\013\n\toperation\"\350\001\n\005Route\022\022\n\004name\030\001 \001(" +
-      "\tB\004\350\3071\001\022:\n\004http\030\002 \001(\0132*.yandex.cloud.app" +
-      "loadbalancer.v1.HttpRouteH\000\022:\n\004grpc\030\003 \001(" +
-      "\0132*.yandex.cloud.apploadbalancer.v1.Grpc" +
-      "RouteH\000\022D\n\rroute_options\030\004 \001(\0132-.yandex." +
-      "cloud.apploadbalancer.v1.RouteOptionsB\r\n" +
-      "\005route\022\004\300\3011\001\"\265\002\n\tHttpRoute\022>\n\005match\030\001 \001(" +
-      "\0132/.yandex.cloud.apploadbalancer.v1.Http" +
-      "RouteMatch\022A\n\005route\030\002 \001(\01320.yandex.cloud" +
-      ".apploadbalancer.v1.HttpRouteActionH\000\022C\n" +
-      "\010redirect\030\003 \001(\0132/.yandex.cloud.apploadba" +
-      "lancer.v1.RedirectActionH\000\022P\n\017direct_res" +
-      "ponse\030\004 \001(\01325.yandex.cloud.apploadbalanc" +
-      "er.v1.DirectResponseActionH\000B\016\n\006action\022\004" +
-      "\300\3011\001\"\364\001\n\tGrpcRoute\022>\n\005match\030\001 \001(\0132/.yand" +
-      "ex.cloud.apploadbalancer.v1.GrpcRouteMat" +
-      "ch\022A\n\005route\030\002 \001(\01320.yandex.cloud.appload" +
-      "balancer.v1.GrpcRouteActionH\000\022T\n\017status_" +
-      "response\030\003 \001(\01329.yandex.cloud.apploadbal" +
-      "ancer.v1.GrpcStatusResponseActionH\000B\016\n\006a" +
-      "ction\022\004\300\3011\001\"a\n\016HttpRouteMatch\022\023\n\013http_me" +
-      "thod\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud." +
-      "apploadbalancer.v1.StringMatch\"L\n\016GrpcRo" +
-      "uteMatch\022:\n\004fqmn\030\001 \001(\0132,.yandex.cloud.ap" +
-      "ploadbalancer.v1.StringMatch\"b\n\013StringMa" +
-      "tch\022\025\n\013exact_match\030\001 \001(\tH\000\022\026\n\014prefix_mat" +
-      "ch\030\002 \001(\tH\000\022\025\n\013regex_match\030\003 \001(\tH\000B\r\n\005mat" +
-      "ch\022\004\300\3011\001\"\372\002\n\016RedirectAction\022\026\n\016replace_s" +
-      "cheme\030\001 \001(\t\022\024\n\014replace_host\030\002 \001(\t\022\024\n\014rep" +
-      "lace_port\030\003 \001(\003\022\026\n\014replace_path\030\004 \001(\tH\000\022" +
-      "\030\n\016replace_prefix\030\005 \001(\tH\000\022\024\n\014remove_quer" +
-      "y\030\006 \001(\010\022[\n\rresponse_code\030\007 \001(\0162D.yandex." +
-      "cloud.apploadbalancer.v1.RedirectAction." +
-      "RedirectResponseCode\"w\n\024RedirectResponse" +
-      "Code\022\025\n\021MOVED_PERMANENTLY\020\000\022\t\n\005FOUND\020\001\022\r" +
-      "\n\tSEE_OTHER\020\002\022\026\n\022TEMPORARY_REDIRECT\020\003\022\026\n" +
-      "\022PERMANENT_REDIRECT\020\004B\006\n\004path\"k\n\024DirectR" +
-      "esponseAction\022\033\n\006status\030\001 \001(\003B\013\372\3071\007100-5" +
-      "99\0226\n\004body\030\002 \001(\0132(.yandex.cloud.apploadb" +
-      "alancer.v1.Payload\"\202\002\n\030GrpcStatusRespons" +
-      "eAction\022P\n\006status\030\001 \001(\0162@.yandex.cloud.a" +
-      "pploadbalancer.v1.GrpcStatusResponseActi" +
-      "on.Status\"\223\001\n\006Status\022\006\n\002OK\020\000\022\024\n\020INVALID_" +
-      "ARGUMENT\020\001\022\r\n\tNOT_FOUND\020\002\022\025\n\021PERMISSION_" +
-      "DENIED\020\003\022\023\n\017UNAUTHENTICATED\020\004\022\021\n\rUNIMPLE" +
-      "MENTED\020\005\022\014\n\010INTERNAL\020\006\022\017\n\013UNAVAILABLE\020\007\"" +
-      "\214\002\n\017HttpRouteAction\022\036\n\020backend_group_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002 \001(\0132\031.google.pr" +
-      "otobuf.Duration\022/\n\014idle_timeout\030\003 \001(\0132\031." +
-      "google.protobuf.Duration\022\026\n\014host_rewrite" +
-      "\030\004 \001(\tH\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000\022\026\n" +
-      "\016prefix_rewrite\030\006 \001(\t\022\025\n\rupgrade_types\030\007" +
-      " \003(\tB\030\n\026host_rewrite_specifier\"\341\001\n\017GrpcR" +
-      "outeAction\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022.\n\013max_timeout\030\002 \001(\0132\031.google.protobu" +
-      "f.Duration\022/\n\014idle_timeout\030\003 \001(\0132\031.googl" +
-      "e.protobuf.Duration\022\026\n\014host_rewrite\030\004 \001(" +
-      "\tH\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000B\030\n\026host" +
-      "_rewrite_specifierBz\n#yandex.cloud.api.a" +
-      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/apploadbalan" +
-      "cer/v1;apploadbalancerb\006proto3"
+      "derModification\0223\n\004rbac\030\005 \001(\0132%.yandex.c" +
+      "loud.apploadbalancer.v1.RBAC\"\313\001\n\004RBAC\022B\n" +
+      "\006action\030\001 \001(\0162,.yandex.cloud.apploadbala" +
+      "ncer.v1.RBAC.ActionB\004\350\3071\001\022H\n\nprincipals\030" +
+      "\002 \003(\0132+.yandex.cloud.apploadbalancer.v1." +
+      "PrincipalsB\007\202\3101\003>=1\"5\n\006Action\022\026\n\022ACTION_" +
+      "UNSPECIFIED\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DENY\020\002\"P\n\nPr" +
+      "incipals\022B\n\016and_principals\030\001 \003(\0132*.yande" +
+      "x.cloud.apploadbalancer.v1.Principal\"\361\001\n" +
+      "\tPrincipal\022J\n\006header\030\001 \001(\01328.yandex.clou" +
+      "d.apploadbalancer.v1.Principal.HeaderMat" +
+      "cherH\000\022\023\n\tremote_ip\030\002 \001(\tH\000\022\r\n\003any\030\003 \001(\010" +
+      "H\000\032`\n\rHeaderMatcher\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022" +
+      ";\n\005value\030\002 \001(\0132,.yandex.cloud.apploadbal" +
+      "ancer.v1.StringMatchB\022\n\nidentifier\022\004\300\3011\001" +
+      "\"x\n\022HeaderModification\022\014\n\004name\030\001 \001(\t\022\020\n\006" +
+      "append\030\002 \001(\tH\000\022\021\n\007replace\030\003 \001(\tH\000\022\020\n\006rem" +
+      "ove\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013\n\toperati" +
+      "on\"\350\001\n\005Route\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022:\n\004http" +
+      "\030\002 \001(\0132*.yandex.cloud.apploadbalancer.v1" +
+      ".HttpRouteH\000\022:\n\004grpc\030\003 \001(\0132*.yandex.clou" +
+      "d.apploadbalancer.v1.GrpcRouteH\000\022D\n\rrout" +
+      "e_options\030\004 \001(\0132-.yandex.cloud.apploadba" +
+      "lancer.v1.RouteOptionsB\r\n\005route\022\004\300\3011\001\"\265\002" +
+      "\n\tHttpRoute\022>\n\005match\030\001 \001(\0132/.yandex.clou" +
+      "d.apploadbalancer.v1.HttpRouteMatch\022A\n\005r" +
+      "oute\030\002 \001(\01320.yandex.cloud.apploadbalance" +
+      "r.v1.HttpRouteActionH\000\022C\n\010redirect\030\003 \001(\013" +
+      "2/.yandex.cloud.apploadbalancer.v1.Redir" +
+      "ectActionH\000\022P\n\017direct_response\030\004 \001(\01325.y" +
+      "andex.cloud.apploadbalancer.v1.DirectRes" +
+      "ponseActionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRo" +
+      "ute\022>\n\005match\030\001 \001(\0132/.yandex.cloud.apploa" +
+      "dbalancer.v1.GrpcRouteMatch\022A\n\005route\030\002 \001" +
+      "(\01320.yandex.cloud.apploadbalancer.v1.Grp" +
+      "cRouteActionH\000\022T\n\017status_response\030\003 \001(\0132" +
+      "9.yandex.cloud.apploadbalancer.v1.GrpcSt" +
+      "atusResponseActionH\000B\016\n\006action\022\004\300\3011\001\"a\n\016" +
+      "HttpRouteMatch\022\023\n\013http_method\030\001 \003(\t\022:\n\004p" +
+      "ath\030\002 \001(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.StringMatch\"L\n\016GrpcRouteMatch\022:\n\004fqm" +
+      "n\030\001 \001(\0132,.yandex.cloud.apploadbalancer.v" +
+      "1.StringMatch\"b\n\013StringMatch\022\025\n\013exact_ma" +
+      "tch\030\001 \001(\tH\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013r" +
+      "egex_match\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016Re" +
+      "directAction\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014" +
+      "replace_host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003" +
+      "\022\026\n\014replace_path\030\004 \001(\tH\000\022\030\n\016replace_pref" +
+      "ix\030\005 \001(\tH\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresp" +
+      "onse_code\030\007 \001(\0162D.yandex.cloud.apploadba" +
+      "lancer.v1.RedirectAction.RedirectRespons" +
+      "eCode\"w\n\024RedirectResponseCode\022\025\n\021MOVED_P" +
+      "ERMANENTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026" +
+      "\n\022TEMPORARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDI" +
+      "RECT\020\004B\006\n\004path\"k\n\024DirectResponseAction\022\033" +
+      "\n\006status\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(" +
+      "\0132(.yandex.cloud.apploadbalancer.v1.Payl" +
+      "oad\"\202\002\n\030GrpcStatusResponseAction\022P\n\006stat" +
+      "us\030\001 \001(\0162@.yandex.cloud.apploadbalancer." +
+      "v1.GrpcStatusResponseAction.Status\"\223\001\n\006S" +
+      "tatus\022\006\n\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tN" +
+      "OT_FOUND\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNA" +
+      "UTHENTICATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INT" +
+      "ERNAL\020\006\022\017\n\013UNAVAILABLE\020\007\"\214\002\n\017HttpRouteAc" +
+      "tion\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007" +
+      "timeout\030\002 \001(\0132\031.google.protobuf.Duration" +
+      "\022/\n\014idle_timeout\030\003 \001(\0132\031.google.protobuf" +
+      ".Duration\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021aut" +
+      "o_host_rewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite" +
+      "\030\006 \001(\t\022\025\n\rupgrade_types\030\007 \003(\tB\030\n\026host_re" +
+      "write_specifier\"\341\001\n\017GrpcRouteAction\022\036\n\020b" +
+      "ackend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeo" +
+      "ut\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014i" +
+      "dle_timeout\030\003 \001(\0132\031.google.protobuf.Dura" +
+      "tion\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_hos" +
+      "t_rewrite\030\005 \001(\010H\000B\030\n\026host_rewrite_specif" +
+      "ierBz\n#yandex.cloud.api.apploadbalancer." +
+      "v1ZSgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/apploadbalancer/v1;apploadb" +
+      "alancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20918,75 +25329,99 @@ public final class VirtualHostOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor,
-        new java.lang.String[] { "ModifyRequestHeaders", "ModifyResponseHeaders", });
-    internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor =
+        new java.lang.String[] { "ModifyRequestHeaders", "ModifyResponseHeaders", "Rbac", });
+    internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_apploadbalancer_v1_RBAC_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor,
+        new java.lang.String[] { "Action", "Principals", });
+    internal_static_yandex_cloud_apploadbalancer_v1_Principals_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_apploadbalancer_v1_Principals_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_Principals_descriptor,
+        new java.lang.String[] { "AndPrincipals", });
+    internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_apploadbalancer_v1_Principal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor,
+        new java.lang.String[] { "Header", "RemoteIp", "Any", "Identifier", });
+    internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_descriptor =
+      internal_static_yandex_cloud_apploadbalancer_v1_Principal_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_Principal_HeaderMatcher_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor,
         new java.lang.String[] { "Name", "Append", "Replace", "Remove", "Rename", "Operation", });
     internal_static_yandex_cloud_apploadbalancer_v1_Route_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_Route_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Route_descriptor,
         new java.lang.String[] { "Name", "Http", "Grpc", "RouteOptions", "Route", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "Redirect", "DirectResponse", "Action", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "StatusResponse", "Action", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor,
         new java.lang.String[] { "HttpMethod", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor,
         new java.lang.String[] { "Fqmn", });
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor,
         new java.lang.String[] { "ExactMatch", "PrefixMatch", "RegexMatch", "Match", });
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor,
         new java.lang.String[] { "ReplaceScheme", "ReplaceHost", "ReplacePort", "ReplacePath", "ReplacePrefix", "RemoveQuery", "ResponseCode", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor,
         new java.lang.String[] { "Status", "Body", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor,
         new java.lang.String[] { "BackendGroupId", "Timeout", "IdleTimeout", "HostRewrite", "AutoHostRewrite", "PrefixRewrite", "UpgradeTypes", "HostRewriteSpecifier", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor,
@@ -20995,6 +25430,7 @@ public final class VirtualHostOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
