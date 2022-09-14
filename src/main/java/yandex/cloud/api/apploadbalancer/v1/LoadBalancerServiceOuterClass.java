@@ -4471,6 +4471,60 @@ public final class LoadBalancerServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+     * @return Whether the autoScalePolicy field is set.
+     */
+    boolean hasAutoScalePolicy();
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+     * @return The autoScalePolicy.
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy();
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateLoadBalancerRequest}
@@ -4596,6 +4650,32 @@ public final class LoadBalancerServiceOuterClass {
                 mutable_bitField0_ |= 0x00000004;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder subBuilder = null;
+              if (autoScalePolicy_ != null) {
+                subBuilder = autoScalePolicy_.toBuilder();
+              }
+              autoScalePolicy_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoScalePolicy_);
+                autoScalePolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5172,6 +5252,82 @@ public final class LoadBalancerServiceOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int AUTO_SCALE_POLICY_FIELD_NUMBER = 9;
+    private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+     * @return Whether the autoScalePolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoScalePolicy() {
+      return autoScalePolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+     * @return The autoScalePolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy() {
+      return autoScalePolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+    }
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder() {
+      return getAutoScalePolicy();
+    }
+
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 10;
+    private yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5212,6 +5368,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, securityGroupIds_.getRaw(i));
+      }
+      if (autoScalePolicy_ != null) {
+        output.writeMessage(9, getAutoScalePolicy());
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(10, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -5261,6 +5423,14 @@ public final class LoadBalancerServiceOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (autoScalePolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getAutoScalePolicy());
+      }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5298,6 +5468,16 @@ public final class LoadBalancerServiceOuterClass {
       }
       if (!getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList())) return false;
+      if (hasAutoScalePolicy() != other.hasAutoScalePolicy()) return false;
+      if (hasAutoScalePolicy()) {
+        if (!getAutoScalePolicy()
+            .equals(other.getAutoScalePolicy())) return false;
+      }
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5334,6 +5514,14 @@ public final class LoadBalancerServiceOuterClass {
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      if (hasAutoScalePolicy()) {
+        hash = (37 * hash) + AUTO_SCALE_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoScalePolicy().hashCode();
+      }
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5518,6 +5706,18 @@ public final class LoadBalancerServiceOuterClass {
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = null;
+        } else {
+          autoScalePolicy_ = null;
+          autoScalePolicyBuilder_ = null;
+        }
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -5574,6 +5774,16 @@ public final class LoadBalancerServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        if (autoScalePolicyBuilder_ == null) {
+          result.autoScalePolicy_ = autoScalePolicy_;
+        } else {
+          result.autoScalePolicy_ = autoScalePolicyBuilder_.build();
+        }
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5677,6 +5887,12 @@ public final class LoadBalancerServiceOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.hasAutoScalePolicy()) {
+          mergeAutoScalePolicy(other.getAutoScalePolicy());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7190,6 +7406,316 @@ public final class LoadBalancerServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> autoScalePolicyBuilder_;
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       * @return Whether the autoScalePolicy field is set.
+       */
+      public boolean hasAutoScalePolicy() {
+        return autoScalePolicyBuilder_ != null || autoScalePolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       * @return The autoScalePolicy.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy() {
+        if (autoScalePolicyBuilder_ == null) {
+          return autoScalePolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+        } else {
+          return autoScalePolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      public Builder setAutoScalePolicy(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy value) {
+        if (autoScalePolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoScalePolicy_ = value;
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      public Builder setAutoScalePolicy(
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder builderForValue) {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      public Builder mergeAutoScalePolicy(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy value) {
+        if (autoScalePolicyBuilder_ == null) {
+          if (autoScalePolicy_ != null) {
+            autoScalePolicy_ =
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.newBuilder(autoScalePolicy_).mergeFrom(value).buildPartial();
+          } else {
+            autoScalePolicy_ = value;
+          }
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      public Builder clearAutoScalePolicy() {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = null;
+          onChanged();
+        } else {
+          autoScalePolicy_ = null;
+          autoScalePolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder getAutoScalePolicyBuilder() {
+        
+        onChanged();
+        return getAutoScalePolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder() {
+        if (autoScalePolicyBuilder_ != null) {
+          return autoScalePolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return autoScalePolicy_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> 
+          getAutoScalePolicyFieldBuilder() {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder>(
+                  getAutoScalePolicy(),
+                  getParentForChildren(),
+                  isClean());
+          autoScalePolicy_ = null;
+        }
+        return autoScalePolicyBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8151,6 +8677,60 @@ public final class LoadBalancerServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+     * @return Whether the autoScalePolicy field is set.
+     */
+    boolean hasAutoScalePolicy();
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+     * @return The autoScalePolicy.
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy();
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateLoadBalancerRequest}
@@ -8277,6 +8857,32 @@ public final class LoadBalancerServiceOuterClass {
                 mutable_bitField0_ |= 0x00000004;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder subBuilder = null;
+              if (autoScalePolicy_ != null) {
+                subBuilder = autoScalePolicy_.toBuilder();
+              }
+              autoScalePolicy_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoScalePolicy_);
+                autoScalePolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -8839,6 +9445,82 @@ public final class LoadBalancerServiceOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int AUTO_SCALE_POLICY_FIELD_NUMBER = 10;
+    private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+     * @return Whether the autoScalePolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoScalePolicy() {
+      return autoScalePolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+     * @return The autoScalePolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy() {
+      return autoScalePolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+    }
+    /**
+     * <pre>
+     * Autoscale settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder() {
+      return getAutoScalePolicy();
+    }
+
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 11;
+    private yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Cloud logging settings of the application load balancer.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8882,6 +9564,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, securityGroupIds_.getRaw(i));
+      }
+      if (autoScalePolicy_ != null) {
+        output.writeMessage(10, getAutoScalePolicy());
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(11, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -8933,6 +9621,14 @@ public final class LoadBalancerServiceOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (autoScalePolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getAutoScalePolicy());
+      }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8969,6 +9665,16 @@ public final class LoadBalancerServiceOuterClass {
       }
       if (!getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList())) return false;
+      if (hasAutoScalePolicy() != other.hasAutoScalePolicy()) return false;
+      if (hasAutoScalePolicy()) {
+        if (!getAutoScalePolicy()
+            .equals(other.getAutoScalePolicy())) return false;
+      }
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9005,6 +9711,14 @@ public final class LoadBalancerServiceOuterClass {
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      if (hasAutoScalePolicy()) {
+        hash = (37 * hash) + AUTO_SCALE_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoScalePolicy().hashCode();
+      }
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9187,6 +9901,18 @@ public final class LoadBalancerServiceOuterClass {
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = null;
+        } else {
+          autoScalePolicy_ = null;
+          autoScalePolicyBuilder_ = null;
+        }
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -9240,6 +9966,16 @@ public final class LoadBalancerServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        if (autoScalePolicyBuilder_ == null) {
+          result.autoScalePolicy_ = autoScalePolicy_;
+        } else {
+          result.autoScalePolicy_ = autoScalePolicyBuilder_.build();
+        }
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -9348,6 +10084,12 @@ public final class LoadBalancerServiceOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.hasAutoScalePolicy()) {
+          mergeAutoScalePolicy(other.getAutoScalePolicy());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10723,6 +11465,316 @@ public final class LoadBalancerServiceOuterClass {
         securityGroupIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> autoScalePolicyBuilder_;
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       * @return Whether the autoScalePolicy field is set.
+       */
+      public boolean hasAutoScalePolicy() {
+        return autoScalePolicyBuilder_ != null || autoScalePolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       * @return The autoScalePolicy.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy() {
+        if (autoScalePolicyBuilder_ == null) {
+          return autoScalePolicy_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+        } else {
+          return autoScalePolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      public Builder setAutoScalePolicy(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy value) {
+        if (autoScalePolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoScalePolicy_ = value;
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      public Builder setAutoScalePolicy(
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder builderForValue) {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      public Builder mergeAutoScalePolicy(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy value) {
+        if (autoScalePolicyBuilder_ == null) {
+          if (autoScalePolicy_ != null) {
+            autoScalePolicy_ =
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.newBuilder(autoScalePolicy_).mergeFrom(value).buildPartial();
+          } else {
+            autoScalePolicy_ = value;
+          }
+          onChanged();
+        } else {
+          autoScalePolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      public Builder clearAutoScalePolicy() {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicy_ = null;
+          onChanged();
+        } else {
+          autoScalePolicy_ = null;
+          autoScalePolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder getAutoScalePolicyBuilder() {
+        
+        onChanged();
+        return getAutoScalePolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder getAutoScalePolicyOrBuilder() {
+        if (autoScalePolicyBuilder_ != null) {
+          return autoScalePolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return autoScalePolicy_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.getDefaultInstance() : autoScalePolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Autoscale settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> 
+          getAutoScalePolicyFieldBuilder() {
+        if (autoScalePolicyBuilder_ == null) {
+          autoScalePolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder>(
+                  getAutoScalePolicy(),
+                  getParentForChildren(),
+                  isClean());
+          autoScalePolicy_ = null;
+        }
+        return autoScalePolicyBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud logging settings of the application load balancer.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptions.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -37032,215 +38084,223 @@ public final class LoadBalancerServiceOuterClass {
       "yandex/cloud/api/operation.proto\032&yandex" +
       "/cloud/operation/operation.proto\0323yandex" +
       "/cloud/apploadbalancer/v1/load_balancer." +
-      "proto\032\035yandex/cloud/validation.proto\"8\n\026" +
-      "GetLoadBalancerRequest\022\036\n\020load_balancer_" +
-      "id\030\001 \001(\tB\004\350\3071\001\"\215\001\n\030ListLoadBalancersRequ" +
-      "est\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"{" +
-      "\n\031ListLoadBalancersResponse\022E\n\016load_bala" +
-      "ncers\030\001 \003(\0132-.yandex.cloud.apploadbalanc" +
-      "er.v1.LoadBalancer\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\";\n\031DeleteLoadBalancerRequest\022\036\n\020load" +
-      "_balancer_id\030\001 \001(\tB\004\350\3071\001\"6\n\032DeleteLoadBa" +
-      "lancerMetadata\022\030\n\020load_balancer_id\030\001 \001(\t" +
-      "\"\304\004\n\031UpdateLoadBalancerRequest\022\036\n\020load_b" +
-      "alancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMask\0224\n\004name\030" +
-      "\003 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9" +
-      "])?)?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\237\001" +
-      "\n\006labels\030\005 \003(\0132F.yandex.cloud.apploadbal" +
-      "ancer.v1.UpdateLoadBalancerRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "E\n\016listener_specs\030\006 \003(\0132-.yandex.cloud.a" +
-      "pploadbalancer.v1.ListenerSpec\022L\n\021alloca" +
-      "tion_policy\030\007 \001(\01321.yandex.cloud.appload" +
-      "balancer.v1.AllocationPolicy\022\032\n\022security" +
-      "_group_ids\030\010 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\032UpdateLoadBal" +
-      "ancerMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\"" +
-      "\277\004\n\031CreateLoadBalancerRequest\022\027\n\tfolder_" +
-      "id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"([a-z]" +
-      "([-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n\013descript" +
-      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\237\001\n\006labels\030\004 \003(\0132F." +
-      "yandex.cloud.apploadbalancer.v1.CreateLo" +
-      "adBalancerRequest.LabelsEntryBG\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026" +
-      "\022\024[a-z][-_./\\@0-9a-z]*\022\027\n\tregion_id\030\005 \001(" +
-      "\tB\004\350\3071\001\022\030\n\nnetwork_id\030\006 \001(\tB\004\350\3071\001\022E\n\016lis" +
-      "tener_specs\030\007 \003(\0132-.yandex.cloud.appload" +
-      "balancer.v1.ListenerSpec\022L\n\021allocation_p" +
-      "olicy\030\010 \001(\01321.yandex.cloud.apploadbalanc" +
-      "er.v1.AllocationPolicy\022\032\n\022security_group" +
-      "_ids\030\t \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"6\n\032CreateLoadBalancerM" +
-      "etadata\022\030\n\020load_balancer_id\030\001 \001(\t\":\n\030Sta" +
-      "rtLoadBalancerRequest\022\036\n\020load_balancer_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\"5\n\031StartLoadBalancerMetada" +
-      "ta\022\030\n\020load_balancer_id\030\001 \001(\t\"9\n\027StopLoad" +
-      "BalancerRequest\022\036\n\020load_balancer_id\030\001 \001(" +
-      "\tB\004\350\3071\001\"4\n\030StopLoadBalancerMetadata\022\030\n\020l" +
-      "oad_balancer_id\030\001 \001(\t\"\200\001\n\022AddListenerReq" +
-      "uest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022J\n\r" +
-      "listener_spec\030\002 \001(\0132-.yandex.cloud.applo" +
-      "adbalancer.v1.ListenerSpecB\004\350\3071\001\"F\n\023AddL" +
-      "istenerMetadata\022\030\n\020load_balancer_id\030\001 \001(" +
-      "\t\022\025\n\rlistener_name\030\002 \001(\t\"K\n\025RemoveListen" +
-      "erRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\"I\n\026RemoveListenerM" +
-      "etadata\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlis" +
-      "tener_name\030\002 \001(\t\"\264\001\n\025UpdateListenerReque" +
-      "st\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013up" +
-      "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
-      "ask\022J\n\rlistener_spec\030\003 \001(\0132-.yandex.clou" +
-      "d.apploadbalancer.v1.ListenerSpecB\004\350\3071\001\"" +
-      "I\n\026UpdateListenerMetadata\022\030\n\020load_balanc" +
-      "er_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\"\303\002\n\013A" +
-      "ddressSpec\022^\n\032external_ipv4_address_spec" +
-      "\030\001 \001(\01328.yandex.cloud.apploadbalancer.v1" +
-      ".ExternalIpv4AddressSpecH\000\022^\n\032internal_i" +
-      "pv4_address_spec\030\002 \001(\01328.yandex.cloud.ap" +
-      "ploadbalancer.v1.InternalIpv4AddressSpec" +
-      "H\000\022^\n\032external_ipv6_address_spec\030\003 \001(\01328" +
-      ".yandex.cloud.apploadbalancer.v1.Externa" +
-      "lIpv6AddressSpecH\000B\024\n\014address_spec\022\004\300\3011\001" +
-      "\"*\n\027ExternalIpv4AddressSpec\022\017\n\007address\030\001" +
-      " \001(\t\"=\n\027InternalIpv4AddressSpec\022\017\n\007addre" +
-      "ss\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"*\n\027ExternalI" +
-      "pv6AddressSpec\022\017\n\007address\030\001 \001(\t\"}\n\014Endpo" +
-      "intSpec\022K\n\raddress_specs\030\001 \003(\0132,.yandex." +
-      "cloud.apploadbalancer.v1.AddressSpecB\006\202\310" +
-      "1\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\345" +
-      "\002\n\014ListenerSpec\0225\n\004name\030\001 \001(\tB\'\350\3071\001\362\3071\037[" +
-      "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022M\n\016endpoi" +
-      "nt_specs\030\002 \003(\0132-.yandex.cloud.apploadbal" +
-      "ancer.v1.EndpointSpecB\006\202\3101\002>0\022=\n\004http\030\003 " +
-      "\001(\0132-.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tpListenerH\000\022;\n\003tls\030\004 \001(\0132,.yandex.cloud" +
-      ".apploadbalancer.v1.TlsListenerH\000\022A\n\006str" +
-      "eam\030\005 \001(\0132/.yandex.cloud.apploadbalancer" +
-      ".v1.StreamListenerH\000B\020\n\010listener\022\004\300\3011\001\"w" +
-      "\n\026GetTargetStatesRequest\022\036\n\020load_balance" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\036\n\020backend_group_id\030\002 \001" +
-      "(\tB\004\350\3071\001\022\035\n\017target_group_id\030\003 \001(\tB\004\350\3071\001\"" +
-      "^\n\027GetTargetStatesResponse\022C\n\rtarget_sta" +
-      "tes\030\001 \003(\0132,.yandex.cloud.apploadbalancer" +
-      ".v1.TargetState\"\307\001\n\022AddSniMatchRequest\022\036" +
-      "\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlisten" +
-      "er_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022" +
-      "\034\n\014server_names\030\004 \003(\tB\006\202\3101\002>0\022B\n\007handler" +
-      "\030\005 \001(\0132+.yandex.cloud.apploadbalancer.v1" +
-      ".TlsHandlerB\004\350\3071\001\"^\n\023AddSniMatchMetadata" +
-      "\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener_n" +
-      "ame\030\002 \001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"r\n\025Rem" +
-      "oveSniMatchRequest\022\036\n\020load_balancer_id\030\001" +
-      " \001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022" +
-      "\034\n\016sni_match_name\030\003 \001(\tB\004\350\3071\001\"a\n\026RemoveS" +
-      "niMatchMetadata\022\030\n\020load_balancer_id\030\001 \001(" +
-      "\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_match_na" +
-      "me\030\003 \001(\t\"\373\001\n\025UpdateSniMatchRequest\022\036\n\020lo" +
-      "ad_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_n" +
-      "ame\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022/\n\013u" +
-      "pdate_mask\030\004 \001(\0132\032.google.protobuf.Field" +
-      "Mask\022\034\n\014server_names\030\005 \003(\tB\006\202\3101\002>0\022B\n\007ha" +
-      "ndler\030\006 \001(\0132+.yandex.cloud.apploadbalanc" +
-      "er.v1.TlsHandlerB\004\350\3071\001\"a\n\026UpdateSniMatch" +
-      "Metadata\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rli" +
-      "stener_name\030\002 \001(\t\022\026\n\016sni_match_name\030\003 \001(" +
-      "\t\"\211\001\n!ListLoadBalancerOperationsRequest\022" +
-      "&\n\020load_balancer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"ListLoadBalance" +
-      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t2\353\031\n\023LoadBalancerServ" +
-      "ice\022\253\001\n\003Get\0227.yandex.cloud.apploadbalanc" +
-      "er.v1.GetLoadBalancerRequest\032-.yandex.cl" +
-      "oud.apploadbalancer.v1.LoadBalancer\"<\202\323\344" +
-      "\223\0026\0224/apploadbalancer/v1/loadBalancers/{" +
-      "load_balancer_id}\022\250\001\n\004List\0229.yandex.clou" +
-      "d.apploadbalancer.v1.ListLoadBalancersRe" +
-      "quest\032:.yandex.cloud.apploadbalancer.v1." +
-      "ListLoadBalancersResponse\")\202\323\344\223\002#\022!/appl" +
-      "oadbalancer/v1/loadBalancers\022\303\001\n\006Create\022" +
-      ":.yandex.cloud.apploadbalancer.v1.Create" +
-      "LoadBalancerRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"Z\202\323\344\223\002&\"!/apploadbalancer" +
-      "/v1/loadBalancers:\001*\262\322**\n\032CreateLoadBala" +
-      "ncerMetadata\022\014LoadBalancer\022\326\001\n\006Update\022:." +
-      "yandex.cloud.apploadbalancer.v1.UpdateLo" +
-      "adBalancerRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"m\202\323\344\223\002924/apploadbalancer/v" +
-      "1/loadBalancers/{load_balancer_id}:\001*\262\322*" +
-      "*\n\032UpdateLoadBalancerMetadata\022\014LoadBalan" +
-      "cer\022\334\001\n\006Delete\022:.yandex.cloud.apploadbal" +
-      "ancer.v1.DeleteLoadBalancerRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"s\202\323\344\223\0026*4/" +
-      "apploadbalancer/v1/loadBalancers/{load_b" +
-      "alancer_id}\262\322*3\n\032DeleteLoadBalancerMetad" +
-      "ata\022\025google.protobuf.Empty\022\326\001\n\005Start\0229.y" +
-      "andex.cloud.apploadbalancer.v1.StartLoad" +
-      "BalancerRequest\032!.yandex.cloud.operation" +
-      ".Operation\"o\202\323\344\223\002<\":/apploadbalancer/v1/" +
-      "loadBalancers/{load_balancer_id}:start\262\322" +
-      "*)\n\031StartLoadBalancerMetadata\022\014LoadBalan" +
-      "cer\022\322\001\n\004Stop\0228.yandex.cloud.apploadbalan" +
-      "cer.v1.StopLoadBalancerRequest\032!.yandex." +
-      "cloud.operation.Operation\"m\202\323\344\223\002;\"9/appl" +
+      "proto\032-yandex/cloud/apploadbalancer/v1/l" +
+      "ogging.proto\032\035yandex/cloud/validation.pr" +
+      "oto\"8\n\026GetLoadBalancerRequest\022\036\n\020load_ba" +
+      "lancer_id\030\001 \001(\tB\004\350\3071\001\"\215\001\n\030ListLoadBalanc" +
+      "ersRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
+      "=1000\"{\n\031ListLoadBalancersResponse\022E\n\016lo" +
+      "ad_balancers\030\001 \003(\0132-.yandex.cloud.apploa" +
+      "dbalancer.v1.LoadBalancer\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\";\n\031DeleteLoadBalancerRequest\022" +
+      "\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\"6\n\032Delet" +
+      "eLoadBalancerMetadata\022\030\n\020load_balancer_i" +
+      "d\030\001 \001(\t\"\323\005\n\031UpdateLoadBalancerRequest\022\036\n" +
+      "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0224" +
+      "\n\004name\030\003 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}" +
+      "[a-z0-9])?)?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<" +
+      "=256\022\237\001\n\006labels\030\005 \003(\0132F.yandex.cloud.app" +
+      "loadbalancer.v1.UpdateLoadBalancerReques" +
+      "t.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./" +
+      "\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-" +
+      "9a-z]*\022E\n\016listener_specs\030\006 \003(\0132-.yandex." +
+      "cloud.apploadbalancer.v1.ListenerSpec\022L\n" +
+      "\021allocation_policy\030\007 \001(\01321.yandex.cloud." +
+      "apploadbalancer.v1.AllocationPolicy\022\032\n\022s" +
+      "ecurity_group_ids\030\010 \003(\t\022K\n\021auto_scale_po" +
+      "licy\030\t \001(\01320.yandex.cloud.apploadbalance" +
+      "r.v1.AutoScalePolicy\022@\n\013log_options\030\n \001(" +
+      "\0132+.yandex.cloud.apploadbalancer.v1.LogO" +
+      "ptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"6\n\032UpdateLoadBalancerMetad" +
+      "ata\022\030\n\020load_balancer_id\030\001 \001(\t\"\316\005\n\031Create" +
+      "LoadBalancerRequest\022\027\n\tfolder_id\030\001 \001(\tB\004" +
+      "\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]" +
+      "{0,61}[a-z0-9])?)?\022\036\n\013description\030\003 \001(\tB" +
+      "\t\212\3101\005<=256\022\237\001\n\006labels\030\004 \003(\0132F.yandex.clo" +
+      "ud.apploadbalancer.v1.CreateLoadBalancer" +
+      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
+      "./\\@0-9a-z]*\022\027\n\tregion_id\030\005 \001(\tB\004\350\3071\001\022\030\n" +
+      "\nnetwork_id\030\006 \001(\tB\004\350\3071\001\022E\n\016listener_spec" +
+      "s\030\007 \003(\0132-.yandex.cloud.apploadbalancer.v" +
+      "1.ListenerSpec\022L\n\021allocation_policy\030\010 \001(" +
+      "\01321.yandex.cloud.apploadbalancer.v1.Allo" +
+      "cationPolicy\022\032\n\022security_group_ids\030\t \003(\t" +
+      "\022K\n\021auto_scale_policy\030\n \001(\01320.yandex.clo" +
+      "ud.apploadbalancer.v1.AutoScalePolicy\022@\n" +
+      "\013log_options\030\013 \001(\0132+.yandex.cloud.apploa" +
+      "dbalancer.v1.LogOptions\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\032Create" +
+      "LoadBalancerMetadata\022\030\n\020load_balancer_id" +
+      "\030\001 \001(\t\":\n\030StartLoadBalancerRequest\022\036\n\020lo" +
+      "ad_balancer_id\030\001 \001(\tB\004\350\3071\001\"5\n\031StartLoadB" +
+      "alancerMetadata\022\030\n\020load_balancer_id\030\001 \001(" +
+      "\t\"9\n\027StopLoadBalancerRequest\022\036\n\020load_bal" +
+      "ancer_id\030\001 \001(\tB\004\350\3071\001\"4\n\030StopLoadBalancer" +
+      "Metadata\022\030\n\020load_balancer_id\030\001 \001(\t\"\200\001\n\022A" +
+      "ddListenerRequest\022\036\n\020load_balancer_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022J\n\rlistener_spec\030\002 \001(\0132-.yande" +
+      "x.cloud.apploadbalancer.v1.ListenerSpecB" +
+      "\004\350\3071\001\"F\n\023AddListenerMetadata\022\030\n\020load_bal" +
+      "ancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\"K\n" +
+      "\025RemoveListenerRequest\022\036\n\020load_balancer_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\"I\n\026Re" +
+      "moveListenerMetadata\022\030\n\020load_balancer_id" +
+      "\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\"\264\001\n\025Update" +
+      "ListenerRequest\022\036\n\020load_balancer_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022J\n\rlistener_spec\030\003 \001(\0132" +
+      "-.yandex.cloud.apploadbalancer.v1.Listen" +
+      "erSpecB\004\350\3071\001\"I\n\026UpdateListenerMetadata\022\030" +
+      "\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener_nam" +
+      "e\030\002 \001(\t\"\303\002\n\013AddressSpec\022^\n\032external_ipv4" +
+      "_address_spec\030\001 \001(\01328.yandex.cloud.applo" +
+      "adbalancer.v1.ExternalIpv4AddressSpecH\000\022" +
+      "^\n\032internal_ipv4_address_spec\030\002 \001(\01328.ya" +
+      "ndex.cloud.apploadbalancer.v1.InternalIp" +
+      "v4AddressSpecH\000\022^\n\032external_ipv6_address" +
+      "_spec\030\003 \001(\01328.yandex.cloud.apploadbalanc" +
+      "er.v1.ExternalIpv6AddressSpecH\000B\024\n\014addre" +
+      "ss_spec\022\004\300\3011\001\"*\n\027ExternalIpv4AddressSpec" +
+      "\022\017\n\007address\030\001 \001(\t\"=\n\027InternalIpv4Address" +
+      "Spec\022\017\n\007address\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t" +
+      "\"*\n\027ExternalIpv6AddressSpec\022\017\n\007address\030\001" +
+      " \001(\t\"}\n\014EndpointSpec\022K\n\raddress_specs\030\001 " +
+      "\003(\0132,.yandex.cloud.apploadbalancer.v1.Ad" +
+      "dressSpecB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0" +
+      "\372\3071\0071-65535\"\345\002\n\014ListenerSpec\0225\n\004name\030\001 \001" +
+      "(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9" +
+      "])?\022M\n\016endpoint_specs\030\002 \003(\0132-.yandex.clo" +
+      "ud.apploadbalancer.v1.EndpointSpecB\006\202\3101\002" +
+      ">0\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploadb" +
+      "alancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\0132," +
+      ".yandex.cloud.apploadbalancer.v1.TlsList" +
+      "enerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud.ap" +
+      "ploadbalancer.v1.StreamListenerH\000B\020\n\010lis" +
+      "tener\022\004\300\3011\001\"w\n\026GetTargetStatesRequest\022\036\n" +
+      "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\036\n\020backend" +
+      "_group_id\030\002 \001(\tB\004\350\3071\001\022\035\n\017target_group_id" +
+      "\030\003 \001(\tB\004\350\3071\001\"^\n\027GetTargetStatesResponse\022" +
+      "C\n\rtarget_states\030\001 \003(\0132,.yandex.cloud.ap" +
+      "ploadbalancer.v1.TargetState\"\307\001\n\022AddSniM" +
+      "atchRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name" +
+      "\030\003 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\004 \003(\tB\006\202\3101\002" +
+      ">0\022B\n\007handler\030\005 \001(\0132+.yandex.cloud.applo" +
+      "adbalancer.v1.TlsHandlerB\004\350\3071\001\"^\n\023AddSni" +
+      "MatchMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\022" +
+      "\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_match_name" +
+      "\030\003 \001(\t\"r\n\025RemoveSniMatchRequest\022\036\n\020load_" +
+      "balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name" +
+      "\030\002 \001(\tB\004\350\3071\001\022\034\n\016sni_match_name\030\003 \001(\tB\004\350\307" +
+      "1\001\"a\n\026RemoveSniMatchMetadata\022\030\n\020load_bal" +
+      "ancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n" +
+      "\016sni_match_name\030\003 \001(\t\"\373\001\n\025UpdateSniMatch" +
+      "Request\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001" +
+      "(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\022\034\n\014server_names\030\005 \003(\tB" +
+      "\006\202\3101\002>0\022B\n\007handler\030\006 \001(\0132+.yandex.cloud." +
+      "apploadbalancer.v1.TlsHandlerB\004\350\3071\001\"a\n\026U" +
+      "pdateSniMatchMetadata\022\030\n\020load_balancer_i" +
+      "d\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_ma" +
+      "tch_name\030\003 \001(\t\"\211\001\n!ListLoadBalancerOpera" +
+      "tionsRequest\022&\n\020load_balancer_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"Li" +
+      "stLoadBalancerOperationsResponse\0225\n\noper" +
+      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
+      "eration\022\027\n\017next_page_token\030\002 \001(\t2\353\031\n\023Loa" +
+      "dBalancerService\022\253\001\n\003Get\0227.yandex.cloud." +
+      "apploadbalancer.v1.GetLoadBalancerReques" +
+      "t\032-.yandex.cloud.apploadbalancer.v1.Load" +
+      "Balancer\"<\202\323\344\223\0026\0224/apploadbalancer/v1/lo" +
+      "adBalancers/{load_balancer_id}\022\250\001\n\004List\022" +
+      "9.yandex.cloud.apploadbalancer.v1.ListLo" +
+      "adBalancersRequest\032:.yandex.cloud.apploa" +
+      "dbalancer.v1.ListLoadBalancersResponse\")" +
+      "\202\323\344\223\002#\022!/apploadbalancer/v1/loadBalancer" +
+      "s\022\303\001\n\006Create\022:.yandex.cloud.apploadbalan" +
+      "cer.v1.CreateLoadBalancerRequest\032!.yande" +
+      "x.cloud.operation.Operation\"Z\202\323\344\223\002&\"!/ap" +
+      "ploadbalancer/v1/loadBalancers:\001*\262\322**\n\032C" +
+      "reateLoadBalancerMetadata\022\014LoadBalancer\022" +
+      "\326\001\n\006Update\022:.yandex.cloud.apploadbalance" +
+      "r.v1.UpdateLoadBalancerRequest\032!.yandex." +
+      "cloud.operation.Operation\"m\202\323\344\223\002924/appl" +
       "oadbalancer/v1/loadBalancers/{load_balan" +
-      "cer_id}:stop\262\322*(\n\030StopLoadBalancerMetada" +
-      "ta\022\014LoadBalancer\022\331\001\n\013AddListener\0223.yande" +
-      "x.cloud.apploadbalancer.v1.AddListenerRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"r\202\323\344\223\002E\"@/apploadbalancer/v1/loadBalanc" +
-      "ers/{load_balancer_id}:addListener:\001*\262\322*" +
-      "#\n\023AddListenerMetadata\022\014LoadBalancer\022\345\001\n" +
-      "\016RemoveListener\0226.yandex.cloud.apploadba" +
-      "lancer.v1.RemoveListenerRequest\032!.yandex" +
-      ".cloud.operation.Operation\"x\202\323\344\223\002H\"C/app" +
-      "loadbalancer/v1/loadBalancers/{load_bala" +
-      "ncer_id}:removeListener:\001*\262\322*&\n\026RemoveLi" +
-      "stenerMetadata\022\014LoadBalancer\022\345\001\n\016UpdateL" +
-      "istener\0226.yandex.cloud.apploadbalancer.v" +
-      "1.UpdateListenerRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"x\202\323\344\223\002H\"C/apploadbala" +
-      "ncer/v1/loadBalancers/{load_balancer_id}" +
-      ":updateListener:\001*\262\322*&\n\026UpdateListenerMe" +
-      "tadata\022\014LoadBalancer\022\342\001\n\013AddSniMatch\0223.y" +
-      "andex.cloud.apploadbalancer.v1.AddSniMat" +
-      "chRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"{\202\323\344\223\002E\"@/apploadbalancer/v1/loadBa" +
-      "lancers/{load_balancer_id}:addSniMatch:\001" +
-      "*\262\322*,\n\023AddSniMatchMetadata\022\025google.proto" +
-      "buf.Empty\022\357\001\n\016UpdateSniMatch\0226.yandex.cl" +
-      "oud.apploadbalancer.v1.UpdateSniMatchReq" +
+      "cer_id}:\001*\262\322**\n\032UpdateLoadBalancerMetada" +
+      "ta\022\014LoadBalancer\022\334\001\n\006Delete\022:.yandex.clo" +
+      "ud.apploadbalancer.v1.DeleteLoadBalancer" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"s\202\323\344\223\0026*4/apploadbalancer/v1/loadBala" +
+      "ncers/{load_balancer_id}\262\322*3\n\032DeleteLoad" +
+      "BalancerMetadata\022\025google.protobuf.Empty\022" +
+      "\326\001\n\005Start\0229.yandex.cloud.apploadbalancer" +
+      ".v1.StartLoadBalancerRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"o\202\323\344\223\002<\":/apploa" +
+      "dbalancer/v1/loadBalancers/{load_balance" +
+      "r_id}:start\262\322*)\n\031StartLoadBalancerMetada" +
+      "ta\022\014LoadBalancer\022\322\001\n\004Stop\0228.yandex.cloud" +
+      ".apploadbalancer.v1.StopLoadBalancerRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"m" +
+      "\202\323\344\223\002;\"9/apploadbalancer/v1/loadBalancer" +
+      "s/{load_balancer_id}:stop\262\322*(\n\030StopLoadB" +
+      "alancerMetadata\022\014LoadBalancer\022\331\001\n\013AddLis" +
+      "tener\0223.yandex.cloud.apploadbalancer.v1." +
+      "AddListenerRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"r\202\323\344\223\002E\"@/apploadbalancer/" +
+      "v1/loadBalancers/{load_balancer_id}:addL" +
+      "istener:\001*\262\322*#\n\023AddListenerMetadata\022\014Loa" +
+      "dBalancer\022\345\001\n\016RemoveListener\0226.yandex.cl" +
+      "oud.apploadbalancer.v1.RemoveListenerReq" +
       "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\201\001\202\323\344\223\002H\"C/apploadbalancer/v1/loadBalanc" +
-      "ers/{load_balancer_id}:updateSniMatch:\001*" +
-      "\262\322*/\n\026UpdateSniMatchMetadata\022\025google.pro" +
-      "tobuf.Empty\022\357\001\n\016RemoveSniMatch\0226.yandex." +
-      "cloud.apploadbalancer.v1.RemoveSniMatchR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\201\001\202\323\344\223\002H\"C/apploadbalancer/v1/loadBala" +
-      "ncers/{load_balancer_id}:removeSniMatch:" +
-      "\001*\262\322*/\n\026RemoveSniMatchMetadata\022\025google.p" +
-      "rotobuf.Empty\022\364\001\n\017GetTargetStates\0227.yand" +
-      "ex.cloud.apploadbalancer.v1.GetTargetSta" +
-      "tesRequest\0328.yandex.cloud.apploadbalance" +
-      "r.v1.GetTargetStatesResponse\"n\202\323\344\223\002h\022f/a" +
-      "pploadbalancer/v1/loadBalancers/{load_ba" +
-      "lancer_id}/targetStates/{backend_group_i" +
-      "d}/{target_group_id}\022\342\001\n\016ListOperations\022" +
-      "B.yandex.cloud.apploadbalancer.v1.ListLo" +
-      "adBalancerOperationsRequest\032C.yandex.clo" +
-      "ud.apploadbalancer.v1.ListLoadBalancerOp" +
-      "erationsResponse\"G\202\323\344\223\002A\022?/apploadbalanc" +
-      "er/v1/loadBalancers/{load_balancer_id}/o" +
-      "perationsBz\n#yandex.cloud.api.apploadbal" +
-      "ancer.v1ZSgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/apploadbalancer/v1;ap" +
-      "ploadbalancerb\006proto3"
+      "x\202\323\344\223\002H\"C/apploadbalancer/v1/loadBalance" +
+      "rs/{load_balancer_id}:removeListener:\001*\262" +
+      "\322*&\n\026RemoveListenerMetadata\022\014LoadBalance" +
+      "r\022\345\001\n\016UpdateListener\0226.yandex.cloud.appl" +
+      "oadbalancer.v1.UpdateListenerRequest\032!.y" +
+      "andex.cloud.operation.Operation\"x\202\323\344\223\002H\"" +
+      "C/apploadbalancer/v1/loadBalancers/{load" +
+      "_balancer_id}:updateListener:\001*\262\322*&\n\026Upd" +
+      "ateListenerMetadata\022\014LoadBalancer\022\342\001\n\013Ad" +
+      "dSniMatch\0223.yandex.cloud.apploadbalancer" +
+      ".v1.AddSniMatchRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"{\202\323\344\223\002E\"@/apploadbalan" +
+      "cer/v1/loadBalancers/{load_balancer_id}:" +
+      "addSniMatch:\001*\262\322*,\n\023AddSniMatchMetadata\022" +
+      "\025google.protobuf.Empty\022\357\001\n\016UpdateSniMatc" +
+      "h\0226.yandex.cloud.apploadbalancer.v1.Upda" +
+      "teSniMatchRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\201\001\202\323\344\223\002H\"C/apploadbalancer/" +
+      "v1/loadBalancers/{load_balancer_id}:upda" +
+      "teSniMatch:\001*\262\322*/\n\026UpdateSniMatchMetadat" +
+      "a\022\025google.protobuf.Empty\022\357\001\n\016RemoveSniMa" +
+      "tch\0226.yandex.cloud.apploadbalancer.v1.Re" +
+      "moveSniMatchRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\201\001\202\323\344\223\002H\"C/apploadbalance" +
+      "r/v1/loadBalancers/{load_balancer_id}:re" +
+      "moveSniMatch:\001*\262\322*/\n\026RemoveSniMatchMetad" +
+      "ata\022\025google.protobuf.Empty\022\364\001\n\017GetTarget" +
+      "States\0227.yandex.cloud.apploadbalancer.v1" +
+      ".GetTargetStatesRequest\0328.yandex.cloud.a" +
+      "pploadbalancer.v1.GetTargetStatesRespons" +
+      "e\"n\202\323\344\223\002h\022f/apploadbalancer/v1/loadBalan" +
+      "cers/{load_balancer_id}/targetStates/{ba" +
+      "ckend_group_id}/{target_group_id}\022\342\001\n\016Li" +
+      "stOperations\022B.yandex.cloud.apploadbalan" +
+      "cer.v1.ListLoadBalancerOperationsRequest" +
+      "\032C.yandex.cloud.apploadbalancer.v1.ListL" +
+      "oadBalancerOperationsResponse\"G\202\323\344\223\002A\022?/" +
+      "apploadbalancer/v1/loadBalancers/{load_b" +
+      "alancer_id}/operationsBz\n#yandex.cloud.a" +
+      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/apploadb" +
+      "alancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37250,6 +38310,7 @@ public final class LoadBalancerServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.getDescriptor(),
+          yandex.cloud.api.apploadbalancer.v1.Logging.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_apploadbalancer_v1_GetLoadBalancerRequest_descriptor =
@@ -37287,7 +38348,7 @@ public final class LoadBalancerServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_descriptor,
-        new java.lang.String[] { "LoadBalancerId", "UpdateMask", "Name", "Description", "Labels", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", });
+        new java.lang.String[] { "LoadBalancerId", "UpdateMask", "Name", "Description", "Labels", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", "AutoScalePolicy", "LogOptions", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_LabelsEntry_fieldAccessorTable = new
@@ -37305,7 +38366,7 @@ public final class LoadBalancerServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "RegionId", "NetworkId", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "RegionId", "NetworkId", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", "AutoScalePolicy", "LogOptions", });
     internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_LabelsEntry_fieldAccessorTable = new
@@ -37492,6 +38553,7 @@ public final class LoadBalancerServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.getDescriptor();
+    yandex.cloud.api.apploadbalancer.v1.Logging.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

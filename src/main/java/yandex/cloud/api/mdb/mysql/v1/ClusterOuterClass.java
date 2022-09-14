@@ -9062,6 +9062,14 @@ public final class ClusterOuterClass {
        * <code>DEGRADED = 3;</code>
        */
       DEGRADED(3),
+      /**
+       * <pre>
+       * Host is alive, but in read-only mode.
+       * </pre>
+       *
+       * <code>READONLY = 4;</code>
+       */
+      READONLY(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -9097,6 +9105,14 @@ public final class ClusterOuterClass {
        * <code>DEGRADED = 3;</code>
        */
       public static final int DEGRADED_VALUE = 3;
+      /**
+       * <pre>
+       * Host is alive, but in read-only mode.
+       * </pre>
+       *
+       * <code>READONLY = 4;</code>
+       */
+      public static final int READONLY_VALUE = 4;
 
 
       public final int getNumber() {
@@ -9127,6 +9143,7 @@ public final class ClusterOuterClass {
           case 1: return ALIVE;
           case 2: return DEAD;
           case 3: return DEGRADED;
+          case 4: return READONLY;
           default: return null;
         }
       }
@@ -11721,6 +11738,14 @@ public final class ClusterOuterClass {
        * <code>DEAD = 2;</code>
        */
       DEAD(2),
+      /**
+       * <pre>
+       * The service is in read-only mode.
+       * </pre>
+       *
+       * <code>READONLY = 3;</code>
+       */
+      READONLY(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -11748,6 +11773,14 @@ public final class ClusterOuterClass {
        * <code>DEAD = 2;</code>
        */
       public static final int DEAD_VALUE = 2;
+      /**
+       * <pre>
+       * The service is in read-only mode.
+       * </pre>
+       *
+       * <code>READONLY = 3;</code>
+       */
+      public static final int READONLY_VALUE = 3;
 
 
       public final int getNumber() {
@@ -11777,6 +11810,7 @@ public final class ClusterOuterClass {
           case 0: return HEALTH_UNKNOWN;
           case 1: return ALIVE;
           case 2: return DEAD;
+          case 3: return READONLY;
           default: return null;
         }
       }
@@ -14852,7 +14886,7 @@ public final class ClusterOuterClass {
       "1.yandex.cloud.mdb.mysql.v1.PerformanceD" +
       "iagnostics\022H\n\031backup_retain_period_days\030" +
       "\010 \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071\004" +
-      "7-60B\016\n\014mysql_config\"\222\004\n\004Host\022\014\n\004name\030\001 " +
+      "7-60B\016\n\014mysql_config\"\240\004\n\004Host\022\014\n\004name\030\001 " +
       "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t" +
       "\0227\n\tresources\030\004 \001(\0132$.yandex.cloud.mdb.m" +
       "ysql.v1.Resources\0222\n\004role\030\005 \001(\0162$.yandex" +
@@ -14864,24 +14898,25 @@ public final class ClusterOuterClass {
       "source\030\n \001(\t\022\"\n\017backup_priority\030\013 \001(\003B\t\372" +
       "\3071\0050-100\022\033\n\010priority\030\014 \001(\003B\t\372\3071\0050-100\"1\n" +
       "\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007R" +
-      "EPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t" +
-      "\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\327\001\n\007Se" +
-      "rvice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb.m" +
-      "ysql.v1.Service.Type\0229\n\006health\030\002 \001(\0162).y" +
-      "andex.cloud.mdb.mysql.v1.Service.Health\"" +
-      "\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005MYSQL\020\001" +
-      "\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020" +
-      "\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_pre" +
-      "set_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_" +
-      "type_id\030\003 \001(\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001" +
-      "(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001" +
-      "(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007enabled" +
-      "\030\001 \001(\010\022/\n\032sessions_sampling_interval\030\002 \001" +
-      "(\003B\013\372\3071\0071-86400\0221\n\034statements_sampling_i" +
-      "nterval\030\003 \001(\003B\013\372\3071\0071-86400Bd\n\035yandex.clo" +
-      "ud.api.mdb.mysql.v1ZCgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/mysql/" +
-      "v1;mysqlb\006proto3"
+      "EPLICA\020\002\"M\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t" +
+      "\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\022\014\n\010REA" +
+      "DONLY\020\004\"\345\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yand" +
+      "ex.cloud.mdb.mysql.v1.Service.Type\0229\n\006he" +
+      "alth\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1.S" +
+      "ervice.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\t\n\005MYSQL\020\001\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010READONLY\020\003\"" +
+      "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
+      "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
+      "\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sq" +
+      "l\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\215\001\n\026Perfo" +
+      "rmanceDiagnostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032se" +
+      "ssions_sampling_interval\030\002 \001(\003B\013\372\3071\0071-86" +
+      "400\0221\n\034statements_sampling_interval\030\003 \001(" +
+      "\003B\013\372\3071\0071-86400Bd\n\035yandex.cloud.api.mdb.m" +
+      "ysql.v1ZCgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/mdb/mysql/v1;mysqlb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
