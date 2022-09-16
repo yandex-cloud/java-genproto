@@ -1360,6 +1360,16 @@ public final class Logging {
      */
     yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRuleOrBuilder getDiscardRulesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Do not send logs to Cloud Logging log group.
+     * </pre>
+     *
+     * <code>bool disable = 3;</code>
+     * @return The disable.
+     */
+    boolean getDisable();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.LogOptions}
@@ -1422,6 +1432,11 @@ public final class Logging {
               }
               discardRules_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.parser(), extensionRegistry));
+              break;
+            }
+            case 24: {
+
+              disable_ = input.readBool();
               break;
             }
             default: {
@@ -1549,6 +1564,21 @@ public final class Logging {
       return discardRules_.get(index);
     }
 
+    public static final int DISABLE_FIELD_NUMBER = 3;
+    private boolean disable_;
+    /**
+     * <pre>
+     * Do not send logs to Cloud Logging log group.
+     * </pre>
+     *
+     * <code>bool disable = 3;</code>
+     * @return The disable.
+     */
+    @java.lang.Override
+    public boolean getDisable() {
+      return disable_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1569,6 +1599,9 @@ public final class Logging {
       for (int i = 0; i < discardRules_.size(); i++) {
         output.writeMessage(2, discardRules_.get(i));
       }
+      if (disable_ != false) {
+        output.writeBool(3, disable_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1584,6 +1617,10 @@ public final class Logging {
       for (int i = 0; i < discardRules_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, discardRules_.get(i));
+      }
+      if (disable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, disable_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1604,6 +1641,8 @@ public final class Logging {
           .equals(other.getLogGroupId())) return false;
       if (!getDiscardRulesList()
           .equals(other.getDiscardRulesList())) return false;
+      if (getDisable()
+          != other.getDisable()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1621,6 +1660,9 @@ public final class Logging {
         hash = (37 * hash) + DISCARD_RULES_FIELD_NUMBER;
         hash = (53 * hash) + getDiscardRulesList().hashCode();
       }
+      hash = (37 * hash) + DISABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisable());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1763,6 +1805,8 @@ public final class Logging {
         } else {
           discardRulesBuilder_.clear();
         }
+        disable_ = false;
+
         return this;
       }
 
@@ -1800,6 +1844,7 @@ public final class Logging {
         } else {
           result.discardRules_ = discardRulesBuilder_.build();
         }
+        result.disable_ = disable_;
         onBuilt();
         return result;
       }
@@ -1877,6 +1922,9 @@ public final class Logging {
               discardRulesBuilder_.addAllMessages(other.discardRules_);
             }
           }
+        }
+        if (other.getDisable() != false) {
+          setDisable(other.getDisable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2253,6 +2301,49 @@ public final class Logging {
         }
         return discardRulesBuilder_;
       }
+
+      private boolean disable_ ;
+      /**
+       * <pre>
+       * Do not send logs to Cloud Logging log group.
+       * </pre>
+       *
+       * <code>bool disable = 3;</code>
+       * @return The disable.
+       */
+      @java.lang.Override
+      public boolean getDisable() {
+        return disable_;
+      }
+      /**
+       * <pre>
+       * Do not send logs to Cloud Logging log group.
+       * </pre>
+       *
+       * <code>bool disable = 3;</code>
+       * @param value The disable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisable(boolean value) {
+        
+        disable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Do not send logs to Cloud Logging log group.
+       * </pre>
+       *
+       * <code>bool disable = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisable() {
+        
+        disable_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2331,18 +2422,18 @@ public final class Logging {
       "iscardRule\022\032\n\005codes\030\001 \003(\003B\013\372\3071\007100-599\022D" +
       "\n\tintervals\030\002 \003(\01621.yandex.cloud.appload" +
       "balancer.v1.HttpCodeInterval\022\032\n\007percent\030" +
-      "\003 \001(\003B\t\372\3071\0050-100\"j\n\nLogOptions\022\024\n\014log_gr" +
+      "\003 \001(\003B\t\372\3071\0050-100\"{\n\nLogOptions\022\024\n\014log_gr" +
       "oup_id\030\001 \001(\t\022F\n\rdiscard_rules\030\002 \003(\0132/.ya" +
       "ndex.cloud.apploadbalancer.v1.LogDiscard" +
-      "Rule*\302\001\n\020HttpCodeInterval\022\"\n\036HTTP_CODE_I" +
-      "NTERVAL_UNSPECIFIED\020\000\022\032\n\026HTTP_CODE_INTER" +
-      "VAL_1XX\020\001\022\032\n\026HTTP_CODE_INTERVAL_2XX\020\002\022\032\n" +
-      "\026HTTP_CODE_INTERVAL_3XX\020\003\022\032\n\026HTTP_CODE_I" +
-      "NTERVAL_4XX\020\004\022\032\n\026HTTP_CODE_INTERVAL_5XX\020" +
-      "\005Bz\n#yandex.cloud.api.apploadbalancer.v1" +
-      "ZSgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/apploadbalancer/v1;apploadbal" +
-      "ancerb\006proto3"
+      "Rule\022\017\n\007disable\030\003 \001(\010*\302\001\n\020HttpCodeInterv" +
+      "al\022\"\n\036HTTP_CODE_INTERVAL_UNSPECIFIED\020\000\022\032" +
+      "\n\026HTTP_CODE_INTERVAL_1XX\020\001\022\032\n\026HTTP_CODE_" +
+      "INTERVAL_2XX\020\002\022\032\n\026HTTP_CODE_INTERVAL_3XX" +
+      "\020\003\022\032\n\026HTTP_CODE_INTERVAL_4XX\020\004\022\032\n\026HTTP_C" +
+      "ODE_INTERVAL_5XX\020\005Bz\n#yandex.cloud.api.a" +
+      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/apploadbalan" +
+      "cer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2360,7 +2451,7 @@ public final class Logging {
     internal_static_yandex_cloud_apploadbalancer_v1_LogOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_LogOptions_descriptor,
-        new java.lang.String[] { "LogGroupId", "DiscardRules", });
+        new java.lang.String[] { "LogGroupId", "DiscardRules", "Disable", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.value);

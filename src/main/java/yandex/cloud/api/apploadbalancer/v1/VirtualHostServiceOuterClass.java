@@ -3136,6 +3136,33 @@ public final class VirtualHostServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+     * @return Whether the routeOptions field is set.
+     */
+    boolean hasRouteOptions();
+    /**
+     * <pre>
+     * Route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+     * @return The routeOptions.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions();
+    /**
+     * <pre>
+     * Route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateVirtualHostRequest}
@@ -3235,6 +3262,19 @@ public final class VirtualHostServiceOuterClass {
               }
               modifyResponseHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder subBuilder = null;
+              if (routeOptions_ != null) {
+                subBuilder = routeOptions_.toBuilder();
+              }
+              routeOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(routeOptions_);
+                routeOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3670,6 +3710,44 @@ public final class VirtualHostServiceOuterClass {
       return modifyResponseHeaders_.get(index);
     }
 
+    public static final int ROUTE_OPTIONS_FIELD_NUMBER = 8;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+    /**
+     * <pre>
+     * Route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+     * @return Whether the routeOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasRouteOptions() {
+      return routeOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+     * @return The routeOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+      return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+    }
+    /**
+     * <pre>
+     * Route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+      return getRouteOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3701,6 +3779,9 @@ public final class VirtualHostServiceOuterClass {
       }
       for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
         output.writeMessage(7, modifyResponseHeaders_.get(i));
+      }
+      if (routeOptions_ != null) {
+        output.writeMessage(8, getRouteOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -3737,6 +3818,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, modifyResponseHeaders_.get(i));
       }
+      if (routeOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getRouteOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3764,6 +3849,11 @@ public final class VirtualHostServiceOuterClass {
           .equals(other.getModifyRequestHeadersList())) return false;
       if (!getModifyResponseHeadersList()
           .equals(other.getModifyResponseHeadersList())) return false;
+      if (hasRouteOptions() != other.hasRouteOptions()) return false;
+      if (hasRouteOptions()) {
+        if (!getRouteOptions()
+            .equals(other.getRouteOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3794,6 +3884,10 @@ public final class VirtualHostServiceOuterClass {
       if (getModifyResponseHeadersCount() > 0) {
         hash = (37 * hash) + MODIFY_RESPONSE_HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + getModifyResponseHeadersList().hashCode();
+      }
+      if (hasRouteOptions()) {
+        hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3955,6 +4049,12 @@ public final class VirtualHostServiceOuterClass {
         } else {
           modifyResponseHeadersBuilder_.clear();
         }
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -4015,6 +4115,11 @@ public final class VirtualHostServiceOuterClass {
           result.modifyResponseHeaders_ = modifyResponseHeaders_;
         } else {
           result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
+        }
+        if (routeOptionsBuilder_ == null) {
+          result.routeOptions_ = routeOptions_;
+        } else {
+          result.routeOptions_ = routeOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4159,6 +4264,9 @@ public final class VirtualHostServiceOuterClass {
               modifyResponseHeadersBuilder_.addAllMessages(other.modifyResponseHeaders_);
             }
           }
+        }
+        if (other.hasRouteOptions()) {
+          mergeRouteOptions(other.getRouteOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5666,6 +5774,161 @@ public final class VirtualHostServiceOuterClass {
         }
         return modifyResponseHeadersBuilder_;
       }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> routeOptionsBuilder_;
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       * @return Whether the routeOptions field is set.
+       */
+      public boolean hasRouteOptions() {
+        return routeOptionsBuilder_ != null || routeOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       * @return The routeOptions.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        } else {
+          return routeOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      public Builder setRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          routeOptions_ = value;
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      public Builder setRouteOptions(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder builderForValue) {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      public Builder mergeRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (routeOptions_ != null) {
+            routeOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.newBuilder(routeOptions_).mergeFrom(value).buildPartial();
+          } else {
+            routeOptions_ = value;
+          }
+          onChanged();
+        } else {
+          routeOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      public Builder clearRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+          onChanged();
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder getRouteOptionsBuilder() {
+        
+        onChanged();
+        return getRouteOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+        if (routeOptionsBuilder_ != null) {
+          return routeOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return routeOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> 
+          getRouteOptionsFieldBuilder() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder>(
+                  getRouteOptions(),
+                  getParentForChildren(),
+                  isClean());
+          routeOptions_ = null;
+        }
+        return routeOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6851,6 +7114,33 @@ public final class VirtualHostServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * New route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+     * @return Whether the routeOptions field is set.
+     */
+    boolean hasRouteOptions();
+    /**
+     * <pre>
+     * New route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+     * @return The routeOptions.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions();
+    /**
+     * <pre>
+     * New route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateVirtualHostRequest}
@@ -6963,6 +7253,19 @@ public final class VirtualHostServiceOuterClass {
               }
               modifyResponseHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder subBuilder = null;
+              if (routeOptions_ != null) {
+                subBuilder = routeOptions_.toBuilder();
+              }
+              routeOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(routeOptions_);
+                routeOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7469,6 +7772,44 @@ public final class VirtualHostServiceOuterClass {
       return modifyResponseHeaders_.get(index);
     }
 
+    public static final int ROUTE_OPTIONS_FIELD_NUMBER = 9;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+    /**
+     * <pre>
+     * New route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+     * @return Whether the routeOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasRouteOptions() {
+      return routeOptions_ != null;
+    }
+    /**
+     * <pre>
+     * New route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+     * @return The routeOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+      return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+    }
+    /**
+     * <pre>
+     * New route options for the virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+      return getRouteOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7503,6 +7844,9 @@ public final class VirtualHostServiceOuterClass {
       }
       for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
         output.writeMessage(8, modifyResponseHeaders_.get(i));
+      }
+      if (routeOptions_ != null) {
+        output.writeMessage(9, getRouteOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -7543,6 +7887,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, modifyResponseHeaders_.get(i));
       }
+      if (routeOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getRouteOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7575,6 +7923,11 @@ public final class VirtualHostServiceOuterClass {
           .equals(other.getModifyRequestHeadersList())) return false;
       if (!getModifyResponseHeadersList()
           .equals(other.getModifyResponseHeadersList())) return false;
+      if (hasRouteOptions() != other.hasRouteOptions()) return false;
+      if (hasRouteOptions()) {
+        if (!getRouteOptions()
+            .equals(other.getRouteOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7609,6 +7962,10 @@ public final class VirtualHostServiceOuterClass {
       if (getModifyResponseHeadersCount() > 0) {
         hash = (37 * hash) + MODIFY_RESPONSE_HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + getModifyResponseHeadersList().hashCode();
+      }
+      if (hasRouteOptions()) {
+        hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7776,6 +8133,12 @@ public final class VirtualHostServiceOuterClass {
         } else {
           modifyResponseHeadersBuilder_.clear();
         }
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -7841,6 +8204,11 @@ public final class VirtualHostServiceOuterClass {
           result.modifyResponseHeaders_ = modifyResponseHeaders_;
         } else {
           result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
+        }
+        if (routeOptionsBuilder_ == null) {
+          result.routeOptions_ = routeOptions_;
+        } else {
+          result.routeOptions_ = routeOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7988,6 +8356,9 @@ public final class VirtualHostServiceOuterClass {
               modifyResponseHeadersBuilder_.addAllMessages(other.modifyResponseHeaders_);
             }
           }
+        }
+        if (other.hasRouteOptions()) {
+          mergeRouteOptions(other.getRouteOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9758,6 +10129,161 @@ public final class VirtualHostServiceOuterClass {
           modifyResponseHeaders_ = null;
         }
         return modifyResponseHeadersBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> routeOptionsBuilder_;
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       * @return Whether the routeOptions field is set.
+       */
+      public boolean hasRouteOptions() {
+        return routeOptionsBuilder_ != null || routeOptions_ != null;
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       * @return The routeOptions.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        } else {
+          return routeOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      public Builder setRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          routeOptions_ = value;
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      public Builder setRouteOptions(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder builderForValue) {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      public Builder mergeRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (routeOptions_ != null) {
+            routeOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.newBuilder(routeOptions_).mergeFrom(value).buildPartial();
+          } else {
+            routeOptions_ = value;
+          }
+          onChanged();
+        } else {
+          routeOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      public Builder clearRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+          onChanged();
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder getRouteOptionsBuilder() {
+        
+        onChanged();
+        return getRouteOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+        if (routeOptionsBuilder_ != null) {
+          return routeOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return routeOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * New route options for the virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> 
+          getRouteOptionsFieldBuilder() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder>(
+                  getRouteOptions(),
+                  getParentForChildren(),
+                  isClean());
+          routeOptions_ = null;
+        }
+        return routeOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14330,6 +14856,33 @@ public final class VirtualHostServiceOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder();
 
+    /**
+     * <pre>
+     * New route options for the route.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+     * @return Whether the routeOptions field is set.
+     */
+    boolean hasRouteOptions();
+    /**
+     * <pre>
+     * New route options for the route.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+     * @return The routeOptions.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions();
+    /**
+     * <pre>
+     * New route options for the route.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest.RouteCase getRouteCase();
   }
   /**
@@ -14437,6 +14990,19 @@ public final class VirtualHostServiceOuterClass {
                 route_ = subBuilder.buildPartial();
               }
               routeCase_ = 6;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder subBuilder = null;
+              if (routeOptions_ != null) {
+                subBuilder = routeOptions_.toBuilder();
+              }
+              routeOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(routeOptions_);
+                routeOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -14780,6 +15346,44 @@ public final class VirtualHostServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.getDefaultInstance();
     }
 
+    public static final int ROUTE_OPTIONS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+    /**
+     * <pre>
+     * New route options for the route.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+     * @return Whether the routeOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasRouteOptions() {
+      return routeOptions_ != null;
+    }
+    /**
+     * <pre>
+     * New route options for the route.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+     * @return The routeOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+      return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+    }
+    /**
+     * <pre>
+     * New route options for the route.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+      return getRouteOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14812,6 +15416,9 @@ public final class VirtualHostServiceOuterClass {
       if (routeCase_ == 6) {
         output.writeMessage(6, (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute) route_);
       }
+      if (routeOptions_ != null) {
+        output.writeMessage(7, getRouteOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14842,6 +15449,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute) route_);
       }
+      if (routeOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRouteOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14867,6 +15478,11 @@ public final class VirtualHostServiceOuterClass {
       if (hasUpdateMask()) {
         if (!getUpdateMask()
             .equals(other.getUpdateMask())) return false;
+      }
+      if (hasRouteOptions() != other.hasRouteOptions()) return false;
+      if (hasRouteOptions()) {
+        if (!getRouteOptions()
+            .equals(other.getRouteOptions())) return false;
       }
       if (!getRouteCase().equals(other.getRouteCase())) return false;
       switch (routeCase_) {
@@ -14901,6 +15517,10 @@ public final class VirtualHostServiceOuterClass {
       if (hasUpdateMask()) {
         hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      if (hasRouteOptions()) {
+        hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteOptions().hashCode();
       }
       switch (routeCase_) {
         case 5:
@@ -15059,6 +15679,12 @@ public final class VirtualHostServiceOuterClass {
           updateMask_ = null;
           updateMaskBuilder_ = null;
         }
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
         routeCase_ = 0;
         route_ = null;
         return this;
@@ -15108,6 +15734,11 @@ public final class VirtualHostServiceOuterClass {
           } else {
             result.route_ = grpcBuilder_.build();
           }
+        }
+        if (routeOptionsBuilder_ == null) {
+          result.routeOptions_ = routeOptions_;
+        } else {
+          result.routeOptions_ = routeOptionsBuilder_.build();
         }
         result.routeCase_ = routeCase_;
         onBuilt();
@@ -15172,6 +15803,9 @@ public final class VirtualHostServiceOuterClass {
         }
         if (other.hasUpdateMask()) {
           mergeUpdateMask(other.getUpdateMask());
+        }
+        if (other.hasRouteOptions()) {
+          mergeRouteOptions(other.getRouteOptions());
         }
         switch (other.getRouteCase()) {
           case HTTP: {
@@ -16040,6 +16674,161 @@ public final class VirtualHostServiceOuterClass {
         routeCase_ = 6;
         onChanged();;
         return grpcBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> routeOptionsBuilder_;
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       * @return Whether the routeOptions field is set.
+       */
+      public boolean hasRouteOptions() {
+        return routeOptionsBuilder_ != null || routeOptions_ != null;
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       * @return The routeOptions.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        } else {
+          return routeOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      public Builder setRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          routeOptions_ = value;
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      public Builder setRouteOptions(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder builderForValue) {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      public Builder mergeRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (routeOptions_ != null) {
+            routeOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.newBuilder(routeOptions_).mergeFrom(value).buildPartial();
+          } else {
+            routeOptions_ = value;
+          }
+          onChanged();
+        } else {
+          routeOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      public Builder clearRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+          onChanged();
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder getRouteOptionsBuilder() {
+        
+        onChanged();
+        return getRouteOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+        if (routeOptionsBuilder_ != null) {
+          return routeOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return routeOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * New route options for the route.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> 
+          getRouteOptionsFieldBuilder() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder>(
+                  getRouteOptions(),
+                  getParentForChildren(),
+                  isClean());
+          routeOptions_ = null;
+        }
+        return routeOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17161,7 +17950,7 @@ public final class VirtualHostServiceOuterClass {
       "x\n\030ListVirtualHostsResponse\022C\n\rvirtual_h" +
       "osts\030\001 \003(\0132,.yandex.cloud.apploadbalance" +
       "r.v1.VirtualHost\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"\344\002\n\030CreateVirtualHostRequest\022\034\n\016http_r" +
+      "\t\"\252\003\n\030CreateVirtualHostRequest\022\034\n\016http_r" +
       "outer_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"" +
       "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\021\n\tau" +
       "thority\030\003 \003(\t\0226\n\006routes\030\005 \003(\0132&.yandex.c" +
@@ -17170,85 +17959,90 @@ public final class VirtualHostServiceOuterClass {
       "loadbalancer.v1.HeaderModification\022T\n\027mo" +
       "dify_response_headers\030\007 \003(\01323.yandex.clo" +
       "ud.apploadbalancer.v1.HeaderModification" +
-      "\"T\n\031CreateVirtualHostMetadata\022\034\n\016http_ro" +
-      "uter_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021virtual_host_name" +
-      "\030\002 \001(\t\"\200\003\n\030UpdateVirtualHostRequest\022\034\n\016h" +
-      "ttp_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_hos" +
-      "t_name\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022\021\n\tauthority" +
-      "\030\004 \003(\t\0226\n\006routes\030\006 \003(\0132&.yandex.cloud.ap" +
-      "ploadbalancer.v1.Route\022S\n\026modify_request" +
-      "_headers\030\007 \003(\01323.yandex.cloud.apploadbal" +
-      "ancer.v1.HeaderModification\022T\n\027modify_re" +
-      "sponse_headers\030\010 \003(\01323.yandex.cloud.appl" +
-      "oadbalancer.v1.HeaderModification\"N\n\031Upd" +
-      "ateVirtualHostMetadata\022\026\n\016http_router_id" +
-      "\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\"\177\n\030Del" +
-      "eteVirtualHostRequest\022\034\n\016http_router_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*" +
-      "\350\3071\001\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
-      ")?\"N\n\031DeleteVirtualHostMetadata\022\026\n\016http_" +
-      "router_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001" +
-      "(\t\"m\n\022RemoveRouteRequest\022\034\n\016http_router_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(" +
-      "\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\"\\\n\023Rem" +
-      "oveRouteMetadata\022\026\n\016http_router_id\030\001 \001(\t" +
+      "\022D\n\rroute_options\030\010 \001(\0132-.yandex.cloud.a" +
+      "pploadbalancer.v1.RouteOptions\"T\n\031Create" +
+      "VirtualHostMetadata\022\034\n\016http_router_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\031\n\021virtual_host_name\030\002 \001(\t\"\306\003\n" +
+      "\030UpdateVirtualHostRequest\022\034\n\016http_router" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001" +
+      "(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\022\021\n\tauthority\030\004 \003(\t\0226\n\006" +
+      "routes\030\006 \003(\0132&.yandex.cloud.apploadbalan" +
+      "cer.v1.Route\022S\n\026modify_request_headers\030\007" +
+      " \003(\01323.yandex.cloud.apploadbalancer.v1.H" +
+      "eaderModification\022T\n\027modify_response_hea" +
+      "ders\030\010 \003(\01323.yandex.cloud.apploadbalance" +
+      "r.v1.HeaderModification\022D\n\rroute_options" +
+      "\030\t \001(\0132-.yandex.cloud.apploadbalancer.v1" +
+      ".RouteOptions\"N\n\031UpdateVirtualHostMetada" +
+      "ta\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtual_ho" +
+      "st_name\030\002 \001(\t\"\177\n\030DeleteVirtualHostReques" +
+      "t\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022E\n\021virtu" +
+      "al_host_name\030\002 \001(\tB*\350\3071\001\362\3071\"([a-z]([-a-z" +
+      "0-9]{0,61}[a-z0-9])?)?\"N\n\031DeleteVirtualH" +
+      "ostMetadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021v" +
+      "irtual_host_name\030\002 \001(\t\"m\n\022RemoveRouteReq" +
+      "uest\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021vi" +
+      "rtual_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_nam" +
+      "e\030\003 \001(\tB\004\350\3071\001\"\\\n\023RemoveRouteMetadata\022\026\n\016" +
+      "http_router_id\030\001 \001(\t\022\031\n\021virtual_host_nam" +
+      "e\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t\"\353\002\n\022UpdateRo" +
+      "uteRequest\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022\037\n\021virtual_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nrou" +
+      "te_name\030\003 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022:\n\004http\030\005 \001" +
+      "(\0132*.yandex.cloud.apploadbalancer.v1.Htt" +
+      "pRouteH\000\022:\n\004grpc\030\006 \001(\0132*.yandex.cloud.ap" +
+      "ploadbalancer.v1.GrpcRouteH\000\022D\n\rroute_op" +
+      "tions\030\007 \001(\0132-.yandex.cloud.apploadbalanc" +
+      "er.v1.RouteOptionsB\r\n\005route\022\004\300\3011\001\"\\\n\023Upd" +
+      "ateRouteMetadata\022\026\n\016http_router_id\030\001 \001(\t" +
       "\022\031\n\021virtual_host_name\030\002 \001(\t\022\022\n\nroute_nam" +
-      "e\030\003 \001(\t\"\245\002\n\022UpdateRouteRequest\022\034\n\016http_r" +
-      "outer_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_nam" +
-      "e\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\022" +
-      "/\n\013update_mask\030\004 \001(\0132\032.google.protobuf.F" +
-      "ieldMask\022:\n\004http\030\005 \001(\0132*.yandex.cloud.ap" +
-      "ploadbalancer.v1.HttpRouteH\000\022:\n\004grpc\030\006 \001" +
-      "(\0132*.yandex.cloud.apploadbalancer.v1.Grp" +
-      "cRouteH\000B\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMe" +
-      "tadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtua" +
-      "l_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014" +
-      "\n\022VirtualHostService\022\306\001\n\003Get\0226.yandex.cl" +
-      "oud.apploadbalancer.v1.GetVirtualHostReq" +
-      "uest\032,.yandex.cloud.apploadbalancer.v1.V" +
-      "irtualHost\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/" +
-      "httpRouters/{http_router_id}/virtualHost" +
-      "s/{virtual_host_name}\022\302\001\n\004List\0228.yandex." +
-      "cloud.apploadbalancer.v1.ListVirtualHost" +
-      "sRequest\0329.yandex.cloud.apploadbalancer." +
-      "v1.ListVirtualHostsResponse\"E\202\323\344\223\002?\022=/ap" +
-      "ploadbalancer/v1/httpRouters/{http_route" +
-      "r_id}/virtualHosts\022\334\001\n\006Create\0229.yandex.c" +
-      "loud.apploadbalancer.v1.CreateVirtualHos" +
-      "tRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"t\202\323\344\223\002B\"=/apploadbalancer/v1/httpRou" +
-      "ters/{http_router_id}/virtualHosts:\001*\262\322*" +
-      "(\n\031CreateVirtualHostMetadata\022\013VirtualHos" +
-      "t\022\361\001\n\006Update\0229.yandex.cloud.apploadbalan" +
-      "cer.v1.UpdateVirtualHostRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\210\001\202\323\344\223\002V2Q/ap" +
-      "ploadbalancer/v1/httpRouters/{http_route" +
-      "r_id}/virtualHosts/{virtual_host_name}:\001" +
-      "*\262\322*(\n\031UpdateVirtualHostMetadata\022\013Virtua" +
-      "lHost\022\370\001\n\006Delete\0229.yandex.cloud.apploadb" +
-      "alancer.v1.DeleteVirtualHostRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\217\001\202\323\344\223\002S*" +
-      "Q/apploadbalancer/v1/httpRouters/{http_r" +
-      "outer_id}/virtualHosts/{virtual_host_nam" +
-      "e}\262\322*2\n\031DeleteVirtualHostMetadata\022\025googl" +
-      "e.protobuf.Empty\022\366\001\n\013RemoveRoute\0223.yande" +
-      "x.cloud.apploadbalancer.v1.RemoveRouteRe" +
+      "e\030\003 \001(\t2\342\014\n\022VirtualHostService\022\306\001\n\003Get\0226" +
+      ".yandex.cloud.apploadbalancer.v1.GetVirt" +
+      "ualHostRequest\032,.yandex.cloud.apploadbal" +
+      "ancer.v1.VirtualHost\"Y\202\323\344\223\002S\022Q/apploadba" +
+      "lancer/v1/httpRouters/{http_router_id}/v" +
+      "irtualHosts/{virtual_host_name}\022\302\001\n\004List" +
+      "\0228.yandex.cloud.apploadbalancer.v1.ListV" +
+      "irtualHostsRequest\0329.yandex.cloud.apploa" +
+      "dbalancer.v1.ListVirtualHostsResponse\"E\202" +
+      "\323\344\223\002?\022=/apploadbalancer/v1/httpRouters/{" +
+      "http_router_id}/virtualHosts\022\334\001\n\006Create\022" +
+      "9.yandex.cloud.apploadbalancer.v1.Create" +
+      "VirtualHostRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"t\202\323\344\223\002B\"=/apploadbalancer/" +
+      "v1/httpRouters/{http_router_id}/virtualH" +
+      "osts:\001*\262\322*(\n\031CreateVirtualHostMetadata\022\013" +
+      "VirtualHost\022\361\001\n\006Update\0229.yandex.cloud.ap" +
+      "ploadbalancer.v1.UpdateVirtualHostReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\210\001\202" +
+      "\323\344\223\002V2Q/apploadbalancer/v1/httpRouters/{" +
+      "http_router_id}/virtualHosts/{virtual_ho" +
+      "st_name}:\001*\262\322*(\n\031UpdateVirtualHostMetada" +
+      "ta\022\013VirtualHost\022\370\001\n\006Delete\0229.yandex.clou" +
+      "d.apploadbalancer.v1.DeleteVirtualHostRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRoute" +
+      "\"\217\001\202\323\344\223\002S*Q/apploadbalancer/v1/httpRoute" +
       "rs/{http_router_id}/virtualHosts/{virtua" +
-      "l_host_name}:removeRoute:\001*\262\322*\"\n\023RemoveR" +
-      "outeMetadata\022\013VirtualHost\022\366\001\n\013UpdateRout" +
-      "e\0223.yandex.cloud.apploadbalancer.v1.Upda" +
-      "teRouteRequest\032!.yandex.cloud.operation." +
-      "Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/" +
-      "httpRouters/{http_router_id}/virtualHost" +
-      "s/{virtual_host_name}:updateRoute:\001*\262\322*\"" +
-      "\n\023UpdateRouteMetadata\022\013VirtualHostBz\n#ya" +
-      "ndex.cloud.api.apploadbalancer.v1ZSgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/apploadbalancer/v1;apploadbalancerb\006" +
-      "proto3"
+      "l_host_name}\262\322*2\n\031DeleteVirtualHostMetad" +
+      "ata\022\025google.protobuf.Empty\022\366\001\n\013RemoveRou" +
+      "te\0223.yandex.cloud.apploadbalancer.v1.Rem" +
+      "oveRouteRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1" +
+      "/httpRouters/{http_router_id}/virtualHos" +
+      "ts/{virtual_host_name}:removeRoute:\001*\262\322*" +
+      "\"\n\023RemoveRouteMetadata\022\013VirtualHost\022\366\001\n\013" +
+      "UpdateRoute\0223.yandex.cloud.apploadbalanc" +
+      "er.v1.UpdateRouteRequest\032!.yandex.cloud." +
+      "operation.Operation\"\216\001\202\323\344\223\002b\"]/apploadba" +
+      "lancer/v1/httpRouters/{http_router_id}/v" +
+      "irtualHosts/{virtual_host_name}:updateRo" +
+      "ute:\001*\262\322*\"\n\023UpdateRouteMetadata\022\013Virtual" +
+      "HostBz\n#yandex.cloud.api.apploadbalancer" +
+      ".v1ZSgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/apploadbalancer/v1;appload" +
+      "balancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17283,7 +18077,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "Name", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", });
+        new java.lang.String[] { "HttpRouterId", "Name", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", });
     internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostMetadata_fieldAccessorTable = new
@@ -17295,7 +18089,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "UpdateMask", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", });
+        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "UpdateMask", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostMetadata_fieldAccessorTable = new
@@ -17331,7 +18125,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "RouteName", "UpdateMask", "Http", "Grpc", "Route", });
+        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "RouteName", "UpdateMask", "Http", "Grpc", "RouteOptions", "Route", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteMetadata_fieldAccessorTable = new

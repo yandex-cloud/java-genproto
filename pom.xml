@@ -44,6 +44,12 @@
 
     <developers>
         <developer>
+            <name>Sergey Kiselev</name>
+            <email>intr13@yandex-team.ru</email>
+            <organization>Yandex LLC</organization>
+            <organizationUrl>https://yandex.com/company/</organizationUrl>
+        </developer>
+        <developer>
             <name>Gleb Mishchenko</name>
             <email>glebmish@yandex-team.ru</email>
             <organization>Yandex LLC</organization>

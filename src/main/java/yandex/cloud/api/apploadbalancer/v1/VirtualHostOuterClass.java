@@ -2962,17 +2962,17 @@ public final class VirtualHostOuterClass {
         int index);
 
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      * @return Whether the rbac field is set.
      */
     boolean hasRbac();
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      * @return The rbac.
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getRbac();
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder();
   }
@@ -3042,7 +3042,7 @@ public final class VirtualHostOuterClass {
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
               break;
             }
-            case 42: {
+            case 26: {
               yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder subBuilder = null;
               if (rbac_ != null) {
                 subBuilder = rbac_.toBuilder();
@@ -3213,10 +3213,10 @@ public final class VirtualHostOuterClass {
       return modifyResponseHeaders_.get(index);
     }
 
-    public static final int RBAC_FIELD_NUMBER = 5;
+    public static final int RBAC_FIELD_NUMBER = 3;
     private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC rbac_;
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      * @return Whether the rbac field is set.
      */
     @java.lang.Override
@@ -3224,7 +3224,7 @@ public final class VirtualHostOuterClass {
       return rbac_ != null;
     }
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      * @return The rbac.
      */
     @java.lang.Override
@@ -3232,7 +3232,7 @@ public final class VirtualHostOuterClass {
       return rbac_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.getDefaultInstance() : rbac_;
     }
     /**
-     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+     * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder() {
@@ -3260,7 +3260,7 @@ public final class VirtualHostOuterClass {
         output.writeMessage(2, modifyResponseHeaders_.get(i));
       }
       if (rbac_ != null) {
-        output.writeMessage(5, getRbac());
+        output.writeMessage(3, getRbac());
       }
       unknownFields.writeTo(output);
     }
@@ -3281,7 +3281,7 @@ public final class VirtualHostOuterClass {
       }
       if (rbac_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getRbac());
+          .computeMessageSize(3, getRbac());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4294,14 +4294,14 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder> rbacBuilder_;
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        * @return Whether the rbac field is set.
        */
       public boolean hasRbac() {
         return rbacBuilder_ != null || rbac_ != null;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        * @return The rbac.
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC getRbac() {
@@ -4312,7 +4312,7 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       public Builder setRbac(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC value) {
         if (rbacBuilder_ == null) {
@@ -4328,7 +4328,7 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       public Builder setRbac(
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder builderForValue) {
@@ -4342,7 +4342,7 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       public Builder mergeRbac(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC value) {
         if (rbacBuilder_ == null) {
@@ -4360,7 +4360,7 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       public Builder clearRbac() {
         if (rbacBuilder_ == null) {
@@ -4374,7 +4374,7 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder getRbacBuilder() {
         
@@ -4382,7 +4382,7 @@ public final class VirtualHostOuterClass {
         return getRbacFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder() {
         if (rbacBuilder_ != null) {
@@ -4393,7 +4393,7 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 5;</code>
+       * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBAC.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder> 
@@ -5665,7 +5665,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> 
         getAndPrincipalsList();
@@ -5674,7 +5674,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getAndPrincipals(int index);
     /**
@@ -5682,7 +5682,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     int getAndPrincipalsCount();
     /**
@@ -5690,7 +5690,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
         getAndPrincipalsOrBuilderList();
@@ -5699,7 +5699,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder getAndPrincipalsOrBuilder(
         int index);
@@ -5806,7 +5806,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> getAndPrincipalsList() {
@@ -5817,7 +5817,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
@@ -5829,7 +5829,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
     public int getAndPrincipalsCount() {
@@ -5840,7 +5840,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getAndPrincipals(int index) {
@@ -5851,7 +5851,7 @@ public final class VirtualHostOuterClass {
      * Required. A match occurs when all principals match the request.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder getAndPrincipalsOrBuilder(
@@ -6222,7 +6222,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> getAndPrincipalsList() {
         if (andPrincipalsBuilder_ == null) {
@@ -6236,7 +6236,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public int getAndPrincipalsCount() {
         if (andPrincipalsBuilder_ == null) {
@@ -6250,7 +6250,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal getAndPrincipals(int index) {
         if (andPrincipalsBuilder_ == null) {
@@ -6264,7 +6264,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder setAndPrincipals(
           int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal value) {
@@ -6285,7 +6285,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder setAndPrincipals(
           int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder builderForValue) {
@@ -6303,7 +6303,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder addAndPrincipals(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal value) {
         if (andPrincipalsBuilder_ == null) {
@@ -6323,7 +6323,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder addAndPrincipals(
           int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal value) {
@@ -6344,7 +6344,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder addAndPrincipals(
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder builderForValue) {
@@ -6362,7 +6362,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder addAndPrincipals(
           int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder builderForValue) {
@@ -6380,7 +6380,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder addAllAndPrincipals(
           java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal> values) {
@@ -6399,7 +6399,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder clearAndPrincipals() {
         if (andPrincipalsBuilder_ == null) {
@@ -6416,7 +6416,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public Builder removeAndPrincipals(int index) {
         if (andPrincipalsBuilder_ == null) {
@@ -6433,7 +6433,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder getAndPrincipalsBuilder(
           int index) {
@@ -6444,7 +6444,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder getAndPrincipalsOrBuilder(
           int index) {
@@ -6458,7 +6458,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.PrincipalOrBuilder> 
            getAndPrincipalsOrBuilderList() {
@@ -6473,7 +6473,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder addAndPrincipalsBuilder() {
         return getAndPrincipalsFieldBuilder().addBuilder(
@@ -6484,7 +6484,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder addAndPrincipalsBuilder(
           int index) {
@@ -6496,7 +6496,7 @@ public final class VirtualHostOuterClass {
        * Required. A match occurs when all principals match the request.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.Principal and_principals = 1 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Principal.Builder> 
            getAndPrincipalsBuilderList() {
@@ -25230,86 +25230,86 @@ public final class VirtualHostOuterClass {
       "andex.cloud.apploadbalancer.v1.HeaderMod" +
       "ification\022T\n\027modify_response_headers\030\002 \003" +
       "(\01323.yandex.cloud.apploadbalancer.v1.Hea" +
-      "derModification\0223\n\004rbac\030\005 \001(\0132%.yandex.c" +
+      "derModification\0223\n\004rbac\030\003 \001(\0132%.yandex.c" +
       "loud.apploadbalancer.v1.RBAC\"\313\001\n\004RBAC\022B\n" +
       "\006action\030\001 \001(\0162,.yandex.cloud.apploadbala" +
       "ncer.v1.RBAC.ActionB\004\350\3071\001\022H\n\nprincipals\030" +
       "\002 \003(\0132+.yandex.cloud.apploadbalancer.v1." +
       "PrincipalsB\007\202\3101\003>=1\"5\n\006Action\022\026\n\022ACTION_" +
-      "UNSPECIFIED\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DENY\020\002\"P\n\nPr" +
-      "incipals\022B\n\016and_principals\030\001 \003(\0132*.yande" +
-      "x.cloud.apploadbalancer.v1.Principal\"\361\001\n" +
-      "\tPrincipal\022J\n\006header\030\001 \001(\01328.yandex.clou" +
-      "d.apploadbalancer.v1.Principal.HeaderMat" +
-      "cherH\000\022\023\n\tremote_ip\030\002 \001(\tH\000\022\r\n\003any\030\003 \001(\010" +
-      "H\000\032`\n\rHeaderMatcher\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022" +
-      ";\n\005value\030\002 \001(\0132,.yandex.cloud.apploadbal" +
-      "ancer.v1.StringMatchB\022\n\nidentifier\022\004\300\3011\001" +
-      "\"x\n\022HeaderModification\022\014\n\004name\030\001 \001(\t\022\020\n\006" +
-      "append\030\002 \001(\tH\000\022\021\n\007replace\030\003 \001(\tH\000\022\020\n\006rem" +
-      "ove\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013\n\toperati" +
-      "on\"\350\001\n\005Route\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022:\n\004http" +
-      "\030\002 \001(\0132*.yandex.cloud.apploadbalancer.v1" +
-      ".HttpRouteH\000\022:\n\004grpc\030\003 \001(\0132*.yandex.clou" +
-      "d.apploadbalancer.v1.GrpcRouteH\000\022D\n\rrout" +
-      "e_options\030\004 \001(\0132-.yandex.cloud.apploadba" +
-      "lancer.v1.RouteOptionsB\r\n\005route\022\004\300\3011\001\"\265\002" +
-      "\n\tHttpRoute\022>\n\005match\030\001 \001(\0132/.yandex.clou" +
-      "d.apploadbalancer.v1.HttpRouteMatch\022A\n\005r" +
-      "oute\030\002 \001(\01320.yandex.cloud.apploadbalance" +
-      "r.v1.HttpRouteActionH\000\022C\n\010redirect\030\003 \001(\013" +
-      "2/.yandex.cloud.apploadbalancer.v1.Redir" +
-      "ectActionH\000\022P\n\017direct_response\030\004 \001(\01325.y" +
-      "andex.cloud.apploadbalancer.v1.DirectRes" +
-      "ponseActionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRo" +
-      "ute\022>\n\005match\030\001 \001(\0132/.yandex.cloud.apploa" +
-      "dbalancer.v1.GrpcRouteMatch\022A\n\005route\030\002 \001" +
-      "(\01320.yandex.cloud.apploadbalancer.v1.Grp" +
-      "cRouteActionH\000\022T\n\017status_response\030\003 \001(\0132" +
-      "9.yandex.cloud.apploadbalancer.v1.GrpcSt" +
-      "atusResponseActionH\000B\016\n\006action\022\004\300\3011\001\"a\n\016" +
-      "HttpRouteMatch\022\023\n\013http_method\030\001 \003(\t\022:\n\004p" +
-      "ath\030\002 \001(\0132,.yandex.cloud.apploadbalancer" +
-      ".v1.StringMatch\"L\n\016GrpcRouteMatch\022:\n\004fqm" +
-      "n\030\001 \001(\0132,.yandex.cloud.apploadbalancer.v" +
-      "1.StringMatch\"b\n\013StringMatch\022\025\n\013exact_ma" +
-      "tch\030\001 \001(\tH\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013r" +
-      "egex_match\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016Re" +
-      "directAction\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014" +
-      "replace_host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003" +
-      "\022\026\n\014replace_path\030\004 \001(\tH\000\022\030\n\016replace_pref" +
-      "ix\030\005 \001(\tH\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresp" +
-      "onse_code\030\007 \001(\0162D.yandex.cloud.apploadba" +
-      "lancer.v1.RedirectAction.RedirectRespons" +
-      "eCode\"w\n\024RedirectResponseCode\022\025\n\021MOVED_P" +
-      "ERMANENTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026" +
-      "\n\022TEMPORARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDI" +
-      "RECT\020\004B\006\n\004path\"k\n\024DirectResponseAction\022\033" +
-      "\n\006status\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(" +
-      "\0132(.yandex.cloud.apploadbalancer.v1.Payl" +
-      "oad\"\202\002\n\030GrpcStatusResponseAction\022P\n\006stat" +
-      "us\030\001 \001(\0162@.yandex.cloud.apploadbalancer." +
-      "v1.GrpcStatusResponseAction.Status\"\223\001\n\006S" +
-      "tatus\022\006\n\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tN" +
-      "OT_FOUND\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNA" +
-      "UTHENTICATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INT" +
-      "ERNAL\020\006\022\017\n\013UNAVAILABLE\020\007\"\214\002\n\017HttpRouteAc" +
-      "tion\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007" +
-      "timeout\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "\022/\n\014idle_timeout\030\003 \001(\0132\031.google.protobuf" +
-      ".Duration\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021aut" +
-      "o_host_rewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite" +
-      "\030\006 \001(\t\022\025\n\rupgrade_types\030\007 \003(\tB\030\n\026host_re" +
-      "write_specifier\"\341\001\n\017GrpcRouteAction\022\036\n\020b" +
-      "ackend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeo" +
-      "ut\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014i" +
-      "dle_timeout\030\003 \001(\0132\031.google.protobuf.Dura" +
-      "tion\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_hos" +
-      "t_rewrite\030\005 \001(\010H\000B\030\n\026host_rewrite_specif" +
-      "ierBz\n#yandex.cloud.api.apploadbalancer." +
-      "v1ZSgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/apploadbalancer/v1;apploadb" +
-      "alancerb\006proto3"
+      "UNSPECIFIED\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DENY\020\002\"Y\n\nPr" +
+      "incipals\022K\n\016and_principals\030\001 \003(\0132*.yande" +
+      "x.cloud.apploadbalancer.v1.PrincipalB\007\202\310" +
+      "1\003>=1\"\361\001\n\tPrincipal\022J\n\006header\030\001 \001(\01328.ya" +
+      "ndex.cloud.apploadbalancer.v1.Principal." +
+      "HeaderMatcherH\000\022\023\n\tremote_ip\030\002 \001(\tH\000\022\r\n\003" +
+      "any\030\003 \001(\010H\000\032`\n\rHeaderMatcher\022\022\n\004name\030\001 \001" +
+      "(\tB\004\350\3071\001\022;\n\005value\030\002 \001(\0132,.yandex.cloud.a" +
+      "pploadbalancer.v1.StringMatchB\022\n\nidentif" +
+      "ier\022\004\300\3011\001\"x\n\022HeaderModification\022\014\n\004name\030" +
+      "\001 \001(\t\022\020\n\006append\030\002 \001(\tH\000\022\021\n\007replace\030\003 \001(\t" +
+      "H\000\022\020\n\006remove\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013" +
+      "\n\toperation\"\350\001\n\005Route\022\022\n\004name\030\001 \001(\tB\004\350\3071" +
+      "\001\022:\n\004http\030\002 \001(\0132*.yandex.cloud.apploadba" +
+      "lancer.v1.HttpRouteH\000\022:\n\004grpc\030\003 \001(\0132*.ya" +
+      "ndex.cloud.apploadbalancer.v1.GrpcRouteH" +
+      "\000\022D\n\rroute_options\030\004 \001(\0132-.yandex.cloud." +
+      "apploadbalancer.v1.RouteOptionsB\r\n\005route" +
+      "\022\004\300\3011\001\"\265\002\n\tHttpRoute\022>\n\005match\030\001 \001(\0132/.ya" +
+      "ndex.cloud.apploadbalancer.v1.HttpRouteM" +
+      "atch\022A\n\005route\030\002 \001(\01320.yandex.cloud.applo" +
+      "adbalancer.v1.HttpRouteActionH\000\022C\n\010redir" +
+      "ect\030\003 \001(\0132/.yandex.cloud.apploadbalancer" +
+      ".v1.RedirectActionH\000\022P\n\017direct_response\030" +
+      "\004 \001(\01325.yandex.cloud.apploadbalancer.v1." +
+      "DirectResponseActionH\000B\016\n\006action\022\004\300\3011\001\"\364" +
+      "\001\n\tGrpcRoute\022>\n\005match\030\001 \001(\0132/.yandex.clo" +
+      "ud.apploadbalancer.v1.GrpcRouteMatch\022A\n\005" +
+      "route\030\002 \001(\01320.yandex.cloud.apploadbalanc" +
+      "er.v1.GrpcRouteActionH\000\022T\n\017status_respon" +
+      "se\030\003 \001(\01329.yandex.cloud.apploadbalancer." +
+      "v1.GrpcStatusResponseActionH\000B\016\n\006action\022" +
+      "\004\300\3011\001\"a\n\016HttpRouteMatch\022\023\n\013http_method\030\001" +
+      " \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.apploa" +
+      "dbalancer.v1.StringMatch\"L\n\016GrpcRouteMat" +
+      "ch\022:\n\004fqmn\030\001 \001(\0132,.yandex.cloud.apploadb" +
+      "alancer.v1.StringMatch\"b\n\013StringMatch\022\025\n" +
+      "\013exact_match\030\001 \001(\tH\000\022\026\n\014prefix_match\030\002 \001" +
+      "(\tH\000\022\025\n\013regex_match\030\003 \001(\tH\000B\r\n\005match\022\004\300\301" +
+      "1\001\"\372\002\n\016RedirectAction\022\026\n\016replace_scheme\030" +
+      "\001 \001(\t\022\024\n\014replace_host\030\002 \001(\t\022\024\n\014replace_p" +
+      "ort\030\003 \001(\003\022\026\n\014replace_path\030\004 \001(\tH\000\022\030\n\016rep" +
+      "lace_prefix\030\005 \001(\tH\000\022\024\n\014remove_query\030\006 \001(" +
+      "\010\022[\n\rresponse_code\030\007 \001(\0162D.yandex.cloud." +
+      "apploadbalancer.v1.RedirectAction.Redire" +
+      "ctResponseCode\"w\n\024RedirectResponseCode\022\025" +
+      "\n\021MOVED_PERMANENTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_" +
+      "OTHER\020\002\022\026\n\022TEMPORARY_REDIRECT\020\003\022\026\n\022PERMA" +
+      "NENT_REDIRECT\020\004B\006\n\004path\"k\n\024DirectRespons" +
+      "eAction\022\033\n\006status\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004" +
+      "body\030\002 \001(\0132(.yandex.cloud.apploadbalance" +
+      "r.v1.Payload\"\202\002\n\030GrpcStatusResponseActio" +
+      "n\022P\n\006status\030\001 \001(\0162@.yandex.cloud.appload" +
+      "balancer.v1.GrpcStatusResponseAction.Sta" +
+      "tus\"\223\001\n\006Status\022\006\n\002OK\020\000\022\024\n\020INVALID_ARGUME" +
+      "NT\020\001\022\r\n\tNOT_FOUND\020\002\022\025\n\021PERMISSION_DENIED" +
+      "\020\003\022\023\n\017UNAUTHENTICATED\020\004\022\021\n\rUNIMPLEMENTED" +
+      "\020\005\022\014\n\010INTERNAL\020\006\022\017\n\013UNAVAILABLE\020\007\"\214\002\n\017Ht" +
+      "tpRouteAction\022\036\n\020backend_group_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022*\n\007timeout\030\002 \001(\0132\031.google.protobuf" +
+      ".Duration\022/\n\014idle_timeout\030\003 \001(\0132\031.google" +
+      ".protobuf.Duration\022\026\n\014host_rewrite\030\004 \001(\t" +
+      "H\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000\022\026\n\016prefi" +
+      "x_rewrite\030\006 \001(\t\022\025\n\rupgrade_types\030\007 \003(\tB\030" +
+      "\n\026host_rewrite_specifier\"\341\001\n\017GrpcRouteAc" +
+      "tion\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013" +
+      "max_timeout\030\002 \001(\0132\031.google.protobuf.Dura" +
+      "tion\022/\n\014idle_timeout\030\003 \001(\0132\031.google.prot" +
+      "obuf.Duration\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n" +
+      "\021auto_host_rewrite\030\005 \001(\010H\000B\030\n\026host_rewri" +
+      "te_specifierBz\n#yandex.cloud.api.appload" +
+      "balancer.v1ZSgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/apploadbalancer/v1" +
+      ";apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
