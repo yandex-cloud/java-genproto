@@ -3771,7 +3771,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @return A list containing the networkIds.
      */
     java.util.List<java.lang.String>
@@ -3781,7 +3781,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @return The count of networkIds.
      */
     int getNetworkIdsCount();
@@ -3790,7 +3790,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the element to return.
      * @return The networkIds at the given index.
      */
@@ -3800,7 +3800,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the value to return.
      * @return The bytes of the networkIds at the given index.
      */
@@ -3909,7 +3909,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @return A list containing the networkIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3921,7 +3921,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @return The count of networkIds.
      */
     public int getNetworkIdsCount() {
@@ -3932,7 +3932,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the element to return.
      * @return The networkIds at the given index.
      */
@@ -3944,7 +3944,7 @@ public final class DnsZoneOuterClass {
      * Network IDs.
      * </pre>
      *
-     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+     * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the value to return.
      * @return The bytes of the networkIds at the given index.
      */
@@ -4290,7 +4290,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @return A list containing the networkIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -4302,7 +4302,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @return The count of networkIds.
        */
       public int getNetworkIdsCount() {
@@ -4313,7 +4313,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @param index The index of the element to return.
        * @return The networkIds at the given index.
        */
@@ -4325,7 +4325,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @param index The index of the value to return.
        * @return The bytes of the networkIds at the given index.
        */
@@ -4338,7 +4338,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @param index The index to set the value at.
        * @param value The networkIds to set.
        * @return This builder for chaining.
@@ -4358,7 +4358,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @param value The networkIds to add.
        * @return This builder for chaining.
        */
@@ -4377,7 +4377,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @param values The networkIds to add.
        * @return This builder for chaining.
        */
@@ -4394,7 +4394,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearNetworkIds() {
@@ -4408,7 +4408,7 @@ public final class DnsZoneOuterClass {
        * Network IDs.
        * </pre>
        *
-       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
+       * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-100", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        * @param value The bytes of the networkIds to add.
        * @return This builder for chaining.
        */
@@ -4951,12 +4951,12 @@ public final class DnsZoneOuterClass {
       "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\201\001\n\tRecordSet\022\027\n\004na" +
       "me\030\001 \001(\tB\t\212\3101\0051-254\022\026\n\004type\030\002 \001(\tB\010\212\3101\0041" +
       "-20\022\035\n\003ttl\030\003 \001(\003B\020\372\3071\0140-2147483647\022$\n\004da" +
-      "ta\030\004 \003(\tB\026\202\3101\0051-100\212\3101\0051-255\220\3101\001\"<\n\021Priv" +
-      "ateVisibility\022\'\n\013network_ids\030\001 \003(\tB\022\202\3101\004" +
-      "0-10\212\3101\00220\220\3101\001\"\022\n\020PublicVisibilityBV\n\027ya" +
-      "ndex.cloud.api.dns.v1Z;github.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/dns/v1;d" +
-      "nsb\006proto3"
+      "ta\030\004 \003(\tB\026\202\3101\0051-100\212\3101\0051-255\220\3101\001\"=\n\021Priv" +
+      "ateVisibility\022(\n\013network_ids\030\001 \003(\tB\023\202\3101\005" +
+      "0-100\212\3101\00220\220\3101\001\"\022\n\020PublicVisibilityBV\n\027y" +
+      "andex.cloud.api.dns.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/dns/v1;" +
+      "dnsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
