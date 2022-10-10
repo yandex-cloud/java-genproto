@@ -22922,6 +22922,55 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder();
+
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the saslEnabledMechanisms.
+     */
+    java.util.List<yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> getSaslEnabledMechanismsList();
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return The count of saslEnabledMechanisms.
+     */
+    int getSaslEnabledMechanismsCount();
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the element to return.
+     * @return The saslEnabledMechanisms at the given index.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism getSaslEnabledMechanisms(int index);
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the enum numeric values on the wire for saslEnabledMechanisms.
+     */
+    java.util.List<java.lang.Integer>
+    getSaslEnabledMechanismsValueList();
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+     */
+    int getSaslEnabledMechanismsValue(int index);
   }
   /**
    * <pre>
@@ -22942,6 +22991,7 @@ public final class ClusterOuterClass {
     private KafkaConfig2_8() {
       compressionType_ = 0;
       sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      saslEnabledMechanisms_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -23211,6 +23261,29 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 160: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                saslEnabledMechanisms_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              saslEnabledMechanisms_.add(rawValue);
+              break;
+            }
+            case 162: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  saslEnabledMechanisms_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                saslEnabledMechanisms_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -23228,6 +23301,9 @@ public final class ClusterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          saslEnabledMechanisms_ = java.util.Collections.unmodifiableList(saslEnabledMechanisms_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -24003,6 +24079,84 @@ public final class ClusterOuterClass {
       return getOffsetsRetentionMinutes();
     }
 
+    public static final int SASL_ENABLED_MECHANISMS_FIELD_NUMBER = 20;
+    private java.util.List<java.lang.Integer> saslEnabledMechanisms_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> saslEnabledMechanisms_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism>() {
+              public yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism result = yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the saslEnabledMechanisms.
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> getSaslEnabledMechanismsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism>(saslEnabledMechanisms_, saslEnabledMechanisms_converter_);
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return The count of saslEnabledMechanisms.
+     */
+    @java.lang.Override
+    public int getSaslEnabledMechanismsCount() {
+      return saslEnabledMechanisms_.size();
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the element to return.
+     * @return The saslEnabledMechanisms at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism getSaslEnabledMechanisms(int index) {
+      return saslEnabledMechanisms_converter_.convert(saslEnabledMechanisms_.get(index));
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the enum numeric values on the wire for saslEnabledMechanisms.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getSaslEnabledMechanismsValueList() {
+      return saslEnabledMechanisms_;
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+     */
+    @java.lang.Override
+    public int getSaslEnabledMechanismsValue(int index) {
+      return saslEnabledMechanisms_.get(index);
+    }
+    private int saslEnabledMechanismsMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24017,6 +24171,7 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (compressionType_ != yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, compressionType_);
       }
@@ -24073,6 +24228,13 @@ public final class ClusterOuterClass {
       }
       if (offsetsRetentionMinutes_ != null) {
         output.writeMessage(19, getOffsetsRetentionMinutes());
+      }
+      if (getSaslEnabledMechanismsList().size() > 0) {
+        output.writeUInt32NoTag(162);
+        output.writeUInt32NoTag(saslEnabledMechanismsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < saslEnabledMechanisms_.size(); i++) {
+        output.writeEnumNoTag(saslEnabledMechanisms_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -24162,6 +24324,18 @@ public final class ClusterOuterClass {
       if (offsetsRetentionMinutes_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getOffsetsRetentionMinutes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < saslEnabledMechanisms_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(saslEnabledMechanisms_.get(i));
+        }
+        size += dataSize;
+        if (!getSaslEnabledMechanismsList().isEmpty()) {  size += 2;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }saslEnabledMechanismsMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24266,6 +24440,7 @@ public final class ClusterOuterClass {
         if (!getOffsetsRetentionMinutes()
             .equals(other.getOffsetsRetentionMinutes())) return false;
       }
+      if (!saslEnabledMechanisms_.equals(other.saslEnabledMechanisms_)) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -24350,6 +24525,10 @@ public final class ClusterOuterClass {
       if (hasOffsetsRetentionMinutes()) {
         hash = (37 * hash) + OFFSETS_RETENTION_MINUTES_FIELD_NUMBER;
         hash = (53 * hash) + getOffsetsRetentionMinutes().hashCode();
+      }
+      if (getSaslEnabledMechanismsCount() > 0) {
+        hash = (37 * hash) + SASL_ENABLED_MECHANISMS_FIELD_NUMBER;
+        hash = (53 * hash) + saslEnabledMechanisms_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -24594,6 +24773,8 @@ public final class ClusterOuterClass {
           offsetsRetentionMinutes_ = null;
           offsetsRetentionMinutesBuilder_ = null;
         }
+        saslEnabledMechanisms_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -24712,6 +24893,11 @@ public final class ClusterOuterClass {
         } else {
           result.offsetsRetentionMinutes_ = offsetsRetentionMinutesBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          saslEnabledMechanisms_ = java.util.Collections.unmodifiableList(saslEnabledMechanisms_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.saslEnabledMechanisms_ = saslEnabledMechanisms_;
         onBuilt();
         return result;
       }
@@ -24823,6 +25009,16 @@ public final class ClusterOuterClass {
         }
         if (other.hasOffsetsRetentionMinutes()) {
           mergeOffsetsRetentionMinutes(other.getOffsetsRetentionMinutes());
+        }
+        if (!other.saslEnabledMechanisms_.isEmpty()) {
+          if (saslEnabledMechanisms_.isEmpty()) {
+            saslEnabledMechanisms_ = other.saslEnabledMechanisms_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSaslEnabledMechanismsIsMutable();
+            saslEnabledMechanisms_.addAll(other.saslEnabledMechanisms_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -27807,6 +28003,194 @@ public final class ClusterOuterClass {
         }
         return offsetsRetentionMinutesBuilder_;
       }
+
+      private java.util.List<java.lang.Integer> saslEnabledMechanisms_ =
+        java.util.Collections.emptyList();
+      private void ensureSaslEnabledMechanismsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          saslEnabledMechanisms_ = new java.util.ArrayList<java.lang.Integer>(saslEnabledMechanisms_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return A list containing the saslEnabledMechanisms.
+       */
+      public java.util.List<yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> getSaslEnabledMechanismsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism>(saslEnabledMechanisms_, saslEnabledMechanisms_converter_);
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return The count of saslEnabledMechanisms.
+       */
+      public int getSaslEnabledMechanismsCount() {
+        return saslEnabledMechanisms_.size();
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index of the element to return.
+       * @return The saslEnabledMechanisms at the given index.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism getSaslEnabledMechanisms(int index) {
+        return saslEnabledMechanisms_converter_.convert(saslEnabledMechanisms_.get(index));
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index to set the value at.
+       * @param value The saslEnabledMechanisms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaslEnabledMechanisms(
+          int index, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param value The saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSaslEnabledMechanisms(yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param values The saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSaslEnabledMechanisms(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> values) {
+        ensureSaslEnabledMechanismsIsMutable();
+        for (yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism value : values) {
+          saslEnabledMechanisms_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSaslEnabledMechanisms() {
+        saslEnabledMechanisms_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return A list containing the enum numeric values on the wire for saslEnabledMechanisms.
+       */
+      public java.util.List<java.lang.Integer>
+      getSaslEnabledMechanismsValueList() {
+        return java.util.Collections.unmodifiableList(saslEnabledMechanisms_);
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+       */
+      public int getSaslEnabledMechanismsValue(int index) {
+        return saslEnabledMechanisms_.get(index);
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setSaslEnabledMechanismsValue(
+          int index, int value) {
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param value The enum numeric value on the wire for saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSaslEnabledMechanismsValue(int value) {
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param values The enum numeric values on the wire for saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSaslEnabledMechanismsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureSaslEnabledMechanismsIsMutable();
+        for (int value : values) {
+          saslEnabledMechanisms_.add(value);
+        }
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -28415,6 +28799,55 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value offsets_retention_minutes = 19;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getOffsetsRetentionMinutesOrBuilder();
+
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the saslEnabledMechanisms.
+     */
+    java.util.List<yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> getSaslEnabledMechanismsList();
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return The count of saslEnabledMechanisms.
+     */
+    int getSaslEnabledMechanismsCount();
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the element to return.
+     * @return The saslEnabledMechanisms at the given index.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism getSaslEnabledMechanisms(int index);
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the enum numeric values on the wire for saslEnabledMechanisms.
+     */
+    java.util.List<java.lang.Integer>
+    getSaslEnabledMechanismsValueList();
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+     */
+    int getSaslEnabledMechanismsValue(int index);
   }
   /**
    * <pre>
@@ -28435,6 +28868,7 @@ public final class ClusterOuterClass {
     private KafkaConfig3() {
       compressionType_ = 0;
       sslCipherSuites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      saslEnabledMechanisms_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -28704,6 +29138,29 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 160: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                saslEnabledMechanisms_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              saslEnabledMechanisms_.add(rawValue);
+              break;
+            }
+            case 162: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  saslEnabledMechanisms_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                saslEnabledMechanisms_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -28721,6 +29178,9 @@ public final class ClusterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sslCipherSuites_ = sslCipherSuites_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          saslEnabledMechanisms_ = java.util.Collections.unmodifiableList(saslEnabledMechanisms_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -29496,6 +29956,84 @@ public final class ClusterOuterClass {
       return getOffsetsRetentionMinutes();
     }
 
+    public static final int SASL_ENABLED_MECHANISMS_FIELD_NUMBER = 20;
+    private java.util.List<java.lang.Integer> saslEnabledMechanisms_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> saslEnabledMechanisms_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism>() {
+              public yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism result = yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the saslEnabledMechanisms.
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> getSaslEnabledMechanismsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism>(saslEnabledMechanisms_, saslEnabledMechanisms_converter_);
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return The count of saslEnabledMechanisms.
+     */
+    @java.lang.Override
+    public int getSaslEnabledMechanismsCount() {
+      return saslEnabledMechanisms_.size();
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the element to return.
+     * @return The saslEnabledMechanisms at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism getSaslEnabledMechanisms(int index) {
+      return saslEnabledMechanisms_converter_.convert(saslEnabledMechanisms_.get(index));
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @return A list containing the enum numeric values on the wire for saslEnabledMechanisms.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getSaslEnabledMechanismsValueList() {
+      return saslEnabledMechanisms_;
+    }
+    /**
+     * <pre>
+     * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+     */
+    @java.lang.Override
+    public int getSaslEnabledMechanismsValue(int index) {
+      return saslEnabledMechanisms_.get(index);
+    }
+    private int saslEnabledMechanismsMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29510,6 +30048,7 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (compressionType_ != yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, compressionType_);
       }
@@ -29566,6 +30105,13 @@ public final class ClusterOuterClass {
       }
       if (offsetsRetentionMinutes_ != null) {
         output.writeMessage(19, getOffsetsRetentionMinutes());
+      }
+      if (getSaslEnabledMechanismsList().size() > 0) {
+        output.writeUInt32NoTag(162);
+        output.writeUInt32NoTag(saslEnabledMechanismsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < saslEnabledMechanisms_.size(); i++) {
+        output.writeEnumNoTag(saslEnabledMechanisms_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -29655,6 +30201,18 @@ public final class ClusterOuterClass {
       if (offsetsRetentionMinutes_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getOffsetsRetentionMinutes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < saslEnabledMechanisms_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(saslEnabledMechanisms_.get(i));
+        }
+        size += dataSize;
+        if (!getSaslEnabledMechanismsList().isEmpty()) {  size += 2;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }saslEnabledMechanismsMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -29759,6 +30317,7 @@ public final class ClusterOuterClass {
         if (!getOffsetsRetentionMinutes()
             .equals(other.getOffsetsRetentionMinutes())) return false;
       }
+      if (!saslEnabledMechanisms_.equals(other.saslEnabledMechanisms_)) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -29843,6 +30402,10 @@ public final class ClusterOuterClass {
       if (hasOffsetsRetentionMinutes()) {
         hash = (37 * hash) + OFFSETS_RETENTION_MINUTES_FIELD_NUMBER;
         hash = (53 * hash) + getOffsetsRetentionMinutes().hashCode();
+      }
+      if (getSaslEnabledMechanismsCount() > 0) {
+        hash = (37 * hash) + SASL_ENABLED_MECHANISMS_FIELD_NUMBER;
+        hash = (53 * hash) + saslEnabledMechanisms_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -30087,6 +30650,8 @@ public final class ClusterOuterClass {
           offsetsRetentionMinutes_ = null;
           offsetsRetentionMinutesBuilder_ = null;
         }
+        saslEnabledMechanisms_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -30205,6 +30770,11 @@ public final class ClusterOuterClass {
         } else {
           result.offsetsRetentionMinutes_ = offsetsRetentionMinutesBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          saslEnabledMechanisms_ = java.util.Collections.unmodifiableList(saslEnabledMechanisms_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.saslEnabledMechanisms_ = saslEnabledMechanisms_;
         onBuilt();
         return result;
       }
@@ -30316,6 +30886,16 @@ public final class ClusterOuterClass {
         }
         if (other.hasOffsetsRetentionMinutes()) {
           mergeOffsetsRetentionMinutes(other.getOffsetsRetentionMinutes());
+        }
+        if (!other.saslEnabledMechanisms_.isEmpty()) {
+          if (saslEnabledMechanisms_.isEmpty()) {
+            saslEnabledMechanisms_ = other.saslEnabledMechanisms_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSaslEnabledMechanismsIsMutable();
+            saslEnabledMechanisms_.addAll(other.saslEnabledMechanisms_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -33300,6 +33880,194 @@ public final class ClusterOuterClass {
         }
         return offsetsRetentionMinutesBuilder_;
       }
+
+      private java.util.List<java.lang.Integer> saslEnabledMechanisms_ =
+        java.util.Collections.emptyList();
+      private void ensureSaslEnabledMechanismsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          saslEnabledMechanisms_ = new java.util.ArrayList<java.lang.Integer>(saslEnabledMechanisms_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return A list containing the saslEnabledMechanisms.
+       */
+      public java.util.List<yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> getSaslEnabledMechanismsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism>(saslEnabledMechanisms_, saslEnabledMechanisms_converter_);
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return The count of saslEnabledMechanisms.
+       */
+      public int getSaslEnabledMechanismsCount() {
+        return saslEnabledMechanisms_.size();
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index of the element to return.
+       * @return The saslEnabledMechanisms at the given index.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism getSaslEnabledMechanisms(int index) {
+        return saslEnabledMechanisms_converter_.convert(saslEnabledMechanisms_.get(index));
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index to set the value at.
+       * @param value The saslEnabledMechanisms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaslEnabledMechanisms(
+          int index, yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param value The saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSaslEnabledMechanisms(yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param values The saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSaslEnabledMechanisms(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism> values) {
+        ensureSaslEnabledMechanismsIsMutable();
+        for (yandex.cloud.api.mdb.kafka.v1.Common.SaslMechanism value : values) {
+          saslEnabledMechanisms_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSaslEnabledMechanisms() {
+        saslEnabledMechanisms_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @return A list containing the enum numeric values on the wire for saslEnabledMechanisms.
+       */
+      public java.util.List<java.lang.Integer>
+      getSaslEnabledMechanismsValueList() {
+        return java.util.Collections.unmodifiableList(saslEnabledMechanisms_);
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+       */
+      public int getSaslEnabledMechanismsValue(int index) {
+        return saslEnabledMechanisms_.get(index);
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of saslEnabledMechanisms at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setSaslEnabledMechanismsValue(
+          int index, int value) {
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param value The enum numeric value on the wire for saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSaslEnabledMechanismsValue(int value) {
+        ensureSaslEnabledMechanismsIsMutable();
+        saslEnabledMechanisms_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of SASL mechanisms enabled in the Kafka server. Default: [SCRAM_SHA_512].
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.kafka.v1.SaslMechanism sasl_enabled_mechanisms = 20;</code>
+       * @param values The enum numeric values on the wire for saslEnabledMechanisms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSaslEnabledMechanismsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureSaslEnabledMechanismsIsMutable();
+        for (int value : values) {
+          saslEnabledMechanisms_.add(value);
+        }
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -36156,7 +36924,7 @@ public final class ClusterOuterClass {
       "\033.google.protobuf.Int64Value\022\031\n\021ssl_ciph" +
       "er_suites\030\022 \003(\t\022>\n\031offsets_retention_min" +
       "utes\030\023 \001(\0132\033.google.protobuf.Int64Value\"" +
-      "\365\010\n\016KafkaConfig2_8\022D\n\020compression_type\030\001" +
+      "\300\t\n\016KafkaConfig2_8\022D\n\020compression_type\030\001" +
       " \001(\0162*.yandex.cloud.mdb.kafka.v1.Compres" +
       "sionType\022@\n\033log_flush_interval_messages\030" +
       "\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025lo" +
@@ -36184,49 +36952,53 @@ public final class ClusterOuterClass {
       "a_fetch_max_bytes\030\021 \001(\0132\033.google.protobu" +
       "f.Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022" +
       ">\n\031offsets_retention_minutes\030\023 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\363\010\n\014KafkaConfig3" +
-      "\022D\n\020compression_type\030\001 \001(\0162*.yandex.clou" +
-      "d.mdb.kafka.v1.CompressionType\022@\n\033log_fl" +
-      "ush_interval_messages\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022:\n\025log_flush_interval_m" +
-      "s\030\003 \001(\0132\033.google.protobuf.Int64Value\022D\n\037" +
-      "log_flush_scheduler_interval_ms\030\004 \001(\0132\033." +
-      "google.protobuf.Int64Value\0228\n\023log_retent" +
-      "ion_bytes\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0228\n\023log_retention_hours\030\006 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022:\n\025log_retention_" +
-      "minutes\030\007 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0225\n\020log_retention_ms\030\010 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0226\n\021log_segment_bytes\030\t" +
-      " \001(\0132\033.google.protobuf.Int64Value\0223\n\017log" +
-      "_preallocate\030\n \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022=\n\030socket_send_buffer_bytes\030\013 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022@\n\033socket_" +
-      "receive_buffer_bytes\030\014 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022=\n\031auto_create_topics_en" +
-      "able\030\r \001(\0132\032.google.protobuf.BoolValue\0223" +
-      "\n\016num_partitions\030\016 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022?\n\032default_replication_facto" +
-      "r\030\017 \001(\0132\033.google.protobuf.Int64Value\0226\n\021" +
-      "message_max_bytes\030\020 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022<\n\027replica_fetch_max_bytes\030" +
-      "\021 \001(\0132\033.google.protobuf.Int64Value\022\031\n\021ss" +
-      "l_cipher_suites\030\022 \003(\t\022>\n\031offsets_retenti" +
-      "on_minutes\030\023 \001(\0132\033.google.protobuf.Int64" +
-      "Value\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_" +
-      "id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162" +
-      "$.yandex.cloud.mdb.kafka.v1.Host.Role\0227\n" +
-      "\tresources\030\005 \001(\0132$.yandex.cloud.mdb.kafk" +
-      "a.v1.Resources\0226\n\006health\030\006 \001(\0162&.yandex." +
-      "cloud.mdb.kafka.v1.Host.Health\022\021\n\tsubnet" +
-      "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004R" +
-      "ole\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\t" +
-      "ZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005AL" +
-      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022" +
-      "\025\n\rdata_transfer\030\001 \001(\010Bd\n\035yandex.cloud.a" +
-      "pi.mdb.kafka.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/kafka/v1;k" +
-      "afkab\006proto3"
+      "gle.protobuf.Int64Value\022I\n\027sasl_enabled_" +
+      "mechanisms\030\024 \003(\0162(.yandex.cloud.mdb.kafk" +
+      "a.v1.SaslMechanism\"\276\t\n\014KafkaConfig3\022D\n\020c" +
+      "ompression_type\030\001 \001(\0162*.yandex.cloud.mdb" +
+      ".kafka.v1.CompressionType\022@\n\033log_flush_i" +
+      "nterval_messages\030\002 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022:\n\025log_flush_interval_ms\030\003 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022D\n\037log_f" +
+      "lush_scheduler_interval_ms\030\004 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0228\n\023log_retention_b" +
+      "ytes\030\005 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "8\n\023log_retention_hours\030\006 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022:\n\025log_retention_minut" +
+      "es\030\007 \001(\0132\033.google.protobuf.Int64Value\0225\n" +
+      "\020log_retention_ms\030\010 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021log_segment_bytes\030\t \001(\0132" +
+      "\033.google.protobuf.Int64Value\0223\n\017log_prea" +
+      "llocate\030\n \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022@\n\033socket_recei" +
+      "ve_buffer_bytes\030\014 \001(\0132\033.google.protobuf." +
+      "Int64Value\022=\n\031auto_create_topics_enable\030" +
+      "\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016num" +
+      "_partitions\030\016 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022?\n\032default_replication_factor\030\017 \001" +
+      "(\0132\033.google.protobuf.Int64Value\0226\n\021messa" +
+      "ge_max_bytes\030\020 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022<\n\027replica_fetch_max_bytes\030\021 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022\031\n\021ssl_cip" +
+      "her_suites\030\022 \003(\t\022>\n\031offsets_retention_mi" +
+      "nutes\030\023 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022I\n\027sasl_enabled_mechanisms\030\024 \003(\0162(.yand" +
+      "ex.cloud.mdb.kafka.v1.SaslMechanism\"\375\002\n\004" +
+      "Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017" +
+      "\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.c" +
+      "loud.mdb.kafka.v1.Host.Role\0227\n\tresources" +
+      "\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resou" +
+      "rces\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb." +
+      "kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022" +
+      "\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROL" +
+      "E_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020" +
+      "\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
+      "EAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022\025\n\rdata_tr" +
+      "ansfer\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.kaf" +
+      "ka.v1ZCgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/kafka/v1;kafkab\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36295,13 +37067,13 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_8_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", "SaslEnabledMechanisms", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig3_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", "MessageMaxBytes", "ReplicaFetchMaxBytes", "SslCipherSuites", "OffsetsRetentionMinutes", "SaslEnabledMechanisms", });
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new

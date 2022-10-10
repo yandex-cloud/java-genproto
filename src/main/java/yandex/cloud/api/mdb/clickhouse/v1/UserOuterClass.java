@@ -4634,48 +4634,30 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Enables or disables write quorum for ClickHouse cluster.
-     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the insertQuorum field is set.
+     * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
+     * @return Whether the allowIntrospectionFunctions field is set.
      */
-    boolean hasInsertQuorum();
+    boolean hasAllowIntrospectionFunctions();
     /**
      * <pre>
-     * Enables or disables write quorum for ClickHouse cluster.
-     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The insertQuorum.
+     * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
+     * @return The allowIntrospectionFunctions.
      */
-    com.google.protobuf.Int64Value getInsertQuorum();
+    com.google.protobuf.BoolValue getAllowIntrospectionFunctions();
     /**
      * <pre>
-     * Enables or disables write quorum for ClickHouse cluster.
-     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
      */
-    com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder();
+    com.google.protobuf.BoolValueOrBuilder getAllowIntrospectionFunctionsOrBuilder();
 
     /**
      * <pre>
@@ -4706,6 +4688,36 @@ public final class UserOuterClass {
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getConnectTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Connection timeout with failover in milliseconds.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the connectTimeoutWithFailover field is set.
+     */
+    boolean hasConnectTimeoutWithFailover();
+    /**
+     * <pre>
+     * Connection timeout with failover in milliseconds.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The connectTimeoutWithFailover.
+     */
+    com.google.protobuf.Int64Value getConnectTimeoutWithFailover();
+    /**
+     * <pre>
+     * Connection timeout with failover in milliseconds.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getConnectTimeoutWithFailoverOrBuilder();
 
     /**
      * <pre>
@@ -4769,6 +4781,78 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * Check that the speed is not too low after the specified time has elapsed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+     * @return Whether the timeoutBeforeCheckingExecutionSpeed field is set.
+     */
+    boolean hasTimeoutBeforeCheckingExecutionSpeed();
+    /**
+     * <pre>
+     * Check that the speed is not too low after the specified time has elapsed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+     * @return The timeoutBeforeCheckingExecutionSpeed.
+     */
+    com.google.protobuf.Int64Value getTimeoutBeforeCheckingExecutionSpeed();
+    /**
+     * <pre>
+     * Check that the speed is not too low after the specified time has elapsed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTimeoutBeforeCheckingExecutionSpeedOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the insertQuorum field is set.
+     */
+    boolean hasInsertQuorum();
+    /**
+     * <pre>
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The insertQuorum.
+     */
+    com.google.protobuf.Int64Value getInsertQuorum();
+    /**
+     * <pre>
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder();
+
+    /**
+     * <pre>
      * Quorum write timeout in milliseconds.
      * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
      * In this case, the client must send the query again to write the data block into the same or another replica.
@@ -4805,6 +4889,60 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+     * @return Whether the insertQuorumParallel field is set.
+     */
+    boolean hasInsertQuorumParallel();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+     * @return The insertQuorumParallel.
+     */
+    com.google.protobuf.BoolValue getInsertQuorumParallel();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInsertQuorumParallelOrBuilder();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+     * @return Whether the insertNullAsDefault field is set.
+     */
+    boolean hasInsertNullAsDefault();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+     * @return The insertNullAsDefault.
+     */
+    com.google.protobuf.BoolValue getInsertNullAsDefault();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInsertNullAsDefaultOrBuilder();
+
+    /**
+     * <pre>
      * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
      * Default value: **false** (sequential consistency is disabled).
      * </pre>
@@ -4832,6 +4970,72 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getSelectSequentialConsistencyOrBuilder();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+     * @return Whether the deduplicateBlocksInDependentMaterializedViews field is set.
+     */
+    boolean hasDeduplicateBlocksInDependentMaterializedViews();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+     * @return The deduplicateBlocksInDependentMaterializedViews.
+     */
+    com.google.protobuf.BoolValue getDeduplicateBlocksInDependentMaterializedViews();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeduplicateBlocksInDependentMaterializedViewsOrBuilder();
+
+    /**
+     * <pre>
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return Whether the replicationAlterPartitionsSync field is set.
+     */
+    boolean hasReplicationAlterPartitionsSync();
+    /**
+     * <pre>
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return The replicationAlterPartitionsSync.
+     */
+    com.google.protobuf.Int64Value getReplicationAlterPartitionsSync();
+    /**
+     * <pre>
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder();
 
     /**
      * <pre>
@@ -4904,45 +5108,6 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getFallbackToStaleReplicasForDistributedQueriesOrBuilder();
-
-    /**
-     * <pre>
-     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**-do not wait for replicas.
-     * * **1**-only wait for own execution (default).
-     * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-     * @return Whether the replicationAlterPartitionsSync field is set.
-     */
-    boolean hasReplicationAlterPartitionsSync();
-    /**
-     * <pre>
-     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**-do not wait for replicas.
-     * * **1**-only wait for own execution (default).
-     * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-     * @return The replicationAlterPartitionsSync.
-     */
-    com.google.protobuf.Int64Value getReplicationAlterPartitionsSync();
-    /**
-     * <pre>
-     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**-do not wait for replicas.
-     * * **1**-only wait for own execution (default).
-     * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder();
 
     /**
      * <pre>
@@ -5066,93 +5231,6 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getSkipUnavailableShardsOrBuilder();
-
-    /**
-     * <pre>
-     * Enables or disables query compilation.
-     * If you execute a lot of structurally identical queries, then enable this setting.
-     * As a result, such queries may be executed faster due to use of queries' compiled parts.
-     * Use this setting in combination with [min_count_to_compile] setting.
-     * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue compile = 44;</code>
-     * @return Whether the compile field is set.
-     */
-    boolean hasCompile();
-    /**
-     * <pre>
-     * Enables or disables query compilation.
-     * If you execute a lot of structurally identical queries, then enable this setting.
-     * As a result, such queries may be executed faster due to use of queries' compiled parts.
-     * Use this setting in combination with [min_count_to_compile] setting.
-     * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue compile = 44;</code>
-     * @return The compile.
-     */
-    com.google.protobuf.BoolValue getCompile();
-    /**
-     * <pre>
-     * Enables or disables query compilation.
-     * If you execute a lot of structurally identical queries, then enable this setting.
-     * As a result, such queries may be executed faster due to use of queries' compiled parts.
-     * Use this setting in combination with [min_count_to_compile] setting.
-     * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue compile = 44;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder();
-
-    /**
-     * <pre>
-     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-     * Minimum value: **0** (default: **3**).
-     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-     * It is recommended to set this value only for testing purposes.
-     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the minCountToCompile field is set.
-     */
-    boolean hasMinCountToCompile();
-    /**
-     * <pre>
-     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-     * Minimum value: **0** (default: **3**).
-     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-     * It is recommended to set this value only for testing purposes.
-     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The minCountToCompile.
-     */
-    com.google.protobuf.Int64Value getMinCountToCompile();
-    /**
-     * <pre>
-     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-     * Minimum value: **0** (default: **3**).
-     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-     * It is recommended to set this value only for testing purposes.
-     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder();
 
     /**
      * <pre>
@@ -5966,6 +6044,60 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+     * @return Whether the maxPartitionsPerInsertBlock field is set.
+     */
+    boolean hasMaxPartitionsPerInsertBlock();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+     * @return The maxPartitionsPerInsertBlock.
+     */
+    com.google.protobuf.Int64Value getMaxPartitionsPerInsertBlock();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxPartitionsPerInsertBlockOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of concurrent requests per user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+     * @return Whether the maxConcurrentQueriesForUser field is set.
+     */
+    boolean hasMaxConcurrentQueriesForUser();
+    /**
+     * <pre>
+     * The maximum number of concurrent requests per user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+     * @return The maxConcurrentQueriesForUser.
+     */
+    com.google.protobuf.Int64Value getMaxConcurrentQueriesForUser();
+    /**
+     * <pre>
+     * The maximum number of concurrent requests per user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesForUserOrBuilder();
+
+    /**
+     * <pre>
      * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
@@ -6732,6 +6864,82 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @return A list containing the joinAlgorithm.
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm> getJoinAlgorithmList();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @return The count of joinAlgorithm.
+     */
+    int getJoinAlgorithmCount();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @param index The index of the element to return.
+     * @return The joinAlgorithm at the given index.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm getJoinAlgorithm(int index);
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @return A list containing the enum numeric values on the wire for joinAlgorithm.
+     */
+    java.util.List<java.lang.Integer>
+    getJoinAlgorithmValueList();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of joinAlgorithm at the given index.
+     */
+    int getJoinAlgorithmValue(int index);
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+     * @return Whether the anyJoinDistinctRightTableKeys field is set.
+     */
+    boolean hasAnyJoinDistinctRightTableKeys();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+     * @return The anyJoinDistinctRightTableKeys.
+     */
+    com.google.protobuf.BoolValue getAnyJoinDistinctRightTableKeys();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAnyJoinDistinctRightTableKeysOrBuilder();
+
+    /**
+     * <pre>
      * Limits the maximum number of columns that can be read from a table in a single query.
      * If the query requires to read more columns to complete, then it will be aborted.
      * Minimal value and default value: **0**, no limitation is set.
@@ -7135,6 +7343,79 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+     * @return Whether the inputFormatNullAsDefault field is set.
+     */
+    boolean hasInputFormatNullAsDefault();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+     * @return The inputFormatNullAsDefault.
+     */
+    com.google.protobuf.BoolValue getInputFormatNullAsDefault();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInputFormatNullAsDefaultOrBuilder();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+     * @return The enum numeric value on the wire for dateTimeInputFormat.
+     */
+    int getDateTimeInputFormatValue();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+     * @return The dateTimeInputFormat.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat getDateTimeInputFormat();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+     * @return Whether the inputFormatWithNamesUseHeader field is set.
+     */
+    boolean hasInputFormatWithNamesUseHeader();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+     * @return The inputFormatWithNamesUseHeader.
+     */
+    com.google.protobuf.BoolValue getInputFormatWithNamesUseHeader();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInputFormatWithNamesUseHeaderOrBuilder();
+
+    /**
+     * <pre>
      * Enables quoting of 64-bit integers in JSON output format.
      * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
      * Otherwise, such integers will not be quoted.
@@ -7201,6 +7482,25 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+     * @return The enum numeric value on the wire for dateTimeOutputFormat.
+     */
+    int getDateTimeOutputFormatValue();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+     * @return The dateTimeOutputFormat.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat getDateTimeOutputFormat();
+
+    /**
+     * <pre>
      * Determines whether to use LowCardinality type in Native format.
      * * **true** (default)-yes, use.
      * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
@@ -7252,6 +7552,33 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+     * @return Whether the allowSuspiciousLowCardinalityTypes field is set.
+     */
+    boolean hasAllowSuspiciousLowCardinalityTypes();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+     * @return The allowSuspiciousLowCardinalityTypes.
+     */
+    com.google.protobuf.BoolValue getAllowSuspiciousLowCardinalityTypes();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAllowSuspiciousLowCardinalityTypesOrBuilder();
+
+    /**
+     * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
      * * **true**-ClickHouse will return an empty result for such queries.
      * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
@@ -7282,51 +7609,6 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getEmptyResultForAggregationByEmptySetOrBuilder();
-
-    /**
-     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-     * @return Whether the joinedSubqueryRequiresAlias field is set.
-     */
-    boolean hasJoinedSubqueryRequiresAlias();
-    /**
-     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-     * @return The joinedSubqueryRequiresAlias.
-     */
-    com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias();
-    /**
-     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder();
-
-    /**
-     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-     * @return Whether the joinUseNulls field is set.
-     */
-    boolean hasJoinUseNulls();
-    /**
-     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-     * @return The joinUseNulls.
-     */
-    com.google.protobuf.BoolValue getJoinUseNulls();
-    /**
-     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder();
-
-    /**
-     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-     * @return Whether the transformNullIn field is set.
-     */
-    boolean hasTransformNullIn();
-    /**
-     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-     * @return The transformNullIn.
-     */
-    com.google.protobuf.BoolValue getTransformNullIn();
-    /**
-     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder();
 
     /**
      * <pre>
@@ -7555,6 +7837,105 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+     * @return Whether the cancelHttpReadonlyQueriesOnClientClose field is set.
+     */
+    boolean hasCancelHttpReadonlyQueriesOnClientClose();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+     * @return The cancelHttpReadonlyQueriesOnClientClose.
+     */
+    com.google.protobuf.BoolValue getCancelHttpReadonlyQueriesOnClientClose();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getCancelHttpReadonlyQueriesOnClientCloseOrBuilder();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+     * @return Whether the maxHttpGetRedirects field is set.
+     */
+    boolean hasMaxHttpGetRedirects();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+     * @return The maxHttpGetRedirects.
+     */
+    com.google.protobuf.Int64Value getMaxHttpGetRedirects();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxHttpGetRedirectsOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return Whether the joinedSubqueryRequiresAlias field is set.
+     */
+    boolean hasJoinedSubqueryRequiresAlias();
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return The joinedSubqueryRequiresAlias.
+     */
+    com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias();
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return Whether the joinUseNulls field is set.
+     */
+    boolean hasJoinUseNulls();
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return The joinUseNulls.
+     */
+    com.google.protobuf.BoolValue getJoinUseNulls();
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return Whether the transformNullIn field is set.
+     */
+    boolean hasTransformNullIn();
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return The transformNullIn.
+     */
+    com.google.protobuf.BoolValue getTransformNullIn();
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder();
+
+    /**
+     * <pre>
      * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
      * </pre>
      *
@@ -7571,6 +7952,400 @@ public final class UserOuterClass {
      * @return The quotaMode.
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+     * @return Whether the flattenNested field is set.
+     */
+    boolean hasFlattenNested();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+     * @return The flattenNested.
+     */
+    com.google.protobuf.BoolValue getFlattenNested();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getFlattenNestedOrBuilder();
+
+    /**
+     * <pre>
+     * Regular expression (for Regexp format)
+     * </pre>
+     *
+     * <code>string format_regexp = 114;</code>
+     * @return The formatRegexp.
+     */
+    java.lang.String getFormatRegexp();
+    /**
+     * <pre>
+     * Regular expression (for Regexp format)
+     * </pre>
+     *
+     * <code>string format_regexp = 114;</code>
+     * @return The bytes for formatRegexp.
+     */
+    com.google.protobuf.ByteString
+        getFormatRegexpBytes();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+     * @return The enum numeric value on the wire for formatRegexpEscapingRule.
+     */
+    int getFormatRegexpEscapingRuleValue();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+     * @return The formatRegexpEscapingRule.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule getFormatRegexpEscapingRule();
+
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+     * @return Whether the formatRegexpSkipUnmatched field is set.
+     */
+    boolean hasFormatRegexpSkipUnmatched();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+     * @return The formatRegexpSkipUnmatched.
+     */
+    com.google.protobuf.BoolValue getFormatRegexpSkipUnmatched();
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getFormatRegexpSkipUnmatchedOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+     * @return Whether the asyncInsert field is set.
+     */
+    boolean hasAsyncInsert();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+     * @return The asyncInsert.
+     */
+    com.google.protobuf.BoolValue getAsyncInsert();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAsyncInsertOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+     * @return Whether the asyncInsertThreads field is set.
+     */
+    boolean hasAsyncInsertThreads();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+     * @return The asyncInsertThreads.
+     */
+    com.google.protobuf.Int64Value getAsyncInsertThreads();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsyncInsertThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+     * @return Whether the waitForAsyncInsert field is set.
+     */
+    boolean hasWaitForAsyncInsert();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+     * @return The waitForAsyncInsert.
+     */
+    com.google.protobuf.BoolValue getWaitForAsyncInsert();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getWaitForAsyncInsertOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+     * @return Whether the waitForAsyncInsertTimeout field is set.
+     */
+    boolean hasWaitForAsyncInsertTimeout();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+     * @return The waitForAsyncInsertTimeout.
+     */
+    com.google.protobuf.Int64Value getWaitForAsyncInsertTimeout();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getWaitForAsyncInsertTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+     * @return Whether the asyncInsertMaxDataSize field is set.
+     */
+    boolean hasAsyncInsertMaxDataSize();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+     * @return The asyncInsertMaxDataSize.
+     */
+    com.google.protobuf.Int64Value getAsyncInsertMaxDataSize();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsyncInsertMaxDataSizeOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+     * @return Whether the asyncInsertBusyTimeout field is set.
+     */
+    boolean hasAsyncInsertBusyTimeout();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+     * @return The asyncInsertBusyTimeout.
+     */
+    com.google.protobuf.Int64Value getAsyncInsertBusyTimeout();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsyncInsertBusyTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     * @return Whether the asyncInsertStaleTimeout field is set.
+     */
+    boolean hasAsyncInsertStaleTimeout();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     * @return The asyncInsertStaleTimeout.
+     */
+    com.google.protobuf.Int64Value getAsyncInsertStaleTimeout();
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+     * @return Whether the memoryProfilerStep field is set.
+     */
+    boolean hasMemoryProfilerStep();
+    /**
+     * <pre>
+     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+     * @return The memoryProfilerStep.
+     */
+    com.google.protobuf.Int64Value getMemoryProfilerStep();
+    /**
+     * <pre>
+     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMemoryProfilerStepOrBuilder();
+
+    /**
+     * <pre>
+     * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+     * @return Whether the memoryProfilerSampleProbability field is set.
+     */
+    boolean hasMemoryProfilerSampleProbability();
+    /**
+     * <pre>
+     * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+     * @return The memoryProfilerSampleProbability.
+     */
+    com.google.protobuf.DoubleValue getMemoryProfilerSampleProbability();
+    /**
+     * <pre>
+     * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getMemoryProfilerSampleProbabilityOrBuilder();
+
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the compile field is set.
+     */
+    @java.lang.Deprecated boolean hasCompile();
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+     * @deprecated
+     * @return The compile.
+     */
+    @java.lang.Deprecated com.google.protobuf.BoolValue getCompile();
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+     */
+    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder();
+
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the minCountToCompile field is set.
+     */
+    @java.lang.Deprecated boolean hasMinCountToCompile();
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+     * @deprecated
+     * @return The minCountToCompile.
+     */
+    @java.lang.Deprecated com.google.protobuf.Int64Value getMinCountToCompile();
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+     */
+    @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder();
   }
   /**
    * <pre>
@@ -7600,8 +8375,13 @@ public final class UserOuterClass {
       timeoutOverflowMode_ = 0;
       setOverflowMode_ = 0;
       joinOverflowMode_ = 0;
+      joinAlgorithm_ = java.util.Collections.emptyList();
       countDistinctImplementation_ = 0;
+      dateTimeInputFormat_ = 0;
+      dateTimeOutputFormat_ = 0;
       quotaMode_ = 0;
+      formatRegexp_ = "";
+      formatRegexpEscapingRule_ = 0;
     }
 
     @java.lang.Override
@@ -7624,6 +8404,7 @@ public final class UserOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8759,6 +9540,378 @@ public final class UserOuterClass {
 
               break;
             }
+            case 770: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (allowIntrospectionFunctions_ != null) {
+                subBuilder = allowIntrospectionFunctions_.toBuilder();
+              }
+              allowIntrospectionFunctions_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowIntrospectionFunctions_);
+                allowIntrospectionFunctions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 778: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (connectTimeoutWithFailover_ != null) {
+                subBuilder = connectTimeoutWithFailover_.toBuilder();
+              }
+              connectTimeoutWithFailover_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectTimeoutWithFailover_);
+                connectTimeoutWithFailover_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 786: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (timeoutBeforeCheckingExecutionSpeed_ != null) {
+                subBuilder = timeoutBeforeCheckingExecutionSpeed_.toBuilder();
+              }
+              timeoutBeforeCheckingExecutionSpeed_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timeoutBeforeCheckingExecutionSpeed_);
+                timeoutBeforeCheckingExecutionSpeed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 794: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (insertQuorumParallel_ != null) {
+                subBuilder = insertQuorumParallel_.toBuilder();
+              }
+              insertQuorumParallel_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(insertQuorumParallel_);
+                insertQuorumParallel_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 802: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (insertNullAsDefault_ != null) {
+                subBuilder = insertNullAsDefault_.toBuilder();
+              }
+              insertNullAsDefault_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(insertNullAsDefault_);
+                insertNullAsDefault_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 810: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deduplicateBlocksInDependentMaterializedViews_ != null) {
+                subBuilder = deduplicateBlocksInDependentMaterializedViews_.toBuilder();
+              }
+              deduplicateBlocksInDependentMaterializedViews_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deduplicateBlocksInDependentMaterializedViews_);
+                deduplicateBlocksInDependentMaterializedViews_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 818: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxPartitionsPerInsertBlock_ != null) {
+                subBuilder = maxPartitionsPerInsertBlock_.toBuilder();
+              }
+              maxPartitionsPerInsertBlock_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxPartitionsPerInsertBlock_);
+                maxPartitionsPerInsertBlock_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 826: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxConcurrentQueriesForUser_ != null) {
+                subBuilder = maxConcurrentQueriesForUser_.toBuilder();
+              }
+              maxConcurrentQueriesForUser_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxConcurrentQueriesForUser_);
+                maxConcurrentQueriesForUser_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 832: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                joinAlgorithm_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              joinAlgorithm_.add(rawValue);
+              break;
+            }
+            case 834: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  joinAlgorithm_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                joinAlgorithm_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 842: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (anyJoinDistinctRightTableKeys_ != null) {
+                subBuilder = anyJoinDistinctRightTableKeys_.toBuilder();
+              }
+              anyJoinDistinctRightTableKeys_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(anyJoinDistinctRightTableKeys_);
+                anyJoinDistinctRightTableKeys_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 850: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (inputFormatNullAsDefault_ != null) {
+                subBuilder = inputFormatNullAsDefault_.toBuilder();
+              }
+              inputFormatNullAsDefault_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(inputFormatNullAsDefault_);
+                inputFormatNullAsDefault_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 856: {
+              int rawValue = input.readEnum();
+
+              dateTimeInputFormat_ = rawValue;
+              break;
+            }
+            case 866: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (inputFormatWithNamesUseHeader_ != null) {
+                subBuilder = inputFormatWithNamesUseHeader_.toBuilder();
+              }
+              inputFormatWithNamesUseHeader_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(inputFormatWithNamesUseHeader_);
+                inputFormatWithNamesUseHeader_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 872: {
+              int rawValue = input.readEnum();
+
+              dateTimeOutputFormat_ = rawValue;
+              break;
+            }
+            case 882: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (allowSuspiciousLowCardinalityTypes_ != null) {
+                subBuilder = allowSuspiciousLowCardinalityTypes_.toBuilder();
+              }
+              allowSuspiciousLowCardinalityTypes_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowSuspiciousLowCardinalityTypes_);
+                allowSuspiciousLowCardinalityTypes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 890: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (cancelHttpReadonlyQueriesOnClientClose_ != null) {
+                subBuilder = cancelHttpReadonlyQueriesOnClientClose_.toBuilder();
+              }
+              cancelHttpReadonlyQueriesOnClientClose_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cancelHttpReadonlyQueriesOnClientClose_);
+                cancelHttpReadonlyQueriesOnClientClose_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 898: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxHttpGetRedirects_ != null) {
+                subBuilder = maxHttpGetRedirects_.toBuilder();
+              }
+              maxHttpGetRedirects_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxHttpGetRedirects_);
+                maxHttpGetRedirects_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 906: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (flattenNested_ != null) {
+                subBuilder = flattenNested_.toBuilder();
+              }
+              flattenNested_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(flattenNested_);
+                flattenNested_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 914: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              formatRegexp_ = s;
+              break;
+            }
+            case 920: {
+              int rawValue = input.readEnum();
+
+              formatRegexpEscapingRule_ = rawValue;
+              break;
+            }
+            case 930: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (formatRegexpSkipUnmatched_ != null) {
+                subBuilder = formatRegexpSkipUnmatched_.toBuilder();
+              }
+              formatRegexpSkipUnmatched_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(formatRegexpSkipUnmatched_);
+                formatRegexpSkipUnmatched_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 938: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (asyncInsert_ != null) {
+                subBuilder = asyncInsert_.toBuilder();
+              }
+              asyncInsert_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInsert_);
+                asyncInsert_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 946: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asyncInsertThreads_ != null) {
+                subBuilder = asyncInsertThreads_.toBuilder();
+              }
+              asyncInsertThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInsertThreads_);
+                asyncInsertThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 954: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (waitForAsyncInsert_ != null) {
+                subBuilder = waitForAsyncInsert_.toBuilder();
+              }
+              waitForAsyncInsert_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(waitForAsyncInsert_);
+                waitForAsyncInsert_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 962: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (waitForAsyncInsertTimeout_ != null) {
+                subBuilder = waitForAsyncInsertTimeout_.toBuilder();
+              }
+              waitForAsyncInsertTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(waitForAsyncInsertTimeout_);
+                waitForAsyncInsertTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 970: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asyncInsertMaxDataSize_ != null) {
+                subBuilder = asyncInsertMaxDataSize_.toBuilder();
+              }
+              asyncInsertMaxDataSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInsertMaxDataSize_);
+                asyncInsertMaxDataSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 978: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asyncInsertBusyTimeout_ != null) {
+                subBuilder = asyncInsertBusyTimeout_.toBuilder();
+              }
+              asyncInsertBusyTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInsertBusyTimeout_);
+                asyncInsertBusyTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 986: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asyncInsertStaleTimeout_ != null) {
+                subBuilder = asyncInsertStaleTimeout_.toBuilder();
+              }
+              asyncInsertStaleTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asyncInsertStaleTimeout_);
+                asyncInsertStaleTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 994: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (memoryProfilerStep_ != null) {
+                subBuilder = memoryProfilerStep_.toBuilder();
+              }
+              memoryProfilerStep_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memoryProfilerStep_);
+                memoryProfilerStep_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1002: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (memoryProfilerSampleProbability_ != null) {
+                subBuilder = memoryProfilerSampleProbability_.toBuilder();
+              }
+              memoryProfilerSampleProbability_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memoryProfilerSampleProbability_);
+                memoryProfilerSampleProbability_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8774,6 +9927,9 @@ public final class UserOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          joinAlgorithm_ = java.util.Collections.unmodifiableList(joinAlgorithm_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -9471,6 +10627,573 @@ public final class UserOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm}
+     */
+    public enum JoinAlgorithm
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>JOIN_ALGORITHM_UNSPECIFIED = 0;</code>
+       */
+      JOIN_ALGORITHM_UNSPECIFIED(0),
+      /**
+       * <code>JOIN_ALGORITHM_HASH = 1;</code>
+       */
+      JOIN_ALGORITHM_HASH(1),
+      /**
+       * <code>JOIN_ALGORITHM_PARALLEL_HASH = 2;</code>
+       */
+      JOIN_ALGORITHM_PARALLEL_HASH(2),
+      /**
+       * <code>JOIN_ALGORITHM_PARTIAL_MERGE = 3;</code>
+       */
+      JOIN_ALGORITHM_PARTIAL_MERGE(3),
+      /**
+       * <code>JOIN_ALGORITHM_DIRECT = 4;</code>
+       */
+      JOIN_ALGORITHM_DIRECT(4),
+      /**
+       * <code>JOIN_ALGORITHM_AUTO = 5;</code>
+       */
+      JOIN_ALGORITHM_AUTO(5),
+      /**
+       * <code>JOIN_ALGORITHM_FULL_SORTING_MERGE = 6;</code>
+       */
+      JOIN_ALGORITHM_FULL_SORTING_MERGE(6),
+      /**
+       * <code>JOIN_ALGORITHM_PREFER_PARTIAL_MERGE = 7;</code>
+       */
+      JOIN_ALGORITHM_PREFER_PARTIAL_MERGE(7),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>JOIN_ALGORITHM_UNSPECIFIED = 0;</code>
+       */
+      public static final int JOIN_ALGORITHM_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>JOIN_ALGORITHM_HASH = 1;</code>
+       */
+      public static final int JOIN_ALGORITHM_HASH_VALUE = 1;
+      /**
+       * <code>JOIN_ALGORITHM_PARALLEL_HASH = 2;</code>
+       */
+      public static final int JOIN_ALGORITHM_PARALLEL_HASH_VALUE = 2;
+      /**
+       * <code>JOIN_ALGORITHM_PARTIAL_MERGE = 3;</code>
+       */
+      public static final int JOIN_ALGORITHM_PARTIAL_MERGE_VALUE = 3;
+      /**
+       * <code>JOIN_ALGORITHM_DIRECT = 4;</code>
+       */
+      public static final int JOIN_ALGORITHM_DIRECT_VALUE = 4;
+      /**
+       * <code>JOIN_ALGORITHM_AUTO = 5;</code>
+       */
+      public static final int JOIN_ALGORITHM_AUTO_VALUE = 5;
+      /**
+       * <code>JOIN_ALGORITHM_FULL_SORTING_MERGE = 6;</code>
+       */
+      public static final int JOIN_ALGORITHM_FULL_SORTING_MERGE_VALUE = 6;
+      /**
+       * <code>JOIN_ALGORITHM_PREFER_PARTIAL_MERGE = 7;</code>
+       */
+      public static final int JOIN_ALGORITHM_PREFER_PARTIAL_MERGE_VALUE = 7;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static JoinAlgorithm valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static JoinAlgorithm forNumber(int value) {
+        switch (value) {
+          case 0: return JOIN_ALGORITHM_UNSPECIFIED;
+          case 1: return JOIN_ALGORITHM_HASH;
+          case 2: return JOIN_ALGORITHM_PARALLEL_HASH;
+          case 3: return JOIN_ALGORITHM_PARTIAL_MERGE;
+          case 4: return JOIN_ALGORITHM_DIRECT;
+          case 5: return JOIN_ALGORITHM_AUTO;
+          case 6: return JOIN_ALGORITHM_FULL_SORTING_MERGE;
+          case 7: return JOIN_ALGORITHM_PREFER_PARTIAL_MERGE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<JoinAlgorithm>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          JoinAlgorithm> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<JoinAlgorithm>() {
+              public JoinAlgorithm findValueByNumber(int number) {
+                return JoinAlgorithm.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(5);
+      }
+
+      private static final JoinAlgorithm[] VALUES = values();
+
+      public static JoinAlgorithm valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private JoinAlgorithm(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule}
+     */
+    public enum FormatRegexpEscapingRule
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED = 0;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED(0),
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_ESCAPED = 1;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_ESCAPED(1),
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_QUOTED = 2;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_QUOTED(2),
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_CSV = 3;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_CSV(3),
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_JSON = 4;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_JSON(4),
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_XML = 5;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_XML(5),
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_RAW = 6;</code>
+       */
+      FORMAT_REGEXP_ESCAPING_RULE_RAW(6),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED = 0;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_ESCAPED = 1;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_ESCAPED_VALUE = 1;
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_QUOTED = 2;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_QUOTED_VALUE = 2;
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_CSV = 3;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_CSV_VALUE = 3;
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_JSON = 4;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_JSON_VALUE = 4;
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_XML = 5;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_XML_VALUE = 5;
+      /**
+       * <code>FORMAT_REGEXP_ESCAPING_RULE_RAW = 6;</code>
+       */
+      public static final int FORMAT_REGEXP_ESCAPING_RULE_RAW_VALUE = 6;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FormatRegexpEscapingRule valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FormatRegexpEscapingRule forNumber(int value) {
+        switch (value) {
+          case 0: return FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED;
+          case 1: return FORMAT_REGEXP_ESCAPING_RULE_ESCAPED;
+          case 2: return FORMAT_REGEXP_ESCAPING_RULE_QUOTED;
+          case 3: return FORMAT_REGEXP_ESCAPING_RULE_CSV;
+          case 4: return FORMAT_REGEXP_ESCAPING_RULE_JSON;
+          case 5: return FORMAT_REGEXP_ESCAPING_RULE_XML;
+          case 6: return FORMAT_REGEXP_ESCAPING_RULE_RAW;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FormatRegexpEscapingRule>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FormatRegexpEscapingRule> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FormatRegexpEscapingRule>() {
+              public FormatRegexpEscapingRule findValueByNumber(int number) {
+                return FormatRegexpEscapingRule.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(6);
+      }
+
+      private static final FormatRegexpEscapingRule[] VALUES = values();
+
+      public static FormatRegexpEscapingRule valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private FormatRegexpEscapingRule(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat}
+     */
+    public enum DateTimeInputFormat
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_UNSPECIFIED = 0;</code>
+       */
+      DATE_TIME_INPUT_FORMAT_UNSPECIFIED(0),
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_BEST_EFFORT = 1;</code>
+       */
+      DATE_TIME_INPUT_FORMAT_BEST_EFFORT(1),
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_BASIC = 2;</code>
+       */
+      DATE_TIME_INPUT_FORMAT_BASIC(2),
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_BEST_EFFORT_US = 3;</code>
+       */
+      DATE_TIME_INPUT_FORMAT_BEST_EFFORT_US(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_UNSPECIFIED = 0;</code>
+       */
+      public static final int DATE_TIME_INPUT_FORMAT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_BEST_EFFORT = 1;</code>
+       */
+      public static final int DATE_TIME_INPUT_FORMAT_BEST_EFFORT_VALUE = 1;
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_BASIC = 2;</code>
+       */
+      public static final int DATE_TIME_INPUT_FORMAT_BASIC_VALUE = 2;
+      /**
+       * <code>DATE_TIME_INPUT_FORMAT_BEST_EFFORT_US = 3;</code>
+       */
+      public static final int DATE_TIME_INPUT_FORMAT_BEST_EFFORT_US_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DateTimeInputFormat valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static DateTimeInputFormat forNumber(int value) {
+        switch (value) {
+          case 0: return DATE_TIME_INPUT_FORMAT_UNSPECIFIED;
+          case 1: return DATE_TIME_INPUT_FORMAT_BEST_EFFORT;
+          case 2: return DATE_TIME_INPUT_FORMAT_BASIC;
+          case 3: return DATE_TIME_INPUT_FORMAT_BEST_EFFORT_US;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DateTimeInputFormat>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DateTimeInputFormat> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DateTimeInputFormat>() {
+              public DateTimeInputFormat findValueByNumber(int number) {
+                return DateTimeInputFormat.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(7);
+      }
+
+      private static final DateTimeInputFormat[] VALUES = values();
+
+      public static DateTimeInputFormat valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private DateTimeInputFormat(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat}
+     */
+    public enum DateTimeOutputFormat
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED = 0;</code>
+       */
+      DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED(0),
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_SIMPLE = 1;</code>
+       */
+      DATE_TIME_OUTPUT_FORMAT_SIMPLE(1),
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_ISO = 2;</code>
+       */
+      DATE_TIME_OUTPUT_FORMAT_ISO(2),
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP = 3;</code>
+       */
+      DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED = 0;</code>
+       */
+      public static final int DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_SIMPLE = 1;</code>
+       */
+      public static final int DATE_TIME_OUTPUT_FORMAT_SIMPLE_VALUE = 1;
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_ISO = 2;</code>
+       */
+      public static final int DATE_TIME_OUTPUT_FORMAT_ISO_VALUE = 2;
+      /**
+       * <code>DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP = 3;</code>
+       */
+      public static final int DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DateTimeOutputFormat valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static DateTimeOutputFormat forNumber(int value) {
+        switch (value) {
+          case 0: return DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED;
+          case 1: return DATE_TIME_OUTPUT_FORMAT_SIMPLE;
+          case 2: return DATE_TIME_OUTPUT_FORMAT_ISO;
+          case 3: return DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DateTimeOutputFormat>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DateTimeOutputFormat> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DateTimeOutputFormat>() {
+              public DateTimeOutputFormat findValueByNumber(int number) {
+                return DateTimeOutputFormat.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(8);
+      }
+
+      private static final DateTimeOutputFormat[] VALUES = values();
+
+      public static DateTimeOutputFormat valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private DateTimeOutputFormat(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat)
+    }
+
     public static final int READONLY_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value readonly_;
     /**
@@ -9565,60 +11288,42 @@ public final class UserOuterClass {
       return getAllowDdl();
     }
 
-    public static final int INSERT_QUORUM_FIELD_NUMBER = 3;
-    private com.google.protobuf.Int64Value insertQuorum_;
+    public static final int ALLOW_INTROSPECTION_FUNCTIONS_FIELD_NUMBER = 96;
+    private com.google.protobuf.BoolValue allowIntrospectionFunctions_;
     /**
      * <pre>
-     * Enables or disables write quorum for ClickHouse cluster.
-     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the insertQuorum field is set.
+     * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
+     * @return Whether the allowIntrospectionFunctions field is set.
      */
     @java.lang.Override
-    public boolean hasInsertQuorum() {
-      return insertQuorum_ != null;
+    public boolean hasAllowIntrospectionFunctions() {
+      return allowIntrospectionFunctions_ != null;
     }
     /**
      * <pre>
-     * Enables or disables write quorum for ClickHouse cluster.
-     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The insertQuorum.
+     * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
+     * @return The allowIntrospectionFunctions.
      */
     @java.lang.Override
-    public com.google.protobuf.Int64Value getInsertQuorum() {
-      return insertQuorum_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
+    public com.google.protobuf.BoolValue getAllowIntrospectionFunctions() {
+      return allowIntrospectionFunctions_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowIntrospectionFunctions_;
     }
     /**
      * <pre>
-     * Enables or disables write quorum for ClickHouse cluster.
-     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder() {
-      return getInsertQuorum();
+    public com.google.protobuf.BoolValueOrBuilder getAllowIntrospectionFunctionsOrBuilder() {
+      return getAllowIntrospectionFunctions();
     }
 
     public static final int CONNECT_TIMEOUT_FIELD_NUMBER = 39;
@@ -9660,6 +11365,47 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getConnectTimeoutOrBuilder() {
       return getConnectTimeout();
+    }
+
+    public static final int CONNECT_TIMEOUT_WITH_FAILOVER_FIELD_NUMBER = 97;
+    private com.google.protobuf.Int64Value connectTimeoutWithFailover_;
+    /**
+     * <pre>
+     * Connection timeout with failover in milliseconds.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the connectTimeoutWithFailover field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectTimeoutWithFailover() {
+      return connectTimeoutWithFailover_ != null;
+    }
+    /**
+     * <pre>
+     * Connection timeout with failover in milliseconds.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The connectTimeoutWithFailover.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getConnectTimeoutWithFailover() {
+      return connectTimeoutWithFailover_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : connectTimeoutWithFailover_;
+    }
+    /**
+     * <pre>
+     * Connection timeout with failover in milliseconds.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getConnectTimeoutWithFailoverOrBuilder() {
+      return getConnectTimeoutWithFailover();
     }
 
     public static final int RECEIVE_TIMEOUT_FIELD_NUMBER = 40;
@@ -9744,6 +11490,100 @@ public final class UserOuterClass {
       return getSendTimeout();
     }
 
+    public static final int TIMEOUT_BEFORE_CHECKING_EXECUTION_SPEED_FIELD_NUMBER = 98;
+    private com.google.protobuf.Int64Value timeoutBeforeCheckingExecutionSpeed_;
+    /**
+     * <pre>
+     * Check that the speed is not too low after the specified time has elapsed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+     * @return Whether the timeoutBeforeCheckingExecutionSpeed field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeoutBeforeCheckingExecutionSpeed() {
+      return timeoutBeforeCheckingExecutionSpeed_ != null;
+    }
+    /**
+     * <pre>
+     * Check that the speed is not too low after the specified time has elapsed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+     * @return The timeoutBeforeCheckingExecutionSpeed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getTimeoutBeforeCheckingExecutionSpeed() {
+      return timeoutBeforeCheckingExecutionSpeed_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : timeoutBeforeCheckingExecutionSpeed_;
+    }
+    /**
+     * <pre>
+     * Check that the speed is not too low after the specified time has elapsed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getTimeoutBeforeCheckingExecutionSpeedOrBuilder() {
+      return getTimeoutBeforeCheckingExecutionSpeed();
+    }
+
+    public static final int INSERT_QUORUM_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value insertQuorum_;
+    /**
+     * <pre>
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the insertQuorum field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsertQuorum() {
+      return insertQuorum_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The insertQuorum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getInsertQuorum() {
+      return insertQuorum_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
+    }
+    /**
+     * <pre>
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder() {
+      return getInsertQuorum();
+    }
+
     public static final int INSERT_QUORUM_TIMEOUT_FIELD_NUMBER = 4;
     private com.google.protobuf.Int64Value insertQuorumTimeout_;
     /**
@@ -9791,6 +11631,82 @@ public final class UserOuterClass {
       return getInsertQuorumTimeout();
     }
 
+    public static final int INSERT_QUORUM_PARALLEL_FIELD_NUMBER = 99;
+    private com.google.protobuf.BoolValue insertQuorumParallel_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+     * @return Whether the insertQuorumParallel field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsertQuorumParallel() {
+      return insertQuorumParallel_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+     * @return The insertQuorumParallel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInsertQuorumParallel() {
+      return insertQuorumParallel_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : insertQuorumParallel_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInsertQuorumParallelOrBuilder() {
+      return getInsertQuorumParallel();
+    }
+
+    public static final int INSERT_NULL_AS_DEFAULT_FIELD_NUMBER = 100;
+    private com.google.protobuf.BoolValue insertNullAsDefault_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+     * @return Whether the insertNullAsDefault field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsertNullAsDefault() {
+      return insertNullAsDefault_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+     * @return The insertNullAsDefault.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInsertNullAsDefault() {
+      return insertNullAsDefault_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : insertNullAsDefault_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInsertNullAsDefaultOrBuilder() {
+      return getInsertNullAsDefault();
+    }
+
     public static final int SELECT_SEQUENTIAL_CONSISTENCY_FIELD_NUMBER = 5;
     private com.google.protobuf.BoolValue selectSequentialConsistency_;
     /**
@@ -9830,6 +11746,94 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSelectSequentialConsistencyOrBuilder() {
       return getSelectSequentialConsistency();
+    }
+
+    public static final int DEDUPLICATE_BLOCKS_IN_DEPENDENT_MATERIALIZED_VIEWS_FIELD_NUMBER = 101;
+    private com.google.protobuf.BoolValue deduplicateBlocksInDependentMaterializedViews_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+     * @return Whether the deduplicateBlocksInDependentMaterializedViews field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeduplicateBlocksInDependentMaterializedViews() {
+      return deduplicateBlocksInDependentMaterializedViews_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+     * @return The deduplicateBlocksInDependentMaterializedViews.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeduplicateBlocksInDependentMaterializedViews() {
+      return deduplicateBlocksInDependentMaterializedViews_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deduplicateBlocksInDependentMaterializedViews_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeduplicateBlocksInDependentMaterializedViewsOrBuilder() {
+      return getDeduplicateBlocksInDependentMaterializedViews();
+    }
+
+    public static final int REPLICATION_ALTER_PARTITIONS_SYNC_FIELD_NUMBER = 42;
+    private com.google.protobuf.Int64Value replicationAlterPartitionsSync_;
+    /**
+     * <pre>
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return Whether the replicationAlterPartitionsSync field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplicationAlterPartitionsSync() {
+      return replicationAlterPartitionsSync_ != null;
+    }
+    /**
+     * <pre>
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     * @return The replicationAlterPartitionsSync.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReplicationAlterPartitionsSync() {
+      return replicationAlterPartitionsSync_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
+    }
+    /**
+     * <pre>
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder() {
+      return getReplicationAlterPartitionsSync();
     }
 
     public static final int MAX_REPLICA_DELAY_FOR_DISTRIBUTED_QUERIES_FIELD_NUMBER = 6;
@@ -9924,56 +11928,6 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getFallbackToStaleReplicasForDistributedQueriesOrBuilder() {
       return getFallbackToStaleReplicasForDistributedQueries();
-    }
-
-    public static final int REPLICATION_ALTER_PARTITIONS_SYNC_FIELD_NUMBER = 42;
-    private com.google.protobuf.Int64Value replicationAlterPartitionsSync_;
-    /**
-     * <pre>
-     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**-do not wait for replicas.
-     * * **1**-only wait for own execution (default).
-     * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-     * @return Whether the replicationAlterPartitionsSync field is set.
-     */
-    @java.lang.Override
-    public boolean hasReplicationAlterPartitionsSync() {
-      return replicationAlterPartitionsSync_ != null;
-    }
-    /**
-     * <pre>
-     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**-do not wait for replicas.
-     * * **1**-only wait for own execution (default).
-     * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-     * @return The replicationAlterPartitionsSync.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getReplicationAlterPartitionsSync() {
-      return replicationAlterPartitionsSync_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
-    }
-    /**
-     * <pre>
-     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**-do not wait for replicas.
-     * * **1**-only wait for own execution (default).
-     * * **2**-wait for all replicas.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder() {
-      return getReplicationAlterPartitionsSync();
     }
 
     public static final int DISTRIBUTED_PRODUCT_MODE_FIELD_NUMBER = 43;
@@ -10138,115 +12092,6 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getSkipUnavailableShardsOrBuilder() {
       return getSkipUnavailableShards();
-    }
-
-    public static final int COMPILE_FIELD_NUMBER = 44;
-    private com.google.protobuf.BoolValue compile_;
-    /**
-     * <pre>
-     * Enables or disables query compilation.
-     * If you execute a lot of structurally identical queries, then enable this setting.
-     * As a result, such queries may be executed faster due to use of queries' compiled parts.
-     * Use this setting in combination with [min_count_to_compile] setting.
-     * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue compile = 44;</code>
-     * @return Whether the compile field is set.
-     */
-    @java.lang.Override
-    public boolean hasCompile() {
-      return compile_ != null;
-    }
-    /**
-     * <pre>
-     * Enables or disables query compilation.
-     * If you execute a lot of structurally identical queries, then enable this setting.
-     * As a result, such queries may be executed faster due to use of queries' compiled parts.
-     * Use this setting in combination with [min_count_to_compile] setting.
-     * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue compile = 44;</code>
-     * @return The compile.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getCompile() {
-      return compile_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
-    }
-    /**
-     * <pre>
-     * Enables or disables query compilation.
-     * If you execute a lot of structurally identical queries, then enable this setting.
-     * As a result, such queries may be executed faster due to use of queries' compiled parts.
-     * Use this setting in combination with [min_count_to_compile] setting.
-     * Default value: **false** (compilation is disabled).
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue compile = 44;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder() {
-      return getCompile();
-    }
-
-    public static final int MIN_COUNT_TO_COMPILE_FIELD_NUMBER = 45;
-    private com.google.protobuf.Int64Value minCountToCompile_;
-    /**
-     * <pre>
-     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-     * Minimum value: **0** (default: **3**).
-     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-     * It is recommended to set this value only for testing purposes.
-     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the minCountToCompile field is set.
-     */
-    @java.lang.Override
-    public boolean hasMinCountToCompile() {
-      return minCountToCompile_ != null;
-    }
-    /**
-     * <pre>
-     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-     * Minimum value: **0** (default: **3**).
-     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-     * It is recommended to set this value only for testing purposes.
-     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The minCountToCompile.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getMinCountToCompile() {
-      return minCountToCompile_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
-    }
-    /**
-     * <pre>
-     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-     * Minimum value: **0** (default: **3**).
-     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-     * It is recommended to set this value only for testing purposes.
-     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder() {
-      return getMinCountToCompile();
     }
 
     public static final int COMPILE_EXPRESSIONS_FIELD_NUMBER = 46;
@@ -11301,6 +13146,82 @@ public final class UserOuterClass {
       return getMaxNetworkBandwidthForUser();
     }
 
+    public static final int MAX_PARTITIONS_PER_INSERT_BLOCK_FIELD_NUMBER = 102;
+    private com.google.protobuf.Int64Value maxPartitionsPerInsertBlock_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+     * @return Whether the maxPartitionsPerInsertBlock field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxPartitionsPerInsertBlock() {
+      return maxPartitionsPerInsertBlock_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+     * @return The maxPartitionsPerInsertBlock.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxPartitionsPerInsertBlock() {
+      return maxPartitionsPerInsertBlock_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPartitionsPerInsertBlock_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxPartitionsPerInsertBlockOrBuilder() {
+      return getMaxPartitionsPerInsertBlock();
+    }
+
+    public static final int MAX_CONCURRENT_QUERIES_FOR_USER_FIELD_NUMBER = 103;
+    private com.google.protobuf.Int64Value maxConcurrentQueriesForUser_;
+    /**
+     * <pre>
+     * The maximum number of concurrent requests per user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+     * @return Whether the maxConcurrentQueriesForUser field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxConcurrentQueriesForUser() {
+      return maxConcurrentQueriesForUser_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of concurrent requests per user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+     * @return The maxConcurrentQueriesForUser.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxConcurrentQueriesForUser() {
+      return maxConcurrentQueriesForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConcurrentQueriesForUser_;
+    }
+    /**
+     * <pre>
+     * The maximum number of concurrent requests per user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesForUserOrBuilder() {
+      return getMaxConcurrentQueriesForUser();
+    }
+
     public static final int FORCE_INDEX_BY_DATE_FIELD_NUMBER = 59;
     private com.google.protobuf.BoolValue forceIndexByDate_;
     /**
@@ -12337,6 +14258,122 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
     }
 
+    public static final int JOIN_ALGORITHM_FIELD_NUMBER = 104;
+    private java.util.List<java.lang.Integer> joinAlgorithm_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm> joinAlgorithm_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm>() {
+              public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @return A list containing the joinAlgorithm.
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm> getJoinAlgorithmList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm>(joinAlgorithm_, joinAlgorithm_converter_);
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @return The count of joinAlgorithm.
+     */
+    @java.lang.Override
+    public int getJoinAlgorithmCount() {
+      return joinAlgorithm_.size();
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @param index The index of the element to return.
+     * @return The joinAlgorithm at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm getJoinAlgorithm(int index) {
+      return joinAlgorithm_converter_.convert(joinAlgorithm_.get(index));
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @return A list containing the enum numeric values on the wire for joinAlgorithm.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getJoinAlgorithmValueList() {
+      return joinAlgorithm_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of joinAlgorithm at the given index.
+     */
+    @java.lang.Override
+    public int getJoinAlgorithmValue(int index) {
+      return joinAlgorithm_.get(index);
+    }
+    private int joinAlgorithmMemoizedSerializedSize;
+
+    public static final int ANY_JOIN_DISTINCT_RIGHT_TABLE_KEYS_FIELD_NUMBER = 105;
+    private com.google.protobuf.BoolValue anyJoinDistinctRightTableKeys_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+     * @return Whether the anyJoinDistinctRightTableKeys field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnyJoinDistinctRightTableKeys() {
+      return anyJoinDistinctRightTableKeys_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+     * @return The anyJoinDistinctRightTableKeys.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAnyJoinDistinctRightTableKeys() {
+      return anyJoinDistinctRightTableKeys_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : anyJoinDistinctRightTableKeys_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAnyJoinDistinctRightTableKeysOrBuilder() {
+      return getAnyJoinDistinctRightTableKeys();
+    }
+
     public static final int MAX_COLUMNS_TO_READ_FIELD_NUMBER = 32;
     private com.google.protobuf.Int64Value maxColumnsToRead_;
     /**
@@ -12869,6 +14906,109 @@ public final class UserOuterClass {
       return getInputFormatDefaultsForOmittedFields();
     }
 
+    public static final int INPUT_FORMAT_NULL_AS_DEFAULT_FIELD_NUMBER = 106;
+    private com.google.protobuf.BoolValue inputFormatNullAsDefault_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+     * @return Whether the inputFormatNullAsDefault field is set.
+     */
+    @java.lang.Override
+    public boolean hasInputFormatNullAsDefault() {
+      return inputFormatNullAsDefault_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+     * @return The inputFormatNullAsDefault.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInputFormatNullAsDefault() {
+      return inputFormatNullAsDefault_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatNullAsDefault_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInputFormatNullAsDefaultOrBuilder() {
+      return getInputFormatNullAsDefault();
+    }
+
+    public static final int DATE_TIME_INPUT_FORMAT_FIELD_NUMBER = 107;
+    private int dateTimeInputFormat_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+     * @return The enum numeric value on the wire for dateTimeInputFormat.
+     */
+    @java.lang.Override public int getDateTimeInputFormatValue() {
+      return dateTimeInputFormat_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+     * @return The dateTimeInputFormat.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat getDateTimeInputFormat() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat.valueOf(dateTimeInputFormat_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat.UNRECOGNIZED : result;
+    }
+
+    public static final int INPUT_FORMAT_WITH_NAMES_USE_HEADER_FIELD_NUMBER = 108;
+    private com.google.protobuf.BoolValue inputFormatWithNamesUseHeader_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+     * @return Whether the inputFormatWithNamesUseHeader field is set.
+     */
+    @java.lang.Override
+    public boolean hasInputFormatWithNamesUseHeader() {
+      return inputFormatWithNamesUseHeader_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+     * @return The inputFormatWithNamesUseHeader.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInputFormatWithNamesUseHeader() {
+      return inputFormatWithNamesUseHeader_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatWithNamesUseHeader_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInputFormatWithNamesUseHeaderOrBuilder() {
+      return getInputFormatWithNamesUseHeader();
+    }
+
     public static final int OUTPUT_FORMAT_JSON_QUOTE_64BIT_INTEGERS_FIELD_NUMBER = 63;
     private com.google.protobuf.BoolValue outputFormatJsonQuote64BitIntegers_;
     /**
@@ -12957,6 +15097,33 @@ public final class UserOuterClass {
       return getOutputFormatJsonQuoteDenormals();
     }
 
+    public static final int DATE_TIME_OUTPUT_FORMAT_FIELD_NUMBER = 109;
+    private int dateTimeOutputFormat_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+     * @return The enum numeric value on the wire for dateTimeOutputFormat.
+     */
+    @java.lang.Override public int getDateTimeOutputFormatValue() {
+      return dateTimeOutputFormat_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+     * @return The dateTimeOutputFormat.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat getDateTimeOutputFormat() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat.valueOf(dateTimeOutputFormat_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat.UNRECOGNIZED : result;
+    }
+
     public static final int LOW_CARDINALITY_ALLOW_IN_NATIVE_FORMAT_FIELD_NUMBER = 78;
     private com.google.protobuf.BoolValue lowCardinalityAllowInNativeFormat_;
     /**
@@ -13019,6 +15186,44 @@ public final class UserOuterClass {
       return getLowCardinalityAllowInNativeFormat();
     }
 
+    public static final int ALLOW_SUSPICIOUS_LOW_CARDINALITY_TYPES_FIELD_NUMBER = 110;
+    private com.google.protobuf.BoolValue allowSuspiciousLowCardinalityTypes_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+     * @return Whether the allowSuspiciousLowCardinalityTypes field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowSuspiciousLowCardinalityTypes() {
+      return allowSuspiciousLowCardinalityTypes_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+     * @return The allowSuspiciousLowCardinalityTypes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAllowSuspiciousLowCardinalityTypes() {
+      return allowSuspiciousLowCardinalityTypes_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowSuspiciousLowCardinalityTypes_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAllowSuspiciousLowCardinalityTypesOrBuilder() {
+      return getAllowSuspiciousLowCardinalityTypes();
+    }
+
     public static final int EMPTY_RESULT_FOR_AGGREGATION_BY_EMPTY_SET_FIELD_NUMBER = 79;
     private com.google.protobuf.BoolValue emptyResultForAggregationByEmptySet_;
     /**
@@ -13061,84 +15266,6 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEmptyResultForAggregationByEmptySetOrBuilder() {
       return getEmptyResultForAggregationByEmptySet();
-    }
-
-    public static final int JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER = 93;
-    private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
-    /**
-     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-     * @return Whether the joinedSubqueryRequiresAlias field is set.
-     */
-    @java.lang.Override
-    public boolean hasJoinedSubqueryRequiresAlias() {
-      return joinedSubqueryRequiresAlias_ != null;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-     * @return The joinedSubqueryRequiresAlias.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
-      return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
-      return getJoinedSubqueryRequiresAlias();
-    }
-
-    public static final int JOIN_USE_NULLS_FIELD_NUMBER = 94;
-    private com.google.protobuf.BoolValue joinUseNulls_;
-    /**
-     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-     * @return Whether the joinUseNulls field is set.
-     */
-    @java.lang.Override
-    public boolean hasJoinUseNulls() {
-      return joinUseNulls_ != null;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-     * @return The joinUseNulls.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getJoinUseNulls() {
-      return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
-      return getJoinUseNulls();
-    }
-
-    public static final int TRANSFORM_NULL_IN_FIELD_NUMBER = 95;
-    private com.google.protobuf.BoolValue transformNullIn_;
-    /**
-     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-     * @return Whether the transformNullIn field is set.
-     */
-    @java.lang.Override
-    public boolean hasTransformNullIn() {
-      return transformNullIn_ != null;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-     * @return The transformNullIn.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getTransformNullIn() {
-      return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
-      return getTransformNullIn();
     }
 
     public static final int HTTP_CONNECTION_TIMEOUT_FIELD_NUMBER = 65;
@@ -13443,6 +15570,160 @@ public final class UserOuterClass {
       return getAddHttpCorsHeader();
     }
 
+    public static final int CANCEL_HTTP_READONLY_QUERIES_ON_CLIENT_CLOSE_FIELD_NUMBER = 111;
+    private com.google.protobuf.BoolValue cancelHttpReadonlyQueriesOnClientClose_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+     * @return Whether the cancelHttpReadonlyQueriesOnClientClose field is set.
+     */
+    @java.lang.Override
+    public boolean hasCancelHttpReadonlyQueriesOnClientClose() {
+      return cancelHttpReadonlyQueriesOnClientClose_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+     * @return The cancelHttpReadonlyQueriesOnClientClose.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getCancelHttpReadonlyQueriesOnClientClose() {
+      return cancelHttpReadonlyQueriesOnClientClose_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : cancelHttpReadonlyQueriesOnClientClose_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getCancelHttpReadonlyQueriesOnClientCloseOrBuilder() {
+      return getCancelHttpReadonlyQueriesOnClientClose();
+    }
+
+    public static final int MAX_HTTP_GET_REDIRECTS_FIELD_NUMBER = 112;
+    private com.google.protobuf.Int64Value maxHttpGetRedirects_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+     * @return Whether the maxHttpGetRedirects field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxHttpGetRedirects() {
+      return maxHttpGetRedirects_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+     * @return The maxHttpGetRedirects.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxHttpGetRedirects() {
+      return maxHttpGetRedirects_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxHttpGetRedirects_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxHttpGetRedirectsOrBuilder() {
+      return getMaxHttpGetRedirects();
+    }
+
+    public static final int JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER = 93;
+    private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return Whether the joinedSubqueryRequiresAlias field is set.
+     */
+    @java.lang.Override
+    public boolean hasJoinedSubqueryRequiresAlias() {
+      return joinedSubqueryRequiresAlias_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     * @return The joinedSubqueryRequiresAlias.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
+      return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
+      return getJoinedSubqueryRequiresAlias();
+    }
+
+    public static final int JOIN_USE_NULLS_FIELD_NUMBER = 94;
+    private com.google.protobuf.BoolValue joinUseNulls_;
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return Whether the joinUseNulls field is set.
+     */
+    @java.lang.Override
+    public boolean hasJoinUseNulls() {
+      return joinUseNulls_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     * @return The joinUseNulls.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getJoinUseNulls() {
+      return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
+      return getJoinUseNulls();
+    }
+
+    public static final int TRANSFORM_NULL_IN_FIELD_NUMBER = 95;
+    private com.google.protobuf.BoolValue transformNullIn_;
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return Whether the transformNullIn field is set.
+     */
+    @java.lang.Override
+    public boolean hasTransformNullIn() {
+      return transformNullIn_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     * @return The transformNullIn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getTransformNullIn() {
+      return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
+      return getTransformNullIn();
+    }
+
     public static final int QUOTA_MODE_FIELD_NUMBER = 80;
     private int quotaMode_;
     /**
@@ -13470,6 +15751,577 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.UNRECOGNIZED : result;
     }
 
+    public static final int FLATTEN_NESTED_FIELD_NUMBER = 113;
+    private com.google.protobuf.BoolValue flattenNested_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+     * @return Whether the flattenNested field is set.
+     */
+    @java.lang.Override
+    public boolean hasFlattenNested() {
+      return flattenNested_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+     * @return The flattenNested.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getFlattenNested() {
+      return flattenNested_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : flattenNested_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getFlattenNestedOrBuilder() {
+      return getFlattenNested();
+    }
+
+    public static final int FORMAT_REGEXP_FIELD_NUMBER = 114;
+    private volatile java.lang.Object formatRegexp_;
+    /**
+     * <pre>
+     * Regular expression (for Regexp format)
+     * </pre>
+     *
+     * <code>string format_regexp = 114;</code>
+     * @return The formatRegexp.
+     */
+    @java.lang.Override
+    public java.lang.String getFormatRegexp() {
+      java.lang.Object ref = formatRegexp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        formatRegexp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Regular expression (for Regexp format)
+     * </pre>
+     *
+     * <code>string format_regexp = 114;</code>
+     * @return The bytes for formatRegexp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFormatRegexpBytes() {
+      java.lang.Object ref = formatRegexp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        formatRegexp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FORMAT_REGEXP_ESCAPING_RULE_FIELD_NUMBER = 115;
+    private int formatRegexpEscapingRule_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+     * @return The enum numeric value on the wire for formatRegexpEscapingRule.
+     */
+    @java.lang.Override public int getFormatRegexpEscapingRuleValue() {
+      return formatRegexpEscapingRule_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+     * @return The formatRegexpEscapingRule.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule getFormatRegexpEscapingRule() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule.valueOf(formatRegexpEscapingRule_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule.UNRECOGNIZED : result;
+    }
+
+    public static final int FORMAT_REGEXP_SKIP_UNMATCHED_FIELD_NUMBER = 116;
+    private com.google.protobuf.BoolValue formatRegexpSkipUnmatched_;
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+     * @return Whether the formatRegexpSkipUnmatched field is set.
+     */
+    @java.lang.Override
+    public boolean hasFormatRegexpSkipUnmatched() {
+      return formatRegexpSkipUnmatched_ != null;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+     * @return The formatRegexpSkipUnmatched.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getFormatRegexpSkipUnmatched() {
+      return formatRegexpSkipUnmatched_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : formatRegexpSkipUnmatched_;
+    }
+    /**
+     * <pre>
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getFormatRegexpSkipUnmatchedOrBuilder() {
+      return getFormatRegexpSkipUnmatched();
+    }
+
+    public static final int ASYNC_INSERT_FIELD_NUMBER = 117;
+    private com.google.protobuf.BoolValue asyncInsert_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+     * @return Whether the asyncInsert field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsyncInsert() {
+      return asyncInsert_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+     * @return The asyncInsert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAsyncInsert() {
+      return asyncInsert_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asyncInsert_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAsyncInsertOrBuilder() {
+      return getAsyncInsert();
+    }
+
+    public static final int ASYNC_INSERT_THREADS_FIELD_NUMBER = 118;
+    private com.google.protobuf.Int64Value asyncInsertThreads_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+     * @return Whether the asyncInsertThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsyncInsertThreads() {
+      return asyncInsertThreads_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+     * @return The asyncInsertThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsyncInsertThreads() {
+      return asyncInsertThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertThreads_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertThreadsOrBuilder() {
+      return getAsyncInsertThreads();
+    }
+
+    public static final int WAIT_FOR_ASYNC_INSERT_FIELD_NUMBER = 119;
+    private com.google.protobuf.BoolValue waitForAsyncInsert_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+     * @return Whether the waitForAsyncInsert field is set.
+     */
+    @java.lang.Override
+    public boolean hasWaitForAsyncInsert() {
+      return waitForAsyncInsert_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+     * @return The waitForAsyncInsert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getWaitForAsyncInsert() {
+      return waitForAsyncInsert_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : waitForAsyncInsert_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getWaitForAsyncInsertOrBuilder() {
+      return getWaitForAsyncInsert();
+    }
+
+    public static final int WAIT_FOR_ASYNC_INSERT_TIMEOUT_FIELD_NUMBER = 120;
+    private com.google.protobuf.Int64Value waitForAsyncInsertTimeout_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+     * @return Whether the waitForAsyncInsertTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasWaitForAsyncInsertTimeout() {
+      return waitForAsyncInsertTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+     * @return The waitForAsyncInsertTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getWaitForAsyncInsertTimeout() {
+      return waitForAsyncInsertTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : waitForAsyncInsertTimeout_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getWaitForAsyncInsertTimeoutOrBuilder() {
+      return getWaitForAsyncInsertTimeout();
+    }
+
+    public static final int ASYNC_INSERT_MAX_DATA_SIZE_FIELD_NUMBER = 121;
+    private com.google.protobuf.Int64Value asyncInsertMaxDataSize_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+     * @return Whether the asyncInsertMaxDataSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsyncInsertMaxDataSize() {
+      return asyncInsertMaxDataSize_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+     * @return The asyncInsertMaxDataSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsyncInsertMaxDataSize() {
+      return asyncInsertMaxDataSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertMaxDataSize_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertMaxDataSizeOrBuilder() {
+      return getAsyncInsertMaxDataSize();
+    }
+
+    public static final int ASYNC_INSERT_BUSY_TIMEOUT_FIELD_NUMBER = 122;
+    private com.google.protobuf.Int64Value asyncInsertBusyTimeout_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+     * @return Whether the asyncInsertBusyTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsyncInsertBusyTimeout() {
+      return asyncInsertBusyTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+     * @return The asyncInsertBusyTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsyncInsertBusyTimeout() {
+      return asyncInsertBusyTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertBusyTimeout_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertBusyTimeoutOrBuilder() {
+      return getAsyncInsertBusyTimeout();
+    }
+
+    public static final int ASYNC_INSERT_STALE_TIMEOUT_FIELD_NUMBER = 123;
+    private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     * @return Whether the asyncInsertStaleTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsyncInsertStaleTimeout() {
+      return asyncInsertStaleTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     * @return The asyncInsertStaleTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsyncInsertStaleTimeout() {
+      return asyncInsertStaleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+    }
+    /**
+     * <pre>
+     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder() {
+      return getAsyncInsertStaleTimeout();
+    }
+
+    public static final int MEMORY_PROFILER_STEP_FIELD_NUMBER = 124;
+    private com.google.protobuf.Int64Value memoryProfilerStep_;
+    /**
+     * <pre>
+     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+     * @return Whether the memoryProfilerStep field is set.
+     */
+    @java.lang.Override
+    public boolean hasMemoryProfilerStep() {
+      return memoryProfilerStep_ != null;
+    }
+    /**
+     * <pre>
+     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+     * @return The memoryProfilerStep.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMemoryProfilerStep() {
+      return memoryProfilerStep_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryProfilerStep_;
+    }
+    /**
+     * <pre>
+     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMemoryProfilerStepOrBuilder() {
+      return getMemoryProfilerStep();
+    }
+
+    public static final int MEMORY_PROFILER_SAMPLE_PROBABILITY_FIELD_NUMBER = 125;
+    private com.google.protobuf.DoubleValue memoryProfilerSampleProbability_;
+    /**
+     * <pre>
+     * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+     * @return Whether the memoryProfilerSampleProbability field is set.
+     */
+    @java.lang.Override
+    public boolean hasMemoryProfilerSampleProbability() {
+      return memoryProfilerSampleProbability_ != null;
+    }
+    /**
+     * <pre>
+     * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+     * @return The memoryProfilerSampleProbability.
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValue getMemoryProfilerSampleProbability() {
+      return memoryProfilerSampleProbability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : memoryProfilerSampleProbability_;
+    }
+    /**
+     * <pre>
+     * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getMemoryProfilerSampleProbabilityOrBuilder() {
+      return getMemoryProfilerSampleProbability();
+    }
+
+    public static final int COMPILE_FIELD_NUMBER = 44;
+    private com.google.protobuf.BoolValue compile_;
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the compile field is set.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public boolean hasCompile() {
+      return compile_ != null;
+    }
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+     * @deprecated
+     * @return The compile.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.BoolValue getCompile() {
+      return compile_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
+    }
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder() {
+      return getCompile();
+    }
+
+    public static final int MIN_COUNT_TO_COMPILE_FIELD_NUMBER = 45;
+    private com.google.protobuf.Int64Value minCountToCompile_;
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+     * @deprecated
+     * @return Whether the minCountToCompile field is set.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public boolean hasMinCountToCompile() {
+      return minCountToCompile_ != null;
+    }
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+     * @deprecated
+     * @return The minCountToCompile.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.Int64Value getMinCountToCompile() {
+      return minCountToCompile_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
+    }
+    /**
+     * <pre>
+     * The setting is deprecated and has no effect.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder() {
+      return getMinCountToCompile();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13484,6 +16336,7 @@ public final class UserOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (readonly_ != null) {
         output.writeMessage(1, getReadonly());
       }
@@ -13762,6 +16615,100 @@ public final class UserOuterClass {
       }
       if (transformNullIn_ != null) {
         output.writeMessage(95, getTransformNullIn());
+      }
+      if (allowIntrospectionFunctions_ != null) {
+        output.writeMessage(96, getAllowIntrospectionFunctions());
+      }
+      if (connectTimeoutWithFailover_ != null) {
+        output.writeMessage(97, getConnectTimeoutWithFailover());
+      }
+      if (timeoutBeforeCheckingExecutionSpeed_ != null) {
+        output.writeMessage(98, getTimeoutBeforeCheckingExecutionSpeed());
+      }
+      if (insertQuorumParallel_ != null) {
+        output.writeMessage(99, getInsertQuorumParallel());
+      }
+      if (insertNullAsDefault_ != null) {
+        output.writeMessage(100, getInsertNullAsDefault());
+      }
+      if (deduplicateBlocksInDependentMaterializedViews_ != null) {
+        output.writeMessage(101, getDeduplicateBlocksInDependentMaterializedViews());
+      }
+      if (maxPartitionsPerInsertBlock_ != null) {
+        output.writeMessage(102, getMaxPartitionsPerInsertBlock());
+      }
+      if (maxConcurrentQueriesForUser_ != null) {
+        output.writeMessage(103, getMaxConcurrentQueriesForUser());
+      }
+      if (getJoinAlgorithmList().size() > 0) {
+        output.writeUInt32NoTag(834);
+        output.writeUInt32NoTag(joinAlgorithmMemoizedSerializedSize);
+      }
+      for (int i = 0; i < joinAlgorithm_.size(); i++) {
+        output.writeEnumNoTag(joinAlgorithm_.get(i));
+      }
+      if (anyJoinDistinctRightTableKeys_ != null) {
+        output.writeMessage(105, getAnyJoinDistinctRightTableKeys());
+      }
+      if (inputFormatNullAsDefault_ != null) {
+        output.writeMessage(106, getInputFormatNullAsDefault());
+      }
+      if (dateTimeInputFormat_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat.DATE_TIME_INPUT_FORMAT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(107, dateTimeInputFormat_);
+      }
+      if (inputFormatWithNamesUseHeader_ != null) {
+        output.writeMessage(108, getInputFormatWithNamesUseHeader());
+      }
+      if (dateTimeOutputFormat_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat.DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(109, dateTimeOutputFormat_);
+      }
+      if (allowSuspiciousLowCardinalityTypes_ != null) {
+        output.writeMessage(110, getAllowSuspiciousLowCardinalityTypes());
+      }
+      if (cancelHttpReadonlyQueriesOnClientClose_ != null) {
+        output.writeMessage(111, getCancelHttpReadonlyQueriesOnClientClose());
+      }
+      if (maxHttpGetRedirects_ != null) {
+        output.writeMessage(112, getMaxHttpGetRedirects());
+      }
+      if (flattenNested_ != null) {
+        output.writeMessage(113, getFlattenNested());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatRegexp_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 114, formatRegexp_);
+      }
+      if (formatRegexpEscapingRule_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule.FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(115, formatRegexpEscapingRule_);
+      }
+      if (formatRegexpSkipUnmatched_ != null) {
+        output.writeMessage(116, getFormatRegexpSkipUnmatched());
+      }
+      if (asyncInsert_ != null) {
+        output.writeMessage(117, getAsyncInsert());
+      }
+      if (asyncInsertThreads_ != null) {
+        output.writeMessage(118, getAsyncInsertThreads());
+      }
+      if (waitForAsyncInsert_ != null) {
+        output.writeMessage(119, getWaitForAsyncInsert());
+      }
+      if (waitForAsyncInsertTimeout_ != null) {
+        output.writeMessage(120, getWaitForAsyncInsertTimeout());
+      }
+      if (asyncInsertMaxDataSize_ != null) {
+        output.writeMessage(121, getAsyncInsertMaxDataSize());
+      }
+      if (asyncInsertBusyTimeout_ != null) {
+        output.writeMessage(122, getAsyncInsertBusyTimeout());
+      }
+      if (asyncInsertStaleTimeout_ != null) {
+        output.writeMessage(123, getAsyncInsertStaleTimeout());
+      }
+      if (memoryProfilerStep_ != null) {
+        output.writeMessage(124, getMemoryProfilerStep());
+      }
+      if (memoryProfilerSampleProbability_ != null) {
+        output.writeMessage(125, getMemoryProfilerSampleProbability());
       }
       unknownFields.writeTo(output);
     }
@@ -14144,6 +17091,133 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(95, getTransformNullIn());
       }
+      if (allowIntrospectionFunctions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(96, getAllowIntrospectionFunctions());
+      }
+      if (connectTimeoutWithFailover_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(97, getConnectTimeoutWithFailover());
+      }
+      if (timeoutBeforeCheckingExecutionSpeed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(98, getTimeoutBeforeCheckingExecutionSpeed());
+      }
+      if (insertQuorumParallel_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getInsertQuorumParallel());
+      }
+      if (insertNullAsDefault_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, getInsertNullAsDefault());
+      }
+      if (deduplicateBlocksInDependentMaterializedViews_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, getDeduplicateBlocksInDependentMaterializedViews());
+      }
+      if (maxPartitionsPerInsertBlock_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(102, getMaxPartitionsPerInsertBlock());
+      }
+      if (maxConcurrentQueriesForUser_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(103, getMaxConcurrentQueriesForUser());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < joinAlgorithm_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(joinAlgorithm_.get(i));
+        }
+        size += dataSize;
+        if (!getJoinAlgorithmList().isEmpty()) {  size += 2;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }joinAlgorithmMemoizedSerializedSize = dataSize;
+      }
+      if (anyJoinDistinctRightTableKeys_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(105, getAnyJoinDistinctRightTableKeys());
+      }
+      if (inputFormatNullAsDefault_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(106, getInputFormatNullAsDefault());
+      }
+      if (dateTimeInputFormat_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat.DATE_TIME_INPUT_FORMAT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(107, dateTimeInputFormat_);
+      }
+      if (inputFormatWithNamesUseHeader_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(108, getInputFormatWithNamesUseHeader());
+      }
+      if (dateTimeOutputFormat_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat.DATE_TIME_OUTPUT_FORMAT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(109, dateTimeOutputFormat_);
+      }
+      if (allowSuspiciousLowCardinalityTypes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(110, getAllowSuspiciousLowCardinalityTypes());
+      }
+      if (cancelHttpReadonlyQueriesOnClientClose_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(111, getCancelHttpReadonlyQueriesOnClientClose());
+      }
+      if (maxHttpGetRedirects_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(112, getMaxHttpGetRedirects());
+      }
+      if (flattenNested_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(113, getFlattenNested());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatRegexp_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(114, formatRegexp_);
+      }
+      if (formatRegexpEscapingRule_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule.FORMAT_REGEXP_ESCAPING_RULE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(115, formatRegexpEscapingRule_);
+      }
+      if (formatRegexpSkipUnmatched_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(116, getFormatRegexpSkipUnmatched());
+      }
+      if (asyncInsert_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(117, getAsyncInsert());
+      }
+      if (asyncInsertThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(118, getAsyncInsertThreads());
+      }
+      if (waitForAsyncInsert_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(119, getWaitForAsyncInsert());
+      }
+      if (waitForAsyncInsertTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(120, getWaitForAsyncInsertTimeout());
+      }
+      if (asyncInsertMaxDataSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(121, getAsyncInsertMaxDataSize());
+      }
+      if (asyncInsertBusyTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(122, getAsyncInsertBusyTimeout());
+      }
+      if (asyncInsertStaleTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(123, getAsyncInsertStaleTimeout());
+      }
+      if (memoryProfilerStep_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(124, getMemoryProfilerStep());
+      }
+      if (memoryProfilerSampleProbability_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(125, getMemoryProfilerSampleProbability());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14169,15 +17243,20 @@ public final class UserOuterClass {
         if (!getAllowDdl()
             .equals(other.getAllowDdl())) return false;
       }
-      if (hasInsertQuorum() != other.hasInsertQuorum()) return false;
-      if (hasInsertQuorum()) {
-        if (!getInsertQuorum()
-            .equals(other.getInsertQuorum())) return false;
+      if (hasAllowIntrospectionFunctions() != other.hasAllowIntrospectionFunctions()) return false;
+      if (hasAllowIntrospectionFunctions()) {
+        if (!getAllowIntrospectionFunctions()
+            .equals(other.getAllowIntrospectionFunctions())) return false;
       }
       if (hasConnectTimeout() != other.hasConnectTimeout()) return false;
       if (hasConnectTimeout()) {
         if (!getConnectTimeout()
             .equals(other.getConnectTimeout())) return false;
+      }
+      if (hasConnectTimeoutWithFailover() != other.hasConnectTimeoutWithFailover()) return false;
+      if (hasConnectTimeoutWithFailover()) {
+        if (!getConnectTimeoutWithFailover()
+            .equals(other.getConnectTimeoutWithFailover())) return false;
       }
       if (hasReceiveTimeout() != other.hasReceiveTimeout()) return false;
       if (hasReceiveTimeout()) {
@@ -14189,15 +17268,45 @@ public final class UserOuterClass {
         if (!getSendTimeout()
             .equals(other.getSendTimeout())) return false;
       }
+      if (hasTimeoutBeforeCheckingExecutionSpeed() != other.hasTimeoutBeforeCheckingExecutionSpeed()) return false;
+      if (hasTimeoutBeforeCheckingExecutionSpeed()) {
+        if (!getTimeoutBeforeCheckingExecutionSpeed()
+            .equals(other.getTimeoutBeforeCheckingExecutionSpeed())) return false;
+      }
+      if (hasInsertQuorum() != other.hasInsertQuorum()) return false;
+      if (hasInsertQuorum()) {
+        if (!getInsertQuorum()
+            .equals(other.getInsertQuorum())) return false;
+      }
       if (hasInsertQuorumTimeout() != other.hasInsertQuorumTimeout()) return false;
       if (hasInsertQuorumTimeout()) {
         if (!getInsertQuorumTimeout()
             .equals(other.getInsertQuorumTimeout())) return false;
       }
+      if (hasInsertQuorumParallel() != other.hasInsertQuorumParallel()) return false;
+      if (hasInsertQuorumParallel()) {
+        if (!getInsertQuorumParallel()
+            .equals(other.getInsertQuorumParallel())) return false;
+      }
+      if (hasInsertNullAsDefault() != other.hasInsertNullAsDefault()) return false;
+      if (hasInsertNullAsDefault()) {
+        if (!getInsertNullAsDefault()
+            .equals(other.getInsertNullAsDefault())) return false;
+      }
       if (hasSelectSequentialConsistency() != other.hasSelectSequentialConsistency()) return false;
       if (hasSelectSequentialConsistency()) {
         if (!getSelectSequentialConsistency()
             .equals(other.getSelectSequentialConsistency())) return false;
+      }
+      if (hasDeduplicateBlocksInDependentMaterializedViews() != other.hasDeduplicateBlocksInDependentMaterializedViews()) return false;
+      if (hasDeduplicateBlocksInDependentMaterializedViews()) {
+        if (!getDeduplicateBlocksInDependentMaterializedViews()
+            .equals(other.getDeduplicateBlocksInDependentMaterializedViews())) return false;
+      }
+      if (hasReplicationAlterPartitionsSync() != other.hasReplicationAlterPartitionsSync()) return false;
+      if (hasReplicationAlterPartitionsSync()) {
+        if (!getReplicationAlterPartitionsSync()
+            .equals(other.getReplicationAlterPartitionsSync())) return false;
       }
       if (hasMaxReplicaDelayForDistributedQueries() != other.hasMaxReplicaDelayForDistributedQueries()) return false;
       if (hasMaxReplicaDelayForDistributedQueries()) {
@@ -14208,11 +17317,6 @@ public final class UserOuterClass {
       if (hasFallbackToStaleReplicasForDistributedQueries()) {
         if (!getFallbackToStaleReplicasForDistributedQueries()
             .equals(other.getFallbackToStaleReplicasForDistributedQueries())) return false;
-      }
-      if (hasReplicationAlterPartitionsSync() != other.hasReplicationAlterPartitionsSync()) return false;
-      if (hasReplicationAlterPartitionsSync()) {
-        if (!getReplicationAlterPartitionsSync()
-            .equals(other.getReplicationAlterPartitionsSync())) return false;
       }
       if (distributedProductMode_ != other.distributedProductMode_) return false;
       if (hasDistributedAggregationMemoryEfficient() != other.hasDistributedAggregationMemoryEfficient()) return false;
@@ -14229,16 +17333,6 @@ public final class UserOuterClass {
       if (hasSkipUnavailableShards()) {
         if (!getSkipUnavailableShards()
             .equals(other.getSkipUnavailableShards())) return false;
-      }
-      if (hasCompile() != other.hasCompile()) return false;
-      if (hasCompile()) {
-        if (!getCompile()
-            .equals(other.getCompile())) return false;
-      }
-      if (hasMinCountToCompile() != other.hasMinCountToCompile()) return false;
-      if (hasMinCountToCompile()) {
-        if (!getMinCountToCompile()
-            .equals(other.getMinCountToCompile())) return false;
       }
       if (hasCompileExpressions() != other.hasCompileExpressions()) return false;
       if (hasCompileExpressions()) {
@@ -14350,6 +17444,16 @@ public final class UserOuterClass {
         if (!getMaxNetworkBandwidthForUser()
             .equals(other.getMaxNetworkBandwidthForUser())) return false;
       }
+      if (hasMaxPartitionsPerInsertBlock() != other.hasMaxPartitionsPerInsertBlock()) return false;
+      if (hasMaxPartitionsPerInsertBlock()) {
+        if (!getMaxPartitionsPerInsertBlock()
+            .equals(other.getMaxPartitionsPerInsertBlock())) return false;
+      }
+      if (hasMaxConcurrentQueriesForUser() != other.hasMaxConcurrentQueriesForUser()) return false;
+      if (hasMaxConcurrentQueriesForUser()) {
+        if (!getMaxConcurrentQueriesForUser()
+            .equals(other.getMaxConcurrentQueriesForUser())) return false;
+      }
       if (hasForceIndexByDate() != other.hasForceIndexByDate()) return false;
       if (hasForceIndexByDate()) {
         if (!getForceIndexByDate()
@@ -14449,6 +17553,12 @@ public final class UserOuterClass {
             .equals(other.getMaxBytesInJoin())) return false;
       }
       if (joinOverflowMode_ != other.joinOverflowMode_) return false;
+      if (!joinAlgorithm_.equals(other.joinAlgorithm_)) return false;
+      if (hasAnyJoinDistinctRightTableKeys() != other.hasAnyJoinDistinctRightTableKeys()) return false;
+      if (hasAnyJoinDistinctRightTableKeys()) {
+        if (!getAnyJoinDistinctRightTableKeys()
+            .equals(other.getAnyJoinDistinctRightTableKeys())) return false;
+      }
       if (hasMaxColumnsToRead() != other.hasMaxColumnsToRead()) return false;
       if (hasMaxColumnsToRead()) {
         if (!getMaxColumnsToRead()
@@ -14505,6 +17615,17 @@ public final class UserOuterClass {
         if (!getInputFormatDefaultsForOmittedFields()
             .equals(other.getInputFormatDefaultsForOmittedFields())) return false;
       }
+      if (hasInputFormatNullAsDefault() != other.hasInputFormatNullAsDefault()) return false;
+      if (hasInputFormatNullAsDefault()) {
+        if (!getInputFormatNullAsDefault()
+            .equals(other.getInputFormatNullAsDefault())) return false;
+      }
+      if (dateTimeInputFormat_ != other.dateTimeInputFormat_) return false;
+      if (hasInputFormatWithNamesUseHeader() != other.hasInputFormatWithNamesUseHeader()) return false;
+      if (hasInputFormatWithNamesUseHeader()) {
+        if (!getInputFormatWithNamesUseHeader()
+            .equals(other.getInputFormatWithNamesUseHeader())) return false;
+      }
       if (hasOutputFormatJsonQuote64BitIntegers() != other.hasOutputFormatJsonQuote64BitIntegers()) return false;
       if (hasOutputFormatJsonQuote64BitIntegers()) {
         if (!getOutputFormatJsonQuote64BitIntegers()
@@ -14515,30 +17636,21 @@ public final class UserOuterClass {
         if (!getOutputFormatJsonQuoteDenormals()
             .equals(other.getOutputFormatJsonQuoteDenormals())) return false;
       }
+      if (dateTimeOutputFormat_ != other.dateTimeOutputFormat_) return false;
       if (hasLowCardinalityAllowInNativeFormat() != other.hasLowCardinalityAllowInNativeFormat()) return false;
       if (hasLowCardinalityAllowInNativeFormat()) {
         if (!getLowCardinalityAllowInNativeFormat()
             .equals(other.getLowCardinalityAllowInNativeFormat())) return false;
       }
+      if (hasAllowSuspiciousLowCardinalityTypes() != other.hasAllowSuspiciousLowCardinalityTypes()) return false;
+      if (hasAllowSuspiciousLowCardinalityTypes()) {
+        if (!getAllowSuspiciousLowCardinalityTypes()
+            .equals(other.getAllowSuspiciousLowCardinalityTypes())) return false;
+      }
       if (hasEmptyResultForAggregationByEmptySet() != other.hasEmptyResultForAggregationByEmptySet()) return false;
       if (hasEmptyResultForAggregationByEmptySet()) {
         if (!getEmptyResultForAggregationByEmptySet()
             .equals(other.getEmptyResultForAggregationByEmptySet())) return false;
-      }
-      if (hasJoinedSubqueryRequiresAlias() != other.hasJoinedSubqueryRequiresAlias()) return false;
-      if (hasJoinedSubqueryRequiresAlias()) {
-        if (!getJoinedSubqueryRequiresAlias()
-            .equals(other.getJoinedSubqueryRequiresAlias())) return false;
-      }
-      if (hasJoinUseNulls() != other.hasJoinUseNulls()) return false;
-      if (hasJoinUseNulls()) {
-        if (!getJoinUseNulls()
-            .equals(other.getJoinUseNulls())) return false;
-      }
-      if (hasTransformNullIn() != other.hasTransformNullIn()) return false;
-      if (hasTransformNullIn()) {
-        if (!getTransformNullIn()
-            .equals(other.getTransformNullIn())) return false;
       }
       if (hasHttpConnectionTimeout() != other.hasHttpConnectionTimeout()) return false;
       if (hasHttpConnectionTimeout()) {
@@ -14575,7 +17687,100 @@ public final class UserOuterClass {
         if (!getAddHttpCorsHeader()
             .equals(other.getAddHttpCorsHeader())) return false;
       }
+      if (hasCancelHttpReadonlyQueriesOnClientClose() != other.hasCancelHttpReadonlyQueriesOnClientClose()) return false;
+      if (hasCancelHttpReadonlyQueriesOnClientClose()) {
+        if (!getCancelHttpReadonlyQueriesOnClientClose()
+            .equals(other.getCancelHttpReadonlyQueriesOnClientClose())) return false;
+      }
+      if (hasMaxHttpGetRedirects() != other.hasMaxHttpGetRedirects()) return false;
+      if (hasMaxHttpGetRedirects()) {
+        if (!getMaxHttpGetRedirects()
+            .equals(other.getMaxHttpGetRedirects())) return false;
+      }
+      if (hasJoinedSubqueryRequiresAlias() != other.hasJoinedSubqueryRequiresAlias()) return false;
+      if (hasJoinedSubqueryRequiresAlias()) {
+        if (!getJoinedSubqueryRequiresAlias()
+            .equals(other.getJoinedSubqueryRequiresAlias())) return false;
+      }
+      if (hasJoinUseNulls() != other.hasJoinUseNulls()) return false;
+      if (hasJoinUseNulls()) {
+        if (!getJoinUseNulls()
+            .equals(other.getJoinUseNulls())) return false;
+      }
+      if (hasTransformNullIn() != other.hasTransformNullIn()) return false;
+      if (hasTransformNullIn()) {
+        if (!getTransformNullIn()
+            .equals(other.getTransformNullIn())) return false;
+      }
       if (quotaMode_ != other.quotaMode_) return false;
+      if (hasFlattenNested() != other.hasFlattenNested()) return false;
+      if (hasFlattenNested()) {
+        if (!getFlattenNested()
+            .equals(other.getFlattenNested())) return false;
+      }
+      if (!getFormatRegexp()
+          .equals(other.getFormatRegexp())) return false;
+      if (formatRegexpEscapingRule_ != other.formatRegexpEscapingRule_) return false;
+      if (hasFormatRegexpSkipUnmatched() != other.hasFormatRegexpSkipUnmatched()) return false;
+      if (hasFormatRegexpSkipUnmatched()) {
+        if (!getFormatRegexpSkipUnmatched()
+            .equals(other.getFormatRegexpSkipUnmatched())) return false;
+      }
+      if (hasAsyncInsert() != other.hasAsyncInsert()) return false;
+      if (hasAsyncInsert()) {
+        if (!getAsyncInsert()
+            .equals(other.getAsyncInsert())) return false;
+      }
+      if (hasAsyncInsertThreads() != other.hasAsyncInsertThreads()) return false;
+      if (hasAsyncInsertThreads()) {
+        if (!getAsyncInsertThreads()
+            .equals(other.getAsyncInsertThreads())) return false;
+      }
+      if (hasWaitForAsyncInsert() != other.hasWaitForAsyncInsert()) return false;
+      if (hasWaitForAsyncInsert()) {
+        if (!getWaitForAsyncInsert()
+            .equals(other.getWaitForAsyncInsert())) return false;
+      }
+      if (hasWaitForAsyncInsertTimeout() != other.hasWaitForAsyncInsertTimeout()) return false;
+      if (hasWaitForAsyncInsertTimeout()) {
+        if (!getWaitForAsyncInsertTimeout()
+            .equals(other.getWaitForAsyncInsertTimeout())) return false;
+      }
+      if (hasAsyncInsertMaxDataSize() != other.hasAsyncInsertMaxDataSize()) return false;
+      if (hasAsyncInsertMaxDataSize()) {
+        if (!getAsyncInsertMaxDataSize()
+            .equals(other.getAsyncInsertMaxDataSize())) return false;
+      }
+      if (hasAsyncInsertBusyTimeout() != other.hasAsyncInsertBusyTimeout()) return false;
+      if (hasAsyncInsertBusyTimeout()) {
+        if (!getAsyncInsertBusyTimeout()
+            .equals(other.getAsyncInsertBusyTimeout())) return false;
+      }
+      if (hasAsyncInsertStaleTimeout() != other.hasAsyncInsertStaleTimeout()) return false;
+      if (hasAsyncInsertStaleTimeout()) {
+        if (!getAsyncInsertStaleTimeout()
+            .equals(other.getAsyncInsertStaleTimeout())) return false;
+      }
+      if (hasMemoryProfilerStep() != other.hasMemoryProfilerStep()) return false;
+      if (hasMemoryProfilerStep()) {
+        if (!getMemoryProfilerStep()
+            .equals(other.getMemoryProfilerStep())) return false;
+      }
+      if (hasMemoryProfilerSampleProbability() != other.hasMemoryProfilerSampleProbability()) return false;
+      if (hasMemoryProfilerSampleProbability()) {
+        if (!getMemoryProfilerSampleProbability()
+            .equals(other.getMemoryProfilerSampleProbability())) return false;
+      }
+      if (hasCompile() != other.hasCompile()) return false;
+      if (hasCompile()) {
+        if (!getCompile()
+            .equals(other.getCompile())) return false;
+      }
+      if (hasMinCountToCompile() != other.hasMinCountToCompile()) return false;
+      if (hasMinCountToCompile()) {
+        if (!getMinCountToCompile()
+            .equals(other.getMinCountToCompile())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14595,13 +17800,17 @@ public final class UserOuterClass {
         hash = (37 * hash) + ALLOW_DDL_FIELD_NUMBER;
         hash = (53 * hash) + getAllowDdl().hashCode();
       }
-      if (hasInsertQuorum()) {
-        hash = (37 * hash) + INSERT_QUORUM_FIELD_NUMBER;
-        hash = (53 * hash) + getInsertQuorum().hashCode();
+      if (hasAllowIntrospectionFunctions()) {
+        hash = (37 * hash) + ALLOW_INTROSPECTION_FUNCTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowIntrospectionFunctions().hashCode();
       }
       if (hasConnectTimeout()) {
         hash = (37 * hash) + CONNECT_TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getConnectTimeout().hashCode();
+      }
+      if (hasConnectTimeoutWithFailover()) {
+        hash = (37 * hash) + CONNECT_TIMEOUT_WITH_FAILOVER_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectTimeoutWithFailover().hashCode();
       }
       if (hasReceiveTimeout()) {
         hash = (37 * hash) + RECEIVE_TIMEOUT_FIELD_NUMBER;
@@ -14611,13 +17820,37 @@ public final class UserOuterClass {
         hash = (37 * hash) + SEND_TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getSendTimeout().hashCode();
       }
+      if (hasTimeoutBeforeCheckingExecutionSpeed()) {
+        hash = (37 * hash) + TIMEOUT_BEFORE_CHECKING_EXECUTION_SPEED_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeoutBeforeCheckingExecutionSpeed().hashCode();
+      }
+      if (hasInsertQuorum()) {
+        hash = (37 * hash) + INSERT_QUORUM_FIELD_NUMBER;
+        hash = (53 * hash) + getInsertQuorum().hashCode();
+      }
       if (hasInsertQuorumTimeout()) {
         hash = (37 * hash) + INSERT_QUORUM_TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getInsertQuorumTimeout().hashCode();
       }
+      if (hasInsertQuorumParallel()) {
+        hash = (37 * hash) + INSERT_QUORUM_PARALLEL_FIELD_NUMBER;
+        hash = (53 * hash) + getInsertQuorumParallel().hashCode();
+      }
+      if (hasInsertNullAsDefault()) {
+        hash = (37 * hash) + INSERT_NULL_AS_DEFAULT_FIELD_NUMBER;
+        hash = (53 * hash) + getInsertNullAsDefault().hashCode();
+      }
       if (hasSelectSequentialConsistency()) {
         hash = (37 * hash) + SELECT_SEQUENTIAL_CONSISTENCY_FIELD_NUMBER;
         hash = (53 * hash) + getSelectSequentialConsistency().hashCode();
+      }
+      if (hasDeduplicateBlocksInDependentMaterializedViews()) {
+        hash = (37 * hash) + DEDUPLICATE_BLOCKS_IN_DEPENDENT_MATERIALIZED_VIEWS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeduplicateBlocksInDependentMaterializedViews().hashCode();
+      }
+      if (hasReplicationAlterPartitionsSync()) {
+        hash = (37 * hash) + REPLICATION_ALTER_PARTITIONS_SYNC_FIELD_NUMBER;
+        hash = (53 * hash) + getReplicationAlterPartitionsSync().hashCode();
       }
       if (hasMaxReplicaDelayForDistributedQueries()) {
         hash = (37 * hash) + MAX_REPLICA_DELAY_FOR_DISTRIBUTED_QUERIES_FIELD_NUMBER;
@@ -14626,10 +17859,6 @@ public final class UserOuterClass {
       if (hasFallbackToStaleReplicasForDistributedQueries()) {
         hash = (37 * hash) + FALLBACK_TO_STALE_REPLICAS_FOR_DISTRIBUTED_QUERIES_FIELD_NUMBER;
         hash = (53 * hash) + getFallbackToStaleReplicasForDistributedQueries().hashCode();
-      }
-      if (hasReplicationAlterPartitionsSync()) {
-        hash = (37 * hash) + REPLICATION_ALTER_PARTITIONS_SYNC_FIELD_NUMBER;
-        hash = (53 * hash) + getReplicationAlterPartitionsSync().hashCode();
       }
       hash = (37 * hash) + DISTRIBUTED_PRODUCT_MODE_FIELD_NUMBER;
       hash = (53 * hash) + distributedProductMode_;
@@ -14644,14 +17873,6 @@ public final class UserOuterClass {
       if (hasSkipUnavailableShards()) {
         hash = (37 * hash) + SKIP_UNAVAILABLE_SHARDS_FIELD_NUMBER;
         hash = (53 * hash) + getSkipUnavailableShards().hashCode();
-      }
-      if (hasCompile()) {
-        hash = (37 * hash) + COMPILE_FIELD_NUMBER;
-        hash = (53 * hash) + getCompile().hashCode();
-      }
-      if (hasMinCountToCompile()) {
-        hash = (37 * hash) + MIN_COUNT_TO_COMPILE_FIELD_NUMBER;
-        hash = (53 * hash) + getMinCountToCompile().hashCode();
       }
       if (hasCompileExpressions()) {
         hash = (37 * hash) + COMPILE_EXPRESSIONS_FIELD_NUMBER;
@@ -14740,6 +17961,14 @@ public final class UserOuterClass {
       if (hasMaxNetworkBandwidthForUser()) {
         hash = (37 * hash) + MAX_NETWORK_BANDWIDTH_FOR_USER_FIELD_NUMBER;
         hash = (53 * hash) + getMaxNetworkBandwidthForUser().hashCode();
+      }
+      if (hasMaxPartitionsPerInsertBlock()) {
+        hash = (37 * hash) + MAX_PARTITIONS_PER_INSERT_BLOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxPartitionsPerInsertBlock().hashCode();
+      }
+      if (hasMaxConcurrentQueriesForUser()) {
+        hash = (37 * hash) + MAX_CONCURRENT_QUERIES_FOR_USER_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxConcurrentQueriesForUser().hashCode();
       }
       if (hasForceIndexByDate()) {
         hash = (37 * hash) + FORCE_INDEX_BY_DATE_FIELD_NUMBER;
@@ -14831,6 +18060,14 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + JOIN_OVERFLOW_MODE_FIELD_NUMBER;
       hash = (53 * hash) + joinOverflowMode_;
+      if (getJoinAlgorithmCount() > 0) {
+        hash = (37 * hash) + JOIN_ALGORITHM_FIELD_NUMBER;
+        hash = (53 * hash) + joinAlgorithm_.hashCode();
+      }
+      if (hasAnyJoinDistinctRightTableKeys()) {
+        hash = (37 * hash) + ANY_JOIN_DISTINCT_RIGHT_TABLE_KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getAnyJoinDistinctRightTableKeys().hashCode();
+      }
       if (hasMaxColumnsToRead()) {
         hash = (37 * hash) + MAX_COLUMNS_TO_READ_FIELD_NUMBER;
         hash = (53 * hash) + getMaxColumnsToRead().hashCode();
@@ -14877,6 +18114,16 @@ public final class UserOuterClass {
         hash = (37 * hash) + INPUT_FORMAT_DEFAULTS_FOR_OMITTED_FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getInputFormatDefaultsForOmittedFields().hashCode();
       }
+      if (hasInputFormatNullAsDefault()) {
+        hash = (37 * hash) + INPUT_FORMAT_NULL_AS_DEFAULT_FIELD_NUMBER;
+        hash = (53 * hash) + getInputFormatNullAsDefault().hashCode();
+      }
+      hash = (37 * hash) + DATE_TIME_INPUT_FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + dateTimeInputFormat_;
+      if (hasInputFormatWithNamesUseHeader()) {
+        hash = (37 * hash) + INPUT_FORMAT_WITH_NAMES_USE_HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getInputFormatWithNamesUseHeader().hashCode();
+      }
       if (hasOutputFormatJsonQuote64BitIntegers()) {
         hash = (37 * hash) + OUTPUT_FORMAT_JSON_QUOTE_64BIT_INTEGERS_FIELD_NUMBER;
         hash = (53 * hash) + getOutputFormatJsonQuote64BitIntegers().hashCode();
@@ -14885,25 +18132,19 @@ public final class UserOuterClass {
         hash = (37 * hash) + OUTPUT_FORMAT_JSON_QUOTE_DENORMALS_FIELD_NUMBER;
         hash = (53 * hash) + getOutputFormatJsonQuoteDenormals().hashCode();
       }
+      hash = (37 * hash) + DATE_TIME_OUTPUT_FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + dateTimeOutputFormat_;
       if (hasLowCardinalityAllowInNativeFormat()) {
         hash = (37 * hash) + LOW_CARDINALITY_ALLOW_IN_NATIVE_FORMAT_FIELD_NUMBER;
         hash = (53 * hash) + getLowCardinalityAllowInNativeFormat().hashCode();
       }
+      if (hasAllowSuspiciousLowCardinalityTypes()) {
+        hash = (37 * hash) + ALLOW_SUSPICIOUS_LOW_CARDINALITY_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowSuspiciousLowCardinalityTypes().hashCode();
+      }
       if (hasEmptyResultForAggregationByEmptySet()) {
         hash = (37 * hash) + EMPTY_RESULT_FOR_AGGREGATION_BY_EMPTY_SET_FIELD_NUMBER;
         hash = (53 * hash) + getEmptyResultForAggregationByEmptySet().hashCode();
-      }
-      if (hasJoinedSubqueryRequiresAlias()) {
-        hash = (37 * hash) + JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER;
-        hash = (53 * hash) + getJoinedSubqueryRequiresAlias().hashCode();
-      }
-      if (hasJoinUseNulls()) {
-        hash = (37 * hash) + JOIN_USE_NULLS_FIELD_NUMBER;
-        hash = (53 * hash) + getJoinUseNulls().hashCode();
-      }
-      if (hasTransformNullIn()) {
-        hash = (37 * hash) + TRANSFORM_NULL_IN_FIELD_NUMBER;
-        hash = (53 * hash) + getTransformNullIn().hashCode();
       }
       if (hasHttpConnectionTimeout()) {
         hash = (37 * hash) + HTTP_CONNECTION_TIMEOUT_FIELD_NUMBER;
@@ -14933,8 +18174,84 @@ public final class UserOuterClass {
         hash = (37 * hash) + ADD_HTTP_CORS_HEADER_FIELD_NUMBER;
         hash = (53 * hash) + getAddHttpCorsHeader().hashCode();
       }
+      if (hasCancelHttpReadonlyQueriesOnClientClose()) {
+        hash = (37 * hash) + CANCEL_HTTP_READONLY_QUERIES_ON_CLIENT_CLOSE_FIELD_NUMBER;
+        hash = (53 * hash) + getCancelHttpReadonlyQueriesOnClientClose().hashCode();
+      }
+      if (hasMaxHttpGetRedirects()) {
+        hash = (37 * hash) + MAX_HTTP_GET_REDIRECTS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxHttpGetRedirects().hashCode();
+      }
+      if (hasJoinedSubqueryRequiresAlias()) {
+        hash = (37 * hash) + JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinedSubqueryRequiresAlias().hashCode();
+      }
+      if (hasJoinUseNulls()) {
+        hash = (37 * hash) + JOIN_USE_NULLS_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinUseNulls().hashCode();
+      }
+      if (hasTransformNullIn()) {
+        hash = (37 * hash) + TRANSFORM_NULL_IN_FIELD_NUMBER;
+        hash = (53 * hash) + getTransformNullIn().hashCode();
+      }
       hash = (37 * hash) + QUOTA_MODE_FIELD_NUMBER;
       hash = (53 * hash) + quotaMode_;
+      if (hasFlattenNested()) {
+        hash = (37 * hash) + FLATTEN_NESTED_FIELD_NUMBER;
+        hash = (53 * hash) + getFlattenNested().hashCode();
+      }
+      hash = (37 * hash) + FORMAT_REGEXP_FIELD_NUMBER;
+      hash = (53 * hash) + getFormatRegexp().hashCode();
+      hash = (37 * hash) + FORMAT_REGEXP_ESCAPING_RULE_FIELD_NUMBER;
+      hash = (53 * hash) + formatRegexpEscapingRule_;
+      if (hasFormatRegexpSkipUnmatched()) {
+        hash = (37 * hash) + FORMAT_REGEXP_SKIP_UNMATCHED_FIELD_NUMBER;
+        hash = (53 * hash) + getFormatRegexpSkipUnmatched().hashCode();
+      }
+      if (hasAsyncInsert()) {
+        hash = (37 * hash) + ASYNC_INSERT_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsert().hashCode();
+      }
+      if (hasAsyncInsertThreads()) {
+        hash = (37 * hash) + ASYNC_INSERT_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsertThreads().hashCode();
+      }
+      if (hasWaitForAsyncInsert()) {
+        hash = (37 * hash) + WAIT_FOR_ASYNC_INSERT_FIELD_NUMBER;
+        hash = (53 * hash) + getWaitForAsyncInsert().hashCode();
+      }
+      if (hasWaitForAsyncInsertTimeout()) {
+        hash = (37 * hash) + WAIT_FOR_ASYNC_INSERT_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getWaitForAsyncInsertTimeout().hashCode();
+      }
+      if (hasAsyncInsertMaxDataSize()) {
+        hash = (37 * hash) + ASYNC_INSERT_MAX_DATA_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsertMaxDataSize().hashCode();
+      }
+      if (hasAsyncInsertBusyTimeout()) {
+        hash = (37 * hash) + ASYNC_INSERT_BUSY_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsertBusyTimeout().hashCode();
+      }
+      if (hasAsyncInsertStaleTimeout()) {
+        hash = (37 * hash) + ASYNC_INSERT_STALE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getAsyncInsertStaleTimeout().hashCode();
+      }
+      if (hasMemoryProfilerStep()) {
+        hash = (37 * hash) + MEMORY_PROFILER_STEP_FIELD_NUMBER;
+        hash = (53 * hash) + getMemoryProfilerStep().hashCode();
+      }
+      if (hasMemoryProfilerSampleProbability()) {
+        hash = (37 * hash) + MEMORY_PROFILER_SAMPLE_PROBABILITY_FIELD_NUMBER;
+        hash = (53 * hash) + getMemoryProfilerSampleProbability().hashCode();
+      }
+      if (hasCompile()) {
+        hash = (37 * hash) + COMPILE_FIELD_NUMBER;
+        hash = (53 * hash) + getCompile().hashCode();
+      }
+      if (hasMinCountToCompile()) {
+        hash = (37 * hash) + MIN_COUNT_TO_COMPILE_FIELD_NUMBER;
+        hash = (53 * hash) + getMinCountToCompile().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15085,17 +18402,23 @@ public final class UserOuterClass {
           allowDdl_ = null;
           allowDdlBuilder_ = null;
         }
-        if (insertQuorumBuilder_ == null) {
-          insertQuorum_ = null;
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          allowIntrospectionFunctions_ = null;
         } else {
-          insertQuorum_ = null;
-          insertQuorumBuilder_ = null;
+          allowIntrospectionFunctions_ = null;
+          allowIntrospectionFunctionsBuilder_ = null;
         }
         if (connectTimeoutBuilder_ == null) {
           connectTimeout_ = null;
         } else {
           connectTimeout_ = null;
           connectTimeoutBuilder_ = null;
+        }
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          connectTimeoutWithFailover_ = null;
+        } else {
+          connectTimeoutWithFailover_ = null;
+          connectTimeoutWithFailoverBuilder_ = null;
         }
         if (receiveTimeoutBuilder_ == null) {
           receiveTimeout_ = null;
@@ -15109,17 +18432,53 @@ public final class UserOuterClass {
           sendTimeout_ = null;
           sendTimeoutBuilder_ = null;
         }
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          timeoutBeforeCheckingExecutionSpeed_ = null;
+        } else {
+          timeoutBeforeCheckingExecutionSpeed_ = null;
+          timeoutBeforeCheckingExecutionSpeedBuilder_ = null;
+        }
+        if (insertQuorumBuilder_ == null) {
+          insertQuorum_ = null;
+        } else {
+          insertQuorum_ = null;
+          insertQuorumBuilder_ = null;
+        }
         if (insertQuorumTimeoutBuilder_ == null) {
           insertQuorumTimeout_ = null;
         } else {
           insertQuorumTimeout_ = null;
           insertQuorumTimeoutBuilder_ = null;
         }
+        if (insertQuorumParallelBuilder_ == null) {
+          insertQuorumParallel_ = null;
+        } else {
+          insertQuorumParallel_ = null;
+          insertQuorumParallelBuilder_ = null;
+        }
+        if (insertNullAsDefaultBuilder_ == null) {
+          insertNullAsDefault_ = null;
+        } else {
+          insertNullAsDefault_ = null;
+          insertNullAsDefaultBuilder_ = null;
+        }
         if (selectSequentialConsistencyBuilder_ == null) {
           selectSequentialConsistency_ = null;
         } else {
           selectSequentialConsistency_ = null;
           selectSequentialConsistencyBuilder_ = null;
+        }
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          deduplicateBlocksInDependentMaterializedViews_ = null;
+        } else {
+          deduplicateBlocksInDependentMaterializedViews_ = null;
+          deduplicateBlocksInDependentMaterializedViewsBuilder_ = null;
+        }
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          replicationAlterPartitionsSync_ = null;
+        } else {
+          replicationAlterPartitionsSync_ = null;
+          replicationAlterPartitionsSyncBuilder_ = null;
         }
         if (maxReplicaDelayForDistributedQueriesBuilder_ == null) {
           maxReplicaDelayForDistributedQueries_ = null;
@@ -15132,12 +18491,6 @@ public final class UserOuterClass {
         } else {
           fallbackToStaleReplicasForDistributedQueries_ = null;
           fallbackToStaleReplicasForDistributedQueriesBuilder_ = null;
-        }
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          replicationAlterPartitionsSync_ = null;
-        } else {
-          replicationAlterPartitionsSync_ = null;
-          replicationAlterPartitionsSyncBuilder_ = null;
         }
         distributedProductMode_ = 0;
 
@@ -15158,18 +18511,6 @@ public final class UserOuterClass {
         } else {
           skipUnavailableShards_ = null;
           skipUnavailableShardsBuilder_ = null;
-        }
-        if (compileBuilder_ == null) {
-          compile_ = null;
-        } else {
-          compile_ = null;
-          compileBuilder_ = null;
-        }
-        if (minCountToCompileBuilder_ == null) {
-          minCountToCompile_ = null;
-        } else {
-          minCountToCompile_ = null;
-          minCountToCompileBuilder_ = null;
         }
         if (compileExpressionsBuilder_ == null) {
           compileExpressions_ = null;
@@ -15303,6 +18644,18 @@ public final class UserOuterClass {
           maxNetworkBandwidthForUser_ = null;
           maxNetworkBandwidthForUserBuilder_ = null;
         }
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          maxPartitionsPerInsertBlock_ = null;
+        } else {
+          maxPartitionsPerInsertBlock_ = null;
+          maxPartitionsPerInsertBlockBuilder_ = null;
+        }
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          maxConcurrentQueriesForUser_ = null;
+        } else {
+          maxConcurrentQueriesForUser_ = null;
+          maxConcurrentQueriesForUserBuilder_ = null;
+        }
         if (forceIndexByDateBuilder_ == null) {
           forceIndexByDate_ = null;
         } else {
@@ -15429,6 +18782,14 @@ public final class UserOuterClass {
         }
         joinOverflowMode_ = 0;
 
+        joinAlgorithm_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          anyJoinDistinctRightTableKeys_ = null;
+        } else {
+          anyJoinDistinctRightTableKeys_ = null;
+          anyJoinDistinctRightTableKeysBuilder_ = null;
+        }
         if (maxColumnsToReadBuilder_ == null) {
           maxColumnsToRead_ = null;
         } else {
@@ -15497,6 +18858,20 @@ public final class UserOuterClass {
           inputFormatDefaultsForOmittedFields_ = null;
           inputFormatDefaultsForOmittedFieldsBuilder_ = null;
         }
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          inputFormatNullAsDefault_ = null;
+        } else {
+          inputFormatNullAsDefault_ = null;
+          inputFormatNullAsDefaultBuilder_ = null;
+        }
+        dateTimeInputFormat_ = 0;
+
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          inputFormatWithNamesUseHeader_ = null;
+        } else {
+          inputFormatWithNamesUseHeader_ = null;
+          inputFormatWithNamesUseHeaderBuilder_ = null;
+        }
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
           outputFormatJsonQuote64BitIntegers_ = null;
         } else {
@@ -15509,35 +18884,25 @@ public final class UserOuterClass {
           outputFormatJsonQuoteDenormals_ = null;
           outputFormatJsonQuoteDenormalsBuilder_ = null;
         }
+        dateTimeOutputFormat_ = 0;
+
         if (lowCardinalityAllowInNativeFormatBuilder_ == null) {
           lowCardinalityAllowInNativeFormat_ = null;
         } else {
           lowCardinalityAllowInNativeFormat_ = null;
           lowCardinalityAllowInNativeFormatBuilder_ = null;
         }
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          allowSuspiciousLowCardinalityTypes_ = null;
+        } else {
+          allowSuspiciousLowCardinalityTypes_ = null;
+          allowSuspiciousLowCardinalityTypesBuilder_ = null;
+        }
         if (emptyResultForAggregationByEmptySetBuilder_ == null) {
           emptyResultForAggregationByEmptySet_ = null;
         } else {
           emptyResultForAggregationByEmptySet_ = null;
           emptyResultForAggregationByEmptySetBuilder_ = null;
-        }
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          joinedSubqueryRequiresAlias_ = null;
-        } else {
-          joinedSubqueryRequiresAlias_ = null;
-          joinedSubqueryRequiresAliasBuilder_ = null;
-        }
-        if (joinUseNullsBuilder_ == null) {
-          joinUseNulls_ = null;
-        } else {
-          joinUseNulls_ = null;
-          joinUseNullsBuilder_ = null;
-        }
-        if (transformNullInBuilder_ == null) {
-          transformNullIn_ = null;
-        } else {
-          transformNullIn_ = null;
-          transformNullInBuilder_ = null;
         }
         if (httpConnectionTimeoutBuilder_ == null) {
           httpConnectionTimeout_ = null;
@@ -15581,8 +18946,120 @@ public final class UserOuterClass {
           addHttpCorsHeader_ = null;
           addHttpCorsHeaderBuilder_ = null;
         }
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          cancelHttpReadonlyQueriesOnClientClose_ = null;
+        } else {
+          cancelHttpReadonlyQueriesOnClientClose_ = null;
+          cancelHttpReadonlyQueriesOnClientCloseBuilder_ = null;
+        }
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          maxHttpGetRedirects_ = null;
+        } else {
+          maxHttpGetRedirects_ = null;
+          maxHttpGetRedirectsBuilder_ = null;
+        }
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAlias_ = null;
+        } else {
+          joinedSubqueryRequiresAlias_ = null;
+          joinedSubqueryRequiresAliasBuilder_ = null;
+        }
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNulls_ = null;
+        } else {
+          joinUseNulls_ = null;
+          joinUseNullsBuilder_ = null;
+        }
+        if (transformNullInBuilder_ == null) {
+          transformNullIn_ = null;
+        } else {
+          transformNullIn_ = null;
+          transformNullInBuilder_ = null;
+        }
         quotaMode_ = 0;
 
+        if (flattenNestedBuilder_ == null) {
+          flattenNested_ = null;
+        } else {
+          flattenNested_ = null;
+          flattenNestedBuilder_ = null;
+        }
+        formatRegexp_ = "";
+
+        formatRegexpEscapingRule_ = 0;
+
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          formatRegexpSkipUnmatched_ = null;
+        } else {
+          formatRegexpSkipUnmatched_ = null;
+          formatRegexpSkipUnmatchedBuilder_ = null;
+        }
+        if (asyncInsertBuilder_ == null) {
+          asyncInsert_ = null;
+        } else {
+          asyncInsert_ = null;
+          asyncInsertBuilder_ = null;
+        }
+        if (asyncInsertThreadsBuilder_ == null) {
+          asyncInsertThreads_ = null;
+        } else {
+          asyncInsertThreads_ = null;
+          asyncInsertThreadsBuilder_ = null;
+        }
+        if (waitForAsyncInsertBuilder_ == null) {
+          waitForAsyncInsert_ = null;
+        } else {
+          waitForAsyncInsert_ = null;
+          waitForAsyncInsertBuilder_ = null;
+        }
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          waitForAsyncInsertTimeout_ = null;
+        } else {
+          waitForAsyncInsertTimeout_ = null;
+          waitForAsyncInsertTimeoutBuilder_ = null;
+        }
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          asyncInsertMaxDataSize_ = null;
+        } else {
+          asyncInsertMaxDataSize_ = null;
+          asyncInsertMaxDataSizeBuilder_ = null;
+        }
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          asyncInsertBusyTimeout_ = null;
+        } else {
+          asyncInsertBusyTimeout_ = null;
+          asyncInsertBusyTimeoutBuilder_ = null;
+        }
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeout_ = null;
+        } else {
+          asyncInsertStaleTimeout_ = null;
+          asyncInsertStaleTimeoutBuilder_ = null;
+        }
+        if (memoryProfilerStepBuilder_ == null) {
+          memoryProfilerStep_ = null;
+        } else {
+          memoryProfilerStep_ = null;
+          memoryProfilerStepBuilder_ = null;
+        }
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          memoryProfilerSampleProbability_ = null;
+        } else {
+          memoryProfilerSampleProbability_ = null;
+          memoryProfilerSampleProbabilityBuilder_ = null;
+        }
+        if (compileBuilder_ == null) {
+          compile_ = null;
+        } else {
+          compile_ = null;
+          compileBuilder_ = null;
+        }
+        if (minCountToCompileBuilder_ == null) {
+          minCountToCompile_ = null;
+        } else {
+          minCountToCompile_ = null;
+          minCountToCompileBuilder_ = null;
+        }
         return this;
       }
 
@@ -15609,6 +19086,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings result = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings(this);
+        int from_bitField0_ = bitField0_;
         if (readonlyBuilder_ == null) {
           result.readonly_ = readonly_;
         } else {
@@ -15619,15 +19097,20 @@ public final class UserOuterClass {
         } else {
           result.allowDdl_ = allowDdlBuilder_.build();
         }
-        if (insertQuorumBuilder_ == null) {
-          result.insertQuorum_ = insertQuorum_;
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          result.allowIntrospectionFunctions_ = allowIntrospectionFunctions_;
         } else {
-          result.insertQuorum_ = insertQuorumBuilder_.build();
+          result.allowIntrospectionFunctions_ = allowIntrospectionFunctionsBuilder_.build();
         }
         if (connectTimeoutBuilder_ == null) {
           result.connectTimeout_ = connectTimeout_;
         } else {
           result.connectTimeout_ = connectTimeoutBuilder_.build();
+        }
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          result.connectTimeoutWithFailover_ = connectTimeoutWithFailover_;
+        } else {
+          result.connectTimeoutWithFailover_ = connectTimeoutWithFailoverBuilder_.build();
         }
         if (receiveTimeoutBuilder_ == null) {
           result.receiveTimeout_ = receiveTimeout_;
@@ -15639,15 +19122,45 @@ public final class UserOuterClass {
         } else {
           result.sendTimeout_ = sendTimeoutBuilder_.build();
         }
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          result.timeoutBeforeCheckingExecutionSpeed_ = timeoutBeforeCheckingExecutionSpeed_;
+        } else {
+          result.timeoutBeforeCheckingExecutionSpeed_ = timeoutBeforeCheckingExecutionSpeedBuilder_.build();
+        }
+        if (insertQuorumBuilder_ == null) {
+          result.insertQuorum_ = insertQuorum_;
+        } else {
+          result.insertQuorum_ = insertQuorumBuilder_.build();
+        }
         if (insertQuorumTimeoutBuilder_ == null) {
           result.insertQuorumTimeout_ = insertQuorumTimeout_;
         } else {
           result.insertQuorumTimeout_ = insertQuorumTimeoutBuilder_.build();
         }
+        if (insertQuorumParallelBuilder_ == null) {
+          result.insertQuorumParallel_ = insertQuorumParallel_;
+        } else {
+          result.insertQuorumParallel_ = insertQuorumParallelBuilder_.build();
+        }
+        if (insertNullAsDefaultBuilder_ == null) {
+          result.insertNullAsDefault_ = insertNullAsDefault_;
+        } else {
+          result.insertNullAsDefault_ = insertNullAsDefaultBuilder_.build();
+        }
         if (selectSequentialConsistencyBuilder_ == null) {
           result.selectSequentialConsistency_ = selectSequentialConsistency_;
         } else {
           result.selectSequentialConsistency_ = selectSequentialConsistencyBuilder_.build();
+        }
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          result.deduplicateBlocksInDependentMaterializedViews_ = deduplicateBlocksInDependentMaterializedViews_;
+        } else {
+          result.deduplicateBlocksInDependentMaterializedViews_ = deduplicateBlocksInDependentMaterializedViewsBuilder_.build();
+        }
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          result.replicationAlterPartitionsSync_ = replicationAlterPartitionsSync_;
+        } else {
+          result.replicationAlterPartitionsSync_ = replicationAlterPartitionsSyncBuilder_.build();
         }
         if (maxReplicaDelayForDistributedQueriesBuilder_ == null) {
           result.maxReplicaDelayForDistributedQueries_ = maxReplicaDelayForDistributedQueries_;
@@ -15658,11 +19171,6 @@ public final class UserOuterClass {
           result.fallbackToStaleReplicasForDistributedQueries_ = fallbackToStaleReplicasForDistributedQueries_;
         } else {
           result.fallbackToStaleReplicasForDistributedQueries_ = fallbackToStaleReplicasForDistributedQueriesBuilder_.build();
-        }
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          result.replicationAlterPartitionsSync_ = replicationAlterPartitionsSync_;
-        } else {
-          result.replicationAlterPartitionsSync_ = replicationAlterPartitionsSyncBuilder_.build();
         }
         result.distributedProductMode_ = distributedProductMode_;
         if (distributedAggregationMemoryEfficientBuilder_ == null) {
@@ -15679,16 +19187,6 @@ public final class UserOuterClass {
           result.skipUnavailableShards_ = skipUnavailableShards_;
         } else {
           result.skipUnavailableShards_ = skipUnavailableShardsBuilder_.build();
-        }
-        if (compileBuilder_ == null) {
-          result.compile_ = compile_;
-        } else {
-          result.compile_ = compileBuilder_.build();
-        }
-        if (minCountToCompileBuilder_ == null) {
-          result.minCountToCompile_ = minCountToCompile_;
-        } else {
-          result.minCountToCompile_ = minCountToCompileBuilder_.build();
         }
         if (compileExpressionsBuilder_ == null) {
           result.compileExpressions_ = compileExpressions_;
@@ -15800,6 +19298,16 @@ public final class UserOuterClass {
         } else {
           result.maxNetworkBandwidthForUser_ = maxNetworkBandwidthForUserBuilder_.build();
         }
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          result.maxPartitionsPerInsertBlock_ = maxPartitionsPerInsertBlock_;
+        } else {
+          result.maxPartitionsPerInsertBlock_ = maxPartitionsPerInsertBlockBuilder_.build();
+        }
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          result.maxConcurrentQueriesForUser_ = maxConcurrentQueriesForUser_;
+        } else {
+          result.maxConcurrentQueriesForUser_ = maxConcurrentQueriesForUserBuilder_.build();
+        }
         if (forceIndexByDateBuilder_ == null) {
           result.forceIndexByDate_ = forceIndexByDate_;
         } else {
@@ -15899,6 +19407,16 @@ public final class UserOuterClass {
           result.maxBytesInJoin_ = maxBytesInJoinBuilder_.build();
         }
         result.joinOverflowMode_ = joinOverflowMode_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          joinAlgorithm_ = java.util.Collections.unmodifiableList(joinAlgorithm_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.joinAlgorithm_ = joinAlgorithm_;
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          result.anyJoinDistinctRightTableKeys_ = anyJoinDistinctRightTableKeys_;
+        } else {
+          result.anyJoinDistinctRightTableKeys_ = anyJoinDistinctRightTableKeysBuilder_.build();
+        }
         if (maxColumnsToReadBuilder_ == null) {
           result.maxColumnsToRead_ = maxColumnsToRead_;
         } else {
@@ -15955,6 +19473,17 @@ public final class UserOuterClass {
         } else {
           result.inputFormatDefaultsForOmittedFields_ = inputFormatDefaultsForOmittedFieldsBuilder_.build();
         }
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          result.inputFormatNullAsDefault_ = inputFormatNullAsDefault_;
+        } else {
+          result.inputFormatNullAsDefault_ = inputFormatNullAsDefaultBuilder_.build();
+        }
+        result.dateTimeInputFormat_ = dateTimeInputFormat_;
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          result.inputFormatWithNamesUseHeader_ = inputFormatWithNamesUseHeader_;
+        } else {
+          result.inputFormatWithNamesUseHeader_ = inputFormatWithNamesUseHeaderBuilder_.build();
+        }
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
           result.outputFormatJsonQuote64BitIntegers_ = outputFormatJsonQuote64BitIntegers_;
         } else {
@@ -15965,30 +19494,21 @@ public final class UserOuterClass {
         } else {
           result.outputFormatJsonQuoteDenormals_ = outputFormatJsonQuoteDenormalsBuilder_.build();
         }
+        result.dateTimeOutputFormat_ = dateTimeOutputFormat_;
         if (lowCardinalityAllowInNativeFormatBuilder_ == null) {
           result.lowCardinalityAllowInNativeFormat_ = lowCardinalityAllowInNativeFormat_;
         } else {
           result.lowCardinalityAllowInNativeFormat_ = lowCardinalityAllowInNativeFormatBuilder_.build();
         }
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          result.allowSuspiciousLowCardinalityTypes_ = allowSuspiciousLowCardinalityTypes_;
+        } else {
+          result.allowSuspiciousLowCardinalityTypes_ = allowSuspiciousLowCardinalityTypesBuilder_.build();
+        }
         if (emptyResultForAggregationByEmptySetBuilder_ == null) {
           result.emptyResultForAggregationByEmptySet_ = emptyResultForAggregationByEmptySet_;
         } else {
           result.emptyResultForAggregationByEmptySet_ = emptyResultForAggregationByEmptySetBuilder_.build();
-        }
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAlias_;
-        } else {
-          result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAliasBuilder_.build();
-        }
-        if (joinUseNullsBuilder_ == null) {
-          result.joinUseNulls_ = joinUseNulls_;
-        } else {
-          result.joinUseNulls_ = joinUseNullsBuilder_.build();
-        }
-        if (transformNullInBuilder_ == null) {
-          result.transformNullIn_ = transformNullIn_;
-        } else {
-          result.transformNullIn_ = transformNullInBuilder_.build();
         }
         if (httpConnectionTimeoutBuilder_ == null) {
           result.httpConnectionTimeout_ = httpConnectionTimeout_;
@@ -16025,7 +19545,99 @@ public final class UserOuterClass {
         } else {
           result.addHttpCorsHeader_ = addHttpCorsHeaderBuilder_.build();
         }
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          result.cancelHttpReadonlyQueriesOnClientClose_ = cancelHttpReadonlyQueriesOnClientClose_;
+        } else {
+          result.cancelHttpReadonlyQueriesOnClientClose_ = cancelHttpReadonlyQueriesOnClientCloseBuilder_.build();
+        }
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          result.maxHttpGetRedirects_ = maxHttpGetRedirects_;
+        } else {
+          result.maxHttpGetRedirects_ = maxHttpGetRedirectsBuilder_.build();
+        }
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAlias_;
+        } else {
+          result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAliasBuilder_.build();
+        }
+        if (joinUseNullsBuilder_ == null) {
+          result.joinUseNulls_ = joinUseNulls_;
+        } else {
+          result.joinUseNulls_ = joinUseNullsBuilder_.build();
+        }
+        if (transformNullInBuilder_ == null) {
+          result.transformNullIn_ = transformNullIn_;
+        } else {
+          result.transformNullIn_ = transformNullInBuilder_.build();
+        }
         result.quotaMode_ = quotaMode_;
+        if (flattenNestedBuilder_ == null) {
+          result.flattenNested_ = flattenNested_;
+        } else {
+          result.flattenNested_ = flattenNestedBuilder_.build();
+        }
+        result.formatRegexp_ = formatRegexp_;
+        result.formatRegexpEscapingRule_ = formatRegexpEscapingRule_;
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          result.formatRegexpSkipUnmatched_ = formatRegexpSkipUnmatched_;
+        } else {
+          result.formatRegexpSkipUnmatched_ = formatRegexpSkipUnmatchedBuilder_.build();
+        }
+        if (asyncInsertBuilder_ == null) {
+          result.asyncInsert_ = asyncInsert_;
+        } else {
+          result.asyncInsert_ = asyncInsertBuilder_.build();
+        }
+        if (asyncInsertThreadsBuilder_ == null) {
+          result.asyncInsertThreads_ = asyncInsertThreads_;
+        } else {
+          result.asyncInsertThreads_ = asyncInsertThreadsBuilder_.build();
+        }
+        if (waitForAsyncInsertBuilder_ == null) {
+          result.waitForAsyncInsert_ = waitForAsyncInsert_;
+        } else {
+          result.waitForAsyncInsert_ = waitForAsyncInsertBuilder_.build();
+        }
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          result.waitForAsyncInsertTimeout_ = waitForAsyncInsertTimeout_;
+        } else {
+          result.waitForAsyncInsertTimeout_ = waitForAsyncInsertTimeoutBuilder_.build();
+        }
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          result.asyncInsertMaxDataSize_ = asyncInsertMaxDataSize_;
+        } else {
+          result.asyncInsertMaxDataSize_ = asyncInsertMaxDataSizeBuilder_.build();
+        }
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          result.asyncInsertBusyTimeout_ = asyncInsertBusyTimeout_;
+        } else {
+          result.asyncInsertBusyTimeout_ = asyncInsertBusyTimeoutBuilder_.build();
+        }
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          result.asyncInsertStaleTimeout_ = asyncInsertStaleTimeout_;
+        } else {
+          result.asyncInsertStaleTimeout_ = asyncInsertStaleTimeoutBuilder_.build();
+        }
+        if (memoryProfilerStepBuilder_ == null) {
+          result.memoryProfilerStep_ = memoryProfilerStep_;
+        } else {
+          result.memoryProfilerStep_ = memoryProfilerStepBuilder_.build();
+        }
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          result.memoryProfilerSampleProbability_ = memoryProfilerSampleProbability_;
+        } else {
+          result.memoryProfilerSampleProbability_ = memoryProfilerSampleProbabilityBuilder_.build();
+        }
+        if (compileBuilder_ == null) {
+          result.compile_ = compile_;
+        } else {
+          result.compile_ = compileBuilder_.build();
+        }
+        if (minCountToCompileBuilder_ == null) {
+          result.minCountToCompile_ = minCountToCompile_;
+        } else {
+          result.minCountToCompile_ = minCountToCompileBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -16080,11 +19692,14 @@ public final class UserOuterClass {
         if (other.hasAllowDdl()) {
           mergeAllowDdl(other.getAllowDdl());
         }
-        if (other.hasInsertQuorum()) {
-          mergeInsertQuorum(other.getInsertQuorum());
+        if (other.hasAllowIntrospectionFunctions()) {
+          mergeAllowIntrospectionFunctions(other.getAllowIntrospectionFunctions());
         }
         if (other.hasConnectTimeout()) {
           mergeConnectTimeout(other.getConnectTimeout());
+        }
+        if (other.hasConnectTimeoutWithFailover()) {
+          mergeConnectTimeoutWithFailover(other.getConnectTimeoutWithFailover());
         }
         if (other.hasReceiveTimeout()) {
           mergeReceiveTimeout(other.getReceiveTimeout());
@@ -16092,20 +19707,35 @@ public final class UserOuterClass {
         if (other.hasSendTimeout()) {
           mergeSendTimeout(other.getSendTimeout());
         }
+        if (other.hasTimeoutBeforeCheckingExecutionSpeed()) {
+          mergeTimeoutBeforeCheckingExecutionSpeed(other.getTimeoutBeforeCheckingExecutionSpeed());
+        }
+        if (other.hasInsertQuorum()) {
+          mergeInsertQuorum(other.getInsertQuorum());
+        }
         if (other.hasInsertQuorumTimeout()) {
           mergeInsertQuorumTimeout(other.getInsertQuorumTimeout());
         }
+        if (other.hasInsertQuorumParallel()) {
+          mergeInsertQuorumParallel(other.getInsertQuorumParallel());
+        }
+        if (other.hasInsertNullAsDefault()) {
+          mergeInsertNullAsDefault(other.getInsertNullAsDefault());
+        }
         if (other.hasSelectSequentialConsistency()) {
           mergeSelectSequentialConsistency(other.getSelectSequentialConsistency());
+        }
+        if (other.hasDeduplicateBlocksInDependentMaterializedViews()) {
+          mergeDeduplicateBlocksInDependentMaterializedViews(other.getDeduplicateBlocksInDependentMaterializedViews());
+        }
+        if (other.hasReplicationAlterPartitionsSync()) {
+          mergeReplicationAlterPartitionsSync(other.getReplicationAlterPartitionsSync());
         }
         if (other.hasMaxReplicaDelayForDistributedQueries()) {
           mergeMaxReplicaDelayForDistributedQueries(other.getMaxReplicaDelayForDistributedQueries());
         }
         if (other.hasFallbackToStaleReplicasForDistributedQueries()) {
           mergeFallbackToStaleReplicasForDistributedQueries(other.getFallbackToStaleReplicasForDistributedQueries());
-        }
-        if (other.hasReplicationAlterPartitionsSync()) {
-          mergeReplicationAlterPartitionsSync(other.getReplicationAlterPartitionsSync());
         }
         if (other.distributedProductMode_ != 0) {
           setDistributedProductModeValue(other.getDistributedProductModeValue());
@@ -16118,12 +19748,6 @@ public final class UserOuterClass {
         }
         if (other.hasSkipUnavailableShards()) {
           mergeSkipUnavailableShards(other.getSkipUnavailableShards());
-        }
-        if (other.hasCompile()) {
-          mergeCompile(other.getCompile());
-        }
-        if (other.hasMinCountToCompile()) {
-          mergeMinCountToCompile(other.getMinCountToCompile());
         }
         if (other.hasCompileExpressions()) {
           mergeCompileExpressions(other.getCompileExpressions());
@@ -16190,6 +19814,12 @@ public final class UserOuterClass {
         }
         if (other.hasMaxNetworkBandwidthForUser()) {
           mergeMaxNetworkBandwidthForUser(other.getMaxNetworkBandwidthForUser());
+        }
+        if (other.hasMaxPartitionsPerInsertBlock()) {
+          mergeMaxPartitionsPerInsertBlock(other.getMaxPartitionsPerInsertBlock());
+        }
+        if (other.hasMaxConcurrentQueriesForUser()) {
+          mergeMaxConcurrentQueriesForUser(other.getMaxConcurrentQueriesForUser());
         }
         if (other.hasForceIndexByDate()) {
           mergeForceIndexByDate(other.getForceIndexByDate());
@@ -16272,6 +19902,19 @@ public final class UserOuterClass {
         if (other.joinOverflowMode_ != 0) {
           setJoinOverflowModeValue(other.getJoinOverflowModeValue());
         }
+        if (!other.joinAlgorithm_.isEmpty()) {
+          if (joinAlgorithm_.isEmpty()) {
+            joinAlgorithm_ = other.joinAlgorithm_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureJoinAlgorithmIsMutable();
+            joinAlgorithm_.addAll(other.joinAlgorithm_);
+          }
+          onChanged();
+        }
+        if (other.hasAnyJoinDistinctRightTableKeys()) {
+          mergeAnyJoinDistinctRightTableKeys(other.getAnyJoinDistinctRightTableKeys());
+        }
         if (other.hasMaxColumnsToRead()) {
           mergeMaxColumnsToRead(other.getMaxColumnsToRead());
         }
@@ -16308,26 +19951,32 @@ public final class UserOuterClass {
         if (other.hasInputFormatDefaultsForOmittedFields()) {
           mergeInputFormatDefaultsForOmittedFields(other.getInputFormatDefaultsForOmittedFields());
         }
+        if (other.hasInputFormatNullAsDefault()) {
+          mergeInputFormatNullAsDefault(other.getInputFormatNullAsDefault());
+        }
+        if (other.dateTimeInputFormat_ != 0) {
+          setDateTimeInputFormatValue(other.getDateTimeInputFormatValue());
+        }
+        if (other.hasInputFormatWithNamesUseHeader()) {
+          mergeInputFormatWithNamesUseHeader(other.getInputFormatWithNamesUseHeader());
+        }
         if (other.hasOutputFormatJsonQuote64BitIntegers()) {
           mergeOutputFormatJsonQuote64BitIntegers(other.getOutputFormatJsonQuote64BitIntegers());
         }
         if (other.hasOutputFormatJsonQuoteDenormals()) {
           mergeOutputFormatJsonQuoteDenormals(other.getOutputFormatJsonQuoteDenormals());
         }
+        if (other.dateTimeOutputFormat_ != 0) {
+          setDateTimeOutputFormatValue(other.getDateTimeOutputFormatValue());
+        }
         if (other.hasLowCardinalityAllowInNativeFormat()) {
           mergeLowCardinalityAllowInNativeFormat(other.getLowCardinalityAllowInNativeFormat());
         }
+        if (other.hasAllowSuspiciousLowCardinalityTypes()) {
+          mergeAllowSuspiciousLowCardinalityTypes(other.getAllowSuspiciousLowCardinalityTypes());
+        }
         if (other.hasEmptyResultForAggregationByEmptySet()) {
           mergeEmptyResultForAggregationByEmptySet(other.getEmptyResultForAggregationByEmptySet());
-        }
-        if (other.hasJoinedSubqueryRequiresAlias()) {
-          mergeJoinedSubqueryRequiresAlias(other.getJoinedSubqueryRequiresAlias());
-        }
-        if (other.hasJoinUseNulls()) {
-          mergeJoinUseNulls(other.getJoinUseNulls());
-        }
-        if (other.hasTransformNullIn()) {
-          mergeTransformNullIn(other.getTransformNullIn());
         }
         if (other.hasHttpConnectionTimeout()) {
           mergeHttpConnectionTimeout(other.getHttpConnectionTimeout());
@@ -16350,8 +19999,69 @@ public final class UserOuterClass {
         if (other.hasAddHttpCorsHeader()) {
           mergeAddHttpCorsHeader(other.getAddHttpCorsHeader());
         }
+        if (other.hasCancelHttpReadonlyQueriesOnClientClose()) {
+          mergeCancelHttpReadonlyQueriesOnClientClose(other.getCancelHttpReadonlyQueriesOnClientClose());
+        }
+        if (other.hasMaxHttpGetRedirects()) {
+          mergeMaxHttpGetRedirects(other.getMaxHttpGetRedirects());
+        }
+        if (other.hasJoinedSubqueryRequiresAlias()) {
+          mergeJoinedSubqueryRequiresAlias(other.getJoinedSubqueryRequiresAlias());
+        }
+        if (other.hasJoinUseNulls()) {
+          mergeJoinUseNulls(other.getJoinUseNulls());
+        }
+        if (other.hasTransformNullIn()) {
+          mergeTransformNullIn(other.getTransformNullIn());
+        }
         if (other.quotaMode_ != 0) {
           setQuotaModeValue(other.getQuotaModeValue());
+        }
+        if (other.hasFlattenNested()) {
+          mergeFlattenNested(other.getFlattenNested());
+        }
+        if (!other.getFormatRegexp().isEmpty()) {
+          formatRegexp_ = other.formatRegexp_;
+          onChanged();
+        }
+        if (other.formatRegexpEscapingRule_ != 0) {
+          setFormatRegexpEscapingRuleValue(other.getFormatRegexpEscapingRuleValue());
+        }
+        if (other.hasFormatRegexpSkipUnmatched()) {
+          mergeFormatRegexpSkipUnmatched(other.getFormatRegexpSkipUnmatched());
+        }
+        if (other.hasAsyncInsert()) {
+          mergeAsyncInsert(other.getAsyncInsert());
+        }
+        if (other.hasAsyncInsertThreads()) {
+          mergeAsyncInsertThreads(other.getAsyncInsertThreads());
+        }
+        if (other.hasWaitForAsyncInsert()) {
+          mergeWaitForAsyncInsert(other.getWaitForAsyncInsert());
+        }
+        if (other.hasWaitForAsyncInsertTimeout()) {
+          mergeWaitForAsyncInsertTimeout(other.getWaitForAsyncInsertTimeout());
+        }
+        if (other.hasAsyncInsertMaxDataSize()) {
+          mergeAsyncInsertMaxDataSize(other.getAsyncInsertMaxDataSize());
+        }
+        if (other.hasAsyncInsertBusyTimeout()) {
+          mergeAsyncInsertBusyTimeout(other.getAsyncInsertBusyTimeout());
+        }
+        if (other.hasAsyncInsertStaleTimeout()) {
+          mergeAsyncInsertStaleTimeout(other.getAsyncInsertStaleTimeout());
+        }
+        if (other.hasMemoryProfilerStep()) {
+          mergeMemoryProfilerStep(other.getMemoryProfilerStep());
+        }
+        if (other.hasMemoryProfilerSampleProbability()) {
+          mergeMemoryProfilerSampleProbability(other.getMemoryProfilerSampleProbability());
+        }
+        if (other.hasCompile()) {
+          mergeCompile(other.getCompile());
+        }
+        if (other.hasMinCountToCompile()) {
+          mergeMinCountToCompile(other.getMinCountToCompile());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16381,6 +20091,7 @@ public final class UserOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.Int64Value readonly_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16746,213 +20457,159 @@ public final class UserOuterClass {
         return allowDdlBuilder_;
       }
 
-      private com.google.protobuf.Int64Value insertQuorum_;
+      private com.google.protobuf.BoolValue allowIntrospectionFunctions_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumBuilder_;
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowIntrospectionFunctionsBuilder_;
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the insertQuorum field is set.
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
+       * @return Whether the allowIntrospectionFunctions field is set.
        */
-      public boolean hasInsertQuorum() {
-        return insertQuorumBuilder_ != null || insertQuorum_ != null;
+      public boolean hasAllowIntrospectionFunctions() {
+        return allowIntrospectionFunctionsBuilder_ != null || allowIntrospectionFunctions_ != null;
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The insertQuorum.
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
+       * @return The allowIntrospectionFunctions.
        */
-      public com.google.protobuf.Int64Value getInsertQuorum() {
-        if (insertQuorumBuilder_ == null) {
-          return insertQuorum_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
+      public com.google.protobuf.BoolValue getAllowIntrospectionFunctions() {
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          return allowIntrospectionFunctions_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowIntrospectionFunctions_;
         } else {
-          return insertQuorumBuilder_.getMessage();
+          return allowIntrospectionFunctionsBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
-      public Builder setInsertQuorum(com.google.protobuf.Int64Value value) {
-        if (insertQuorumBuilder_ == null) {
+      public Builder setAllowIntrospectionFunctions(com.google.protobuf.BoolValue value) {
+        if (allowIntrospectionFunctionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          insertQuorum_ = value;
+          allowIntrospectionFunctions_ = value;
           onChanged();
         } else {
-          insertQuorumBuilder_.setMessage(value);
+          allowIntrospectionFunctionsBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
-      public Builder setInsertQuorum(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (insertQuorumBuilder_ == null) {
-          insertQuorum_ = builderForValue.build();
+      public Builder setAllowIntrospectionFunctions(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          allowIntrospectionFunctions_ = builderForValue.build();
           onChanged();
         } else {
-          insertQuorumBuilder_.setMessage(builderForValue.build());
+          allowIntrospectionFunctionsBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
-      public Builder mergeInsertQuorum(com.google.protobuf.Int64Value value) {
-        if (insertQuorumBuilder_ == null) {
-          if (insertQuorum_ != null) {
-            insertQuorum_ =
-              com.google.protobuf.Int64Value.newBuilder(insertQuorum_).mergeFrom(value).buildPartial();
+      public Builder mergeAllowIntrospectionFunctions(com.google.protobuf.BoolValue value) {
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          if (allowIntrospectionFunctions_ != null) {
+            allowIntrospectionFunctions_ =
+              com.google.protobuf.BoolValue.newBuilder(allowIntrospectionFunctions_).mergeFrom(value).buildPartial();
           } else {
-            insertQuorum_ = value;
+            allowIntrospectionFunctions_ = value;
           }
           onChanged();
         } else {
-          insertQuorumBuilder_.mergeFrom(value);
+          allowIntrospectionFunctionsBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
-      public Builder clearInsertQuorum() {
-        if (insertQuorumBuilder_ == null) {
-          insertQuorum_ = null;
+      public Builder clearAllowIntrospectionFunctions() {
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          allowIntrospectionFunctions_ = null;
           onChanged();
         } else {
-          insertQuorum_ = null;
-          insertQuorumBuilder_ = null;
+          allowIntrospectionFunctions_ = null;
+          allowIntrospectionFunctionsBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
-      public com.google.protobuf.Int64Value.Builder getInsertQuorumBuilder() {
+      public com.google.protobuf.BoolValue.Builder getAllowIntrospectionFunctionsBuilder() {
         
         onChanged();
-        return getInsertQuorumFieldBuilder().getBuilder();
+        return getAllowIntrospectionFunctionsFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
-      public com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder() {
-        if (insertQuorumBuilder_ != null) {
-          return insertQuorumBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.BoolValueOrBuilder getAllowIntrospectionFunctionsOrBuilder() {
+        if (allowIntrospectionFunctionsBuilder_ != null) {
+          return allowIntrospectionFunctionsBuilder_.getMessageOrBuilder();
         } else {
-          return insertQuorum_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
+          return allowIntrospectionFunctions_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : allowIntrospectionFunctions_;
         }
       }
       /**
        * <pre>
-       * Enables or disables write quorum for ClickHouse cluster.
-       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
-       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
-       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
-       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
-       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getInsertQuorumFieldBuilder() {
-        if (insertQuorumBuilder_ == null) {
-          insertQuorumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getInsertQuorum(),
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAllowIntrospectionFunctionsFieldBuilder() {
+        if (allowIntrospectionFunctionsBuilder_ == null) {
+          allowIntrospectionFunctionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAllowIntrospectionFunctions(),
                   getParentForChildren(),
                   isClean());
-          insertQuorum_ = null;
+          allowIntrospectionFunctions_ = null;
         }
-        return insertQuorumBuilder_;
+        return allowIntrospectionFunctionsBuilder_;
       }
 
       private com.google.protobuf.Int64Value connectTimeout_;
@@ -17117,6 +20774,170 @@ public final class UserOuterClass {
           connectTimeout_ = null;
         }
         return connectTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value connectTimeoutWithFailover_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> connectTimeoutWithFailoverBuilder_;
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the connectTimeoutWithFailover field is set.
+       */
+      public boolean hasConnectTimeoutWithFailover() {
+        return connectTimeoutWithFailoverBuilder_ != null || connectTimeoutWithFailover_ != null;
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The connectTimeoutWithFailover.
+       */
+      public com.google.protobuf.Int64Value getConnectTimeoutWithFailover() {
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          return connectTimeoutWithFailover_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : connectTimeoutWithFailover_;
+        } else {
+          return connectTimeoutWithFailoverBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setConnectTimeoutWithFailover(com.google.protobuf.Int64Value value) {
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectTimeoutWithFailover_ = value;
+          onChanged();
+        } else {
+          connectTimeoutWithFailoverBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setConnectTimeoutWithFailover(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          connectTimeoutWithFailover_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectTimeoutWithFailoverBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeConnectTimeoutWithFailover(com.google.protobuf.Int64Value value) {
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          if (connectTimeoutWithFailover_ != null) {
+            connectTimeoutWithFailover_ =
+              com.google.protobuf.Int64Value.newBuilder(connectTimeoutWithFailover_).mergeFrom(value).buildPartial();
+          } else {
+            connectTimeoutWithFailover_ = value;
+          }
+          onChanged();
+        } else {
+          connectTimeoutWithFailoverBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearConnectTimeoutWithFailover() {
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          connectTimeoutWithFailover_ = null;
+          onChanged();
+        } else {
+          connectTimeoutWithFailover_ = null;
+          connectTimeoutWithFailoverBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getConnectTimeoutWithFailoverBuilder() {
+        
+        onChanged();
+        return getConnectTimeoutWithFailoverFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getConnectTimeoutWithFailoverOrBuilder() {
+        if (connectTimeoutWithFailoverBuilder_ != null) {
+          return connectTimeoutWithFailoverBuilder_.getMessageOrBuilder();
+        } else {
+          return connectTimeoutWithFailover_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : connectTimeoutWithFailover_;
+        }
+      }
+      /**
+       * <pre>
+       * Connection timeout with failover in milliseconds.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getConnectTimeoutWithFailoverFieldBuilder() {
+        if (connectTimeoutWithFailoverBuilder_ == null) {
+          connectTimeoutWithFailoverBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getConnectTimeoutWithFailover(),
+                  getParentForChildren(),
+                  isClean());
+          connectTimeoutWithFailover_ = null;
+        }
+        return connectTimeoutWithFailoverBuilder_;
       }
 
       private com.google.protobuf.Int64Value receiveTimeout_;
@@ -17447,6 +21268,370 @@ public final class UserOuterClass {
         return sendTimeoutBuilder_;
       }
 
+      private com.google.protobuf.Int64Value timeoutBeforeCheckingExecutionSpeed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> timeoutBeforeCheckingExecutionSpeedBuilder_;
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       * @return Whether the timeoutBeforeCheckingExecutionSpeed field is set.
+       */
+      public boolean hasTimeoutBeforeCheckingExecutionSpeed() {
+        return timeoutBeforeCheckingExecutionSpeedBuilder_ != null || timeoutBeforeCheckingExecutionSpeed_ != null;
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       * @return The timeoutBeforeCheckingExecutionSpeed.
+       */
+      public com.google.protobuf.Int64Value getTimeoutBeforeCheckingExecutionSpeed() {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          return timeoutBeforeCheckingExecutionSpeed_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : timeoutBeforeCheckingExecutionSpeed_;
+        } else {
+          return timeoutBeforeCheckingExecutionSpeedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      public Builder setTimeoutBeforeCheckingExecutionSpeed(com.google.protobuf.Int64Value value) {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeoutBeforeCheckingExecutionSpeed_ = value;
+          onChanged();
+        } else {
+          timeoutBeforeCheckingExecutionSpeedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      public Builder setTimeoutBeforeCheckingExecutionSpeed(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          timeoutBeforeCheckingExecutionSpeed_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeoutBeforeCheckingExecutionSpeedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      public Builder mergeTimeoutBeforeCheckingExecutionSpeed(com.google.protobuf.Int64Value value) {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          if (timeoutBeforeCheckingExecutionSpeed_ != null) {
+            timeoutBeforeCheckingExecutionSpeed_ =
+              com.google.protobuf.Int64Value.newBuilder(timeoutBeforeCheckingExecutionSpeed_).mergeFrom(value).buildPartial();
+          } else {
+            timeoutBeforeCheckingExecutionSpeed_ = value;
+          }
+          onChanged();
+        } else {
+          timeoutBeforeCheckingExecutionSpeedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      public Builder clearTimeoutBeforeCheckingExecutionSpeed() {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          timeoutBeforeCheckingExecutionSpeed_ = null;
+          onChanged();
+        } else {
+          timeoutBeforeCheckingExecutionSpeed_ = null;
+          timeoutBeforeCheckingExecutionSpeedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTimeoutBeforeCheckingExecutionSpeedBuilder() {
+        
+        onChanged();
+        return getTimeoutBeforeCheckingExecutionSpeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTimeoutBeforeCheckingExecutionSpeedOrBuilder() {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ != null) {
+          return timeoutBeforeCheckingExecutionSpeedBuilder_.getMessageOrBuilder();
+        } else {
+          return timeoutBeforeCheckingExecutionSpeed_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : timeoutBeforeCheckingExecutionSpeed_;
+        }
+      }
+      /**
+       * <pre>
+       * Check that the speed is not too low after the specified time has elapsed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTimeoutBeforeCheckingExecutionSpeedFieldBuilder() {
+        if (timeoutBeforeCheckingExecutionSpeedBuilder_ == null) {
+          timeoutBeforeCheckingExecutionSpeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTimeoutBeforeCheckingExecutionSpeed(),
+                  getParentForChildren(),
+                  isClean());
+          timeoutBeforeCheckingExecutionSpeed_ = null;
+        }
+        return timeoutBeforeCheckingExecutionSpeedBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value insertQuorum_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumBuilder_;
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the insertQuorum field is set.
+       */
+      public boolean hasInsertQuorum() {
+        return insertQuorumBuilder_ != null || insertQuorum_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The insertQuorum.
+       */
+      public com.google.protobuf.Int64Value getInsertQuorum() {
+        if (insertQuorumBuilder_ == null) {
+          return insertQuorum_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
+        } else {
+          return insertQuorumBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setInsertQuorum(com.google.protobuf.Int64Value value) {
+        if (insertQuorumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          insertQuorum_ = value;
+          onChanged();
+        } else {
+          insertQuorumBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setInsertQuorum(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (insertQuorumBuilder_ == null) {
+          insertQuorum_ = builderForValue.build();
+          onChanged();
+        } else {
+          insertQuorumBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeInsertQuorum(com.google.protobuf.Int64Value value) {
+        if (insertQuorumBuilder_ == null) {
+          if (insertQuorum_ != null) {
+            insertQuorum_ =
+              com.google.protobuf.Int64Value.newBuilder(insertQuorum_).mergeFrom(value).buildPartial();
+          } else {
+            insertQuorum_ = value;
+          }
+          onChanged();
+        } else {
+          insertQuorumBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearInsertQuorum() {
+        if (insertQuorumBuilder_ == null) {
+          insertQuorum_ = null;
+          onChanged();
+        } else {
+          insertQuorum_ = null;
+          insertQuorumBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInsertQuorumBuilder() {
+        
+        onChanged();
+        return getInsertQuorumFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInsertQuorumOrBuilder() {
+        if (insertQuorumBuilder_ != null) {
+          return insertQuorumBuilder_.getMessageOrBuilder();
+        } else {
+          return insertQuorum_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : insertQuorum_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInsertQuorumFieldBuilder() {
+        if (insertQuorumBuilder_ == null) {
+          insertQuorumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInsertQuorum(),
+                  getParentForChildren(),
+                  isClean());
+          insertQuorum_ = null;
+        }
+        return insertQuorumBuilder_;
+      }
+
       private com.google.protobuf.Int64Value insertQuorumTimeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumTimeoutBuilder_;
@@ -17629,6 +21814,316 @@ public final class UserOuterClass {
         return insertQuorumTimeoutBuilder_;
       }
 
+      private com.google.protobuf.BoolValue insertQuorumParallel_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> insertQuorumParallelBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       * @return Whether the insertQuorumParallel field is set.
+       */
+      public boolean hasInsertQuorumParallel() {
+        return insertQuorumParallelBuilder_ != null || insertQuorumParallel_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       * @return The insertQuorumParallel.
+       */
+      public com.google.protobuf.BoolValue getInsertQuorumParallel() {
+        if (insertQuorumParallelBuilder_ == null) {
+          return insertQuorumParallel_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : insertQuorumParallel_;
+        } else {
+          return insertQuorumParallelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      public Builder setInsertQuorumParallel(com.google.protobuf.BoolValue value) {
+        if (insertQuorumParallelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          insertQuorumParallel_ = value;
+          onChanged();
+        } else {
+          insertQuorumParallelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      public Builder setInsertQuorumParallel(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (insertQuorumParallelBuilder_ == null) {
+          insertQuorumParallel_ = builderForValue.build();
+          onChanged();
+        } else {
+          insertQuorumParallelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      public Builder mergeInsertQuorumParallel(com.google.protobuf.BoolValue value) {
+        if (insertQuorumParallelBuilder_ == null) {
+          if (insertQuorumParallel_ != null) {
+            insertQuorumParallel_ =
+              com.google.protobuf.BoolValue.newBuilder(insertQuorumParallel_).mergeFrom(value).buildPartial();
+          } else {
+            insertQuorumParallel_ = value;
+          }
+          onChanged();
+        } else {
+          insertQuorumParallelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      public Builder clearInsertQuorumParallel() {
+        if (insertQuorumParallelBuilder_ == null) {
+          insertQuorumParallel_ = null;
+          onChanged();
+        } else {
+          insertQuorumParallel_ = null;
+          insertQuorumParallelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInsertQuorumParallelBuilder() {
+        
+        onChanged();
+        return getInsertQuorumParallelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInsertQuorumParallelOrBuilder() {
+        if (insertQuorumParallelBuilder_ != null) {
+          return insertQuorumParallelBuilder_.getMessageOrBuilder();
+        } else {
+          return insertQuorumParallel_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : insertQuorumParallel_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-insert_quorum_parallel).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_quorum_parallel = 99;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInsertQuorumParallelFieldBuilder() {
+        if (insertQuorumParallelBuilder_ == null) {
+          insertQuorumParallelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInsertQuorumParallel(),
+                  getParentForChildren(),
+                  isClean());
+          insertQuorumParallel_ = null;
+        }
+        return insertQuorumParallelBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue insertNullAsDefault_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> insertNullAsDefaultBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       * @return Whether the insertNullAsDefault field is set.
+       */
+      public boolean hasInsertNullAsDefault() {
+        return insertNullAsDefaultBuilder_ != null || insertNullAsDefault_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       * @return The insertNullAsDefault.
+       */
+      public com.google.protobuf.BoolValue getInsertNullAsDefault() {
+        if (insertNullAsDefaultBuilder_ == null) {
+          return insertNullAsDefault_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : insertNullAsDefault_;
+        } else {
+          return insertNullAsDefaultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      public Builder setInsertNullAsDefault(com.google.protobuf.BoolValue value) {
+        if (insertNullAsDefaultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          insertNullAsDefault_ = value;
+          onChanged();
+        } else {
+          insertNullAsDefaultBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      public Builder setInsertNullAsDefault(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (insertNullAsDefaultBuilder_ == null) {
+          insertNullAsDefault_ = builderForValue.build();
+          onChanged();
+        } else {
+          insertNullAsDefaultBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      public Builder mergeInsertNullAsDefault(com.google.protobuf.BoolValue value) {
+        if (insertNullAsDefaultBuilder_ == null) {
+          if (insertNullAsDefault_ != null) {
+            insertNullAsDefault_ =
+              com.google.protobuf.BoolValue.newBuilder(insertNullAsDefault_).mergeFrom(value).buildPartial();
+          } else {
+            insertNullAsDefault_ = value;
+          }
+          onChanged();
+        } else {
+          insertNullAsDefaultBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      public Builder clearInsertNullAsDefault() {
+        if (insertNullAsDefaultBuilder_ == null) {
+          insertNullAsDefault_ = null;
+          onChanged();
+        } else {
+          insertNullAsDefault_ = null;
+          insertNullAsDefaultBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInsertNullAsDefaultBuilder() {
+        
+        onChanged();
+        return getInsertNullAsDefaultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInsertNullAsDefaultOrBuilder() {
+        if (insertNullAsDefaultBuilder_ != null) {
+          return insertNullAsDefaultBuilder_.getMessageOrBuilder();
+        } else {
+          return insertNullAsDefault_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : insertNullAsDefault_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInsertNullAsDefaultFieldBuilder() {
+        if (insertNullAsDefaultBuilder_ == null) {
+          insertNullAsDefaultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInsertNullAsDefault(),
+                  getParentForChildren(),
+                  isClean());
+          insertNullAsDefault_ = null;
+        }
+        return insertNullAsDefaultBuilder_;
+      }
+
       private com.google.protobuf.BoolValue selectSequentialConsistency_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> selectSequentialConsistencyBuilder_;
@@ -17791,6 +22286,352 @@ public final class UserOuterClass {
           selectSequentialConsistency_ = null;
         }
         return selectSequentialConsistencyBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue deduplicateBlocksInDependentMaterializedViews_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deduplicateBlocksInDependentMaterializedViewsBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       * @return Whether the deduplicateBlocksInDependentMaterializedViews field is set.
+       */
+      public boolean hasDeduplicateBlocksInDependentMaterializedViews() {
+        return deduplicateBlocksInDependentMaterializedViewsBuilder_ != null || deduplicateBlocksInDependentMaterializedViews_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       * @return The deduplicateBlocksInDependentMaterializedViews.
+       */
+      public com.google.protobuf.BoolValue getDeduplicateBlocksInDependentMaterializedViews() {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          return deduplicateBlocksInDependentMaterializedViews_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deduplicateBlocksInDependentMaterializedViews_;
+        } else {
+          return deduplicateBlocksInDependentMaterializedViewsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      public Builder setDeduplicateBlocksInDependentMaterializedViews(com.google.protobuf.BoolValue value) {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deduplicateBlocksInDependentMaterializedViews_ = value;
+          onChanged();
+        } else {
+          deduplicateBlocksInDependentMaterializedViewsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      public Builder setDeduplicateBlocksInDependentMaterializedViews(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          deduplicateBlocksInDependentMaterializedViews_ = builderForValue.build();
+          onChanged();
+        } else {
+          deduplicateBlocksInDependentMaterializedViewsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      public Builder mergeDeduplicateBlocksInDependentMaterializedViews(com.google.protobuf.BoolValue value) {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          if (deduplicateBlocksInDependentMaterializedViews_ != null) {
+            deduplicateBlocksInDependentMaterializedViews_ =
+              com.google.protobuf.BoolValue.newBuilder(deduplicateBlocksInDependentMaterializedViews_).mergeFrom(value).buildPartial();
+          } else {
+            deduplicateBlocksInDependentMaterializedViews_ = value;
+          }
+          onChanged();
+        } else {
+          deduplicateBlocksInDependentMaterializedViewsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      public Builder clearDeduplicateBlocksInDependentMaterializedViews() {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          deduplicateBlocksInDependentMaterializedViews_ = null;
+          onChanged();
+        } else {
+          deduplicateBlocksInDependentMaterializedViews_ = null;
+          deduplicateBlocksInDependentMaterializedViewsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeduplicateBlocksInDependentMaterializedViewsBuilder() {
+        
+        onChanged();
+        return getDeduplicateBlocksInDependentMaterializedViewsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeduplicateBlocksInDependentMaterializedViewsOrBuilder() {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ != null) {
+          return deduplicateBlocksInDependentMaterializedViewsBuilder_.getMessageOrBuilder();
+        } else {
+          return deduplicateBlocksInDependentMaterializedViews_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deduplicateBlocksInDependentMaterializedViews_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-deduplicate-blocks-in-dependent-materialized-views).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deduplicate_blocks_in_dependent_materialized_views = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeduplicateBlocksInDependentMaterializedViewsFieldBuilder() {
+        if (deduplicateBlocksInDependentMaterializedViewsBuilder_ == null) {
+          deduplicateBlocksInDependentMaterializedViewsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeduplicateBlocksInDependentMaterializedViews(),
+                  getParentForChildren(),
+                  isClean());
+          deduplicateBlocksInDependentMaterializedViews_ = null;
+        }
+        return deduplicateBlocksInDependentMaterializedViewsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value replicationAlterPartitionsSync_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationAlterPartitionsSyncBuilder_;
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       * @return Whether the replicationAlterPartitionsSync field is set.
+       */
+      public boolean hasReplicationAlterPartitionsSync() {
+        return replicationAlterPartitionsSyncBuilder_ != null || replicationAlterPartitionsSync_ != null;
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       * @return The replicationAlterPartitionsSync.
+       */
+      public com.google.protobuf.Int64Value getReplicationAlterPartitionsSync() {
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          return replicationAlterPartitionsSync_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
+        } else {
+          return replicationAlterPartitionsSyncBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      public Builder setReplicationAlterPartitionsSync(com.google.protobuf.Int64Value value) {
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replicationAlterPartitionsSync_ = value;
+          onChanged();
+        } else {
+          replicationAlterPartitionsSyncBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      public Builder setReplicationAlterPartitionsSync(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          replicationAlterPartitionsSync_ = builderForValue.build();
+          onChanged();
+        } else {
+          replicationAlterPartitionsSyncBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      public Builder mergeReplicationAlterPartitionsSync(com.google.protobuf.Int64Value value) {
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          if (replicationAlterPartitionsSync_ != null) {
+            replicationAlterPartitionsSync_ =
+              com.google.protobuf.Int64Value.newBuilder(replicationAlterPartitionsSync_).mergeFrom(value).buildPartial();
+          } else {
+            replicationAlterPartitionsSync_ = value;
+          }
+          onChanged();
+        } else {
+          replicationAlterPartitionsSyncBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      public Builder clearReplicationAlterPartitionsSync() {
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          replicationAlterPartitionsSync_ = null;
+          onChanged();
+        } else {
+          replicationAlterPartitionsSync_ = null;
+          replicationAlterPartitionsSyncBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReplicationAlterPartitionsSyncBuilder() {
+        
+        onChanged();
+        return getReplicationAlterPartitionsSyncFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder() {
+        if (replicationAlterPartitionsSyncBuilder_ != null) {
+          return replicationAlterPartitionsSyncBuilder_.getMessageOrBuilder();
+        } else {
+          return replicationAlterPartitionsSync_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
+        }
+      }
+      /**
+       * <pre>
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReplicationAlterPartitionsSyncFieldBuilder() {
+        if (replicationAlterPartitionsSyncBuilder_ == null) {
+          replicationAlterPartitionsSyncBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReplicationAlterPartitionsSync(),
+                  getParentForChildren(),
+                  isClean());
+          replicationAlterPartitionsSync_ = null;
+        }
+        return replicationAlterPartitionsSyncBuilder_;
       }
 
       private com.google.protobuf.Int64Value maxReplicaDelayForDistributedQueries_;
@@ -18155,197 +22996,6 @@ public final class UserOuterClass {
           fallbackToStaleReplicasForDistributedQueries_ = null;
         }
         return fallbackToStaleReplicasForDistributedQueriesBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value replicationAlterPartitionsSync_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationAlterPartitionsSyncBuilder_;
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       * @return Whether the replicationAlterPartitionsSync field is set.
-       */
-      public boolean hasReplicationAlterPartitionsSync() {
-        return replicationAlterPartitionsSyncBuilder_ != null || replicationAlterPartitionsSync_ != null;
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       * @return The replicationAlterPartitionsSync.
-       */
-      public com.google.protobuf.Int64Value getReplicationAlterPartitionsSync() {
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          return replicationAlterPartitionsSync_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
-        } else {
-          return replicationAlterPartitionsSyncBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      public Builder setReplicationAlterPartitionsSync(com.google.protobuf.Int64Value value) {
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          replicationAlterPartitionsSync_ = value;
-          onChanged();
-        } else {
-          replicationAlterPartitionsSyncBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      public Builder setReplicationAlterPartitionsSync(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          replicationAlterPartitionsSync_ = builderForValue.build();
-          onChanged();
-        } else {
-          replicationAlterPartitionsSyncBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      public Builder mergeReplicationAlterPartitionsSync(com.google.protobuf.Int64Value value) {
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          if (replicationAlterPartitionsSync_ != null) {
-            replicationAlterPartitionsSync_ =
-              com.google.protobuf.Int64Value.newBuilder(replicationAlterPartitionsSync_).mergeFrom(value).buildPartial();
-          } else {
-            replicationAlterPartitionsSync_ = value;
-          }
-          onChanged();
-        } else {
-          replicationAlterPartitionsSyncBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      public Builder clearReplicationAlterPartitionsSync() {
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          replicationAlterPartitionsSync_ = null;
-          onChanged();
-        } else {
-          replicationAlterPartitionsSync_ = null;
-          replicationAlterPartitionsSyncBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getReplicationAlterPartitionsSyncBuilder() {
-        
-        onChanged();
-        return getReplicationAlterPartitionsSyncFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getReplicationAlterPartitionsSyncOrBuilder() {
-        if (replicationAlterPartitionsSyncBuilder_ != null) {
-          return replicationAlterPartitionsSyncBuilder_.getMessageOrBuilder();
-        } else {
-          return replicationAlterPartitionsSync_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : replicationAlterPartitionsSync_;
-        }
-      }
-      /**
-       * <pre>
-       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**-do not wait for replicas.
-       * * **1**-only wait for own execution (default).
-       * * **2**-wait for all replicas.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getReplicationAlterPartitionsSyncFieldBuilder() {
-        if (replicationAlterPartitionsSyncBuilder_ == null) {
-          replicationAlterPartitionsSyncBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getReplicationAlterPartitionsSync(),
-                  getParentForChildren(),
-                  isClean());
-          replicationAlterPartitionsSync_ = null;
-        }
-        return replicationAlterPartitionsSyncBuilder_;
       }
 
       private int distributedProductMode_ = 0;
@@ -18953,415 +23603,6 @@ public final class UserOuterClass {
           skipUnavailableShards_ = null;
         }
         return skipUnavailableShardsBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue compile_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       * @return Whether the compile field is set.
-       */
-      public boolean hasCompile() {
-        return compileBuilder_ != null || compile_ != null;
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       * @return The compile.
-       */
-      public com.google.protobuf.BoolValue getCompile() {
-        if (compileBuilder_ == null) {
-          return compile_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
-        } else {
-          return compileBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      public Builder setCompile(com.google.protobuf.BoolValue value) {
-        if (compileBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          compile_ = value;
-          onChanged();
-        } else {
-          compileBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      public Builder setCompile(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (compileBuilder_ == null) {
-          compile_ = builderForValue.build();
-          onChanged();
-        } else {
-          compileBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      public Builder mergeCompile(com.google.protobuf.BoolValue value) {
-        if (compileBuilder_ == null) {
-          if (compile_ != null) {
-            compile_ =
-              com.google.protobuf.BoolValue.newBuilder(compile_).mergeFrom(value).buildPartial();
-          } else {
-            compile_ = value;
-          }
-          onChanged();
-        } else {
-          compileBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      public Builder clearCompile() {
-        if (compileBuilder_ == null) {
-          compile_ = null;
-          onChanged();
-        } else {
-          compile_ = null;
-          compileBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getCompileBuilder() {
-        
-        onChanged();
-        return getCompileFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder() {
-        if (compileBuilder_ != null) {
-          return compileBuilder_.getMessageOrBuilder();
-        } else {
-          return compile_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
-        }
-      }
-      /**
-       * <pre>
-       * Enables or disables query compilation.
-       * If you execute a lot of structurally identical queries, then enable this setting.
-       * As a result, such queries may be executed faster due to use of queries' compiled parts.
-       * Use this setting in combination with [min_count_to_compile] setting.
-       * Default value: **false** (compilation is disabled).
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue compile = 44;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getCompileFieldBuilder() {
-        if (compileBuilder_ == null) {
-          compileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getCompile(),
-                  getParentForChildren(),
-                  isClean());
-          compile_ = null;
-        }
-        return compileBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value minCountToCompile_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCountToCompileBuilder_;
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the minCountToCompile field is set.
-       */
-      public boolean hasMinCountToCompile() {
-        return minCountToCompileBuilder_ != null || minCountToCompile_ != null;
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The minCountToCompile.
-       */
-      public com.google.protobuf.Int64Value getMinCountToCompile() {
-        if (minCountToCompileBuilder_ == null) {
-          return minCountToCompile_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
-        } else {
-          return minCountToCompileBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setMinCountToCompile(com.google.protobuf.Int64Value value) {
-        if (minCountToCompileBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          minCountToCompile_ = value;
-          onChanged();
-        } else {
-          minCountToCompileBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setMinCountToCompile(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (minCountToCompileBuilder_ == null) {
-          minCountToCompile_ = builderForValue.build();
-          onChanged();
-        } else {
-          minCountToCompileBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeMinCountToCompile(com.google.protobuf.Int64Value value) {
-        if (minCountToCompileBuilder_ == null) {
-          if (minCountToCompile_ != null) {
-            minCountToCompile_ =
-              com.google.protobuf.Int64Value.newBuilder(minCountToCompile_).mergeFrom(value).buildPartial();
-          } else {
-            minCountToCompile_ = value;
-          }
-          onChanged();
-        } else {
-          minCountToCompileBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearMinCountToCompile() {
-        if (minCountToCompileBuilder_ == null) {
-          minCountToCompile_ = null;
-          onChanged();
-        } else {
-          minCountToCompile_ = null;
-          minCountToCompileBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getMinCountToCompileBuilder() {
-        
-        onChanged();
-        return getMinCountToCompileFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder() {
-        if (minCountToCompileBuilder_ != null) {
-          return minCountToCompileBuilder_.getMessageOrBuilder();
-        } else {
-          return minCountToCompile_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
-        }
-      }
-      /**
-       * <pre>
-       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
-       * Minimum value: **0** (default: **3**).
-       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
-       * It is recommended to set this value only for testing purposes.
-       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
-       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#min-count-to-compile).
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getMinCountToCompileFieldBuilder() {
-        if (minCountToCompileBuilder_ == null) {
-          minCountToCompileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getMinCountToCompile(),
-                  getParentForChildren(),
-                  isClean());
-          minCountToCompile_ = null;
-        }
-        return minCountToCompileBuilder_;
       }
 
       private com.google.protobuf.BoolValue compileExpressions_;
@@ -23422,6 +27663,316 @@ public final class UserOuterClass {
         return maxNetworkBandwidthForUserBuilder_;
       }
 
+      private com.google.protobuf.Int64Value maxPartitionsPerInsertBlock_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPartitionsPerInsertBlockBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       * @return Whether the maxPartitionsPerInsertBlock field is set.
+       */
+      public boolean hasMaxPartitionsPerInsertBlock() {
+        return maxPartitionsPerInsertBlockBuilder_ != null || maxPartitionsPerInsertBlock_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       * @return The maxPartitionsPerInsertBlock.
+       */
+      public com.google.protobuf.Int64Value getMaxPartitionsPerInsertBlock() {
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          return maxPartitionsPerInsertBlock_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPartitionsPerInsertBlock_;
+        } else {
+          return maxPartitionsPerInsertBlockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      public Builder setMaxPartitionsPerInsertBlock(com.google.protobuf.Int64Value value) {
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxPartitionsPerInsertBlock_ = value;
+          onChanged();
+        } else {
+          maxPartitionsPerInsertBlockBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      public Builder setMaxPartitionsPerInsertBlock(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          maxPartitionsPerInsertBlock_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxPartitionsPerInsertBlockBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      public Builder mergeMaxPartitionsPerInsertBlock(com.google.protobuf.Int64Value value) {
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          if (maxPartitionsPerInsertBlock_ != null) {
+            maxPartitionsPerInsertBlock_ =
+              com.google.protobuf.Int64Value.newBuilder(maxPartitionsPerInsertBlock_).mergeFrom(value).buildPartial();
+          } else {
+            maxPartitionsPerInsertBlock_ = value;
+          }
+          onChanged();
+        } else {
+          maxPartitionsPerInsertBlockBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      public Builder clearMaxPartitionsPerInsertBlock() {
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          maxPartitionsPerInsertBlock_ = null;
+          onChanged();
+        } else {
+          maxPartitionsPerInsertBlock_ = null;
+          maxPartitionsPerInsertBlockBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxPartitionsPerInsertBlockBuilder() {
+        
+        onChanged();
+        return getMaxPartitionsPerInsertBlockFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxPartitionsPerInsertBlockOrBuilder() {
+        if (maxPartitionsPerInsertBlockBuilder_ != null) {
+          return maxPartitionsPerInsertBlockBuilder_.getMessageOrBuilder();
+        } else {
+          return maxPartitionsPerInsertBlock_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxPartitionsPerInsertBlock_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/ru/operations/settings/query-complexity/#max-partitions-per-insert-block).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_partitions_per_insert_block = 102;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxPartitionsPerInsertBlockFieldBuilder() {
+        if (maxPartitionsPerInsertBlockBuilder_ == null) {
+          maxPartitionsPerInsertBlockBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxPartitionsPerInsertBlock(),
+                  getParentForChildren(),
+                  isClean());
+          maxPartitionsPerInsertBlock_ = null;
+        }
+        return maxPartitionsPerInsertBlockBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxConcurrentQueriesForUser_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConcurrentQueriesForUserBuilder_;
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       * @return Whether the maxConcurrentQueriesForUser field is set.
+       */
+      public boolean hasMaxConcurrentQueriesForUser() {
+        return maxConcurrentQueriesForUserBuilder_ != null || maxConcurrentQueriesForUser_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       * @return The maxConcurrentQueriesForUser.
+       */
+      public com.google.protobuf.Int64Value getMaxConcurrentQueriesForUser() {
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          return maxConcurrentQueriesForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConcurrentQueriesForUser_;
+        } else {
+          return maxConcurrentQueriesForUserBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      public Builder setMaxConcurrentQueriesForUser(com.google.protobuf.Int64Value value) {
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxConcurrentQueriesForUser_ = value;
+          onChanged();
+        } else {
+          maxConcurrentQueriesForUserBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      public Builder setMaxConcurrentQueriesForUser(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          maxConcurrentQueriesForUser_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxConcurrentQueriesForUserBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      public Builder mergeMaxConcurrentQueriesForUser(com.google.protobuf.Int64Value value) {
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          if (maxConcurrentQueriesForUser_ != null) {
+            maxConcurrentQueriesForUser_ =
+              com.google.protobuf.Int64Value.newBuilder(maxConcurrentQueriesForUser_).mergeFrom(value).buildPartial();
+          } else {
+            maxConcurrentQueriesForUser_ = value;
+          }
+          onChanged();
+        } else {
+          maxConcurrentQueriesForUserBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      public Builder clearMaxConcurrentQueriesForUser() {
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          maxConcurrentQueriesForUser_ = null;
+          onChanged();
+        } else {
+          maxConcurrentQueriesForUser_ = null;
+          maxConcurrentQueriesForUserBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxConcurrentQueriesForUserBuilder() {
+        
+        onChanged();
+        return getMaxConcurrentQueriesForUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesForUserOrBuilder() {
+        if (maxConcurrentQueriesForUserBuilder_ != null) {
+          return maxConcurrentQueriesForUserBuilder_.getMessageOrBuilder();
+        } else {
+          return maxConcurrentQueriesForUser_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxConcurrentQueriesForUser_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of concurrent requests per user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxConcurrentQueriesForUserFieldBuilder() {
+        if (maxConcurrentQueriesForUserBuilder_ == null) {
+          maxConcurrentQueriesForUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxConcurrentQueriesForUser(),
+                  getParentForChildren(),
+                  isClean());
+          maxConcurrentQueriesForUser_ = null;
+        }
+        return maxConcurrentQueriesForUserBuilder_;
+      }
+
       private com.google.protobuf.BoolValue forceIndexByDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forceIndexByDateBuilder_;
@@ -27188,6 +31739,349 @@ public final class UserOuterClass {
         return this;
       }
 
+      private java.util.List<java.lang.Integer> joinAlgorithm_ =
+        java.util.Collections.emptyList();
+      private void ensureJoinAlgorithmIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          joinAlgorithm_ = new java.util.ArrayList<java.lang.Integer>(joinAlgorithm_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @return A list containing the joinAlgorithm.
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm> getJoinAlgorithmList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm>(joinAlgorithm_, joinAlgorithm_converter_);
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @return The count of joinAlgorithm.
+       */
+      public int getJoinAlgorithmCount() {
+        return joinAlgorithm_.size();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param index The index of the element to return.
+       * @return The joinAlgorithm at the given index.
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm getJoinAlgorithm(int index) {
+        return joinAlgorithm_converter_.convert(joinAlgorithm_.get(index));
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param index The index to set the value at.
+       * @param value The joinAlgorithm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJoinAlgorithm(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJoinAlgorithmIsMutable();
+        joinAlgorithm_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param value The joinAlgorithm to add.
+       * @return This builder for chaining.
+       */
+      public Builder addJoinAlgorithm(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJoinAlgorithmIsMutable();
+        joinAlgorithm_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param values The joinAlgorithm to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllJoinAlgorithm(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm> values) {
+        ensureJoinAlgorithmIsMutable();
+        for (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.JoinAlgorithm value : values) {
+          joinAlgorithm_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJoinAlgorithm() {
+        joinAlgorithm_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @return A list containing the enum numeric values on the wire for joinAlgorithm.
+       */
+      public java.util.List<java.lang.Integer>
+      getJoinAlgorithmValueList() {
+        return java.util.Collections.unmodifiableList(joinAlgorithm_);
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of joinAlgorithm at the given index.
+       */
+      public int getJoinAlgorithmValue(int index) {
+        return joinAlgorithm_.get(index);
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of joinAlgorithm at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setJoinAlgorithmValue(
+          int index, int value) {
+        ensureJoinAlgorithmIsMutable();
+        joinAlgorithm_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param value The enum numeric value on the wire for joinAlgorithm to add.
+       * @return This builder for chaining.
+       */
+      public Builder addJoinAlgorithmValue(int value) {
+        ensureJoinAlgorithmIsMutable();
+        joinAlgorithm_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-join_algorithm).
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserSettings.JoinAlgorithm join_algorithm = 104;</code>
+       * @param values The enum numeric values on the wire for joinAlgorithm to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllJoinAlgorithmValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureJoinAlgorithmIsMutable();
+        for (int value : values) {
+          joinAlgorithm_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue anyJoinDistinctRightTableKeys_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> anyJoinDistinctRightTableKeysBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       * @return Whether the anyJoinDistinctRightTableKeys field is set.
+       */
+      public boolean hasAnyJoinDistinctRightTableKeys() {
+        return anyJoinDistinctRightTableKeysBuilder_ != null || anyJoinDistinctRightTableKeys_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       * @return The anyJoinDistinctRightTableKeys.
+       */
+      public com.google.protobuf.BoolValue getAnyJoinDistinctRightTableKeys() {
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          return anyJoinDistinctRightTableKeys_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : anyJoinDistinctRightTableKeys_;
+        } else {
+          return anyJoinDistinctRightTableKeysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      public Builder setAnyJoinDistinctRightTableKeys(com.google.protobuf.BoolValue value) {
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          anyJoinDistinctRightTableKeys_ = value;
+          onChanged();
+        } else {
+          anyJoinDistinctRightTableKeysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      public Builder setAnyJoinDistinctRightTableKeys(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          anyJoinDistinctRightTableKeys_ = builderForValue.build();
+          onChanged();
+        } else {
+          anyJoinDistinctRightTableKeysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      public Builder mergeAnyJoinDistinctRightTableKeys(com.google.protobuf.BoolValue value) {
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          if (anyJoinDistinctRightTableKeys_ != null) {
+            anyJoinDistinctRightTableKeys_ =
+              com.google.protobuf.BoolValue.newBuilder(anyJoinDistinctRightTableKeys_).mergeFrom(value).buildPartial();
+          } else {
+            anyJoinDistinctRightTableKeys_ = value;
+          }
+          onChanged();
+        } else {
+          anyJoinDistinctRightTableKeysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      public Builder clearAnyJoinDistinctRightTableKeys() {
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          anyJoinDistinctRightTableKeys_ = null;
+          onChanged();
+        } else {
+          anyJoinDistinctRightTableKeys_ = null;
+          anyJoinDistinctRightTableKeysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAnyJoinDistinctRightTableKeysBuilder() {
+        
+        onChanged();
+        return getAnyJoinDistinctRightTableKeysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAnyJoinDistinctRightTableKeysOrBuilder() {
+        if (anyJoinDistinctRightTableKeysBuilder_ != null) {
+          return anyJoinDistinctRightTableKeysBuilder_.getMessageOrBuilder();
+        } else {
+          return anyJoinDistinctRightTableKeys_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : anyJoinDistinctRightTableKeys_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#any_join_distinct_right_table_keys).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue any_join_distinct_right_table_keys = 105;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAnyJoinDistinctRightTableKeysFieldBuilder() {
+        if (anyJoinDistinctRightTableKeysBuilder_ == null) {
+          anyJoinDistinctRightTableKeysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAnyJoinDistinctRightTableKeys(),
+                  getParentForChildren(),
+                  isClean());
+          anyJoinDistinctRightTableKeys_ = null;
+        }
+        return anyJoinDistinctRightTableKeysBuilder_;
+      }
+
       private com.google.protobuf.Int64Value maxColumnsToRead_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxColumnsToReadBuilder_;
@@ -29228,6 +34122,390 @@ public final class UserOuterClass {
         return inputFormatDefaultsForOmittedFieldsBuilder_;
       }
 
+      private com.google.protobuf.BoolValue inputFormatNullAsDefault_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatNullAsDefaultBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       * @return Whether the inputFormatNullAsDefault field is set.
+       */
+      public boolean hasInputFormatNullAsDefault() {
+        return inputFormatNullAsDefaultBuilder_ != null || inputFormatNullAsDefault_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       * @return The inputFormatNullAsDefault.
+       */
+      public com.google.protobuf.BoolValue getInputFormatNullAsDefault() {
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          return inputFormatNullAsDefault_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatNullAsDefault_;
+        } else {
+          return inputFormatNullAsDefaultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      public Builder setInputFormatNullAsDefault(com.google.protobuf.BoolValue value) {
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputFormatNullAsDefault_ = value;
+          onChanged();
+        } else {
+          inputFormatNullAsDefaultBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      public Builder setInputFormatNullAsDefault(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          inputFormatNullAsDefault_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputFormatNullAsDefaultBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      public Builder mergeInputFormatNullAsDefault(com.google.protobuf.BoolValue value) {
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          if (inputFormatNullAsDefault_ != null) {
+            inputFormatNullAsDefault_ =
+              com.google.protobuf.BoolValue.newBuilder(inputFormatNullAsDefault_).mergeFrom(value).buildPartial();
+          } else {
+            inputFormatNullAsDefault_ = value;
+          }
+          onChanged();
+        } else {
+          inputFormatNullAsDefaultBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      public Builder clearInputFormatNullAsDefault() {
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          inputFormatNullAsDefault_ = null;
+          onChanged();
+        } else {
+          inputFormatNullAsDefault_ = null;
+          inputFormatNullAsDefaultBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInputFormatNullAsDefaultBuilder() {
+        
+        onChanged();
+        return getInputFormatNullAsDefaultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInputFormatNullAsDefaultOrBuilder() {
+        if (inputFormatNullAsDefaultBuilder_ != null) {
+          return inputFormatNullAsDefaultBuilder_.getMessageOrBuilder();
+        } else {
+          return inputFormatNullAsDefault_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatNullAsDefault_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_null_as_default).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_null_as_default = 106;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInputFormatNullAsDefaultFieldBuilder() {
+        if (inputFormatNullAsDefaultBuilder_ == null) {
+          inputFormatNullAsDefaultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInputFormatNullAsDefault(),
+                  getParentForChildren(),
+                  isClean());
+          inputFormatNullAsDefault_ = null;
+        }
+        return inputFormatNullAsDefaultBuilder_;
+      }
+
+      private int dateTimeInputFormat_ = 0;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+       * @return The enum numeric value on the wire for dateTimeInputFormat.
+       */
+      @java.lang.Override public int getDateTimeInputFormatValue() {
+        return dateTimeInputFormat_;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+       * @param value The enum numeric value on the wire for dateTimeInputFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateTimeInputFormatValue(int value) {
+        
+        dateTimeInputFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+       * @return The dateTimeInputFormat.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat getDateTimeInputFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat.valueOf(dateTimeInputFormat_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+       * @param value The dateTimeInputFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateTimeInputFormat(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeInputFormat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        dateTimeInputFormat_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_input_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeInputFormat date_time_input_format = 107;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDateTimeInputFormat() {
+        
+        dateTimeInputFormat_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue inputFormatWithNamesUseHeader_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatWithNamesUseHeaderBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       * @return Whether the inputFormatWithNamesUseHeader field is set.
+       */
+      public boolean hasInputFormatWithNamesUseHeader() {
+        return inputFormatWithNamesUseHeaderBuilder_ != null || inputFormatWithNamesUseHeader_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       * @return The inputFormatWithNamesUseHeader.
+       */
+      public com.google.protobuf.BoolValue getInputFormatWithNamesUseHeader() {
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          return inputFormatWithNamesUseHeader_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatWithNamesUseHeader_;
+        } else {
+          return inputFormatWithNamesUseHeaderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      public Builder setInputFormatWithNamesUseHeader(com.google.protobuf.BoolValue value) {
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputFormatWithNamesUseHeader_ = value;
+          onChanged();
+        } else {
+          inputFormatWithNamesUseHeaderBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      public Builder setInputFormatWithNamesUseHeader(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          inputFormatWithNamesUseHeader_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputFormatWithNamesUseHeaderBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      public Builder mergeInputFormatWithNamesUseHeader(com.google.protobuf.BoolValue value) {
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          if (inputFormatWithNamesUseHeader_ != null) {
+            inputFormatWithNamesUseHeader_ =
+              com.google.protobuf.BoolValue.newBuilder(inputFormatWithNamesUseHeader_).mergeFrom(value).buildPartial();
+          } else {
+            inputFormatWithNamesUseHeader_ = value;
+          }
+          onChanged();
+        } else {
+          inputFormatWithNamesUseHeaderBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      public Builder clearInputFormatWithNamesUseHeader() {
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          inputFormatWithNamesUseHeader_ = null;
+          onChanged();
+        } else {
+          inputFormatWithNamesUseHeader_ = null;
+          inputFormatWithNamesUseHeaderBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInputFormatWithNamesUseHeaderBuilder() {
+        
+        onChanged();
+        return getInputFormatWithNamesUseHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInputFormatWithNamesUseHeaderOrBuilder() {
+        if (inputFormatWithNamesUseHeaderBuilder_ != null) {
+          return inputFormatWithNamesUseHeaderBuilder_.getMessageOrBuilder();
+        } else {
+          return inputFormatWithNamesUseHeader_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatWithNamesUseHeader_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#input_format_with_names_use_header).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_with_names_use_header = 108;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInputFormatWithNamesUseHeaderFieldBuilder() {
+        if (inputFormatWithNamesUseHeaderBuilder_ == null) {
+          inputFormatWithNamesUseHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInputFormatWithNamesUseHeader(),
+                  getParentForChildren(),
+                  isClean());
+          inputFormatWithNamesUseHeader_ = null;
+        }
+        return inputFormatWithNamesUseHeaderBuilder_;
+      }
+
       private com.google.protobuf.BoolValue outputFormatJsonQuote64BitIntegers_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> outputFormatJsonQuote64BitIntegersBuilder_;
@@ -29574,6 +34852,80 @@ public final class UserOuterClass {
         return outputFormatJsonQuoteDenormalsBuilder_;
       }
 
+      private int dateTimeOutputFormat_ = 0;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+       * @return The enum numeric value on the wire for dateTimeOutputFormat.
+       */
+      @java.lang.Override public int getDateTimeOutputFormatValue() {
+        return dateTimeOutputFormat_;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+       * @param value The enum numeric value on the wire for dateTimeOutputFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateTimeOutputFormatValue(int value) {
+        
+        dateTimeOutputFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+       * @return The dateTimeOutputFormat.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat getDateTimeOutputFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat.valueOf(dateTimeOutputFormat_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+       * @param value The dateTimeOutputFormat to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateTimeOutputFormat(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.DateTimeOutputFormat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        dateTimeOutputFormat_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#date_time_output_format).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat date_time_output_format = 109;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDateTimeOutputFormat() {
+        
+        dateTimeOutputFormat_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.BoolValue lowCardinalityAllowInNativeFormat_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> lowCardinalityAllowInNativeFormatBuilder_;
@@ -29801,6 +35153,161 @@ public final class UserOuterClass {
         return lowCardinalityAllowInNativeFormatBuilder_;
       }
 
+      private com.google.protobuf.BoolValue allowSuspiciousLowCardinalityTypes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowSuspiciousLowCardinalityTypesBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       * @return Whether the allowSuspiciousLowCardinalityTypes field is set.
+       */
+      public boolean hasAllowSuspiciousLowCardinalityTypes() {
+        return allowSuspiciousLowCardinalityTypesBuilder_ != null || allowSuspiciousLowCardinalityTypes_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       * @return The allowSuspiciousLowCardinalityTypes.
+       */
+      public com.google.protobuf.BoolValue getAllowSuspiciousLowCardinalityTypes() {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          return allowSuspiciousLowCardinalityTypes_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowSuspiciousLowCardinalityTypes_;
+        } else {
+          return allowSuspiciousLowCardinalityTypesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      public Builder setAllowSuspiciousLowCardinalityTypes(com.google.protobuf.BoolValue value) {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowSuspiciousLowCardinalityTypes_ = value;
+          onChanged();
+        } else {
+          allowSuspiciousLowCardinalityTypesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      public Builder setAllowSuspiciousLowCardinalityTypes(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          allowSuspiciousLowCardinalityTypes_ = builderForValue.build();
+          onChanged();
+        } else {
+          allowSuspiciousLowCardinalityTypesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      public Builder mergeAllowSuspiciousLowCardinalityTypes(com.google.protobuf.BoolValue value) {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          if (allowSuspiciousLowCardinalityTypes_ != null) {
+            allowSuspiciousLowCardinalityTypes_ =
+              com.google.protobuf.BoolValue.newBuilder(allowSuspiciousLowCardinalityTypes_).mergeFrom(value).buildPartial();
+          } else {
+            allowSuspiciousLowCardinalityTypes_ = value;
+          }
+          onChanged();
+        } else {
+          allowSuspiciousLowCardinalityTypesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      public Builder clearAllowSuspiciousLowCardinalityTypes() {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          allowSuspiciousLowCardinalityTypes_ = null;
+          onChanged();
+        } else {
+          allowSuspiciousLowCardinalityTypes_ = null;
+          allowSuspiciousLowCardinalityTypesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAllowSuspiciousLowCardinalityTypesBuilder() {
+        
+        onChanged();
+        return getAllowSuspiciousLowCardinalityTypesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAllowSuspiciousLowCardinalityTypesOrBuilder() {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ != null) {
+          return allowSuspiciousLowCardinalityTypesBuilder_.getMessageOrBuilder();
+        } else {
+          return allowSuspiciousLowCardinalityTypes_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : allowSuspiciousLowCardinalityTypes_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAllowSuspiciousLowCardinalityTypesFieldBuilder() {
+        if (allowSuspiciousLowCardinalityTypesBuilder_ == null) {
+          allowSuspiciousLowCardinalityTypesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAllowSuspiciousLowCardinalityTypes(),
+                  getParentForChildren(),
+                  isClean());
+          allowSuspiciousLowCardinalityTypes_ = null;
+        }
+        return allowSuspiciousLowCardinalityTypesBuilder_;
+      }
+
       private com.google.protobuf.BoolValue emptyResultForAggregationByEmptySet_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> emptyResultForAggregationByEmptySetBuilder_;
@@ -29972,363 +35479,6 @@ public final class UserOuterClass {
           emptyResultForAggregationByEmptySet_ = null;
         }
         return emptyResultForAggregationByEmptySetBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinedSubqueryRequiresAliasBuilder_;
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       * @return Whether the joinedSubqueryRequiresAlias field is set.
-       */
-      public boolean hasJoinedSubqueryRequiresAlias() {
-        return joinedSubqueryRequiresAliasBuilder_ != null || joinedSubqueryRequiresAlias_ != null;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       * @return The joinedSubqueryRequiresAlias.
-       */
-      public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
-        } else {
-          return joinedSubqueryRequiresAliasBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      public Builder setJoinedSubqueryRequiresAlias(com.google.protobuf.BoolValue value) {
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          joinedSubqueryRequiresAlias_ = value;
-          onChanged();
-        } else {
-          joinedSubqueryRequiresAliasBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      public Builder setJoinedSubqueryRequiresAlias(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          joinedSubqueryRequiresAlias_ = builderForValue.build();
-          onChanged();
-        } else {
-          joinedSubqueryRequiresAliasBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      public Builder mergeJoinedSubqueryRequiresAlias(com.google.protobuf.BoolValue value) {
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          if (joinedSubqueryRequiresAlias_ != null) {
-            joinedSubqueryRequiresAlias_ =
-              com.google.protobuf.BoolValue.newBuilder(joinedSubqueryRequiresAlias_).mergeFrom(value).buildPartial();
-          } else {
-            joinedSubqueryRequiresAlias_ = value;
-          }
-          onChanged();
-        } else {
-          joinedSubqueryRequiresAliasBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      public Builder clearJoinedSubqueryRequiresAlias() {
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          joinedSubqueryRequiresAlias_ = null;
-          onChanged();
-        } else {
-          joinedSubqueryRequiresAlias_ = null;
-          joinedSubqueryRequiresAliasBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getJoinedSubqueryRequiresAliasBuilder() {
-        
-        onChanged();
-        return getJoinedSubqueryRequiresAliasFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
-        if (joinedSubqueryRequiresAliasBuilder_ != null) {
-          return joinedSubqueryRequiresAliasBuilder_.getMessageOrBuilder();
-        } else {
-          return joinedSubqueryRequiresAlias_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getJoinedSubqueryRequiresAliasFieldBuilder() {
-        if (joinedSubqueryRequiresAliasBuilder_ == null) {
-          joinedSubqueryRequiresAliasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getJoinedSubqueryRequiresAlias(),
-                  getParentForChildren(),
-                  isClean());
-          joinedSubqueryRequiresAlias_ = null;
-        }
-        return joinedSubqueryRequiresAliasBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue joinUseNulls_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinUseNullsBuilder_;
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       * @return Whether the joinUseNulls field is set.
-       */
-      public boolean hasJoinUseNulls() {
-        return joinUseNullsBuilder_ != null || joinUseNulls_ != null;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       * @return The joinUseNulls.
-       */
-      public com.google.protobuf.BoolValue getJoinUseNulls() {
-        if (joinUseNullsBuilder_ == null) {
-          return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
-        } else {
-          return joinUseNullsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      public Builder setJoinUseNulls(com.google.protobuf.BoolValue value) {
-        if (joinUseNullsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          joinUseNulls_ = value;
-          onChanged();
-        } else {
-          joinUseNullsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      public Builder setJoinUseNulls(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (joinUseNullsBuilder_ == null) {
-          joinUseNulls_ = builderForValue.build();
-          onChanged();
-        } else {
-          joinUseNullsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      public Builder mergeJoinUseNulls(com.google.protobuf.BoolValue value) {
-        if (joinUseNullsBuilder_ == null) {
-          if (joinUseNulls_ != null) {
-            joinUseNulls_ =
-              com.google.protobuf.BoolValue.newBuilder(joinUseNulls_).mergeFrom(value).buildPartial();
-          } else {
-            joinUseNulls_ = value;
-          }
-          onChanged();
-        } else {
-          joinUseNullsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      public Builder clearJoinUseNulls() {
-        if (joinUseNullsBuilder_ == null) {
-          joinUseNulls_ = null;
-          onChanged();
-        } else {
-          joinUseNulls_ = null;
-          joinUseNullsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getJoinUseNullsBuilder() {
-        
-        onChanged();
-        return getJoinUseNullsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
-        if (joinUseNullsBuilder_ != null) {
-          return joinUseNullsBuilder_.getMessageOrBuilder();
-        } else {
-          return joinUseNulls_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getJoinUseNullsFieldBuilder() {
-        if (joinUseNullsBuilder_ == null) {
-          joinUseNullsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getJoinUseNulls(),
-                  getParentForChildren(),
-                  isClean());
-          joinUseNulls_ = null;
-        }
-        return joinUseNullsBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue transformNullIn_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> transformNullInBuilder_;
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       * @return Whether the transformNullIn field is set.
-       */
-      public boolean hasTransformNullIn() {
-        return transformNullInBuilder_ != null || transformNullIn_ != null;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       * @return The transformNullIn.
-       */
-      public com.google.protobuf.BoolValue getTransformNullIn() {
-        if (transformNullInBuilder_ == null) {
-          return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
-        } else {
-          return transformNullInBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      public Builder setTransformNullIn(com.google.protobuf.BoolValue value) {
-        if (transformNullInBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          transformNullIn_ = value;
-          onChanged();
-        } else {
-          transformNullInBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      public Builder setTransformNullIn(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (transformNullInBuilder_ == null) {
-          transformNullIn_ = builderForValue.build();
-          onChanged();
-        } else {
-          transformNullInBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      public Builder mergeTransformNullIn(com.google.protobuf.BoolValue value) {
-        if (transformNullInBuilder_ == null) {
-          if (transformNullIn_ != null) {
-            transformNullIn_ =
-              com.google.protobuf.BoolValue.newBuilder(transformNullIn_).mergeFrom(value).buildPartial();
-          } else {
-            transformNullIn_ = value;
-          }
-          onChanged();
-        } else {
-          transformNullInBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      public Builder clearTransformNullIn() {
-        if (transformNullInBuilder_ == null) {
-          transformNullIn_ = null;
-          onChanged();
-        } else {
-          transformNullIn_ = null;
-          transformNullInBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getTransformNullInBuilder() {
-        
-        onChanged();
-        return getTransformNullInFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
-        if (transformNullInBuilder_ != null) {
-          return transformNullInBuilder_.getMessageOrBuilder();
-        } else {
-          return transformNullIn_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getTransformNullInFieldBuilder() {
-        if (transformNullInBuilder_ == null) {
-          transformNullInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getTransformNullIn(),
-                  getParentForChildren(),
-                  isClean());
-          transformNullIn_ = null;
-        }
-        return transformNullInBuilder_;
       }
 
       private com.google.protobuf.Int64Value httpConnectionTimeout_;
@@ -31524,6 +36674,673 @@ public final class UserOuterClass {
         return addHttpCorsHeaderBuilder_;
       }
 
+      private com.google.protobuf.BoolValue cancelHttpReadonlyQueriesOnClientClose_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> cancelHttpReadonlyQueriesOnClientCloseBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       * @return Whether the cancelHttpReadonlyQueriesOnClientClose field is set.
+       */
+      public boolean hasCancelHttpReadonlyQueriesOnClientClose() {
+        return cancelHttpReadonlyQueriesOnClientCloseBuilder_ != null || cancelHttpReadonlyQueriesOnClientClose_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       * @return The cancelHttpReadonlyQueriesOnClientClose.
+       */
+      public com.google.protobuf.BoolValue getCancelHttpReadonlyQueriesOnClientClose() {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          return cancelHttpReadonlyQueriesOnClientClose_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : cancelHttpReadonlyQueriesOnClientClose_;
+        } else {
+          return cancelHttpReadonlyQueriesOnClientCloseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      public Builder setCancelHttpReadonlyQueriesOnClientClose(com.google.protobuf.BoolValue value) {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cancelHttpReadonlyQueriesOnClientClose_ = value;
+          onChanged();
+        } else {
+          cancelHttpReadonlyQueriesOnClientCloseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      public Builder setCancelHttpReadonlyQueriesOnClientClose(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          cancelHttpReadonlyQueriesOnClientClose_ = builderForValue.build();
+          onChanged();
+        } else {
+          cancelHttpReadonlyQueriesOnClientCloseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      public Builder mergeCancelHttpReadonlyQueriesOnClientClose(com.google.protobuf.BoolValue value) {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          if (cancelHttpReadonlyQueriesOnClientClose_ != null) {
+            cancelHttpReadonlyQueriesOnClientClose_ =
+              com.google.protobuf.BoolValue.newBuilder(cancelHttpReadonlyQueriesOnClientClose_).mergeFrom(value).buildPartial();
+          } else {
+            cancelHttpReadonlyQueriesOnClientClose_ = value;
+          }
+          onChanged();
+        } else {
+          cancelHttpReadonlyQueriesOnClientCloseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      public Builder clearCancelHttpReadonlyQueriesOnClientClose() {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          cancelHttpReadonlyQueriesOnClientClose_ = null;
+          onChanged();
+        } else {
+          cancelHttpReadonlyQueriesOnClientClose_ = null;
+          cancelHttpReadonlyQueriesOnClientCloseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getCancelHttpReadonlyQueriesOnClientCloseBuilder() {
+        
+        onChanged();
+        return getCancelHttpReadonlyQueriesOnClientCloseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getCancelHttpReadonlyQueriesOnClientCloseOrBuilder() {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ != null) {
+          return cancelHttpReadonlyQueriesOnClientCloseBuilder_.getMessageOrBuilder();
+        } else {
+          return cancelHttpReadonlyQueriesOnClientClose_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : cancelHttpReadonlyQueriesOnClientClose_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getCancelHttpReadonlyQueriesOnClientCloseFieldBuilder() {
+        if (cancelHttpReadonlyQueriesOnClientCloseBuilder_ == null) {
+          cancelHttpReadonlyQueriesOnClientCloseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getCancelHttpReadonlyQueriesOnClientClose(),
+                  getParentForChildren(),
+                  isClean());
+          cancelHttpReadonlyQueriesOnClientClose_ = null;
+        }
+        return cancelHttpReadonlyQueriesOnClientCloseBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxHttpGetRedirects_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxHttpGetRedirectsBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       * @return Whether the maxHttpGetRedirects field is set.
+       */
+      public boolean hasMaxHttpGetRedirects() {
+        return maxHttpGetRedirectsBuilder_ != null || maxHttpGetRedirects_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       * @return The maxHttpGetRedirects.
+       */
+      public com.google.protobuf.Int64Value getMaxHttpGetRedirects() {
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          return maxHttpGetRedirects_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxHttpGetRedirects_;
+        } else {
+          return maxHttpGetRedirectsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      public Builder setMaxHttpGetRedirects(com.google.protobuf.Int64Value value) {
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxHttpGetRedirects_ = value;
+          onChanged();
+        } else {
+          maxHttpGetRedirectsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      public Builder setMaxHttpGetRedirects(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          maxHttpGetRedirects_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxHttpGetRedirectsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      public Builder mergeMaxHttpGetRedirects(com.google.protobuf.Int64Value value) {
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          if (maxHttpGetRedirects_ != null) {
+            maxHttpGetRedirects_ =
+              com.google.protobuf.Int64Value.newBuilder(maxHttpGetRedirects_).mergeFrom(value).buildPartial();
+          } else {
+            maxHttpGetRedirects_ = value;
+          }
+          onChanged();
+        } else {
+          maxHttpGetRedirectsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      public Builder clearMaxHttpGetRedirects() {
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          maxHttpGetRedirects_ = null;
+          onChanged();
+        } else {
+          maxHttpGetRedirects_ = null;
+          maxHttpGetRedirectsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxHttpGetRedirectsBuilder() {
+        
+        onChanged();
+        return getMaxHttpGetRedirectsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxHttpGetRedirectsOrBuilder() {
+        if (maxHttpGetRedirectsBuilder_ != null) {
+          return maxHttpGetRedirectsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxHttpGetRedirects_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxHttpGetRedirects_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxHttpGetRedirectsFieldBuilder() {
+        if (maxHttpGetRedirectsBuilder_ == null) {
+          maxHttpGetRedirectsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxHttpGetRedirects(),
+                  getParentForChildren(),
+                  isClean());
+          maxHttpGetRedirects_ = null;
+        }
+        return maxHttpGetRedirectsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinedSubqueryRequiresAliasBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       * @return Whether the joinedSubqueryRequiresAlias field is set.
+       */
+      public boolean hasJoinedSubqueryRequiresAlias() {
+        return joinedSubqueryRequiresAliasBuilder_ != null || joinedSubqueryRequiresAlias_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       * @return The joinedSubqueryRequiresAlias.
+       */
+      public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
+        } else {
+          return joinedSubqueryRequiresAliasBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder setJoinedSubqueryRequiresAlias(com.google.protobuf.BoolValue value) {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          joinedSubqueryRequiresAlias_ = value;
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAliasBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder setJoinedSubqueryRequiresAlias(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAlias_ = builderForValue.build();
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAliasBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder mergeJoinedSubqueryRequiresAlias(com.google.protobuf.BoolValue value) {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          if (joinedSubqueryRequiresAlias_ != null) {
+            joinedSubqueryRequiresAlias_ =
+              com.google.protobuf.BoolValue.newBuilder(joinedSubqueryRequiresAlias_).mergeFrom(value).buildPartial();
+          } else {
+            joinedSubqueryRequiresAlias_ = value;
+          }
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAliasBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder clearJoinedSubqueryRequiresAlias() {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAlias_ = null;
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAlias_ = null;
+          joinedSubqueryRequiresAliasBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getJoinedSubqueryRequiresAliasBuilder() {
+        
+        onChanged();
+        return getJoinedSubqueryRequiresAliasFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
+        if (joinedSubqueryRequiresAliasBuilder_ != null) {
+          return joinedSubqueryRequiresAliasBuilder_.getMessageOrBuilder();
+        } else {
+          return joinedSubqueryRequiresAlias_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getJoinedSubqueryRequiresAliasFieldBuilder() {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAliasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getJoinedSubqueryRequiresAlias(),
+                  getParentForChildren(),
+                  isClean());
+          joinedSubqueryRequiresAlias_ = null;
+        }
+        return joinedSubqueryRequiresAliasBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue joinUseNulls_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinUseNullsBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       * @return Whether the joinUseNulls field is set.
+       */
+      public boolean hasJoinUseNulls() {
+        return joinUseNullsBuilder_ != null || joinUseNulls_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       * @return The joinUseNulls.
+       */
+      public com.google.protobuf.BoolValue getJoinUseNulls() {
+        if (joinUseNullsBuilder_ == null) {
+          return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
+        } else {
+          return joinUseNullsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder setJoinUseNulls(com.google.protobuf.BoolValue value) {
+        if (joinUseNullsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          joinUseNulls_ = value;
+          onChanged();
+        } else {
+          joinUseNullsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder setJoinUseNulls(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNulls_ = builderForValue.build();
+          onChanged();
+        } else {
+          joinUseNullsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder mergeJoinUseNulls(com.google.protobuf.BoolValue value) {
+        if (joinUseNullsBuilder_ == null) {
+          if (joinUseNulls_ != null) {
+            joinUseNulls_ =
+              com.google.protobuf.BoolValue.newBuilder(joinUseNulls_).mergeFrom(value).buildPartial();
+          } else {
+            joinUseNulls_ = value;
+          }
+          onChanged();
+        } else {
+          joinUseNullsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder clearJoinUseNulls() {
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNulls_ = null;
+          onChanged();
+        } else {
+          joinUseNulls_ = null;
+          joinUseNullsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getJoinUseNullsBuilder() {
+        
+        onChanged();
+        return getJoinUseNullsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
+        if (joinUseNullsBuilder_ != null) {
+          return joinUseNullsBuilder_.getMessageOrBuilder();
+        } else {
+          return joinUseNulls_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getJoinUseNullsFieldBuilder() {
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNullsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getJoinUseNulls(),
+                  getParentForChildren(),
+                  isClean());
+          joinUseNulls_ = null;
+        }
+        return joinUseNullsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue transformNullIn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> transformNullInBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       * @return Whether the transformNullIn field is set.
+       */
+      public boolean hasTransformNullIn() {
+        return transformNullInBuilder_ != null || transformNullIn_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       * @return The transformNullIn.
+       */
+      public com.google.protobuf.BoolValue getTransformNullIn() {
+        if (transformNullInBuilder_ == null) {
+          return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
+        } else {
+          return transformNullInBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder setTransformNullIn(com.google.protobuf.BoolValue value) {
+        if (transformNullInBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          transformNullIn_ = value;
+          onChanged();
+        } else {
+          transformNullInBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder setTransformNullIn(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (transformNullInBuilder_ == null) {
+          transformNullIn_ = builderForValue.build();
+          onChanged();
+        } else {
+          transformNullInBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder mergeTransformNullIn(com.google.protobuf.BoolValue value) {
+        if (transformNullInBuilder_ == null) {
+          if (transformNullIn_ != null) {
+            transformNullIn_ =
+              com.google.protobuf.BoolValue.newBuilder(transformNullIn_).mergeFrom(value).buildPartial();
+          } else {
+            transformNullIn_ = value;
+          }
+          onChanged();
+        } else {
+          transformNullInBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder clearTransformNullIn() {
+        if (transformNullInBuilder_ == null) {
+          transformNullIn_ = null;
+          onChanged();
+        } else {
+          transformNullIn_ = null;
+          transformNullInBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getTransformNullInBuilder() {
+        
+        onChanged();
+        return getTransformNullInFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
+        if (transformNullInBuilder_ != null) {
+          return transformNullInBuilder_.getMessageOrBuilder();
+        } else {
+          return transformNullIn_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getTransformNullInFieldBuilder() {
+        if (transformNullInBuilder_ == null) {
+          transformNullInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getTransformNullIn(),
+                  getParentForChildren(),
+                  isClean());
+          transformNullIn_ = null;
+        }
+        return transformNullInBuilder_;
+      }
+
       private int quotaMode_ = 0;
       /**
        * <pre>
@@ -31596,6 +37413,2195 @@ public final class UserOuterClass {
         quotaMode_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue flattenNested_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> flattenNestedBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       * @return Whether the flattenNested field is set.
+       */
+      public boolean hasFlattenNested() {
+        return flattenNestedBuilder_ != null || flattenNested_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       * @return The flattenNested.
+       */
+      public com.google.protobuf.BoolValue getFlattenNested() {
+        if (flattenNestedBuilder_ == null) {
+          return flattenNested_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : flattenNested_;
+        } else {
+          return flattenNestedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      public Builder setFlattenNested(com.google.protobuf.BoolValue value) {
+        if (flattenNestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          flattenNested_ = value;
+          onChanged();
+        } else {
+          flattenNestedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      public Builder setFlattenNested(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (flattenNestedBuilder_ == null) {
+          flattenNested_ = builderForValue.build();
+          onChanged();
+        } else {
+          flattenNestedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      public Builder mergeFlattenNested(com.google.protobuf.BoolValue value) {
+        if (flattenNestedBuilder_ == null) {
+          if (flattenNested_ != null) {
+            flattenNested_ =
+              com.google.protobuf.BoolValue.newBuilder(flattenNested_).mergeFrom(value).buildPartial();
+          } else {
+            flattenNested_ = value;
+          }
+          onChanged();
+        } else {
+          flattenNestedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      public Builder clearFlattenNested() {
+        if (flattenNestedBuilder_ == null) {
+          flattenNested_ = null;
+          onChanged();
+        } else {
+          flattenNested_ = null;
+          flattenNestedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getFlattenNestedBuilder() {
+        
+        onChanged();
+        return getFlattenNestedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getFlattenNestedOrBuilder() {
+        if (flattenNestedBuilder_ != null) {
+          return flattenNestedBuilder_.getMessageOrBuilder();
+        } else {
+          return flattenNested_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : flattenNested_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getFlattenNestedFieldBuilder() {
+        if (flattenNestedBuilder_ == null) {
+          flattenNestedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getFlattenNested(),
+                  getParentForChildren(),
+                  isClean());
+          flattenNested_ = null;
+        }
+        return flattenNestedBuilder_;
+      }
+
+      private java.lang.Object formatRegexp_ = "";
+      /**
+       * <pre>
+       * Regular expression (for Regexp format)
+       * </pre>
+       *
+       * <code>string format_regexp = 114;</code>
+       * @return The formatRegexp.
+       */
+      public java.lang.String getFormatRegexp() {
+        java.lang.Object ref = formatRegexp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          formatRegexp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regular expression (for Regexp format)
+       * </pre>
+       *
+       * <code>string format_regexp = 114;</code>
+       * @return The bytes for formatRegexp.
+       */
+      public com.google.protobuf.ByteString
+          getFormatRegexpBytes() {
+        java.lang.Object ref = formatRegexp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          formatRegexp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Regular expression (for Regexp format)
+       * </pre>
+       *
+       * <code>string format_regexp = 114;</code>
+       * @param value The formatRegexp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatRegexp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        formatRegexp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular expression (for Regexp format)
+       * </pre>
+       *
+       * <code>string format_regexp = 114;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormatRegexp() {
+        
+        formatRegexp_ = getDefaultInstance().getFormatRegexp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Regular expression (for Regexp format)
+       * </pre>
+       *
+       * <code>string format_regexp = 114;</code>
+       * @param value The bytes for formatRegexp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatRegexpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        formatRegexp_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int formatRegexpEscapingRule_ = 0;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+       * @return The enum numeric value on the wire for formatRegexpEscapingRule.
+       */
+      @java.lang.Override public int getFormatRegexpEscapingRuleValue() {
+        return formatRegexpEscapingRule_;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+       * @param value The enum numeric value on the wire for formatRegexpEscapingRule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatRegexpEscapingRuleValue(int value) {
+        
+        formatRegexpEscapingRule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+       * @return The formatRegexpEscapingRule.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule getFormatRegexpEscapingRule() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule.valueOf(formatRegexpEscapingRule_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+       * @param value The formatRegexpEscapingRule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatRegexpEscapingRule(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.FormatRegexpEscapingRule value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        formatRegexpEscapingRule_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_escaping_rule).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.FormatRegexpEscapingRule format_regexp_escaping_rule = 115;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormatRegexpEscapingRule() {
+        
+        formatRegexpEscapingRule_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue formatRegexpSkipUnmatched_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> formatRegexpSkipUnmatchedBuilder_;
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       * @return Whether the formatRegexpSkipUnmatched field is set.
+       */
+      public boolean hasFormatRegexpSkipUnmatched() {
+        return formatRegexpSkipUnmatchedBuilder_ != null || formatRegexpSkipUnmatched_ != null;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       * @return The formatRegexpSkipUnmatched.
+       */
+      public com.google.protobuf.BoolValue getFormatRegexpSkipUnmatched() {
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          return formatRegexpSkipUnmatched_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : formatRegexpSkipUnmatched_;
+        } else {
+          return formatRegexpSkipUnmatchedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      public Builder setFormatRegexpSkipUnmatched(com.google.protobuf.BoolValue value) {
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          formatRegexpSkipUnmatched_ = value;
+          onChanged();
+        } else {
+          formatRegexpSkipUnmatchedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      public Builder setFormatRegexpSkipUnmatched(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          formatRegexpSkipUnmatched_ = builderForValue.build();
+          onChanged();
+        } else {
+          formatRegexpSkipUnmatchedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      public Builder mergeFormatRegexpSkipUnmatched(com.google.protobuf.BoolValue value) {
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          if (formatRegexpSkipUnmatched_ != null) {
+            formatRegexpSkipUnmatched_ =
+              com.google.protobuf.BoolValue.newBuilder(formatRegexpSkipUnmatched_).mergeFrom(value).buildPartial();
+          } else {
+            formatRegexpSkipUnmatched_ = value;
+          }
+          onChanged();
+        } else {
+          formatRegexpSkipUnmatchedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      public Builder clearFormatRegexpSkipUnmatched() {
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          formatRegexpSkipUnmatched_ = null;
+          onChanged();
+        } else {
+          formatRegexpSkipUnmatched_ = null;
+          formatRegexpSkipUnmatchedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getFormatRegexpSkipUnmatchedBuilder() {
+        
+        onChanged();
+        return getFormatRegexpSkipUnmatchedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getFormatRegexpSkipUnmatchedOrBuilder() {
+        if (formatRegexpSkipUnmatchedBuilder_ != null) {
+          return formatRegexpSkipUnmatchedBuilder_.getMessageOrBuilder();
+        } else {
+          return formatRegexpSkipUnmatched_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : formatRegexpSkipUnmatched_;
+        }
+      }
+      /**
+       * <pre>
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#format_regexp_skip_unmatched).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue format_regexp_skip_unmatched = 116;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getFormatRegexpSkipUnmatchedFieldBuilder() {
+        if (formatRegexpSkipUnmatchedBuilder_ == null) {
+          formatRegexpSkipUnmatchedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getFormatRegexpSkipUnmatched(),
+                  getParentForChildren(),
+                  isClean());
+          formatRegexpSkipUnmatched_ = null;
+        }
+        return formatRegexpSkipUnmatchedBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue asyncInsert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asyncInsertBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       * @return Whether the asyncInsert field is set.
+       */
+      public boolean hasAsyncInsert() {
+        return asyncInsertBuilder_ != null || asyncInsert_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       * @return The asyncInsert.
+       */
+      public com.google.protobuf.BoolValue getAsyncInsert() {
+        if (asyncInsertBuilder_ == null) {
+          return asyncInsert_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asyncInsert_;
+        } else {
+          return asyncInsertBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      public Builder setAsyncInsert(com.google.protobuf.BoolValue value) {
+        if (asyncInsertBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInsert_ = value;
+          onChanged();
+        } else {
+          asyncInsertBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      public Builder setAsyncInsert(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (asyncInsertBuilder_ == null) {
+          asyncInsert_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInsertBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      public Builder mergeAsyncInsert(com.google.protobuf.BoolValue value) {
+        if (asyncInsertBuilder_ == null) {
+          if (asyncInsert_ != null) {
+            asyncInsert_ =
+              com.google.protobuf.BoolValue.newBuilder(asyncInsert_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInsert_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInsertBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      public Builder clearAsyncInsert() {
+        if (asyncInsertBuilder_ == null) {
+          asyncInsert_ = null;
+          onChanged();
+        } else {
+          asyncInsert_ = null;
+          asyncInsertBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAsyncInsertBuilder() {
+        
+        onChanged();
+        return getAsyncInsertFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAsyncInsertOrBuilder() {
+        if (asyncInsertBuilder_ != null) {
+          return asyncInsertBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInsert_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : asyncInsert_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue async_insert = 117;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAsyncInsertFieldBuilder() {
+        if (asyncInsertBuilder_ == null) {
+          asyncInsertBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAsyncInsert(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInsert_ = null;
+        }
+        return asyncInsertBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asyncInsertThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertThreadsBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       * @return Whether the asyncInsertThreads field is set.
+       */
+      public boolean hasAsyncInsertThreads() {
+        return asyncInsertThreadsBuilder_ != null || asyncInsertThreads_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       * @return The asyncInsertThreads.
+       */
+      public com.google.protobuf.Int64Value getAsyncInsertThreads() {
+        if (asyncInsertThreadsBuilder_ == null) {
+          return asyncInsertThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertThreads_;
+        } else {
+          return asyncInsertThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      public Builder setAsyncInsertThreads(com.google.protobuf.Int64Value value) {
+        if (asyncInsertThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInsertThreads_ = value;
+          onChanged();
+        } else {
+          asyncInsertThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      public Builder setAsyncInsertThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asyncInsertThreadsBuilder_ == null) {
+          asyncInsertThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInsertThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      public Builder mergeAsyncInsertThreads(com.google.protobuf.Int64Value value) {
+        if (asyncInsertThreadsBuilder_ == null) {
+          if (asyncInsertThreads_ != null) {
+            asyncInsertThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(asyncInsertThreads_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInsertThreads_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInsertThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      public Builder clearAsyncInsertThreads() {
+        if (asyncInsertThreadsBuilder_ == null) {
+          asyncInsertThreads_ = null;
+          onChanged();
+        } else {
+          asyncInsertThreads_ = null;
+          asyncInsertThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsyncInsertThreadsBuilder() {
+        
+        onChanged();
+        return getAsyncInsertThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertThreadsOrBuilder() {
+        if (asyncInsertThreadsBuilder_ != null) {
+          return asyncInsertThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInsertThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsyncInsertThreadsFieldBuilder() {
+        if (asyncInsertThreadsBuilder_ == null) {
+          asyncInsertThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsyncInsertThreads(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInsertThreads_ = null;
+        }
+        return asyncInsertThreadsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue waitForAsyncInsert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> waitForAsyncInsertBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       * @return Whether the waitForAsyncInsert field is set.
+       */
+      public boolean hasWaitForAsyncInsert() {
+        return waitForAsyncInsertBuilder_ != null || waitForAsyncInsert_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       * @return The waitForAsyncInsert.
+       */
+      public com.google.protobuf.BoolValue getWaitForAsyncInsert() {
+        if (waitForAsyncInsertBuilder_ == null) {
+          return waitForAsyncInsert_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : waitForAsyncInsert_;
+        } else {
+          return waitForAsyncInsertBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      public Builder setWaitForAsyncInsert(com.google.protobuf.BoolValue value) {
+        if (waitForAsyncInsertBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          waitForAsyncInsert_ = value;
+          onChanged();
+        } else {
+          waitForAsyncInsertBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      public Builder setWaitForAsyncInsert(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (waitForAsyncInsertBuilder_ == null) {
+          waitForAsyncInsert_ = builderForValue.build();
+          onChanged();
+        } else {
+          waitForAsyncInsertBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      public Builder mergeWaitForAsyncInsert(com.google.protobuf.BoolValue value) {
+        if (waitForAsyncInsertBuilder_ == null) {
+          if (waitForAsyncInsert_ != null) {
+            waitForAsyncInsert_ =
+              com.google.protobuf.BoolValue.newBuilder(waitForAsyncInsert_).mergeFrom(value).buildPartial();
+          } else {
+            waitForAsyncInsert_ = value;
+          }
+          onChanged();
+        } else {
+          waitForAsyncInsertBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      public Builder clearWaitForAsyncInsert() {
+        if (waitForAsyncInsertBuilder_ == null) {
+          waitForAsyncInsert_ = null;
+          onChanged();
+        } else {
+          waitForAsyncInsert_ = null;
+          waitForAsyncInsertBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getWaitForAsyncInsertBuilder() {
+        
+        onChanged();
+        return getWaitForAsyncInsertFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getWaitForAsyncInsertOrBuilder() {
+        if (waitForAsyncInsertBuilder_ != null) {
+          return waitForAsyncInsertBuilder_.getMessageOrBuilder();
+        } else {
+          return waitForAsyncInsert_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : waitForAsyncInsert_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getWaitForAsyncInsertFieldBuilder() {
+        if (waitForAsyncInsertBuilder_ == null) {
+          waitForAsyncInsertBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getWaitForAsyncInsert(),
+                  getParentForChildren(),
+                  isClean());
+          waitForAsyncInsert_ = null;
+        }
+        return waitForAsyncInsertBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value waitForAsyncInsertTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> waitForAsyncInsertTimeoutBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       * @return Whether the waitForAsyncInsertTimeout field is set.
+       */
+      public boolean hasWaitForAsyncInsertTimeout() {
+        return waitForAsyncInsertTimeoutBuilder_ != null || waitForAsyncInsertTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       * @return The waitForAsyncInsertTimeout.
+       */
+      public com.google.protobuf.Int64Value getWaitForAsyncInsertTimeout() {
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          return waitForAsyncInsertTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : waitForAsyncInsertTimeout_;
+        } else {
+          return waitForAsyncInsertTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      public Builder setWaitForAsyncInsertTimeout(com.google.protobuf.Int64Value value) {
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          waitForAsyncInsertTimeout_ = value;
+          onChanged();
+        } else {
+          waitForAsyncInsertTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      public Builder setWaitForAsyncInsertTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          waitForAsyncInsertTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          waitForAsyncInsertTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      public Builder mergeWaitForAsyncInsertTimeout(com.google.protobuf.Int64Value value) {
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          if (waitForAsyncInsertTimeout_ != null) {
+            waitForAsyncInsertTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(waitForAsyncInsertTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            waitForAsyncInsertTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          waitForAsyncInsertTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      public Builder clearWaitForAsyncInsertTimeout() {
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          waitForAsyncInsertTimeout_ = null;
+          onChanged();
+        } else {
+          waitForAsyncInsertTimeout_ = null;
+          waitForAsyncInsertTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getWaitForAsyncInsertTimeoutBuilder() {
+        
+        onChanged();
+        return getWaitForAsyncInsertTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getWaitForAsyncInsertTimeoutOrBuilder() {
+        if (waitForAsyncInsertTimeoutBuilder_ != null) {
+          return waitForAsyncInsertTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return waitForAsyncInsertTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : waitForAsyncInsertTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getWaitForAsyncInsertTimeoutFieldBuilder() {
+        if (waitForAsyncInsertTimeoutBuilder_ == null) {
+          waitForAsyncInsertTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getWaitForAsyncInsertTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          waitForAsyncInsertTimeout_ = null;
+        }
+        return waitForAsyncInsertTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asyncInsertMaxDataSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertMaxDataSizeBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       * @return Whether the asyncInsertMaxDataSize field is set.
+       */
+      public boolean hasAsyncInsertMaxDataSize() {
+        return asyncInsertMaxDataSizeBuilder_ != null || asyncInsertMaxDataSize_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       * @return The asyncInsertMaxDataSize.
+       */
+      public com.google.protobuf.Int64Value getAsyncInsertMaxDataSize() {
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          return asyncInsertMaxDataSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertMaxDataSize_;
+        } else {
+          return asyncInsertMaxDataSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      public Builder setAsyncInsertMaxDataSize(com.google.protobuf.Int64Value value) {
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInsertMaxDataSize_ = value;
+          onChanged();
+        } else {
+          asyncInsertMaxDataSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      public Builder setAsyncInsertMaxDataSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          asyncInsertMaxDataSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInsertMaxDataSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      public Builder mergeAsyncInsertMaxDataSize(com.google.protobuf.Int64Value value) {
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          if (asyncInsertMaxDataSize_ != null) {
+            asyncInsertMaxDataSize_ =
+              com.google.protobuf.Int64Value.newBuilder(asyncInsertMaxDataSize_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInsertMaxDataSize_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInsertMaxDataSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      public Builder clearAsyncInsertMaxDataSize() {
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          asyncInsertMaxDataSize_ = null;
+          onChanged();
+        } else {
+          asyncInsertMaxDataSize_ = null;
+          asyncInsertMaxDataSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsyncInsertMaxDataSizeBuilder() {
+        
+        onChanged();
+        return getAsyncInsertMaxDataSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertMaxDataSizeOrBuilder() {
+        if (asyncInsertMaxDataSizeBuilder_ != null) {
+          return asyncInsertMaxDataSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInsertMaxDataSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertMaxDataSize_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsyncInsertMaxDataSizeFieldBuilder() {
+        if (asyncInsertMaxDataSizeBuilder_ == null) {
+          asyncInsertMaxDataSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsyncInsertMaxDataSize(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInsertMaxDataSize_ = null;
+        }
+        return asyncInsertMaxDataSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asyncInsertBusyTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertBusyTimeoutBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       * @return Whether the asyncInsertBusyTimeout field is set.
+       */
+      public boolean hasAsyncInsertBusyTimeout() {
+        return asyncInsertBusyTimeoutBuilder_ != null || asyncInsertBusyTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       * @return The asyncInsertBusyTimeout.
+       */
+      public com.google.protobuf.Int64Value getAsyncInsertBusyTimeout() {
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          return asyncInsertBusyTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertBusyTimeout_;
+        } else {
+          return asyncInsertBusyTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      public Builder setAsyncInsertBusyTimeout(com.google.protobuf.Int64Value value) {
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInsertBusyTimeout_ = value;
+          onChanged();
+        } else {
+          asyncInsertBusyTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      public Builder setAsyncInsertBusyTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          asyncInsertBusyTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInsertBusyTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      public Builder mergeAsyncInsertBusyTimeout(com.google.protobuf.Int64Value value) {
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          if (asyncInsertBusyTimeout_ != null) {
+            asyncInsertBusyTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(asyncInsertBusyTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInsertBusyTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInsertBusyTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      public Builder clearAsyncInsertBusyTimeout() {
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          asyncInsertBusyTimeout_ = null;
+          onChanged();
+        } else {
+          asyncInsertBusyTimeout_ = null;
+          asyncInsertBusyTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsyncInsertBusyTimeoutBuilder() {
+        
+        onChanged();
+        return getAsyncInsertBusyTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertBusyTimeoutOrBuilder() {
+        if (asyncInsertBusyTimeoutBuilder_ != null) {
+          return asyncInsertBusyTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInsertBusyTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertBusyTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsyncInsertBusyTimeoutFieldBuilder() {
+        if (asyncInsertBusyTimeoutBuilder_ == null) {
+          asyncInsertBusyTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsyncInsertBusyTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInsertBusyTimeout_ = null;
+        }
+        return asyncInsertBusyTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertStaleTimeoutBuilder_;
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * @return Whether the asyncInsertStaleTimeout field is set.
+       */
+      public boolean hasAsyncInsertStaleTimeout() {
+        return asyncInsertStaleTimeoutBuilder_ != null || asyncInsertStaleTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       * @return The asyncInsertStaleTimeout.
+       */
+      public com.google.protobuf.Int64Value getAsyncInsertStaleTimeout() {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          return asyncInsertStaleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+        } else {
+          return asyncInsertStaleTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      public Builder setAsyncInsertStaleTimeout(com.google.protobuf.Int64Value value) {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asyncInsertStaleTimeout_ = value;
+          onChanged();
+        } else {
+          asyncInsertStaleTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      public Builder setAsyncInsertStaleTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          asyncInsertStaleTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      public Builder mergeAsyncInsertStaleTimeout(com.google.protobuf.Int64Value value) {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          if (asyncInsertStaleTimeout_ != null) {
+            asyncInsertStaleTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(asyncInsertStaleTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            asyncInsertStaleTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          asyncInsertStaleTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      public Builder clearAsyncInsertStaleTimeout() {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeout_ = null;
+          onChanged();
+        } else {
+          asyncInsertStaleTimeout_ = null;
+          asyncInsertStaleTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsyncInsertStaleTimeoutBuilder() {
+        
+        onChanged();
+        return getAsyncInsertStaleTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsyncInsertStaleTimeoutOrBuilder() {
+        if (asyncInsertStaleTimeoutBuilder_ != null) {
+          return asyncInsertStaleTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return asyncInsertStaleTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asyncInsertStaleTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsyncInsertStaleTimeoutFieldBuilder() {
+        if (asyncInsertStaleTimeoutBuilder_ == null) {
+          asyncInsertStaleTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsyncInsertStaleTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          asyncInsertStaleTimeout_ = null;
+        }
+        return asyncInsertStaleTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value memoryProfilerStep_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryProfilerStepBuilder_;
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       * @return Whether the memoryProfilerStep field is set.
+       */
+      public boolean hasMemoryProfilerStep() {
+        return memoryProfilerStepBuilder_ != null || memoryProfilerStep_ != null;
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       * @return The memoryProfilerStep.
+       */
+      public com.google.protobuf.Int64Value getMemoryProfilerStep() {
+        if (memoryProfilerStepBuilder_ == null) {
+          return memoryProfilerStep_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryProfilerStep_;
+        } else {
+          return memoryProfilerStepBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      public Builder setMemoryProfilerStep(com.google.protobuf.Int64Value value) {
+        if (memoryProfilerStepBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memoryProfilerStep_ = value;
+          onChanged();
+        } else {
+          memoryProfilerStepBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      public Builder setMemoryProfilerStep(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (memoryProfilerStepBuilder_ == null) {
+          memoryProfilerStep_ = builderForValue.build();
+          onChanged();
+        } else {
+          memoryProfilerStepBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      public Builder mergeMemoryProfilerStep(com.google.protobuf.Int64Value value) {
+        if (memoryProfilerStepBuilder_ == null) {
+          if (memoryProfilerStep_ != null) {
+            memoryProfilerStep_ =
+              com.google.protobuf.Int64Value.newBuilder(memoryProfilerStep_).mergeFrom(value).buildPartial();
+          } else {
+            memoryProfilerStep_ = value;
+          }
+          onChanged();
+        } else {
+          memoryProfilerStepBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      public Builder clearMemoryProfilerStep() {
+        if (memoryProfilerStepBuilder_ == null) {
+          memoryProfilerStep_ = null;
+          onChanged();
+        } else {
+          memoryProfilerStep_ = null;
+          memoryProfilerStepBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMemoryProfilerStepBuilder() {
+        
+        onChanged();
+        return getMemoryProfilerStepFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMemoryProfilerStepOrBuilder() {
+        if (memoryProfilerStepBuilder_ != null) {
+          return memoryProfilerStepBuilder_.getMessageOrBuilder();
+        } else {
+          return memoryProfilerStep_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : memoryProfilerStep_;
+        }
+      }
+      /**
+       * <pre>
+       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMemoryProfilerStepFieldBuilder() {
+        if (memoryProfilerStepBuilder_ == null) {
+          memoryProfilerStepBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMemoryProfilerStep(),
+                  getParentForChildren(),
+                  isClean());
+          memoryProfilerStep_ = null;
+        }
+        return memoryProfilerStepBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue memoryProfilerSampleProbability_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> memoryProfilerSampleProbabilityBuilder_;
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       * @return Whether the memoryProfilerSampleProbability field is set.
+       */
+      public boolean hasMemoryProfilerSampleProbability() {
+        return memoryProfilerSampleProbabilityBuilder_ != null || memoryProfilerSampleProbability_ != null;
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       * @return The memoryProfilerSampleProbability.
+       */
+      public com.google.protobuf.DoubleValue getMemoryProfilerSampleProbability() {
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          return memoryProfilerSampleProbability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : memoryProfilerSampleProbability_;
+        } else {
+          return memoryProfilerSampleProbabilityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      public Builder setMemoryProfilerSampleProbability(com.google.protobuf.DoubleValue value) {
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memoryProfilerSampleProbability_ = value;
+          onChanged();
+        } else {
+          memoryProfilerSampleProbabilityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      public Builder setMemoryProfilerSampleProbability(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          memoryProfilerSampleProbability_ = builderForValue.build();
+          onChanged();
+        } else {
+          memoryProfilerSampleProbabilityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      public Builder mergeMemoryProfilerSampleProbability(com.google.protobuf.DoubleValue value) {
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          if (memoryProfilerSampleProbability_ != null) {
+            memoryProfilerSampleProbability_ =
+              com.google.protobuf.DoubleValue.newBuilder(memoryProfilerSampleProbability_).mergeFrom(value).buildPartial();
+          } else {
+            memoryProfilerSampleProbability_ = value;
+          }
+          onChanged();
+        } else {
+          memoryProfilerSampleProbabilityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      public Builder clearMemoryProfilerSampleProbability() {
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          memoryProfilerSampleProbability_ = null;
+          onChanged();
+        } else {
+          memoryProfilerSampleProbability_ = null;
+          memoryProfilerSampleProbabilityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getMemoryProfilerSampleProbabilityBuilder() {
+        
+        onChanged();
+        return getMemoryProfilerSampleProbabilityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getMemoryProfilerSampleProbabilityOrBuilder() {
+        if (memoryProfilerSampleProbabilityBuilder_ != null) {
+          return memoryProfilerSampleProbabilityBuilder_.getMessageOrBuilder();
+        } else {
+          return memoryProfilerSampleProbability_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : memoryProfilerSampleProbability_;
+        }
+      }
+      /**
+       * <pre>
+       * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getMemoryProfilerSampleProbabilityFieldBuilder() {
+        if (memoryProfilerSampleProbabilityBuilder_ == null) {
+          memoryProfilerSampleProbabilityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getMemoryProfilerSampleProbability(),
+                  getParentForChildren(),
+                  isClean());
+          memoryProfilerSampleProbability_ = null;
+        }
+        return memoryProfilerSampleProbabilityBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue compile_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       * @deprecated
+       * @return Whether the compile field is set.
+       */
+      @java.lang.Deprecated public boolean hasCompile() {
+        return compileBuilder_ != null || compile_ != null;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       * @deprecated
+       * @return The compile.
+       */
+      @java.lang.Deprecated public com.google.protobuf.BoolValue getCompile() {
+        if (compileBuilder_ == null) {
+          return compile_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
+        } else {
+          return compileBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setCompile(com.google.protobuf.BoolValue value) {
+        if (compileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          compile_ = value;
+          onChanged();
+        } else {
+          compileBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setCompile(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (compileBuilder_ == null) {
+          compile_ = builderForValue.build();
+          onChanged();
+        } else {
+          compileBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeCompile(com.google.protobuf.BoolValue value) {
+        if (compileBuilder_ == null) {
+          if (compile_ != null) {
+            compile_ =
+              com.google.protobuf.BoolValue.newBuilder(compile_).mergeFrom(value).buildPartial();
+          } else {
+            compile_ = value;
+          }
+          onChanged();
+        } else {
+          compileBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearCompile() {
+        if (compileBuilder_ == null) {
+          compile_ = null;
+          onChanged();
+        } else {
+          compile_ = null;
+          compileBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getCompileBuilder() {
+        
+        onChanged();
+        return getCompileFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getCompileOrBuilder() {
+        if (compileBuilder_ != null) {
+          return compileBuilder_.getMessageOrBuilder();
+        } else {
+          return compile_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : compile_;
+        }
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue compile = 44 [deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getCompileFieldBuilder() {
+        if (compileBuilder_ == null) {
+          compileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getCompile(),
+                  getParentForChildren(),
+                  isClean());
+          compile_ = null;
+        }
+        return compileBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value minCountToCompile_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCountToCompileBuilder_;
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       * @deprecated
+       * @return Whether the minCountToCompile field is set.
+       */
+      @java.lang.Deprecated public boolean hasMinCountToCompile() {
+        return minCountToCompileBuilder_ != null || minCountToCompile_ != null;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       * @deprecated
+       * @return The minCountToCompile.
+       */
+      @java.lang.Deprecated public com.google.protobuf.Int64Value getMinCountToCompile() {
+        if (minCountToCompileBuilder_ == null) {
+          return minCountToCompile_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
+        } else {
+          return minCountToCompileBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setMinCountToCompile(com.google.protobuf.Int64Value value) {
+        if (minCountToCompileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minCountToCompile_ = value;
+          onChanged();
+        } else {
+          minCountToCompileBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setMinCountToCompile(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minCountToCompileBuilder_ == null) {
+          minCountToCompile_ = builderForValue.build();
+          onChanged();
+        } else {
+          minCountToCompileBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeMinCountToCompile(com.google.protobuf.Int64Value value) {
+        if (minCountToCompileBuilder_ == null) {
+          if (minCountToCompile_ != null) {
+            minCountToCompile_ =
+              com.google.protobuf.Int64Value.newBuilder(minCountToCompile_).mergeFrom(value).buildPartial();
+          } else {
+            minCountToCompile_ = value;
+          }
+          onChanged();
+        } else {
+          minCountToCompileBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearMinCountToCompile() {
+        if (minCountToCompileBuilder_ == null) {
+          minCountToCompile_ = null;
+          onChanged();
+        } else {
+          minCountToCompile_ = null;
+          minCountToCompileBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.google.protobuf.Int64Value.Builder getMinCountToCompileBuilder() {
+        
+        onChanged();
+        return getMinCountToCompileFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMinCountToCompileOrBuilder() {
+        if (minCountToCompileBuilder_ != null) {
+          return minCountToCompileBuilder_.getMessageOrBuilder();
+        } else {
+          return minCountToCompile_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minCountToCompile_;
+        }
+      }
+      /**
+       * <pre>
+       * The setting is deprecated and has no effect.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinCountToCompileFieldBuilder() {
+        if (minCountToCompileBuilder_ == null) {
+          minCountToCompileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinCountToCompile(),
+                  getParentForChildren(),
+                  isClean());
+          minCountToCompile_ = null;
+        }
+        return minCountToCompileBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -33797,207 +41803,282 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\313:\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\241R\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
-      "f.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\017conn" +
-      "ect_timeout\030\' \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\006\372\3071\002>0\022<\n\017receive_timeout\030( \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\0229\n\014" +
-      "send_timeout\030) \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\006\372\3071\002>0\022F\n\025insert_quorum_timeout" +
-      "\030\004 \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071" +
-      "\006>=1000\022A\n\035select_sequential_consistency" +
-      "\030\005 \001(\0132\032.google.protobuf.BoolValue\022Z\n)ma" +
-      "x_replica_delay_for_distributed_queries\030" +
-      "\006 \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071\006" +
-      ">=1000\022V\n2fallback_to_stale_replicas_for" +
-      "_distributed_queries\030\007 \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022O\n!replication_alter_part" +
-      "itions_sync\030* \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\0030-2\022e\n\030distributed_product_m" +
-      "ode\030+ \001(\0162C.yandex.cloud.mdb.clickhouse." +
-      "v1.UserSettings.DistributedProductMode\022L" +
-      "\n(distributed_aggregation_memory_efficie" +
-      "nt\030H \001(\0132\032.google.protobuf.BoolValue\022A\n\034" +
-      "distributed_ddl_task_timeout\030I \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022;\n\027skip_unavaila" +
-      "ble_shards\030Q \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022+\n\007compile\030, \001(\0132\032.google.protobuf." +
-      "BoolValue\022B\n\024min_count_to_compile\030- \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n" +
-      "\023compile_expressions\030. \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022M\n\037min_count_to_compile_e" +
-      "xpression\030/ \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022;\n\016max_block_size\030\t \001(\0132\033." +
-      "google.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032mi" +
-      "n_insert_block_size_rows\0300 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022I\n\033min_inse" +
-      "rt_block_size_bytes\0301 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\007\372\3071\003>=0\022B\n\025max_insert_bl" +
-      "ock_size\030\n \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022H\n\032min_bytes_to_use_direct_i" +
-      "o\0302 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\022:\n\026use_uncompressed_cache\0303 \001(\0132\032." +
-      "google.protobuf.BoolValue\022M\n merge_tree_" +
-      "max_rows_to_use_cache\0304 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\006\372\3071\002>0\022N\n!merge_tree_m" +
-      "ax_bytes_to_use_cache\0305 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\006\372\3071\002>0\022T\n\'merge_tree_m" +
-      "in_rows_for_concurrent_read\0306 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\006\372\3071\002>0\022U\n(merge_" +
-      "tree_min_bytes_for_concurrent_read\0307 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022G\n" +
-      "\"max_bytes_before_external_group_by\030J \001(" +
-      "\0132\033.google.protobuf.Int64Value\022C\n\036max_by" +
-      "tes_before_external_sort\030K \001(\0132\033.google." +
-      "protobuf.Int64Value\022A\n\034group_by_two_leve" +
-      "l_threshold\030L \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022G\n\"group_by_two_level_threshold_b" +
-      "ytes\030M \001(\0132\033.google.protobuf.Int64Value\022" +
-      "6\n\010priority\0308 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\0228\n\013max_threads\030\010 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022>\n\020max" +
-      "_memory_usage\030\013 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022G\n\031max_memory_usage_fo" +
-      "r_user\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022:\n\025max_network_bandwidth\0309 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022C\n\036max_ne" +
-      "twork_bandwidth_for_user\030: \001(\0132\033.google." +
-      "protobuf.Int64Value\0227\n\023force_index_by_da" +
-      "te\030; \001(\0132\032.google.protobuf.BoolValue\0225\n\021" +
-      "force_primary_key\030< \001(\0132\032.google.protobu" +
-      "f.BoolValue\022>\n\020max_rows_to_read\030\r \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021m" +
-      "ax_bytes_to_read\030\016 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022U\n\022read_overflow_mo" +
-      "de\030\017 \001(\01629.yandex.cloud.mdb.clickhouse.v" +
-      "1.UserSettings.OverflowMode\022B\n\024max_rows_" +
-      "to_group_by\030\020 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022`\n\026group_by_overflow_mod" +
-      "e\030\021 \001(\0162@.yandex.cloud.mdb.clickhouse.v1" +
-      ".UserSettings.GroupByOverflowMode\022>\n\020max" +
-      "_rows_to_sort\030\022 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to_sort\030\023" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022U\n\022sort_overflow_mode\030\024 \001(\01629.yandex." +
-      "cloud.mdb.clickhouse.v1.UserSettings.Ove" +
-      "rflowMode\022=\n\017max_result_rows\030\025 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022>\n\020max_" +
-      "result_bytes\030\026 \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\007\372\3071\003>=0\022W\n\024result_overflow_mode" +
-      "\030\027 \001(\01629.yandex.cloud.mdb.clickhouse.v1." +
-      "UserSettings.OverflowMode\022B\n\024max_rows_in" +
-      "_distinct\030\030 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022C\n\025max_bytes_in_distinct\030\031" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022Y\n\026distinct_overflow_mode\030\032 \001(\01629.yan" +
-      "dex.cloud.mdb.clickhouse.v1.UserSettings" +
-      ".OverflowMode\022B\n\024max_rows_to_transfer\030\033 " +
+      "f.BoolValue\022A\n\035allow_introspection_funct" +
+      "ions\030` \001(\0132\032.google.protobuf.BoolValue\022<" +
+      "\n\017connect_timeout\030\' \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\006\372\3071\002>0\022J\n\035connect_timeout_" +
+      "with_failover\030a \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\006\372\3071\002>0\022<\n\017receive_timeout\030( \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\0229" +
+      "\n\014send_timeout\030) \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022L\n\'timeout_before_chec" +
+      "king_execution_speed\030b \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022;\n\rinsert_quorum\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\025" +
+      "insert_quorum_timeout\030\004 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\n\372\3071\006>=1000\022:\n\026insert_q" +
+      "uorum_parallel\030c \001(\0132\032.google.protobuf.B" +
+      "oolValue\022:\n\026insert_null_as_default\030d \001(\013" +
+      "2\032.google.protobuf.BoolValue\022A\n\035select_s" +
+      "equential_consistency\030\005 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022V\n2deduplicate_blocks_in" +
+      "_dependent_materialized_views\030e \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022O\n!replication_a" +
+      "lter_partitions_sync\030* \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\0030-2\022Z\n)max_replica_" +
+      "delay_for_distributed_queries\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\n\372\3071\006>=1000\022V\n2" +
+      "fallback_to_stale_replicas_for_distribut" +
+      "ed_queries\030\007 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022e\n\030distributed_product_mode\030+ \001(\0162C" +
+      ".yandex.cloud.mdb.clickhouse.v1.UserSett" +
+      "ings.DistributedProductMode\022L\n(distribut" +
+      "ed_aggregation_memory_efficient\030H \001(\0132\032." +
+      "google.protobuf.BoolValue\022A\n\034distributed" +
+      "_ddl_task_timeout\030I \001(\0132\033.google.protobu" +
+      "f.Int64Value\022;\n\027skip_unavailable_shards\030" +
+      "Q \001(\0132\032.google.protobuf.BoolValue\0227\n\023com" +
+      "pile_expressions\030. \001(\0132\032.google.protobuf" +
+      ".BoolValue\022M\n\037min_count_to_compile_expre" +
+      "ssion\030/ \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022;\n\016max_block_size\030\t \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032min_in" +
+      "sert_block_size_rows\0300 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022I\n\033min_insert_b" +
+      "lock_size_bytes\0301 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022B\n\025max_insert_block_" +
+      "size\030\n \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\006\372\3071\002>0\022H\n\032min_bytes_to_use_direct_io\0302 " +
       "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022C\n\025max_bytes_to_transfer\030\034 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022Y\n\026transf" +
-      "er_overflow_mode\030\035 \001(\01629.yandex.cloud.md" +
+      "0\022:\n\026use_uncompressed_cache\0303 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022M\n merge_tree_max_" +
+      "rows_to_use_cache\0304 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\006\372\3071\002>0\022N\n!merge_tree_max_b" +
+      "ytes_to_use_cache\0305 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\006\372\3071\002>0\022T\n\'merge_tree_min_r" +
+      "ows_for_concurrent_read\0306 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\006\372\3071\002>0\022U\n(merge_tree" +
+      "_min_bytes_for_concurrent_read\0307 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022G\n\"max" +
+      "_bytes_before_external_group_by\030J \001(\0132\033." +
+      "google.protobuf.Int64Value\022C\n\036max_bytes_" +
+      "before_external_sort\030K \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022A\n\034group_by_two_level_th" +
+      "reshold\030L \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022G\n\"group_by_two_level_threshold_bytes" +
+      "\030M \001(\0132\033.google.protobuf.Int64Value\0226\n\010p" +
+      "riority\0308 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\0228\n\013max_threads\030\010 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022>\n\020max_mem" +
+      "ory_usage\030\013 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022G\n\031max_memory_usage_for_us" +
+      "er\030\014 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=0\022:\n\025max_network_bandwidth\0309 \001(\0132\033." +
+      "google.protobuf.Int64Value\022C\n\036max_networ" +
+      "k_bandwidth_for_user\030: \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022D\n\037max_partitions_per_in" +
+      "sert_block\030f \001(\0132\033.google.protobuf.Int64" +
+      "Value\022D\n\037max_concurrent_queries_for_user" +
+      "\030g \001(\0132\033.google.protobuf.Int64Value\0227\n\023f" +
+      "orce_index_by_date\030; \001(\0132\032.google.protob" +
+      "uf.BoolValue\0225\n\021force_primary_key\030< \001(\0132" +
+      "\032.google.protobuf.BoolValue\022>\n\020max_rows_" +
+      "to_read\030\r \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030\016 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022" +
+      "read_overflow_mode\030\017 \001(\01629.yandex.cloud." +
+      "mdb.clickhouse.v1.UserSettings.OverflowM" +
+      "ode\022B\n\024max_rows_to_group_by\030\020 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022`\n\026group" +
+      "_by_overflow_mode\030\021 \001(\0162@.yandex.cloud.m" +
+      "db.clickhouse.v1.UserSettings.GroupByOve" +
+      "rflowMode\022>\n\020max_rows_to_sort\030\022 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021max" +
+      "_bytes_to_sort\030\023 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022U\n\022sort_overflow_mode" +
+      "\030\024 \001(\01629.yandex.cloud.mdb.clickhouse.v1." +
+      "UserSettings.OverflowMode\022=\n\017max_result_" +
+      "rows\030\025 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022W\n\024resu" +
+      "lt_overflow_mode\030\027 \001(\01629.yandex.cloud.md" +
       "b.clickhouse.v1.UserSettings.OverflowMod" +
-      "e\022@\n\022max_execution_time\030\036 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\003>=0\022X\n\025timeout_o" +
-      "verflow_mode\030\037 \001(\01629.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.UserSettings.OverflowMode\022=\n" +
-      "\017max_rows_in_set\030W \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022>\n\020max_bytes_in_set" +
-      "\030X \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0\022T\n\021set_overflow_mode\030Y \001(\01629.yandex" +
-      ".cloud.mdb.clickhouse.v1.UserSettings.Ov" +
-      "erflowMode\022>\n\020max_rows_in_join\030Z \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021ma" +
-      "x_bytes_in_join\030[ \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\022U\n\022join_overflow_mod" +
-      "e\030\\ \001(\01629.yandex.cloud.mdb.clickhouse.v1" +
-      ".UserSettings.OverflowMode\022A\n\023max_column" +
-      "s_to_read\030  \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022C\n\025max_temporary_columns\030!" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022M\n\037max_temporary_non_const_columns\030\" " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022;\n\016max_query_size\030# \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\006\372\3071\002>0\022:\n\rmax_ast_depth\030" +
-      "$ \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
-      ">0\022=\n\020max_ast_elements\030% \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\006\372\3071\002>0\022F\n\031max_expande" +
-      "d_ast_elements\030& \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\006\372\3071\002>0\022A\n\023min_execution_speed" +
-      "\030T \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0\022G\n\031min_execution_speed_bytes\030U \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022o\n" +
-      "\035count_distinct_implementation\030V \001(\0162H.y" +
-      "andex.cloud.mdb.clickhouse.v1.UserSettin" +
-      "gs.CountDistinctImplementation\022M\n)input_" +
-      "format_values_interpret_expressions\030= \001(" +
-      "\0132\032.google.protobuf.BoolValue\022L\n(input_f" +
-      "ormat_defaults_for_omitted_fields\030> \001(\0132" +
-      "\032.google.protobuf.BoolValue\022p\n\'output_fo" +
-      "rmat_json_quote_64bit_integers\030? \001(\0132\032.g" +
-      "oogle.protobuf.BoolValueR#outputFormatJs" +
-      "onQuote_64bitIntegers\022F\n\"output_format_j" +
-      "son_quote_denormals\030@ \001(\0132\032.google.proto" +
-      "buf.BoolValue\022J\n&low_cardinality_allow_i" +
-      "n_native_format\030N \001(\0132\032.google.protobuf." +
-      "BoolValue\022M\n)empty_result_for_aggregatio" +
-      "n_by_empty_set\030O \001(\0132\032.google.protobuf.B" +
-      "oolValue\022B\n\036joined_subquery_requires_ali" +
-      "as\030] \001(\0132\032.google.protobuf.BoolValue\0222\n\016" +
-      "join_use_nulls\030^ \001(\0132\032.google.protobuf.B" +
-      "oolValue\0225\n\021transform_null_in\030_ \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022<\n\027http_connecti" +
-      "on_timeout\030A \001(\0132\033.google.protobuf.Int64" +
-      "Value\0229\n\024http_receive_timeout\030B \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0226\n\021http_send_ti" +
-      "meout\030C \001(\0132\033.google.protobuf.Int64Value" +
-      "\022;\n\027enable_http_compression\030D \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022A\n\035send_progress_i" +
-      "n_http_headers\030E \001(\0132\032.google.protobuf.B" +
-      "oolValue\022C\n\036http_headers_progress_interv" +
-      "al\030F \001(\0132\033.google.protobuf.Int64Value\0228\n" +
-      "\024add_http_cors_header\030G \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022J\n\nquota_mode\030P \001(\01626.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.UserSetting" +
-      "s.QuotaMode\"_\n\014OverflowMode\022\035\n\031OVERFLOW_" +
-      "MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_MODE_THRO" +
-      "W\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupBy" +
-      "OverflowMode\022&\n\"GROUP_BY_OVERFLOW_MODE_U" +
-      "NSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_T" +
-      "HROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MODE_BREAK\020\002" +
-      "\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026Dis" +
-      "tributedProductMode\022(\n$DISTRIBUTED_PRODU" +
-      "CT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRIBUTED_PRO" +
-      "DUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_" +
-      "MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRODUCT_MODE" +
-      "_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUCT_MODE_AL" +
-      "LOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOTA_MODE_UNSPECI" +
-      "FIED\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_" +
-      "MODE_KEYED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003" +
-      "\"\266\002\n\033CountDistinctImplementation\022-\n)COUN" +
-      "T_DISTINCT_IMPLEMENTATION_UNSPECIFIED\020\000\022" +
-      "&\n\"COUNT_DISTINCT_IMPLEMENTATION_UNIQ\020\001\022" +
-      "/\n+COUNT_DISTINCT_IMPLEMENTATION_UNIQ_CO" +
-      "MBINED\020\002\0222\n.COUNT_DISTINCT_IMPLEMENTATIO" +
-      "N_UNIQ_COMBINED_64\020\003\022-\n)COUNT_DISTINCT_I" +
-      "MPLEMENTATION_UNIQ_HLL_12\020\004\022,\n(COUNT_DIS" +
-      "TINCT_IMPLEMENTATION_UNIQ_EXACT\020\005\"\356\002\n\tUs" +
-      "erQuota\022B\n\021interval_duration\030\001 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n\007q" +
-      "ueries\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\0229\n\013result_rows\030" +
-      "\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\0227\n\tread_rows\030\005 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022<\n\016execution_time\030\006" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0Bs\n\"yandex.cloud.api.mdb.clickhouse.v1" +
-      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
-      "\006proto3"
+      "e\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_byt" +
+      "es_in_distinct\030\031 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022Y\n\026distinct_overflow_" +
+      "mode\030\032 \001(\01629.yandex.cloud.mdb.clickhouse" +
+      ".v1.UserSettings.OverflowMode\022B\n\024max_row" +
+      "s_to_transfer\030\033 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to_transf" +
+      "er\030\034 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=0\022Y\n\026transfer_overflow_mode\030\035 \001(\01629" +
+      ".yandex.cloud.mdb.clickhouse.v1.UserSett" +
+      "ings.OverflowMode\022@\n\022max_execution_time\030" +
+      "\036 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\022X\n\025timeout_overflow_mode\030\037 \001(\01629.yan" +
+      "dex.cloud.mdb.clickhouse.v1.UserSettings" +
+      ".OverflowMode\022=\n\017max_rows_in_set\030W \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022>\n\020" +
+      "max_bytes_in_set\030X \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\022T\n\021set_overflow_mod" +
+      "e\030Y \001(\01629.yandex.cloud.mdb.clickhouse.v1" +
+      ".UserSettings.OverflowMode\022>\n\020max_rows_i" +
+      "n_join\030Z \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022?\n\021max_bytes_in_join\030[ \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022j" +
+      "oin_overflow_mode\030\\ \001(\01629.yandex.cloud.m" +
+      "db.clickhouse.v1.UserSettings.OverflowMo" +
+      "de\022R\n\016join_algorithm\030h \003(\0162:.yandex.clou" +
+      "d.mdb.clickhouse.v1.UserSettings.JoinAlg" +
+      "orithm\022F\n\"any_join_distinct_right_table_" +
+      "keys\030i \001(\0132\032.google.protobuf.BoolValue\022A" +
+      "\n\023max_columns_to_read\030  \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_tempora" +
+      "ry_columns\030! \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\022M\n\037max_temporary_non_cons" +
+      "t_columns\030\" \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022;\n\016max_query_size\030# \001(\0132\033." +
+      "google.protobuf.Int64ValueB\006\372\3071\002>0\022:\n\rma" +
+      "x_ast_depth\030$ \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\006\372\3071\002>0\022=\n\020max_ast_elements\030% \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022F\n" +
+      "\031max_expanded_ast_elements\030& \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022A\n\023min_exe" +
+      "cution_speed\030T \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\022G\n\031min_execution_speed_" +
+      "bytes\030U \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022o\n\035count_distinct_implementati" +
+      "on\030V \001(\0162H.yandex.cloud.mdb.clickhouse.v" +
+      "1.UserSettings.CountDistinctImplementati" +
+      "on\022M\n)input_format_values_interpret_expr" +
+      "essions\030= \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022L\n(input_format_defaults_for_omitted_f" +
+      "ields\030> \001(\0132\032.google.protobuf.BoolValue\022" +
+      "@\n\034input_format_null_as_default\030j \001(\0132\032." +
+      "google.protobuf.BoolValue\022`\n\026date_time_i" +
+      "nput_format\030k \001(\0162@.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.UserSettings.DateTimeInputFor" +
+      "mat\022F\n\"input_format_with_names_use_heade" +
+      "r\030l \001(\0132\032.google.protobuf.BoolValue\022p\n\'o" +
+      "utput_format_json_quote_64bit_integers\030?" +
+      " \001(\0132\032.google.protobuf.BoolValueR#output" +
+      "FormatJsonQuote_64bitIntegers\022F\n\"output_" +
+      "format_json_quote_denormals\030@ \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022b\n\027date_time_outpu" +
+      "t_format\030m \001(\0162A.yandex.cloud.mdb.clickh" +
+      "ouse.v1.UserSettings.DateTimeOutputForma" +
+      "t\022J\n&low_cardinality_allow_in_native_for" +
+      "mat\030N \001(\0132\032.google.protobuf.BoolValue\022J\n" +
+      "&allow_suspicious_low_cardinality_types\030" +
+      "n \001(\0132\032.google.protobuf.BoolValue\022M\n)emp" +
+      "ty_result_for_aggregation_by_empty_set\030O" +
+      " \001(\0132\032.google.protobuf.BoolValue\022<\n\027http" +
+      "_connection_timeout\030A \001(\0132\033.google.proto" +
+      "buf.Int64Value\0229\n\024http_receive_timeout\030B" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021htt" +
+      "p_send_timeout\030C \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022;\n\027enable_http_compression\030D \001" +
+      "(\0132\032.google.protobuf.BoolValue\022A\n\035send_p" +
+      "rogress_in_http_headers\030E \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022C\n\036http_headers_progre" +
+      "ss_interval\030F \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0228\n\024add_http_cors_header\030G \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022P\n,cancel_http_" +
+      "readonly_queries_on_client_close\030o \001(\0132\032" +
+      ".google.protobuf.BoolValue\022;\n\026max_http_g" +
+      "et_redirects\030p \001(\0132\033.google.protobuf.Int" +
+      "64Value\022B\n\036joined_subquery_requires_alia" +
+      "s\030] \001(\0132\032.google.protobuf.BoolValue\0222\n\016j" +
+      "oin_use_nulls\030^ \001(\0132\032.google.protobuf.Bo" +
+      "olValue\0225\n\021transform_null_in\030_ \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022J\n\nquota_mode\030P \001" +
+      "(\01626.yandex.cloud.mdb.clickhouse.v1.User" +
+      "Settings.QuotaMode\0222\n\016flatten_nested\030q \001" +
+      "(\0132\032.google.protobuf.BoolValue\022\025\n\rformat" +
+      "_regexp\030r \001(\t\022j\n\033format_regexp_escaping_" +
+      "rule\030s \001(\0162E.yandex.cloud.mdb.clickhouse" +
+      ".v1.UserSettings.FormatRegexpEscapingRul" +
+      "e\022@\n\034format_regexp_skip_unmatched\030t \001(\0132" +
+      "\032.google.protobuf.BoolValue\0220\n\014async_ins" +
+      "ert\030u \001(\0132\032.google.protobuf.BoolValue\0229\n" +
+      "\024async_insert_threads\030v \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0229\n\025wait_for_async_inser" +
+      "t\030w \001(\0132\032.google.protobuf.BoolValue\022B\n\035w" +
+      "ait_for_async_insert_timeout\030x \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022?\n\032async_insert_" +
+      "max_data_size\030y \001(\0132\033.google.protobuf.In" +
+      "t64Value\022>\n\031async_insert_busy_timeout\030z " +
+      "\001(\0132\033.google.protobuf.Int64Value\022?\n\032asyn" +
+      "c_insert_stale_timeout\030{ \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0229\n\024memory_profiler_ste" +
+      "p\030| \001(\0132\033.google.protobuf.Int64Value\022H\n\"" +
+      "memory_profiler_sample_probability\030} \001(\013" +
+      "2\034.google.protobuf.DoubleValue\022/\n\007compil" +
+      "e\030, \001(\0132\032.google.protobuf.BoolValueB\002\030\001\022" +
+      "=\n\024min_count_to_compile\030- \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\002\030\001\"_\n\014OverflowMode\022\035" +
+      "\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLO" +
+      "W_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"" +
+      "\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_OVER" +
+      "FLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVER" +
+      "FLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_M" +
+      "ODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_AN" +
+      "Y\020\003\"\322\001\n\026DistributedProductMode\022(\n$DISTRI" +
+      "BUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DIST" +
+      "RIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUT" +
+      "ED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_P" +
+      "RODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PROD" +
+      "UCT_MODE_ALLOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOTA_M" +
+      "ODE_UNSPECIFIED\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020" +
+      "\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032\n\026QUOTA_MODE_KE" +
+      "YED_BY_IP\020\003\"\266\002\n\033CountDistinctImplementat" +
+      "ion\022-\n)COUNT_DISTINCT_IMPLEMENTATION_UNS" +
+      "PECIFIED\020\000\022&\n\"COUNT_DISTINCT_IMPLEMENTAT" +
+      "ION_UNIQ\020\001\022/\n+COUNT_DISTINCT_IMPLEMENTAT" +
+      "ION_UNIQ_COMBINED\020\002\0222\n.COUNT_DISTINCT_IM" +
+      "PLEMENTATION_UNIQ_COMBINED_64\020\003\022-\n)COUNT" +
+      "_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12\020\004\022," +
+      "\n(COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXA" +
+      "CT\020\005\"\220\002\n\rJoinAlgorithm\022\036\n\032JOIN_ALGORITHM" +
+      "_UNSPECIFIED\020\000\022\027\n\023JOIN_ALGORITHM_HASH\020\001\022" +
+      " \n\034JOIN_ALGORITHM_PARALLEL_HASH\020\002\022 \n\034JOI" +
+      "N_ALGORITHM_PARTIAL_MERGE\020\003\022\031\n\025JOIN_ALGO" +
+      "RITHM_DIRECT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO\020\005\022" +
+      "%\n!JOIN_ALGORITHM_FULL_SORTING_MERGE\020\006\022\'" +
+      "\n#JOIN_ALGORITHM_PREFER_PARTIAL_MERGE\020\007\"" +
+      "\255\002\n\030FormatRegexpEscapingRule\022+\n\'FORMAT_R" +
+      "EGEXP_ESCAPING_RULE_UNSPECIFIED\020\000\022\'\n#FOR" +
+      "MAT_REGEXP_ESCAPING_RULE_ESCAPED\020\001\022&\n\"FO" +
+      "RMAT_REGEXP_ESCAPING_RULE_QUOTED\020\002\022#\n\037FO" +
+      "RMAT_REGEXP_ESCAPING_RULE_CSV\020\003\022$\n FORMA" +
+      "T_REGEXP_ESCAPING_RULE_JSON\020\004\022#\n\037FORMAT_" +
+      "REGEXP_ESCAPING_RULE_XML\020\005\022#\n\037FORMAT_REG" +
+      "EXP_ESCAPING_RULE_RAW\020\006\"\262\001\n\023DateTimeInpu" +
+      "tFormat\022&\n\"DATE_TIME_INPUT_FORMAT_UNSPEC" +
+      "IFIED\020\000\022&\n\"DATE_TIME_INPUT_FORMAT_BEST_E" +
+      "FFORT\020\001\022 \n\034DATE_TIME_INPUT_FORMAT_BASIC\020" +
+      "\002\022)\n%DATE_TIME_INPUT_FORMAT_BEST_EFFORT_" +
+      "US\020\003\"\260\001\n\024DateTimeOutputFormat\022\'\n#DATE_TI" +
+      "ME_OUTPUT_FORMAT_UNSPECIFIED\020\000\022\"\n\036DATE_T" +
+      "IME_OUTPUT_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TIME_" +
+      "OUTPUT_FORMAT_ISO\020\002\022*\n&DATE_TIME_OUTPUT_" +
+      "FORMAT_UNIX_TIMESTAMP\020\003\"\356\002\n\tUserQuota\022B\n" +
+      "\021interval_duration\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\0224\n\006errors\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\trea" +
+      "d_rows\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yand" +
+      "ex.cloud.api.mdb.clickhouse.v1ZMgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/clickhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34028,7 +42109,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "QuotaMode", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "Compile", "MinCountToCompile", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

@@ -1748,6 +1748,1740 @@ public final class NodeServiceOuterClass {
 
   }
 
+  public interface AliasExecutionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.AliasExecutionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder that will be matched with Alias ACL
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder that will be matched with Alias ACL
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Name of the Alias to perform request on
+     * </pre>
+     *
+     * <code>string alias_name = 2;</code>
+     * @return The aliasName.
+     */
+    java.lang.String getAliasName();
+    /**
+     * <pre>
+     * Name of the Alias to perform request on
+     * </pre>
+     *
+     * <code>string alias_name = 2;</code>
+     * @return The bytes for aliasName.
+     */
+    com.google.protobuf.ByteString
+        getAliasNameBytes();
+
+    /**
+     * <pre>
+     * Input data for the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input = 3;</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <pre>
+     * Input data for the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input = 3;</code>
+     * @return The input.
+     */
+    com.google.protobuf.Struct getInput();
+    /**
+     * <pre>
+     * Input data for the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input = 3;</code>
+     */
+    com.google.protobuf.StructOrBuilder getInputOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.AliasExecutionRequest}
+   */
+  public static final class AliasExecutionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.AliasExecutionRequest)
+      AliasExecutionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AliasExecutionRequest.newBuilder() to construct.
+    private AliasExecutionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AliasExecutionRequest() {
+      folderId_ = "";
+      aliasName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AliasExecutionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AliasExecutionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              aliasName_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (input_ != null) {
+                subBuilder = input_.toBuilder();
+              }
+              input_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(input_);
+                input_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.class, yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder that will be matched with Alias ACL
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder that will be matched with Alias ACL
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALIAS_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object aliasName_;
+    /**
+     * <pre>
+     * Name of the Alias to perform request on
+     * </pre>
+     *
+     * <code>string alias_name = 2;</code>
+     * @return The aliasName.
+     */
+    @java.lang.Override
+    public java.lang.String getAliasName() {
+      java.lang.Object ref = aliasName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        aliasName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the Alias to perform request on
+     * </pre>
+     *
+     * <code>string alias_name = 2;</code>
+     * @return The bytes for aliasName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAliasNameBytes() {
+      java.lang.Object ref = aliasName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        aliasName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Struct input_;
+    /**
+     * <pre>
+     * Input data for the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input = 3;</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <pre>
+     * Input data for the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input = 3;</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getInput() {
+      return input_ == null ? com.google.protobuf.Struct.getDefaultInstance() : input_;
+    }
+    /**
+     * <pre>
+     * Input data for the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getInputOrBuilder() {
+      return getInput();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aliasName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, aliasName_);
+      }
+      if (input_ != null) {
+        output.writeMessage(3, getInput());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aliasName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, aliasName_);
+      }
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getInput());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest other = (yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getAliasName()
+          .equals(other.getAliasName())) return false;
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + ALIAS_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getAliasName().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.AliasExecutionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.AliasExecutionRequest)
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.class, yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        aliasName_ = "";
+
+        if (inputBuilder_ == null) {
+          input_ = null;
+        } else {
+          input_ = null;
+          inputBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest build() {
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest result = new yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest(this);
+        result.folderId_ = folderId_;
+        result.aliasName_ = aliasName_;
+        if (inputBuilder_ == null) {
+          result.input_ = input_;
+        } else {
+          result.input_ = inputBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getAliasName().isEmpty()) {
+          aliasName_ = other.aliasName_;
+          onChanged();
+        }
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder that will be matched with Alias ACL
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that will be matched with Alias ACL
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that will be matched with Alias ACL
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that will be matched with Alias ACL
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that will be matched with Alias ACL
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object aliasName_ = "";
+      /**
+       * <pre>
+       * Name of the Alias to perform request on
+       * </pre>
+       *
+       * <code>string alias_name = 2;</code>
+       * @return The aliasName.
+       */
+      public java.lang.String getAliasName() {
+        java.lang.Object ref = aliasName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          aliasName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the Alias to perform request on
+       * </pre>
+       *
+       * <code>string alias_name = 2;</code>
+       * @return The bytes for aliasName.
+       */
+      public com.google.protobuf.ByteString
+          getAliasNameBytes() {
+        java.lang.Object ref = aliasName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          aliasName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the Alias to perform request on
+       * </pre>
+       *
+       * <code>string alias_name = 2;</code>
+       * @param value The aliasName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAliasName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        aliasName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the Alias to perform request on
+       * </pre>
+       *
+       * <code>string alias_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAliasName() {
+        
+        aliasName_ = getDefaultInstance().getAliasName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the Alias to perform request on
+       * </pre>
+       *
+       * <code>string alias_name = 2;</code>
+       * @param value The bytes for aliasName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAliasNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        aliasName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> inputBuilder_;
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return inputBuilder_ != null || input_ != null;
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       * @return The input.
+       */
+      public com.google.protobuf.Struct getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.google.protobuf.Struct.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      public Builder setInput(com.google.protobuf.Struct value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+          onChanged();
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      public Builder setInput(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      public Builder mergeInput(com.google.protobuf.Struct value) {
+        if (inputBuilder_ == null) {
+          if (input_ != null) {
+            input_ =
+              com.google.protobuf.Struct.newBuilder(input_).mergeFrom(value).buildPartial();
+          } else {
+            input_ = value;
+          }
+          onChanged();
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      public Builder clearInput() {
+        if (inputBuilder_ == null) {
+          input_ = null;
+          onChanged();
+        } else {
+          input_ = null;
+          inputBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      public com.google.protobuf.Struct.Builder getInputBuilder() {
+        
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <pre>
+       * Input data for the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.AliasExecutionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.AliasExecutionRequest)
+    private static final yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AliasExecutionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AliasExecutionRequest>() {
+      @java.lang.Override
+      public AliasExecutionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AliasExecutionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AliasExecutionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AliasExecutionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AliasExecutionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.AliasExecutionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Result of the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output = 1;</code>
+     * @return Whether the output field is set.
+     */
+    boolean hasOutput();
+    /**
+     * <pre>
+     * Result of the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output = 1;</code>
+     * @return The output.
+     */
+    com.google.protobuf.Struct getOutput();
+    /**
+     * <pre>
+     * Result of the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output = 1;</code>
+     */
+    com.google.protobuf.StructOrBuilder getOutputOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.AliasExecutionResponse}
+   */
+  public static final class AliasExecutionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.AliasExecutionResponse)
+      AliasExecutionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AliasExecutionResponse.newBuilder() to construct.
+    private AliasExecutionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AliasExecutionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AliasExecutionResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AliasExecutionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (output_ != null) {
+                subBuilder = output_.toBuilder();
+              }
+              output_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(output_);
+                output_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.class, yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.Builder.class);
+    }
+
+    public static final int OUTPUT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Struct output_;
+    /**
+     * <pre>
+     * Result of the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output = 1;</code>
+     * @return Whether the output field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutput() {
+      return output_ != null;
+    }
+    /**
+     * <pre>
+     * Result of the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output = 1;</code>
+     * @return The output.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getOutput() {
+      return output_ == null ? com.google.protobuf.Struct.getDefaultInstance() : output_;
+    }
+    /**
+     * <pre>
+     * Result of the execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getOutputOrBuilder() {
+      return getOutput();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (output_ != null) {
+        output.writeMessage(1, getOutput());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (output_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOutput());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse other = (yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse) obj;
+
+      if (hasOutput() != other.hasOutput()) return false;
+      if (hasOutput()) {
+        if (!getOutput()
+            .equals(other.getOutput())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOutput()) {
+        hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutput().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.AliasExecutionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.AliasExecutionResponse)
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.class, yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (outputBuilder_ == null) {
+          output_ = null;
+        } else {
+          output_ = null;
+          outputBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse build() {
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse buildPartial() {
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse result = new yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse(this);
+        if (outputBuilder_ == null) {
+          result.output_ = output_;
+        } else {
+          result.output_ = outputBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse other) {
+        if (other == yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse.getDefaultInstance()) return this;
+        if (other.hasOutput()) {
+          mergeOutput(other.getOutput());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Struct output_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> outputBuilder_;
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       * @return Whether the output field is set.
+       */
+      public boolean hasOutput() {
+        return outputBuilder_ != null || output_ != null;
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       * @return The output.
+       */
+      public com.google.protobuf.Struct getOutput() {
+        if (outputBuilder_ == null) {
+          return output_ == null ? com.google.protobuf.Struct.getDefaultInstance() : output_;
+        } else {
+          return outputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      public Builder setOutput(com.google.protobuf.Struct value) {
+        if (outputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          output_ = value;
+          onChanged();
+        } else {
+          outputBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      public Builder setOutput(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (outputBuilder_ == null) {
+          output_ = builderForValue.build();
+          onChanged();
+        } else {
+          outputBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      public Builder mergeOutput(com.google.protobuf.Struct value) {
+        if (outputBuilder_ == null) {
+          if (output_ != null) {
+            output_ =
+              com.google.protobuf.Struct.newBuilder(output_).mergeFrom(value).buildPartial();
+          } else {
+            output_ = value;
+          }
+          onChanged();
+        } else {
+          outputBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      public Builder clearOutput() {
+        if (outputBuilder_ == null) {
+          output_ = null;
+          onChanged();
+        } else {
+          output_ = null;
+          outputBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      public com.google.protobuf.Struct.Builder getOutputBuilder() {
+        
+        onChanged();
+        return getOutputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getOutputOrBuilder() {
+        if (outputBuilder_ != null) {
+          return outputBuilder_.getMessageOrBuilder();
+        } else {
+          return output_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : output_;
+        }
+      }
+      /**
+       * <pre>
+       * Result of the execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getOutputFieldBuilder() {
+        if (outputBuilder_ == null) {
+          outputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getOutput(),
+                  getParentForChildren(),
+                  isClean());
+          output_ = null;
+        }
+        return outputBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.AliasExecutionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.AliasExecutionResponse)
+    private static final yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AliasExecutionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AliasExecutionResponse>() {
+      @java.lang.Override
+      public AliasExecutionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AliasExecutionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AliasExecutionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AliasExecutionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.AliasExecutionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v1_NodeExecutionRequest_descriptor;
   private static final 
@@ -1758,6 +3492,16 @@ public final class NodeServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v1_NodeExecutionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1774,14 +3518,23 @@ public final class NodeServiceOuterClass {
       "\021\n\tfolder_id\030\001 \001(\t\022\017\n\007node_id\030\002 \001(\t\022&\n\005i" +
       "nput\030\003 \001(\0132\027.google.protobuf.Struct\"@\n\025N" +
       "odeExecutionResponse\022\'\n\006output\030\001 \001(\0132\027.g" +
-      "oogle.protobuf.Struct2\261\001\n\013NodeService\022\241\001" +
-      "\n\007Execute\0220.yandex.cloud.datasphere.v1.N" +
-      "odeExecutionRequest\0321.yandex.cloud.datas" +
-      "phere.v1.NodeExecutionResponse\"1\202\323\344\223\002+\"&" +
-      "/datasphere/v1/nodes/{node_id}:execute:\001" +
-      "*Bk\n\036yandex.cloud.api.datasphere.v1ZIgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/datasphere/v1;datasphereb\006proto3"
+      "oogle.protobuf.Struct\"f\n\025AliasExecutionR" +
+      "equest\022\021\n\tfolder_id\030\001 \001(\t\022\022\n\nalias_name\030" +
+      "\002 \001(\t\022&\n\005input\030\003 \001(\0132\027.google.protobuf.S" +
+      "truct\"A\n\026AliasExecutionResponse\022\'\n\006outpu" +
+      "t\030\001 \001(\0132\027.google.protobuf.Struct2\341\002\n\013Nod" +
+      "eService\022\241\001\n\007Execute\0220.yandex.cloud.data" +
+      "sphere.v1.NodeExecutionRequest\0321.yandex." +
+      "cloud.datasphere.v1.NodeExecutionRespons" +
+      "e\"1\202\323\344\223\002+\"&/datasphere/v1/nodes/{node_id" +
+      "}:execute:\001*\022\255\001\n\014ExecuteAlias\0221.yandex.c" +
+      "loud.datasphere.v1.AliasExecutionRequest" +
+      "\0322.yandex.cloud.datasphere.v1.AliasExecu" +
+      "tionResponse\"6\202\323\344\223\0020\"+/datasphere/v1/ali" +
+      "ases/{alias_name}:execute:\001*Bk\n\036yandex.c" +
+      "loud.api.datasphere.v1ZIgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/datasph" +
+      "ere/v1;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1800,6 +3553,18 @@ public final class NodeServiceOuterClass {
     internal_static_yandex_cloud_datasphere_v1_NodeExecutionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_NodeExecutionResponse_descriptor,
+        new java.lang.String[] { "Output", });
+    internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_AliasExecutionRequest_descriptor,
+        new java.lang.String[] { "FolderId", "AliasName", "Input", });
+    internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_AliasExecutionResponse_descriptor,
         new java.lang.String[] { "Output", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

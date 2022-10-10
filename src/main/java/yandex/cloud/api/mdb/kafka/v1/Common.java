@@ -215,6 +215,123 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.CompressionType)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.kafka.v1.SaslMechanism}
+   */
+  public enum SaslMechanism
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SASL_MECHANISM_UNSPECIFIED = 0;</code>
+     */
+    SASL_MECHANISM_UNSPECIFIED(0),
+    /**
+     * <code>SASL_MECHANISM_SCRAM_SHA_256 = 1;</code>
+     */
+    SASL_MECHANISM_SCRAM_SHA_256(1),
+    /**
+     * <code>SASL_MECHANISM_SCRAM_SHA_512 = 2;</code>
+     */
+    SASL_MECHANISM_SCRAM_SHA_512(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SASL_MECHANISM_UNSPECIFIED = 0;</code>
+     */
+    public static final int SASL_MECHANISM_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>SASL_MECHANISM_SCRAM_SHA_256 = 1;</code>
+     */
+    public static final int SASL_MECHANISM_SCRAM_SHA_256_VALUE = 1;
+    /**
+     * <code>SASL_MECHANISM_SCRAM_SHA_512 = 2;</code>
+     */
+    public static final int SASL_MECHANISM_SCRAM_SHA_512_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SaslMechanism valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SaslMechanism forNumber(int value) {
+      switch (value) {
+        case 0: return SASL_MECHANISM_UNSPECIFIED;
+        case 1: return SASL_MECHANISM_SCRAM_SHA_256;
+        case 2: return SASL_MECHANISM_SCRAM_SHA_512;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SaslMechanism>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SaslMechanism> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SaslMechanism>() {
+            public SaslMechanism findValueByNumber(int number) {
+              return SaslMechanism.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final SaslMechanism[] VALUES = values();
+
+    public static SaslMechanism valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SaslMechanism(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.SaslMechanism)
+  }
+
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -231,10 +348,13 @@ public final class Common {
       "COMPRESSION_TYPE_ZSTD\020\002\022\030\n\024COMPRESSION_T" +
       "YPE_LZ4\020\003\022\033\n\027COMPRESSION_TYPE_SNAPPY\020\004\022\031" +
       "\n\025COMPRESSION_TYPE_GZIP\020\005\022\035\n\031COMPRESSION" +
-      "_TYPE_PRODUCER\020\006Bd\n\035yandex.cloud.api.mdb" +
-      ".kafka.v1ZCgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/kafka/v1;kafkab\006" +
-      "proto3"
+      "_TYPE_PRODUCER\020\006*s\n\rSaslMechanism\022\036\n\032SAS" +
+      "L_MECHANISM_UNSPECIFIED\020\000\022 \n\034SASL_MECHAN" +
+      "ISM_SCRAM_SHA_256\020\001\022 \n\034SASL_MECHANISM_SC" +
+      "RAM_SHA_512\020\002Bd\n\035yandex.cloud.api.mdb.ka" +
+      "fka.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/kafka/v1;kafkab\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

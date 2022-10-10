@@ -137,7 +137,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Size of backup in bytes
+     * Size of backup, in bytes
      * </pre>
      *
      * <code>int64 size = 6;</code>
@@ -182,6 +182,16 @@ public final class BackupOuterClass {
      * @return The method.
      */
     yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod();
+
+    /**
+     * <pre>
+     * Size of the journal associated with backup, in bytes
+     * </pre>
+     *
+     * <code>int64 journal_size = 9;</code>
+     * @return The journalSize.
+     */
+    long getJournalSize();
   }
   /**
    * <pre>
@@ -299,6 +309,11 @@ public final class BackupOuterClass {
               method_ = rawValue;
               break;
             }
+            case 72: {
+
+              journalSize_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -342,7 +357,7 @@ public final class BackupOuterClass {
       BACKUP_METHOD_UNSPECIFIED(0),
       /**
        * <pre>
-       * Base backup 
+       * Base backup
        * </pre>
        *
        * <code>BASE = 1;</code>
@@ -365,7 +380,7 @@ public final class BackupOuterClass {
       public static final int BACKUP_METHOD_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Base backup 
+       * Base backup
        * </pre>
        *
        * <code>BASE = 1;</code>
@@ -818,7 +833,7 @@ public final class BackupOuterClass {
     private long size_;
     /**
      * <pre>
-     * Size of backup in bytes
+     * Size of backup, in bytes
      * </pre>
      *
      * <code>int64 size = 6;</code>
@@ -883,6 +898,21 @@ public final class BackupOuterClass {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.UNRECOGNIZED : result;
     }
 
+    public static final int JOURNAL_SIZE_FIELD_NUMBER = 9;
+    private long journalSize_;
+    /**
+     * <pre>
+     * Size of the journal associated with backup, in bytes
+     * </pre>
+     *
+     * <code>int64 journal_size = 9;</code>
+     * @return The journalSize.
+     */
+    @java.lang.Override
+    public long getJournalSize() {
+      return journalSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -920,6 +950,9 @@ public final class BackupOuterClass {
       }
       if (method_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.BACKUP_METHOD_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, method_);
+      }
+      if (journalSize_ != 0L) {
+        output.writeInt64(9, journalSize_);
       }
       unknownFields.writeTo(output);
     }
@@ -959,6 +992,10 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, method_);
       }
+      if (journalSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, journalSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -994,6 +1031,8 @@ public final class BackupOuterClass {
           != other.getSize()) return false;
       if (type_ != other.type_) return false;
       if (method_ != other.method_) return false;
+      if (getJournalSize()
+          != other.getJournalSize()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1026,6 +1065,9 @@ public final class BackupOuterClass {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + METHOD_FIELD_NUMBER;
       hash = (53 * hash) + method_;
+      hash = (37 * hash) + JOURNAL_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getJournalSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1188,6 +1230,8 @@ public final class BackupOuterClass {
 
         method_ = 0;
 
+        journalSize_ = 0L;
+
         return this;
       }
 
@@ -1230,6 +1274,7 @@ public final class BackupOuterClass {
         result.size_ = size_;
         result.type_ = type_;
         result.method_ = method_;
+        result.journalSize_ = journalSize_;
         onBuilt();
         return result;
       }
@@ -1304,6 +1349,9 @@ public final class BackupOuterClass {
         }
         if (other.method_ != 0) {
           setMethodValue(other.getMethodValue());
+        }
+        if (other.getJournalSize() != 0L) {
+          setJournalSize(other.getJournalSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1944,7 +1992,7 @@ public final class BackupOuterClass {
       private long size_ ;
       /**
        * <pre>
-       * Size of backup in bytes
+       * Size of backup, in bytes
        * </pre>
        *
        * <code>int64 size = 6;</code>
@@ -1956,7 +2004,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Size of backup in bytes
+       * Size of backup, in bytes
        * </pre>
        *
        * <code>int64 size = 6;</code>
@@ -1971,7 +2019,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * Size of backup in bytes
+       * Size of backup, in bytes
        * </pre>
        *
        * <code>int64 size = 6;</code>
@@ -2131,6 +2179,49 @@ public final class BackupOuterClass {
         onChanged();
         return this;
       }
+
+      private long journalSize_ ;
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @return The journalSize.
+       */
+      @java.lang.Override
+      public long getJournalSize() {
+        return journalSize_;
+      }
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @param value The journalSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJournalSize(long value) {
+        
+        journalSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJournalSize() {
+        
+        journalSize_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2200,7 +2291,7 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/postgresql/v1/backup." +
       "proto\022\036yandex.cloud.mdb.postgresql.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\337\003\n\006Backu" +
+      "oogle/protobuf/timestamp.proto\"\365\003\n\006Backu" +
       "p\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncrea" +
       "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
       "\022\031\n\021source_cluster_id\030\004 \001(\t\022.\n\nstarted_a" +
@@ -2208,14 +2299,15 @@ public final class BackupOuterClass {
       "ize\030\006 \001(\003\022G\n\004type\030\007 \001(\01629.yandex.cloud.m" +
       "db.postgresql.v1.Backup.BackupCreationTy" +
       "pe\022C\n\006method\030\010 \001(\01623.yandex.cloud.mdb.po" +
-      "stgresql.v1.Backup.BackupMethod\"H\n\014Backu" +
-      "pMethod\022\035\n\031BACKUP_METHOD_UNSPECIFIED\020\000\022\010" +
-      "\n\004BASE\020\001\022\017\n\013INCREMENTAL\020\002\"U\n\022BackupCreat" +
-      "ionType\022$\n BACKUP_CREATION_TYPE_UNSPECIF" +
-      "IED\020\000\022\r\n\tAUTOMATED\020\001\022\n\n\006MANUAL\020\002Bs\n\"yand" +
-      "ex.cloud.api.mdb.postgresql.v1ZMgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/mdb/postgresql/v1;postgresqlb\006proto3"
+      "stgresql.v1.Backup.BackupMethod\022\024\n\014journ" +
+      "al_size\030\t \001(\003\"H\n\014BackupMethod\022\035\n\031BACKUP_" +
+      "METHOD_UNSPECIFIED\020\000\022\010\n\004BASE\020\001\022\017\n\013INCREM" +
+      "ENTAL\020\002\"U\n\022BackupCreationType\022$\n BACKUP_" +
+      "CREATION_TYPE_UNSPECIFIED\020\000\022\r\n\tAUTOMATED" +
+      "\020\001\022\n\n\006MANUAL\020\002Bs\n\"yandex.cloud.api.mdb.p" +
+      "ostgresql.v1ZMgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/postgresql/v1" +
+      ";postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2227,7 +2319,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", "JournalSize", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -7744,28 +7744,6 @@ public final class ApigatewayService {
 
     /**
      * <pre>
-     * ID of the attaching domain.
-     * </pre>
-     *
-     * <code>string domain_id = 2 [deprecated = true];</code>
-     * @deprecated
-     * @return The domainId.
-     */
-    @java.lang.Deprecated java.lang.String getDomainId();
-    /**
-     * <pre>
-     * ID of the attaching domain.
-     * </pre>
-     *
-     * <code>string domain_id = 2 [deprecated = true];</code>
-     * @deprecated
-     * @return The bytes for domainId.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getDomainIdBytes();
-
-    /**
-     * <pre>
      * Name of the attaching domain.
      * </pre>
      *
@@ -7818,7 +7796,6 @@ public final class ApigatewayService {
     }
     private AddDomainRequest() {
       apiGatewayId_ = "";
-      domainId_ = "";
       domainName_ = "";
       certificateId_ = "";
     }
@@ -7857,12 +7834,6 @@ public final class ApigatewayService {
               java.lang.String s = input.readStringRequireUtf8();
 
               apiGatewayId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              domainId_ = s;
               break;
             }
             case 26: {
@@ -7949,54 +7920,6 @@ public final class ApigatewayService {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         apiGatewayId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DOMAIN_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object domainId_;
-    /**
-     * <pre>
-     * ID of the attaching domain.
-     * </pre>
-     *
-     * <code>string domain_id = 2 [deprecated = true];</code>
-     * @deprecated
-     * @return The domainId.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public java.lang.String getDomainId() {
-      java.lang.Object ref = domainId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        domainId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the attaching domain.
-     * </pre>
-     *
-     * <code>string domain_id = 2 [deprecated = true];</code>
-     * @deprecated
-     * @return The bytes for domainId.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getDomainIdBytes() {
-      java.lang.Object ref = domainId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        domainId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -8112,9 +8035,6 @@ public final class ApigatewayService {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domainName_);
       }
@@ -8132,9 +8052,6 @@ public final class ApigatewayService {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiGatewayId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domainName_);
@@ -8159,8 +8076,6 @@ public final class ApigatewayService {
 
       if (!getApiGatewayId()
           .equals(other.getApiGatewayId())) return false;
-      if (!getDomainId()
-          .equals(other.getDomainId())) return false;
       if (!getDomainName()
           .equals(other.getDomainName())) return false;
       if (!getCertificateId()
@@ -8178,8 +8093,6 @@ public final class ApigatewayService {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + API_GATEWAY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getApiGatewayId().hashCode();
-      hash = (37 * hash) + DOMAIN_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDomainId().hashCode();
       hash = (37 * hash) + DOMAIN_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDomainName().hashCode();
       hash = (37 * hash) + CERTIFICATE_ID_FIELD_NUMBER;
@@ -8319,8 +8232,6 @@ public final class ApigatewayService {
         super.clear();
         apiGatewayId_ = "";
 
-        domainId_ = "";
-
         domainName_ = "";
 
         certificateId_ = "";
@@ -8352,7 +8263,6 @@ public final class ApigatewayService {
       public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest buildPartial() {
         yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest(this);
         result.apiGatewayId_ = apiGatewayId_;
-        result.domainId_ = domainId_;
         result.domainName_ = domainName_;
         result.certificateId_ = certificateId_;
         onBuilt();
@@ -8405,10 +8315,6 @@ public final class ApigatewayService {
         if (other == yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.getDefaultInstance()) return this;
         if (!other.getApiGatewayId().isEmpty()) {
           apiGatewayId_ = other.apiGatewayId_;
-          onChanged();
-        }
-        if (!other.getDomainId().isEmpty()) {
-          domainId_ = other.domainId_;
           onChanged();
         }
         if (!other.getDomainName().isEmpty()) {
@@ -8540,107 +8446,6 @@ public final class ApigatewayService {
   checkByteStringIsUtf8(value);
         
         apiGatewayId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object domainId_ = "";
-      /**
-       * <pre>
-       * ID of the attaching domain.
-       * </pre>
-       *
-       * <code>string domain_id = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return The domainId.
-       */
-      @java.lang.Deprecated public java.lang.String getDomainId() {
-        java.lang.Object ref = domainId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          domainId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the attaching domain.
-       * </pre>
-       *
-       * <code>string domain_id = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return The bytes for domainId.
-       */
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getDomainIdBytes() {
-        java.lang.Object ref = domainId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          domainId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the attaching domain.
-       * </pre>
-       *
-       * <code>string domain_id = 2 [deprecated = true];</code>
-       * @deprecated
-       * @param value The domainId to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setDomainId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        domainId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the attaching domain.
-       * </pre>
-       *
-       * <code>string domain_id = 2 [deprecated = true];</code>
-       * @deprecated
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearDomainId() {
-        
-        domainId_ = getDefaultInstance().getDomainId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the attaching domain.
-       * </pre>
-       *
-       * <code>string domain_id = 2 [deprecated = true];</code>
-       * @deprecated
-       * @param value The bytes for domainId to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setDomainIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        domainId_ = value;
         onChanged();
         return this;
       }
@@ -11517,7 +11322,7 @@ public final class ApigatewayService {
 
     /**
      * <pre>
-     * ID of the attaching domain.
+     * ID of the attached domain.
      * </pre>
      *
      * <code>string domain_id = 2;</code>
@@ -11526,7 +11331,7 @@ public final class ApigatewayService {
     java.lang.String getDomainId();
     /**
      * <pre>
-     * ID of the attaching domain.
+     * ID of the attached domain.
      * </pre>
      *
      * <code>string domain_id = 2;</code>
@@ -11554,6 +11359,26 @@ public final class ApigatewayService {
      */
     com.google.protobuf.ByteString
         getDomainNameBytes();
+
+    /**
+     * <pre>
+     * ID of the certificate for provided domain.
+     * </pre>
+     *
+     * <code>string certificate_id = 4;</code>
+     * @return The certificateId.
+     */
+    java.lang.String getCertificateId();
+    /**
+     * <pre>
+     * ID of the certificate for provided domain.
+     * </pre>
+     *
+     * <code>string certificate_id = 4;</code>
+     * @return The bytes for certificateId.
+     */
+    com.google.protobuf.ByteString
+        getCertificateIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainMetadata}
@@ -11571,6 +11396,7 @@ public final class ApigatewayService {
       apiGatewayId_ = "";
       domainId_ = "";
       domainName_ = "";
+      certificateId_ = "";
     }
 
     @java.lang.Override
@@ -11619,6 +11445,12 @@ public final class ApigatewayService {
               java.lang.String s = input.readStringRequireUtf8();
 
               domainName_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              certificateId_ = s;
               break;
             }
             default: {
@@ -11703,7 +11535,7 @@ public final class ApigatewayService {
     private volatile java.lang.Object domainId_;
     /**
      * <pre>
-     * ID of the attaching domain.
+     * ID of the attached domain.
      * </pre>
      *
      * <code>string domain_id = 2;</code>
@@ -11724,7 +11556,7 @@ public final class ApigatewayService {
     }
     /**
      * <pre>
-     * ID of the attaching domain.
+     * ID of the attached domain.
      * </pre>
      *
      * <code>string domain_id = 2;</code>
@@ -11791,6 +11623,52 @@ public final class ApigatewayService {
       }
     }
 
+    public static final int CERTIFICATE_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object certificateId_;
+    /**
+     * <pre>
+     * ID of the certificate for provided domain.
+     * </pre>
+     *
+     * <code>string certificate_id = 4;</code>
+     * @return The certificateId.
+     */
+    @java.lang.Override
+    public java.lang.String getCertificateId() {
+      java.lang.Object ref = certificateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the certificate for provided domain.
+     * </pre>
+     *
+     * <code>string certificate_id = 4;</code>
+     * @return The bytes for certificateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCertificateIdBytes() {
+      java.lang.Object ref = certificateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11814,6 +11692,9 @@ public final class ApigatewayService {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domainName_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, certificateId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11831,6 +11712,9 @@ public final class ApigatewayService {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domainName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domainName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, certificateId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11853,6 +11737,8 @@ public final class ApigatewayService {
           .equals(other.getDomainId())) return false;
       if (!getDomainName()
           .equals(other.getDomainName())) return false;
+      if (!getCertificateId()
+          .equals(other.getCertificateId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11870,6 +11756,8 @@ public final class ApigatewayService {
       hash = (53 * hash) + getDomainId().hashCode();
       hash = (37 * hash) + DOMAIN_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDomainName().hashCode();
+      hash = (37 * hash) + CERTIFICATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12009,6 +11897,8 @@ public final class ApigatewayService {
 
         domainName_ = "";
 
+        certificateId_ = "";
+
         return this;
       }
 
@@ -12038,6 +11928,7 @@ public final class ApigatewayService {
         result.apiGatewayId_ = apiGatewayId_;
         result.domainId_ = domainId_;
         result.domainName_ = domainName_;
+        result.certificateId_ = certificateId_;
         onBuilt();
         return result;
       }
@@ -12096,6 +11987,10 @@ public final class ApigatewayService {
         }
         if (!other.getDomainName().isEmpty()) {
           domainName_ = other.domainName_;
+          onChanged();
+        }
+        if (!other.getCertificateId().isEmpty()) {
+          certificateId_ = other.certificateId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -12226,7 +12121,7 @@ public final class ApigatewayService {
       private java.lang.Object domainId_ = "";
       /**
        * <pre>
-       * ID of the attaching domain.
+       * ID of the attached domain.
        * </pre>
        *
        * <code>string domain_id = 2;</code>
@@ -12246,7 +12141,7 @@ public final class ApigatewayService {
       }
       /**
        * <pre>
-       * ID of the attaching domain.
+       * ID of the attached domain.
        * </pre>
        *
        * <code>string domain_id = 2;</code>
@@ -12267,7 +12162,7 @@ public final class ApigatewayService {
       }
       /**
        * <pre>
-       * ID of the attaching domain.
+       * ID of the attached domain.
        * </pre>
        *
        * <code>string domain_id = 2;</code>
@@ -12286,7 +12181,7 @@ public final class ApigatewayService {
       }
       /**
        * <pre>
-       * ID of the attaching domain.
+       * ID of the attached domain.
        * </pre>
        *
        * <code>string domain_id = 2;</code>
@@ -12300,7 +12195,7 @@ public final class ApigatewayService {
       }
       /**
        * <pre>
-       * ID of the attaching domain.
+       * ID of the attached domain.
        * </pre>
        *
        * <code>string domain_id = 2;</code>
@@ -12411,6 +12306,102 @@ public final class ApigatewayService {
   checkByteStringIsUtf8(value);
         
         domainName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object certificateId_ = "";
+      /**
+       * <pre>
+       * ID of the certificate for provided domain.
+       * </pre>
+       *
+       * <code>string certificate_id = 4;</code>
+       * @return The certificateId.
+       */
+      public java.lang.String getCertificateId() {
+        java.lang.Object ref = certificateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the certificate for provided domain.
+       * </pre>
+       *
+       * <code>string certificate_id = 4;</code>
+       * @return The bytes for certificateId.
+       */
+      public com.google.protobuf.ByteString
+          getCertificateIdBytes() {
+        java.lang.Object ref = certificateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          certificateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the certificate for provided domain.
+       * </pre>
+       *
+       * <code>string certificate_id = 4;</code>
+       * @param value The certificateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        certificateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the certificate for provided domain.
+       * </pre>
+       *
+       * <code>string certificate_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateId() {
+        
+        certificateId_ = getDefaultInstance().getCertificateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the certificate for provided domain.
+       * </pre>
+       *
+       * <code>string certificate_id = 4;</code>
+       * @param value The bytes for certificateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        certificateId_ = value;
         onChanged();
         return this;
       }
@@ -17311,99 +17302,99 @@ public final class ApigatewayService {
       "vity\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
       "e\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027DeleteApiGa" +
       "tewayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\307" +
-      "1\001\"t\n\020AddDomainRequest\022\034\n\016api_gateway_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\025\n\tdomain_id\030\002 \001(\tB\002\030\001\022\023\n\013d" +
+      "1\001\"]\n\020AddDomainRequest\022\034\n\016api_gateway_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\023\n\013domain_name\030\003 \001(\t\022\026\n\016cer" +
+      "tificate_id\030\004 \001(\t\"L\n\023RemoveDomainRequest" +
+      "\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain" +
+      "_id\030\002 \001(\tB\004\350\3071\001\"2\n\030CreateApiGatewayMetad" +
+      "ata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030UpdateApi" +
+      "GatewayMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"" +
+      "2\n\030DeleteApiGatewayMetadata\022\026\n\016api_gatew" +
+      "ay_id\030\001 \001(\t\"k\n\021AddDomainMetadata\022\026\n\016api_" +
+      "gateway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\022\023\n\013d" +
       "omain_name\030\003 \001(\t\022\026\n\016certificate_id\030\004 \001(\t" +
-      "\"L\n\023RemoveDomainRequest\022\034\n\016api_gateway_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(\tB\004\350\3071\001\"2" +
-      "\n\030CreateApiGatewayMetadata\022\026\n\016api_gatewa" +
-      "y_id\030\001 \001(\t\"2\n\030UpdateApiGatewayMetadata\022\026" +
-      "\n\016api_gateway_id\030\001 \001(\t\"2\n\030DeleteApiGatew" +
-      "ayMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"S\n\021Ad" +
-      "dDomainMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\022" +
-      "\021\n\tdomain_id\030\002 \001(\t\022\023\n\013domain_name\030\003 \001(\t\"" +
-      "A\n\024RemoveDomainMetadata\022\026\n\016api_gateway_i" +
-      "d\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025ListOpera" +
-      "tionsRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\t" +
-      "B\n\212\3101\006<=1000\"h\n\026ListOperationsResponse\0225" +
-      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
-      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"\300" +
-      "\001\n\025GetOpenapiSpecRequest\022\034\n\016api_gateway_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C.yandex." +
-      "cloud.serverless.apigateway.v1.GetOpenap" +
-      "iSpecRequest.Format\"4\n\006Format\022\026\n\022FORMAT_" +
-      "UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026Get" +
-      "OpenapiSpecResponse\022\026\n\016api_gateway_id\030\001 " +
-      "\001(\t\022\024\n\014openapi_spec\030\002 \001(\t2\332\023\n\021ApiGateway" +
-      "Service\022\253\001\n\003Get\022;.yandex.cloud.serverles" +
-      "s.apigateway.v1.GetApiGatewayRequest\0321.y" +
-      "andex.cloud.serverless.apigateway.v1.Api" +
-      "Gateway\"4\202\323\344\223\002.\022,/apigateways/v1/apigate" +
-      "ways/{api_gateway_id}\022\250\001\n\004List\022<.yandex." +
-      "cloud.serverless.apigateway.v1.ListApiGa" +
-      "tewayRequest\032=.yandex.cloud.serverless.a" +
-      "pigateway.v1.ListApiGatewayResponse\"#\202\323\344" +
-      "\223\002\035\022\033/apigateways/v1/apigateways\022\275\001\n\006Cre" +
-      "ate\022>.yandex.cloud.serverless.apigateway" +
-      ".v1.CreateApiGatewayRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"P\202\323\344\223\002 \"\033/apigate" +
-      "ways/v1/apigateways:\001*\262\322*&\n\030CreateApiGat" +
-      "ewayMetadata\022\nApiGateway\022\316\001\n\006Update\022>.ya" +
-      "ndex.cloud.serverless.apigateway.v1.Upda" +
-      "teApiGatewayRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"a\202\323\344\223\00212,/apigateways/v1/" +
-      "apigateways/{api_gateway_id}:\001*\262\322*&\n\030Upd" +
-      "ateApiGatewayMetadata\022\nApiGateway\022\326\001\n\006De" +
-      "lete\022>.yandex.cloud.serverless.apigatewa" +
-      "y.v1.DeleteApiGatewayRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"i\202\323\344\223\002.*,/apigat" +
-      "eways/v1/apigateways/{api_gateway_id}\262\322*" +
-      "1\n\030DeleteApiGatewayMetadata\022\025google.prot" +
-      "obuf.Empty\022\330\001\n\tAddDomain\0227.yandex.cloud." +
-      "serverless.apigateway.v1.AddDomainReques" +
-      "t\032!.yandex.cloud.operation.Operation\"o\202\323" +
-      "\344\223\002;\"6/apigateways/v1/apigateways/{api_g" +
-      "ateway_id}:addDomain:\001*\262\322**\n\021AddDomainMe" +
-      "tadata\022\025google.protobuf.Empty\022\344\001\n\014Remove" +
-      "Domain\022:.yandex.cloud.serverless.apigate" +
-      "way.v1.RemoveDomainRequest\032!.yandex.clou" +
-      "d.operation.Operation\"u\202\323\344\223\002>\"9/apigatew" +
-      "ays/v1/apigateways/{api_gateway_id}:remo" +
-      "veDomain:\001*\262\322*-\n\024RemoveDomainMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\310\001\n\016GetOpenapiSpec\022" +
-      "<.yandex.cloud.serverless.apigateway.v1." +
-      "GetOpenapiSpecRequest\032=.yandex.cloud.ser" +
-      "verless.apigateway.v1.GetOpenapiSpecResp" +
-      "onse\"9\202\323\344\223\0023\0221/apigateways/v1/apigateway" +
-      "s/{api_gateway_id}:spec\022\316\001\n\016ListOperatio" +
-      "ns\022<.yandex.cloud.serverless.apigateway." +
-      "v1.ListOperationsRequest\032=.yandex.cloud." +
-      "serverless.apigateway.v1.ListOperationsR" +
-      "esponse\"?\202\323\344\223\0029\0227/apigateways/v1/apigate" +
-      "ways/{api_gateway_id}/operations\022\273\001\n\022Lis" +
-      "tAccessBindings\022..yandex.cloud.access.Li" +
-      "stAccessBindingsRequest\032/.yandex.cloud.a" +
-      "ccess.ListAccessBindingsResponse\"D\202\323\344\223\002>" +
-      "\022</apigateways/v1/apigateways/{resource_" +
-      "id}:listAccessBindings\022\353\001\n\021SetAccessBind" +
-      "ings\022-.yandex.cloud.access.SetAccessBind" +
-      "ingsRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\203\001\202\323\344\223\002@\";/apigateways/v1/apigate" +
-      "ways/{resource_id}:setAccessBindings:\001*\262" +
-      "\322*9\n access.SetAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\367\001\n\024UpdateAccessBin" +
-      "dings\0220.yandex.cloud.access.UpdateAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\211\001\202\323\344\223\002C2>/apigateways/v1/api" +
-      "gateways/{resource_id}:updateAccessBindi" +
-      "ngs:\001*\262\322*<\n#access.UpdateAccessBindingsM" +
-      "etadata\022\025google.protobuf.EmptyB\201\001\n)yande" +
-      "x.cloud.api.serverless.apigateway.v1ZTgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/serverless/apigateway/v1;apigatew" +
-      "ayb\006proto3"
+      "\"A\n\024RemoveDomainMetadata\022\026\n\016api_gateway_" +
+      "id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025ListOper" +
+      "ationsRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
+      "\tB\n\212\3101\006<=1000\"h\n\026ListOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "\300\001\n\025GetOpenapiSpecRequest\022\034\n\016api_gateway" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C.yandex" +
+      ".cloud.serverless.apigateway.v1.GetOpena" +
+      "piSpecRequest.Format\"4\n\006Format\022\026\n\022FORMAT" +
+      "_UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026Ge" +
+      "tOpenapiSpecResponse\022\026\n\016api_gateway_id\030\001" +
+      " \001(\t\022\024\n\014openapi_spec\030\002 \001(\t2\332\023\n\021ApiGatewa" +
+      "yService\022\253\001\n\003Get\022;.yandex.cloud.serverle" +
+      "ss.apigateway.v1.GetApiGatewayRequest\0321." +
+      "yandex.cloud.serverless.apigateway.v1.Ap" +
+      "iGateway\"4\202\323\344\223\002.\022,/apigateways/v1/apigat" +
+      "eways/{api_gateway_id}\022\250\001\n\004List\022<.yandex" +
+      ".cloud.serverless.apigateway.v1.ListApiG" +
+      "atewayRequest\032=.yandex.cloud.serverless." +
+      "apigateway.v1.ListApiGatewayResponse\"#\202\323" +
+      "\344\223\002\035\022\033/apigateways/v1/apigateways\022\275\001\n\006Cr" +
+      "eate\022>.yandex.cloud.serverless.apigatewa" +
+      "y.v1.CreateApiGatewayRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"P\202\323\344\223\002 \"\033/apigat" +
+      "eways/v1/apigateways:\001*\262\322*&\n\030CreateApiGa" +
+      "tewayMetadata\022\nApiGateway\022\316\001\n\006Update\022>.y" +
+      "andex.cloud.serverless.apigateway.v1.Upd" +
+      "ateApiGatewayRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"a\202\323\344\223\00212,/apigateways/v1" +
+      "/apigateways/{api_gateway_id}:\001*\262\322*&\n\030Up" +
+      "dateApiGatewayMetadata\022\nApiGateway\022\326\001\n\006D" +
+      "elete\022>.yandex.cloud.serverless.apigatew" +
+      "ay.v1.DeleteApiGatewayRequest\032!.yandex.c" +
+      "loud.operation.Operation\"i\202\323\344\223\002.*,/apiga" +
+      "teways/v1/apigateways/{api_gateway_id}\262\322" +
+      "*1\n\030DeleteApiGatewayMetadata\022\025google.pro" +
+      "tobuf.Empty\022\330\001\n\tAddDomain\0227.yandex.cloud" +
+      ".serverless.apigateway.v1.AddDomainReque" +
+      "st\032!.yandex.cloud.operation.Operation\"o\202" +
+      "\323\344\223\002;\"6/apigateways/v1/apigateways/{api_" +
+      "gateway_id}:addDomain:\001*\262\322**\n\021AddDomainM" +
+      "etadata\022\025google.protobuf.Empty\022\344\001\n\014Remov" +
+      "eDomain\022:.yandex.cloud.serverless.apigat" +
+      "eway.v1.RemoveDomainRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"u\202\323\344\223\002>\"9/apigate" +
+      "ways/v1/apigateways/{api_gateway_id}:rem" +
+      "oveDomain:\001*\262\322*-\n\024RemoveDomainMetadata\022\025" +
+      "google.protobuf.Empty\022\310\001\n\016GetOpenapiSpec" +
+      "\022<.yandex.cloud.serverless.apigateway.v1" +
+      ".GetOpenapiSpecRequest\032=.yandex.cloud.se" +
+      "rverless.apigateway.v1.GetOpenapiSpecRes" +
+      "ponse\"9\202\323\344\223\0023\0221/apigateways/v1/apigatewa" +
+      "ys/{api_gateway_id}:spec\022\316\001\n\016ListOperati" +
+      "ons\022<.yandex.cloud.serverless.apigateway" +
+      ".v1.ListOperationsRequest\032=.yandex.cloud" +
+      ".serverless.apigateway.v1.ListOperations" +
+      "Response\"?\202\323\344\223\0029\0227/apigateways/v1/apigat" +
+      "eways/{api_gateway_id}/operations\022\273\001\n\022Li" +
+      "stAccessBindings\022..yandex.cloud.access.L" +
+      "istAccessBindingsRequest\032/.yandex.cloud." +
+      "access.ListAccessBindingsResponse\"D\202\323\344\223\002" +
+      ">\022</apigateways/v1/apigateways/{resource" +
+      "_id}:listAccessBindings\022\353\001\n\021SetAccessBin" +
+      "dings\022-.yandex.cloud.access.SetAccessBin" +
+      "dingsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\203\001\202\323\344\223\002@\";/apigateways/v1/apigat" +
+      "eways/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*9\n access.SetAccessBindingsMetadata\022\025" +
+      "google.protobuf.Empty\022\367\001\n\024UpdateAccessBi" +
+      "ndings\0220.yandex.cloud.access.UpdateAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\211\001\202\323\344\223\002C2>/apigateways/v1/ap" +
+      "igateways/{resource_id}:updateAccessBind" +
+      "ings:\001*\262\322*<\n#access.UpdateAccessBindings" +
+      "Metadata\022\025google.protobuf.EmptyB\201\001\n)yand" +
+      "ex.cloud.api.serverless.apigateway.v1ZTg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/serverless/apigateway/v1;apigate" +
+      "wayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17469,7 +17460,7 @@ public final class ApigatewayService {
     internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor,
-        new java.lang.String[] { "ApiGatewayId", "DomainId", "DomainName", "CertificateId", });
+        new java.lang.String[] { "ApiGatewayId", "DomainName", "CertificateId", });
     internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_fieldAccessorTable = new
@@ -17499,7 +17490,7 @@ public final class ApigatewayService {
     internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor,
-        new java.lang.String[] { "ApiGatewayId", "DomainId", "DomainName", });
+        new java.lang.String[] { "ApiGatewayId", "DomainId", "DomainName", "CertificateId", });
     internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_fieldAccessorTable = new
