@@ -7804,7 +7804,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Image version for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -7814,7 +7814,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Image version for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -7952,7 +7952,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Image version for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -7974,7 +7974,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Image version for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -8369,7 +8369,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Image version for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -8390,7 +8390,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Image version for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -8412,7 +8412,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Image version for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -8432,7 +8432,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Image version for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -8447,7 +8447,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Image version for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>

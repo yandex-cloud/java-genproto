@@ -444,7 +444,7 @@ public final class ApiGatewayServiceGrpc {
     /**
      * <pre>
      * Returns the specified API gateway. Note that only API gateway basic attributes are returned.
-     * To get associated openapi specification, make a [GetOpenapiSpec] request.
+     * To get associated openapi specification, make a [GetOpenapiSpec](getOpenapiSpec) request.
      * To get the list of all available API gateways, make a [List] request.
      * </pre>
      */
@@ -673,7 +673,7 @@ public final class ApiGatewayServiceGrpc {
     /**
      * <pre>
      * Returns the specified API gateway. Note that only API gateway basic attributes are returned.
-     * To get associated openapi specification, make a [GetOpenapiSpec] request.
+     * To get associated openapi specification, make a [GetOpenapiSpec](getOpenapiSpec) request.
      * To get the list of all available API gateways, make a [List] request.
      * </pre>
      */
@@ -825,7 +825,7 @@ public final class ApiGatewayServiceGrpc {
     /**
      * <pre>
      * Returns the specified API gateway. Note that only API gateway basic attributes are returned.
-     * To get associated openapi specification, make a [GetOpenapiSpec] request.
+     * To get associated openapi specification, make a [GetOpenapiSpec](getOpenapiSpec) request.
      * To get the list of all available API gateways, make a [List] request.
      * </pre>
      */
@@ -965,7 +965,7 @@ public final class ApiGatewayServiceGrpc {
     /**
      * <pre>
      * Returns the specified API gateway. Note that only API gateway basic attributes are returned.
-     * To get associated openapi specification, make a [GetOpenapiSpec] request.
+     * To get associated openapi specification, make a [GetOpenapiSpec](getOpenapiSpec) request.
      * To get the list of all available API gateways, make a [List] request.
      * </pre>
      */

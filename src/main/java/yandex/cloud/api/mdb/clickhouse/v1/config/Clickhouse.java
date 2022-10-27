@@ -1059,16 +1059,31 @@ public final class Clickhouse {
     com.google.protobuf.Int64ValueOrBuilder getBackgroundSchedulePoolSizeOrBuilder();
 
     /**
+     * <pre>
+     * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      * @return Whether the backgroundFetchesPoolSize field is set.
      */
     boolean hasBackgroundFetchesPoolSize();
     /**
+     * <pre>
+     * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      * @return The backgroundFetchesPoolSize.
      */
     com.google.protobuf.Int64Value getBackgroundFetchesPoolSize();
     /**
+     * <pre>
+     * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getBackgroundFetchesPoolSizeOrBuilder();
@@ -1119,31 +1134,61 @@ public final class Clickhouse {
     com.google.protobuf.Int64ValueOrBuilder getBackgroundBufferFlushSchedulePoolSizeOrBuilder();
 
     /**
+     * <pre>
+     * The default database.
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
      * @return Whether the defaultDatabase field is set.
      */
     boolean hasDefaultDatabase();
     /**
+     * <pre>
+     * The default database.
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
      * @return The defaultDatabase.
      */
     com.google.protobuf.StringValue getDefaultDatabase();
     /**
+     * <pre>
+     * The default database.
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
      */
     com.google.protobuf.StringValueOrBuilder getDefaultDatabaseOrBuilder();
 
     /**
+     * <pre>
+     * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
      * @return Whether the totalMemoryProfilerStep field is set.
      */
     boolean hasTotalMemoryProfilerStep();
     /**
+     * <pre>
+     * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
      * @return The totalMemoryProfilerStep.
      */
     com.google.protobuf.Int64Value getTotalMemoryProfilerStep();
     /**
+     * <pre>
+     * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getTotalMemoryProfilerStepOrBuilder();
@@ -2197,46 +2242,91 @@ public final class Clickhouse {
       com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMaxSpaceInPoolOrBuilder();
 
       /**
+       * <pre>
+       * Minimum number of bytes in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
        * @return Whether the minBytesForWidePart field is set.
        */
       boolean hasMinBytesForWidePart();
       /**
+       * <pre>
+       * Minimum number of bytes in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
        * @return The minBytesForWidePart.
        */
       com.google.protobuf.Int64Value getMinBytesForWidePart();
       /**
+       * <pre>
+       * Minimum number of bytes in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMinBytesForWidePartOrBuilder();
 
       /**
+       * <pre>
+       * Minimum number of rows in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
        * @return Whether the minRowsForWidePart field is set.
        */
       boolean hasMinRowsForWidePart();
       /**
+       * <pre>
+       * Minimum number of rows in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
        * @return The minRowsForWidePart.
        */
       com.google.protobuf.Int64Value getMinRowsForWidePart();
       /**
+       * <pre>
+       * Minimum number of rows in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMinRowsForWidePartOrBuilder();
 
       /**
+       * <pre>
+       * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
        * @return Whether the ttlOnlyDropParts field is set.
        */
       boolean hasTtlOnlyDropParts();
       /**
+       * <pre>
+       * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
        * @return The ttlOnlyDropParts.
        */
       com.google.protobuf.BoolValue getTtlOnlyDropParts();
       /**
+       * <pre>
+       * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
        */
       com.google.protobuf.BoolValueOrBuilder getTtlOnlyDropPartsOrBuilder();
@@ -2872,6 +2962,11 @@ public final class Clickhouse {
       public static final int MIN_BYTES_FOR_WIDE_PART_FIELD_NUMBER = 11;
       private com.google.protobuf.Int64Value minBytesForWidePart_;
       /**
+       * <pre>
+       * Minimum number of bytes in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
        * @return Whether the minBytesForWidePart field is set.
        */
@@ -2880,6 +2975,11 @@ public final class Clickhouse {
         return minBytesForWidePart_ != null;
       }
       /**
+       * <pre>
+       * Minimum number of bytes in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
        * @return The minBytesForWidePart.
        */
@@ -2888,6 +2988,11 @@ public final class Clickhouse {
         return minBytesForWidePart_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minBytesForWidePart_;
       }
       /**
+       * <pre>
+       * Minimum number of bytes in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
        */
       @java.lang.Override
@@ -2898,6 +3003,11 @@ public final class Clickhouse {
       public static final int MIN_ROWS_FOR_WIDE_PART_FIELD_NUMBER = 12;
       private com.google.protobuf.Int64Value minRowsForWidePart_;
       /**
+       * <pre>
+       * Minimum number of rows in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
        * @return Whether the minRowsForWidePart field is set.
        */
@@ -2906,6 +3016,11 @@ public final class Clickhouse {
         return minRowsForWidePart_ != null;
       }
       /**
+       * <pre>
+       * Minimum number of rows in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
        * @return The minRowsForWidePart.
        */
@@ -2914,6 +3029,11 @@ public final class Clickhouse {
         return minRowsForWidePart_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minRowsForWidePart_;
       }
       /**
+       * <pre>
+       * Minimum number of rows in a data part that can be stored in **Wide** format.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
        */
       @java.lang.Override
@@ -2924,6 +3044,11 @@ public final class Clickhouse {
       public static final int TTL_ONLY_DROP_PARTS_FIELD_NUMBER = 13;
       private com.google.protobuf.BoolValue ttlOnlyDropParts_;
       /**
+       * <pre>
+       * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
        * @return Whether the ttlOnlyDropParts field is set.
        */
@@ -2932,6 +3057,11 @@ public final class Clickhouse {
         return ttlOnlyDropParts_ != null;
       }
       /**
+       * <pre>
+       * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
        * @return The ttlOnlyDropParts.
        */
@@ -2940,6 +3070,11 @@ public final class Clickhouse {
         return ttlOnlyDropParts_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ttlOnlyDropParts_;
       }
       /**
+       * <pre>
+       * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
        */
       @java.lang.Override
@@ -5146,6 +5281,11 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minBytesForWidePartBuilder_;
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          * @return Whether the minBytesForWidePart field is set.
          */
@@ -5153,6 +5293,11 @@ public final class Clickhouse {
           return minBytesForWidePartBuilder_ != null || minBytesForWidePart_ != null;
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          * @return The minBytesForWidePart.
          */
@@ -5164,6 +5309,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         public Builder setMinBytesForWidePart(com.google.protobuf.Int64Value value) {
@@ -5180,6 +5330,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         public Builder setMinBytesForWidePart(
@@ -5194,6 +5349,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         public Builder mergeMinBytesForWidePart(com.google.protobuf.Int64Value value) {
@@ -5212,6 +5372,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         public Builder clearMinBytesForWidePart() {
@@ -5226,6 +5391,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         public com.google.protobuf.Int64Value.Builder getMinBytesForWidePartBuilder() {
@@ -5234,6 +5404,11 @@ public final class Clickhouse {
           return getMinBytesForWidePartFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMinBytesForWidePartOrBuilder() {
@@ -5245,6 +5420,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Minimum number of bytes in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_bytes_for_wide_part = 11;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -5265,6 +5445,11 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minRowsForWidePartBuilder_;
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          * @return Whether the minRowsForWidePart field is set.
          */
@@ -5272,6 +5457,11 @@ public final class Clickhouse {
           return minRowsForWidePartBuilder_ != null || minRowsForWidePart_ != null;
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          * @return The minRowsForWidePart.
          */
@@ -5283,6 +5473,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         public Builder setMinRowsForWidePart(com.google.protobuf.Int64Value value) {
@@ -5299,6 +5494,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         public Builder setMinRowsForWidePart(
@@ -5313,6 +5513,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         public Builder mergeMinRowsForWidePart(com.google.protobuf.Int64Value value) {
@@ -5331,6 +5536,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         public Builder clearMinRowsForWidePart() {
@@ -5345,6 +5555,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         public com.google.protobuf.Int64Value.Builder getMinRowsForWidePartBuilder() {
@@ -5353,6 +5568,11 @@ public final class Clickhouse {
           return getMinRowsForWidePartFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMinRowsForWidePartOrBuilder() {
@@ -5364,6 +5584,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Minimum number of rows in a data part that can be stored in **Wide** format.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/mergetree/#min_bytes_for_wide_part).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value min_rows_for_wide_part = 12;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -5384,6 +5609,11 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> ttlOnlyDropPartsBuilder_;
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          * @return Whether the ttlOnlyDropParts field is set.
          */
@@ -5391,6 +5621,11 @@ public final class Clickhouse {
           return ttlOnlyDropPartsBuilder_ != null || ttlOnlyDropParts_ != null;
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          * @return The ttlOnlyDropParts.
          */
@@ -5402,6 +5637,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         public Builder setTtlOnlyDropParts(com.google.protobuf.BoolValue value) {
@@ -5418,6 +5658,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         public Builder setTtlOnlyDropParts(
@@ -5432,6 +5677,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         public Builder mergeTtlOnlyDropParts(com.google.protobuf.BoolValue value) {
@@ -5450,6 +5700,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         public Builder clearTtlOnlyDropParts() {
@@ -5464,6 +5719,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         public com.google.protobuf.BoolValue.Builder getTtlOnlyDropPartsBuilder() {
@@ -5472,6 +5732,11 @@ public final class Clickhouse {
           return getTtlOnlyDropPartsFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         public com.google.protobuf.BoolValueOrBuilder getTtlOnlyDropPartsOrBuilder() {
@@ -5483,6 +5748,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Enables or disables complete dropping of data parts where all rows are expired in MergeTree tables.
+         * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#ttl_only_drop_parts).
+         * </pre>
+         *
          * <code>.google.protobuf.BoolValue ttl_only_drop_parts = 13;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -7648,11 +7918,19 @@ public final class Clickhouse {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+       * </pre>
+       *
        * <code>string username = 1;</code>
        * @return The username.
        */
       java.lang.String getUsername();
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+       * </pre>
+       *
        * <code>string username = 1;</code>
        * @return The bytes for username.
        */
@@ -7660,11 +7938,19 @@ public final class Clickhouse {
           getUsernameBytes();
 
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+       * </pre>
+       *
        * <code>string password = 2;</code>
        * @return The password.
        */
       java.lang.String getPassword();
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+       * </pre>
+       *
        * <code>string password = 2;</code>
        * @return The bytes for password.
        */
@@ -7672,11 +7958,19 @@ public final class Clickhouse {
           getPasswordBytes();
 
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+       * </pre>
+       *
        * <code>string vhost = 3;</code>
        * @return The vhost.
        */
       java.lang.String getVhost();
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+       * </pre>
+       *
        * <code>string vhost = 3;</code>
        * @return The bytes for vhost.
        */
@@ -7784,6 +8078,10 @@ public final class Clickhouse {
       public static final int USERNAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object username_;
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+       * </pre>
+       *
        * <code>string username = 1;</code>
        * @return The username.
        */
@@ -7801,6 +8099,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+       * </pre>
+       *
        * <code>string username = 1;</code>
        * @return The bytes for username.
        */
@@ -7822,6 +8124,10 @@ public final class Clickhouse {
       public static final int PASSWORD_FIELD_NUMBER = 2;
       private volatile java.lang.Object password_;
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+       * </pre>
+       *
        * <code>string password = 2;</code>
        * @return The password.
        */
@@ -7839,6 +8145,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+       * </pre>
+       *
        * <code>string password = 2;</code>
        * @return The bytes for password.
        */
@@ -7860,6 +8170,10 @@ public final class Clickhouse {
       public static final int VHOST_FIELD_NUMBER = 3;
       private volatile java.lang.Object vhost_;
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+       * </pre>
+       *
        * <code>string vhost = 3;</code>
        * @return The vhost.
        */
@@ -7877,6 +8191,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+       * </pre>
+       *
        * <code>string vhost = 3;</code>
        * @return The bytes for vhost.
        */
@@ -8233,6 +8551,10 @@ public final class Clickhouse {
 
         private java.lang.Object username_ = "";
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+         * </pre>
+         *
          * <code>string username = 1;</code>
          * @return The username.
          */
@@ -8249,6 +8571,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+         * </pre>
+         *
          * <code>string username = 1;</code>
          * @return The bytes for username.
          */
@@ -8266,6 +8592,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+         * </pre>
+         *
          * <code>string username = 1;</code>
          * @param value The username to set.
          * @return This builder for chaining.
@@ -8281,6 +8611,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+         * </pre>
+         *
          * <code>string username = 1;</code>
          * @return This builder for chaining.
          */
@@ -8291,6 +8625,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) username
+         * </pre>
+         *
          * <code>string username = 1;</code>
          * @param value The bytes for username to set.
          * @return This builder for chaining.
@@ -8309,6 +8647,10 @@ public final class Clickhouse {
 
         private java.lang.Object password_ = "";
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+         * </pre>
+         *
          * <code>string password = 2;</code>
          * @return The password.
          */
@@ -8325,6 +8667,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+         * </pre>
+         *
          * <code>string password = 2;</code>
          * @return The bytes for password.
          */
@@ -8342,6 +8688,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+         * </pre>
+         *
          * <code>string password = 2;</code>
          * @param value The password to set.
          * @return This builder for chaining.
@@ -8357,6 +8707,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+         * </pre>
+         *
          * <code>string password = 2;</code>
          * @return This builder for chaining.
          */
@@ -8367,6 +8721,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) password
+         * </pre>
+         *
          * <code>string password = 2;</code>
          * @param value The bytes for password to set.
          * @return This builder for chaining.
@@ -8385,6 +8743,10 @@ public final class Clickhouse {
 
         private java.lang.Object vhost_ = "";
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+         * </pre>
+         *
          * <code>string vhost = 3;</code>
          * @return The vhost.
          */
@@ -8401,6 +8763,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+         * </pre>
+         *
          * <code>string vhost = 3;</code>
          * @return The bytes for vhost.
          */
@@ -8418,6 +8784,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+         * </pre>
+         *
          * <code>string vhost = 3;</code>
          * @param value The vhost to set.
          * @return This builder for chaining.
@@ -8433,6 +8803,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+         * </pre>
+         *
          * <code>string vhost = 3;</code>
          * @return This builder for chaining.
          */
@@ -8443,6 +8817,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * [RabbitMQ](https://clickhouse.com/docs/en/engines/table-engines/integrations/rabbitmq/) virtual host
+         * </pre>
+         *
          * <code>string vhost = 3;</code>
          * @param value The bytes for vhost to set.
          * @return This builder for chaining.
@@ -8517,7 +8895,7 @@ public final class Clickhouse {
 
       /**
        * <pre>
-       * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+       * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -8526,7 +8904,7 @@ public final class Clickhouse {
       int getMethodValue();
       /**
        * <pre>
-       * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+       * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -8785,7 +9163,7 @@ public final class Clickhouse {
       private int method_;
       /**
        * <pre>
-       * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+       * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -8796,7 +9174,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+       * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -9179,7 +9557,7 @@ public final class Clickhouse {
         private int method_ = 0;
         /**
          * <pre>
-         * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+         * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -9190,7 +9568,7 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+         * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -9205,7 +9583,7 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+         * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -9219,7 +9597,7 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+         * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -9237,7 +9615,7 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Compression method to use for the specified combination of `min_part_size` and `min_part_size_ratio`.
+         * Compression method to use for the specified combination of [min_part_size] and [min_part_size_ratio].
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression.Method method = 1;</code>
@@ -32646,6 +33024,11 @@ public final class Clickhouse {
     public static final int BACKGROUND_FETCHES_POOL_SIZE_FIELD_NUMBER = 38;
     private com.google.protobuf.Int64Value backgroundFetchesPoolSize_;
     /**
+     * <pre>
+     * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      * @return Whether the backgroundFetchesPoolSize field is set.
      */
@@ -32654,6 +33037,11 @@ public final class Clickhouse {
       return backgroundFetchesPoolSize_ != null;
     }
     /**
+     * <pre>
+     * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      * @return The backgroundFetchesPoolSize.
      */
@@ -32662,6 +33050,11 @@ public final class Clickhouse {
       return backgroundFetchesPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundFetchesPoolSize_;
     }
     /**
+     * <pre>
+     * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     @java.lang.Override
@@ -32750,6 +33143,11 @@ public final class Clickhouse {
     public static final int DEFAULT_DATABASE_FIELD_NUMBER = 43;
     private com.google.protobuf.StringValue defaultDatabase_;
     /**
+     * <pre>
+     * The default database.
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
      * @return Whether the defaultDatabase field is set.
      */
@@ -32758,6 +33156,11 @@ public final class Clickhouse {
       return defaultDatabase_ != null;
     }
     /**
+     * <pre>
+     * The default database.
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
      * @return The defaultDatabase.
      */
@@ -32766,6 +33169,11 @@ public final class Clickhouse {
       return defaultDatabase_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : defaultDatabase_;
     }
     /**
+     * <pre>
+     * The default database.
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
      */
     @java.lang.Override
@@ -32776,6 +33184,11 @@ public final class Clickhouse {
     public static final int TOTAL_MEMORY_PROFILER_STEP_FIELD_NUMBER = 44;
     private com.google.protobuf.Int64Value totalMemoryProfilerStep_;
     /**
+     * <pre>
+     * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
      * @return Whether the totalMemoryProfilerStep field is set.
      */
@@ -32784,6 +33197,11 @@ public final class Clickhouse {
       return totalMemoryProfilerStep_ != null;
     }
     /**
+     * <pre>
+     * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
      * @return The totalMemoryProfilerStep.
      */
@@ -32792,6 +33210,11 @@ public final class Clickhouse {
       return totalMemoryProfilerStep_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalMemoryProfilerStep_;
     }
     /**
+     * <pre>
+     * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
      */
     @java.lang.Override
@@ -40677,6 +41100,11 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundFetchesPoolSizeBuilder_;
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        * @return Whether the backgroundFetchesPoolSize field is set.
        */
@@ -40684,6 +41112,11 @@ public final class Clickhouse {
         return backgroundFetchesPoolSizeBuilder_ != null || backgroundFetchesPoolSize_ != null;
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        * @return The backgroundFetchesPoolSize.
        */
@@ -40695,6 +41128,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder setBackgroundFetchesPoolSize(com.google.protobuf.Int64Value value) {
@@ -40711,6 +41149,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder setBackgroundFetchesPoolSize(
@@ -40725,6 +41168,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder mergeBackgroundFetchesPoolSize(com.google.protobuf.Int64Value value) {
@@ -40743,6 +41191,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder clearBackgroundFetchesPoolSize() {
@@ -40757,6 +41210,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getBackgroundFetchesPoolSizeBuilder() {
@@ -40765,6 +41223,11 @@ public final class Clickhouse {
         return getBackgroundFetchesPoolSizeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getBackgroundFetchesPoolSizeOrBuilder() {
@@ -40776,6 +41239,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Sets the number of threads performing background fetches for tables with **ReplicatedMergeTree** engines. Default value: 8.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#background_fetches_pool_size).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value background_fetches_pool_size = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -41153,6 +41621,11 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> defaultDatabaseBuilder_;
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        * @return Whether the defaultDatabase field is set.
        */
@@ -41160,6 +41633,11 @@ public final class Clickhouse {
         return defaultDatabaseBuilder_ != null || defaultDatabase_ != null;
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        * @return The defaultDatabase.
        */
@@ -41171,6 +41649,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       public Builder setDefaultDatabase(com.google.protobuf.StringValue value) {
@@ -41187,6 +41670,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       public Builder setDefaultDatabase(
@@ -41201,6 +41689,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       public Builder mergeDefaultDatabase(com.google.protobuf.StringValue value) {
@@ -41219,6 +41712,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       public Builder clearDefaultDatabase() {
@@ -41233,6 +41731,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       public com.google.protobuf.StringValue.Builder getDefaultDatabaseBuilder() {
@@ -41241,6 +41744,11 @@ public final class Clickhouse {
         return getDefaultDatabaseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       public com.google.protobuf.StringValueOrBuilder getDefaultDatabaseOrBuilder() {
@@ -41252,6 +41760,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * The default database.
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * </pre>
+       *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -41272,6 +41785,11 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalMemoryProfilerStepBuilder_;
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        * @return Whether the totalMemoryProfilerStep field is set.
        */
@@ -41279,6 +41797,11 @@ public final class Clickhouse {
         return totalMemoryProfilerStepBuilder_ != null || totalMemoryProfilerStep_ != null;
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        * @return The totalMemoryProfilerStep.
        */
@@ -41290,6 +41813,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       public Builder setTotalMemoryProfilerStep(com.google.protobuf.Int64Value value) {
@@ -41306,6 +41834,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       public Builder setTotalMemoryProfilerStep(
@@ -41320,6 +41853,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       public Builder mergeTotalMemoryProfilerStep(com.google.protobuf.Int64Value value) {
@@ -41338,6 +41876,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       public Builder clearTotalMemoryProfilerStep() {
@@ -41352,6 +41895,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       public com.google.protobuf.Int64Value.Builder getTotalMemoryProfilerStepBuilder() {
@@ -41360,6 +41908,11 @@ public final class Clickhouse {
         return getTotalMemoryProfilerStepFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getTotalMemoryProfilerStepOrBuilder() {
@@ -41371,6 +41924,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Sets the memory size (in bytes) for a stack trace at every peak allocation step. Default value: **4194304**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings/#total-memory-profiler-step).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value total_memory_profiler_step = 44;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

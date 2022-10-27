@@ -128,7 +128,7 @@ public final class GroupOuterClass {
   /**
    * <pre>
    * A Group resource.
-   * For more information, see [Groups](/docs/organization/groups).
+   * For more information, see [Groups](/docs/organization/manage-groups).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.Group}
@@ -673,7 +673,7 @@ public final class GroupOuterClass {
     /**
      * <pre>
      * A Group resource.
-     * For more information, see [Groups](/docs/organization/groups).
+     * For more information, see [Groups](/docs/organization/manage-groups).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.Group}

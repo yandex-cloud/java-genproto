@@ -5375,6 +5375,33 @@ public final class ClusterOuterClass {
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
 
+    /**
+     * <pre>
+     * Cloud Logging for master components.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+     * @return Whether the masterLogging field is set.
+     */
+    boolean hasMasterLogging();
+    /**
+     * <pre>
+     * Cloud Logging for master components.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+     * @return The masterLogging.
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging getMasterLogging();
+    /**
+     * <pre>
+     * Cloud Logging for master components.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder getMasterLoggingOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Master.MasterTypeCase getMasterTypeCase();
   }
   /**
@@ -5518,6 +5545,19 @@ public final class ClusterOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder subBuilder = null;
+              if (masterLogging_ != null) {
+                subBuilder = masterLogging_.toBuilder();
+              }
+              masterLogging_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(masterLogging_);
+                masterLogging_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5934,6 +5974,44 @@ public final class ClusterOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int MASTER_LOGGING_FIELD_NUMBER = 9;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging masterLogging_;
+    /**
+     * <pre>
+     * Cloud Logging for master components.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+     * @return Whether the masterLogging field is set.
+     */
+    @java.lang.Override
+    public boolean hasMasterLogging() {
+      return masterLogging_ != null;
+    }
+    /**
+     * <pre>
+     * Cloud Logging for master components.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+     * @return The masterLogging.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging getMasterLogging() {
+      return masterLogging_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.getDefaultInstance() : masterLogging_;
+    }
+    /**
+     * <pre>
+     * Cloud Logging for master components.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder getMasterLoggingOrBuilder() {
+      return getMasterLogging();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5971,6 +6049,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, securityGroupIds_.getRaw(i));
+      }
+      if (masterLogging_ != null) {
+        output.writeMessage(9, getMasterLogging());
       }
       unknownFields.writeTo(output);
     }
@@ -6016,6 +6097,10 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (masterLogging_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getMasterLogging());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6055,6 +6140,11 @@ public final class ClusterOuterClass {
       }
       if (!getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList())) return false;
+      if (hasMasterLogging() != other.hasMasterLogging()) return false;
+      if (hasMasterLogging()) {
+        if (!getMasterLogging()
+            .equals(other.getMasterLogging())) return false;
+      }
       if (!getMasterTypeCase().equals(other.getMasterTypeCase())) return false;
       switch (masterTypeCase_) {
         case 1:
@@ -6100,6 +6190,10 @@ public final class ClusterOuterClass {
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      if (hasMasterLogging()) {
+        hash = (37 * hash) + MASTER_LOGGING_FIELD_NUMBER;
+        hash = (53 * hash) + getMasterLogging().hashCode();
       }
       switch (masterTypeCase_) {
         case 1:
@@ -6274,6 +6368,12 @@ public final class ClusterOuterClass {
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (masterLoggingBuilder_ == null) {
+          masterLogging_ = null;
+        } else {
+          masterLogging_ = null;
+          masterLoggingBuilder_ = null;
+        }
         masterTypeCase_ = 0;
         masterType_ = null;
         return this;
@@ -6343,6 +6443,11 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        if (masterLoggingBuilder_ == null) {
+          result.masterLogging_ = masterLogging_;
+        } else {
+          result.masterLogging_ = masterLoggingBuilder_.build();
+        }
         result.masterTypeCase_ = masterTypeCase_;
         onBuilt();
         return result;
@@ -6417,6 +6522,9 @@ public final class ClusterOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.hasMasterLogging()) {
+          mergeMasterLogging(other.getMasterLogging());
         }
         switch (other.getMasterTypeCase()) {
           case ZONAL_MASTER: {
@@ -7699,6 +7807,161 @@ public final class ClusterOuterClass {
         securityGroupIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging masterLogging_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder> masterLoggingBuilder_;
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       * @return Whether the masterLogging field is set.
+       */
+      public boolean hasMasterLogging() {
+        return masterLoggingBuilder_ != null || masterLogging_ != null;
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       * @return The masterLogging.
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging getMasterLogging() {
+        if (masterLoggingBuilder_ == null) {
+          return masterLogging_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.getDefaultInstance() : masterLogging_;
+        } else {
+          return masterLoggingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      public Builder setMasterLogging(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging value) {
+        if (masterLoggingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          masterLogging_ = value;
+          onChanged();
+        } else {
+          masterLoggingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      public Builder setMasterLogging(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder builderForValue) {
+        if (masterLoggingBuilder_ == null) {
+          masterLogging_ = builderForValue.build();
+          onChanged();
+        } else {
+          masterLoggingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      public Builder mergeMasterLogging(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging value) {
+        if (masterLoggingBuilder_ == null) {
+          if (masterLogging_ != null) {
+            masterLogging_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.newBuilder(masterLogging_).mergeFrom(value).buildPartial();
+          } else {
+            masterLogging_ = value;
+          }
+          onChanged();
+        } else {
+          masterLoggingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      public Builder clearMasterLogging() {
+        if (masterLoggingBuilder_ == null) {
+          masterLogging_ = null;
+          onChanged();
+        } else {
+          masterLogging_ = null;
+          masterLoggingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder getMasterLoggingBuilder() {
+        
+        onChanged();
+        return getMasterLoggingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder getMasterLoggingOrBuilder() {
+        if (masterLoggingBuilder_ != null) {
+          return masterLoggingBuilder_.getMessageOrBuilder();
+        } else {
+          return masterLogging_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.getDefaultInstance() : masterLogging_;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud Logging for master components.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder> 
+          getMasterLoggingFieldBuilder() {
+        if (masterLoggingBuilder_ == null) {
+          masterLoggingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder>(
+                  getMasterLogging(),
+                  getParentForChildren(),
+                  isClean());
+          masterLogging_ = null;
+        }
+        return masterLoggingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13548,6 +13811,1349 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface MasterLoggingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.MasterLogging)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for master components.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * ID of the log group where logs of master components should be stored.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the logGroupId field is set.
+     */
+    boolean hasLogGroupId();
+    /**
+     * <pre>
+     * ID of the log group where logs of master components should be stored.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The logGroupId.
+     */
+    java.lang.String getLogGroupId();
+    /**
+     * <pre>
+     * ID of the log group where logs of master components should be stored.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for logGroupId.
+     */
+    com.google.protobuf.ByteString
+        getLogGroupIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder where logs should be stored (in default group).
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the folderId field is set.
+     */
+    boolean hasFolderId();
+    /**
+     * <pre>
+     * ID of the folder where logs should be stored (in default group).
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder where logs should be stored (in default group).
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for cluster-autoscaler.
+     * </pre>
+     *
+     * <code>bool cluster_autoscaler_enabled = 5;</code>
+     * @return The clusterAutoscalerEnabled.
+     */
+    boolean getClusterAutoscalerEnabled();
+
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for kube-apiserver.
+     * </pre>
+     *
+     * <code>bool kube_apiserver_enabled = 6;</code>
+     * @return The kubeApiserverEnabled.
+     */
+    boolean getKubeApiserverEnabled();
+
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for events.
+     * </pre>
+     *
+     * <code>bool events_enabled = 7;</code>
+     * @return The eventsEnabled.
+     */
+    boolean getEventsEnabled();
+
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.DestinationCase getDestinationCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.MasterLogging}
+   */
+  public static final class MasterLogging extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.MasterLogging)
+      MasterLoggingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MasterLogging.newBuilder() to construct.
+    private MasterLogging(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MasterLogging() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MasterLogging();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MasterLogging(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              destinationCase_ = 2;
+              destination_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              destinationCase_ = 3;
+              destination_ = s;
+              break;
+            }
+            case 40: {
+
+              clusterAutoscalerEnabled_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              kubeApiserverEnabled_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              eventsEnabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_MasterLogging_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder.class);
+    }
+
+    private int destinationCase_ = 0;
+    private java.lang.Object destination_;
+    public enum DestinationCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LOG_GROUP_ID(2),
+      FOLDER_ID(3),
+      DESTINATION_NOT_SET(0);
+      private final int value;
+      private DestinationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DestinationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DestinationCase forNumber(int value) {
+        switch (value) {
+          case 2: return LOG_GROUP_ID;
+          case 3: return FOLDER_ID;
+          case 0: return DESTINATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DestinationCase
+    getDestinationCase() {
+      return DestinationCase.forNumber(
+          destinationCase_);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for master components.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int LOG_GROUP_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * ID of the log group where logs of master components should be stored.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the logGroupId field is set.
+     */
+    public boolean hasLogGroupId() {
+      return destinationCase_ == 2;
+    }
+    /**
+     * <pre>
+     * ID of the log group where logs of master components should be stored.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The logGroupId.
+     */
+    public java.lang.String getLogGroupId() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 2) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (destinationCase_ == 2) {
+          destination_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the log group where logs of master components should be stored.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for logGroupId.
+     */
+    public com.google.protobuf.ByteString
+        getLogGroupIdBytes() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 2) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (destinationCase_ == 2) {
+          destination_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * ID of the folder where logs should be stored (in default group).
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the folderId field is set.
+     */
+    public boolean hasFolderId() {
+      return destinationCase_ == 3;
+    }
+    /**
+     * <pre>
+     * ID of the folder where logs should be stored (in default group).
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The folderId.
+     */
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 3) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (destinationCase_ == 3) {
+          destination_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder where logs should be stored (in default group).
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for folderId.
+     */
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 3) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (destinationCase_ == 3) {
+          destination_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLUSTER_AUTOSCALER_ENABLED_FIELD_NUMBER = 5;
+    private boolean clusterAutoscalerEnabled_;
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for cluster-autoscaler.
+     * </pre>
+     *
+     * <code>bool cluster_autoscaler_enabled = 5;</code>
+     * @return The clusterAutoscalerEnabled.
+     */
+    @java.lang.Override
+    public boolean getClusterAutoscalerEnabled() {
+      return clusterAutoscalerEnabled_;
+    }
+
+    public static final int KUBE_APISERVER_ENABLED_FIELD_NUMBER = 6;
+    private boolean kubeApiserverEnabled_;
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for kube-apiserver.
+     * </pre>
+     *
+     * <code>bool kube_apiserver_enabled = 6;</code>
+     * @return The kubeApiserverEnabled.
+     */
+    @java.lang.Override
+    public boolean getKubeApiserverEnabled() {
+      return kubeApiserverEnabled_;
+    }
+
+    public static final int EVENTS_ENABLED_FIELD_NUMBER = 7;
+    private boolean eventsEnabled_;
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for events.
+     * </pre>
+     *
+     * <code>bool events_enabled = 7;</code>
+     * @return The eventsEnabled.
+     */
+    @java.lang.Override
+    public boolean getEventsEnabled() {
+      return eventsEnabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (destinationCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destination_);
+      }
+      if (destinationCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destination_);
+      }
+      if (clusterAutoscalerEnabled_ != false) {
+        output.writeBool(5, clusterAutoscalerEnabled_);
+      }
+      if (kubeApiserverEnabled_ != false) {
+        output.writeBool(6, kubeApiserverEnabled_);
+      }
+      if (eventsEnabled_ != false) {
+        output.writeBool(7, eventsEnabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (destinationCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destination_);
+      }
+      if (destinationCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destination_);
+      }
+      if (clusterAutoscalerEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, clusterAutoscalerEnabled_);
+      }
+      if (kubeApiserverEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, kubeApiserverEnabled_);
+      }
+      if (eventsEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, eventsEnabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging other = (yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (getClusterAutoscalerEnabled()
+          != other.getClusterAutoscalerEnabled()) return false;
+      if (getKubeApiserverEnabled()
+          != other.getKubeApiserverEnabled()) return false;
+      if (getEventsEnabled()
+          != other.getEventsEnabled()) return false;
+      if (!getDestinationCase().equals(other.getDestinationCase())) return false;
+      switch (destinationCase_) {
+        case 2:
+          if (!getLogGroupId()
+              .equals(other.getLogGroupId())) return false;
+          break;
+        case 3:
+          if (!getFolderId()
+              .equals(other.getFolderId())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + CLUSTER_AUTOSCALER_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getClusterAutoscalerEnabled());
+      hash = (37 * hash) + KUBE_APISERVER_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getKubeApiserverEnabled());
+      hash = (37 * hash) + EVENTS_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEventsEnabled());
+      switch (destinationCase_) {
+        case 2:
+          hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getLogGroupId().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getFolderId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.MasterLogging}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.MasterLogging)
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_MasterLogging_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        clusterAutoscalerEnabled_ = false;
+
+        kubeApiserverEnabled_ = false;
+
+        eventsEnabled_ = false;
+
+        destinationCase_ = 0;
+        destination_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging build() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging(this);
+        result.enabled_ = enabled_;
+        if (destinationCase_ == 2) {
+          result.destination_ = destination_;
+        }
+        if (destinationCase_ == 3) {
+          result.destination_ = destination_;
+        }
+        result.clusterAutoscalerEnabled_ = clusterAutoscalerEnabled_;
+        result.kubeApiserverEnabled_ = kubeApiserverEnabled_;
+        result.eventsEnabled_ = eventsEnabled_;
+        result.destinationCase_ = destinationCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.getClusterAutoscalerEnabled() != false) {
+          setClusterAutoscalerEnabled(other.getClusterAutoscalerEnabled());
+        }
+        if (other.getKubeApiserverEnabled() != false) {
+          setKubeApiserverEnabled(other.getKubeApiserverEnabled());
+        }
+        if (other.getEventsEnabled() != false) {
+          setEventsEnabled(other.getEventsEnabled());
+        }
+        switch (other.getDestinationCase()) {
+          case LOG_GROUP_ID: {
+            destinationCase_ = 2;
+            destination_ = other.destination_;
+            onChanged();
+            break;
+          }
+          case FOLDER_ID: {
+            destinationCase_ = 3;
+            destination_ = other.destination_;
+            onChanged();
+            break;
+          }
+          case DESTINATION_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int destinationCase_ = 0;
+      private java.lang.Object destination_;
+      public DestinationCase
+          getDestinationCase() {
+        return DestinationCase.forNumber(
+            destinationCase_);
+      }
+
+      public Builder clearDestination() {
+        destinationCase_ = 0;
+        destination_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for master components.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for master components.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for master components.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the log group where logs of master components should be stored.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return Whether the logGroupId field is set.
+       */
+      @java.lang.Override
+      public boolean hasLogGroupId() {
+        return destinationCase_ == 2;
+      }
+      /**
+       * <pre>
+       * ID of the log group where logs of master components should be stored.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The logGroupId.
+       */
+      @java.lang.Override
+      public java.lang.String getLogGroupId() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 2) {
+          ref = destination_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (destinationCase_ == 2) {
+            destination_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the log group where logs of master components should be stored.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for logGroupId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLogGroupIdBytes() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 2) {
+          ref = destination_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (destinationCase_ == 2) {
+            destination_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the log group where logs of master components should be stored.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  destinationCase_ = 2;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the log group where logs of master components should be stored.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogGroupId() {
+        if (destinationCase_ == 2) {
+          destinationCase_ = 0;
+          destination_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the log group where logs of master components should be stored.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        destinationCase_ = 2;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the folder where logs should be stored (in default group).
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return Whether the folderId field is set.
+       */
+      @java.lang.Override
+      public boolean hasFolderId() {
+        return destinationCase_ == 3;
+      }
+      /**
+       * <pre>
+       * ID of the folder where logs should be stored (in default group).
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 3) {
+          ref = destination_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (destinationCase_ == 3) {
+            destination_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder where logs should be stored (in default group).
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for folderId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 3) {
+          ref = destination_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (destinationCase_ == 3) {
+            destination_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder where logs should be stored (in default group).
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  destinationCase_ = 3;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder where logs should be stored (in default group).
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        if (destinationCase_ == 3) {
+          destinationCase_ = 0;
+          destination_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder where logs should be stored (in default group).
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        destinationCase_ = 3;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean clusterAutoscalerEnabled_ ;
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for cluster-autoscaler.
+       * </pre>
+       *
+       * <code>bool cluster_autoscaler_enabled = 5;</code>
+       * @return The clusterAutoscalerEnabled.
+       */
+      @java.lang.Override
+      public boolean getClusterAutoscalerEnabled() {
+        return clusterAutoscalerEnabled_;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for cluster-autoscaler.
+       * </pre>
+       *
+       * <code>bool cluster_autoscaler_enabled = 5;</code>
+       * @param value The clusterAutoscalerEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterAutoscalerEnabled(boolean value) {
+        
+        clusterAutoscalerEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for cluster-autoscaler.
+       * </pre>
+       *
+       * <code>bool cluster_autoscaler_enabled = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterAutoscalerEnabled() {
+        
+        clusterAutoscalerEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean kubeApiserverEnabled_ ;
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for kube-apiserver.
+       * </pre>
+       *
+       * <code>bool kube_apiserver_enabled = 6;</code>
+       * @return The kubeApiserverEnabled.
+       */
+      @java.lang.Override
+      public boolean getKubeApiserverEnabled() {
+        return kubeApiserverEnabled_;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for kube-apiserver.
+       * </pre>
+       *
+       * <code>bool kube_apiserver_enabled = 6;</code>
+       * @param value The kubeApiserverEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKubeApiserverEnabled(boolean value) {
+        
+        kubeApiserverEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for kube-apiserver.
+       * </pre>
+       *
+       * <code>bool kube_apiserver_enabled = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKubeApiserverEnabled() {
+        
+        kubeApiserverEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean eventsEnabled_ ;
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for events.
+       * </pre>
+       *
+       * <code>bool events_enabled = 7;</code>
+       * @return The eventsEnabled.
+       */
+      @java.lang.Override
+      public boolean getEventsEnabled() {
+        return eventsEnabled_;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for events.
+       * </pre>
+       *
+       * <code>bool events_enabled = 7;</code>
+       * @param value The eventsEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventsEnabled(boolean value) {
+        
+        eventsEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for events.
+       * </pre>
+       *
+       * <code>bool events_enabled = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventsEnabled() {
+        
+        eventsEnabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.MasterLogging)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.MasterLogging)
+    private static final yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MasterLogging>
+        PARSER = new com.google.protobuf.AbstractParser<MasterLogging>() {
+      @java.lang.Override
+      public MasterLogging parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MasterLogging(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MasterLogging> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MasterLogging> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface NetworkPolicyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.NetworkPolicy)
       com.google.protobuf.MessageOrBuilder {
@@ -15473,6 +17079,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_MasterLogging_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15527,7 +17138,7 @@ public final class ClusterOuterClass {
       "OPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006H" +
       "ealth\022\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY" +
       "\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet_gatewayB\030\n" +
-      "\026network_implementation\"\257\003\n\006Master\0228\n\014zo" +
+      "\026network_implementation\"\353\003\n\006Master\0228\n\014zo" +
       "nal_master\030\001 \001(\0132 .yandex.cloud.k8s.v1.Z" +
       "onalMasterH\000\022>\n\017regional_master\030\007 \001(\0132#." +
       "yandex.cloud.k8s.v1.RegionalMasterH\000\022\017\n\007" +
@@ -15538,36 +17149,44 @@ public final class ClusterOuterClass {
       "d.k8s.v1.VersionInfo\022H\n\022maintenance_poli" +
       "cy\030\006 \001(\0132,.yandex.cloud.k8s.v1.MasterMai" +
       "ntenancePolicy\022\032\n\022security_group_ids\030\010 \003" +
-      "(\tB\r\n\013master_type\",\n\nMasterAuth\022\036\n\026clust" +
-      "er_ca_certificate\030\001 \001(\t\"X\n\013ZonalMaster\022\017" +
-      "\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002" +
-      " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"z\n\016Reg" +
-      "ionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023intern" +
-      "al_v4_address\030\002 \001(\t\022\033\n\023external_v4_addre" +
-      "ss\030\003 \001(\t\022\033\n\023external_v6_address\030\004 \001(\t\"k\n" +
-      "\017MasterEndpoints\022\034\n\024internal_v4_endpoint" +
-      "\030\001 \001(\t\022\034\n\024external_v4_endpoint\030\002 \001(\t\022\034\n\024" +
-      "external_v6_endpoint\030\003 \001(\t\"\320\001\n\022IPAllocat" +
-      "ionPolicy\022\037\n\027cluster_ipv4_cidr_block\030\001 \001" +
-      "(\t\0226\n\030node_ipv4_cidr_mask_size\030\005 \001(\003B\024\372\307" +
-      "1\0200,24,25,26,27,28\022\037\n\027service_ipv4_cidr_" +
-      "block\030\002 \001(\t\022\037\n\027cluster_ipv6_cidr_block\030\006" +
-      " \001(\t\022\037\n\027service_ipv6_cidr_block\030\007 \001(\t\"s\n" +
-      "\027MasterMaintenancePolicy\022\024\n\014auto_upgrade" +
-      "\030\001 \001(\010\022B\n\022maintenance_window\030\002 \001(\0132&.yan" +
-      "dex.cloud.k8s.v1.MaintenanceWindow\"\200\001\n\rN" +
-      "etworkPolicy\022=\n\010provider\030\001 \001(\0162+.yandex." +
-      "cloud.k8s.v1.NetworkPolicy.Provider\"0\n\010P" +
-      "rovider\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CAL" +
-      "ICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n" +
-      "\006Cilium\022=\n\014routing_mode\030\001 \001(\0162\'.yandex.c" +
-      "loud.k8s.v1.Cilium.RoutingMode\"7\n\013Routin" +
-      "gMode\022\034\n\030ROUTING_MODE_UNSPECIFIED\020\000\022\n\n\006T" +
-      "UNNEL\020\001*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHA" +
-      "NNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR" +
-      "\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v" +
-      "1Z;github.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/k8s/v1;k8sb\006proto3"
+      "(\t\022:\n\016master_logging\030\t \001(\0132\".yandex.clou" +
+      "d.k8s.v1.MasterLoggingB\r\n\013master_type\",\n" +
+      "\nMasterAuth\022\036\n\026cluster_ca_certificate\030\001 " +
+      "\001(\t\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023i" +
+      "nternal_v4_address\030\002 \001(\t\022\033\n\023external_v4_" +
+      "address\030\003 \001(\t\"z\n\016RegionalMaster\022\021\n\tregio" +
+      "n_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t\022" +
+      "\033\n\023external_v4_address\030\003 \001(\t\022\033\n\023external" +
+      "_v6_address\030\004 \001(\t\"k\n\017MasterEndpoints\022\034\n\024" +
+      "internal_v4_endpoint\030\001 \001(\t\022\034\n\024external_v" +
+      "4_endpoint\030\002 \001(\t\022\034\n\024external_v6_endpoint" +
+      "\030\003 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n\027cluster" +
+      "_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cidr" +
+      "_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037" +
+      "\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027clust" +
+      "er_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service_ipv6" +
+      "_cidr_block\030\007 \001(\t\"s\n\027MasterMaintenancePo" +
+      "licy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenanc" +
+      "e_window\030\002 \001(\0132&.yandex.cloud.k8s.v1.Mai" +
+      "ntenanceWindow\"\210\002\n\rMasterLogging\022\017\n\007enab" +
+      "led\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a" +
+      "-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder" +
+      "_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0" +
+      ",63})?H\000\022\"\n\032cluster_autoscaler_enabled\030\005" +
+      " \001(\010\022\036\n\026kube_apiserver_enabled\030\006 \001(\010\022\026\n\016" +
+      "events_enabled\030\007 \001(\010B\r\n\013destinationJ\004\010\004\020" +
+      "\005\"\200\001\n\rNetworkPolicy\022=\n\010provider\030\001 \001(\0162+." +
+      "yandex.cloud.k8s.v1.NetworkPolicy.Provid" +
+      "er\"0\n\010Provider\022\030\n\024PROVIDER_UNSPECIFIED\020\000" +
+      "\022\n\n\006CALICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 " +
+      "\001(\t\"\200\001\n\006Cilium\022=\n\014routing_mode\030\001 \001(\0162\'.y" +
+      "andex.cloud.k8s.v1.Cilium.RoutingMode\"7\n" +
+      "\013RoutingMode\022\034\n\030ROUTING_MODE_UNSPECIFIED" +
+      "\020\000\022\n\n\006TUNNEL\020\001*U\n\016ReleaseChannel\022\037\n\033RELE" +
+      "ASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007" +
+      "REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.cloud.ap" +
+      "i.k8s.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15594,7 +17213,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Master_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Master_descriptor,
-        new java.lang.String[] { "ZonalMaster", "RegionalMaster", "Version", "Endpoints", "MasterAuth", "VersionInfo", "MaintenancePolicy", "SecurityGroupIds", "MasterType", });
+        new java.lang.String[] { "ZonalMaster", "RegionalMaster", "Version", "Endpoints", "MasterAuth", "VersionInfo", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "MasterType", });
     internal_static_yandex_cloud_k8s_v1_MasterAuth_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_k8s_v1_MasterAuth_fieldAccessorTable = new
@@ -15631,20 +17250,26 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_descriptor,
         new java.lang.String[] { "AutoUpgrade", "MaintenanceWindow", });
-    internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor =
+    internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_k8s_v1_MasterLogging_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor,
+        new java.lang.String[] { "Enabled", "LogGroupId", "FolderId", "ClusterAutoscalerEnabled", "KubeApiserverEnabled", "EventsEnabled", "Destination", });
+    internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor,
         new java.lang.String[] { "Provider", });
     internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor,
         new java.lang.String[] { "KeyId", });
     internal_static_yandex_cloud_k8s_v1_Cilium_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_k8s_v1_Cilium_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cilium_descriptor,
@@ -15652,6 +17277,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

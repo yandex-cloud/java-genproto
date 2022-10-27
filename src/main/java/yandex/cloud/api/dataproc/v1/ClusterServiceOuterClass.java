@@ -5954,7 +5954,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of the image for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -5964,7 +5964,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of the image for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -6160,7 +6160,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of the image for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -6182,7 +6182,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Version of the image for cluster provisioning.
-     * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+     * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
      * </pre>
      *
      * <code>string version_id = 1;</code>
@@ -6694,7 +6694,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of the image for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -6715,7 +6715,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of the image for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -6737,7 +6737,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of the image for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -6757,7 +6757,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of the image for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>
@@ -6772,7 +6772,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Version of the image for cluster provisioning.
-       * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
+       * All available versions are listed in the [documentation](/docs/data-proc/concepts/environment).
        * </pre>
        *
        * <code>string version_id = 1;</code>

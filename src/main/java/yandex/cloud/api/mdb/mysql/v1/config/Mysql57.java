@@ -141,7 +141,7 @@ public final class Mysql57 {
     /**
      * <pre>
      * Enable writing of audit log of MySQL.
-     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -151,7 +151,7 @@ public final class Mysql57 {
     /**
      * <pre>
      * Enable writing of audit log of MySQL.
-     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -161,7 +161,7 @@ public final class Mysql57 {
     /**
      * <pre>
      * Enable writing of audit log of MySQL.
-     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -4546,7 +4546,7 @@ public final class Mysql57 {
     /**
      * <pre>
      * Enable writing of audit log of MySQL.
-     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -4559,7 +4559,7 @@ public final class Mysql57 {
     /**
      * <pre>
      * Enable writing of audit log of MySQL.
-     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -4572,7 +4572,7 @@ public final class Mysql57 {
     /**
      * <pre>
      * Enable writing of audit log of MySQL.
-     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10298,7 +10298,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10310,7 +10310,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10326,7 +10326,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10347,7 +10347,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10366,7 +10366,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10389,7 +10389,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10408,7 +10408,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10421,7 +10421,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>
@@ -10437,7 +10437,7 @@ public final class Mysql57 {
       /**
        * <pre>
        * Enable writing of audit log of MySQL.
-       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.6/en/audit-log-options-variables.html#option_mysqld_audit-log) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/mysql-security-excerpt/5.7/en/audit-log-reference.html#audit-log-options-variables) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue audit_log = 5;</code>

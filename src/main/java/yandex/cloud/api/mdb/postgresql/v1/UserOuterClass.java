@@ -162,7 +162,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -173,7 +173,7 @@ public final class UserOuterClass {
         getGrantsList();
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -183,7 +183,7 @@ public final class UserOuterClass {
     int getGrantsCount();
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -194,7 +194,7 @@ public final class UserOuterClass {
     java.lang.String getGrants(int index);
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -600,7 +600,7 @@ public final class UserOuterClass {
     private com.google.protobuf.LazyStringList grants_;
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -613,7 +613,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -625,7 +625,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -638,7 +638,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -1992,7 +1992,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2005,7 +2005,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2017,7 +2017,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2030,7 +2030,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2044,7 +2044,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2065,7 +2065,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2085,7 +2085,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2103,7 +2103,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2118,7 +2118,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -2977,7 +2977,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -2988,7 +2988,7 @@ public final class UserOuterClass {
         getGrantsList();
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -2998,7 +2998,7 @@ public final class UserOuterClass {
     int getGrantsCount();
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -3009,7 +3009,7 @@ public final class UserOuterClass {
     java.lang.String getGrants(int index);
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -3459,7 +3459,7 @@ public final class UserOuterClass {
     private com.google.protobuf.LazyStringList grants_;
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -3472,7 +3472,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -3484,7 +3484,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -3497,7 +3497,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * A set of roles and privileges that are granted to the user.
      * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
@@ -5024,7 +5024,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5037,7 +5037,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5049,7 +5049,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5062,7 +5062,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5076,7 +5076,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5097,7 +5097,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5117,7 +5117,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5135,7 +5135,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
@@ -5150,7 +5150,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * A set of roles and privileges that are granted to the user.
        * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *

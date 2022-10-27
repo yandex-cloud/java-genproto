@@ -4634,7 +4634,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+     * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -4643,7 +4644,8 @@ public final class UserOuterClass {
     boolean hasAllowIntrospectionFunctions();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+     * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -4652,7 +4654,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getAllowIntrospectionFunctions();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+     * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -4691,8 +4694,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Connection timeout with failover in milliseconds.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+     * Default value: **50**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4701,8 +4705,9 @@ public final class UserOuterClass {
     boolean hasConnectTimeoutWithFailover();
     /**
      * <pre>
-     * Connection timeout with failover in milliseconds.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+     * Default value: **50**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4711,8 +4716,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getConnectTimeoutWithFailover();
     /**
      * <pre>
-     * Connection timeout with failover in milliseconds.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+     * Default value: **50**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4781,7 +4787,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Check that the speed is not too low after the specified time has elapsed.
+     * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+     * Default value: **10**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -4790,7 +4797,8 @@ public final class UserOuterClass {
     boolean hasTimeoutBeforeCheckingExecutionSpeed();
     /**
      * <pre>
-     * Check that the speed is not too low after the specified time has elapsed.
+     * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+     * Default value: **10**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -4799,7 +4807,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getTimeoutBeforeCheckingExecutionSpeed();
     /**
      * <pre>
-     * Check that the speed is not too low after the specified time has elapsed.
+     * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+     * Default value: **10**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -4916,7 +4925,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+     * Default value: **true**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -4925,7 +4936,9 @@ public final class UserOuterClass {
     boolean hasInsertNullAsDefault();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+     * Default value: **true**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -4934,7 +4947,9 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getInsertNullAsDefault();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+     * Default value: **true**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -6072,6 +6087,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum number of concurrent requests per user.
+     * Default value: 0 (no limit).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -6081,6 +6097,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum number of concurrent requests per user.
+     * Default value: 0 (no limit).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -6090,6 +6107,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum number of concurrent requests per user.
+     * Default value: 0 (no limit).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -7552,7 +7570,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -7561,7 +7580,8 @@ public final class UserOuterClass {
     boolean hasAllowSuspiciousLowCardinalityTypes();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -7570,7 +7590,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getAllowSuspiciousLowCardinalityTypes();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -7837,7 +7858,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+     * Default value: **false**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -7846,7 +7869,9 @@ public final class UserOuterClass {
     boolean hasCancelHttpReadonlyQueriesOnClientClose();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+     * Default value: **false**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -7855,7 +7880,9 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getCancelHttpReadonlyQueriesOnClientClose();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+     * Default value: **false**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -7864,7 +7891,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+     * If the parameter is set to **0** (default), no hops is allowed.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -7873,7 +7902,9 @@ public final class UserOuterClass {
     boolean hasMaxHttpGetRedirects();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+     * If the parameter is set to **0** (default), no hops is allowed.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -7882,7 +7913,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxHttpGetRedirects();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+     * If the parameter is set to **0** (default), no hops is allowed.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -7955,7 +7988,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -7964,7 +7998,8 @@ public final class UserOuterClass {
     boolean hasFlattenNested();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -7973,7 +8008,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getFlattenNested();
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -8048,7 +8084,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * Enables asynchronous inserts.
+     * Disabled by default.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -8057,7 +8095,9 @@ public final class UserOuterClass {
     boolean hasAsyncInsert();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * Enables asynchronous inserts.
+     * Disabled by default.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -8066,7 +8106,9 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getAsyncInsert();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * Enables asynchronous inserts.
+     * Disabled by default.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -8075,7 +8117,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * The maximum number of threads for background data parsing and insertion.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -8084,7 +8128,9 @@ public final class UserOuterClass {
     boolean hasAsyncInsertThreads();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * The maximum number of threads for background data parsing and insertion.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -8093,7 +8139,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getAsyncInsertThreads();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * The maximum number of threads for background data parsing and insertion.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -8102,7 +8150,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -8111,7 +8160,8 @@ public final class UserOuterClass {
     boolean hasWaitForAsyncInsert();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -8120,7 +8170,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getWaitForAsyncInsert();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -8129,7 +8180,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+     * Default value: **120**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -8138,7 +8191,9 @@ public final class UserOuterClass {
     boolean hasWaitForAsyncInsertTimeout();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+     * Default value: **120**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -8147,7 +8202,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getWaitForAsyncInsertTimeout();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+     * Default value: **120**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -8156,7 +8213,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * The maximum size of the unparsed data in bytes collected per query before being inserted.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -8165,7 +8224,9 @@ public final class UserOuterClass {
     boolean hasAsyncInsertMaxDataSize();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * The maximum size of the unparsed data in bytes collected per query before being inserted.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -8174,7 +8235,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getAsyncInsertMaxDataSize();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * The maximum size of the unparsed data in bytes collected per query before being inserted.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -8183,7 +8246,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+     * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -8192,7 +8257,9 @@ public final class UserOuterClass {
     boolean hasAsyncInsertBusyTimeout();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+     * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -8201,7 +8268,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getAsyncInsertBusyTimeout();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+     * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -8210,7 +8279,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -8219,7 +8289,8 @@ public final class UserOuterClass {
     boolean hasAsyncInsertStaleTimeout();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -8228,7 +8299,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getAsyncInsertStaleTimeout();
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -8237,7 +8309,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * Memory profiler step (in bytes).
+     * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+     * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -8246,7 +8320,9 @@ public final class UserOuterClass {
     boolean hasMemoryProfilerStep();
     /**
      * <pre>
-     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * Memory profiler step (in bytes).
+     * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+     * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -8255,7 +8331,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMemoryProfilerStep();
     /**
      * <pre>
-     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * Memory profiler step (in bytes).
+     * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+     * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -8265,6 +8343,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * Possible values: from **0** to **1**. Default: **0**.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -8274,6 +8353,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * Possible values: from **0** to **1**. Default: **0**.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -8283,6 +8363,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * Possible values: from **0** to **1**. Default: **0**.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -11292,7 +11373,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue allowIntrospectionFunctions_;
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+     * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -11304,7 +11386,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+     * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -11316,7 +11399,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+     * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -11371,8 +11455,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value connectTimeoutWithFailover_;
     /**
      * <pre>
-     * Connection timeout with failover in milliseconds.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+     * Default value: **50**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11384,8 +11469,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Connection timeout with failover in milliseconds.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+     * Default value: **50**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11397,8 +11483,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Connection timeout with failover in milliseconds.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+     * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+     * Default value: **50**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -11494,7 +11581,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value timeoutBeforeCheckingExecutionSpeed_;
     /**
      * <pre>
-     * Check that the speed is not too low after the specified time has elapsed.
+     * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+     * Default value: **10**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -11506,7 +11594,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Check that the speed is not too low after the specified time has elapsed.
+     * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+     * Default value: **10**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -11518,7 +11607,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Check that the speed is not too low after the specified time has elapsed.
+     * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+     * Default value: **10**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -11673,7 +11763,9 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue insertNullAsDefault_;
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+     * Default value: **true**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -11685,7 +11777,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+     * Default value: **true**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -11697,7 +11791,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+     * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+     * Default value: **true**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -13189,6 +13285,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum number of concurrent requests per user.
+     * Default value: 0 (no limit).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -13201,6 +13298,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum number of concurrent requests per user.
+     * Default value: 0 (no limit).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -13213,6 +13311,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum number of concurrent requests per user.
+     * Default value: 0 (no limit).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -15190,7 +15289,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue allowSuspiciousLowCardinalityTypes_;
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -15202,7 +15302,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -15214,7 +15315,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+     * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -15574,7 +15676,9 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue cancelHttpReadonlyQueriesOnClientClose_;
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+     * Default value: **false**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -15586,7 +15690,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+     * Default value: **false**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -15598,7 +15704,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+     * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+     * Default value: **false**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -15612,7 +15720,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxHttpGetRedirects_;
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+     * If the parameter is set to **0** (default), no hops is allowed.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -15624,7 +15734,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+     * If the parameter is set to **0** (default), no hops is allowed.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -15636,7 +15748,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+     * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+     * If the parameter is set to **0** (default), no hops is allowed.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -15755,7 +15869,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue flattenNested_;
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -15767,7 +15882,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -15779,7 +15895,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+     * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -15904,7 +16021,9 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue asyncInsert_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * Enables asynchronous inserts.
+     * Disabled by default.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -15916,7 +16035,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * Enables asynchronous inserts.
+     * Disabled by default.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -15928,7 +16049,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+     * Enables asynchronous inserts.
+     * Disabled by default.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -15942,7 +16065,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value asyncInsertThreads_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * The maximum number of threads for background data parsing and insertion.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -15954,7 +16079,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * The maximum number of threads for background data parsing and insertion.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -15966,7 +16093,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+     * The maximum number of threads for background data parsing and insertion.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -15980,7 +16109,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue waitForAsyncInsert_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -15992,7 +16122,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -16004,7 +16135,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+     * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -16018,7 +16150,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value waitForAsyncInsertTimeout_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+     * Default value: **120**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -16030,7 +16164,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+     * Default value: **120**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -16042,7 +16178,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+     * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+     * Default value: **120**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -16056,7 +16194,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value asyncInsertMaxDataSize_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * The maximum size of the unparsed data in bytes collected per query before being inserted.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -16068,7 +16208,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * The maximum size of the unparsed data in bytes collected per query before being inserted.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -16080,7 +16222,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+     * The maximum size of the unparsed data in bytes collected per query before being inserted.
+     * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -16094,7 +16238,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value asyncInsertBusyTimeout_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+     * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -16106,7 +16252,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+     * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -16118,7 +16266,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+     * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+     * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -16132,7 +16282,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value asyncInsertStaleTimeout_;
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -16144,7 +16295,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -16156,7 +16308,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+     * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+     * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -16170,7 +16323,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value memoryProfilerStep_;
     /**
      * <pre>
-     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * Memory profiler step (in bytes).
+     * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+     * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -16182,7 +16337,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * Memory profiler step (in bytes).
+     * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+     * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -16194,7 +16351,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+     * Memory profiler step (in bytes).
+     * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+     * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -16209,6 +16368,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * Possible values: from **0** to **1**. Default: **0**.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -16221,6 +16381,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * Possible values: from **0** to **1**. Default: **0**.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -16233,6 +16394,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+     * Possible values: from **0** to **1**. Default: **0**.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -20462,7 +20624,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowIntrospectionFunctionsBuilder_;
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20473,7 +20636,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20488,7 +20652,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20508,7 +20673,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20526,7 +20692,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20548,7 +20715,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20566,7 +20734,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20578,7 +20747,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20593,7 +20763,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
+       * Enables [introspections functions](https://clickhouse.com/docs/en/sql-reference/functions/introspection) for query profiling.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#settings-allow_introspection_functions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_introspection_functions = 96;</code>
@@ -20781,8 +20952,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> connectTimeoutWithFailoverBuilder_;
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20793,8 +20965,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20809,8 +20982,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20830,8 +21004,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20849,8 +21024,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20872,8 +21048,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20891,8 +21068,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20904,8 +21082,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -20920,8 +21099,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Connection timeout with failover in milliseconds.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
+       * The timeout in milliseconds for connecting to a remote server for a Distributed table engine. Applies only if the cluster uses sharding and replication. If unsuccessful, several attempts are made to connect to various replicas.
+       * Default value: **50**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#connect-timeout-with-failover-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout_with_failover = 97 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -21273,7 +21453,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> timeoutBeforeCheckingExecutionSpeedBuilder_;
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21284,7 +21465,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21299,7 +21481,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21319,7 +21502,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21337,7 +21521,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21359,7 +21544,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21377,7 +21563,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21389,7 +21576,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21404,7 +21592,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Check that the speed is not too low after the specified time has elapsed.
+       * Timeout (in seconds) between checks of execution speed. It is checked that execution speed is not less that specified in [min_execution_speed] parameter.
+       * Default value: **10**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value timeout_before_checking_execution_speed = 98;</code>
@@ -21974,7 +22163,9 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> insertNullAsDefaultBuilder_;
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -21985,7 +22176,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22000,7 +22193,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22020,7 +22215,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22038,7 +22235,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22060,7 +22259,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22078,7 +22279,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22090,7 +22293,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -22105,7 +22310,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
+       * Enables the insertion of default values instead of NULL into columns with not nullable data type.
+       * Default value: **true**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#insert_null_as_default).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue insert_null_as_default = 100;</code>
@@ -27824,6 +28031,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27835,6 +28043,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27850,6 +28059,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27870,6 +28080,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27888,6 +28099,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27910,6 +28122,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27928,6 +28141,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27940,6 +28154,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -27955,6 +28170,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum number of concurrent requests per user.
+       * Default value: 0 (no limit).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_concurrent_queries_for_user = 103;</code>
@@ -35158,7 +35374,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowSuspiciousLowCardinalityTypesBuilder_;
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35169,7 +35386,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35184,7 +35402,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35204,7 +35423,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35222,7 +35442,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35244,7 +35465,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35262,7 +35484,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35274,7 +35497,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -35289,7 +35513,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
+       * Allows specifying **LowCardinality** modifier for types of small fixed size (8 or less) in CREATE TABLE statements. Enabling this may increase merge times and memory consumption.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#allow_suspicious_low_cardinality_types).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_suspicious_low_cardinality_types = 110;</code>
@@ -36679,7 +36904,9 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> cancelHttpReadonlyQueriesOnClientCloseBuilder_;
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36690,7 +36917,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36705,7 +36934,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36725,7 +36956,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36743,7 +36976,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36765,7 +37000,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36783,7 +37020,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36795,7 +37034,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36810,7 +37051,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
+       * Cancels HTTP read-only queries (e.g. SELECT) when a client closes the connection without waiting for the response.
+       * Default value: **false**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#cancel-http-readonly-queries-on-client-close).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue cancel_http_readonly_queries_on_client_close = 111;</code>
@@ -36834,7 +37077,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxHttpGetRedirectsBuilder_;
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36845,7 +37090,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36860,7 +37107,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36880,7 +37129,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36898,7 +37149,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36920,7 +37173,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36938,7 +37193,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36950,7 +37207,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -36965,7 +37224,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
+       * Limits the maximum number of HTTP GET redirect hops for [URL-engine](https://clickhouse.com/docs/en/engines/table-engines/special/url) tables.
+       * If the parameter is set to **0** (default), no hops is allowed.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#setting-max_http_get_redirects).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_http_get_redirects = 112;</code>
@@ -37420,7 +37681,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> flattenNestedBuilder_;
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37431,7 +37693,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37446,7 +37709,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37466,7 +37730,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37484,7 +37749,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37506,7 +37772,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37524,7 +37791,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37536,7 +37804,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37551,7 +37820,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
+       * Sets the data format of a [nested](https://clickhouse.com/docs/en/sql-reference/data-types/nested-data-structures/nested) columns.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#flatten-nested).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue flatten_nested = 113;</code>
@@ -37900,7 +38170,9 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asyncInsertBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -37911,7 +38183,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -37926,7 +38200,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -37946,7 +38222,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -37964,7 +38242,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -37986,7 +38266,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -38004,7 +38286,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -38016,7 +38300,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -38031,7 +38317,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
+       * Enables asynchronous inserts.
+       * Disabled by default.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue async_insert = 117;</code>
@@ -38055,7 +38343,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertThreadsBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38066,7 +38356,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38081,7 +38373,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38101,7 +38395,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38119,7 +38415,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38141,7 +38439,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38159,7 +38459,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38171,7 +38473,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38186,7 +38490,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
+       * The maximum number of threads for background data parsing and insertion.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **16**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_threads = 118;</code>
@@ -38210,7 +38516,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> waitForAsyncInsertBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38221,7 +38528,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38236,7 +38544,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38256,7 +38565,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38274,7 +38584,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38296,7 +38607,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38314,7 +38626,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38326,7 +38639,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38341,7 +38655,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
+       * Enables waiting for processing of asynchronous insertion. If enabled, server returns OK only after the data is inserted.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue wait_for_async_insert = 119;</code>
@@ -38365,7 +38680,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> waitForAsyncInsertTimeoutBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38376,7 +38693,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38391,7 +38710,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38411,7 +38732,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38429,7 +38752,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38451,7 +38776,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38469,7 +38796,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38481,7 +38810,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38496,7 +38827,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
+       * The timeout (in seconds) for waiting for processing of asynchronous insertion.
+       * Default value: **120**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#wait-for-async-insert-timeout).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wait_for_async_insert_timeout = 120;</code>
@@ -38520,7 +38853,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertMaxDataSizeBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38531,7 +38866,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38546,7 +38883,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38566,7 +38905,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38584,7 +38925,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38606,7 +38949,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38624,7 +38969,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38636,7 +38983,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38651,7 +39000,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
+       * The maximum size of the unparsed data in bytes collected per query before being inserted.
+       * If the parameter is set to **0**, asynchronous insertions are disabled. Default value: **100000**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-max-data-size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_max_data_size = 121;</code>
@@ -38675,7 +39026,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertBusyTimeoutBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38686,7 +39039,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38701,7 +39056,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38721,7 +39078,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38739,7 +39098,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38761,7 +39122,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38779,7 +39142,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38791,7 +39156,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38806,7 +39173,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
+       * The maximum timeout in milliseconds since the first INSERT query before inserting collected data.
+       * If the parameter is set to **0**, the timeout is disabled. Default value: **200**.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-busy-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_busy_timeout = 122;</code>
@@ -38830,7 +39199,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asyncInsertStaleTimeoutBuilder_;
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38841,7 +39211,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38856,7 +39227,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38876,7 +39248,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38894,7 +39267,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38916,7 +39290,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38934,7 +39309,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38946,7 +39322,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38961,7 +39338,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * // See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
+       * The maximum timeout in milliseconds since the last INSERT query before dumping collected data. If enabled, the settings prolongs the [async_insert_busy_timeout] with every INSERT query as long as [async_insert_max_data_size] is not exceeded.
+       * More info see in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings/#async-insert-stale-timeout-ms).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value async_insert_stale_timeout = 123;</code>
@@ -38985,7 +39363,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryProfilerStepBuilder_;
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -38996,7 +39376,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39011,7 +39393,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39031,7 +39415,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39049,7 +39435,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39071,7 +39459,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39089,7 +39479,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39101,7 +39493,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39116,7 +39510,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whenever query memory usage becomes larger than every next step in number of bytes the memory profiler will collect the allocating stack trace. Zero means disabled memory profiler.
+       * Memory profiler step (in bytes).
+       * If the next query step requires more memory than this parameter specifies, the memory profiler collects the allocating stack trace. Values lower than a few megabytes slow down query processing.
+       * Default value: **4194304** (4 MB). Zero means disabled memory profiler.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value memory_profiler_step = 124;</code>
@@ -39141,6 +39537,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39152,6 +39549,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39167,6 +39565,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39187,6 +39586,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39205,6 +39605,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39227,6 +39628,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39245,6 +39647,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39257,6 +39660,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>
@@ -39272,6 +39676,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Collect random allocations and deallocations and write them into system.trace_log with 'MemorySample' trace_type. The probability is for every alloc/free regardless to the size of the allocation.
+       * Possible values: from **0** to **1**. Default: **0**.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue memory_profiler_sample_probability = 125;</code>

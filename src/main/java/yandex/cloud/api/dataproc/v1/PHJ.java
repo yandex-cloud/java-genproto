@@ -337,7 +337,7 @@ public final class PHJ {
   }
   /**
    * <pre>
-   * A Data Proc job. For details about the concept, see [documentation](/docs/dataproc/concepts/jobs).
+   * A Data Proc job. For details about the concept, see [documentation](/docs/data-proc/concepts/jobs).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
@@ -1686,7 +1686,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A Data Proc job. For details about the concept, see [documentation](/docs/dataproc/concepts/jobs).
+     * A Data Proc job. For details about the concept, see [documentation](/docs/data-proc/concepts/jobs).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
