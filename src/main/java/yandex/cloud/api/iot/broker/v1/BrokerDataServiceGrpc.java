@@ -102,7 +102,7 @@ public final class BrokerDataServiceGrpc {
 
     /**
      * <pre>
-     * Publishes message on behalf of specified registry
+     * Publishes message on behalf of specified broker
      * </pre>
      */
     public void publish(yandex.cloud.api.iot.broker.v1.BrokerDataServiceOuterClass.PublishBrokerDataRequest request,
@@ -142,7 +142,7 @@ public final class BrokerDataServiceGrpc {
 
     /**
      * <pre>
-     * Publishes message on behalf of specified registry
+     * Publishes message on behalf of specified broker
      * </pre>
      */
     public void publish(yandex.cloud.api.iot.broker.v1.BrokerDataServiceOuterClass.PublishBrokerDataRequest request,
@@ -171,7 +171,7 @@ public final class BrokerDataServiceGrpc {
 
     /**
      * <pre>
-     * Publishes message on behalf of specified registry
+     * Publishes message on behalf of specified broker
      * </pre>
      */
     public yandex.cloud.api.iot.broker.v1.BrokerDataServiceOuterClass.PublishBrokerDataResponse publish(yandex.cloud.api.iot.broker.v1.BrokerDataServiceOuterClass.PublishBrokerDataRequest request) {
@@ -199,7 +199,7 @@ public final class BrokerDataServiceGrpc {
 
     /**
      * <pre>
-     * Publishes message on behalf of specified registry
+     * Publishes message on behalf of specified broker
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.broker.v1.BrokerDataServiceOuterClass.PublishBrokerDataResponse> publish(

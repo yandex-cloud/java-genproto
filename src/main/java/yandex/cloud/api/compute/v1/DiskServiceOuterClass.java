@@ -3172,7 +3172,7 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -3182,7 +3182,7 @@ public final class DiskServiceOuterClass {
         getSnapshotScheduleIdsList();
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -3191,7 +3191,7 @@ public final class DiskServiceOuterClass {
     int getSnapshotScheduleIdsCount();
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -3201,7 +3201,7 @@ public final class DiskServiceOuterClass {
     java.lang.String getSnapshotScheduleIds(int index);
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -3975,7 +3975,7 @@ public final class DiskServiceOuterClass {
     private com.google.protobuf.LazyStringList snapshotScheduleIds_;
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -3987,7 +3987,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -3998,7 +3998,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -4010,7 +4010,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * Snapshot schedules
+     * List of IDs of the snapshot schedules to attach the disk to.
      * </pre>
      *
      * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5773,7 +5773,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5785,7 +5785,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5796,7 +5796,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5808,7 +5808,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5821,7 +5821,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5841,7 +5841,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5860,7 +5860,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5877,7 +5877,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -5891,7 +5891,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Snapshot schedules
+       * List of IDs of the snapshot schedules to attach the disk to.
        * </pre>
        *
        * <code>repeated string snapshot_schedule_ids = 12;</code>
@@ -14200,7 +14200,7 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Disk resource to list snapshot schedules for.
+     * ID of the disk to list snapshot schedules for.
      * </pre>
      *
      * <code>string disk_id = 1;</code>
@@ -14209,7 +14209,7 @@ public final class DiskServiceOuterClass {
     java.lang.String getDiskId();
     /**
      * <pre>
-     * ID of the Disk resource to list snapshot schedules for.
+     * ID of the disk to list snapshot schedules for.
      * </pre>
      *
      * <code>string disk_id = 1;</code>
@@ -14221,8 +14221,9 @@ public final class DiskServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListDiskSnapshotSchedulesResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -14232,7 +14233,7 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14242,7 +14243,7 @@ public final class DiskServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14352,7 +14353,7 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object diskId_;
     /**
      * <pre>
-     * ID of the Disk resource to list snapshot schedules for.
+     * ID of the disk to list snapshot schedules for.
      * </pre>
      *
      * <code>string disk_id = 1;</code>
@@ -14373,7 +14374,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Disk resource to list snapshot schedules for.
+     * ID of the disk to list snapshot schedules for.
      * </pre>
      *
      * <code>string disk_id = 1;</code>
@@ -14399,8 +14400,9 @@ public final class DiskServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListDiskSnapshotSchedulesResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -14415,7 +14417,7 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14437,7 +14439,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14799,7 +14801,7 @@ public final class DiskServiceOuterClass {
       private java.lang.Object diskId_ = "";
       /**
        * <pre>
-       * ID of the Disk resource to list snapshot schedules for.
+       * ID of the disk to list snapshot schedules for.
        * </pre>
        *
        * <code>string disk_id = 1;</code>
@@ -14819,7 +14821,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Disk resource to list snapshot schedules for.
+       * ID of the disk to list snapshot schedules for.
        * </pre>
        *
        * <code>string disk_id = 1;</code>
@@ -14840,7 +14842,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Disk resource to list snapshot schedules for.
+       * ID of the disk to list snapshot schedules for.
        * </pre>
        *
        * <code>string disk_id = 1;</code>
@@ -14859,7 +14861,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Disk resource to list snapshot schedules for.
+       * ID of the disk to list snapshot schedules for.
        * </pre>
        *
        * <code>string disk_id = 1;</code>
@@ -14873,7 +14875,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Disk resource to list snapshot schedules for.
+       * ID of the disk to list snapshot schedules for.
        * </pre>
        *
        * <code>string disk_id = 1;</code>
@@ -14896,8 +14898,9 @@ public final class DiskServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListDiskSnapshotSchedulesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -14910,8 +14913,9 @@ public final class DiskServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListDiskSnapshotSchedulesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -14927,8 +14931,9 @@ public final class DiskServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListDiskOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListDiskSnapshotSchedulesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -14944,7 +14949,7 @@ public final class DiskServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -14965,7 +14970,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -14987,7 +14992,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15007,7 +15012,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15022,7 +15027,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListDiskSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15100,7 +15105,7 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15109,7 +15114,7 @@ public final class DiskServiceOuterClass {
         getSnapshotSchedulesList();
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15117,7 +15122,7 @@ public final class DiskServiceOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule getSnapshotSchedules(int index);
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15125,7 +15130,7 @@ public final class DiskServiceOuterClass {
     int getSnapshotSchedulesCount();
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15134,7 +15139,7 @@ public final class DiskServiceOuterClass {
         getSnapshotSchedulesOrBuilderList();
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15144,10 +15149,10 @@ public final class DiskServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15156,10 +15161,10 @@ public final class DiskServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15270,7 +15275,7 @@ public final class DiskServiceOuterClass {
     private java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> snapshotSchedules_;
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15281,7 +15286,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15293,7 +15298,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15304,7 +15309,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15315,7 +15320,7 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshot schedules for the specified disk.
+     * List of snapshot schedules the specified disk is attached to.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15330,10 +15335,10 @@ public final class DiskServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15354,10 +15359,10 @@ public final class DiskServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15751,7 +15756,7 @@ public final class DiskServiceOuterClass {
 
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15765,7 +15770,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15779,7 +15784,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15793,7 +15798,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15814,7 +15819,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15832,7 +15837,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15852,7 +15857,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15873,7 +15878,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15891,7 +15896,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15909,7 +15914,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15928,7 +15933,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15945,7 +15950,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15962,7 +15967,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15973,7 +15978,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -15987,7 +15992,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -16002,7 +16007,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -16013,7 +16018,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -16025,7 +16030,7 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshot schedules for the specified disk.
+       * List of snapshot schedules the specified disk is attached to.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -16052,10 +16057,10 @@ public final class DiskServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16075,10 +16080,10 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16099,10 +16104,10 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16121,10 +16126,10 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16138,10 +16143,10 @@ public final class DiskServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListDiskSnapshotSchedulesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListDiskSnapshotSchedulesRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDiskSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDiskSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>

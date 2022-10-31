@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing SnapshotSchedule resources.
+ * A set of methods for managing snapshot schedules.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -405,15 +405,15 @@ public final class SnapshotScheduleServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing SnapshotSchedule resources.
+   * A set of methods for managing snapshot schedules.
    * </pre>
    */
   public static abstract class SnapshotScheduleServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified SnapshotSchedule resource.
-     * To get the list of available SnapshotSchedule resources, make a [List] request.
+     * Returns the specified snapshot schedule.
+     * To get the list of available snapshot schedules, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.GetSnapshotScheduleRequest request,
@@ -423,7 +423,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SnapshotSchedule resources in the specified folder.
+     * Retrieves the list of snapshot schedules in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotSchedulesRequest request,
@@ -444,6 +444,7 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Updates the specified snapshot schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void update(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.UpdateSnapshotScheduleRequest request,
@@ -454,8 +455,9 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Deletes the specified snapshot schedule.
-     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule does not delete
-     * any snapshots previously made by the schedule. You must delete snapshots separately.
+     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule
+     * does not delete any snapshots created by the schedule. You must delete snapshots separately.
+     * The schedule is deleted only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void delete(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.DeleteSnapshotScheduleRequest request,
@@ -465,7 +467,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDisks of schedule
+     * Updates the list of disks attached to the specified schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void updateDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.UpdateSnapshotScheduleDisksRequest request,
@@ -475,9 +478,10 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Disable schedule sets status InActive.
-     * 
-     * When schedule os disabled snapshots will not be created or deleted according to retention policy.
+     * Disables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `INACTIVE`: the schedule is interrupted, snapshots won't be created
+     * or deleted.
+     * The schedule is disabled only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void disable(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.DisableSnapshotScheduleRequest request,
@@ -487,7 +491,9 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Enable schedule sets status Active.
+     * Enables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `ACTIVE`: new disk snapshots will be created, old ones deleted
+     * (if [SnapshotSchedule.retention_policy] is specified).
      * </pre>
      */
     public void enable(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.EnableSnapshotScheduleRequest request,
@@ -507,7 +513,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot created by schedule.
+     * Retrieves the list of snapshots created by the specified snapshot schedule.
      * </pre>
      */
     public void listSnapshots(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleSnapshotsRequest request,
@@ -517,7 +523,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List disks that belong to schedule.
+     * Retrieves the list of disks attached to the specified snapshot schedule.
      * </pre>
      */
     public void listDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksRequest request,
@@ -610,7 +616,7 @@ public final class SnapshotScheduleServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing SnapshotSchedule resources.
+   * A set of methods for managing snapshot schedules.
    * </pre>
    */
   public static final class SnapshotScheduleServiceStub extends io.grpc.stub.AbstractAsyncStub<SnapshotScheduleServiceStub> {
@@ -627,8 +633,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified SnapshotSchedule resource.
-     * To get the list of available SnapshotSchedule resources, make a [List] request.
+     * Returns the specified snapshot schedule.
+     * To get the list of available snapshot schedules, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.GetSnapshotScheduleRequest request,
@@ -639,7 +645,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SnapshotSchedule resources in the specified folder.
+     * Retrieves the list of snapshot schedules in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotSchedulesRequest request,
@@ -662,6 +668,7 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Updates the specified snapshot schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void update(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.UpdateSnapshotScheduleRequest request,
@@ -673,8 +680,9 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Deletes the specified snapshot schedule.
-     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule does not delete
-     * any snapshots previously made by the schedule. You must delete snapshots separately.
+     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule
+     * does not delete any snapshots created by the schedule. You must delete snapshots separately.
+     * The schedule is deleted only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void delete(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.DeleteSnapshotScheduleRequest request,
@@ -685,7 +693,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDisks of schedule
+     * Updates the list of disks attached to the specified schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void updateDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.UpdateSnapshotScheduleDisksRequest request,
@@ -696,9 +705,10 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Disable schedule sets status InActive.
-     * 
-     * When schedule os disabled snapshots will not be created or deleted according to retention policy.
+     * Disables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `INACTIVE`: the schedule is interrupted, snapshots won't be created
+     * or deleted.
+     * The schedule is disabled only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public void disable(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.DisableSnapshotScheduleRequest request,
@@ -709,7 +719,9 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Enable schedule sets status Active.
+     * Enables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `ACTIVE`: new disk snapshots will be created, old ones deleted
+     * (if [SnapshotSchedule.retention_policy] is specified).
      * </pre>
      */
     public void enable(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.EnableSnapshotScheduleRequest request,
@@ -731,7 +743,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot created by schedule.
+     * Retrieves the list of snapshots created by the specified snapshot schedule.
      * </pre>
      */
     public void listSnapshots(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleSnapshotsRequest request,
@@ -742,7 +754,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List disks that belong to schedule.
+     * Retrieves the list of disks attached to the specified snapshot schedule.
      * </pre>
      */
     public void listDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksRequest request,
@@ -754,7 +766,7 @@ public final class SnapshotScheduleServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing SnapshotSchedule resources.
+   * A set of methods for managing snapshot schedules.
    * </pre>
    */
   public static final class SnapshotScheduleServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SnapshotScheduleServiceBlockingStub> {
@@ -771,8 +783,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified SnapshotSchedule resource.
-     * To get the list of available SnapshotSchedule resources, make a [List] request.
+     * Returns the specified snapshot schedule.
+     * To get the list of available snapshot schedules, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule get(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.GetSnapshotScheduleRequest request) {
@@ -782,7 +794,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SnapshotSchedule resources in the specified folder.
+     * Retrieves the list of snapshot schedules in the specified folder.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotSchedulesResponse list(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotSchedulesRequest request) {
@@ -803,6 +815,7 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Updates the specified snapshot schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.UpdateSnapshotScheduleRequest request) {
@@ -813,8 +826,9 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Deletes the specified snapshot schedule.
-     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule does not delete
-     * any snapshots previously made by the schedule. You must delete snapshots separately.
+     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule
+     * does not delete any snapshots created by the schedule. You must delete snapshots separately.
+     * The schedule is deleted only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.DeleteSnapshotScheduleRequest request) {
@@ -824,7 +838,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDisks of schedule
+     * Updates the list of disks attached to the specified schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.UpdateSnapshotScheduleDisksRequest request) {
@@ -834,9 +849,10 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Disable schedule sets status InActive.
-     * 
-     * When schedule os disabled snapshots will not be created or deleted according to retention policy.
+     * Disables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `INACTIVE`: the schedule is interrupted, snapshots won't be created
+     * or deleted.
+     * The schedule is disabled only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation disable(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.DisableSnapshotScheduleRequest request) {
@@ -846,7 +862,9 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Enable schedule sets status Active.
+     * Enables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `ACTIVE`: new disk snapshots will be created, old ones deleted
+     * (if [SnapshotSchedule.retention_policy] is specified).
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation enable(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.EnableSnapshotScheduleRequest request) {
@@ -866,7 +884,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot created by schedule.
+     * Retrieves the list of snapshots created by the specified snapshot schedule.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleSnapshotsResponse listSnapshots(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleSnapshotsRequest request) {
@@ -876,7 +894,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List disks that belong to schedule.
+     * Retrieves the list of disks attached to the specified snapshot schedule.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksResponse listDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksRequest request) {
@@ -887,7 +905,7 @@ public final class SnapshotScheduleServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing SnapshotSchedule resources.
+   * A set of methods for managing snapshot schedules.
    * </pre>
    */
   public static final class SnapshotScheduleServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SnapshotScheduleServiceFutureStub> {
@@ -904,8 +922,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified SnapshotSchedule resource.
-     * To get the list of available SnapshotSchedule resources, make a [List] request.
+     * Returns the specified snapshot schedule.
+     * To get the list of available snapshot schedules, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> get(
@@ -916,7 +934,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SnapshotSchedule resources in the specified folder.
+     * Retrieves the list of snapshot schedules in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotSchedulesResponse> list(
@@ -939,6 +957,7 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Updates the specified snapshot schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -950,8 +969,9 @@ public final class SnapshotScheduleServiceGrpc {
     /**
      * <pre>
      * Deletes the specified snapshot schedule.
-     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule does not delete
-     * any snapshots previously made by the schedule. You must delete snapshots separately.
+     * Deleting a snapshot schedule removes its data permanently and is irreversible. However, deleting a schedule
+     * does not delete any snapshots created by the schedule. You must delete snapshots separately.
+     * The schedule is deleted only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -962,7 +982,8 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDisks of schedule
+     * Updates the list of disks attached to the specified schedule.
+     * The schedule is updated only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateDisks(
@@ -973,9 +994,10 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Disable schedule sets status InActive.
-     * 
-     * When schedule os disabled snapshots will not be created or deleted according to retention policy.
+     * Disables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `INACTIVE`: the schedule is interrupted, snapshots won't be created
+     * or deleted.
+     * The schedule is disabled only after all snapshot creations and deletions triggered by the schedule are completed.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> disable(
@@ -986,7 +1008,9 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * Enable schedule sets status Active.
+     * Enables the specified snapshot schedule.
+     * The [SnapshotSchedule.status] is changed to `ACTIVE`: new disk snapshots will be created, old ones deleted
+     * (if [SnapshotSchedule.retention_policy] is specified).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> enable(
@@ -1008,7 +1032,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot created by schedule.
+     * Retrieves the list of snapshots created by the specified snapshot schedule.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleSnapshotsResponse> listSnapshots(
@@ -1019,7 +1043,7 @@ public final class SnapshotScheduleServiceGrpc {
 
     /**
      * <pre>
-     * List disks that belong to schedule.
+     * Retrieves the list of disks attached to the specified snapshot schedule.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksResponse> listDisks(

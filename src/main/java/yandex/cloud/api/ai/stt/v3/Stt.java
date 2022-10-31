@@ -181,7 +181,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Filter profanity (default: false).
+     * Profanity filter (default: false).
      * </pre>
      *
      * <code>bool profanity_filter = 2;</code>
@@ -201,7 +201,7 @@ public final class Stt {
   }
   /**
    * <pre>
-   * options
+   * Options
    * </pre>
    *
    * Protobuf type {@code speechkit.stt.v3.TextNormalizationOptions}
@@ -457,7 +457,7 @@ public final class Stt {
     private boolean profanityFilter_;
     /**
      * <pre>
-     * Filter profanity (default: false).
+     * Profanity filter (default: false).
      * </pre>
      *
      * <code>bool profanity_filter = 2;</code>
@@ -663,7 +663,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * options
+     * Options
      * </pre>
      *
      * Protobuf type {@code speechkit.stt.v3.TextNormalizationOptions}
@@ -881,7 +881,7 @@ public final class Stt {
       private boolean profanityFilter_ ;
       /**
        * <pre>
-       * Filter profanity (default: false).
+       * Profanity filter (default: false).
        * </pre>
        *
        * <code>bool profanity_filter = 2;</code>
@@ -893,7 +893,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Filter profanity (default: false).
+       * Profanity filter (default: false).
        * </pre>
        *
        * <code>bool profanity_filter = 2;</code>
@@ -908,7 +908,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Filter profanity (default: false).
+       * Profanity filter (default: false).
        * </pre>
        *
        * <code>bool profanity_filter = 2;</code>
@@ -1041,7 +1041,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Hint for max pause between words. Our EoU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
+     * Hint for max pause between words. Our EOU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
      * </pre>
      *
      * <code>int64 max_pause_between_words_hint_ms = 2;</code>
@@ -1286,7 +1286,7 @@ public final class Stt {
     private long maxPauseBetweenWordsHintMs_;
     /**
      * <pre>
-     * Hint for max pause between words. Our EoU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
+     * Hint for max pause between words. Our EOU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
      * </pre>
      *
      * <code>int64 max_pause_between_words_hint_ms = 2;</code>
@@ -1693,7 +1693,7 @@ public final class Stt {
       private long maxPauseBetweenWordsHintMs_ ;
       /**
        * <pre>
-       * Hint for max pause between words. Our EoU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
+       * Hint for max pause between words. Our EOU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
        * </pre>
        *
        * <code>int64 max_pause_between_words_hint_ms = 2;</code>
@@ -1705,7 +1705,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Hint for max pause between words. Our EoU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
+       * Hint for max pause between words. Our EOU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
        * </pre>
        *
        * <code>int64 max_pause_between_words_hint_ms = 2;</code>
@@ -1720,7 +1720,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Hint for max pause between words. Our EoU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
+       * Hint for max pause between words. Our EOU detector could use this information to distinguish between end of utterance and slow speech (like one &lt;long pause&gt; two &lt;long pause&gt; three, etc).
        * </pre>
        *
        * <code>int64 max_pause_between_words_hint_ms = 2;</code>
@@ -2244,7 +2244,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * EoU is enforced by external messages from user.
+     * EOU is enforced by external messages from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -2253,7 +2253,7 @@ public final class Stt {
     boolean hasExternalClassifier();
     /**
      * <pre>
-     * EoU is enforced by external messages from user.
+     * EOU is enforced by external messages from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -2262,7 +2262,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier getExternalClassifier();
     /**
      * <pre>
-     * EoU is enforced by external messages from user.
+     * EOU is enforced by external messages from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -2463,7 +2463,7 @@ public final class Stt {
     public static final int EXTERNAL_CLASSIFIER_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * EoU is enforced by external messages from user.
+     * EOU is enforced by external messages from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -2475,7 +2475,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * EoU is enforced by external messages from user.
+     * EOU is enforced by external messages from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -2490,7 +2490,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * EoU is enforced by external messages from user.
+     * EOU is enforced by external messages from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3053,7 +3053,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier, yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifier.Builder, yandex.cloud.api.ai.stt.v3.Stt.ExternalEouClassifierOrBuilder> externalClassifierBuilder_;
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3065,7 +3065,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3087,7 +3087,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3107,7 +3107,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3125,7 +3125,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3151,7 +3151,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3174,7 +3174,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3184,7 +3184,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -3202,7 +3202,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * EoU is enforced by external messages from user.
+       * EOU is enforced by external messages from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ExternalEouClassifier external_classifier = 2;</code>
@@ -5980,6 +5980,10 @@ public final class Stt {
         getLanguageCodeBytes(int index);
   }
   /**
+   * <pre>
+   * Type of restriction for the list of languages expected in the incoming speech stream.
+   * </pre>
+   *
    * Protobuf type {@code speechkit.stt.v3.LanguageRestrictionOptions}
    */
   public static final class LanguageRestrictionOptions extends
@@ -6087,10 +6091,18 @@ public final class Stt {
        */
       LANGUAGE_RESTRICTION_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * The allowing list. The incoming audio can contain only the listed languages.
+       * </pre>
+       *
        * <code>WHITELIST = 1;</code>
        */
       WHITELIST(1),
       /**
+       * <pre>
+       * The forbidding list. The incoming audio cannot contain the listed languages.
+       * </pre>
+       *
        * <code>BLACKLIST = 2;</code>
        */
       BLACKLIST(2),
@@ -6102,10 +6114,18 @@ public final class Stt {
        */
       public static final int LANGUAGE_RESTRICTION_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * The allowing list. The incoming audio can contain only the listed languages.
+       * </pre>
+       *
        * <code>WHITELIST = 1;</code>
        */
       public static final int WHITELIST_VALUE = 1;
       /**
+       * <pre>
+       * The forbidding list. The incoming audio cannot contain the listed languages.
+       * </pre>
+       *
        * <code>BLACKLIST = 2;</code>
        */
       public static final int BLACKLIST_VALUE = 2;
@@ -6420,6 +6440,10 @@ public final class Stt {
       return builder;
     }
     /**
+     * <pre>
+     * Type of restriction for the list of languages expected in the incoming speech stream.
+     * </pre>
+     *
      * Protobuf type {@code speechkit.stt.v3.LanguageRestrictionOptions}
      */
     public static final class Builder extends
@@ -9933,6 +9957,10 @@ public final class Stt {
     long getDurationMs();
   }
   /**
+   * <pre>
+   * Data chunk with silence.
+   * </pre>
+   *
    * Protobuf type {@code speechkit.stt.v3.SilenceChunk}
    */
   public static final class SilenceChunk extends
@@ -10186,6 +10214,10 @@ public final class Stt {
       return builder;
     }
     /**
+     * <pre>
+     * Data chunk with silence.
+     * </pre>
+     *
      * Protobuf type {@code speechkit.stt.v3.SilenceChunk}
      */
     public static final class Builder extends
@@ -10859,7 +10891,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Session options. should be first message from user
+     * Session options. Should be the first message from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -10868,7 +10900,7 @@ public final class Stt {
     boolean hasSessionOptions();
     /**
      * <pre>
-     * Session options. should be first message from user
+     * Session options. Should be the first message from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -10877,7 +10909,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions getSessionOptions();
     /**
      * <pre>
-     * Session options. should be first message from user
+     * Session options. Should be the first message from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -10940,7 +10972,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Request to end current utterance. Works only with external EoU detector.
+     * Request to end current utterance. Works only with external EOU detector.
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -10949,7 +10981,7 @@ public final class Stt {
     boolean hasEou();
     /**
      * <pre>
-     * Request to end current utterance. Works only with external EoU detector.
+     * Request to end current utterance. Works only with external EOU detector.
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -10958,7 +10990,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.Eou getEou();
     /**
      * <pre>
-     * Request to end current utterance. Works only with external EoU detector.
+     * Request to end current utterance. Works only with external EOU detector.
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -11155,7 +11187,7 @@ public final class Stt {
     public static final int SESSION_OPTIONS_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Session options. should be first message from user
+     * Session options. Should be the first message from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11167,7 +11199,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Session options. should be first message from user
+     * Session options. Should be the first message from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11182,7 +11214,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Session options. should be first message from user
+     * Session options. Should be the first message from user.
      * </pre>
      *
      * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11284,7 +11316,7 @@ public final class Stt {
     public static final int EOU_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Request to end current utterance. Works only with external EoU detector.
+     * Request to end current utterance. Works only with external EOU detector.
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -11296,7 +11328,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Request to end current utterance. Works only with external EoU detector.
+     * Request to end current utterance. Works only with external EOU detector.
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -11311,7 +11343,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Request to end current utterance. Works only with external EoU detector.
+     * Request to end current utterance. Works only with external EOU detector.
      * </pre>
      *
      * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -11756,7 +11788,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions, yandex.cloud.api.ai.stt.v3.Stt.StreamingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.StreamingOptionsOrBuilder> sessionOptionsBuilder_;
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11768,7 +11800,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11790,7 +11822,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11810,7 +11842,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11828,7 +11860,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11854,7 +11886,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11877,7 +11909,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11887,7 +11919,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -11905,7 +11937,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Session options. should be first message from user
+       * Session options. Should be the first message from user.
        * </pre>
        *
        * <code>.speechkit.stt.v3.StreamingOptions session_options = 1;</code>
@@ -12287,7 +12319,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.Eou, yandex.cloud.api.ai.stt.v3.Stt.Eou.Builder, yandex.cloud.api.ai.stt.v3.Stt.EouOrBuilder> eouBuilder_;
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12299,7 +12331,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12321,7 +12353,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12341,7 +12373,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12359,7 +12391,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12385,7 +12417,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12408,7 +12440,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12418,7 +12450,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12436,7 +12468,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Request to end current utterance. Works only with external EoU detector.
+       * Request to end current utterance. Works only with external EOU detector.
        * </pre>
        *
        * <code>.speechkit.stt.v3.Eou eou = 4;</code>
@@ -12538,7 +12570,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Estimation of word start time in ms
+     *  Estimation of word start time in ms.
      * </pre>
      *
      * <code>int64 start_time_ms = 2;</code>
@@ -12548,7 +12580,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Estimation of word end time in ms
+     *  Estimation of word end time in ms.
      * </pre>
      *
      * <code>int64 end_time_ms = 3;</code>
@@ -12704,7 +12736,7 @@ public final class Stt {
     private long startTimeMs_;
     /**
      * <pre>
-     *  Estimation of word start time in ms
+     *  Estimation of word start time in ms.
      * </pre>
      *
      * <code>int64 start_time_ms = 2;</code>
@@ -12719,7 +12751,7 @@ public final class Stt {
     private long endTimeMs_;
     /**
      * <pre>
-     *  Estimation of word end time in ms
+     *  Estimation of word end time in ms.
      * </pre>
      *
      * <code>int64 end_time_ms = 3;</code>
@@ -13171,7 +13203,7 @@ public final class Stt {
       private long startTimeMs_ ;
       /**
        * <pre>
-       *  Estimation of word start time in ms
+       *  Estimation of word start time in ms.
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
@@ -13183,7 +13215,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word start time in ms
+       *  Estimation of word start time in ms.
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
@@ -13198,7 +13230,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word start time in ms
+       *  Estimation of word start time in ms.
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
@@ -13214,7 +13246,7 @@ public final class Stt {
       private long endTimeMs_ ;
       /**
        * <pre>
-       *  Estimation of word end time in ms
+       *  Estimation of word end time in ms.
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
@@ -13226,7 +13258,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word end time in ms
+       *  Estimation of word end time in ms.
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
@@ -13241,7 +13273,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word end time in ms
+       *  Estimation of word end time in ms.
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
@@ -13311,11 +13343,19 @@ public final class Stt {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Language code in ISO 639-1 format.
+     * </pre>
+     *
      * <code>string language_code = 1;</code>
      * @return The languageCode.
      */
     java.lang.String getLanguageCode();
     /**
+     * <pre>
+     * Language code in ISO 639-1 format.
+     * </pre>
+     *
      * <code>string language_code = 1;</code>
      * @return The bytes for languageCode.
      */
@@ -13323,6 +13363,10 @@ public final class Stt {
         getLanguageCodeBytes();
 
     /**
+     * <pre>
+     * Estimation of language probability.
+     * </pre>
+     *
      * <code>double probability = 2;</code>
      * @return The probability.
      */
@@ -13330,7 +13374,7 @@ public final class Stt {
   }
   /**
    * <pre>
-   * Estimation of language probability
+   * Estimation of language and its probability.
    * </pre>
    *
    * Protobuf type {@code speechkit.stt.v3.LanguageEstimation}
@@ -13424,6 +13468,10 @@ public final class Stt {
     public static final int LANGUAGE_CODE_FIELD_NUMBER = 1;
     private volatile java.lang.Object languageCode_;
     /**
+     * <pre>
+     * Language code in ISO 639-1 format.
+     * </pre>
+     *
      * <code>string language_code = 1;</code>
      * @return The languageCode.
      */
@@ -13441,6 +13489,10 @@ public final class Stt {
       }
     }
     /**
+     * <pre>
+     * Language code in ISO 639-1 format.
+     * </pre>
+     *
      * <code>string language_code = 1;</code>
      * @return The bytes for languageCode.
      */
@@ -13462,6 +13514,10 @@ public final class Stt {
     public static final int PROBABILITY_FIELD_NUMBER = 2;
     private double probability_;
     /**
+     * <pre>
+     * Estimation of language probability.
+     * </pre>
+     *
      * <code>double probability = 2;</code>
      * @return The probability.
      */
@@ -13639,7 +13695,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Estimation of language probability
+     * Estimation of language and its probability.
      * </pre>
      *
      * Protobuf type {@code speechkit.stt.v3.LanguageEstimation}
@@ -13797,6 +13853,10 @@ public final class Stt {
 
       private java.lang.Object languageCode_ = "";
       /**
+       * <pre>
+       * Language code in ISO 639-1 format.
+       * </pre>
+       *
        * <code>string language_code = 1;</code>
        * @return The languageCode.
        */
@@ -13813,6 +13873,10 @@ public final class Stt {
         }
       }
       /**
+       * <pre>
+       * Language code in ISO 639-1 format.
+       * </pre>
+       *
        * <code>string language_code = 1;</code>
        * @return The bytes for languageCode.
        */
@@ -13830,6 +13894,10 @@ public final class Stt {
         }
       }
       /**
+       * <pre>
+       * Language code in ISO 639-1 format.
+       * </pre>
+       *
        * <code>string language_code = 1;</code>
        * @param value The languageCode to set.
        * @return This builder for chaining.
@@ -13845,6 +13913,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * Language code in ISO 639-1 format.
+       * </pre>
+       *
        * <code>string language_code = 1;</code>
        * @return This builder for chaining.
        */
@@ -13855,6 +13927,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * Language code in ISO 639-1 format.
+       * </pre>
+       *
        * <code>string language_code = 1;</code>
        * @param value The bytes for languageCode to set.
        * @return This builder for chaining.
@@ -13873,6 +13949,10 @@ public final class Stt {
 
       private double probability_ ;
       /**
+       * <pre>
+       * Estimation of language probability.
+       * </pre>
+       *
        * <code>double probability = 2;</code>
        * @return The probability.
        */
@@ -13881,6 +13961,10 @@ public final class Stt {
         return probability_;
       }
       /**
+       * <pre>
+       * Estimation of language probability.
+       * </pre>
+       *
        * <code>double probability = 2;</code>
        * @param value The probability to set.
        * @return This builder for chaining.
@@ -13892,6 +13976,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * Estimation of language probability.
+       * </pre>
+       *
        * <code>double probability = 2;</code>
        * @return This builder for chaining.
        */
@@ -13960,7 +14048,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -13969,7 +14057,7 @@ public final class Stt {
         getWordsList();
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -13977,7 +14065,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.Word getWords(int index);
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -13985,7 +14073,7 @@ public final class Stt {
     int getWordsCount();
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -13994,7 +14082,7 @@ public final class Stt {
         getWordsOrBuilderList();
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14004,7 +14092,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Text in time frame.
+     * Text in time frame.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -14013,7 +14101,7 @@ public final class Stt {
     java.lang.String getText();
     /**
      * <pre>
-     *  Text in time frame.
+     * Text in time frame.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -14044,7 +14132,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Hypothesis confidence. Currently is not used.
+     * The hypothesis confidence. Currently is not used.
      * </pre>
      *
      * <code>double confidence = 5;</code>
@@ -14054,7 +14142,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14063,7 +14151,7 @@ public final class Stt {
         getLanguagesList();
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14071,7 +14159,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation getLanguages(int index);
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14079,7 +14167,7 @@ public final class Stt {
     int getLanguagesCount();
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14088,7 +14176,7 @@ public final class Stt {
         getLanguagesOrBuilderList();
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14230,7 +14318,7 @@ public final class Stt {
     private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.Word> words_;
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14241,7 +14329,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14253,7 +14341,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14264,7 +14352,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14275,7 +14363,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Words in time frame.
+     * Words in time frame.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14290,7 +14378,7 @@ public final class Stt {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     *  Text in time frame.
+     * Text in time frame.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -14311,7 +14399,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Text in time frame.
+     * Text in time frame.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -14366,7 +14454,7 @@ public final class Stt {
     private double confidence_;
     /**
      * <pre>
-     * Hypothesis confidence. Currently is not used.
+     * The hypothesis confidence. Currently is not used.
      * </pre>
      *
      * <code>double confidence = 5;</code>
@@ -14381,7 +14469,7 @@ public final class Stt {
     private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.LanguageEstimation> languages_;
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14392,7 +14480,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14404,7 +14492,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14415,7 +14503,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14426,7 +14514,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Distribution over possible languages
+     * Distribution over possible languages.
      * </pre>
      *
      * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -14924,7 +15012,7 @@ public final class Stt {
 
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14938,7 +15026,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14952,7 +15040,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14966,7 +15054,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -14987,7 +15075,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15005,7 +15093,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15025,7 +15113,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15046,7 +15134,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15064,7 +15152,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15082,7 +15170,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15101,7 +15189,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15118,7 +15206,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15135,7 +15223,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15146,7 +15234,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15160,7 +15248,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15175,7 +15263,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15186,7 +15274,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15198,7 +15286,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Words in time frame.
+       * Words in time frame.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.Word words = 1;</code>
@@ -15225,7 +15313,7 @@ public final class Stt {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       *  Text in time frame.
+       * Text in time frame.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -15245,7 +15333,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text in time frame.
+       * Text in time frame.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -15266,7 +15354,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text in time frame.
+       * Text in time frame.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -15285,7 +15373,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text in time frame.
+       * Text in time frame.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -15299,7 +15387,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text in time frame.
+       * Text in time frame.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -15407,7 +15495,7 @@ public final class Stt {
       private double confidence_ ;
       /**
        * <pre>
-       * Hypothesis confidence. Currently is not used.
+       * The hypothesis confidence. Currently is not used.
        * </pre>
        *
        * <code>double confidence = 5;</code>
@@ -15419,7 +15507,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Hypothesis confidence. Currently is not used.
+       * The hypothesis confidence. Currently is not used.
        * </pre>
        *
        * <code>double confidence = 5;</code>
@@ -15434,7 +15522,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Hypothesis confidence. Currently is not used.
+       * The hypothesis confidence. Currently is not used.
        * </pre>
        *
        * <code>double confidence = 5;</code>
@@ -15461,7 +15549,7 @@ public final class Stt {
 
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15475,7 +15563,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15489,7 +15577,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15503,7 +15591,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15524,7 +15612,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15542,7 +15630,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15562,7 +15650,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15583,7 +15671,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15601,7 +15689,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15619,7 +15707,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15638,7 +15726,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15655,7 +15743,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15672,7 +15760,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15683,7 +15771,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15697,7 +15785,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15712,7 +15800,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15723,7 +15811,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15735,7 +15823,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * Distribution over possible languages
+       * Distribution over possible languages.
        * </pre>
        *
        * <code>repeated .speechkit.stt.v3.LanguageEstimation languages = 6;</code>
@@ -15817,7 +15905,7 @@ public final class Stt {
 
     /**
      * <pre>
-     * End of utterance estimated time.
+     * EOU estimated time.
      * </pre>
      *
      * <code>int64 time_ms = 2;</code>
@@ -15827,7 +15915,7 @@ public final class Stt {
   }
   /**
    * <pre>
-   * Update information from
+   * Update information for external End of Utterance.
    * </pre>
    *
    * Protobuf type {@code speechkit.stt.v3.EouUpdate}
@@ -15915,7 +16003,7 @@ public final class Stt {
     private long timeMs_;
     /**
      * <pre>
-     * End of utterance estimated time.
+     * EOU estimated time.
      * </pre>
      *
      * <code>int64 time_ms = 2;</code>
@@ -16084,7 +16172,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     * Update information from
+     * Update information for external End of Utterance.
      * </pre>
      *
      * Protobuf type {@code speechkit.stt.v3.EouUpdate}
@@ -16236,7 +16324,7 @@ public final class Stt {
       private long timeMs_ ;
       /**
        * <pre>
-       * End of utterance estimated time.
+       * EOU estimated time.
        * </pre>
        *
        * <code>int64 time_ms = 2;</code>
@@ -16248,7 +16336,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * End of utterance estimated time.
+       * EOU estimated time.
        * </pre>
        *
        * <code>int64 time_ms = 2;</code>
@@ -16263,7 +16351,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       * End of utterance estimated time.
+       * EOU estimated time.
        * </pre>
        *
        * <code>int64 time_ms = 2;</code>

@@ -16243,7 +16243,7 @@ public final class FunctionServiceOuterClass {
 
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -16252,7 +16252,7 @@ public final class FunctionServiceOuterClass {
         getSecretsList();
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -16260,7 +16260,7 @@ public final class FunctionServiceOuterClass {
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getSecrets(int index);
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -16268,7 +16268,7 @@ public final class FunctionServiceOuterClass {
     int getSecretsCount();
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -16277,7 +16277,7 @@ public final class FunctionServiceOuterClass {
         getSecretsOrBuilderList();
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -17310,7 +17310,7 @@ public final class FunctionServiceOuterClass {
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> secrets_;
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -17321,7 +17321,7 @@ public final class FunctionServiceOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -17333,7 +17333,7 @@ public final class FunctionServiceOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -17344,7 +17344,7 @@ public final class FunctionServiceOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -17355,7 +17355,7 @@ public final class FunctionServiceOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -19903,7 +19903,7 @@ public final class FunctionServiceOuterClass {
 
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -19917,7 +19917,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -19931,7 +19931,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -19945,7 +19945,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -19966,7 +19966,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -19984,7 +19984,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20004,7 +20004,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20025,7 +20025,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20043,7 +20043,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20061,7 +20061,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20080,7 +20080,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20097,7 +20097,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20114,7 +20114,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20125,7 +20125,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20139,7 +20139,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20154,7 +20154,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20165,7 +20165,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>
@@ -20177,7 +20177,7 @@ public final class FunctionServiceOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 18;</code>

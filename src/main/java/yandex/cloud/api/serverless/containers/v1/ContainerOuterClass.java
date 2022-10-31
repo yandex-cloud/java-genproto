@@ -19,11 +19,19 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the container. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class ContainerOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the container belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the container belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -43,26 +59,46 @@ public final class ContainerOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp for the container.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the container.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the container.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Name of the container. The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the container. The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The bytes for name.
      */
@@ -70,11 +106,19 @@ public final class ContainerOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The bytes for description.
      */
@@ -82,10 +126,18 @@ public final class ContainerOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -97,11 +149,19 @@ public final class ContainerOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -109,6 +169,10 @@ public final class ContainerOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -116,11 +180,19 @@ public final class ContainerOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * URL that needs to be requested to call the container.
+     * </pre>
+     *
      * <code>string url = 8;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL that needs to be requested to call the container.
+     * </pre>
+     *
      * <code>string url = 8;</code>
      * @return The bytes for url.
      */
@@ -128,11 +200,19 @@ public final class ContainerOuterClass {
         getUrlBytes();
 
     /**
+     * <pre>
+     * Status of the container.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the container.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
      * @return The status.
      */
@@ -306,18 +386,34 @@ public final class ContainerOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Container is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * Container is ready for use.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * Container is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 3;</code>
        */
       DELETING(3),
       /**
+       * <pre>
+       * Container failed. The only allowed action is delete.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       ERROR(4),
@@ -329,18 +425,34 @@ public final class ContainerOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Container is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * Container is ready for use.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * Container is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 3;</code>
        */
       public static final int DELETING_VALUE = 3;
       /**
+       * <pre>
+       * Container failed. The only allowed action is delete.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       public static final int ERROR_VALUE = 4;
@@ -434,6 +546,10 @@ public final class ContainerOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the container. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -451,6 +567,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -472,6 +592,10 @@ public final class ContainerOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the container belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -489,6 +613,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the container belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -510,6 +638,10 @@ public final class ContainerOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp for the container.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -518,6 +650,10 @@ public final class ContainerOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp for the container.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
@@ -526,6 +662,10 @@ public final class ContainerOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp for the container.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
@@ -536,6 +676,10 @@ public final class ContainerOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the container. The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The name.
      */
@@ -553,6 +697,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the container. The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The bytes for name.
      */
@@ -574,6 +722,10 @@ public final class ContainerOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The description.
      */
@@ -591,6 +743,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The bytes for description.
      */
@@ -636,6 +792,10 @@ public final class ContainerOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -654,6 +814,10 @@ public final class ContainerOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -662,6 +826,10 @@ public final class ContainerOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -675,6 +843,10 @@ public final class ContainerOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
@@ -693,6 +865,10 @@ public final class ContainerOuterClass {
     public static final int URL_FIELD_NUMBER = 8;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL that needs to be requested to call the container.
+     * </pre>
+     *
      * <code>string url = 8;</code>
      * @return The url.
      */
@@ -710,6 +886,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL that needs to be requested to call the container.
+     * </pre>
+     *
      * <code>string url = 8;</code>
      * @return The bytes for url.
      */
@@ -731,6 +911,10 @@ public final class ContainerOuterClass {
     public static final int STATUS_FIELD_NUMBER = 9;
     private int status_;
     /**
+     * <pre>
+     * Status of the container.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -738,6 +922,10 @@ public final class ContainerOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the container.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
      * @return The status.
      */
@@ -1216,6 +1404,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the container. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1232,6 +1424,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1249,6 +1445,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1264,6 +1464,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1274,6 +1478,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1292,6 +1500,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the container belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -1308,6 +1520,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the container belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -1325,6 +1541,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the container belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1340,6 +1560,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the container belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1350,6 +1574,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the container belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1370,6 +1598,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1377,6 +1609,10 @@ public final class ContainerOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return The createdAt.
        */
@@ -1388,6 +1624,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1404,6 +1644,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1418,6 +1662,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1436,6 +1684,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1450,6 +1702,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1458,6 +1714,10 @@ public final class ContainerOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1469,6 +1729,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the container.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1487,6 +1751,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the container. The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @return The name.
        */
@@ -1503,6 +1771,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the container. The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @return The bytes for name.
        */
@@ -1520,6 +1792,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the container. The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1535,6 +1811,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the container. The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @return This builder for chaining.
        */
@@ -1545,6 +1825,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the container. The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1563,6 +1847,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return The description.
        */
@@ -1579,6 +1867,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return The bytes for description.
        */
@@ -1596,6 +1888,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1611,6 +1907,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return This builder for chaining.
        */
@@ -1621,6 +1921,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1664,6 +1968,10 @@ public final class ContainerOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1682,6 +1990,10 @@ public final class ContainerOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1690,6 +2002,10 @@ public final class ContainerOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1703,6 +2019,10 @@ public final class ContainerOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
@@ -1724,6 +2044,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1743,6 +2067,10 @@ public final class ContainerOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1758,6 +2086,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1770,6 +2102,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL that needs to be requested to call the container.
+       * </pre>
+       *
        * <code>string url = 8;</code>
        * @return The url.
        */
@@ -1786,6 +2122,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL that needs to be requested to call the container.
+       * </pre>
+       *
        * <code>string url = 8;</code>
        * @return The bytes for url.
        */
@@ -1803,6 +2143,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL that needs to be requested to call the container.
+       * </pre>
+       *
        * <code>string url = 8;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -1818,6 +2162,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL that needs to be requested to call the container.
+       * </pre>
+       *
        * <code>string url = 8;</code>
        * @return This builder for chaining.
        */
@@ -1828,6 +2176,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL that needs to be requested to call the container.
+       * </pre>
+       *
        * <code>string url = 8;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -1846,6 +2198,10 @@ public final class ContainerOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the container.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -1853,6 +2209,10 @@ public final class ContainerOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the container.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -1864,6 +2224,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the container.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
        * @return The status.
        */
@@ -1874,6 +2238,10 @@ public final class ContainerOuterClass {
         return result == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the container.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -1888,6 +2256,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the container.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Container.Status status = 9;</code>
        * @return This builder for chaining.
        */
@@ -1955,11 +2327,19 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the revision.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the revision.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -1967,11 +2347,19 @@ public final class ContainerOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the container that the revision belongs to.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container that the revision belongs to.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The bytes for containerId.
      */
@@ -1979,11 +2367,19 @@ public final class ContainerOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -1991,77 +2387,140 @@ public final class ContainerOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Creation timestamp for the revision.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the revision.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the revision.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
      * @return Whether the image field is set.
      */
     boolean hasImage();
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
      * @return The image.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image getImage();
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ImageOrBuilder getImageOrBuilder();
 
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
      * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
      * @return The resources.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources getResources();
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
 
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 7;</code>
      * @return Whether the executionTimeout field is set.
      */
     boolean hasExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 7;</code>
      * @return The executionTimeout.
      */
     com.google.protobuf.Duration getExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 7;</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * The number of concurrent requests allowed per container instance.
+     * </pre>
+     *
      * <code>int64 concurrency = 8;</code>
      * @return The concurrency.
      */
     long getConcurrency();
 
     /**
+     * <pre>
+     * ID of the service account associated with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 9;</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * ID of the service account associated with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 9;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -2069,66 +2528,121 @@ public final class ContainerOuterClass {
         getServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * Status of the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
      * @return The status.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Status getStatus();
 
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> 
         getSecretsList();
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index);
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     int getSecretsCount();
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
         getSecretsOrBuilderList();
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
      * @return Whether the connectivity field is set.
      */
     boolean hasConnectivity();
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
      * @return The connectivity.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getConnectivity();
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder();
 
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      * @return Whether the provisionPolicy field is set.
      */
     boolean hasProvisionPolicy();
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      * @return The provisionPolicy.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy getProvisionPolicy();
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder getProvisionPolicyOrBuilder();
@@ -2352,14 +2866,26 @@ public final class ContainerOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Revision is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * Revision is currently used by the container.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * Revision is not used by the container. May be deleted later.
+       * </pre>
+       *
        * <code>OBSOLETE = 3;</code>
        */
       OBSOLETE(3),
@@ -2371,14 +2897,26 @@ public final class ContainerOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Revision is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * Revision is currently used by the container.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * Revision is not used by the container. May be deleted later.
+       * </pre>
+       *
        * <code>OBSOLETE = 3;</code>
        */
       public static final int OBSOLETE_VALUE = 3;
@@ -2471,6 +3009,10 @@ public final class ContainerOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the revision.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -2488,6 +3030,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the revision.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -2509,6 +3055,10 @@ public final class ContainerOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container that the revision belongs to.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The containerId.
      */
@@ -2526,6 +3076,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container that the revision belongs to.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The bytes for containerId.
      */
@@ -2547,6 +3101,10 @@ public final class ContainerOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -2564,6 +3122,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -2585,6 +3147,10 @@ public final class ContainerOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp for the revision.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return Whether the createdAt field is set.
      */
@@ -2593,6 +3159,10 @@ public final class ContainerOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp for the revision.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return The createdAt.
      */
@@ -2601,6 +3171,10 @@ public final class ContainerOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp for the revision.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     @java.lang.Override
@@ -2611,6 +3185,10 @@ public final class ContainerOuterClass {
     public static final int IMAGE_FIELD_NUMBER = 5;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image image_;
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
      * @return Whether the image field is set.
      */
@@ -2619,6 +3197,10 @@ public final class ContainerOuterClass {
       return image_ != null;
     }
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
      * @return The image.
      */
@@ -2627,6 +3209,10 @@ public final class ContainerOuterClass {
       return image_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image.getDefaultInstance() : image_;
     }
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
      */
     @java.lang.Override
@@ -2637,6 +3223,10 @@ public final class ContainerOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 6;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources resources_;
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
      * @return Whether the resources field is set.
      */
@@ -2645,6 +3235,10 @@ public final class ContainerOuterClass {
       return resources_ != null;
     }
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
      * @return The resources.
      */
@@ -2653,6 +3247,10 @@ public final class ContainerOuterClass {
       return resources_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources.getDefaultInstance() : resources_;
     }
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
      */
     @java.lang.Override
@@ -2663,6 +3261,11 @@ public final class ContainerOuterClass {
     public static final int EXECUTION_TIMEOUT_FIELD_NUMBER = 7;
     private com.google.protobuf.Duration executionTimeout_;
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 7;</code>
      * @return Whether the executionTimeout field is set.
      */
@@ -2671,6 +3274,11 @@ public final class ContainerOuterClass {
       return executionTimeout_ != null;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 7;</code>
      * @return The executionTimeout.
      */
@@ -2679,6 +3287,11 @@ public final class ContainerOuterClass {
       return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 7;</code>
      */
     @java.lang.Override
@@ -2689,6 +3302,10 @@ public final class ContainerOuterClass {
     public static final int CONCURRENCY_FIELD_NUMBER = 8;
     private long concurrency_;
     /**
+     * <pre>
+     * The number of concurrent requests allowed per container instance.
+     * </pre>
+     *
      * <code>int64 concurrency = 8;</code>
      * @return The concurrency.
      */
@@ -2700,6 +3317,10 @@ public final class ContainerOuterClass {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 9;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * ID of the service account associated with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 9;</code>
      * @return The serviceAccountId.
      */
@@ -2717,6 +3338,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the service account associated with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 9;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -2738,6 +3363,10 @@ public final class ContainerOuterClass {
     public static final int STATUS_FIELD_NUMBER = 10;
     private int status_;
     /**
+     * <pre>
+     * Status of the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -2745,6 +3374,10 @@ public final class ContainerOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
      * @return The status.
      */
@@ -2757,6 +3390,10 @@ public final class ContainerOuterClass {
     public static final int SECRETS_FIELD_NUMBER = 11;
     private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> secrets_;
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     @java.lang.Override
@@ -2764,6 +3401,10 @@ public final class ContainerOuterClass {
       return secrets_;
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     @java.lang.Override
@@ -2772,6 +3413,10 @@ public final class ContainerOuterClass {
       return secrets_;
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     @java.lang.Override
@@ -2779,6 +3424,10 @@ public final class ContainerOuterClass {
       return secrets_.size();
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     @java.lang.Override
@@ -2786,6 +3435,10 @@ public final class ContainerOuterClass {
       return secrets_.get(index);
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
      */
     @java.lang.Override
@@ -2797,6 +3450,10 @@ public final class ContainerOuterClass {
     public static final int CONNECTIVITY_FIELD_NUMBER = 12;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity connectivity_;
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
      * @return Whether the connectivity field is set.
      */
@@ -2805,6 +3462,10 @@ public final class ContainerOuterClass {
       return connectivity_ != null;
     }
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
      * @return The connectivity.
      */
@@ -2813,6 +3474,10 @@ public final class ContainerOuterClass {
       return connectivity_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance() : connectivity_;
     }
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
      */
     @java.lang.Override
@@ -2823,6 +3488,11 @@ public final class ContainerOuterClass {
     public static final int PROVISION_POLICY_FIELD_NUMBER = 13;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy provisionPolicy_;
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      * @return Whether the provisionPolicy field is set.
      */
@@ -2831,6 +3501,11 @@ public final class ContainerOuterClass {
       return provisionPolicy_ != null;
     }
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      * @return The provisionPolicy.
      */
@@ -2839,6 +3514,11 @@ public final class ContainerOuterClass {
       return provisionPolicy_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy.getDefaultInstance() : provisionPolicy_;
     }
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      */
     @java.lang.Override
@@ -3472,6 +4152,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the revision.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -3488,6 +4172,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -3505,6 +4193,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -3520,6 +4212,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3530,6 +4226,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -3548,6 +4248,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container that the revision belongs to.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return The containerId.
        */
@@ -3564,6 +4268,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that the revision belongs to.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return The bytes for containerId.
        */
@@ -3581,6 +4289,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that the revision belongs to.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -3596,6 +4308,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that the revision belongs to.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -3606,6 +4322,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that the revision belongs to.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -3624,6 +4344,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -3640,6 +4364,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -3657,6 +4385,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3672,6 +4404,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -3682,6 +4418,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3702,6 +4442,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        * @return Whether the createdAt field is set.
        */
@@ -3709,6 +4453,10 @@ public final class ContainerOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        * @return The createdAt.
        */
@@ -3720,6 +4468,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -3736,6 +4488,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(
@@ -3750,6 +4506,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -3768,6 +4528,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder clearCreatedAt() {
@@ -3782,6 +4546,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -3790,6 +4558,10 @@ public final class ContainerOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -3801,6 +4573,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the revision.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3821,6 +4597,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ImageOrBuilder> imageBuilder_;
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        * @return Whether the image field is set.
        */
@@ -3828,6 +4608,10 @@ public final class ContainerOuterClass {
         return imageBuilder_ != null || image_ != null;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        * @return The image.
        */
@@ -3839,6 +4623,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       public Builder setImage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image value) {
@@ -3855,6 +4643,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       public Builder setImage(
@@ -3869,6 +4661,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       public Builder mergeImage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image value) {
@@ -3887,6 +4683,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       public Builder clearImage() {
@@ -3901,6 +4701,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Image.Builder getImageBuilder() {
@@ -3909,6 +4713,10 @@ public final class ContainerOuterClass {
         return getImageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ImageOrBuilder getImageOrBuilder() {
@@ -3920,6 +4728,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Image image = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3940,6 +4752,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        * @return Whether the resources field is set.
        */
@@ -3947,6 +4763,10 @@ public final class ContainerOuterClass {
         return resourcesBuilder_ != null || resources_ != null;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        * @return The resources.
        */
@@ -3958,6 +4778,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       public Builder setResources(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources value) {
@@ -3974,6 +4798,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       public Builder setResources(
@@ -3988,6 +4816,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       public Builder mergeResources(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources value) {
@@ -4006,6 +4838,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       public Builder clearResources() {
@@ -4020,6 +4856,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources.Builder getResourcesBuilder() {
@@ -4028,6 +4868,10 @@ public final class ContainerOuterClass {
         return getResourcesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -4039,6 +4883,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4059,6 +4907,11 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> executionTimeoutBuilder_;
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        * @return Whether the executionTimeout field is set.
        */
@@ -4066,6 +4919,11 @@ public final class ContainerOuterClass {
         return executionTimeoutBuilder_ != null || executionTimeout_ != null;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        * @return The executionTimeout.
        */
@@ -4077,6 +4935,11 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
@@ -4093,6 +4956,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       public Builder setExecutionTimeout(
@@ -4107,6 +4975,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
@@ -4125,6 +4998,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       public Builder clearExecutionTimeout() {
@@ -4139,6 +5017,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
@@ -4147,6 +5030,11 @@ public final class ContainerOuterClass {
         return getExecutionTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -4158,6 +5046,11 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4176,6 +5069,10 @@ public final class ContainerOuterClass {
 
       private long concurrency_ ;
       /**
+       * <pre>
+       * The number of concurrent requests allowed per container instance.
+       * </pre>
+       *
        * <code>int64 concurrency = 8;</code>
        * @return The concurrency.
        */
@@ -4184,6 +5081,10 @@ public final class ContainerOuterClass {
         return concurrency_;
       }
       /**
+       * <pre>
+       * The number of concurrent requests allowed per container instance.
+       * </pre>
+       *
        * <code>int64 concurrency = 8;</code>
        * @param value The concurrency to set.
        * @return This builder for chaining.
@@ -4195,6 +5096,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The number of concurrent requests allowed per container instance.
+       * </pre>
+       *
        * <code>int64 concurrency = 8;</code>
        * @return This builder for chaining.
        */
@@ -4207,6 +5112,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * ID of the service account associated with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 9;</code>
        * @return The serviceAccountId.
        */
@@ -4223,6 +5132,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account associated with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 9;</code>
        * @return The bytes for serviceAccountId.
        */
@@ -4240,6 +5153,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account associated with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 9;</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
@@ -4255,6 +5172,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account associated with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 9;</code>
        * @return This builder for chaining.
        */
@@ -4265,6 +5186,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account associated with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 9;</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
@@ -4283,6 +5208,10 @@ public final class ContainerOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -4290,6 +5219,10 @@ public final class ContainerOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -4301,6 +5234,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
        * @return The status.
        */
@@ -4311,6 +5248,10 @@ public final class ContainerOuterClass {
         return result == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -4325,6 +5266,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Revision.Status status = 10;</code>
        * @return This builder for chaining.
        */
@@ -4348,6 +5293,10 @@ public final class ContainerOuterClass {
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> secretsBuilder_;
 
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> getSecretsList() {
@@ -4358,6 +5307,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public int getSecretsCount() {
@@ -4368,6 +5321,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index) {
@@ -4378,6 +5335,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder setSecrets(
@@ -4395,6 +5356,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder setSecrets(
@@ -4409,6 +5374,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder addSecrets(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret value) {
@@ -4425,6 +5394,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder addSecrets(
@@ -4442,6 +5415,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder addSecrets(
@@ -4456,6 +5433,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder addSecrets(
@@ -4470,6 +5451,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder addAllSecrets(
@@ -4485,6 +5470,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder clearSecrets() {
@@ -4498,6 +5487,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public Builder removeSecrets(int index) {
@@ -4511,6 +5504,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder getSecretsBuilder(
@@ -4518,6 +5515,10 @@ public final class ContainerOuterClass {
         return getSecretsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
@@ -4528,6 +5529,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
@@ -4539,6 +5544,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder addSecretsBuilder() {
@@ -4546,6 +5555,10 @@ public final class ContainerOuterClass {
             yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder addSecretsBuilder(
@@ -4554,6 +5567,10 @@ public final class ContainerOuterClass {
             index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 11;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder> 
@@ -4579,6 +5596,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder> connectivityBuilder_;
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        * @return Whether the connectivity field is set.
        */
@@ -4586,6 +5607,10 @@ public final class ContainerOuterClass {
         return connectivityBuilder_ != null || connectivity_ != null;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        * @return The connectivity.
        */
@@ -4597,6 +5622,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       public Builder setConnectivity(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity value) {
@@ -4613,6 +5642,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       public Builder setConnectivity(
@@ -4627,6 +5660,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       public Builder mergeConnectivity(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity value) {
@@ -4645,6 +5682,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       public Builder clearConnectivity() {
@@ -4659,6 +5700,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder getConnectivityBuilder() {
@@ -4667,6 +5712,10 @@ public final class ContainerOuterClass {
         return getConnectivityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder() {
@@ -4678,6 +5727,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4698,6 +5751,11 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder> provisionPolicyBuilder_;
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        * @return Whether the provisionPolicy field is set.
        */
@@ -4705,6 +5763,11 @@ public final class ContainerOuterClass {
         return provisionPolicyBuilder_ != null || provisionPolicy_ != null;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        * @return The provisionPolicy.
        */
@@ -4716,6 +5779,11 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       public Builder setProvisionPolicy(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy value) {
@@ -4732,6 +5800,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       public Builder setProvisionPolicy(
@@ -4746,6 +5819,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       public Builder mergeProvisionPolicy(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy value) {
@@ -4764,6 +5842,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       public Builder clearProvisionPolicy() {
@@ -4778,6 +5861,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy.Builder getProvisionPolicyBuilder() {
@@ -4786,6 +5874,11 @@ public final class ContainerOuterClass {
         return getProvisionPolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder getProvisionPolicyOrBuilder() {
@@ -4797,6 +5890,11 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4870,11 +5968,19 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1;</code>
      * @return The imageUrl.
      */
     java.lang.String getImageUrl();
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1;</code>
      * @return The bytes for imageUrl.
      */
@@ -4882,11 +5988,19 @@ public final class ContainerOuterClass {
         getImageUrlBytes();
 
     /**
+     * <pre>
+     * Digest of the image. Calculated at creation time.
+     * </pre>
+     *
      * <code>string image_digest = 2;</code>
      * @return The imageDigest.
      */
     java.lang.String getImageDigest();
     /**
+     * <pre>
+     * Digest of the image. Calculated at creation time.
+     * </pre>
+     *
      * <code>string image_digest = 2;</code>
      * @return The bytes for imageDigest.
      */
@@ -4894,40 +6008,72 @@ public final class ContainerOuterClass {
         getImageDigestBytes();
 
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
      * @return Whether the command field is set.
      */
     boolean hasCommand();
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
      * @return The command.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command getCommand();
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.CommandOrBuilder getCommandOrBuilder();
 
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
      * @return Whether the args field is set.
      */
     boolean hasArgs();
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
      * @return The args.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args getArgs();
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ArgsOrBuilder getArgsOrBuilder();
 
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getEnvironmentCount();
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsEnvironment(
@@ -4939,11 +6085,19 @@ public final class ContainerOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironment();
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironmentMap();
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4951,6 +6105,10 @@ public final class ContainerOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4958,11 +6116,19 @@ public final class ContainerOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 6;</code>
      * @return The workingDir.
      */
     java.lang.String getWorkingDir();
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 6;</code>
      * @return The bytes for workingDir.
      */
@@ -4970,6 +6136,10 @@ public final class ContainerOuterClass {
         getWorkingDirBytes();
   }
   /**
+   * <pre>
+   * Revision image specification.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Image}
    */
   public static final class Image extends
@@ -5122,6 +6292,10 @@ public final class ContainerOuterClass {
     public static final int IMAGE_URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object imageUrl_;
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1;</code>
      * @return The imageUrl.
      */
@@ -5139,6 +6313,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1;</code>
      * @return The bytes for imageUrl.
      */
@@ -5160,6 +6338,10 @@ public final class ContainerOuterClass {
     public static final int IMAGE_DIGEST_FIELD_NUMBER = 2;
     private volatile java.lang.Object imageDigest_;
     /**
+     * <pre>
+     * Digest of the image. Calculated at creation time.
+     * </pre>
+     *
      * <code>string image_digest = 2;</code>
      * @return The imageDigest.
      */
@@ -5177,6 +6359,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Digest of the image. Calculated at creation time.
+     * </pre>
+     *
      * <code>string image_digest = 2;</code>
      * @return The bytes for imageDigest.
      */
@@ -5198,6 +6384,10 @@ public final class ContainerOuterClass {
     public static final int COMMAND_FIELD_NUMBER = 3;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command command_;
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
      * @return Whether the command field is set.
      */
@@ -5206,6 +6396,10 @@ public final class ContainerOuterClass {
       return command_ != null;
     }
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
      * @return The command.
      */
@@ -5214,6 +6408,10 @@ public final class ContainerOuterClass {
       return command_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command.getDefaultInstance() : command_;
     }
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
      */
     @java.lang.Override
@@ -5224,6 +6422,10 @@ public final class ContainerOuterClass {
     public static final int ARGS_FIELD_NUMBER = 4;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args args_;
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
      * @return Whether the args field is set.
      */
@@ -5232,6 +6434,10 @@ public final class ContainerOuterClass {
       return args_ != null;
     }
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
      * @return The args.
      */
@@ -5240,6 +6446,10 @@ public final class ContainerOuterClass {
       return args_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args.getDefaultInstance() : args_;
     }
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
      */
     @java.lang.Override
@@ -5274,6 +6484,10 @@ public final class ContainerOuterClass {
       return internalGetEnvironment().getMap().size();
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5292,6 +6506,10 @@ public final class ContainerOuterClass {
       return getEnvironmentMap();
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -5300,6 +6518,10 @@ public final class ContainerOuterClass {
       return internalGetEnvironment().getMap();
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -5313,6 +6535,10 @@ public final class ContainerOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -5331,6 +6557,10 @@ public final class ContainerOuterClass {
     public static final int WORKING_DIR_FIELD_NUMBER = 6;
     private volatile java.lang.Object workingDir_;
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 6;</code>
      * @return The workingDir.
      */
@@ -5348,6 +6578,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 6;</code>
      * @return The bytes for workingDir.
      */
@@ -5595,6 +6829,10 @@ public final class ContainerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Revision image specification.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.containers.v1.Image}
      */
     public static final class Builder extends
@@ -5815,6 +7053,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object imageUrl_ = "";
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1;</code>
        * @return The imageUrl.
        */
@@ -5831,6 +7073,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1;</code>
        * @return The bytes for imageUrl.
        */
@@ -5848,6 +7094,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1;</code>
        * @param value The imageUrl to set.
        * @return This builder for chaining.
@@ -5863,6 +7113,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1;</code>
        * @return This builder for chaining.
        */
@@ -5873,6 +7127,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1;</code>
        * @param value The bytes for imageUrl to set.
        * @return This builder for chaining.
@@ -5891,6 +7149,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object imageDigest_ = "";
       /**
+       * <pre>
+       * Digest of the image. Calculated at creation time.
+       * </pre>
+       *
        * <code>string image_digest = 2;</code>
        * @return The imageDigest.
        */
@@ -5907,6 +7169,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Digest of the image. Calculated at creation time.
+       * </pre>
+       *
        * <code>string image_digest = 2;</code>
        * @return The bytes for imageDigest.
        */
@@ -5924,6 +7190,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Digest of the image. Calculated at creation time.
+       * </pre>
+       *
        * <code>string image_digest = 2;</code>
        * @param value The imageDigest to set.
        * @return This builder for chaining.
@@ -5939,6 +7209,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Digest of the image. Calculated at creation time.
+       * </pre>
+       *
        * <code>string image_digest = 2;</code>
        * @return This builder for chaining.
        */
@@ -5949,6 +7223,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Digest of the image. Calculated at creation time.
+       * </pre>
+       *
        * <code>string image_digest = 2;</code>
        * @param value The bytes for imageDigest to set.
        * @return This builder for chaining.
@@ -5969,6 +7247,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.CommandOrBuilder> commandBuilder_;
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        * @return Whether the command field is set.
        */
@@ -5976,6 +7258,10 @@ public final class ContainerOuterClass {
         return commandBuilder_ != null || command_ != null;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        * @return The command.
        */
@@ -5987,6 +7273,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       public Builder setCommand(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command value) {
@@ -6003,6 +7293,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       public Builder setCommand(
@@ -6017,6 +7311,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       public Builder mergeCommand(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command value) {
@@ -6035,6 +7333,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       public Builder clearCommand() {
@@ -6049,6 +7351,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command.Builder getCommandBuilder() {
@@ -6057,6 +7363,10 @@ public final class ContainerOuterClass {
         return getCommandFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.CommandOrBuilder getCommandOrBuilder() {
@@ -6068,6 +7378,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6088,6 +7402,10 @@ public final class ContainerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ArgsOrBuilder> argsBuilder_;
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        * @return Whether the args field is set.
        */
@@ -6095,6 +7413,10 @@ public final class ContainerOuterClass {
         return argsBuilder_ != null || args_ != null;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        * @return The args.
        */
@@ -6106,6 +7428,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       public Builder setArgs(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args value) {
@@ -6122,6 +7448,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       public Builder setArgs(
@@ -6136,6 +7466,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       public Builder mergeArgs(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args value) {
@@ -6154,6 +7488,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       public Builder clearArgs() {
@@ -6168,6 +7506,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args.Builder getArgsBuilder() {
@@ -6176,6 +7518,10 @@ public final class ContainerOuterClass {
         return getArgsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ArgsOrBuilder getArgsOrBuilder() {
@@ -6187,6 +7533,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6230,6 +7580,10 @@ public final class ContainerOuterClass {
         return internalGetEnvironment().getMap().size();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6248,6 +7602,10 @@ public final class ContainerOuterClass {
         return getEnvironmentMap();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -6256,6 +7614,10 @@ public final class ContainerOuterClass {
         return internalGetEnvironment().getMap();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -6269,6 +7631,10 @@ public final class ContainerOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -6290,6 +7656,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6309,6 +7679,10 @@ public final class ContainerOuterClass {
         return internalGetMutableEnvironment().getMutableMap();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putEnvironment(
@@ -6324,6 +7698,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 5 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6336,6 +7714,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object workingDir_ = "";
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 6;</code>
        * @return The workingDir.
        */
@@ -6352,6 +7734,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 6;</code>
        * @return The bytes for workingDir.
        */
@@ -6369,6 +7755,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 6;</code>
        * @param value The workingDir to set.
        * @return This builder for chaining.
@@ -6384,6 +7774,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 6;</code>
        * @return This builder for chaining.
        */
@@ -6394,6 +7788,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 6;</code>
        * @param value The bytes for workingDir to set.
        * @return This builder for chaining.
@@ -6467,23 +7865,51 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @return A list containing the command.
      */
     java.util.List<java.lang.String>
         getCommandList();
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @return The count of command.
      */
     int getCommandCount();
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @param index The index of the element to return.
      * @return The command at the given index.
      */
     java.lang.String getCommand(int index);
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the command at the given index.
@@ -6585,6 +8011,13 @@ public final class ContainerOuterClass {
     public static final int COMMAND_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList command_;
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @return A list containing the command.
      */
@@ -6593,6 +8026,13 @@ public final class ContainerOuterClass {
       return command_;
     }
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @return The count of command.
      */
@@ -6600,6 +8040,13 @@ public final class ContainerOuterClass {
       return command_.size();
     }
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @param index The index of the element to return.
      * @return The command at the given index.
@@ -6608,6 +8055,13 @@ public final class ContainerOuterClass {
       return command_.get(index);
     }
     /**
+     * <pre>
+     * Command that will override ENTRYPOINT of an image.
+     * Commands will be executed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string command = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the command at the given index.
@@ -6946,6 +8400,13 @@ public final class ContainerOuterClass {
          }
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @return A list containing the command.
        */
@@ -6954,6 +8415,13 @@ public final class ContainerOuterClass {
         return command_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @return The count of command.
        */
@@ -6961,6 +8429,13 @@ public final class ContainerOuterClass {
         return command_.size();
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @param index The index of the element to return.
        * @return The command at the given index.
@@ -6969,6 +8444,13 @@ public final class ContainerOuterClass {
         return command_.get(index);
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the command at the given index.
@@ -6978,6 +8460,13 @@ public final class ContainerOuterClass {
         return command_.getByteString(index);
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @param index The index to set the value at.
        * @param value The command to set.
@@ -6994,6 +8483,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @param value The command to add.
        * @return This builder for chaining.
@@ -7009,6 +8505,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @param values The command to add.
        * @return This builder for chaining.
@@ -7022,6 +8525,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @return This builder for chaining.
        */
@@ -7032,6 +8542,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Command that will override ENTRYPOINT of an image.
+       * Commands will be executed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string command = 1;</code>
        * @param value The bytes of the command to add.
        * @return This builder for chaining.
@@ -7105,23 +8622,51 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @return A list containing the args.
      */
     java.util.List<java.lang.String>
         getArgsList();
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @return The count of args.
      */
     int getArgsCount();
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @param index The index of the element to return.
      * @return The args at the given index.
      */
     java.lang.String getArgs(int index);
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the args at the given index.
@@ -7223,6 +8768,13 @@ public final class ContainerOuterClass {
     public static final int ARGS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList args_;
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @return A list containing the args.
      */
@@ -7231,6 +8783,13 @@ public final class ContainerOuterClass {
       return args_;
     }
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @return The count of args.
      */
@@ -7238,6 +8797,13 @@ public final class ContainerOuterClass {
       return args_.size();
     }
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @param index The index of the element to return.
      * @return The args at the given index.
@@ -7246,6 +8812,13 @@ public final class ContainerOuterClass {
       return args_.get(index);
     }
     /**
+     * <pre>
+     * Arguments that will override CMD of an image.
+     * Arguments will be passed as is. The runtime will not substitute environment
+     * variables or execute shell commands. If one wants to do that, they should
+     * invoke shell interpreter with an appropriate shell script.
+     * </pre>
+     *
      * <code>repeated string args = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the args at the given index.
@@ -7584,6 +9157,13 @@ public final class ContainerOuterClass {
          }
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @return A list containing the args.
        */
@@ -7592,6 +9172,13 @@ public final class ContainerOuterClass {
         return args_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @return The count of args.
        */
@@ -7599,6 +9186,13 @@ public final class ContainerOuterClass {
         return args_.size();
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @param index The index of the element to return.
        * @return The args at the given index.
@@ -7607,6 +9201,13 @@ public final class ContainerOuterClass {
         return args_.get(index);
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the args at the given index.
@@ -7616,6 +9217,13 @@ public final class ContainerOuterClass {
         return args_.getByteString(index);
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @param index The index to set the value at.
        * @param value The args to set.
@@ -7632,6 +9240,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @param value The args to add.
        * @return This builder for chaining.
@@ -7647,6 +9262,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @param values The args to add.
        * @return This builder for chaining.
@@ -7660,6 +9282,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @return This builder for chaining.
        */
@@ -7670,6 +9299,13 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Arguments that will override CMD of an image.
+       * Arguments will be passed as is. The runtime will not substitute environment
+       * variables or execute shell commands. If one wants to do that, they should
+       * invoke shell interpreter with an appropriate shell script.
+       * </pre>
+       *
        * <code>repeated string args = 1;</code>
        * @param value The bytes of the args to add.
        * @return This builder for chaining.
@@ -7743,24 +9379,40 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Amount of memory available to the revision, specified in bytes.
+     * </pre>
+     *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
      * @return The memory.
      */
     long getMemory();
 
     /**
+     * <pre>
+     * Number of cores available to the revision.
+     * </pre>
+     *
      * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
      * @return The cores.
      */
     long getCores();
 
     /**
+     * <pre>
+     * Specifies baseline performance for a core in percent.
+     * </pre>
+     *
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The coreFraction.
      */
     long getCoreFraction();
   }
   /**
+   * <pre>
+   * Resources allocated to a revision.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Resources}
    */
   public static final class Resources extends
@@ -7855,6 +9507,10 @@ public final class ContainerOuterClass {
     public static final int MEMORY_FIELD_NUMBER = 1;
     private long memory_;
     /**
+     * <pre>
+     * Amount of memory available to the revision, specified in bytes.
+     * </pre>
+     *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
      * @return The memory.
      */
@@ -7866,6 +9522,10 @@ public final class ContainerOuterClass {
     public static final int CORES_FIELD_NUMBER = 2;
     private long cores_;
     /**
+     * <pre>
+     * Number of cores available to the revision.
+     * </pre>
+     *
      * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
      * @return The cores.
      */
@@ -7877,6 +9537,10 @@ public final class ContainerOuterClass {
     public static final int CORE_FRACTION_FIELD_NUMBER = 3;
     private long coreFraction_;
     /**
+     * <pre>
+     * Specifies baseline performance for a core in percent.
+     * </pre>
+     *
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The coreFraction.
      */
@@ -8066,6 +9730,10 @@ public final class ContainerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Resources allocated to a revision.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.containers.v1.Resources}
      */
     public static final class Builder extends
@@ -8226,6 +9894,10 @@ public final class ContainerOuterClass {
 
       private long memory_ ;
       /**
+       * <pre>
+       * Amount of memory available to the revision, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @return The memory.
        */
@@ -8234,6 +9906,10 @@ public final class ContainerOuterClass {
         return memory_;
       }
       /**
+       * <pre>
+       * Amount of memory available to the revision, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @param value The memory to set.
        * @return This builder for chaining.
@@ -8245,6 +9921,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Amount of memory available to the revision, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @return This builder for chaining.
        */
@@ -8257,6 +9937,10 @@ public final class ContainerOuterClass {
 
       private long cores_ ;
       /**
+       * <pre>
+       * Number of cores available to the revision.
+       * </pre>
+       *
        * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
        * @return The cores.
        */
@@ -8265,6 +9949,10 @@ public final class ContainerOuterClass {
         return cores_;
       }
       /**
+       * <pre>
+       * Number of cores available to the revision.
+       * </pre>
+       *
        * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
        * @param value The cores to set.
        * @return This builder for chaining.
@@ -8276,6 +9964,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of cores available to the revision.
+       * </pre>
+       *
        * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
        * @return This builder for chaining.
        */
@@ -8288,6 +9980,10 @@ public final class ContainerOuterClass {
 
       private long coreFraction_ ;
       /**
+       * <pre>
+       * Specifies baseline performance for a core in percent.
+       * </pre>
+       *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        * @return The coreFraction.
        */
@@ -8296,6 +9992,10 @@ public final class ContainerOuterClass {
         return coreFraction_;
       }
       /**
+       * <pre>
+       * Specifies baseline performance for a core in percent.
+       * </pre>
+       *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        * @param value The coreFraction to set.
        * @return This builder for chaining.
@@ -8307,6 +10007,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies baseline performance for a core in percent.
+       * </pre>
+       *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        * @return This builder for chaining.
        */
@@ -8374,6 +10078,11 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Minimum number of guaranteed provisioned container instances for all zones
+     * in total.
+     * </pre>
+     *
      * <code>int64 min_instances = 1;</code>
      * @return The minInstances.
      */
@@ -8464,6 +10173,11 @@ public final class ContainerOuterClass {
     public static final int MIN_INSTANCES_FIELD_NUMBER = 1;
     private long minInstances_;
     /**
+     * <pre>
+     * Minimum number of guaranteed provisioned container instances for all zones
+     * in total.
+     * </pre>
+     *
      * <code>int64 min_instances = 1;</code>
      * @return The minInstances.
      */
@@ -8777,6 +10491,11 @@ public final class ContainerOuterClass {
 
       private long minInstances_ ;
       /**
+       * <pre>
+       * Minimum number of guaranteed provisioned container instances for all zones
+       * in total.
+       * </pre>
+       *
        * <code>int64 min_instances = 1;</code>
        * @return The minInstances.
        */
@@ -8785,6 +10504,11 @@ public final class ContainerOuterClass {
         return minInstances_;
       }
       /**
+       * <pre>
+       * Minimum number of guaranteed provisioned container instances for all zones
+       * in total.
+       * </pre>
+       *
        * <code>int64 min_instances = 1;</code>
        * @param value The minInstances to set.
        * @return This builder for chaining.
@@ -8796,6 +10520,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum number of guaranteed provisioned container instances for all zones
+       * in total.
+       * </pre>
+       *
        * <code>int64 min_instances = 1;</code>
        * @return This builder for chaining.
        */
@@ -8863,11 +10592,19 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -8875,11 +10612,19 @@ public final class ContainerOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
@@ -8887,11 +10632,19 @@ public final class ContainerOuterClass {
         getVersionIdBytes();
 
     /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into container environment.
+     * </pre>
+     *
      * <code>string key = 3;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into container environment.
+     * </pre>
+     *
      * <code>string key = 3;</code>
      * @return The bytes for key.
      */
@@ -8899,16 +10652,28 @@ public final class ContainerOuterClass {
         getKeyBytes();
 
     /**
+     * <pre>
+     * Environment variable in which secret's value is delivered.
+     * </pre>
+     *
      * <code>string environment_variable = 4;</code>
      * @return Whether the environmentVariable field is set.
      */
     boolean hasEnvironmentVariable();
     /**
+     * <pre>
+     * Environment variable in which secret's value is delivered.
+     * </pre>
+     *
      * <code>string environment_variable = 4;</code>
      * @return The environmentVariable.
      */
     java.lang.String getEnvironmentVariable();
     /**
+     * <pre>
+     * Environment variable in which secret's value is delivered.
+     * </pre>
+     *
      * <code>string environment_variable = 4;</code>
      * @return The bytes for environmentVariable.
      */
@@ -8918,6 +10683,10 @@ public final class ContainerOuterClass {
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.ReferenceCase getReferenceCase();
   }
   /**
+   * <pre>
+   * Secret that is available to the container at run time.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Secret}
    */
   public static final class Secret extends
@@ -9063,6 +10832,10 @@ public final class ContainerOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -9080,6 +10853,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -9101,6 +10878,10 @@ public final class ContainerOuterClass {
     public static final int VERSION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object versionId_;
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The versionId.
      */
@@ -9118,6 +10899,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of Yandex Lockbox secret.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
@@ -9139,6 +10924,10 @@ public final class ContainerOuterClass {
     public static final int KEY_FIELD_NUMBER = 3;
     private volatile java.lang.Object key_;
     /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into container environment.
+     * </pre>
+     *
      * <code>string key = 3;</code>
      * @return The key.
      */
@@ -9156,6 +10945,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Key in secret's payload, which value to be delivered into container environment.
+     * </pre>
+     *
      * <code>string key = 3;</code>
      * @return The bytes for key.
      */
@@ -9176,6 +10969,10 @@ public final class ContainerOuterClass {
 
     public static final int ENVIRONMENT_VARIABLE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Environment variable in which secret's value is delivered.
+     * </pre>
+     *
      * <code>string environment_variable = 4;</code>
      * @return Whether the environmentVariable field is set.
      */
@@ -9183,6 +10980,10 @@ public final class ContainerOuterClass {
       return referenceCase_ == 4;
     }
     /**
+     * <pre>
+     * Environment variable in which secret's value is delivered.
+     * </pre>
+     *
      * <code>string environment_variable = 4;</code>
      * @return The environmentVariable.
      */
@@ -9204,6 +11005,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Environment variable in which secret's value is delivered.
+     * </pre>
+     *
      * <code>string environment_variable = 4;</code>
      * @return The bytes for environmentVariable.
      */
@@ -9424,6 +11229,10 @@ public final class ContainerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Secret that is available to the container at run time.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.containers.v1.Secret}
      */
     public static final class Builder extends
@@ -9619,6 +11428,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -9635,6 +11448,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -9652,6 +11469,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -9667,6 +11488,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9677,6 +11502,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -9695,6 +11524,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object versionId_ = "";
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return The versionId.
        */
@@ -9711,6 +11544,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return The bytes for versionId.
        */
@@ -9728,6 +11565,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @param value The versionId to set.
        * @return This builder for chaining.
@@ -9743,6 +11584,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -9753,6 +11598,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of Yandex Lockbox secret.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @param value The bytes for versionId to set.
        * @return This builder for chaining.
@@ -9771,6 +11620,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object key_ = "";
       /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into container environment.
+       * </pre>
+       *
        * <code>string key = 3;</code>
        * @return The key.
        */
@@ -9787,6 +11640,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into container environment.
+       * </pre>
+       *
        * <code>string key = 3;</code>
        * @return The bytes for key.
        */
@@ -9804,6 +11661,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into container environment.
+       * </pre>
+       *
        * <code>string key = 3;</code>
        * @param value The key to set.
        * @return This builder for chaining.
@@ -9819,6 +11680,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into container environment.
+       * </pre>
+       *
        * <code>string key = 3;</code>
        * @return This builder for chaining.
        */
@@ -9829,6 +11694,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Key in secret's payload, which value to be delivered into container environment.
+       * </pre>
+       *
        * <code>string key = 3;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
@@ -9846,6 +11715,10 @@ public final class ContainerOuterClass {
       }
 
       /**
+       * <pre>
+       * Environment variable in which secret's value is delivered.
+       * </pre>
+       *
        * <code>string environment_variable = 4;</code>
        * @return Whether the environmentVariable field is set.
        */
@@ -9854,6 +11727,10 @@ public final class ContainerOuterClass {
         return referenceCase_ == 4;
       }
       /**
+       * <pre>
+       * Environment variable in which secret's value is delivered.
+       * </pre>
+       *
        * <code>string environment_variable = 4;</code>
        * @return The environmentVariable.
        */
@@ -9876,6 +11753,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Environment variable in which secret's value is delivered.
+       * </pre>
+       *
        * <code>string environment_variable = 4;</code>
        * @return The bytes for environmentVariable.
        */
@@ -9899,6 +11780,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Environment variable in which secret's value is delivered.
+       * </pre>
+       *
        * <code>string environment_variable = 4;</code>
        * @param value The environmentVariable to set.
        * @return This builder for chaining.
@@ -9914,6 +11799,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Environment variable in which secret's value is delivered.
+       * </pre>
+       *
        * <code>string environment_variable = 4;</code>
        * @return This builder for chaining.
        */
@@ -9926,6 +11815,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Environment variable in which secret's value is delivered.
+       * </pre>
+       *
        * <code>string environment_variable = 4;</code>
        * @param value The bytes for environmentVariable to set.
        * @return This builder for chaining.
@@ -9999,11 +11892,19 @@ public final class ContainerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Network the revision will have access to.
+     * </pre>
+     *
      * <code>string network_id = 1;</code>
      * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
+     * <pre>
+     * Network the revision will have access to.
+     * </pre>
+     *
      * <code>string network_id = 1;</code>
      * @return The bytes for networkId.
      */
@@ -10011,23 +11912,43 @@ public final class ContainerOuterClass {
         getNetworkIdBytes();
 
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @return A list containing the subnetIds.
      */
     java.util.List<java.lang.String>
         getSubnetIdsList();
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @return The count of subnetIds.
      */
     int getSubnetIdsCount();
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The subnetIds at the given index.
      */
     java.lang.String getSubnetIds(int index);
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the subnetIds at the given index.
@@ -10036,6 +11957,10 @@ public final class ContainerOuterClass {
         getSubnetIdsBytes(int index);
   }
   /**
+   * <pre>
+   * Revision connectivity specification.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Connectivity}
    */
   public static final class Connectivity extends
@@ -10136,6 +12061,10 @@ public final class ContainerOuterClass {
     public static final int NETWORK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object networkId_;
     /**
+     * <pre>
+     * Network the revision will have access to.
+     * </pre>
+     *
      * <code>string network_id = 1;</code>
      * @return The networkId.
      */
@@ -10153,6 +12082,10 @@ public final class ContainerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Network the revision will have access to.
+     * </pre>
+     *
      * <code>string network_id = 1;</code>
      * @return The bytes for networkId.
      */
@@ -10174,6 +12107,11 @@ public final class ContainerOuterClass {
     public static final int SUBNET_IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList subnetIds_;
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @return A list containing the subnetIds.
      */
@@ -10182,6 +12120,11 @@ public final class ContainerOuterClass {
       return subnetIds_;
     }
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @return The count of subnetIds.
      */
@@ -10189,6 +12132,11 @@ public final class ContainerOuterClass {
       return subnetIds_.size();
     }
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The subnetIds at the given index.
@@ -10197,6 +12145,11 @@ public final class ContainerOuterClass {
       return subnetIds_.get(index);
     }
     /**
+     * <pre>
+     * The list of subnets (from the same network) the revision can be attached to.
+     * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+     * </pre>
+     *
      * <code>repeated string subnet_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the subnetIds at the given index.
@@ -10378,6 +12331,10 @@ public final class ContainerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Revision connectivity specification.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.containers.v1.Connectivity}
      */
     public static final class Builder extends
@@ -10546,6 +12503,10 @@ public final class ContainerOuterClass {
 
       private java.lang.Object networkId_ = "";
       /**
+       * <pre>
+       * Network the revision will have access to.
+       * </pre>
+       *
        * <code>string network_id = 1;</code>
        * @return The networkId.
        */
@@ -10562,6 +12523,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network the revision will have access to.
+       * </pre>
+       *
        * <code>string network_id = 1;</code>
        * @return The bytes for networkId.
        */
@@ -10579,6 +12544,10 @@ public final class ContainerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network the revision will have access to.
+       * </pre>
+       *
        * <code>string network_id = 1;</code>
        * @param value The networkId to set.
        * @return This builder for chaining.
@@ -10594,6 +12563,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network the revision will have access to.
+       * </pre>
+       *
        * <code>string network_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10604,6 +12577,10 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network the revision will have access to.
+       * </pre>
+       *
        * <code>string network_id = 1;</code>
        * @param value The bytes for networkId to set.
        * @return This builder for chaining.
@@ -10628,6 +12605,11 @@ public final class ContainerOuterClass {
          }
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @return A list containing the subnetIds.
        */
@@ -10636,6 +12618,11 @@ public final class ContainerOuterClass {
         return subnetIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @return The count of subnetIds.
        */
@@ -10643,6 +12630,11 @@ public final class ContainerOuterClass {
         return subnetIds_.size();
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @param index The index of the element to return.
        * @return The subnetIds at the given index.
@@ -10651,6 +12643,11 @@ public final class ContainerOuterClass {
         return subnetIds_.get(index);
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the subnetIds at the given index.
@@ -10660,6 +12657,11 @@ public final class ContainerOuterClass {
         return subnetIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @param index The index to set the value at.
        * @param value The subnetIds to set.
@@ -10676,6 +12678,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @param value The subnetIds to add.
        * @return This builder for chaining.
@@ -10691,6 +12698,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @param values The subnetIds to add.
        * @return This builder for chaining.
@@ -10704,6 +12716,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @return This builder for chaining.
        */
@@ -10714,6 +12731,11 @@ public final class ContainerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The list of subnets (from the same network) the revision can be attached to.
+       * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
+       * </pre>
+       *
        * <code>repeated string subnet_ids = 2;</code>
        * @param value The bytes of the subnetIds to add.
        * @return This builder for chaining.

@@ -395,7 +395,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot schedules containing the disk
+     * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
     public void listSnapshotSchedules(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request,
@@ -567,7 +567,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot schedules containing the disk
+     * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
     public void listSnapshotSchedules(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request,
@@ -672,7 +672,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot schedules containing the disk
+     * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse listSnapshotSchedules(yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest request) {
@@ -783,7 +783,7 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
-     * List snapshot schedules containing the disk
+     * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> listSnapshotSchedules(

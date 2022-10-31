@@ -24,25 +24,29 @@ public final class Logging {
      */
     HTTP_CODE_INTERVAL_UNSPECIFIED(0),
     /**
-     * <code>HTTP_CODE_INTERVAL_1XX = 1;</code>
+     * <code>HTTP_1XX = 1;</code>
      */
-    HTTP_CODE_INTERVAL_1XX(1),
+    HTTP_1XX(1),
     /**
-     * <code>HTTP_CODE_INTERVAL_2XX = 2;</code>
+     * <code>HTTP_2XX = 2;</code>
      */
-    HTTP_CODE_INTERVAL_2XX(2),
+    HTTP_2XX(2),
     /**
-     * <code>HTTP_CODE_INTERVAL_3XX = 3;</code>
+     * <code>HTTP_3XX = 3;</code>
      */
-    HTTP_CODE_INTERVAL_3XX(3),
+    HTTP_3XX(3),
     /**
-     * <code>HTTP_CODE_INTERVAL_4XX = 4;</code>
+     * <code>HTTP_4XX = 4;</code>
      */
-    HTTP_CODE_INTERVAL_4XX(4),
+    HTTP_4XX(4),
     /**
-     * <code>HTTP_CODE_INTERVAL_5XX = 5;</code>
+     * <code>HTTP_5XX = 5;</code>
      */
-    HTTP_CODE_INTERVAL_5XX(5),
+    HTTP_5XX(5),
+    /**
+     * <code>HTTP_ALL = 6;</code>
+     */
+    HTTP_ALL(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -51,25 +55,29 @@ public final class Logging {
      */
     public static final int HTTP_CODE_INTERVAL_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>HTTP_CODE_INTERVAL_1XX = 1;</code>
+     * <code>HTTP_1XX = 1;</code>
      */
-    public static final int HTTP_CODE_INTERVAL_1XX_VALUE = 1;
+    public static final int HTTP_1XX_VALUE = 1;
     /**
-     * <code>HTTP_CODE_INTERVAL_2XX = 2;</code>
+     * <code>HTTP_2XX = 2;</code>
      */
-    public static final int HTTP_CODE_INTERVAL_2XX_VALUE = 2;
+    public static final int HTTP_2XX_VALUE = 2;
     /**
-     * <code>HTTP_CODE_INTERVAL_3XX = 3;</code>
+     * <code>HTTP_3XX = 3;</code>
      */
-    public static final int HTTP_CODE_INTERVAL_3XX_VALUE = 3;
+    public static final int HTTP_3XX_VALUE = 3;
     /**
-     * <code>HTTP_CODE_INTERVAL_4XX = 4;</code>
+     * <code>HTTP_4XX = 4;</code>
      */
-    public static final int HTTP_CODE_INTERVAL_4XX_VALUE = 4;
+    public static final int HTTP_4XX_VALUE = 4;
     /**
-     * <code>HTTP_CODE_INTERVAL_5XX = 5;</code>
+     * <code>HTTP_5XX = 5;</code>
      */
-    public static final int HTTP_CODE_INTERVAL_5XX_VALUE = 5;
+    public static final int HTTP_5XX_VALUE = 5;
+    /**
+     * <code>HTTP_ALL = 6;</code>
+     */
+    public static final int HTTP_ALL_VALUE = 6;
 
 
     public final int getNumber() {
@@ -97,11 +105,12 @@ public final class Logging {
     public static HttpCodeInterval forNumber(int value) {
       switch (value) {
         case 0: return HTTP_CODE_INTERVAL_UNSPECIFIED;
-        case 1: return HTTP_CODE_INTERVAL_1XX;
-        case 2: return HTTP_CODE_INTERVAL_2XX;
-        case 3: return HTTP_CODE_INTERVAL_3XX;
-        case 4: return HTTP_CODE_INTERVAL_4XX;
-        case 5: return HTTP_CODE_INTERVAL_5XX;
+        case 1: return HTTP_1XX;
+        case 2: return HTTP_2XX;
+        case 3: return HTTP_3XX;
+        case 4: return HTTP_4XX;
+        case 5: return HTTP_5XX;
+        case 6: return HTTP_ALL;
         default: return null;
       }
     }
@@ -167,88 +176,154 @@ public final class Logging {
      * HTTP codes that should be discarded.
      * </pre>
      *
-     * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-     * @return A list containing the codes.
+     * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+     * @return A list containing the httpCodes.
      */
-    java.util.List<java.lang.Long> getCodesList();
+    java.util.List<java.lang.Long> getHttpCodesList();
     /**
      * <pre>
      * HTTP codes that should be discarded.
      * </pre>
      *
-     * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-     * @return The count of codes.
+     * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+     * @return The count of httpCodes.
      */
-    int getCodesCount();
+    int getHttpCodesCount();
     /**
      * <pre>
      * HTTP codes that should be discarded.
      * </pre>
      *
-     * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+     * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
      * @param index The index of the element to return.
-     * @return The codes at the given index.
+     * @return The httpCodes at the given index.
      */
-    long getCodes(int index);
+    long getHttpCodes(int index);
 
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-     * @return A list containing the intervals.
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+     * @return A list containing the httpCodeIntervals.
      */
-    java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> getIntervalsList();
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> getHttpCodeIntervalsList();
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-     * @return The count of intervals.
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+     * @return The count of httpCodeIntervals.
      */
-    int getIntervalsCount();
+    int getHttpCodeIntervalsCount();
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
      * @param index The index of the element to return.
-     * @return The intervals at the given index.
+     * @return The httpCodeIntervals at the given index.
      */
-    yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval getIntervals(int index);
+    yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval getHttpCodeIntervals(int index);
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-     * @return A list containing the enum numeric values on the wire for intervals.
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+     * @return A list containing the enum numeric values on the wire for httpCodeIntervals.
      */
     java.util.List<java.lang.Integer>
-    getIntervalsValueList();
+    getHttpCodeIntervalsValueList();
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
      * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of intervals at the given index.
+     * @return The enum numeric value on the wire of httpCodeIntervals at the given index.
      */
-    int getIntervalsValue(int index);
+    int getHttpCodeIntervalsValue(int index);
 
     /**
      * <pre>
-     * Percent of logs to be discarded: 0 - keep all, 100 - keep none.
+     * GRPC codes that should be discarded
      * </pre>
      *
-     * <code>int64 percent = 3 [(.yandex.cloud.value) = "0-100"];</code>
-     * @return The percent.
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @return A list containing the grpcCodes.
      */
-    long getPercent();
+    java.util.List<com.google.rpc.Code> getGrpcCodesList();
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @return The count of grpcCodes.
+     */
+    int getGrpcCodesCount();
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @param index The index of the element to return.
+     * @return The grpcCodes at the given index.
+     */
+    com.google.rpc.Code getGrpcCodes(int index);
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @return A list containing the enum numeric values on the wire for grpcCodes.
+     */
+    java.util.List<java.lang.Integer>
+    getGrpcCodesValueList();
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of grpcCodes at the given index.
+     */
+    int getGrpcCodesValue(int index);
+
+    /**
+     * <pre>
+     * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the discardPercent field is set.
+     */
+    boolean hasDiscardPercent();
+    /**
+     * <pre>
+     * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The discardPercent.
+     */
+    com.google.protobuf.Int64Value getDiscardPercent();
+    /**
+     * <pre>
+     * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDiscardPercentOrBuilder();
   }
   /**
    * <pre>
@@ -268,8 +343,9 @@ public final class Logging {
       super(builder);
     }
     private LogDiscardRule() {
-      codes_ = emptyLongList();
-      intervals_ = java.util.Collections.emptyList();
+      httpCodes_ = emptyLongList();
+      httpCodeIntervals_ = java.util.Collections.emptyList();
+      grpcCodes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -305,21 +381,21 @@ public final class Logging {
               break;
             case 8: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                codes_ = newLongList();
+                httpCodes_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              codes_.addLong(input.readInt64());
+              httpCodes_.addLong(input.readInt64());
               break;
             }
             case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                codes_ = newLongList();
+                httpCodes_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                codes_.addLong(input.readInt64());
+                httpCodes_.addLong(input.readInt64());
               }
               input.popLimit(limit);
               break;
@@ -327,10 +403,10 @@ public final class Logging {
             case 16: {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                intervals_ = new java.util.ArrayList<java.lang.Integer>();
+                httpCodeIntervals_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              intervals_.add(rawValue);
+              httpCodeIntervals_.add(rawValue);
               break;
             }
             case 18: {
@@ -339,17 +415,48 @@ public final class Logging {
               while(input.getBytesUntilLimit() > 0) {
                 int rawValue = input.readEnum();
                 if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  intervals_ = new java.util.ArrayList<java.lang.Integer>();
+                  httpCodeIntervals_ = new java.util.ArrayList<java.lang.Integer>();
                   mutable_bitField0_ |= 0x00000002;
                 }
-                intervals_.add(rawValue);
+                httpCodeIntervals_.add(rawValue);
               }
               input.popLimit(oldLimit);
               break;
             }
             case 24: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                grpcCodes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              grpcCodes_.add(rawValue);
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  grpcCodes_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                grpcCodes_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (discardPercent_ != null) {
+                subBuilder = discardPercent_.toBuilder();
+              }
+              discardPercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(discardPercent_);
+                discardPercent_ = subBuilder.buildPartial();
+              }
 
-              percent_ = input.readInt64();
               break;
             }
             default: {
@@ -368,10 +475,13 @@ public final class Logging {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          codes_.makeImmutable(); // C
+          httpCodes_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          intervals_ = java.util.Collections.unmodifiableList(intervals_);
+          httpCodeIntervals_ = java.util.Collections.unmodifiableList(httpCodeIntervals_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          grpcCodes_ = java.util.Collections.unmodifiableList(grpcCodes_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -390,50 +500,50 @@ public final class Logging {
               yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.class, yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.Builder.class);
     }
 
-    public static final int CODES_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.LongList codes_;
+    public static final int HTTP_CODES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.LongList httpCodes_;
     /**
      * <pre>
      * HTTP codes that should be discarded.
      * </pre>
      *
-     * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-     * @return A list containing the codes.
+     * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+     * @return A list containing the httpCodes.
      */
     @java.lang.Override
     public java.util.List<java.lang.Long>
-        getCodesList() {
-      return codes_;
+        getHttpCodesList() {
+      return httpCodes_;
     }
     /**
      * <pre>
      * HTTP codes that should be discarded.
      * </pre>
      *
-     * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-     * @return The count of codes.
+     * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+     * @return The count of httpCodes.
      */
-    public int getCodesCount() {
-      return codes_.size();
+    public int getHttpCodesCount() {
+      return httpCodes_.size();
     }
     /**
      * <pre>
      * HTTP codes that should be discarded.
      * </pre>
      *
-     * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+     * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
      * @param index The index of the element to return.
-     * @return The codes at the given index.
+     * @return The httpCodes at the given index.
      */
-    public long getCodes(int index) {
-      return codes_.getLong(index);
+    public long getHttpCodes(int index) {
+      return httpCodes_.getLong(index);
     }
-    private int codesMemoizedSerializedSize = -1;
+    private int httpCodesMemoizedSerializedSize = -1;
 
-    public static final int INTERVALS_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> intervals_;
+    public static final int HTTP_CODE_INTERVALS_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> httpCodeIntervals_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
-        java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> intervals_converter_ =
+        java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> httpCodeIntervals_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval>() {
               public yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval convert(java.lang.Integer from) {
@@ -447,80 +557,181 @@ public final class Logging {
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-     * @return A list containing the intervals.
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+     * @return A list containing the httpCodeIntervals.
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> getIntervalsList() {
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> getHttpCodeIntervalsList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval>(intervals_, intervals_converter_);
+          java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval>(httpCodeIntervals_, httpCodeIntervals_converter_);
     }
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-     * @return The count of intervals.
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+     * @return The count of httpCodeIntervals.
      */
     @java.lang.Override
-    public int getIntervalsCount() {
-      return intervals_.size();
+    public int getHttpCodeIntervalsCount() {
+      return httpCodeIntervals_.size();
     }
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
      * @param index The index of the element to return.
-     * @return The intervals at the given index.
+     * @return The httpCodeIntervals at the given index.
      */
     @java.lang.Override
-    public yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval getIntervals(int index) {
-      return intervals_converter_.convert(intervals_.get(index));
+    public yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval getHttpCodeIntervals(int index) {
+      return httpCodeIntervals_converter_.convert(httpCodeIntervals_.get(index));
     }
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-     * @return A list containing the enum numeric values on the wire for intervals.
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+     * @return A list containing the enum numeric values on the wire for httpCodeIntervals.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-    getIntervalsValueList() {
-      return intervals_;
+    getHttpCodeIntervalsValueList() {
+      return httpCodeIntervals_;
     }
     /**
      * <pre>
      * Groups of HTTP codes like 4xx that should be discarded.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
      * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of intervals at the given index.
+     * @return The enum numeric value on the wire of httpCodeIntervals at the given index.
      */
     @java.lang.Override
-    public int getIntervalsValue(int index) {
-      return intervals_.get(index);
+    public int getHttpCodeIntervalsValue(int index) {
+      return httpCodeIntervals_.get(index);
     }
-    private int intervalsMemoizedSerializedSize;
+    private int httpCodeIntervalsMemoizedSerializedSize;
 
-    public static final int PERCENT_FIELD_NUMBER = 3;
-    private long percent_;
+    public static final int GRPC_CODES_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> grpcCodes_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.google.rpc.Code> grpcCodes_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.google.rpc.Code>() {
+              public com.google.rpc.Code convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                com.google.rpc.Code result = com.google.rpc.Code.valueOf(from);
+                return result == null ? com.google.rpc.Code.UNRECOGNIZED : result;
+              }
+            };
     /**
      * <pre>
-     * Percent of logs to be discarded: 0 - keep all, 100 - keep none.
+     * GRPC codes that should be discarded
      * </pre>
      *
-     * <code>int64 percent = 3 [(.yandex.cloud.value) = "0-100"];</code>
-     * @return The percent.
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @return A list containing the grpcCodes.
      */
     @java.lang.Override
-    public long getPercent() {
-      return percent_;
+    public java.util.List<com.google.rpc.Code> getGrpcCodesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.rpc.Code>(grpcCodes_, grpcCodes_converter_);
+    }
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @return The count of grpcCodes.
+     */
+    @java.lang.Override
+    public int getGrpcCodesCount() {
+      return grpcCodes_.size();
+    }
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @param index The index of the element to return.
+     * @return The grpcCodes at the given index.
+     */
+    @java.lang.Override
+    public com.google.rpc.Code getGrpcCodes(int index) {
+      return grpcCodes_converter_.convert(grpcCodes_.get(index));
+    }
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @return A list containing the enum numeric values on the wire for grpcCodes.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getGrpcCodesValueList() {
+      return grpcCodes_;
+    }
+    /**
+     * <pre>
+     * GRPC codes that should be discarded
+     * </pre>
+     *
+     * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of grpcCodes at the given index.
+     */
+    @java.lang.Override
+    public int getGrpcCodesValue(int index) {
+      return grpcCodes_.get(index);
+    }
+    private int grpcCodesMemoizedSerializedSize;
+
+    public static final int DISCARD_PERCENT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value discardPercent_;
+    /**
+     * <pre>
+     * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the discardPercent field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscardPercent() {
+      return discardPercent_ != null;
+    }
+    /**
+     * <pre>
+     * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     * @return The discardPercent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getDiscardPercent() {
+      return discardPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : discardPercent_;
+    }
+    /**
+     * <pre>
+     * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getDiscardPercentOrBuilder() {
+      return getDiscardPercent();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -538,22 +749,29 @@ public final class Logging {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getCodesList().size() > 0) {
+      if (getHttpCodesList().size() > 0) {
         output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(codesMemoizedSerializedSize);
+        output.writeUInt32NoTag(httpCodesMemoizedSerializedSize);
       }
-      for (int i = 0; i < codes_.size(); i++) {
-        output.writeInt64NoTag(codes_.getLong(i));
+      for (int i = 0; i < httpCodes_.size(); i++) {
+        output.writeInt64NoTag(httpCodes_.getLong(i));
       }
-      if (getIntervalsList().size() > 0) {
+      if (getHttpCodeIntervalsList().size() > 0) {
         output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(intervalsMemoizedSerializedSize);
+        output.writeUInt32NoTag(httpCodeIntervalsMemoizedSerializedSize);
       }
-      for (int i = 0; i < intervals_.size(); i++) {
-        output.writeEnumNoTag(intervals_.get(i));
+      for (int i = 0; i < httpCodeIntervals_.size(); i++) {
+        output.writeEnumNoTag(httpCodeIntervals_.get(i));
       }
-      if (percent_ != 0L) {
-        output.writeInt64(3, percent_);
+      if (getGrpcCodesList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(grpcCodesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < grpcCodes_.size(); i++) {
+        output.writeEnumNoTag(grpcCodes_.get(i));
+      }
+      if (discardPercent_ != null) {
+        output.writeMessage(4, getDiscardPercent());
       }
       unknownFields.writeTo(output);
     }
@@ -566,33 +784,45 @@ public final class Logging {
       size = 0;
       {
         int dataSize = 0;
-        for (int i = 0; i < codes_.size(); i++) {
+        for (int i = 0; i < httpCodes_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(codes_.getLong(i));
+            .computeInt64SizeNoTag(httpCodes_.getLong(i));
         }
         size += dataSize;
-        if (!getCodesList().isEmpty()) {
+        if (!getHttpCodesList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        codesMemoizedSerializedSize = dataSize;
+        httpCodesMemoizedSerializedSize = dataSize;
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < intervals_.size(); i++) {
+        for (int i = 0; i < httpCodeIntervals_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeEnumSizeNoTag(intervals_.get(i));
+            .computeEnumSizeNoTag(httpCodeIntervals_.get(i));
         }
         size += dataSize;
-        if (!getIntervalsList().isEmpty()) {  size += 1;
+        if (!getHttpCodeIntervalsList().isEmpty()) {  size += 1;
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(dataSize);
-        }intervalsMemoizedSerializedSize = dataSize;
+        }httpCodeIntervalsMemoizedSerializedSize = dataSize;
       }
-      if (percent_ != 0L) {
+      {
+        int dataSize = 0;
+        for (int i = 0; i < grpcCodes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(grpcCodes_.get(i));
+        }
+        size += dataSize;
+        if (!getGrpcCodesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }grpcCodesMemoizedSerializedSize = dataSize;
+      }
+      if (discardPercent_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, percent_);
+          .computeMessageSize(4, getDiscardPercent());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -609,11 +839,15 @@ public final class Logging {
       }
       yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule other = (yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule) obj;
 
-      if (!getCodesList()
-          .equals(other.getCodesList())) return false;
-      if (!intervals_.equals(other.intervals_)) return false;
-      if (getPercent()
-          != other.getPercent()) return false;
+      if (!getHttpCodesList()
+          .equals(other.getHttpCodesList())) return false;
+      if (!httpCodeIntervals_.equals(other.httpCodeIntervals_)) return false;
+      if (!grpcCodes_.equals(other.grpcCodes_)) return false;
+      if (hasDiscardPercent() != other.hasDiscardPercent()) return false;
+      if (hasDiscardPercent()) {
+        if (!getDiscardPercent()
+            .equals(other.getDiscardPercent())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -625,17 +859,22 @@ public final class Logging {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getCodesCount() > 0) {
-        hash = (37 * hash) + CODES_FIELD_NUMBER;
-        hash = (53 * hash) + getCodesList().hashCode();
+      if (getHttpCodesCount() > 0) {
+        hash = (37 * hash) + HTTP_CODES_FIELD_NUMBER;
+        hash = (53 * hash) + getHttpCodesList().hashCode();
       }
-      if (getIntervalsCount() > 0) {
-        hash = (37 * hash) + INTERVALS_FIELD_NUMBER;
-        hash = (53 * hash) + intervals_.hashCode();
+      if (getHttpCodeIntervalsCount() > 0) {
+        hash = (37 * hash) + HTTP_CODE_INTERVALS_FIELD_NUMBER;
+        hash = (53 * hash) + httpCodeIntervals_.hashCode();
       }
-      hash = (37 * hash) + PERCENT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPercent());
+      if (getGrpcCodesCount() > 0) {
+        hash = (37 * hash) + GRPC_CODES_FIELD_NUMBER;
+        hash = (53 * hash) + grpcCodes_.hashCode();
+      }
+      if (hasDiscardPercent()) {
+        hash = (37 * hash) + DISCARD_PERCENT_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscardPercent().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -774,12 +1013,18 @@ public final class Logging {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        codes_ = emptyLongList();
+        httpCodes_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        intervals_ = java.util.Collections.emptyList();
+        httpCodeIntervals_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
-        percent_ = 0L;
-
+        grpcCodes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (discardPercentBuilder_ == null) {
+          discardPercent_ = null;
+        } else {
+          discardPercent_ = null;
+          discardPercentBuilder_ = null;
+        }
         return this;
       }
 
@@ -808,16 +1053,25 @@ public final class Logging {
         yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule result = new yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          codes_.makeImmutable();
+          httpCodes_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.codes_ = codes_;
+        result.httpCodes_ = httpCodes_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          intervals_ = java.util.Collections.unmodifiableList(intervals_);
+          httpCodeIntervals_ = java.util.Collections.unmodifiableList(httpCodeIntervals_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.intervals_ = intervals_;
-        result.percent_ = percent_;
+        result.httpCodeIntervals_ = httpCodeIntervals_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          grpcCodes_ = java.util.Collections.unmodifiableList(grpcCodes_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.grpcCodes_ = grpcCodes_;
+        if (discardPercentBuilder_ == null) {
+          result.discardPercent_ = discardPercent_;
+        } else {
+          result.discardPercent_ = discardPercentBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -866,28 +1120,38 @@ public final class Logging {
 
       public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule other) {
         if (other == yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.getDefaultInstance()) return this;
-        if (!other.codes_.isEmpty()) {
-          if (codes_.isEmpty()) {
-            codes_ = other.codes_;
+        if (!other.httpCodes_.isEmpty()) {
+          if (httpCodes_.isEmpty()) {
+            httpCodes_ = other.httpCodes_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureCodesIsMutable();
-            codes_.addAll(other.codes_);
+            ensureHttpCodesIsMutable();
+            httpCodes_.addAll(other.httpCodes_);
           }
           onChanged();
         }
-        if (!other.intervals_.isEmpty()) {
-          if (intervals_.isEmpty()) {
-            intervals_ = other.intervals_;
+        if (!other.httpCodeIntervals_.isEmpty()) {
+          if (httpCodeIntervals_.isEmpty()) {
+            httpCodeIntervals_ = other.httpCodeIntervals_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureIntervalsIsMutable();
-            intervals_.addAll(other.intervals_);
+            ensureHttpCodeIntervalsIsMutable();
+            httpCodeIntervals_.addAll(other.httpCodeIntervals_);
           }
           onChanged();
         }
-        if (other.getPercent() != 0L) {
-          setPercent(other.getPercent());
+        if (!other.grpcCodes_.isEmpty()) {
+          if (grpcCodes_.isEmpty()) {
+            grpcCodes_ = other.grpcCodes_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureGrpcCodesIsMutable();
+            grpcCodes_.addAll(other.grpcCodes_);
+          }
+          onChanged();
+        }
+        if (other.hasDiscardPercent()) {
+          mergeDiscardPercent(other.getDiscardPercent());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -919,10 +1183,10 @@ public final class Logging {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.LongList codes_ = emptyLongList();
-      private void ensureCodesIsMutable() {
+      private com.google.protobuf.Internal.LongList httpCodes_ = emptyLongList();
+      private void ensureHttpCodesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          codes_ = mutableCopy(codes_);
+          httpCodes_ = mutableCopy(httpCodes_);
           bitField0_ |= 0x00000001;
          }
       }
@@ -931,51 +1195,51 @@ public final class Logging {
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-       * @return A list containing the codes.
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * @return A list containing the httpCodes.
        */
       public java.util.List<java.lang.Long>
-          getCodesList() {
+          getHttpCodesList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(codes_) : codes_;
+                 java.util.Collections.unmodifiableList(httpCodes_) : httpCodes_;
       }
       /**
        * <pre>
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-       * @return The count of codes.
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * @return The count of httpCodes.
        */
-      public int getCodesCount() {
-        return codes_.size();
+      public int getHttpCodesCount() {
+        return httpCodes_.size();
       }
       /**
        * <pre>
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
        * @param index The index of the element to return.
-       * @return The codes at the given index.
+       * @return The httpCodes at the given index.
        */
-      public long getCodes(int index) {
-        return codes_.getLong(index);
+      public long getHttpCodes(int index) {
+        return httpCodes_.getLong(index);
       }
       /**
        * <pre>
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
        * @param index The index to set the value at.
-       * @param value The codes to set.
+       * @param value The httpCodes to set.
        * @return This builder for chaining.
        */
-      public Builder setCodes(
+      public Builder setHttpCodes(
           int index, long value) {
-        ensureCodesIsMutable();
-        codes_.setLong(index, value);
+        ensureHttpCodesIsMutable();
+        httpCodes_.setLong(index, value);
         onChanged();
         return this;
       }
@@ -984,13 +1248,13 @@ public final class Logging {
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-       * @param value The codes to add.
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * @param value The httpCodes to add.
        * @return This builder for chaining.
        */
-      public Builder addCodes(long value) {
-        ensureCodesIsMutable();
-        codes_.addLong(value);
+      public Builder addHttpCodes(long value) {
+        ensureHttpCodesIsMutable();
+        httpCodes_.addLong(value);
         onChanged();
         return this;
       }
@@ -999,15 +1263,15 @@ public final class Logging {
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
-       * @param values The codes to add.
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * @param values The httpCodes to add.
        * @return This builder for chaining.
        */
-      public Builder addAllCodes(
+      public Builder addAllHttpCodes(
           java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureCodesIsMutable();
+        ensureHttpCodesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, codes_);
+            values, httpCodes_);
         onChanged();
         return this;
       }
@@ -1016,21 +1280,21 @@ public final class Logging {
        * HTTP codes that should be discarded.
        * </pre>
        *
-       * <code>repeated int64 codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
+       * <code>repeated int64 http_codes = 1 [(.yandex.cloud.value) = "100-599"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearCodes() {
-        codes_ = emptyLongList();
+      public Builder clearHttpCodes() {
+        httpCodes_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
-      private java.util.List<java.lang.Integer> intervals_ =
+      private java.util.List<java.lang.Integer> httpCodeIntervals_ =
         java.util.Collections.emptyList();
-      private void ensureIntervalsIsMutable() {
+      private void ensureHttpCodeIntervalsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          intervals_ = new java.util.ArrayList<java.lang.Integer>(intervals_);
+          httpCodeIntervals_ = new java.util.ArrayList<java.lang.Integer>(httpCodeIntervals_);
           bitField0_ |= 0x00000002;
         }
       }
@@ -1039,53 +1303,53 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @return A list containing the intervals.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @return A list containing the httpCodeIntervals.
        */
-      public java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> getIntervalsList() {
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> getHttpCodeIntervalsList() {
         return new com.google.protobuf.Internal.ListAdapter<
-            java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval>(intervals_, intervals_converter_);
+            java.lang.Integer, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval>(httpCodeIntervals_, httpCodeIntervals_converter_);
       }
       /**
        * <pre>
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @return The count of intervals.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @return The count of httpCodeIntervals.
        */
-      public int getIntervalsCount() {
-        return intervals_.size();
+      public int getHttpCodeIntervalsCount() {
+        return httpCodeIntervals_.size();
       }
       /**
        * <pre>
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
        * @param index The index of the element to return.
-       * @return The intervals at the given index.
+       * @return The httpCodeIntervals at the given index.
        */
-      public yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval getIntervals(int index) {
-        return intervals_converter_.convert(intervals_.get(index));
+      public yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval getHttpCodeIntervals(int index) {
+        return httpCodeIntervals_converter_.convert(httpCodeIntervals_.get(index));
       }
       /**
        * <pre>
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
        * @param index The index to set the value at.
-       * @param value The intervals to set.
+       * @param value The httpCodeIntervals to set.
        * @return This builder for chaining.
        */
-      public Builder setIntervals(
+      public Builder setHttpCodeIntervals(
           int index, yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureIntervalsIsMutable();
-        intervals_.set(index, value.getNumber());
+        ensureHttpCodeIntervalsIsMutable();
+        httpCodeIntervals_.set(index, value.getNumber());
         onChanged();
         return this;
       }
@@ -1094,16 +1358,16 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @param value The intervals to add.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @param value The httpCodeIntervals to add.
        * @return This builder for chaining.
        */
-      public Builder addIntervals(yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval value) {
+      public Builder addHttpCodeIntervals(yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureIntervalsIsMutable();
-        intervals_.add(value.getNumber());
+        ensureHttpCodeIntervalsIsMutable();
+        httpCodeIntervals_.add(value.getNumber());
         onChanged();
         return this;
       }
@@ -1112,15 +1376,15 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @param values The intervals to add.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @param values The httpCodeIntervals to add.
        * @return This builder for chaining.
        */
-      public Builder addAllIntervals(
+      public Builder addAllHttpCodeIntervals(
           java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval> values) {
-        ensureIntervalsIsMutable();
+        ensureHttpCodeIntervalsIsMutable();
         for (yandex.cloud.api.apploadbalancer.v1.Logging.HttpCodeInterval value : values) {
-          intervals_.add(value.getNumber());
+          httpCodeIntervals_.add(value.getNumber());
         }
         onChanged();
         return this;
@@ -1130,11 +1394,11 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIntervals() {
-        intervals_ = java.util.Collections.emptyList();
+      public Builder clearHttpCodeIntervals() {
+        httpCodeIntervals_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -1144,39 +1408,39 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @return A list containing the enum numeric values on the wire for intervals.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @return A list containing the enum numeric values on the wire for httpCodeIntervals.
        */
       public java.util.List<java.lang.Integer>
-      getIntervalsValueList() {
-        return java.util.Collections.unmodifiableList(intervals_);
+      getHttpCodeIntervalsValueList() {
+        return java.util.Collections.unmodifiableList(httpCodeIntervals_);
       }
       /**
        * <pre>
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
        * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of intervals at the given index.
+       * @return The enum numeric value on the wire of httpCodeIntervals at the given index.
        */
-      public int getIntervalsValue(int index) {
-        return intervals_.get(index);
+      public int getHttpCodeIntervalsValue(int index) {
+        return httpCodeIntervals_.get(index);
       }
       /**
        * <pre>
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
        * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of intervals at the given index.
+       * @return The enum numeric value on the wire of httpCodeIntervals at the given index.
        * @return This builder for chaining.
        */
-      public Builder setIntervalsValue(
+      public Builder setHttpCodeIntervalsValue(
           int index, int value) {
-        ensureIntervalsIsMutable();
-        intervals_.set(index, value);
+        ensureHttpCodeIntervalsIsMutable();
+        httpCodeIntervals_.set(index, value);
         onChanged();
         return this;
       }
@@ -1185,13 +1449,13 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @param value The enum numeric value on the wire for intervals to add.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @param value The enum numeric value on the wire for httpCodeIntervals to add.
        * @return This builder for chaining.
        */
-      public Builder addIntervalsValue(int value) {
-        ensureIntervalsIsMutable();
-        intervals_.add(value);
+      public Builder addHttpCodeIntervalsValue(int value) {
+        ensureHttpCodeIntervalsIsMutable();
+        httpCodeIntervals_.add(value);
         onChanged();
         return this;
       }
@@ -1200,61 +1464,361 @@ public final class Logging {
        * Groups of HTTP codes like 4xx that should be discarded.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval intervals = 2;</code>
-       * @param values The enum numeric values on the wire for intervals to add.
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpCodeInterval http_code_intervals = 2;</code>
+       * @param values The enum numeric values on the wire for httpCodeIntervals to add.
        * @return This builder for chaining.
        */
-      public Builder addAllIntervalsValue(
+      public Builder addAllHttpCodeIntervalsValue(
           java.lang.Iterable<java.lang.Integer> values) {
-        ensureIntervalsIsMutable();
+        ensureHttpCodeIntervalsIsMutable();
         for (int value : values) {
-          intervals_.add(value);
+          httpCodeIntervals_.add(value);
         }
         onChanged();
         return this;
       }
 
-      private long percent_ ;
-      /**
-       * <pre>
-       * Percent of logs to be discarded: 0 - keep all, 100 - keep none.
-       * </pre>
-       *
-       * <code>int64 percent = 3 [(.yandex.cloud.value) = "0-100"];</code>
-       * @return The percent.
-       */
-      @java.lang.Override
-      public long getPercent() {
-        return percent_;
+      private java.util.List<java.lang.Integer> grpcCodes_ =
+        java.util.Collections.emptyList();
+      private void ensureGrpcCodesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          grpcCodes_ = new java.util.ArrayList<java.lang.Integer>(grpcCodes_);
+          bitField0_ |= 0x00000004;
+        }
       }
       /**
        * <pre>
-       * Percent of logs to be discarded: 0 - keep all, 100 - keep none.
+       * GRPC codes that should be discarded
        * </pre>
        *
-       * <code>int64 percent = 3 [(.yandex.cloud.value) = "0-100"];</code>
-       * @param value The percent to set.
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @return A list containing the grpcCodes.
+       */
+      public java.util.List<com.google.rpc.Code> getGrpcCodesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.google.rpc.Code>(grpcCodes_, grpcCodes_converter_);
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @return The count of grpcCodes.
+       */
+      public int getGrpcCodesCount() {
+        return grpcCodes_.size();
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param index The index of the element to return.
+       * @return The grpcCodes at the given index.
+       */
+      public com.google.rpc.Code getGrpcCodes(int index) {
+        return grpcCodes_converter_.convert(grpcCodes_.get(index));
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The grpcCodes to set.
        * @return This builder for chaining.
        */
-      public Builder setPercent(long value) {
-        
-        percent_ = value;
+      public Builder setGrpcCodes(
+          int index, com.google.rpc.Code value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGrpcCodesIsMutable();
+        grpcCodes_.set(index, value.getNumber());
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Percent of logs to be discarded: 0 - keep all, 100 - keep none.
+       * GRPC codes that should be discarded
        * </pre>
        *
-       * <code>int64 percent = 3 [(.yandex.cloud.value) = "0-100"];</code>
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param value The grpcCodes to add.
        * @return This builder for chaining.
        */
-      public Builder clearPercent() {
-        
-        percent_ = 0L;
+      public Builder addGrpcCodes(com.google.rpc.Code value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGrpcCodesIsMutable();
+        grpcCodes_.add(value.getNumber());
         onChanged();
         return this;
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param values The grpcCodes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGrpcCodes(
+          java.lang.Iterable<? extends com.google.rpc.Code> values) {
+        ensureGrpcCodesIsMutable();
+        for (com.google.rpc.Code value : values) {
+          grpcCodes_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGrpcCodes() {
+        grpcCodes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @return A list containing the enum numeric values on the wire for grpcCodes.
+       */
+      public java.util.List<java.lang.Integer>
+      getGrpcCodesValueList() {
+        return java.util.Collections.unmodifiableList(grpcCodes_);
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of grpcCodes at the given index.
+       */
+      public int getGrpcCodesValue(int index) {
+        return grpcCodes_.get(index);
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of grpcCodes at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setGrpcCodesValue(
+          int index, int value) {
+        ensureGrpcCodesIsMutable();
+        grpcCodes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param value The enum numeric value on the wire for grpcCodes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGrpcCodesValue(int value) {
+        ensureGrpcCodesIsMutable();
+        grpcCodes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GRPC codes that should be discarded
+       * </pre>
+       *
+       * <code>repeated .google.rpc.Code grpc_codes = 3;</code>
+       * @param values The enum numeric values on the wire for grpcCodes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGrpcCodesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureGrpcCodesIsMutable();
+        for (int value : values) {
+          grpcCodes_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value discardPercent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> discardPercentBuilder_;
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the discardPercent field is set.
+       */
+      public boolean hasDiscardPercent() {
+        return discardPercentBuilder_ != null || discardPercent_ != null;
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       * @return The discardPercent.
+       */
+      public com.google.protobuf.Int64Value getDiscardPercent() {
+        if (discardPercentBuilder_ == null) {
+          return discardPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : discardPercent_;
+        } else {
+          return discardPercentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setDiscardPercent(com.google.protobuf.Int64Value value) {
+        if (discardPercentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          discardPercent_ = value;
+          onChanged();
+        } else {
+          discardPercentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setDiscardPercent(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (discardPercentBuilder_ == null) {
+          discardPercent_ = builderForValue.build();
+          onChanged();
+        } else {
+          discardPercentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder mergeDiscardPercent(com.google.protobuf.Int64Value value) {
+        if (discardPercentBuilder_ == null) {
+          if (discardPercent_ != null) {
+            discardPercent_ =
+              com.google.protobuf.Int64Value.newBuilder(discardPercent_).mergeFrom(value).buildPartial();
+          } else {
+            discardPercent_ = value;
+          }
+          onChanged();
+        } else {
+          discardPercentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearDiscardPercent() {
+        if (discardPercentBuilder_ == null) {
+          discardPercent_ = null;
+          onChanged();
+        } else {
+          discardPercent_ = null;
+          discardPercentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDiscardPercentBuilder() {
+        
+        onChanged();
+        return getDiscardPercentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDiscardPercentOrBuilder() {
+        if (discardPercentBuilder_ != null) {
+          return discardPercentBuilder_.getMessageOrBuilder();
+        } else {
+          return discardPercent_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : discardPercent_;
+        }
+      }
+      /**
+       * <pre>
+       * Percent of logs to be discarded: 0 - keep all, 100 or unset - discard all
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value discard_percent = 4 [(.yandex.cloud.value) = "0-100"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDiscardPercentFieldBuilder() {
+        if (discardPercentBuilder_ == null) {
+          discardPercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDiscardPercent(),
+                  getParentForChildren(),
+                  isClean());
+          discardPercent_ = null;
+        }
+        return discardPercentBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1338,24 +1902,44 @@ public final class Logging {
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule> 
         getDiscardRulesList();
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule getDiscardRules(int index);
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     int getDiscardRulesCount();
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRuleOrBuilder> 
         getDiscardRulesOrBuilderList();
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRuleOrBuilder getDiscardRulesOrBuilder(
@@ -1527,6 +2111,10 @@ public final class Logging {
     public static final int DISCARD_RULES_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule> discardRules_;
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     @java.lang.Override
@@ -1534,6 +2122,10 @@ public final class Logging {
       return discardRules_;
     }
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     @java.lang.Override
@@ -1542,6 +2134,10 @@ public final class Logging {
       return discardRules_;
     }
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     @java.lang.Override
@@ -1549,6 +2145,10 @@ public final class Logging {
       return discardRules_.size();
     }
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     @java.lang.Override
@@ -1556,6 +2156,10 @@ public final class Logging {
       return discardRules_.get(index);
     }
     /**
+     * <pre>
+     * ordered list of rules, first matching rule applies
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
      */
     @java.lang.Override
@@ -2075,6 +2679,10 @@ public final class Logging {
           yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule, yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.Builder, yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRuleOrBuilder> discardRulesBuilder_;
 
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule> getDiscardRulesList() {
@@ -2085,6 +2693,10 @@ public final class Logging {
         }
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public int getDiscardRulesCount() {
@@ -2095,6 +2707,10 @@ public final class Logging {
         }
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule getDiscardRules(int index) {
@@ -2105,6 +2721,10 @@ public final class Logging {
         }
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder setDiscardRules(
@@ -2122,6 +2742,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder setDiscardRules(
@@ -2136,6 +2760,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder addDiscardRules(yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule value) {
@@ -2152,6 +2780,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder addDiscardRules(
@@ -2169,6 +2801,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder addDiscardRules(
@@ -2183,6 +2819,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder addDiscardRules(
@@ -2197,6 +2837,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder addAllDiscardRules(
@@ -2212,6 +2856,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder clearDiscardRules() {
@@ -2225,6 +2873,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public Builder removeDiscardRules(int index) {
@@ -2238,6 +2890,10 @@ public final class Logging {
         return this;
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.Builder getDiscardRulesBuilder(
@@ -2245,6 +2901,10 @@ public final class Logging {
         return getDiscardRulesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRuleOrBuilder getDiscardRulesOrBuilder(
@@ -2255,6 +2915,10 @@ public final class Logging {
         }
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRuleOrBuilder> 
@@ -2266,6 +2930,10 @@ public final class Logging {
         }
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.Builder addDiscardRulesBuilder() {
@@ -2273,6 +2941,10 @@ public final class Logging {
             yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.Builder addDiscardRulesBuilder(
@@ -2281,6 +2953,10 @@ public final class Logging {
             index, yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * ordered list of rules, first matching rule applies
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.LogDiscardRule discard_rules = 2;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.Logging.LogDiscardRule.Builder> 
@@ -2418,34 +3094,38 @@ public final class Logging {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/apploadbalancer/v1/loggin" +
       "g.proto\022\037yandex.cloud.apploadbalancer.v1" +
-      "\032\035yandex/cloud/validation.proto\"\216\001\n\016LogD" +
-      "iscardRule\022\032\n\005codes\030\001 \003(\003B\013\372\3071\007100-599\022D" +
-      "\n\tintervals\030\002 \003(\01621.yandex.cloud.appload" +
-      "balancer.v1.HttpCodeInterval\022\032\n\007percent\030" +
-      "\003 \001(\003B\t\372\3071\0050-100\"{\n\nLogOptions\022\024\n\014log_gr" +
-      "oup_id\030\001 \001(\t\022F\n\rdiscard_rules\030\002 \003(\0132/.ya" +
-      "ndex.cloud.apploadbalancer.v1.LogDiscard" +
-      "Rule\022\017\n\007disable\030\003 \001(\010*\302\001\n\020HttpCodeInterv" +
-      "al\022\"\n\036HTTP_CODE_INTERVAL_UNSPECIFIED\020\000\022\032" +
-      "\n\026HTTP_CODE_INTERVAL_1XX\020\001\022\032\n\026HTTP_CODE_" +
-      "INTERVAL_2XX\020\002\022\032\n\026HTTP_CODE_INTERVAL_3XX" +
-      "\020\003\022\032\n\026HTTP_CODE_INTERVAL_4XX\020\004\022\032\n\026HTTP_C" +
-      "ODE_INTERVAL_5XX\020\005Bz\n#yandex.cloud.api.a" +
-      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/apploadbalan" +
-      "cer/v1;apploadbalancerb\006proto3"
+      "\032\036google/protobuf/wrappers.proto\032\035yandex" +
+      "/cloud/validation.proto\032\025google/rpc/code" +
+      ".proto\"\350\001\n\016LogDiscardRule\022\037\n\nhttp_codes\030" +
+      "\001 \003(\003B\013\372\3071\007100-599\022N\n\023http_code_interval" +
+      "s\030\002 \003(\01621.yandex.cloud.apploadbalancer.v" +
+      "1.HttpCodeInterval\022$\n\ngrpc_codes\030\003 \003(\0162\020" +
+      ".google.rpc.Code\022?\n\017discard_percent\030\004 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\t\372\3071\0050-10" +
+      "0\"{\n\nLogOptions\022\024\n\014log_group_id\030\001 \001(\t\022F\n" +
+      "\rdiscard_rules\030\002 \003(\0132/.yandex.cloud.appl" +
+      "oadbalancer.v1.LogDiscardRule\022\017\n\007disable" +
+      "\030\003 \001(\010*\212\001\n\020HttpCodeInterval\022\"\n\036HTTP_CODE" +
+      "_INTERVAL_UNSPECIFIED\020\000\022\014\n\010HTTP_1XX\020\001\022\014\n" +
+      "\010HTTP_2XX\020\002\022\014\n\010HTTP_3XX\020\003\022\014\n\010HTTP_4XX\020\004\022" +
+      "\014\n\010HTTP_5XX\020\005\022\014\n\010HTTP_ALL\020\006Bz\n#yandex.cl" +
+      "oud.api.apploadbalancer.v1ZSgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/app" +
+      "loadbalancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          com.google.rpc.CodeProto.getDescriptor(),
         });
     internal_static_yandex_cloud_apploadbalancer_v1_LogDiscardRule_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_LogDiscardRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_LogDiscardRule_descriptor,
-        new java.lang.String[] { "Codes", "Intervals", "Percent", });
+        new java.lang.String[] { "HttpCodes", "HttpCodeIntervals", "GrpcCodes", "DiscardPercent", });
     internal_static_yandex_cloud_apploadbalancer_v1_LogOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_apploadbalancer_v1_LogOptions_fieldAccessorTable = new
@@ -2457,7 +3137,9 @@ public final class Logging {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    com.google.rpc.CodeProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

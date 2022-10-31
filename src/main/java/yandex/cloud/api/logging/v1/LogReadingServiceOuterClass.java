@@ -2875,7 +2875,7 @@ public final class LogReadingServiceOuterClass {
      * The maximum number of results per page to return.
      * </pre>
      *
-     * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+     * <code>int64 page_size = 8 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -3514,7 +3514,7 @@ public final class LogReadingServiceOuterClass {
      * The maximum number of results per page to return.
      * </pre>
      *
-     * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+     * <code>int64 page_size = 8 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -5281,7 +5281,7 @@ public final class LogReadingServiceOuterClass {
        * The maximum number of results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+       * <code>int64 page_size = 8 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -5293,7 +5293,7 @@ public final class LogReadingServiceOuterClass {
        * The maximum number of results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+       * <code>int64 page_size = 8 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -5308,7 +5308,7 @@ public final class LogReadingServiceOuterClass {
        * The maximum number of results per page to return.
        * </pre>
        *
-       * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
+       * <code>int64 page_size = 8 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -5462,7 +5462,7 @@ public final class LogReadingServiceOuterClass {
       "\010\202\3101\004<=10\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022@\n" +
       "\014stream_names\030\n \003(\tB*\362\3071\035|[a-zA-Z][-a-zA" +
       "-Z0-9_.]{0,63}\202\3101\005<=100\022\035\n\tpage_size\030\010 \001" +
-      "(\003B\n\372\3071\0061-1000\022)\n\021max_response_size\030\t \001(" +
+      "(\003B\n\372\3071\0060-1000\022)\n\021max_response_size\030\t \001(" +
       "\003B\016\372\3071\n0-104857602h\n\021LogReadingService\022S" +
       "\n\004Read\022$.yandex.cloud.logging.v1.ReadReq" +
       "uest\032%.yandex.cloud.logging.v1.ReadRespo" +

@@ -3,6 +3,9 @@ package yandex.cloud.api.serverless.containers.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing serverless containers.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -463,10 +466,17 @@ public final class ContainerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless containers.
+   * </pre>
    */
   public static abstract class ContainerServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified container.
+     * To get the list of all available containers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> responseObserver) {
@@ -474,6 +484,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of containers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse> responseObserver) {
@@ -481,6 +494,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a container in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -488,6 +504,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified container.
+     * </pre>
      */
     public void update(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -495,6 +514,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified container.
+     * </pre>
      */
     public void delete(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -502,6 +524,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deploys a revision for the specified container.
+     * </pre>
      */
     public void deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -509,6 +534,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Rollback the specified container to an old revision.
+     * </pre>
      */
     public void rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -516,6 +544,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified revision of a container.
+     * To get the list of available revision, make a [ListRevisions] request.
+     * </pre>
      */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> responseObserver) {
@@ -523,6 +555,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of revisions for the specified container, or of all container revisions
+     * in the specified folder.
+     * </pre>
      */
     public void listRevisions(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse> responseObserver) {
@@ -530,6 +566,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified container.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse> responseObserver) {
@@ -537,6 +576,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified container.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -544,6 +586,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the container.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -551,6 +596,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified container.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -655,6 +703,9 @@ public final class ContainerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless containers.
+   * </pre>
    */
   public static final class ContainerServiceStub extends io.grpc.stub.AbstractAsyncStub<ContainerServiceStub> {
     private ContainerServiceStub(
@@ -669,6 +720,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified container.
+     * To get the list of all available containers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> responseObserver) {
@@ -677,6 +732,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of containers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse> responseObserver) {
@@ -685,6 +743,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a container in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -693,6 +754,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified container.
+     * </pre>
      */
     public void update(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -701,6 +765,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified container.
+     * </pre>
      */
     public void delete(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -709,6 +776,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deploys a revision for the specified container.
+     * </pre>
      */
     public void deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -717,6 +787,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Rollback the specified container to an old revision.
+     * </pre>
      */
     public void rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -725,6 +798,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified revision of a container.
+     * To get the list of available revision, make a [ListRevisions] request.
+     * </pre>
      */
     public void getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> responseObserver) {
@@ -733,6 +810,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of revisions for the specified container, or of all container revisions
+     * in the specified folder.
+     * </pre>
      */
     public void listRevisions(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse> responseObserver) {
@@ -741,6 +822,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified container.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse> responseObserver) {
@@ -749,6 +833,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified container.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -757,6 +844,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the container.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -765,6 +855,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified container.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -774,6 +867,9 @@ public final class ContainerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless containers.
+   * </pre>
    */
   public static final class ContainerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ContainerServiceBlockingStub> {
     private ContainerServiceBlockingStub(
@@ -788,6 +884,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified container.
+     * To get the list of all available containers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container get(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -795,6 +895,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of containers in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse list(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -802,6 +905,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a container in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -809,6 +915,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified container.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -816,6 +925,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified container.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -823,6 +935,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deploys a revision for the specified container.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deployRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -830,6 +945,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Rollback the specified container to an old revision.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rollback(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -837,6 +955,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified revision of a container.
+     * To get the list of available revision, make a [ListRevisions] request.
+     * </pre>
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision getRevision(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -844,6 +966,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of revisions for the specified container, or of all container revisions
+     * in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse listRevisions(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -851,6 +977,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified container.
+     * </pre>
      */
     public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse listOperations(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -858,6 +987,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified container.
+     * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -865,6 +997,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the container.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -872,6 +1007,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified container.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -880,6 +1018,9 @@ public final class ContainerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless containers.
+   * </pre>
    */
   public static final class ContainerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ContainerServiceFutureStub> {
     private ContainerServiceFutureStub(
@@ -894,6 +1035,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified container.
+     * To get the list of all available containers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> get(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRequest request) {
@@ -902,6 +1047,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of containers in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersResponse> list(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRequest request) {
@@ -910,6 +1058,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a container in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.CreateContainerRequest request) {
@@ -918,6 +1069,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.UpdateContainerRequest request) {
@@ -926,6 +1080,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeleteContainerRequest request) {
@@ -934,6 +1091,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deploys a revision for the specified container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deployRevision(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.DeployContainerRevisionRequest request) {
@@ -942,6 +1102,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Rollback the specified container to an old revision.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rollback(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.RollbackContainerRequest request) {
@@ -950,6 +1113,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified revision of a container.
+     * To get the list of available revision, make a [ListRevisions] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> getRevision(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.GetContainerRevisionRequest request) {
@@ -958,6 +1125,10 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of revisions for the specified container, or of all container revisions
+     * in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsResponse> listRevisions(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainersRevisionsRequest request) {
@@ -966,6 +1137,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsResponse> listOperations(
         yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ListContainerOperationsRequest request) {
@@ -974,6 +1148,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
@@ -982,6 +1159,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -990,6 +1170,9 @@ public final class ContainerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified container.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {

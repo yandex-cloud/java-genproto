@@ -2955,7 +2955,7 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -2964,7 +2964,7 @@ public final class FunctionOuterClass {
         getSecretsList();
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -2972,7 +2972,7 @@ public final class FunctionOuterClass {
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret getSecrets(int index);
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -2980,7 +2980,7 @@ public final class FunctionOuterClass {
     int getSecretsCount();
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -2989,7 +2989,7 @@ public final class FunctionOuterClass {
         getSecretsOrBuilderList();
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -4163,7 +4163,7 @@ public final class FunctionOuterClass {
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Secret> secrets_;
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -4174,7 +4174,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -4186,7 +4186,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -4197,7 +4197,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -4208,7 +4208,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * Lockbox secrets to be used by the version
+     * Yandex Lockbox secrets to be used by the version.
      * </pre>
      *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6858,7 +6858,7 @@ public final class FunctionOuterClass {
 
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6872,7 +6872,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6886,7 +6886,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6900,7 +6900,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6921,7 +6921,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6939,7 +6939,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6959,7 +6959,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6980,7 +6980,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -6998,7 +6998,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7016,7 +7016,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7035,7 +7035,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7052,7 +7052,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7069,7 +7069,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7080,7 +7080,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7094,7 +7094,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7109,7 +7109,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7120,7 +7120,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -7132,7 +7132,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Lockbox secrets to be used by the version
+       * Yandex Lockbox secrets to be used by the version.
        * </pre>
        *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Secret secrets = 19;</code>
@@ -11245,7 +11245,7 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * ID of lockbox secret
+     * ID of Yandex Lockbox secret.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -11254,7 +11254,7 @@ public final class FunctionOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of lockbox secret
+     * ID of Yandex Lockbox secret.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -11265,7 +11265,7 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * ID of secret version
+     * ID of Yandex Lockbox version.
      * </pre>
      *
      * <code>string version_id = 2;</code>
@@ -11274,7 +11274,7 @@ public final class FunctionOuterClass {
     java.lang.String getVersionId();
     /**
      * <pre>
-     * ID of secret version
+     * ID of Yandex Lockbox version.
      * </pre>
      *
      * <code>string version_id = 2;</code>
@@ -11285,7 +11285,7 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * Key in secret's payload, which value to be delivered into function environment
+     * Key in secret's payload, which value to be delivered into function environment.
      * </pre>
      *
      * <code>string key = 3;</code>
@@ -11294,7 +11294,7 @@ public final class FunctionOuterClass {
     java.lang.String getKey();
     /**
      * <pre>
-     * Key in secret's payload, which value to be delivered into function environment
+     * Key in secret's payload, which value to be delivered into function environment.
      * </pre>
      *
      * <code>string key = 3;</code>
@@ -11305,7 +11305,7 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * environment variable in which secret's value to be delivered
+     * environment variable in which secret's value to be delivered.
      * </pre>
      *
      * <code>string environment_variable = 4;</code>
@@ -11314,7 +11314,7 @@ public final class FunctionOuterClass {
     boolean hasEnvironmentVariable();
     /**
      * <pre>
-     * environment variable in which secret's value to be delivered
+     * environment variable in which secret's value to be delivered.
      * </pre>
      *
      * <code>string environment_variable = 4;</code>
@@ -11323,7 +11323,7 @@ public final class FunctionOuterClass {
     java.lang.String getEnvironmentVariable();
     /**
      * <pre>
-     * environment variable in which secret's value to be delivered
+     * environment variable in which secret's value to be delivered.
      * </pre>
      *
      * <code>string environment_variable = 4;</code>
@@ -11336,7 +11336,7 @@ public final class FunctionOuterClass {
   }
   /**
    * <pre>
-   * Secret for serverless function
+   * Secret for serverless function.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.Secret}
@@ -11485,7 +11485,7 @@ public final class FunctionOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of lockbox secret
+     * ID of Yandex Lockbox secret.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -11506,7 +11506,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * ID of lockbox secret
+     * ID of Yandex Lockbox secret.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -11531,7 +11531,7 @@ public final class FunctionOuterClass {
     private volatile java.lang.Object versionId_;
     /**
      * <pre>
-     * ID of secret version
+     * ID of Yandex Lockbox version.
      * </pre>
      *
      * <code>string version_id = 2;</code>
@@ -11552,7 +11552,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * ID of secret version
+     * ID of Yandex Lockbox version.
      * </pre>
      *
      * <code>string version_id = 2;</code>
@@ -11577,7 +11577,7 @@ public final class FunctionOuterClass {
     private volatile java.lang.Object key_;
     /**
      * <pre>
-     * Key in secret's payload, which value to be delivered into function environment
+     * Key in secret's payload, which value to be delivered into function environment.
      * </pre>
      *
      * <code>string key = 3;</code>
@@ -11598,7 +11598,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * Key in secret's payload, which value to be delivered into function environment
+     * Key in secret's payload, which value to be delivered into function environment.
      * </pre>
      *
      * <code>string key = 3;</code>
@@ -11622,7 +11622,7 @@ public final class FunctionOuterClass {
     public static final int ENVIRONMENT_VARIABLE_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * environment variable in which secret's value to be delivered
+     * environment variable in which secret's value to be delivered.
      * </pre>
      *
      * <code>string environment_variable = 4;</code>
@@ -11633,7 +11633,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * environment variable in which secret's value to be delivered
+     * environment variable in which secret's value to be delivered.
      * </pre>
      *
      * <code>string environment_variable = 4;</code>
@@ -11658,7 +11658,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * environment variable in which secret's value to be delivered
+     * environment variable in which secret's value to be delivered.
      * </pre>
      *
      * <code>string environment_variable = 4;</code>
@@ -11882,7 +11882,7 @@ public final class FunctionOuterClass {
     }
     /**
      * <pre>
-     * Secret for serverless function
+     * Secret for serverless function.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.Secret}
@@ -12081,7 +12081,7 @@ public final class FunctionOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of lockbox secret
+       * ID of Yandex Lockbox secret.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -12101,7 +12101,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of lockbox secret
+       * ID of Yandex Lockbox secret.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -12122,7 +12122,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of lockbox secret
+       * ID of Yandex Lockbox secret.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -12141,7 +12141,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of lockbox secret
+       * ID of Yandex Lockbox secret.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -12155,7 +12155,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of lockbox secret
+       * ID of Yandex Lockbox secret.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -12177,7 +12177,7 @@ public final class FunctionOuterClass {
       private java.lang.Object versionId_ = "";
       /**
        * <pre>
-       * ID of secret version
+       * ID of Yandex Lockbox version.
        * </pre>
        *
        * <code>string version_id = 2;</code>
@@ -12197,7 +12197,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of secret version
+       * ID of Yandex Lockbox version.
        * </pre>
        *
        * <code>string version_id = 2;</code>
@@ -12218,7 +12218,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of secret version
+       * ID of Yandex Lockbox version.
        * </pre>
        *
        * <code>string version_id = 2;</code>
@@ -12237,7 +12237,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of secret version
+       * ID of Yandex Lockbox version.
        * </pre>
        *
        * <code>string version_id = 2;</code>
@@ -12251,7 +12251,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * ID of secret version
+       * ID of Yandex Lockbox version.
        * </pre>
        *
        * <code>string version_id = 2;</code>
@@ -12273,7 +12273,7 @@ public final class FunctionOuterClass {
       private java.lang.Object key_ = "";
       /**
        * <pre>
-       * Key in secret's payload, which value to be delivered into function environment
+       * Key in secret's payload, which value to be delivered into function environment.
        * </pre>
        *
        * <code>string key = 3;</code>
@@ -12293,7 +12293,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Key in secret's payload, which value to be delivered into function environment
+       * Key in secret's payload, which value to be delivered into function environment.
        * </pre>
        *
        * <code>string key = 3;</code>
@@ -12314,7 +12314,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Key in secret's payload, which value to be delivered into function environment
+       * Key in secret's payload, which value to be delivered into function environment.
        * </pre>
        *
        * <code>string key = 3;</code>
@@ -12333,7 +12333,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Key in secret's payload, which value to be delivered into function environment
+       * Key in secret's payload, which value to be delivered into function environment.
        * </pre>
        *
        * <code>string key = 3;</code>
@@ -12347,7 +12347,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Key in secret's payload, which value to be delivered into function environment
+       * Key in secret's payload, which value to be delivered into function environment.
        * </pre>
        *
        * <code>string key = 3;</code>
@@ -12368,7 +12368,7 @@ public final class FunctionOuterClass {
 
       /**
        * <pre>
-       * environment variable in which secret's value to be delivered
+       * environment variable in which secret's value to be delivered.
        * </pre>
        *
        * <code>string environment_variable = 4;</code>
@@ -12380,7 +12380,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * environment variable in which secret's value to be delivered
+       * environment variable in which secret's value to be delivered.
        * </pre>
        *
        * <code>string environment_variable = 4;</code>
@@ -12406,7 +12406,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * environment variable in which secret's value to be delivered
+       * environment variable in which secret's value to be delivered.
        * </pre>
        *
        * <code>string environment_variable = 4;</code>
@@ -12433,7 +12433,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * environment variable in which secret's value to be delivered
+       * environment variable in which secret's value to be delivered.
        * </pre>
        *
        * <code>string environment_variable = 4;</code>
@@ -12452,7 +12452,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * environment variable in which secret's value to be delivered
+       * environment variable in which secret's value to be delivered.
        * </pre>
        *
        * <code>string environment_variable = 4;</code>
@@ -12468,7 +12468,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * environment variable in which secret's value to be delivered
+       * environment variable in which secret's value to be delivered.
        * </pre>
        *
        * <code>string environment_variable = 4;</code>

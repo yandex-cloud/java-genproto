@@ -19,11 +19,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container to return.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to return.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -117,6 +127,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container to return.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
@@ -134,6 +149,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to return.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -456,6 +476,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container to return.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerId.
        */
@@ -472,6 +497,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to return.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerId.
        */
@@ -489,6 +519,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to return.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -504,6 +539,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to return.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +554,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to return.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -587,11 +632,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list containers in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list containers in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -599,17 +654,34 @@ public final class ContainerServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListContainersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -617,11 +689,29 @@ public final class ContainerServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters containers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-container"`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters containers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-container"`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The bytes for filter.
      */
@@ -734,6 +824,11 @@ public final class ContainerServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list containers in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -751,6 +846,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list containers in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -772,6 +872,13 @@ public final class ContainerServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListContainersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -783,6 +890,11 @@ public final class ContainerServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -800,6 +912,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -821,6 +938,15 @@ public final class ContainerServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters containers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-container"`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The filter.
      */
@@ -838,6 +964,15 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters containers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-container"`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The bytes for filter.
      */
@@ -1212,6 +1347,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list containers in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -1228,6 +1368,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list containers in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -1245,6 +1390,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list containers in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1260,6 +1410,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list containers in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1270,6 +1425,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list containers in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1288,6 +1448,13 @@ public final class ContainerServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListContainersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -1296,6 +1463,13 @@ public final class ContainerServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListContainersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1307,6 +1481,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListContainersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -1319,6 +1500,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -1335,6 +1521,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -1352,6 +1543,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1367,6 +1563,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -1377,6 +1578,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1395,6 +1601,15 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters containers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-container"`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @return The filter.
        */
@@ -1411,6 +1626,15 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters containers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-container"`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @return The bytes for filter.
        */
@@ -1428,6 +1652,15 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters containers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-container"`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -1443,6 +1676,15 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters containers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-container"`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @return This builder for chaining.
        */
@@ -1453,6 +1695,15 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters containers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Container.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-container"`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -1526,35 +1777,69 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> 
         getContainersList();
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container getContainers(int index);
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     int getContainersCount();
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ContainerOrBuilder> 
         getContainersOrBuilderList();
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ContainerOrBuilder getContainersOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1662,6 +1947,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> containers_;
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     @java.lang.Override
@@ -1669,6 +1958,10 @@ public final class ContainerServiceOuterClass {
       return containers_;
     }
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     @java.lang.Override
@@ -1677,6 +1970,10 @@ public final class ContainerServiceOuterClass {
       return containers_;
     }
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     @java.lang.Override
@@ -1684,6 +1981,10 @@ public final class ContainerServiceOuterClass {
       return containers_.size();
     }
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     @java.lang.Override
@@ -1691,6 +1992,10 @@ public final class ContainerServiceOuterClass {
       return containers_.get(index);
     }
     /**
+     * <pre>
+     * List of containers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
      */
     @java.lang.Override
@@ -1702,6 +2007,13 @@ public final class ContainerServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1719,6 +2031,13 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2109,6 +2428,10 @@ public final class ContainerServiceOuterClass {
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ContainerOrBuilder> containersBuilder_;
 
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container> getContainersList() {
@@ -2119,6 +2442,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public int getContainersCount() {
@@ -2129,6 +2456,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container getContainers(int index) {
@@ -2139,6 +2470,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder setContainers(
@@ -2156,6 +2491,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder setContainers(
@@ -2170,6 +2509,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder addContainers(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container value) {
@@ -2186,6 +2529,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder addContainers(
@@ -2203,6 +2550,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder addContainers(
@@ -2217,6 +2568,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder addContainers(
@@ -2231,6 +2586,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder addAllContainers(
@@ -2246,6 +2605,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder clearContainers() {
@@ -2259,6 +2622,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public Builder removeContainers(int index) {
@@ -2272,6 +2639,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.Builder getContainersBuilder(
@@ -2279,6 +2650,10 @@ public final class ContainerServiceOuterClass {
         return getContainersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ContainerOrBuilder getContainersOrBuilder(
@@ -2289,6 +2664,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ContainerOrBuilder> 
@@ -2300,6 +2679,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.Builder addContainersBuilder() {
@@ -2307,6 +2690,10 @@ public final class ContainerServiceOuterClass {
             yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.Builder addContainersBuilder(
@@ -2315,6 +2702,10 @@ public final class ContainerServiceOuterClass {
             index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of containers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Container containers = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Container.Builder> 
@@ -2338,6 +2729,13 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -2354,6 +2752,13 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2371,6 +2776,13 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2386,6 +2798,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -2396,6 +2815,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2469,11 +2895,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a container in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a container in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -2481,11 +2917,21 @@ public final class ContainerServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -2493,11 +2939,19 @@ public final class ContainerServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -2505,10 +2959,18 @@ public final class ContainerServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -2520,11 +2982,19 @@ public final class ContainerServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2532,6 +3002,10 @@ public final class ContainerServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2665,6 +3139,11 @@ public final class ContainerServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a container in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -2682,6 +3161,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a container in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -2703,6 +3187,11 @@ public final class ContainerServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
@@ -2720,6 +3209,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -2741,6 +3235,10 @@ public final class ContainerServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -2758,6 +3256,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the container.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -2803,6 +3305,10 @@ public final class ContainerServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2821,6 +3327,10 @@ public final class ContainerServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2829,6 +3339,10 @@ public final class ContainerServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2842,6 +3356,10 @@ public final class ContainerServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -3246,6 +3764,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a container in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -3262,6 +3785,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a container in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -3279,6 +3807,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a container in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -3294,6 +3827,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a container in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3304,6 +3842,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a container in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -3322,6 +3865,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The name.
        */
@@ -3338,6 +3886,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The bytes for name.
        */
@@ -3355,6 +3908,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3370,6 +3928,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return This builder for chaining.
        */
@@ -3380,6 +3943,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3398,6 +3966,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -3414,6 +3986,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -3431,6 +4007,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3446,6 +4026,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -3456,6 +4040,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the container.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3499,6 +4087,10 @@ public final class ContainerServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3517,6 +4109,10 @@ public final class ContainerServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -3525,6 +4121,10 @@ public final class ContainerServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -3538,6 +4138,10 @@ public final class ContainerServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -3559,6 +4163,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3578,6 +4186,10 @@ public final class ContainerServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -3593,6 +4205,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3660,11 +4276,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container that is being created.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container that is being created.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -3758,6 +4382,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container that is being created.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
@@ -3775,6 +4403,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container that is being created.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -4097,6 +4729,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container that is being created.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The containerId.
        */
@@ -4113,6 +4749,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being created.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The bytes for containerId.
        */
@@ -4130,6 +4770,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being created.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -4145,6 +4789,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being created.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4155,6 +4803,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being created.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -4228,11 +4880,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container to update.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to update.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -4240,26 +4902,48 @@ public final class ContainerServiceOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the container should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the container should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the container should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -4267,11 +4951,19 @@ public final class ContainerServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the container.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the container.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -4279,10 +4971,22 @@ public final class ContainerServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -4294,11 +4998,23 @@ public final class ContainerServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4306,6 +5022,12 @@ public final class ContainerServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4452,6 +5174,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container to update.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
@@ -4469,6 +5196,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to update.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -4490,6 +5222,10 @@ public final class ContainerServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the container should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
@@ -4498,6 +5234,10 @@ public final class ContainerServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the container should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
@@ -4506,6 +5246,10 @@ public final class ContainerServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the container should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
@@ -4516,6 +5260,11 @@ public final class ContainerServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
@@ -4533,6 +5282,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the container.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -4554,6 +5308,10 @@ public final class ContainerServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the container.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -4571,6 +5329,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the container.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -4616,6 +5378,12 @@ public final class ContainerServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4634,6 +5402,12 @@ public final class ContainerServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -4642,6 +5416,12 @@ public final class ContainerServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -4655,6 +5435,12 @@ public final class ContainerServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Container labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -5089,6 +5875,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container to update.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerId.
        */
@@ -5105,6 +5896,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to update.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerId.
        */
@@ -5122,6 +5918,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to update.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -5137,6 +5938,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to update.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5147,6 +5953,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to update.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -5167,6 +5978,10 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
@@ -5174,6 +5989,10 @@ public final class ContainerServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
@@ -5185,6 +6004,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5201,6 +6024,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -5215,6 +6042,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5233,6 +6064,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -5247,6 +6082,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -5255,6 +6094,10 @@ public final class ContainerServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5266,6 +6109,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the container should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5284,6 +6131,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The name.
        */
@@ -5300,6 +6152,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The bytes for name.
        */
@@ -5317,6 +6174,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -5332,6 +6194,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return This builder for chaining.
        */
@@ -5342,6 +6209,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the container.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -5360,6 +6232,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the container.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -5376,6 +6252,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the container.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -5393,6 +6273,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the container.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -5408,6 +6292,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the container.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -5418,6 +6306,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the container.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -5461,6 +6353,12 @@ public final class ContainerServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5479,6 +6377,12 @@ public final class ContainerServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -5487,6 +6391,12 @@ public final class ContainerServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -5500,6 +6410,12 @@ public final class ContainerServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -5521,6 +6437,12 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5540,6 +6462,12 @@ public final class ContainerServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -5555,6 +6483,12 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5622,11 +6556,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container that is being updated.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container that is being updated.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -5720,6 +6662,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container that is being updated.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
@@ -5737,6 +6683,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container that is being updated.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -6059,6 +7009,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container that is being updated.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The containerId.
        */
@@ -6075,6 +7029,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being updated.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The bytes for containerId.
        */
@@ -6092,6 +7050,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being updated.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -6107,6 +7069,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being updated.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6117,6 +7083,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being updated.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -6190,11 +7160,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container to delete.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to delete.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -6288,6 +7268,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container to delete.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
@@ -6305,6 +7290,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to delete.
+     * To get a container ID make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -6627,6 +7617,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container to delete.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerId.
        */
@@ -6643,6 +7638,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to delete.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerId.
        */
@@ -6660,6 +7660,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to delete.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -6675,6 +7680,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to delete.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -6685,6 +7695,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to delete.
+       * To get a container ID make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -6758,11 +7773,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container that is being deleted.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container that is being deleted.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -6856,6 +7879,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container that is being deleted.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
@@ -6873,6 +7900,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container that is being deleted.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -7195,6 +8226,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container that is being deleted.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The containerId.
        */
@@ -7211,6 +8246,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being deleted.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The bytes for containerId.
        */
@@ -7228,6 +8267,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being deleted.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -7243,6 +8286,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being deleted.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7253,6 +8300,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being deleted.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -7326,11 +8377,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the revision to return.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerRevisionId.
      */
     java.lang.String getContainerRevisionId();
     /**
+     * <pre>
+     * ID of the revision to return.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerRevisionId.
      */
@@ -7424,6 +8485,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_REVISION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerRevisionId_;
     /**
+     * <pre>
+     * ID of the revision to return.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerRevisionId.
      */
@@ -7441,6 +8507,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the revision to return.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerRevisionId.
      */
@@ -7763,6 +8834,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerRevisionId_ = "";
       /**
+       * <pre>
+       * ID of the revision to return.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerRevisionId.
        */
@@ -7779,6 +8855,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision to return.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerRevisionId.
        */
@@ -7796,6 +8877,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision to return.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerRevisionId to set.
        * @return This builder for chaining.
@@ -7811,6 +8897,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision to return.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -7821,6 +8912,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision to return.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string container_revision_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerRevisionId to set.
        * @return This builder for chaining.
@@ -7894,16 +8990,31 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list container revisions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return Whether the folderId field is set.
      */
     boolean hasFolderId();
     /**
+     * <pre>
+     * ID of the folder to list container revisions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list container revisions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -7911,16 +9022,31 @@ public final class ContainerServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * ID of the container to list revisions for.
+     * To get a container ID use a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return Whether the containerId field is set.
      */
     boolean hasContainerId();
     /**
+     * <pre>
+     * ID of the container to list revisions for.
+     * To get a container ID use a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to list revisions for.
+     * To get a container ID use a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The bytes for containerId.
      */
@@ -7928,17 +9054,34 @@ public final class ContainerServiceOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available results
+     * is larger than `pageSize`, the service returns a [ListContainersRevisionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -7946,11 +9089,29 @@ public final class ContainerServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `status="ACTIVE"`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `status="ACTIVE"`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -8110,6 +9271,11 @@ public final class ContainerServiceOuterClass {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * ID of the folder to list container revisions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return Whether the folderId field is set.
      */
@@ -8117,6 +9283,11 @@ public final class ContainerServiceOuterClass {
       return idCase_ == 1;
     }
     /**
+     * <pre>
+     * ID of the folder to list container revisions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
@@ -8138,6 +9309,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list container revisions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -8162,6 +9338,11 @@ public final class ContainerServiceOuterClass {
 
     public static final int CONTAINER_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * ID of the container to list revisions for.
+     * To get a container ID use a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return Whether the containerId field is set.
      */
@@ -8169,6 +9350,11 @@ public final class ContainerServiceOuterClass {
       return idCase_ == 2;
     }
     /**
+     * <pre>
+     * ID of the container to list revisions for.
+     * To get a container ID use a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The containerId.
      */
@@ -8190,6 +9376,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to list revisions for.
+     * To get a container ID use a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 2;</code>
      * @return The bytes for containerId.
      */
@@ -8215,6 +9406,13 @@ public final class ContainerServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 3;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available results
+     * is larger than `pageSize`, the service returns a [ListContainersRevisionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
@@ -8226,6 +9424,11 @@ public final class ContainerServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -8243,6 +9446,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -8264,6 +9472,15 @@ public final class ContainerServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 5;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `status="ACTIVE"`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
@@ -8281,6 +9498,15 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `status="ACTIVE"`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -8715,6 +9941,11 @@ public final class ContainerServiceOuterClass {
 
 
       /**
+       * <pre>
+       * ID of the folder to list container revisions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return Whether the folderId field is set.
        */
@@ -8723,6 +9954,11 @@ public final class ContainerServiceOuterClass {
         return idCase_ == 1;
       }
       /**
+       * <pre>
+       * ID of the folder to list container revisions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
@@ -8745,6 +9981,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list container revisions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
@@ -8768,6 +10009,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list container revisions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -8783,6 +10029,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list container revisions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8795,6 +10046,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list container revisions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -8812,6 +10068,11 @@ public final class ContainerServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * ID of the container to list revisions for.
+       * To get a container ID use a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return Whether the containerId field is set.
        */
@@ -8820,6 +10081,11 @@ public final class ContainerServiceOuterClass {
         return idCase_ == 2;
       }
       /**
+       * <pre>
+       * ID of the container to list revisions for.
+       * To get a container ID use a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return The containerId.
        */
@@ -8842,6 +10108,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to list revisions for.
+       * To get a container ID use a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return The bytes for containerId.
        */
@@ -8865,6 +10136,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to list revisions for.
+       * To get a container ID use a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -8880,6 +10156,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to list revisions for.
+       * To get a container ID use a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -8892,6 +10173,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to list revisions for.
+       * To get a container ID use a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 2;</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -8910,6 +10196,13 @@ public final class ContainerServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available results
+       * is larger than `pageSize`, the service returns a [ListContainersRevisionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The pageSize.
        */
@@ -8918,6 +10211,13 @@ public final class ContainerServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available results
+       * is larger than `pageSize`, the service returns a [ListContainersRevisionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -8929,6 +10229,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available results
+       * is larger than `pageSize`, the service returns a [ListContainersRevisionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
@@ -8941,6 +10248,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -8957,6 +10269,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -8974,6 +10291,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -8989,6 +10311,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -8999,6 +10326,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainersRevisionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -9017,6 +10349,15 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `status="ACTIVE"`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
@@ -9033,6 +10374,15 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `status="ACTIVE"`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
@@ -9050,6 +10400,15 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `status="ACTIVE"`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -9065,6 +10424,15 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `status="ACTIVE"`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -9075,6 +10443,15 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Revision.status] and [Revision.runtime] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `status="ACTIVE"`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -9148,35 +10525,69 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> 
         getRevisionsList();
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision getRevisions(int index);
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     int getRevisionsCount();
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RevisionOrBuilder> 
         getRevisionsOrBuilderList();
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RevisionOrBuilder getRevisionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -9284,6 +10695,10 @@ public final class ContainerServiceOuterClass {
     public static final int REVISIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> revisions_;
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     @java.lang.Override
@@ -9291,6 +10706,10 @@ public final class ContainerServiceOuterClass {
       return revisions_;
     }
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     @java.lang.Override
@@ -9299,6 +10718,10 @@ public final class ContainerServiceOuterClass {
       return revisions_;
     }
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     @java.lang.Override
@@ -9306,6 +10729,10 @@ public final class ContainerServiceOuterClass {
       return revisions_.size();
     }
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     @java.lang.Override
@@ -9313,6 +10740,10 @@ public final class ContainerServiceOuterClass {
       return revisions_.get(index);
     }
     /**
+     * <pre>
+     * List of revisions for the specified folder or container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
      */
     @java.lang.Override
@@ -9324,6 +10755,13 @@ public final class ContainerServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -9341,6 +10779,13 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -9731,6 +11176,10 @@ public final class ContainerServiceOuterClass {
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RevisionOrBuilder> revisionsBuilder_;
 
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision> getRevisionsList() {
@@ -9741,6 +11190,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public int getRevisionsCount() {
@@ -9751,6 +11204,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision getRevisions(int index) {
@@ -9761,6 +11218,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder setRevisions(
@@ -9778,6 +11239,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder setRevisions(
@@ -9792,6 +11257,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder addRevisions(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision value) {
@@ -9808,6 +11277,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder addRevisions(
@@ -9825,6 +11298,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder addRevisions(
@@ -9839,6 +11316,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder addRevisions(
@@ -9853,6 +11334,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder addAllRevisions(
@@ -9868,6 +11353,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder clearRevisions() {
@@ -9881,6 +11370,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public Builder removeRevisions(int index) {
@@ -9894,6 +11387,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Builder getRevisionsBuilder(
@@ -9901,6 +11398,10 @@ public final class ContainerServiceOuterClass {
         return getRevisionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RevisionOrBuilder getRevisionsOrBuilder(
@@ -9911,6 +11412,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.RevisionOrBuilder> 
@@ -9922,6 +11427,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Builder addRevisionsBuilder() {
@@ -9929,6 +11438,10 @@ public final class ContainerServiceOuterClass {
             yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Builder addRevisionsBuilder(
@@ -9937,6 +11450,10 @@ public final class ContainerServiceOuterClass {
             index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of revisions for the specified folder or container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Revision revisions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Revision.Builder> 
@@ -9960,6 +11477,13 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -9976,6 +11500,13 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -9993,6 +11524,13 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -10008,6 +11546,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -10018,6 +11563,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainersRevisionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainersRevisionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -10091,11 +11643,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container to create a revision for.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to create a revision for.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -10103,11 +11665,19 @@ public final class ContainerServiceOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -10115,41 +11685,76 @@ public final class ContainerServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      * @return Whether the resources field is set.
      */
     boolean hasResources();
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      * @return The resources.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources getResources();
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
 
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
     boolean hasExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
      * @return The executionTimeout.
      */
     com.google.protobuf.Duration getExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * ID of the service account to associate with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * ID of the service account to associate with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -10157,76 +11762,140 @@ public final class ContainerServiceOuterClass {
         getServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
      * @return Whether the imageSpec field is set.
      */
     boolean hasImageSpec();
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
      * @return The imageSpec.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec getImageSpec();
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpecOrBuilder getImageSpecOrBuilder();
 
     /**
+     * <pre>
+     * The number of concurrent requests allowed per container instance.
+     * The default value is 1.
+     * </pre>
+     *
      * <code>int64 concurrency = 9;</code>
      * @return The concurrency.
      */
     long getConcurrency();
 
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> 
         getSecretsList();
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index);
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     int getSecretsCount();
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
         getSecretsOrBuilderList();
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
      * @return Whether the connectivity field is set.
      */
     boolean hasConnectivity();
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
      * @return The connectivity.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity getConnectivity();
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder();
 
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
      * @return Whether the provisionPolicy field is set.
      */
     boolean hasProvisionPolicy();
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
      * @return The provisionPolicy.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy getProvisionPolicy();
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder getProvisionPolicyOrBuilder();
@@ -10416,6 +12085,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container to create a revision for.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
@@ -10433,6 +12107,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to create a revision for.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -10454,6 +12133,10 @@ public final class ContainerServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -10471,6 +12154,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the revision.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -10492,6 +12179,10 @@ public final class ContainerServiceOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 5;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources resources_;
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      * @return Whether the resources field is set.
      */
@@ -10500,6 +12191,10 @@ public final class ContainerServiceOuterClass {
       return resources_ != null;
     }
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      * @return The resources.
      */
@@ -10508,6 +12203,10 @@ public final class ContainerServiceOuterClass {
       return resources_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources.getDefaultInstance() : resources_;
     }
     /**
+     * <pre>
+     * Resources allocated to the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -10518,6 +12217,11 @@ public final class ContainerServiceOuterClass {
     public static final int EXECUTION_TIMEOUT_FIELD_NUMBER = 6;
     private com.google.protobuf.Duration executionTimeout_;
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
      * @return Whether the executionTimeout field is set.
      */
@@ -10526,6 +12230,11 @@ public final class ContainerServiceOuterClass {
       return executionTimeout_ != null;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
      * @return The executionTimeout.
      */
@@ -10534,6 +12243,11 @@ public final class ContainerServiceOuterClass {
       return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the revision.
+     * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
      */
     @java.lang.Override
@@ -10544,6 +12258,10 @@ public final class ContainerServiceOuterClass {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * ID of the service account to associate with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      * @return The serviceAccountId.
      */
@@ -10561,6 +12279,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the service account to associate with the revision.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -10582,6 +12304,10 @@ public final class ContainerServiceOuterClass {
     public static final int IMAGE_SPEC_FIELD_NUMBER = 8;
     private yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec imageSpec_;
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
      * @return Whether the imageSpec field is set.
      */
@@ -10590,6 +12316,10 @@ public final class ContainerServiceOuterClass {
       return imageSpec_ != null;
     }
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
      * @return The imageSpec.
      */
@@ -10598,6 +12328,10 @@ public final class ContainerServiceOuterClass {
       return imageSpec_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec.getDefaultInstance() : imageSpec_;
     }
     /**
+     * <pre>
+     * Image configuration for the revision.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -10608,6 +12342,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONCURRENCY_FIELD_NUMBER = 9;
     private long concurrency_;
     /**
+     * <pre>
+     * The number of concurrent requests allowed per container instance.
+     * The default value is 1.
+     * </pre>
+     *
      * <code>int64 concurrency = 9;</code>
      * @return The concurrency.
      */
@@ -10619,6 +12358,10 @@ public final class ContainerServiceOuterClass {
     public static final int SECRETS_FIELD_NUMBER = 10;
     private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> secrets_;
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     @java.lang.Override
@@ -10626,6 +12369,10 @@ public final class ContainerServiceOuterClass {
       return secrets_;
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     @java.lang.Override
@@ -10634,6 +12381,10 @@ public final class ContainerServiceOuterClass {
       return secrets_;
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     @java.lang.Override
@@ -10641,6 +12392,10 @@ public final class ContainerServiceOuterClass {
       return secrets_.size();
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     @java.lang.Override
@@ -10648,6 +12403,10 @@ public final class ContainerServiceOuterClass {
       return secrets_.get(index);
     }
     /**
+     * <pre>
+     * Yandex Lockbox secrets to be used by the revision.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
      */
     @java.lang.Override
@@ -10659,6 +12418,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONNECTIVITY_FIELD_NUMBER = 11;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity connectivity_;
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
      * @return Whether the connectivity field is set.
      */
@@ -10667,6 +12430,10 @@ public final class ContainerServiceOuterClass {
       return connectivity_ != null;
     }
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
      * @return The connectivity.
      */
@@ -10675,6 +12442,10 @@ public final class ContainerServiceOuterClass {
       return connectivity_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.getDefaultInstance() : connectivity_;
     }
     /**
+     * <pre>
+     * Network access. If specified the revision will be attached to specified network/subnet(s).
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
      */
     @java.lang.Override
@@ -10685,6 +12456,11 @@ public final class ContainerServiceOuterClass {
     public static final int PROVISION_POLICY_FIELD_NUMBER = 12;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy provisionPolicy_;
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
      * @return Whether the provisionPolicy field is set.
      */
@@ -10693,6 +12469,11 @@ public final class ContainerServiceOuterClass {
       return provisionPolicy_ != null;
     }
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
      * @return The provisionPolicy.
      */
@@ -10701,6 +12482,11 @@ public final class ContainerServiceOuterClass {
       return provisionPolicy_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy.getDefaultInstance() : provisionPolicy_;
     }
     /**
+     * <pre>
+     * Policy for provisioning instances of the revision.
+     * The policy is only applied when the revision is ACTIVE.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
      */
     @java.lang.Override
@@ -11271,6 +13057,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container to create a revision for.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerId.
        */
@@ -11287,6 +13078,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to create a revision for.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerId.
        */
@@ -11304,6 +13100,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to create a revision for.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -11319,6 +13120,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to create a revision for.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -11329,6 +13135,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to create a revision for.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -11347,6 +13158,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -11363,6 +13178,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -11380,6 +13199,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -11395,6 +13218,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -11405,6 +13232,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the revision.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -11425,6 +13256,10 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        * @return Whether the resources field is set.
        */
@@ -11432,6 +13267,10 @@ public final class ContainerServiceOuterClass {
         return resourcesBuilder_ != null || resources_ != null;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        * @return The resources.
        */
@@ -11443,6 +13282,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setResources(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources value) {
@@ -11459,6 +13302,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setResources(
@@ -11473,6 +13320,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeResources(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources value) {
@@ -11491,6 +13342,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearResources() {
@@ -11505,6 +13360,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Resources.Builder getResourcesBuilder() {
@@ -11513,6 +13372,10 @@ public final class ContainerServiceOuterClass {
         return getResourcesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -11524,6 +13387,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11544,6 +13411,11 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> executionTimeoutBuilder_;
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        * @return Whether the executionTimeout field is set.
        */
@@ -11551,6 +13423,11 @@ public final class ContainerServiceOuterClass {
         return executionTimeoutBuilder_ != null || executionTimeout_ != null;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        * @return The executionTimeout.
        */
@@ -11562,6 +13439,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
@@ -11578,6 +13460,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       public Builder setExecutionTimeout(
@@ -11592,6 +13479,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
@@ -11610,6 +13502,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       public Builder clearExecutionTimeout() {
@@ -11624,6 +13521,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
@@ -11632,6 +13534,11 @@ public final class ContainerServiceOuterClass {
         return getExecutionTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -11643,6 +13550,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the revision.
+       * If the timeout is exceeded, Serverless Containers responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.value) = "&lt;=600s"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11661,6 +13573,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * ID of the service account to associate with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        * @return The serviceAccountId.
        */
@@ -11677,6 +13593,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        * @return The bytes for serviceAccountId.
        */
@@ -11694,6 +13614,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
@@ -11709,6 +13633,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        * @return This builder for chaining.
        */
@@ -11719,6 +13647,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the revision.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
@@ -11739,6 +13671,10 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec.Builder, yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpecOrBuilder> imageSpecBuilder_;
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        * @return Whether the imageSpec field is set.
        */
@@ -11746,6 +13682,10 @@ public final class ContainerServiceOuterClass {
         return imageSpecBuilder_ != null || imageSpec_ != null;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        * @return The imageSpec.
        */
@@ -11757,6 +13697,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setImageSpec(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec value) {
@@ -11773,6 +13717,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setImageSpec(
@@ -11787,6 +13735,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeImageSpec(yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec value) {
@@ -11805,6 +13757,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearImageSpec() {
@@ -11819,6 +13775,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpec.Builder getImageSpecBuilder() {
@@ -11827,6 +13787,10 @@ public final class ContainerServiceOuterClass {
         return getImageSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerServiceOuterClass.ImageSpecOrBuilder getImageSpecOrBuilder() {
@@ -11838,6 +13802,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image configuration for the revision.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ImageSpec image_spec = 8 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11856,6 +13824,11 @@ public final class ContainerServiceOuterClass {
 
       private long concurrency_ ;
       /**
+       * <pre>
+       * The number of concurrent requests allowed per container instance.
+       * The default value is 1.
+       * </pre>
+       *
        * <code>int64 concurrency = 9;</code>
        * @return The concurrency.
        */
@@ -11864,6 +13837,11 @@ public final class ContainerServiceOuterClass {
         return concurrency_;
       }
       /**
+       * <pre>
+       * The number of concurrent requests allowed per container instance.
+       * The default value is 1.
+       * </pre>
+       *
        * <code>int64 concurrency = 9;</code>
        * @param value The concurrency to set.
        * @return This builder for chaining.
@@ -11875,6 +13853,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The number of concurrent requests allowed per container instance.
+       * The default value is 1.
+       * </pre>
+       *
        * <code>int64 concurrency = 9;</code>
        * @return This builder for chaining.
        */
@@ -11898,6 +13881,10 @@ public final class ContainerServiceOuterClass {
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> secretsBuilder_;
 
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret> getSecretsList() {
@@ -11908,6 +13895,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public int getSecretsCount() {
@@ -11918,6 +13909,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret getSecrets(int index) {
@@ -11928,6 +13923,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder setSecrets(
@@ -11945,6 +13944,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder setSecrets(
@@ -11959,6 +13962,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder addSecrets(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret value) {
@@ -11975,6 +13982,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder addSecrets(
@@ -11992,6 +14003,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder addSecrets(
@@ -12006,6 +14021,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder addSecrets(
@@ -12020,6 +14039,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder addAllSecrets(
@@ -12035,6 +14058,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder clearSecrets() {
@@ -12048,6 +14075,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public Builder removeSecrets(int index) {
@@ -12061,6 +14092,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder getSecretsBuilder(
@@ -12068,6 +14103,10 @@ public final class ContainerServiceOuterClass {
         return getSecretsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder getSecretsOrBuilder(
@@ -12078,6 +14117,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.SecretOrBuilder> 
@@ -12089,6 +14132,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder addSecretsBuilder() {
@@ -12096,6 +14143,10 @@ public final class ContainerServiceOuterClass {
             yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder addSecretsBuilder(
@@ -12104,6 +14155,10 @@ public final class ContainerServiceOuterClass {
             index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Yandex Lockbox secrets to be used by the revision.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.containers.v1.Secret secrets = 10;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Secret.Builder> 
@@ -12129,6 +14184,10 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder> connectivityBuilder_;
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        * @return Whether the connectivity field is set.
        */
@@ -12136,6 +14195,10 @@ public final class ContainerServiceOuterClass {
         return connectivityBuilder_ != null || connectivity_ != null;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        * @return The connectivity.
        */
@@ -12147,6 +14210,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       public Builder setConnectivity(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity value) {
@@ -12163,6 +14230,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       public Builder setConnectivity(
@@ -12177,6 +14248,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       public Builder mergeConnectivity(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity value) {
@@ -12195,6 +14270,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       public Builder clearConnectivity() {
@@ -12209,6 +14288,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Connectivity.Builder getConnectivityBuilder() {
@@ -12217,6 +14300,10 @@ public final class ContainerServiceOuterClass {
         return getConnectivityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder() {
@@ -12228,6 +14315,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network access. If specified the revision will be attached to specified network/subnet(s).
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Connectivity connectivity = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12248,6 +14339,11 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder> provisionPolicyBuilder_;
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        * @return Whether the provisionPolicy field is set.
        */
@@ -12255,6 +14351,11 @@ public final class ContainerServiceOuterClass {
         return provisionPolicyBuilder_ != null || provisionPolicy_ != null;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        * @return The provisionPolicy.
        */
@@ -12266,6 +14367,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       public Builder setProvisionPolicy(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy value) {
@@ -12282,6 +14388,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       public Builder setProvisionPolicy(
@@ -12296,6 +14407,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       public Builder mergeProvisionPolicy(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy value) {
@@ -12314,6 +14430,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       public Builder clearProvisionPolicy() {
@@ -12328,6 +14449,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicy.Builder getProvisionPolicyBuilder() {
@@ -12336,6 +14462,11 @@ public final class ContainerServiceOuterClass {
         return getProvisionPolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder getProvisionPolicyOrBuilder() {
@@ -12347,6 +14478,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy for provisioning instances of the revision.
+       * The policy is only applied when the revision is ACTIVE.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12420,11 +14556,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
      * @return The imageUrl.
      */
     java.lang.String getImageUrl();
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for imageUrl.
      */
@@ -12432,40 +14576,72 @@ public final class ContainerServiceOuterClass {
         getImageUrlBytes();
 
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
      * @return Whether the command field is set.
      */
     boolean hasCommand();
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
      * @return The command.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command getCommand();
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.CommandOrBuilder getCommandOrBuilder();
 
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
      * @return Whether the args field is set.
      */
     boolean hasArgs();
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
      * @return The args.
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args getArgs();
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ArgsOrBuilder getArgsOrBuilder();
 
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getEnvironmentCount();
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsEnvironment(
@@ -12477,11 +14653,19 @@ public final class ContainerServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironment();
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironmentMap();
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -12489,6 +14673,10 @@ public final class ContainerServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -12496,11 +14684,19 @@ public final class ContainerServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 5;</code>
      * @return The workingDir.
      */
     java.lang.String getWorkingDir();
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 5;</code>
      * @return The bytes for workingDir.
      */
@@ -12508,6 +14704,10 @@ public final class ContainerServiceOuterClass {
         getWorkingDirBytes();
   }
   /**
+   * <pre>
+   * Revision image specification.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.ImageSpec}
    */
   public static final class ImageSpec extends
@@ -12653,6 +14853,10 @@ public final class ContainerServiceOuterClass {
     public static final int IMAGE_URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object imageUrl_;
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
      * @return The imageUrl.
      */
@@ -12670,6 +14874,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Image URL, that is used by the revision.
+     * </pre>
+     *
      * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for imageUrl.
      */
@@ -12691,6 +14899,10 @@ public final class ContainerServiceOuterClass {
     public static final int COMMAND_FIELD_NUMBER = 2;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command command_;
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
      * @return Whether the command field is set.
      */
@@ -12699,6 +14911,10 @@ public final class ContainerServiceOuterClass {
       return command_ != null;
     }
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
      * @return The command.
      */
@@ -12707,6 +14923,10 @@ public final class ContainerServiceOuterClass {
       return command_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command.getDefaultInstance() : command_;
     }
     /**
+     * <pre>
+     * Override for the image's ENTRYPOINT.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
      */
     @java.lang.Override
@@ -12717,6 +14937,10 @@ public final class ContainerServiceOuterClass {
     public static final int ARGS_FIELD_NUMBER = 3;
     private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args args_;
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
      * @return Whether the args field is set.
      */
@@ -12725,6 +14949,10 @@ public final class ContainerServiceOuterClass {
       return args_ != null;
     }
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
      * @return The args.
      */
@@ -12733,6 +14961,10 @@ public final class ContainerServiceOuterClass {
       return args_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args.getDefaultInstance() : args_;
     }
     /**
+     * <pre>
+     * Override for the image's CMD.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
      */
     @java.lang.Override
@@ -12767,6 +14999,10 @@ public final class ContainerServiceOuterClass {
       return internalGetEnvironment().getMap().size();
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -12785,6 +15021,10 @@ public final class ContainerServiceOuterClass {
       return getEnvironmentMap();
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -12793,6 +15033,10 @@ public final class ContainerServiceOuterClass {
       return internalGetEnvironment().getMap();
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -12806,6 +15050,10 @@ public final class ContainerServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Additional environment for the container.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -12824,6 +15072,10 @@ public final class ContainerServiceOuterClass {
     public static final int WORKING_DIR_FIELD_NUMBER = 5;
     private volatile java.lang.Object workingDir_;
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 5;</code>
      * @return The workingDir.
      */
@@ -12841,6 +15093,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Override for the image's WORKDIR.
+     * </pre>
+     *
      * <code>string working_dir = 5;</code>
      * @return The bytes for workingDir.
      */
@@ -13078,6 +15334,10 @@ public final class ContainerServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Revision image specification.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.containers.v1.ImageSpec}
      */
     public static final class Builder extends
@@ -13291,6 +15551,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object imageUrl_ = "";
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
        * @return The imageUrl.
        */
@@ -13307,6 +15571,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for imageUrl.
        */
@@ -13324,6 +15592,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The imageUrl to set.
        * @return This builder for chaining.
@@ -13339,6 +15611,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -13349,6 +15625,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Image URL, that is used by the revision.
+       * </pre>
+       *
        * <code>string image_url = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for imageUrl to set.
        * @return This builder for chaining.
@@ -13369,6 +15649,10 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.CommandOrBuilder> commandBuilder_;
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        * @return Whether the command field is set.
        */
@@ -13376,6 +15660,10 @@ public final class ContainerServiceOuterClass {
         return commandBuilder_ != null || command_ != null;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        * @return The command.
        */
@@ -13387,6 +15675,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       public Builder setCommand(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command value) {
@@ -13403,6 +15695,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       public Builder setCommand(
@@ -13417,6 +15713,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       public Builder mergeCommand(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command value) {
@@ -13435,6 +15735,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       public Builder clearCommand() {
@@ -13449,6 +15753,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Command.Builder getCommandBuilder() {
@@ -13457,6 +15765,10 @@ public final class ContainerServiceOuterClass {
         return getCommandFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.CommandOrBuilder getCommandOrBuilder() {
@@ -13468,6 +15780,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's ENTRYPOINT.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Command command = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13488,6 +15804,10 @@ public final class ContainerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ArgsOrBuilder> argsBuilder_;
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        * @return Whether the args field is set.
        */
@@ -13495,6 +15815,10 @@ public final class ContainerServiceOuterClass {
         return argsBuilder_ != null || args_ != null;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        * @return The args.
        */
@@ -13506,6 +15830,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       public Builder setArgs(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args value) {
@@ -13522,6 +15850,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       public Builder setArgs(
@@ -13536,6 +15868,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       public Builder mergeArgs(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args value) {
@@ -13554,6 +15890,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       public Builder clearArgs() {
@@ -13568,6 +15908,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.Args.Builder getArgsBuilder() {
@@ -13576,6 +15920,10 @@ public final class ContainerServiceOuterClass {
         return getArgsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ArgsOrBuilder getArgsOrBuilder() {
@@ -13587,6 +15935,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's CMD.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.containers.v1.Args args = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13630,6 +15982,10 @@ public final class ContainerServiceOuterClass {
         return internalGetEnvironment().getMap().size();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -13648,6 +16004,10 @@ public final class ContainerServiceOuterClass {
         return getEnvironmentMap();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -13656,6 +16016,10 @@ public final class ContainerServiceOuterClass {
         return internalGetEnvironment().getMap();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -13669,6 +16033,10 @@ public final class ContainerServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -13690,6 +16058,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -13709,6 +16081,10 @@ public final class ContainerServiceOuterClass {
         return internalGetMutableEnvironment().getMutableMap();
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putEnvironment(
@@ -13724,6 +16100,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional environment for the container.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 4 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -13736,6 +16116,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object workingDir_ = "";
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 5;</code>
        * @return The workingDir.
        */
@@ -13752,6 +16136,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 5;</code>
        * @return The bytes for workingDir.
        */
@@ -13769,6 +16157,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 5;</code>
        * @param value The workingDir to set.
        * @return This builder for chaining.
@@ -13784,6 +16176,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 5;</code>
        * @return This builder for chaining.
        */
@@ -13794,6 +16190,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override for the image's WORKDIR.
+       * </pre>
+       *
        * <code>string working_dir = 5;</code>
        * @param value The bytes for workingDir to set.
        * @return This builder for chaining.
@@ -13867,11 +16267,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the revision that is being created.
+     * </pre>
+     *
      * <code>string container_revision_id = 1;</code>
      * @return The containerRevisionId.
      */
     java.lang.String getContainerRevisionId();
     /**
+     * <pre>
+     * ID of the revision that is being created.
+     * </pre>
+     *
      * <code>string container_revision_id = 1;</code>
      * @return The bytes for containerRevisionId.
      */
@@ -13965,6 +16373,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_REVISION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerRevisionId_;
     /**
+     * <pre>
+     * ID of the revision that is being created.
+     * </pre>
+     *
      * <code>string container_revision_id = 1;</code>
      * @return The containerRevisionId.
      */
@@ -13982,6 +16394,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the revision that is being created.
+     * </pre>
+     *
      * <code>string container_revision_id = 1;</code>
      * @return The bytes for containerRevisionId.
      */
@@ -14304,6 +16720,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerRevisionId_ = "";
       /**
+       * <pre>
+       * ID of the revision that is being created.
+       * </pre>
+       *
        * <code>string container_revision_id = 1;</code>
        * @return The containerRevisionId.
        */
@@ -14320,6 +16740,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision that is being created.
+       * </pre>
+       *
        * <code>string container_revision_id = 1;</code>
        * @return The bytes for containerRevisionId.
        */
@@ -14337,6 +16761,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision that is being created.
+       * </pre>
+       *
        * <code>string container_revision_id = 1;</code>
        * @param value The containerRevisionId to set.
        * @return This builder for chaining.
@@ -14352,6 +16780,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision that is being created.
+       * </pre>
+       *
        * <code>string container_revision_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -14362,6 +16794,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision that is being created.
+       * </pre>
+       *
        * <code>string container_revision_id = 1;</code>
        * @param value The bytes for containerRevisionId to set.
        * @return This builder for chaining.
@@ -14435,11 +16871,21 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container to rollback to an old revision.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to rollback to an old revision.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -14447,11 +16893,21 @@ public final class ContainerServiceOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * ID of the revision to rollback to.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The revisionId.
      */
     java.lang.String getRevisionId();
     /**
+     * <pre>
+     * ID of the revision to rollback to.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for revisionId.
      */
@@ -14552,6 +17008,11 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container to rollback to an old revision.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
@@ -14569,6 +17030,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to rollback to an old revision.
+     * To get a container ID, make a [ContainerService.List] request.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -14590,6 +17056,11 @@ public final class ContainerServiceOuterClass {
     public static final int REVISION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object revisionId_;
     /**
+     * <pre>
+     * ID of the revision to rollback to.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The revisionId.
      */
@@ -14607,6 +17078,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the revision to rollback to.
+     * To get a revision ID make a [ContainerService.ListRevisions] request.
+     * </pre>
+     *
      * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for revisionId.
      */
@@ -14946,6 +17422,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container to rollback to an old revision.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerId.
        */
@@ -14962,6 +17443,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to rollback to an old revision.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerId.
        */
@@ -14979,6 +17465,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to rollback to an old revision.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -14994,6 +17485,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to rollback to an old revision.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -15004,6 +17500,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to rollback to an old revision.
+       * To get a container ID, make a [ContainerService.List] request.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -15022,6 +17523,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object revisionId_ = "";
       /**
+       * <pre>
+       * ID of the revision to rollback to.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The revisionId.
        */
@@ -15038,6 +17544,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision to rollback to.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for revisionId.
        */
@@ -15055,6 +17566,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision to rollback to.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The revisionId to set.
        * @return This builder for chaining.
@@ -15070,6 +17586,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision to rollback to.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -15080,6 +17601,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision to rollback to.
+       * To get a revision ID make a [ContainerService.ListRevisions] request.
+       * </pre>
+       *
        * <code>string revision_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for revisionId to set.
        * @return This builder for chaining.
@@ -15153,11 +17679,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container that is being rolled back.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container that is being rolled back.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -15165,11 +17699,19 @@ public final class ContainerServiceOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * ID of the revision that the container is being rolled back to.
+     * </pre>
+     *
      * <code>string revision_id = 2;</code>
      * @return The revisionId.
      */
     java.lang.String getRevisionId();
     /**
+     * <pre>
+     * ID of the revision that the container is being rolled back to.
+     * </pre>
+     *
      * <code>string revision_id = 2;</code>
      * @return The bytes for revisionId.
      */
@@ -15270,6 +17812,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container that is being rolled back.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The containerId.
      */
@@ -15287,6 +17833,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container that is being rolled back.
+     * </pre>
+     *
      * <code>string container_id = 1;</code>
      * @return The bytes for containerId.
      */
@@ -15308,6 +17858,10 @@ public final class ContainerServiceOuterClass {
     public static final int REVISION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object revisionId_;
     /**
+     * <pre>
+     * ID of the revision that the container is being rolled back to.
+     * </pre>
+     *
      * <code>string revision_id = 2;</code>
      * @return The revisionId.
      */
@@ -15325,6 +17879,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the revision that the container is being rolled back to.
+     * </pre>
+     *
      * <code>string revision_id = 2;</code>
      * @return The bytes for revisionId.
      */
@@ -15664,6 +18222,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container that is being rolled back.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The containerId.
        */
@@ -15680,6 +18242,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being rolled back.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return The bytes for containerId.
        */
@@ -15697,6 +18263,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container that is being rolled back.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -15712,6 +18282,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being rolled back.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -15722,6 +18296,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container that is being rolled back.
+       * </pre>
+       *
        * <code>string container_id = 1;</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -15740,6 +18318,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object revisionId_ = "";
       /**
+       * <pre>
+       * ID of the revision that the container is being rolled back to.
+       * </pre>
+       *
        * <code>string revision_id = 2;</code>
        * @return The revisionId.
        */
@@ -15756,6 +18338,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision that the container is being rolled back to.
+       * </pre>
+       *
        * <code>string revision_id = 2;</code>
        * @return The bytes for revisionId.
        */
@@ -15773,6 +18359,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the revision that the container is being rolled back to.
+       * </pre>
+       *
        * <code>string revision_id = 2;</code>
        * @param value The revisionId to set.
        * @return This builder for chaining.
@@ -15788,6 +18378,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision that the container is being rolled back to.
+       * </pre>
+       *
        * <code>string revision_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -15798,6 +18392,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the revision that the container is being rolled back to.
+       * </pre>
+       *
        * <code>string revision_id = 2;</code>
        * @param value The bytes for revisionId to set.
        * @return This builder for chaining.
@@ -15871,11 +18469,19 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the container to list operations for.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
     java.lang.String getContainerId();
     /**
+     * <pre>
+     * ID of the container to list operations for.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -15883,17 +18489,34 @@ public final class ContainerServiceOuterClass {
         getContainerIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListContainerOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -15901,11 +18524,29 @@ public final class ContainerServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -16018,6 +18659,10 @@ public final class ContainerServiceOuterClass {
     public static final int CONTAINER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object containerId_;
     /**
+     * <pre>
+     * ID of the container to list operations for.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The containerId.
      */
@@ -16035,6 +18680,10 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the container to list operations for.
+     * </pre>
+     *
      * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for containerId.
      */
@@ -16056,6 +18705,13 @@ public final class ContainerServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListContainerOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
@@ -16067,6 +18723,11 @@ public final class ContainerServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -16084,6 +18745,11 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -16105,6 +18771,15 @@ public final class ContainerServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
@@ -16122,6 +18797,15 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -16496,6 +19180,10 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object containerId_ = "";
       /**
+       * <pre>
+       * ID of the container to list operations for.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The containerId.
        */
@@ -16512,6 +19200,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to list operations for.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for containerId.
        */
@@ -16529,6 +19221,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the container to list operations for.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The containerId to set.
        * @return This builder for chaining.
@@ -16544,6 +19240,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to list operations for.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -16554,6 +19254,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the container to list operations for.
+       * </pre>
+       *
        * <code>string container_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for containerId to set.
        * @return This builder for chaining.
@@ -16572,6 +19276,13 @@ public final class ContainerServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListContainerOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The pageSize.
        */
@@ -16580,6 +19291,13 @@ public final class ContainerServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListContainerOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -16591,6 +19309,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListContainerOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
@@ -16603,6 +19328,11 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -16619,6 +19349,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -16636,6 +19371,11 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -16651,6 +19391,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -16661,6 +19406,11 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListContainerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -16679,6 +19429,15 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
@@ -16695,6 +19454,15 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
@@ -16712,6 +19480,15 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -16727,6 +19504,15 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -16737,6 +19523,15 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.done], [operation.Operation.created_by] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -16810,35 +19605,69 @@ public final class ContainerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -16946,6 +19775,10 @@ public final class ContainerServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -16953,6 +19786,10 @@ public final class ContainerServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -16961,6 +19798,10 @@ public final class ContainerServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -16968,6 +19809,10 @@ public final class ContainerServiceOuterClass {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -16975,6 +19820,10 @@ public final class ContainerServiceOuterClass {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified container.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -16986,6 +19835,13 @@ public final class ContainerServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -17003,6 +19859,13 @@ public final class ContainerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -17393,6 +20256,10 @@ public final class ContainerServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -17403,6 +20270,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -17413,6 +20284,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -17423,6 +20298,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -17440,6 +20319,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -17454,6 +20337,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -17470,6 +20357,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -17487,6 +20378,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -17501,6 +20396,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -17515,6 +20414,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -17530,6 +20433,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -17543,6 +20450,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -17556,6 +20467,10 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -17563,6 +20478,10 @@ public final class ContainerServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -17573,6 +20492,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -17584,6 +20507,10 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -17591,6 +20518,10 @@ public final class ContainerServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -17599,6 +20530,10 @@ public final class ContainerServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified container.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -17622,6 +20557,13 @@ public final class ContainerServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -17638,6 +20580,13 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -17655,6 +20604,13 @@ public final class ContainerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -17670,6 +20626,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -17680,6 +20643,13 @@ public final class ContainerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListContainerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListContainerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

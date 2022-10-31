@@ -20,7 +20,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to return.
+     * ID of the snapshot schedule to return.
+     * To get a schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -29,7 +30,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getSnapshotScheduleId();
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to return.
+     * ID of the snapshot schedule to return.
+     * To get a schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -126,7 +128,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object snapshotScheduleId_;
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to return.
+     * ID of the snapshot schedule to return.
+     * To get a schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -147,7 +150,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to return.
+     * ID of the snapshot schedule to return.
+     * To get a schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -473,7 +477,8 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object snapshotScheduleId_ = "";
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to return.
+       * ID of the snapshot schedule to return.
+       * To get a schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -493,7 +498,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to return.
+       * ID of the snapshot schedule to return.
+       * To get a schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -514,7 +520,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to return.
+       * ID of the snapshot schedule to return.
+       * To get a schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -533,7 +540,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to return.
+       * ID of the snapshot schedule to return.
+       * To get a schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -547,7 +555,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to return.
+       * ID of the snapshot schedule to return.
+       * To get a schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -625,6 +634,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list snapshot schedules in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -634,6 +644,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list snapshot schedules in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -645,8 +656,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size],
-     * the service returns a [ListSnapshotSchedulesResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListSnapshotSchedulesResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
@@ -657,7 +667,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -667,7 +677,7 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -678,11 +688,29 @@ public final class SnapshotScheduleServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters snapshot schedules listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-schedule`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters snapshot schedules listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-schedule`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The bytes for filter.
      */
@@ -691,8 +719,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
+     * A sorting expression that sorts snapshot schedules listed in the response.
+     * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+     * e.g. `createdAt desc`.
+     * Default value: `id asc`.
      * </pre>
      *
      * <code>string order_by = 5;</code>
@@ -701,8 +731,10 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getOrderBy();
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
+     * A sorting expression that sorts snapshot schedules listed in the response.
+     * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+     * e.g. `createdAt desc`.
+     * Default value: `id asc`.
      * </pre>
      *
      * <code>string order_by = 5;</code>
@@ -826,6 +858,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list snapshot schedules in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -847,6 +880,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list snapshot schedules in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -872,8 +906,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size],
-     * the service returns a [ListSnapshotSchedulesResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListSnapshotSchedulesResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
@@ -889,7 +922,7 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -911,7 +944,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -936,6 +969,15 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters snapshot schedules listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-schedule`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The filter.
      */
@@ -953,6 +995,15 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters snapshot schedules listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-schedule`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      * @return The bytes for filter.
      */
@@ -975,8 +1026,10 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object orderBy_;
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
+     * A sorting expression that sorts snapshot schedules listed in the response.
+     * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+     * e.g. `createdAt desc`.
+     * Default value: `id asc`.
      * </pre>
      *
      * <code>string order_by = 5;</code>
@@ -997,8 +1050,10 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
+     * A sorting expression that sorts snapshot schedules listed in the response.
+     * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+     * e.g. `createdAt desc`.
+     * Default value: `id asc`.
      * </pre>
      *
      * <code>string order_by = 5;</code>
@@ -1394,6 +1449,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list snapshot schedules in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1414,6 +1470,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list snapshot schedules in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1435,6 +1492,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list snapshot schedules in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1454,6 +1512,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list snapshot schedules in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1468,6 +1527,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list snapshot schedules in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1490,8 +1550,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size],
-       * the service returns a [ListSnapshotSchedulesResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListSnapshotSchedulesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -1505,8 +1564,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size],
-       * the service returns a [ListSnapshotSchedulesResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListSnapshotSchedulesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -1523,8 +1581,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size],
-       * the service returns a [ListSnapshotSchedulesResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListSnapshotSchedulesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -1541,7 +1598,7 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1562,7 +1619,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1584,7 +1641,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1604,7 +1661,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1619,7 +1676,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1641,6 +1698,15 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters snapshot schedules listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-schedule`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @return The filter.
        */
@@ -1657,6 +1723,15 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters snapshot schedules listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-schedule`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @return The bytes for filter.
        */
@@ -1674,6 +1749,15 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters snapshot schedules listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-schedule`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -1689,6 +1773,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters snapshot schedules listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-schedule`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @return This builder for chaining.
        */
@@ -1699,6 +1792,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters snapshot schedules listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [SnapshotSchedule.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-schedule`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -1718,8 +1820,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object orderBy_ = "";
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
+       * A sorting expression that sorts snapshot schedules listed in the response.
+       * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+       * e.g. `createdAt desc`.
+       * Default value: `id asc`.
        * </pre>
        *
        * <code>string order_by = 5;</code>
@@ -1739,8 +1843,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
+       * A sorting expression that sorts snapshot schedules listed in the response.
+       * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+       * e.g. `createdAt desc`.
+       * Default value: `id asc`.
        * </pre>
        *
        * <code>string order_by = 5;</code>
@@ -1761,8 +1867,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
+       * A sorting expression that sorts snapshot schedules listed in the response.
+       * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+       * e.g. `createdAt desc`.
+       * Default value: `id asc`.
        * </pre>
        *
        * <code>string order_by = 5;</code>
@@ -1781,8 +1889,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
+       * A sorting expression that sorts snapshot schedules listed in the response.
+       * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+       * e.g. `createdAt desc`.
+       * Default value: `id asc`.
        * </pre>
        *
        * <code>string order_by = 5;</code>
@@ -1796,8 +1906,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
+       * A sorting expression that sorts snapshot schedules listed in the response.
+       * The expression must specify the field name from [SnapshotSchedule] and `asc`ending or `desc`ending order,
+       * e.g. `createdAt desc`.
+       * Default value: `id asc`.
        * </pre>
        *
        * <code>string order_by = 5;</code>
@@ -1874,7 +1986,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -1883,7 +1995,7 @@ public final class SnapshotScheduleServiceOuterClass {
         getSnapshotSchedulesList();
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -1891,7 +2003,7 @@ public final class SnapshotScheduleServiceOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule getSnapshotSchedules(int index);
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -1899,7 +2011,7 @@ public final class SnapshotScheduleServiceOuterClass {
     int getSnapshotSchedulesCount();
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -1908,7 +2020,7 @@ public final class SnapshotScheduleServiceOuterClass {
         getSnapshotSchedulesOrBuilderList();
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -1918,12 +2030,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotSchedulesRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1932,12 +2042,10 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotSchedulesRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2048,7 +2156,7 @@ public final class SnapshotScheduleServiceOuterClass {
     private java.util.List<yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule> snapshotSchedules_;
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2059,7 +2167,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2071,7 +2179,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2082,7 +2190,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2093,7 +2201,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of SnapshotSchedule resources.
+     * List of snapshot schedules in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2108,12 +2216,10 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotSchedulesRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2134,12 +2240,10 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotSchedulesRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2533,7 +2637,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2547,7 +2651,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2561,7 +2665,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2575,7 +2679,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2596,7 +2700,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2614,7 +2718,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2634,7 +2738,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2655,7 +2759,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2673,7 +2777,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2691,7 +2795,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2710,7 +2814,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2727,7 +2831,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2744,7 +2848,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2755,7 +2859,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2769,7 +2873,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2784,7 +2888,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2795,7 +2899,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2807,7 +2911,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of SnapshotSchedule resources.
+       * List of snapshot schedules in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.SnapshotSchedule snapshot_schedules = 1;</code>
@@ -2834,12 +2938,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotSchedulesRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2859,12 +2961,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotSchedulesRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2885,12 +2985,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotSchedulesRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2909,12 +3007,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotSchedulesRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2928,12 +3024,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotSchedulesRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListSnapshotSchedulesRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotSchedulesRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotSchedulesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3011,6 +3105,9 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a snapshot schedule in.
+     * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+     * to the schedule.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -3020,6 +3117,9 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a snapshot schedule in.
+     * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+     * to the schedule.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -3029,11 +3129,21 @@ public final class SnapshotScheduleServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the snapshot schedule.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the snapshot schedule.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -3041,11 +3151,19 @@ public final class SnapshotScheduleServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -3053,10 +3171,18 @@ public final class SnapshotScheduleServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     boolean containsLabels(
@@ -3068,11 +3194,19 @@ public final class SnapshotScheduleServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -3080,6 +3214,10 @@ public final class SnapshotScheduleServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -3088,7 +3226,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -3097,7 +3235,7 @@ public final class SnapshotScheduleServiceOuterClass {
     boolean hasSchedulePolicy();
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -3106,7 +3244,7 @@ public final class SnapshotScheduleServiceOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy getSchedulePolicy();
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -3114,64 +3252,123 @@ public final class SnapshotScheduleServiceOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder getSchedulePolicyOrBuilder();
 
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      * @return Whether the retentionPeriod field is set.
      */
     boolean hasRetentionPeriod();
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      * @return The retentionPeriod.
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
 
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 7;</code>
      * @return Whether the snapshotCount field is set.
      */
     boolean hasSnapshotCount();
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 7;</code>
      * @return The snapshotCount.
      */
     long getSnapshotCount();
 
     /**
+     * <pre>
+     * Attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
      * @return Whether the snapshotSpec field is set.
      */
     boolean hasSnapshotSpec();
     /**
+     * <pre>
+     * Attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
      * @return The snapshotSpec.
      */
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec getSnapshotSpec();
     /**
+     * <pre>
+     * Attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
      */
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder getSnapshotSpecOrBuilder();
 
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @return A list containing the diskIds.
      */
     java.util.List<java.lang.String>
         getDiskIdsList();
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @return The count of diskIds.
      */
     int getDiskIdsCount();
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @param index The index of the element to return.
      * @return The diskIds at the given index.
      */
     java.lang.String getDiskIds(int index);
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @param index The index of the value to return.
      * @return The bytes of the diskIds at the given index.
@@ -3409,6 +3606,9 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a snapshot schedule in.
+     * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+     * to the schedule.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -3430,6 +3630,9 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a snapshot schedule in.
+     * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+     * to the schedule.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -3453,6 +3656,11 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the snapshot schedule.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -3470,6 +3678,11 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the snapshot schedule.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -3491,6 +3704,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -3508,6 +3725,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -3553,6 +3774,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -3571,6 +3796,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -3579,6 +3808,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -3592,6 +3825,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -3611,7 +3848,7 @@ public final class SnapshotScheduleServiceOuterClass {
     private yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy schedulePolicy_;
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -3623,7 +3860,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -3635,7 +3872,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -3647,6 +3884,11 @@ public final class SnapshotScheduleServiceOuterClass {
 
     public static final int RETENTION_PERIOD_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      * @return Whether the retentionPeriod field is set.
      */
@@ -3655,6 +3897,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return retentionPolicyCase_ == 6;
     }
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      * @return The retentionPeriod.
      */
@@ -3666,6 +3913,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return com.google.protobuf.Duration.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     @java.lang.Override
@@ -3678,6 +3930,12 @@ public final class SnapshotScheduleServiceOuterClass {
 
     public static final int SNAPSHOT_COUNT_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 7;</code>
      * @return Whether the snapshotCount field is set.
      */
@@ -3686,6 +3944,12 @@ public final class SnapshotScheduleServiceOuterClass {
       return retentionPolicyCase_ == 7;
     }
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 7;</code>
      * @return The snapshotCount.
      */
@@ -3700,6 +3964,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SPEC_FIELD_NUMBER = 8;
     private yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec snapshotSpec_;
     /**
+     * <pre>
+     * Attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
      * @return Whether the snapshotSpec field is set.
      */
@@ -3708,6 +3976,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return snapshotSpec_ != null;
     }
     /**
+     * <pre>
+     * Attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
      * @return The snapshotSpec.
      */
@@ -3716,6 +3988,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return snapshotSpec_ == null ? yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.getDefaultInstance() : snapshotSpec_;
     }
     /**
+     * <pre>
+     * Attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
      */
     @java.lang.Override
@@ -3726,6 +4002,11 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int DISK_IDS_FIELD_NUMBER = 9;
     private com.google.protobuf.LazyStringList diskIds_;
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @return A list containing the diskIds.
      */
@@ -3734,6 +4015,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return diskIds_;
     }
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @return The count of diskIds.
      */
@@ -3741,6 +4027,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return diskIds_.size();
     }
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @param index The index of the element to return.
      * @return The diskIds at the given index.
@@ -3749,6 +4040,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return diskIds_.get(index);
     }
     /**
+     * <pre>
+     * List of IDs of the disks attached to the snapshot schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+     * </pre>
+     *
      * <code>repeated string disk_ids = 9;</code>
      * @param index The index of the value to return.
      * @return The bytes of the diskIds at the given index.
@@ -4326,6 +4622,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a snapshot schedule in.
+       * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+       * to the schedule.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -4346,6 +4645,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a snapshot schedule in.
+       * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+       * to the schedule.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -4367,6 +4669,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a snapshot schedule in.
+       * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+       * to the schedule.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -4386,6 +4691,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a snapshot schedule in.
+       * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+       * to the schedule.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -4400,6 +4708,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a snapshot schedule in.
+       * Snapshots are created in the same folder as the schedule, even if disks from other folders are attached
+       * to the schedule.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -4420,6 +4731,11 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the snapshot schedule.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -4436,6 +4752,11 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the snapshot schedule.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -4453,6 +4774,11 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the snapshot schedule.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -4468,6 +4794,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the snapshot schedule.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -4478,6 +4809,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the snapshot schedule.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -4496,6 +4832,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -4512,6 +4852,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -4529,6 +4873,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4544,6 +4892,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -4554,6 +4906,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4597,6 +4953,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -4615,6 +4975,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -4623,6 +4987,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -4636,6 +5004,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -4657,6 +5029,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -4676,6 +5052,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       public Builder putLabels(
@@ -4691,6 +5071,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -4706,7 +5090,7 @@ public final class SnapshotScheduleServiceOuterClass {
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder> schedulePolicyBuilder_;
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4717,7 +5101,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4732,7 +5116,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4752,7 +5136,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4770,7 +5154,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4792,7 +5176,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4810,7 +5194,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4822,7 +5206,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4837,7 +5221,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 5;</code>
@@ -4859,6 +5243,11 @@ public final class SnapshotScheduleServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        * @return Whether the retentionPeriod field is set.
        */
@@ -4867,6 +5256,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return retentionPolicyCase_ == 6;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        * @return The retentionPeriod.
        */
@@ -4885,6 +5279,11 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
@@ -4901,6 +5300,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder setRetentionPeriod(
@@ -4915,6 +5319,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
@@ -4937,6 +5346,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder clearRetentionPeriod() {
@@ -4956,12 +5370,22 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
         return getRetentionPeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       @java.lang.Override
@@ -4976,6 +5400,11 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4998,6 +5427,12 @@ public final class SnapshotScheduleServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 7;</code>
        * @return Whether the snapshotCount field is set.
        */
@@ -5005,6 +5440,12 @@ public final class SnapshotScheduleServiceOuterClass {
         return retentionPolicyCase_ == 7;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 7;</code>
        * @return The snapshotCount.
        */
@@ -5015,6 +5456,12 @@ public final class SnapshotScheduleServiceOuterClass {
         return 0L;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 7;</code>
        * @param value The snapshotCount to set.
        * @return This builder for chaining.
@@ -5026,6 +5473,12 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 7;</code>
        * @return This builder for chaining.
        */
@@ -5042,6 +5495,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder> snapshotSpecBuilder_;
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        * @return Whether the snapshotSpec field is set.
        */
@@ -5049,6 +5506,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return snapshotSpecBuilder_ != null || snapshotSpec_ != null;
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        * @return The snapshotSpec.
        */
@@ -5060,6 +5521,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       public Builder setSnapshotSpec(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec value) {
@@ -5076,6 +5541,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       public Builder setSnapshotSpec(
@@ -5090,6 +5559,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       public Builder mergeSnapshotSpec(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec value) {
@@ -5108,6 +5581,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       public Builder clearSnapshotSpec() {
@@ -5122,6 +5599,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.Builder getSnapshotSpecBuilder() {
@@ -5130,6 +5611,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return getSnapshotSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder getSnapshotSpecOrBuilder() {
@@ -5141,6 +5626,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5165,6 +5654,11 @@ public final class SnapshotScheduleServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @return A list containing the diskIds.
        */
@@ -5173,6 +5667,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return diskIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @return The count of diskIds.
        */
@@ -5180,6 +5679,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return diskIds_.size();
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @param index The index of the element to return.
        * @return The diskIds at the given index.
@@ -5188,6 +5692,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return diskIds_.get(index);
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @param index The index of the value to return.
        * @return The bytes of the diskIds at the given index.
@@ -5197,6 +5706,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return diskIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @param index The index to set the value at.
        * @param value The diskIds to set.
@@ -5213,6 +5727,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @param value The diskIds to add.
        * @return This builder for chaining.
@@ -5228,6 +5747,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @param values The diskIds to add.
        * @return This builder for chaining.
@@ -5241,6 +5765,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @return This builder for chaining.
        */
@@ -5251,6 +5780,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of IDs of the disks attached to the snapshot schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
+       * </pre>
+       *
        * <code>repeated string disk_ids = 9;</code>
        * @param value The bytes of the diskIds to add.
        * @return This builder for chaining.
@@ -5324,11 +5858,19 @@ public final class SnapshotScheduleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being created.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
     java.lang.String getSnapshotScheduleId();
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being created.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -5422,6 +5964,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SCHEDULE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotScheduleId_;
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being created.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
@@ -5439,6 +5985,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being created.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -5761,6 +6311,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object snapshotScheduleId_ = "";
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being created.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The snapshotScheduleId.
        */
@@ -5777,6 +6331,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being created.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The bytes for snapshotScheduleId.
        */
@@ -5794,6 +6352,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being created.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -5809,6 +6371,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being created.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5819,6 +6385,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being created.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The bytes for snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -5893,7 +6463,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to update.
+     * ID of the snapshot schedule to update.
+     * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -5902,7 +6473,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getSnapshotScheduleId();
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to update.
+     * ID of the snapshot schedule to update.
+     * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -5913,7 +6485,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+     * Field mask that specifies which attributes of the snapshot schedule should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5922,7 +6494,7 @@ public final class SnapshotScheduleServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+     * Field mask that specifies which attributes of the snapshot schedule should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5931,7 +6503,7 @@ public final class SnapshotScheduleServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+     * Field mask that specifies which attributes of the snapshot schedule should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5940,7 +6512,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * schedule properties
+     * New name for the snapshot schedule.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3;</code>
@@ -5949,7 +6522,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * schedule properties
+     * New name for the snapshot schedule.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3;</code>
@@ -5959,11 +6533,19 @@ public final class SnapshotScheduleServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -5971,10 +6553,28 @@ public final class SnapshotScheduleServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     boolean containsLabels(
@@ -5986,11 +6586,29 @@ public final class SnapshotScheduleServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -5998,6 +6616,15 @@ public final class SnapshotScheduleServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -6005,57 +6632,108 @@ public final class SnapshotScheduleServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * New frequency settings of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
      * @return Whether the schedulePolicy field is set.
      */
     boolean hasSchedulePolicy();
     /**
+     * <pre>
+     * New frequency settings of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
      * @return The schedulePolicy.
      */
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy getSchedulePolicy();
     /**
+     * <pre>
+     * New frequency settings of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
      */
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder getSchedulePolicyOrBuilder();
 
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 7;</code>
      * @return Whether the retentionPeriod field is set.
      */
     boolean hasRetentionPeriod();
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 7;</code>
      * @return The retentionPeriod.
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 7;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
 
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 8;</code>
      * @return Whether the snapshotCount field is set.
      */
     boolean hasSnapshotCount();
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 8;</code>
      * @return The snapshotCount.
      */
     long getSnapshotCount();
 
     /**
+     * <pre>
+     * New attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
      * @return Whether the snapshotSpec field is set.
      */
     boolean hasSnapshotSpec();
     /**
+     * <pre>
+     * New attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
      * @return The snapshotSpec.
      */
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec getSnapshotSpec();
     /**
+     * <pre>
+     * New attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
      */
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder getSnapshotSpecOrBuilder();
@@ -6289,7 +6967,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object snapshotScheduleId_;
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to update.
+     * ID of the snapshot schedule to update.
+     * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -6310,7 +6989,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to update.
+     * ID of the snapshot schedule to update.
+     * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -6335,7 +7015,7 @@ public final class SnapshotScheduleServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+     * Field mask that specifies which attributes of the snapshot schedule should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6347,7 +7027,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+     * Field mask that specifies which attributes of the snapshot schedule should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6359,7 +7039,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+     * Field mask that specifies which attributes of the snapshot schedule should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6373,7 +7053,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * schedule properties
+     * New name for the snapshot schedule.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3;</code>
@@ -6394,7 +7075,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * schedule properties
+     * New name for the snapshot schedule.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3;</code>
@@ -6418,6 +7100,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -6435,6 +7121,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the snapshot schedule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -6480,6 +7170,15 @@ public final class SnapshotScheduleServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -6498,6 +7197,15 @@ public final class SnapshotScheduleServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -6506,6 +7214,15 @@ public final class SnapshotScheduleServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -6519,6 +7236,15 @@ public final class SnapshotScheduleServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Snapshot schedule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -6537,6 +7263,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SCHEDULE_POLICY_FIELD_NUMBER = 6;
     private yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy schedulePolicy_;
     /**
+     * <pre>
+     * New frequency settings of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
      * @return Whether the schedulePolicy field is set.
      */
@@ -6545,6 +7275,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return schedulePolicy_ != null;
     }
     /**
+     * <pre>
+     * New frequency settings of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
      * @return The schedulePolicy.
      */
@@ -6553,6 +7287,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return schedulePolicy_ == null ? yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy.getDefaultInstance() : schedulePolicy_;
     }
     /**
+     * <pre>
+     * New frequency settings of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
      */
     @java.lang.Override
@@ -6562,6 +7300,11 @@ public final class SnapshotScheduleServiceOuterClass {
 
     public static final int RETENTION_PERIOD_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 7;</code>
      * @return Whether the retentionPeriod field is set.
      */
@@ -6570,6 +7313,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return retentionPolicyCase_ == 7;
     }
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 7;</code>
      * @return The retentionPeriod.
      */
@@ -6581,6 +7329,11 @@ public final class SnapshotScheduleServiceOuterClass {
       return com.google.protobuf.Duration.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 7;</code>
      */
     @java.lang.Override
@@ -6593,6 +7346,12 @@ public final class SnapshotScheduleServiceOuterClass {
 
     public static final int SNAPSHOT_COUNT_FIELD_NUMBER = 8;
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 8;</code>
      * @return Whether the snapshotCount field is set.
      */
@@ -6601,6 +7360,12 @@ public final class SnapshotScheduleServiceOuterClass {
       return retentionPolicyCase_ == 8;
     }
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 8;</code>
      * @return The snapshotCount.
      */
@@ -6615,6 +7380,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SPEC_FIELD_NUMBER = 9;
     private yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec snapshotSpec_;
     /**
+     * <pre>
+     * New attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
      * @return Whether the snapshotSpec field is set.
      */
@@ -6623,6 +7392,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return snapshotSpec_ != null;
     }
     /**
+     * <pre>
+     * New attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
      * @return The snapshotSpec.
      */
@@ -6631,6 +7404,10 @@ public final class SnapshotScheduleServiceOuterClass {
       return snapshotSpec_ == null ? yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.getDefaultInstance() : snapshotSpec_;
     }
     /**
+     * <pre>
+     * New attributes of snapshots created by the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
      */
     @java.lang.Override
@@ -7201,7 +7978,8 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object snapshotScheduleId_ = "";
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to update.
+       * ID of the snapshot schedule to update.
+       * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -7221,7 +7999,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to update.
+       * ID of the snapshot schedule to update.
+       * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -7242,7 +8021,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to update.
+       * ID of the snapshot schedule to update.
+       * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -7261,7 +8041,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to update.
+       * ID of the snapshot schedule to update.
+       * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -7275,7 +8056,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to update.
+       * ID of the snapshot schedule to update.
+       * To get the snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -7299,7 +8081,7 @@ public final class SnapshotScheduleServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7310,7 +8092,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7325,7 +8107,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7345,7 +8127,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7363,7 +8145,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7385,7 +8167,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7403,7 +8185,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7415,7 +8197,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7430,7 +8212,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the SnapshotSchedule resource are going to be updated.
+       * Field mask that specifies which attributes of the snapshot schedule should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -7452,7 +8234,8 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * schedule properties
+       * New name for the snapshot schedule.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -7472,7 +8255,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * New name for the snapshot schedule.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -7493,7 +8277,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * New name for the snapshot schedule.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -7512,7 +8297,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * New name for the snapshot schedule.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -7526,7 +8312,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * New name for the snapshot schedule.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -7547,6 +8334,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -7563,6 +8354,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -7580,6 +8375,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -7595,6 +8394,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -7605,6 +8408,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the snapshot schedule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -7648,6 +8455,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -7666,6 +8482,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -7674,6 +8499,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -7687,6 +8521,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -7708,6 +8551,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -7727,6 +8579,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       public Builder putLabels(
@@ -7742,6 +8603,15 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Snapshot schedule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SnapshotScheduleService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -7756,6 +8626,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder> schedulePolicyBuilder_;
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        * @return Whether the schedulePolicy field is set.
        */
@@ -7763,6 +8637,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return schedulePolicyBuilder_ != null || schedulePolicy_ != null;
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        * @return The schedulePolicy.
        */
@@ -7774,6 +8652,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       public Builder setSchedulePolicy(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy value) {
@@ -7790,6 +8672,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       public Builder setSchedulePolicy(
@@ -7804,6 +8690,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       public Builder mergeSchedulePolicy(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy value) {
@@ -7822,6 +8712,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       public Builder clearSchedulePolicy() {
@@ -7836,6 +8730,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy.Builder getSchedulePolicyBuilder() {
@@ -7844,6 +8742,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return getSchedulePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder getSchedulePolicyOrBuilder() {
@@ -7855,6 +8757,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New frequency settings of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7874,6 +8780,11 @@ public final class SnapshotScheduleServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        * @return Whether the retentionPeriod field is set.
        */
@@ -7882,6 +8793,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return retentionPolicyCase_ == 7;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        * @return The retentionPeriod.
        */
@@ -7900,6 +8816,11 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
@@ -7916,6 +8837,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       public Builder setRetentionPeriod(
@@ -7930,6 +8856,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
@@ -7952,6 +8883,11 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       public Builder clearRetentionPeriod() {
@@ -7971,12 +8907,22 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
         return getRetentionPeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       @java.lang.Override
@@ -7991,6 +8937,11 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8013,6 +8964,12 @@ public final class SnapshotScheduleServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 8;</code>
        * @return Whether the snapshotCount field is set.
        */
@@ -8020,6 +8977,12 @@ public final class SnapshotScheduleServiceOuterClass {
         return retentionPolicyCase_ == 8;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 8;</code>
        * @return The snapshotCount.
        */
@@ -8030,6 +8993,12 @@ public final class SnapshotScheduleServiceOuterClass {
         return 0L;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 8;</code>
        * @param value The snapshotCount to set.
        * @return This builder for chaining.
@@ -8041,6 +9010,12 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 8;</code>
        * @return This builder for chaining.
        */
@@ -8057,6 +9032,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder> snapshotSpecBuilder_;
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        * @return Whether the snapshotSpec field is set.
        */
@@ -8064,6 +9043,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return snapshotSpecBuilder_ != null || snapshotSpec_ != null;
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        * @return The snapshotSpec.
        */
@@ -8075,6 +9058,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       public Builder setSnapshotSpec(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec value) {
@@ -8091,6 +9078,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       public Builder setSnapshotSpec(
@@ -8105,6 +9096,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       public Builder mergeSnapshotSpec(yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec value) {
@@ -8123,6 +9118,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       public Builder clearSnapshotSpec() {
@@ -8137,6 +9136,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.Builder getSnapshotSpecBuilder() {
@@ -8145,6 +9148,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return getSnapshotSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder getSnapshotSpecOrBuilder() {
@@ -8156,6 +9163,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New attributes of snapshots created by the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8229,11 +9240,19 @@ public final class SnapshotScheduleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
     java.lang.String getSnapshotScheduleId();
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -8327,6 +9346,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SCHEDULE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotScheduleId_;
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
@@ -8344,6 +9367,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -8666,6 +9693,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object snapshotScheduleId_ = "";
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The snapshotScheduleId.
        */
@@ -8682,6 +9713,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The bytes for snapshotScheduleId.
        */
@@ -8699,6 +9734,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -8714,6 +9753,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8724,6 +9767,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The bytes for snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -8799,6 +9846,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to delete.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -8808,6 +9856,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to delete.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -8905,6 +9954,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to delete.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -8926,6 +9976,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to delete.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -9252,6 +10303,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to delete.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -9272,6 +10324,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to delete.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -9293,6 +10346,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to delete.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -9312,6 +10366,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to delete.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -9326,6 +10381,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to delete.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -9401,11 +10457,19 @@ public final class SnapshotScheduleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being deleted.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
     java.lang.String getSnapshotScheduleId();
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being deleted.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -9499,6 +10563,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SCHEDULE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotScheduleId_;
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being deleted.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
@@ -9516,6 +10584,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being deleted.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -9838,6 +10910,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object snapshotScheduleId_ = "";
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being deleted.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The snapshotScheduleId.
        */
@@ -9854,6 +10930,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being deleted.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The bytes for snapshotScheduleId.
        */
@@ -9871,6 +10951,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being deleted.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -9886,6 +10970,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being deleted.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9896,6 +10984,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being deleted.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The bytes for snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -9971,6 +11063,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to disable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -9980,6 +11073,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to disable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -10077,6 +11171,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to disable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -10098,6 +11193,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to disable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -10424,6 +11520,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to disable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -10444,6 +11541,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to disable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -10465,6 +11563,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to disable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -10484,6 +11583,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to disable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -10498,6 +11598,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to disable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -10573,11 +11674,19 @@ public final class SnapshotScheduleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being disabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
     java.lang.String getSnapshotScheduleId();
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being disabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -10671,6 +11780,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SCHEDULE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotScheduleId_;
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being disabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
@@ -10688,6 +11801,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being disabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -11010,6 +12127,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object snapshotScheduleId_ = "";
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being disabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The snapshotScheduleId.
        */
@@ -11026,6 +12147,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being disabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The bytes for snapshotScheduleId.
        */
@@ -11043,6 +12168,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being disabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -11058,6 +12187,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being disabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -11068,6 +12201,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being disabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The bytes for snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -11143,6 +12280,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to enable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -11152,6 +12290,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to enable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -11249,6 +12388,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to enable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -11270,6 +12410,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to enable.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -11596,6 +12737,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to enable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -11616,6 +12758,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to enable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -11637,6 +12780,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to enable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -11656,6 +12800,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to enable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -11670,6 +12815,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to enable.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -11745,11 +12891,19 @@ public final class SnapshotScheduleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being enabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
     java.lang.String getSnapshotScheduleId();
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being enabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -11843,6 +12997,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SCHEDULE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotScheduleId_;
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being enabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
@@ -11860,6 +13018,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being enabled.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -12182,6 +13344,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object snapshotScheduleId_ = "";
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being enabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The snapshotScheduleId.
        */
@@ -12198,6 +13364,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being enabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The bytes for snapshotScheduleId.
        */
@@ -12215,6 +13385,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being enabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -12230,6 +13404,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being enabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -12240,6 +13418,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being enabled.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The bytes for snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -12314,7 +13496,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list operations for.
+     * ID of the snapshot schedule to list operations for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -12323,7 +13506,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getSnapshotScheduleId();
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list operations for.
+     * ID of the snapshot schedule to list operations for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -12337,6 +13521,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * The maximum number of results per page to return. If the number of available
      * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -12466,7 +13651,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object snapshotScheduleId_;
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list operations for.
+     * ID of the snapshot schedule to list operations for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -12487,7 +13673,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list operations for.
+     * ID of the snapshot schedule to list operations for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -12515,6 +13702,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * The maximum number of results per page to return. If the number of available
      * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -12913,7 +14101,8 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object snapshotScheduleId_ = "";
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list operations for.
+       * ID of the snapshot schedule to list operations for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -12933,7 +14122,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list operations for.
+       * ID of the snapshot schedule to list operations for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -12954,7 +14144,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list operations for.
+       * ID of the snapshot schedule to list operations for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -12973,7 +14164,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list operations for.
+       * ID of the snapshot schedule to list operations for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -12987,7 +14179,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list operations for.
+       * ID of the snapshot schedule to list operations for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -13012,6 +14205,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -13026,6 +14220,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -13043,6 +14238,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -13258,10 +14454,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -13270,10 +14466,10 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -13444,10 +14640,10 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -13468,10 +14664,10 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -14166,10 +15362,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14189,10 +15385,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14213,10 +15409,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14235,10 +15431,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14252,10 +15448,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14332,7 +15528,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list snapshots for.
+     * ID of the snapshot schedule to list created snapshots for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -14341,7 +15538,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getSnapshotScheduleId();
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list snapshots for.
+     * ID of the snapshot schedule to list created snapshots for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -14353,8 +15551,9 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListSnapshotScheduleSnapshotsResponse.next_page_token]
+     * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -14365,7 +15564,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+     * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -14375,7 +15574,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+     * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -14484,7 +15683,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object snapshotScheduleId_;
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list snapshots for.
+     * ID of the snapshot schedule to list created snapshots for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -14505,7 +15705,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list snapshots for.
+     * ID of the snapshot schedule to list created snapshots for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -14531,8 +15732,9 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListSnapshotScheduleSnapshotsResponse.next_page_token]
+     * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -14548,7 +15750,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+     * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -14570,7 +15772,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set [page_token] to the
-     * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+     * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -14931,7 +16133,8 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object snapshotScheduleId_ = "";
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list snapshots for.
+       * ID of the snapshot schedule to list created snapshots for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -14951,7 +16154,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list snapshots for.
+       * ID of the snapshot schedule to list created snapshots for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -14972,7 +16176,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list snapshots for.
+       * ID of the snapshot schedule to list created snapshots for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -14991,7 +16196,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list snapshots for.
+       * ID of the snapshot schedule to list created snapshots for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -15005,7 +16211,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list snapshots for.
+       * ID of the snapshot schedule to list created snapshots for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -15028,8 +16235,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListSnapshotScheduleSnapshotsResponse.next_page_token]
+       * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -15042,8 +16250,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListSnapshotScheduleSnapshotsResponse.next_page_token]
+       * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -15059,8 +16268,9 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListSnapshotScheduleSnapshotsResponse.next_page_token]
+       * results is larger than [page_size], the service returns a [ListSnapshotScheduleOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -15077,7 +16287,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+       * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -15098,7 +16308,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+       * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -15120,7 +16330,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+       * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -15140,7 +16350,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+       * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -15155,7 +16365,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set [page_token] to the
-       * [ListSnapshotScheduleSnapshotsResponse.next_page_token] returned by a previous list request.
+       * [ListSnapshotScheduleOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -15232,7 +16442,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15241,7 +16451,7 @@ public final class SnapshotScheduleServiceOuterClass {
         getSnapshotsList();
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15249,7 +16459,7 @@ public final class SnapshotScheduleServiceOuterClass {
     yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot getSnapshots(int index);
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15257,7 +16467,7 @@ public final class SnapshotScheduleServiceOuterClass {
     int getSnapshotsCount();
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15266,7 +16476,7 @@ public final class SnapshotScheduleServiceOuterClass {
         getSnapshotsOrBuilderList();
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15276,10 +16486,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15288,10 +16498,10 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15402,7 +16612,7 @@ public final class SnapshotScheduleServiceOuterClass {
     private java.util.List<yandex.cloud.api.compute.v1.SnapshotOuterClass.Snapshot> snapshots_;
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15413,7 +16623,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15425,7 +16635,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15436,7 +16646,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15447,7 +16657,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of snapshots for the specified snapshot schedule.
+     * List of snapshots created by the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15462,10 +16672,10 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15486,10 +16696,10 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15883,7 +17093,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15897,7 +17107,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15911,7 +17121,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15925,7 +17135,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15946,7 +17156,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15964,7 +17174,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -15984,7 +17194,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16005,7 +17215,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16023,7 +17233,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16041,7 +17251,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16060,7 +17270,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16077,7 +17287,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16094,7 +17304,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16105,7 +17315,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16119,7 +17329,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16134,7 +17344,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16145,7 +17355,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16157,7 +17367,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of snapshots for the specified snapshot schedule.
+       * List of snapshots created by the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Snapshot snapshots = 1;</code>
@@ -16184,10 +17394,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16207,10 +17417,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16231,10 +17441,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16253,10 +17463,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16270,10 +17480,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleSnapshotsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleSnapshotsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleSnapshotsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16350,7 +17560,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list disks for.
+     * ID of the snapshot schedule to list attached disks for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -16359,7 +17570,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getSnapshotScheduleId();
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list disks for.
+     * ID of the snapshot schedule to list attached disks for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -16373,6 +17585,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * The maximum number of results per page to return. If the number of available
      * results is larger than [page_size], the service returns a [ListSnapshotScheduleDisksResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -16502,7 +17715,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object snapshotScheduleId_;
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list disks for.
+     * ID of the snapshot schedule to list attached disks for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -16523,7 +17737,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the SnapshotSchedule resource to list disks for.
+     * ID of the snapshot schedule to list attached disks for.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -16551,6 +17766,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * The maximum number of results per page to return. If the number of available
      * results is larger than [page_size], the service returns a [ListSnapshotScheduleDisksResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -16949,7 +18165,8 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object snapshotScheduleId_ = "";
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list disks for.
+       * ID of the snapshot schedule to list attached disks for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -16969,7 +18186,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list disks for.
+       * ID of the snapshot schedule to list attached disks for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -16990,7 +18208,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list disks for.
+       * ID of the snapshot schedule to list attached disks for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -17009,7 +18228,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list disks for.
+       * ID of the snapshot schedule to list attached disks for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -17023,7 +18243,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the SnapshotSchedule resource to list disks for.
+       * ID of the snapshot schedule to list attached disks for.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -17048,6 +18269,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListSnapshotScheduleDisksResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -17062,6 +18284,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListSnapshotScheduleDisksResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -17079,6 +18302,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * The maximum number of results per page to return. If the number of available
        * results is larger than [page_size], the service returns a [ListSnapshotScheduleDisksResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -17250,7 +18474,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17259,7 +18483,7 @@ public final class SnapshotScheduleServiceOuterClass {
         getDisksList();
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17267,7 +18491,7 @@ public final class SnapshotScheduleServiceOuterClass {
     yandex.cloud.api.compute.v1.DiskOuterClass.Disk getDisks(int index);
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17275,7 +18499,7 @@ public final class SnapshotScheduleServiceOuterClass {
     int getDisksCount();
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17284,7 +18508,7 @@ public final class SnapshotScheduleServiceOuterClass {
         getDisksOrBuilderList();
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17294,10 +18518,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17306,10 +18530,10 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17420,7 +18644,7 @@ public final class SnapshotScheduleServiceOuterClass {
     private java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.Disk> disks_;
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17431,7 +18655,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17443,7 +18667,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17454,7 +18678,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17465,7 +18689,7 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disks for the specified snapshot schedule.
+     * List of disks attached to the specified snapshot schedule.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17480,10 +18704,10 @@ public final class SnapshotScheduleServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17504,10 +18728,10 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-     * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+     * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17901,7 +19125,7 @@ public final class SnapshotScheduleServiceOuterClass {
 
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17915,7 +19139,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17929,7 +19153,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17943,7 +19167,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17964,7 +19188,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -17982,7 +19206,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18002,7 +19226,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18023,7 +19247,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18041,7 +19265,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18059,7 +19283,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18078,7 +19302,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18095,7 +19319,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18112,7 +19336,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18123,7 +19347,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18137,7 +19361,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18152,7 +19376,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18163,7 +19387,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18175,7 +19399,7 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disks for the specified snapshot schedule.
+       * List of disks attached to the specified snapshot schedule.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Disk disks = 1;</code>
@@ -18202,10 +19426,10 @@ public final class SnapshotScheduleServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18225,10 +19449,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18249,10 +19473,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18271,10 +19495,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18288,10 +19512,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListSnapshotScheduleDisksRequest.page_size], use the [next_page_token] as the value
-       * for the [ListSnapshotScheduleDisksRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSnapshotScheduleDisksRequest.page_size], use `next_page_token` as the value
+       * for the [ListSnapshotScheduleDisksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18369,6 +19593,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to update.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -18378,6 +19603,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to update.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -18388,7 +19614,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18398,7 +19625,8 @@ public final class SnapshotScheduleServiceOuterClass {
         getRemoveList();
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18407,7 +19635,8 @@ public final class SnapshotScheduleServiceOuterClass {
     int getRemoveCount();
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18417,7 +19646,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getRemove(int index);
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18429,7 +19659,8 @@ public final class SnapshotScheduleServiceOuterClass {
 
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18439,7 +19670,8 @@ public final class SnapshotScheduleServiceOuterClass {
         getAddList();
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18448,7 +19680,8 @@ public final class SnapshotScheduleServiceOuterClass {
     int getAddCount();
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18458,7 +19691,8 @@ public final class SnapshotScheduleServiceOuterClass {
     java.lang.String getAdd(int index);
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18584,6 +19818,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to update.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -18605,6 +19840,7 @@ public final class SnapshotScheduleServiceOuterClass {
     /**
      * <pre>
      * ID of the snapshot schedule to update.
+     * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
      * </pre>
      *
      * <code>string snapshot_schedule_id = 1;</code>
@@ -18629,7 +19865,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private com.google.protobuf.LazyStringList remove_;
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18641,7 +19878,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18652,7 +19890,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18664,7 +19903,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disk ids to remove from the specified schedule.
+     * List of IDs of the disks to detach from the specified schedule.
+     * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
      * </pre>
      *
      * <code>repeated string remove = 2;</code>
@@ -18680,7 +19920,8 @@ public final class SnapshotScheduleServiceOuterClass {
     private com.google.protobuf.LazyStringList add_;
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18692,7 +19933,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18703,7 +19945,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -18715,7 +19958,8 @@ public final class SnapshotScheduleServiceOuterClass {
     }
     /**
      * <pre>
-     * List of disk ids to add to the specified schedule
+     * List of IDs of the disks to attach to the specified schedule.
+     * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
      * </pre>
      *
      * <code>repeated string add = 3;</code>
@@ -19103,6 +20347,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to update.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -19123,6 +20368,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to update.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -19144,6 +20390,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to update.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -19163,6 +20410,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to update.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -19177,6 +20425,7 @@ public final class SnapshotScheduleServiceOuterClass {
       /**
        * <pre>
        * ID of the snapshot schedule to update.
+       * To get a snapshot schedule ID, make a [SnapshotScheduleService.List] request.
        * </pre>
        *
        * <code>string snapshot_schedule_id = 1;</code>
@@ -19204,7 +20453,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19216,7 +20466,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19227,7 +20478,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19239,7 +20491,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19252,7 +20505,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19272,7 +20526,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19291,7 +20546,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19308,7 +20564,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19322,7 +20579,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to remove from the specified schedule.
+       * List of IDs of the disks to detach from the specified schedule.
+       * To get an ID of a disk attached to the schedule, make a [SnapshotScheduleService.ListDisks] request.
        * </pre>
        *
        * <code>repeated string remove = 2;</code>
@@ -19350,7 +20608,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19362,7 +20621,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19373,7 +20633,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19385,7 +20646,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19398,7 +20660,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19418,7 +20681,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19437,7 +20701,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19454,7 +20719,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19468,7 +20734,8 @@ public final class SnapshotScheduleServiceOuterClass {
       }
       /**
        * <pre>
-       * List of disk ids to add to the specified schedule
+       * List of IDs of the disks to attach to the specified schedule.
+       * To get a disk ID, make a [yandex.cloud.compute.v1.DiskService.List] request.
        * </pre>
        *
        * <code>repeated string add = 3;</code>
@@ -19544,11 +20811,19 @@ public final class SnapshotScheduleServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
     java.lang.String getSnapshotScheduleId();
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -19642,6 +20917,10 @@ public final class SnapshotScheduleServiceOuterClass {
     public static final int SNAPSHOT_SCHEDULE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object snapshotScheduleId_;
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The snapshotScheduleId.
      */
@@ -19659,6 +20938,10 @@ public final class SnapshotScheduleServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the snapshot schedule that is being updated.
+     * </pre>
+     *
      * <code>string snapshot_schedule_id = 1;</code>
      * @return The bytes for snapshotScheduleId.
      */
@@ -19981,6 +21264,10 @@ public final class SnapshotScheduleServiceOuterClass {
 
       private java.lang.Object snapshotScheduleId_ = "";
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The snapshotScheduleId.
        */
@@ -19997,6 +21284,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return The bytes for snapshotScheduleId.
        */
@@ -20014,6 +21305,10 @@ public final class SnapshotScheduleServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The snapshotScheduleId to set.
        * @return This builder for chaining.
@@ -20029,6 +21324,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -20039,6 +21338,10 @@ public final class SnapshotScheduleServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the snapshot schedule that is being updated.
+       * </pre>
+       *
        * <code>string snapshot_schedule_id = 1;</code>
        * @param value The bytes for snapshotScheduleId to set.
        * @return This builder for chaining.

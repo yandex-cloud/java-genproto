@@ -20,7 +20,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * ID of the snapshot schedule policy.
+     * ID of the snapshot schedule.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,7 +29,7 @@ public final class SnapshotScheduleOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the snapshot schedule policy.
+     * ID of the snapshot schedule.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +40,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the scheduler policy belongs to.
+     * ID of the folder that the snapshot schedule belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -49,7 +49,7 @@ public final class SnapshotScheduleOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the scheduler policy belongs to.
+     * ID of the folder that the snapshot schedule belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -59,23 +59,35 @@ public final class SnapshotScheduleOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
      * <pre>
-     * Name of the schedule policy.
+     * Name of the snapshot schedule.
      * The name is unique within the folder.
      * </pre>
      *
@@ -85,7 +97,7 @@ public final class SnapshotScheduleOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the schedule policy.
+     * Name of the snapshot schedule.
      * The name is unique within the folder.
      * </pre>
      *
@@ -97,7 +109,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * Description of the schedule policy.
+     * Description of the snapshot schedule.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -106,7 +118,7 @@ public final class SnapshotScheduleOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the schedule policy.
+     * Description of the snapshot schedule.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -117,7 +129,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -125,7 +137,7 @@ public final class SnapshotScheduleOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -140,7 +152,7 @@ public final class SnapshotScheduleOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -149,7 +161,7 @@ public final class SnapshotScheduleOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -160,7 +172,7 @@ public final class SnapshotScheduleOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -170,11 +182,19 @@ public final class SnapshotScheduleOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Status of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
      * @return The status.
      */
@@ -182,7 +202,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -191,7 +211,7 @@ public final class SnapshotScheduleOuterClass {
     boolean hasSchedulePolicy();
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -200,7 +220,7 @@ public final class SnapshotScheduleOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy getSchedulePolicy();
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -208,26 +228,53 @@ public final class SnapshotScheduleOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder getSchedulePolicyOrBuilder();
 
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      * @return Whether the retentionPeriod field is set.
      */
     boolean hasRetentionPeriod();
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      * @return The retentionPeriod.
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
 
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 10;</code>
      * @return Whether the snapshotCount field is set.
      */
     boolean hasSnapshotCount();
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 10;</code>
      * @return The snapshotCount.
      */
@@ -235,7 +282,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * properties to create snapshot with.
+     * Attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -244,7 +291,7 @@ public final class SnapshotScheduleOuterClass {
     boolean hasSnapshotSpec();
     /**
      * <pre>
-     * properties to create snapshot with.
+     * Attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -253,7 +300,7 @@ public final class SnapshotScheduleOuterClass {
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec getSnapshotSpec();
     /**
      * <pre>
-     * properties to create snapshot with.
+     * Attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -263,6 +310,10 @@ public final class SnapshotScheduleOuterClass {
     public yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.RetentionPolicyCase getRetentionPolicyCase();
   }
   /**
+   * <pre>
+   * A snapshot schedule. For details about the concept, see [documentation](/docs/compute/concepts/snapshot-schedule).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.compute.v1.SnapshotSchedule}
    */
   public static final class SnapshotSchedule extends
@@ -468,22 +519,43 @@ public final class SnapshotScheduleOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * The snapshot schedule is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * The snapshot schedule is on: new disk snapshots will be created, old ones deleted
+       * (if [SnapshotSchedule.retention_policy] is specified).
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * The schedule is interrupted, snapshots won't be created or deleted.
+       * </pre>
+       *
        * <code>INACTIVE = 3;</code>
        */
       INACTIVE(3),
       /**
+       * <pre>
+       * The schedule is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 4;</code>
        */
       DELETING(4),
       /**
+       * <pre>
+       * Changes are being made to snapshot schedule settings or a list of attached disks.
+       * </pre>
+       *
        * <code>UPDATING = 5;</code>
        */
       UPDATING(5),
@@ -495,22 +567,43 @@ public final class SnapshotScheduleOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * The snapshot schedule is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * The snapshot schedule is on: new disk snapshots will be created, old ones deleted
+       * (if [SnapshotSchedule.retention_policy] is specified).
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * The schedule is interrupted, snapshots won't be created or deleted.
+       * </pre>
+       *
        * <code>INACTIVE = 3;</code>
        */
       public static final int INACTIVE_VALUE = 3;
       /**
+       * <pre>
+       * The schedule is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 4;</code>
        */
       public static final int DELETING_VALUE = 4;
       /**
+       * <pre>
+       * Changes are being made to snapshot schedule settings or a list of attached disks.
+       * </pre>
+       *
        * <code>UPDATING = 5;</code>
        */
       public static final int UPDATING_VALUE = 5;
@@ -647,7 +740,7 @@ public final class SnapshotScheduleOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the snapshot schedule policy.
+     * ID of the snapshot schedule.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -668,7 +761,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * ID of the snapshot schedule policy.
+     * ID of the snapshot schedule.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -693,7 +786,7 @@ public final class SnapshotScheduleOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the scheduler policy belongs to.
+     * ID of the folder that the snapshot schedule belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -714,7 +807,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the scheduler policy belongs to.
+     * ID of the folder that the snapshot schedule belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -738,6 +831,10 @@ public final class SnapshotScheduleOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -746,6 +843,10 @@ public final class SnapshotScheduleOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
@@ -754,6 +855,10 @@ public final class SnapshotScheduleOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
@@ -765,7 +870,7 @@ public final class SnapshotScheduleOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the schedule policy.
+     * Name of the snapshot schedule.
      * The name is unique within the folder.
      * </pre>
      *
@@ -787,7 +892,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Name of the schedule policy.
+     * Name of the snapshot schedule.
      * The name is unique within the folder.
      * </pre>
      *
@@ -813,7 +918,7 @@ public final class SnapshotScheduleOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the schedule policy.
+     * Description of the snapshot schedule.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -834,7 +939,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Description of the schedule policy.
+     * Description of the snapshot schedule.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -883,7 +988,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -905,7 +1010,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -917,7 +1022,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -934,7 +1039,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot schedule labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -955,6 +1060,10 @@ public final class SnapshotScheduleOuterClass {
     public static final int STATUS_FIELD_NUMBER = 7;
     private int status_;
     /**
+     * <pre>
+     * Status of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -962,6 +1071,10 @@ public final class SnapshotScheduleOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the snapshot schedule.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
      * @return The status.
      */
@@ -975,7 +1088,7 @@ public final class SnapshotScheduleOuterClass {
     private yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy schedulePolicy_;
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -987,7 +1100,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -999,7 +1112,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * schedule properties
+     * Frequency settings of the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -1011,6 +1124,11 @@ public final class SnapshotScheduleOuterClass {
 
     public static final int RETENTION_PERIOD_FIELD_NUMBER = 9;
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      * @return Whether the retentionPeriod field is set.
      */
@@ -1019,6 +1137,11 @@ public final class SnapshotScheduleOuterClass {
       return retentionPolicyCase_ == 9;
     }
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      * @return The retentionPeriod.
      */
@@ -1030,6 +1153,11 @@ public final class SnapshotScheduleOuterClass {
       return com.google.protobuf.Duration.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+     * automatically deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     @java.lang.Override
@@ -1042,6 +1170,12 @@ public final class SnapshotScheduleOuterClass {
 
     public static final int SNAPSHOT_COUNT_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 10;</code>
      * @return Whether the snapshotCount field is set.
      */
@@ -1050,6 +1184,12 @@ public final class SnapshotScheduleOuterClass {
       return retentionPolicyCase_ == 10;
     }
     /**
+     * <pre>
+     * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+     * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+     * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+     * </pre>
+     *
      * <code>int64 snapshot_count = 10;</code>
      * @return The snapshotCount.
      */
@@ -1065,7 +1205,7 @@ public final class SnapshotScheduleOuterClass {
     private yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec snapshotSpec_;
     /**
      * <pre>
-     * properties to create snapshot with.
+     * Attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -1077,7 +1217,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * properties to create snapshot with.
+     * Attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -1089,7 +1229,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * properties to create snapshot with.
+     * Attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -1406,6 +1546,10 @@ public final class SnapshotScheduleOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A snapshot schedule. For details about the concept, see [documentation](/docs/compute/concepts/snapshot-schedule).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.compute.v1.SnapshotSchedule}
      */
     public static final class Builder extends
@@ -1695,7 +1839,7 @@ public final class SnapshotScheduleOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the snapshot schedule policy.
+       * ID of the snapshot schedule.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1715,7 +1859,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the snapshot schedule policy.
+       * ID of the snapshot schedule.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1736,7 +1880,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the snapshot schedule policy.
+       * ID of the snapshot schedule.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1755,7 +1899,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the snapshot schedule policy.
+       * ID of the snapshot schedule.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1769,7 +1913,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the snapshot schedule policy.
+       * ID of the snapshot schedule.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1791,7 +1935,7 @@ public final class SnapshotScheduleOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the scheduler policy belongs to.
+       * ID of the folder that the snapshot schedule belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -1811,7 +1955,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the scheduler policy belongs to.
+       * ID of the folder that the snapshot schedule belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -1832,7 +1976,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the scheduler policy belongs to.
+       * ID of the folder that the snapshot schedule belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -1851,7 +1995,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the scheduler policy belongs to.
+       * ID of the folder that the snapshot schedule belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -1865,7 +2009,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the scheduler policy belongs to.
+       * ID of the folder that the snapshot schedule belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -1888,6 +2032,10 @@ public final class SnapshotScheduleOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1895,6 +2043,10 @@ public final class SnapshotScheduleOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return The createdAt.
        */
@@ -1906,6 +2058,10 @@ public final class SnapshotScheduleOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1922,6 +2078,10 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1936,6 +2096,10 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1954,6 +2118,10 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1968,6 +2136,10 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1976,6 +2148,10 @@ public final class SnapshotScheduleOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1987,6 +2163,10 @@ public final class SnapshotScheduleOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2006,7 +2186,7 @@ public final class SnapshotScheduleOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the schedule policy.
+       * Name of the snapshot schedule.
        * The name is unique within the folder.
        * </pre>
        *
@@ -2027,7 +2207,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Name of the schedule policy.
+       * Name of the snapshot schedule.
        * The name is unique within the folder.
        * </pre>
        *
@@ -2049,7 +2229,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Name of the schedule policy.
+       * Name of the snapshot schedule.
        * The name is unique within the folder.
        * </pre>
        *
@@ -2069,7 +2249,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Name of the schedule policy.
+       * Name of the snapshot schedule.
        * The name is unique within the folder.
        * </pre>
        *
@@ -2084,7 +2264,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Name of the schedule policy.
+       * Name of the snapshot schedule.
        * The name is unique within the folder.
        * </pre>
        *
@@ -2107,7 +2287,7 @@ public final class SnapshotScheduleOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the schedule policy.
+       * Description of the snapshot schedule.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2127,7 +2307,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Description of the schedule policy.
+       * Description of the snapshot schedule.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2148,7 +2328,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Description of the schedule policy.
+       * Description of the snapshot schedule.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2167,7 +2347,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Description of the schedule policy.
+       * Description of the snapshot schedule.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2181,7 +2361,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Description of the schedule policy.
+       * Description of the snapshot schedule.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2228,7 +2408,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2250,7 +2430,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2262,7 +2442,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2279,7 +2459,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2304,7 +2484,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2327,7 +2507,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2346,7 +2526,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot schedule labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2361,6 +2541,10 @@ public final class SnapshotScheduleOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -2368,6 +2552,10 @@ public final class SnapshotScheduleOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -2379,6 +2567,10 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
        * @return The status.
        */
@@ -2389,6 +2581,10 @@ public final class SnapshotScheduleOuterClass {
         return result == null ? yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSchedule.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -2403,6 +2599,10 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the snapshot schedule.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.SnapshotSchedule.Status status = 7;</code>
        * @return This builder for chaining.
        */
@@ -2418,7 +2618,7 @@ public final class SnapshotScheduleOuterClass {
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicy.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SchedulePolicyOrBuilder> schedulePolicyBuilder_;
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2429,7 +2629,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2444,7 +2644,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2464,7 +2664,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2482,7 +2682,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2504,7 +2704,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2522,7 +2722,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2534,7 +2734,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2549,7 +2749,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * schedule properties
+       * Frequency settings of the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SchedulePolicy schedule_policy = 8;</code>
@@ -2571,6 +2771,11 @@ public final class SnapshotScheduleOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        * @return Whether the retentionPeriod field is set.
        */
@@ -2579,6 +2784,11 @@ public final class SnapshotScheduleOuterClass {
         return retentionPolicyCase_ == 9;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        * @return The retentionPeriod.
        */
@@ -2597,6 +2807,11 @@ public final class SnapshotScheduleOuterClass {
         }
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
@@ -2613,6 +2828,11 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder setRetentionPeriod(
@@ -2627,6 +2847,11 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
@@ -2649,6 +2874,11 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder clearRetentionPeriod() {
@@ -2668,12 +2898,22 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
         return getRetentionPeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       @java.lang.Override
@@ -2688,6 +2928,11 @@ public final class SnapshotScheduleOuterClass {
         }
       }
       /**
+       * <pre>
+       * Retention period of the snapshot schedule. Once a snapshot created by the schedule reaches this age, it is
+       * automatically deleted.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2710,6 +2955,12 @@ public final class SnapshotScheduleOuterClass {
       }
 
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 10;</code>
        * @return Whether the snapshotCount field is set.
        */
@@ -2717,6 +2968,12 @@ public final class SnapshotScheduleOuterClass {
         return retentionPolicyCase_ == 10;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 10;</code>
        * @return The snapshotCount.
        */
@@ -2727,6 +2984,12 @@ public final class SnapshotScheduleOuterClass {
         return 0L;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 10;</code>
        * @param value The snapshotCount to set.
        * @return This builder for chaining.
@@ -2738,6 +3001,12 @@ public final class SnapshotScheduleOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Retention count of the snapshot schedule. Once the number of snapshots created by the schedule exceeds this
+       * number, the oldest ones are automatically deleted. E.g. if the number is 5, the first snapshot is deleted
+       * after the sixth one is created, the second is deleted after the seventh one is created, and so on.
+       * </pre>
+       *
        * <code>int64 snapshot_count = 10;</code>
        * @return This builder for chaining.
        */
@@ -2755,7 +3024,7 @@ public final class SnapshotScheduleOuterClass {
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpec.Builder, yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.SnapshotSpecOrBuilder> snapshotSpecBuilder_;
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2766,7 +3035,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2781,7 +3050,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2801,7 +3070,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2819,7 +3088,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2841,7 +3110,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2859,7 +3128,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2871,7 +3140,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2886,7 +3155,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * properties to create snapshot with.
+       * Attributes of snapshots created by the snapshot schedule.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SnapshotSpec snapshot_spec = 11;</code>
@@ -2963,7 +3232,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * start time for the first run.
+     * Timestamp for creating the first snapshot.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -2972,7 +3241,7 @@ public final class SnapshotScheduleOuterClass {
     boolean hasStartAt();
     /**
      * <pre>
-     * start time for the first run.
+     * Timestamp for creating the first snapshot.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -2981,7 +3250,7 @@ public final class SnapshotScheduleOuterClass {
     com.google.protobuf.Timestamp getStartAt();
     /**
      * <pre>
-     * start time for the first run.
+     * Timestamp for creating the first snapshot.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -2990,7 +3259,10 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * cron format (* * * * *)
+     * Cron expression for the snapshot schedule (UTC+0).
+     * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+     * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+     * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
      * </pre>
      *
      * <code>string expression = 2;</code>
@@ -2999,7 +3271,10 @@ public final class SnapshotScheduleOuterClass {
     java.lang.String getExpression();
     /**
      * <pre>
-     * cron format (* * * * *)
+     * Cron expression for the snapshot schedule (UTC+0).
+     * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+     * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+     * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
      * </pre>
      *
      * <code>string expression = 2;</code>
@@ -3009,6 +3284,10 @@ public final class SnapshotScheduleOuterClass {
         getExpressionBytes();
   }
   /**
+   * <pre>
+   * A resource for frequency settings of a snapshot schedule.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.compute.v1.SchedulePolicy}
    */
   public static final class SchedulePolicy extends
@@ -3109,7 +3388,7 @@ public final class SnapshotScheduleOuterClass {
     private com.google.protobuf.Timestamp startAt_;
     /**
      * <pre>
-     * start time for the first run.
+     * Timestamp for creating the first snapshot.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3121,7 +3400,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * start time for the first run.
+     * Timestamp for creating the first snapshot.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3133,7 +3412,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * start time for the first run.
+     * Timestamp for creating the first snapshot.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3147,7 +3426,10 @@ public final class SnapshotScheduleOuterClass {
     private volatile java.lang.Object expression_;
     /**
      * <pre>
-     * cron format (* * * * *)
+     * Cron expression for the snapshot schedule (UTC+0).
+     * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+     * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+     * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
      * </pre>
      *
      * <code>string expression = 2;</code>
@@ -3168,7 +3450,10 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * cron format (* * * * *)
+     * Cron expression for the snapshot schedule (UTC+0).
+     * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+     * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+     * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
      * </pre>
      *
      * <code>string expression = 2;</code>
@@ -3360,6 +3645,10 @@ public final class SnapshotScheduleOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A resource for frequency settings of a snapshot schedule.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.compute.v1.SchedulePolicy}
      */
     public static final class Builder extends
@@ -3526,7 +3815,7 @@ public final class SnapshotScheduleOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startAtBuilder_;
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3537,7 +3826,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3552,7 +3841,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3572,7 +3861,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3590,7 +3879,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3612,7 +3901,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3630,7 +3919,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3642,7 +3931,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3657,7 +3946,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * start time for the first run.
+       * Timestamp for creating the first snapshot.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_at = 1;</code>
@@ -3679,7 +3968,10 @@ public final class SnapshotScheduleOuterClass {
       private java.lang.Object expression_ = "";
       /**
        * <pre>
-       * cron format (* * * * *)
+       * Cron expression for the snapshot schedule (UTC+0).
+       * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+       * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+       * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
        * </pre>
        *
        * <code>string expression = 2;</code>
@@ -3699,7 +3991,10 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * cron format (* * * * *)
+       * Cron expression for the snapshot schedule (UTC+0).
+       * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+       * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+       * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
        * </pre>
        *
        * <code>string expression = 2;</code>
@@ -3720,7 +4015,10 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * cron format (* * * * *)
+       * Cron expression for the snapshot schedule (UTC+0).
+       * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+       * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+       * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
        * </pre>
        *
        * <code>string expression = 2;</code>
@@ -3739,7 +4037,10 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * cron format (* * * * *)
+       * Cron expression for the snapshot schedule (UTC+0).
+       * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+       * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+       * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
        * </pre>
        *
        * <code>string expression = 2;</code>
@@ -3753,7 +4054,10 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * cron format (* * * * *)
+       * Cron expression for the snapshot schedule (UTC+0).
+       * The expression must consist of five fields (`Minutes Hours Day-of-month Month Day-of-week`) or be one of
+       * nonstandard predefined expressions (e.g. `&#64;hourly`). For details about the format,
+       * see [documentation](/docs/compute/concepts/snapshot-schedule#cron)
        * </pre>
        *
        * <code>string expression = 2;</code>
@@ -3850,7 +4154,7 @@ public final class SnapshotScheduleOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -3858,7 +4162,7 @@ public final class SnapshotScheduleOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -3873,7 +4177,7 @@ public final class SnapshotScheduleOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -3882,7 +4186,7 @@ public final class SnapshotScheduleOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -3893,7 +4197,7 @@ public final class SnapshotScheduleOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -3904,7 +4208,7 @@ public final class SnapshotScheduleOuterClass {
   }
   /**
    * <pre>
-   * Properties of created snapshot backup
+   * A resource for attributes of snapshots created by the snapshot schedule.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.compute.v1.SnapshotSpec}
@@ -4090,7 +4394,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4112,7 +4416,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4124,7 +4428,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4141,7 +4445,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Snapshot labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4337,7 +4641,7 @@ public final class SnapshotScheduleOuterClass {
     }
     /**
      * <pre>
-     * Properties of created snapshot backup
+     * A resource for attributes of snapshots created by the snapshot schedule.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.compute.v1.SnapshotSpec}
@@ -4640,7 +4944,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4662,7 +4966,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4674,7 +4978,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4691,7 +4995,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4716,7 +5020,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4739,7 +5043,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
@@ -4758,7 +5062,7 @@ public final class SnapshotScheduleOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Snapshot labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 2;</code>
