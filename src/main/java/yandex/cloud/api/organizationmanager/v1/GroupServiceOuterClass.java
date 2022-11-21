@@ -674,7 +674,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -685,7 +685,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -898,7 +898,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -921,7 +921,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1511,7 +1511,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1533,7 +1533,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1556,7 +1556,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1577,7 +1577,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1593,7 +1593,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -7633,7 +7633,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -7644,7 +7644,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -7819,7 +7819,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -7842,7 +7842,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -8353,7 +8353,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -8375,7 +8375,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -8398,7 +8398,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -8419,7 +8419,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -8435,7 +8435,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -9665,7 +9665,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -9676,7 +9676,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -9851,7 +9851,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -9874,7 +9874,7 @@ public final class GroupServiceOuterClass {
      * returned by a previous list request to get the next page of results.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -10385,7 +10385,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -10407,7 +10407,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -10430,7 +10430,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -10451,7 +10451,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -10467,7 +10467,7 @@ public final class GroupServiceOuterClass {
        * returned by a previous list request to get the next page of results.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -15184,111 +15184,111 @@ public final class GroupServiceOuterClass {
       "o\032 yandex/cloud/access/access.proto\032&yan" +
       "dex/cloud/operation/operation.proto\032\035yan" +
       "dex/cloud/validation.proto\"1\n\017GetGroupRe" +
-      "quest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\224\001" +
+      "quest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\225\001" +
       "\n\021ListGroupsRequest\022%\n\017organization_id\030\001" +
       " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\022ListGrou" +
-      "psResponse\022:\n\006groups\030\001 \003(\0132*.yandex.clou" +
-      "d.organizationmanager.v1.Group\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"\222\001\n\022CreateGroupRequest\022%" +
-      "\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n" +
-      "\004name\030\002 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0,6" +
-      "1}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
-      "=256\"\'\n\023CreateGroupMetadata\022\020\n\010group_id\030" +
-      "\001 \001(\t\"\271\001\n\022UpdateGroupRequest\022\036\n\010group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003 " +
-      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
-      "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\"\'\n\023Upd" +
-      "ateGroupMetadata\022\020\n\010group_id\030\001 \001(\t\"4\n\022De" +
-      "leteGroupRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"\'\n\023DeleteGroupMetadata\022\020\n\010group" +
-      "_id\030\001 \001(\t\"z\n\032ListGroupOperationsRequest\022" +
-      "\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"m\n\033ListGroupOperationsResp" +
-      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
-      "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"w\n\027ListGroupMembersRequest\022\036\n\010group" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"v\n\030ListGroupMembersResponse\022A\n\007mem" +
-      "bers\030\001 \003(\01320.yandex.cloud.organizationma" +
-      "nager.v1.GroupMember\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"7\n\013GroupMember\022\022\n\nsubject_id\030\001 \001(\t" +
-      "\022\024\n\014subject_type\030\002 \001(\t\"\220\001\n\031UpdateGroupMe" +
-      "mbersRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022S\n\rmember_deltas\030\002 \003(\01320.yandex.clo" +
-      "ud.organizationmanager.v1.MemberDeltaB\n\202" +
-      "\3101\0061-1000\".\n\032UpdateGroupMembersMetadata\022" +
-      "\020\n\010group_id\030\001 \001(\t\"\310\001\n\013MemberDelta\022S\n\006act" +
-      "ion\030\001 \001(\0162=.yandex.cloud.organizationman" +
-      "ager.v1.MemberDelta.MemberActionB\004\350\3071\001\022 " +
-      "\n\nsubject_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\014Memb" +
-      "erAction\022\035\n\031MEMBER_ACTION_UNSPECIFIED\020\000\022" +
-      "\007\n\003ADD\020\001\022\n\n\006REMOVE\020\0022\356\021\n\014GroupService\022\233\001" +
-      "\n\003Get\0224.yandex.cloud.organizationmanager" +
-      ".v1.GetGroupRequest\032*.yandex.cloud.organ" +
-      "izationmanager.v1.Group\"2\202\323\344\223\002,\022*/organi" +
-      "zation-manager/v1/groups/{group_id}\022\240\001\n\004" +
-      "List\0226.yandex.cloud.organizationmanager." +
-      "v1.ListGroupsRequest\0327.yandex.cloud.orga" +
-      "nizationmanager.v1.ListGroupsResponse\"\'\202" +
-      "\323\344\223\002!\022\037/organization-manager/v1/groups\022\260" +
-      "\001\n\006Create\0227.yandex.cloud.organizationman" +
-      "ager.v1.CreateGroupRequest\032!.yandex.clou" +
-      "d.operation.Operation\"J\202\323\344\223\002$\"\037/organiza" +
-      "tion-manager/v1/groups:\001*\262\322*\034\n\023CreateGro" +
-      "upMetadata\022\005Group\022\273\001\n\006Update\0227.yandex.cl" +
-      "oud.organizationmanager.v1.UpdateGroupRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"U\202\323\344\223\002/2*/organization-manager/v1/group" +
-      "s/{group_id}:\001*\262\322*\034\n\023UpdateGroupMetadata" +
-      "\022\005Group\022\310\001\n\006Delete\0227.yandex.cloud.organi" +
-      "zationmanager.v1.DeleteGroupRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"b\202\323\344\223\002,**" +
-      "/organization-manager/v1/groups/{group_i" +
-      "d}\262\322*,\n\023DeleteGroupMetadata\022\025google.prot" +
-      "obuf.Empty\022\322\001\n\016ListOperations\022?.yandex.c" +
-      "loud.organizationmanager.v1.ListGroupOpe" +
-      "rationsRequest\032@.yandex.cloud.organizati" +
-      "onmanager.v1.ListGroupOperationsResponse" +
-      "\"=\202\323\344\223\0027\0225/organization-manager/v1/group" +
-      "s/{group_id}/operations\022\312\001\n\013ListMembers\022" +
-      "<.yandex.cloud.organizationmanager.v1.Li" +
-      "stGroupMembersRequest\032=.yandex.cloud.org" +
-      "anizationmanager.v1.ListGroupMembersResp" +
-      "onse\">\202\323\344\223\0028\0226/organization-manager/v1/g" +
-      "roups/{group_id}:listMembers\022\356\001\n\rUpdateM" +
-      "embers\022>.yandex.cloud.organizationmanage" +
-      "r.v1.UpdateGroupMembersRequest\032!.yandex." +
-      "cloud.operation.Operation\"z\202\323\344\223\002=\"8/orga" +
-      "nization-manager/v1/groups/{group_id}:up" +
-      "dateMembers:\001*\262\322*3\n\032UpdateGroupMembersMe" +
-      "tadata\022\025google.protobuf.Empty\022\277\001\n\022ListAc" +
-      "cessBindings\022..yandex.cloud.access.ListA" +
-      "ccessBindingsRequest\032/.yandex.cloud.acce" +
-      "ss.ListAccessBindingsResponse\"H\202\323\344\223\002B\022@/" +
-      "organization-manager/v1/groups/{resource" +
-      "_id}:listAccessBindings\022\376\001\n\021SetAccessBin" +
-      "dings\022-.yandex.cloud.access.SetAccessBin" +
-      "dingsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\226\001\202\323\344\223\002D\"?/organization-manager/" +
-      "v1/groups/{resource_id}:setAccessBinding" +
-      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
-      "ta\022$access.AccessBindingsOperationResult" +
-      "\022\212\002\n\024UpdateAccessBindings\0220.yandex.cloud" +
-      ".access.UpdateAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\234\001\202\323\344\223\002G\"" +
-      "B/organization-manager/v1/groups/{resour" +
-      "ce_id}:updateAccessBindings:\001*\262\322*K\n#acce" +
-      "ss.UpdateAccessBindingsMetadata\022$access." +
-      "AccessBindingsOperationResultB\206\001\n\'yandex" +
-      ".cloud.api.organizationmanager.v1Z[githu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/organizationmanager/v1;organizationm" +
-      "anagerb\006proto3"
+      "\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=200" +
+      "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\022ListGro" +
+      "upsResponse\022:\n\006groups\030\001 \003(\0132*.yandex.clo" +
+      "ud.organizationmanager.v1.Group\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\222\001\n\022CreateGroupRequest\022" +
+      "%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225" +
+      "\n\004name\030\002 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
+      "<=256\"\'\n\023CreateGroupMetadata\022\020\n\010group_id" +
+      "\030\001 \001(\t\"\271\001\n\022UpdateGroupRequest\022\036\n\010group_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
+      "(\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003" +
+      " \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9]" +
+      ")?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\"\'\n\023Up" +
+      "dateGroupMetadata\022\020\n\010group_id\030\001 \001(\t\"4\n\022D" +
+      "eleteGroupRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"\'\n\023DeleteGroupMetadata\022\020\n\010grou" +
+      "p_id\030\001 \001(\t\"{\n\032ListGroupOperationsRequest" +
+      "\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 " +
+      "\001(\tB\n\212\3101\006<=2000\"m\n\033ListGroupOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"x\n\027ListGroupMembersRequest\022\036\n\010gro" +
+      "up_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
+      "1\006<=2000\"v\n\030ListGroupMembersResponse\022A\n\007" +
+      "members\030\001 \003(\01320.yandex.cloud.organizatio" +
+      "nmanager.v1.GroupMember\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"7\n\013GroupMember\022\022\n\nsubject_id\030\001 " +
+      "\001(\t\022\024\n\014subject_type\030\002 \001(\t\"\220\001\n\031UpdateGrou" +
+      "pMembersRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022S\n\rmember_deltas\030\002 \003(\01320.yandex." +
+      "cloud.organizationmanager.v1.MemberDelta" +
+      "B\n\202\3101\0061-1000\".\n\032UpdateGroupMembersMetada" +
+      "ta\022\020\n\010group_id\030\001 \001(\t\"\310\001\n\013MemberDelta\022S\n\006" +
+      "action\030\001 \001(\0162=.yandex.cloud.organization" +
+      "manager.v1.MemberDelta.MemberActionB\004\350\3071" +
+      "\001\022 \n\nsubject_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"B\n\014M" +
+      "emberAction\022\035\n\031MEMBER_ACTION_UNSPECIFIED" +
+      "\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\0022\356\021\n\014GroupService" +
+      "\022\233\001\n\003Get\0224.yandex.cloud.organizationmana" +
+      "ger.v1.GetGroupRequest\032*.yandex.cloud.or" +
+      "ganizationmanager.v1.Group\"2\202\323\344\223\002,\022*/org" +
+      "anization-manager/v1/groups/{group_id}\022\240" +
+      "\001\n\004List\0226.yandex.cloud.organizationmanag" +
+      "er.v1.ListGroupsRequest\0327.yandex.cloud.o" +
+      "rganizationmanager.v1.ListGroupsResponse" +
+      "\"\'\202\323\344\223\002!\022\037/organization-manager/v1/group" +
+      "s\022\260\001\n\006Create\0227.yandex.cloud.organization" +
+      "manager.v1.CreateGroupRequest\032!.yandex.c" +
+      "loud.operation.Operation\"J\202\323\344\223\002$\"\037/organ" +
+      "ization-manager/v1/groups:\001*\262\322*\034\n\023Create" +
+      "GroupMetadata\022\005Group\022\273\001\n\006Update\0227.yandex" +
+      ".cloud.organizationmanager.v1.UpdateGrou" +
+      "pRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"U\202\323\344\223\002/2*/organization-manager/v1/gr" +
+      "oups/{group_id}:\001*\262\322*\034\n\023UpdateGroupMetad" +
+      "ata\022\005Group\022\310\001\n\006Delete\0227.yandex.cloud.org" +
+      "anizationmanager.v1.DeleteGroupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"b\202\323\344\223\002" +
+      ",**/organization-manager/v1/groups/{grou" +
+      "p_id}\262\322*,\n\023DeleteGroupMetadata\022\025google.p" +
+      "rotobuf.Empty\022\322\001\n\016ListOperations\022?.yande" +
+      "x.cloud.organizationmanager.v1.ListGroup" +
+      "OperationsRequest\032@.yandex.cloud.organiz" +
+      "ationmanager.v1.ListGroupOperationsRespo" +
+      "nse\"=\202\323\344\223\0027\0225/organization-manager/v1/gr" +
+      "oups/{group_id}/operations\022\312\001\n\013ListMembe" +
+      "rs\022<.yandex.cloud.organizationmanager.v1" +
+      ".ListGroupMembersRequest\032=.yandex.cloud." +
+      "organizationmanager.v1.ListGroupMembersR" +
+      "esponse\">\202\323\344\223\0028\0226/organization-manager/v" +
+      "1/groups/{group_id}:listMembers\022\356\001\n\rUpda" +
+      "teMembers\022>.yandex.cloud.organizationman" +
+      "ager.v1.UpdateGroupMembersRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"z\202\323\344\223\002=\"8/o" +
+      "rganization-manager/v1/groups/{group_id}" +
+      ":updateMembers:\001*\262\322*3\n\032UpdateGroupMember" +
+      "sMetadata\022\025google.protobuf.Empty\022\277\001\n\022Lis" +
+      "tAccessBindings\022..yandex.cloud.access.Li" +
+      "stAccessBindingsRequest\032/.yandex.cloud.a" +
+      "ccess.ListAccessBindingsResponse\"H\202\323\344\223\002B" +
+      "\022@/organization-manager/v1/groups/{resou" +
+      "rce_id}:listAccessBindings\022\376\001\n\021SetAccess" +
+      "Bindings\022-.yandex.cloud.access.SetAccess" +
+      "BindingsRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\226\001\202\323\344\223\002D\"?/organization-manag" +
+      "er/v1/groups/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
+      "adata\022$access.AccessBindingsOperationRes" +
+      "ult\022\212\002\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\234\001\202\323\344\223" +
+      "\002G\"B/organization-manager/v1/groups/{res" +
+      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
+      "ccess.UpdateAccessBindingsMetadata\022$acce" +
+      "ss.AccessBindingsOperationResultB\206\001\n\'yan" +
+      "dex.cloud.api.organizationmanager.v1Z[gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/organizationmanager/v1;organizati" +
+      "onmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

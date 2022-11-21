@@ -674,7 +674,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -685,7 +685,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -898,7 +898,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -921,7 +921,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1511,7 +1511,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1533,7 +1533,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1556,7 +1556,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1577,7 +1577,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1593,7 +1593,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -13473,7 +13473,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -13484,11 +13484,41 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [name_id] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+     *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [name_id] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+     *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.ListFederatedUserAccountsRequest}
@@ -13505,6 +13535,7 @@ public final class FederationServiceOuterClass {
     private ListFederatedUserAccountsRequest() {
       federationId_ = "";
       pageToken_ = "";
+      filter_ = "";
     }
 
     @java.lang.Override
@@ -13552,6 +13583,12 @@ public final class FederationServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
               break;
             }
             default: {
@@ -13659,7 +13696,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -13682,7 +13719,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -13694,6 +13731,62 @@ public final class FederationServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [name_id] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+     *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [name_id] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+     *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -13723,6 +13816,9 @@ public final class FederationServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13741,6 +13837,9 @@ public final class FederationServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13763,6 +13862,8 @@ public final class FederationServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13781,6 +13882,8 @@ public final class FederationServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13920,6 +14023,8 @@ public final class FederationServiceOuterClass {
 
         pageToken_ = "";
 
+        filter_ = "";
+
         return this;
       }
 
@@ -13949,6 +14054,7 @@ public final class FederationServiceOuterClass {
         result.federationId_ = federationId_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
         onBuilt();
         return result;
       }
@@ -14006,6 +14112,10 @@ public final class FederationServiceOuterClass {
         }
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -14193,7 +14303,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -14215,7 +14325,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -14238,7 +14348,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -14259,7 +14369,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -14275,7 +14385,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -14287,6 +14397,127 @@ public final class FederationServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [name_id] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+       *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [name_id] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+       *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [name_id] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+       *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [name_id] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+       *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [name_id] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 1-1000 characters long and match the regular expression
+       *   `[a-z0-9A-Z/&#64;_.&#92;-=+*&#92;&#92;]+`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1010"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
         onChanged();
         return this;
       }
@@ -15505,7 +15736,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -15516,7 +15747,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -15691,7 +15922,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -15714,7 +15945,7 @@ public final class FederationServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -16225,7 +16456,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -16247,7 +16478,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -16270,7 +16501,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -16291,7 +16522,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -16307,7 +16538,7 @@ public final class FederationServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -17604,126 +17835,127 @@ public final class FederationServiceOuterClass {
       "ex/cloud/operation/operation.proto\032\035yand" +
       "ex/cloud/validation.proto\"7\n\024GetFederati" +
       "onRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=" +
-      "50\"\230\001\n\026ListFederationsRequest\022%\n\017organiz" +
+      "50\"\232\001\n\026ListFederationsRequest\022%\n\017organiz" +
       "ation_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\003 \001(\003B\n\372\3071\0060-1000\022\034\n\npage_token\030\004 \001(\tB" +
-      "\010\212\3101\004<=50\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"}\n" +
-      "\027ListFederationsResponse\022I\n\013federations\030" +
-      "\001 \003(\01324.yandex.cloud.organizationmanager" +
-      ".v1.saml.Federation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\326\005\n\027CreateFederationRequest\022!\n\017orga" +
-      "nization_id\030\001 \001(\tB\010\212\3101\004<=50\0221\n\004name\030\002 \001(" +
-      "\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036" +
-      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022>\n\016cookie" +
-      "_max_age\030\004 \001(\0132\031.google.protobuf.Duratio" +
-      "nB\013\372\3071\00710m-12h\022$\n\034auto_create_account_on" +
-      "_login\030\005 \001(\010\022\036\n\006issuer\030\006 \001(\tB\016\350\3071\001\212\3101\006<=" +
-      "8000\022J\n\013sso_binding\030\007 \001(\01625.yandex.cloud" +
-      ".organizationmanager.v1.saml.BindingType" +
-      "\022\037\n\007sso_url\030\010 \001(\tB\016\350\3071\001\212\3101\006<=8000\022_\n\021sec" +
-      "urity_settings\030\t \001(\0132D.yandex.cloud.orga" +
-      "nizationmanager.v1.saml.FederationSecuri" +
-      "tySettings\022!\n\031case_insensitive_name_ids\030" +
-      "\n \001(\010\022\236\001\n\006labels\030\013 \003(\0132M.yandex.cloud.or" +
-      "ganizationmanager.v1.saml.CreateFederati" +
-      "onRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362" +
-      "\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-" +
-      "9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"1\n\030CreateFederationMetadat" +
-      "a\022\025\n\rfederation_id\030\001 \001(\t\"\206\006\n\027UpdateFeder" +
-      "ationRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101" +
-      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]" +
-      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
-      "n\030\004 \001(\tB\t\212\3101\005<=256\022>\n\016cookie_max_age\030\005 \001" +
-      "(\0132\031.google.protobuf.DurationB\013\372\3071\00710m-1" +
-      "2h\022$\n\034auto_create_account_on_login\030\006 \001(\010" +
-      "\022\036\n\006issuer\030\007 \001(\tB\016\350\3071\001\212\3101\006<=8000\022J\n\013sso_" +
-      "binding\030\010 \001(\01625.yandex.cloud.organizatio" +
-      "nmanager.v1.saml.BindingType\022\037\n\007sso_url\030" +
-      "\t \001(\tB\016\350\3071\001\212\3101\006<=8000\022_\n\021security_settin" +
-      "gs\030\n \001(\0132D.yandex.cloud.organizationmana" +
-      "ger.v1.saml.FederationSecuritySettings\022!" +
-      "\n\031case_insensitive_name_ids\030\014 \001(\010\022\236\001\n\006la" +
-      "bels\030\r \003(\0132M.yandex.cloud.organizationma" +
-      "nager.v1.saml.UpdateFederationRequest.La" +
-      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
-      "]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"1\n\030UpdateFederationMetadata\022\025\n\rfederat" +
-      "ion_id\030\001 \001(\t\":\n\027DeleteFederationRequest\022" +
-      "\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\"1\n\030Dele" +
-      "teFederationMetadata\022\025\n\rfederation_id\030\001 " +
-      "\001(\t\"`\n\037AddFederatedUserAccountsRequest\022\037" +
-      "\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\034\n\010name_" +
-      "ids\030\002 \003(\tB\n\212\3101\006<=1000\"9\n AddFederatedUse" +
-      "rAccountsMetadata\022\025\n\rfederation_id\030\001 \001(\t" +
-      "\"k\n AddFederatedUserAccountsResponse\022G\n\r" +
-      "user_accounts\030\001 \003(\01320.yandex.cloud.organ" +
-      "izationmanager.v1.UserAccount\"\205\001\n ListFe" +
-      "deratedUserAccountsRequest\022#\n\rfederation" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"\205\001\n!ListFederatedUserAccountsRespo" +
-      "nse\022G\n\ruser_accounts\030\001 \003(\01320.yandex.clou" +
-      "d.organizationmanager.v1.UserAccount\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\200\001\n\037ListFederation" +
-      "OperationsRequest\022\037\n\rfederation_id\030\001 \001(\t" +
-      "B\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n List" +
-      "FederationOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t2\313\016\n\021Federat" +
-      "ionService\022\276\001\n\003Get\022>.yandex.cloud.organi" +
-      "zationmanager.v1.saml.GetFederationReque" +
-      "st\0324.yandex.cloud.organizationmanager.v1" +
-      ".saml.Federation\"A\202\323\344\223\002;\0229/organization-" +
-      "manager/v1/saml/federations/{federation_" +
-      "id}\022\276\001\n\004List\022@.yandex.cloud.organization" +
-      "manager.v1.saml.ListFederationsRequest\032A" +
-      ".yandex.cloud.organizationmanager.v1.sam" +
-      "l.ListFederationsResponse\"1\202\323\344\223\002+\022)/orga" +
-      "nization-manager/v1/saml/federations\022\316\001\n" +
-      "\006Create\022A.yandex.cloud.organizationmanag" +
-      "er.v1.saml.CreateFederationRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"^\202\323\344\223\002.\")/" +
-      "organization-manager/v1/saml/federations" +
-      ":\001*\262\322*&\n\030CreateFederationMetadata\022\nFeder" +
-      "ation\022\336\001\n\006Update\022A.yandex.cloud.organiza" +
-      "tionmanager.v1.saml.UpdateFederationRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"n" +
-      "\202\323\344\223\002>29/organization-manager/v1/saml/fe" +
-      "derations/{federation_id}:\001*\262\322*&\n\030Update" +
-      "FederationMetadata\022\nFederation\022\346\001\n\006Delet" +
-      "e\022A.yandex.cloud.organizationmanager.v1." +
-      "saml.DeleteFederationRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"v\202\323\344\223\002;*9/organi" +
-      "zation-manager/v1/saml/federations/{fede" +
-      "ration_id}\262\322*1\n\030DeleteFederationMetadata" +
-      "\022\025google.protobuf.Empty\022\236\002\n\017AddUserAccou" +
-      "nts\022I.yandex.cloud.organizationmanager.v" +
-      "1.saml.AddFederatedUserAccountsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\234\001\202\323\344\223" +
-      "\002N\"I/organization-manager/v1/saml/federa" +
-      "tions/{federation_id}:addUserAccounts:\001*" +
-      "\262\322*D\n AddFederatedUserAccountsMetadata\022 " +
-      "AddFederatedUserAccountsResponse\022\377\001\n\020Lis" +
-      "tUserAccounts\022J.yandex.cloud.organizatio" +
-      "nmanager.v1.saml.ListFederatedUserAccoun" +
-      "tsRequest\032K.yandex.cloud.organizationman" +
-      "ager.v1.saml.ListFederatedUserAccountsRe" +
-      "sponse\"R\202\323\344\223\002L\022J/organization-manager/v1" +
-      "/saml/federations/{federation_id}:listUs" +
-      "erAccounts\022\365\001\n\016ListOperations\022I.yandex.c" +
-      "loud.organizationmanager.v1.saml.ListFed" +
-      "erationOperationsRequest\032J.yandex.cloud." +
-      "organizationmanager.v1.saml.ListFederati" +
-      "onOperationsResponse\"L\202\323\344\223\002F\022D/organizat" +
-      "ion-manager/v1/saml/federations/{federat" +
-      "ion_id}/operationsB\201\001\n,yandex.cloud.api." +
-      "organizationmanager.v1.samlZQgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/or" +
-      "ganizationmanager/v1/saml;samlb\006proto3"
+      "e\030\003 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\004 \001(\tB" +
+      "\n\212\3101\006<=2000\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"" +
+      "}\n\027ListFederationsResponse\022I\n\013federation" +
+      "s\030\001 \003(\01324.yandex.cloud.organizationmanag" +
+      "er.v1.saml.Federation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\326\005\n\027CreateFederationRequest\022!\n\017or" +
+      "ganization_id\030\001 \001(\tB\010\212\3101\004<=50\0221\n\004name\030\002 " +
+      "\001(\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
+      "\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022>\n\016cook" +
+      "ie_max_age\030\004 \001(\0132\031.google.protobuf.Durat" +
+      "ionB\013\372\3071\00710m-12h\022$\n\034auto_create_account_" +
+      "on_login\030\005 \001(\010\022\036\n\006issuer\030\006 \001(\tB\016\350\3071\001\212\3101\006" +
+      "<=8000\022J\n\013sso_binding\030\007 \001(\01625.yandex.clo" +
+      "ud.organizationmanager.v1.saml.BindingTy" +
+      "pe\022\037\n\007sso_url\030\010 \001(\tB\016\350\3071\001\212\3101\006<=8000\022_\n\021s" +
+      "ecurity_settings\030\t \001(\0132D.yandex.cloud.or" +
+      "ganizationmanager.v1.saml.FederationSecu" +
+      "ritySettings\022!\n\031case_insensitive_name_id" +
+      "s\030\n \001(\010\022\236\001\n\006labels\030\013 \003(\0132M.yandex.cloud." +
+      "organizationmanager.v1.saml.CreateFedera" +
+      "tionRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"1\n\030CreateFederationMetad" +
+      "ata\022\025\n\rfederation_id\030\001 \001(\t\"\206\006\n\027UpdateFed" +
+      "erationRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212" +
+      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-" +
+      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
+      "ion\030\004 \001(\tB\t\212\3101\005<=256\022>\n\016cookie_max_age\030\005" +
+      " \001(\0132\031.google.protobuf.DurationB\013\372\3071\00710m" +
+      "-12h\022$\n\034auto_create_account_on_login\030\006 \001" +
+      "(\010\022\036\n\006issuer\030\007 \001(\tB\016\350\3071\001\212\3101\006<=8000\022J\n\013ss" +
+      "o_binding\030\010 \001(\01625.yandex.cloud.organizat" +
+      "ionmanager.v1.saml.BindingType\022\037\n\007sso_ur" +
+      "l\030\t \001(\tB\016\350\3071\001\212\3101\006<=8000\022_\n\021security_sett" +
+      "ings\030\n \001(\0132D.yandex.cloud.organizationma" +
+      "nager.v1.saml.FederationSecuritySettings" +
+      "\022!\n\031case_insensitive_name_ids\030\014 \001(\010\022\236\001\n\006" +
+      "labels\030\r \003(\0132M.yandex.cloud.organization" +
+      "manager.v1.saml.UpdateFederationRequest." +
+      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
+      "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"1\n\030UpdateFederationMetadata\022\025\n\rfeder" +
+      "ation_id\030\001 \001(\t\":\n\027DeleteFederationReques" +
+      "t\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\"1\n\030De" +
+      "leteFederationMetadata\022\025\n\rfederation_id\030" +
+      "\001 \001(\t\"`\n\037AddFederatedUserAccountsRequest" +
+      "\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\034\n\010nam" +
+      "e_ids\030\002 \003(\tB\n\212\3101\006<=1000\"9\n AddFederatedU" +
+      "serAccountsMetadata\022\025\n\rfederation_id\030\001 \001" +
+      "(\t\"k\n AddFederatedUserAccountsResponse\022G" +
+      "\n\ruser_accounts\030\001 \003(\01320.yandex.cloud.org" +
+      "anizationmanager.v1.UserAccount\"\242\001\n List" +
+      "FederatedUserAccountsRequest\022#\n\rfederati" +
+      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
+      "1\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1010\"\205\001\n" +
+      "!ListFederatedUserAccountsResponse\022G\n\rus" +
+      "er_accounts\030\001 \003(\01320.yandex.cloud.organiz" +
+      "ationmanager.v1.UserAccount\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"\201\001\n\037ListFederationOperation" +
+      "sRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=5" +
+      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage" +
+      "_token\030\003 \001(\tB\n\212\3101\006<=2000\"r\n ListFederati" +
+      "onOperationsResponse\0225\n\noperations\030\001 \003(\013" +
+      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t2\313\016\n\021FederationServi" +
+      "ce\022\276\001\n\003Get\022>.yandex.cloud.organizationma" +
+      "nager.v1.saml.GetFederationRequest\0324.yan" +
+      "dex.cloud.organizationmanager.v1.saml.Fe" +
+      "deration\"A\202\323\344\223\002;\0229/organization-manager/" +
+      "v1/saml/federations/{federation_id}\022\276\001\n\004" +
+      "List\022@.yandex.cloud.organizationmanager." +
+      "v1.saml.ListFederationsRequest\032A.yandex." +
+      "cloud.organizationmanager.v1.saml.ListFe" +
+      "derationsResponse\"1\202\323\344\223\002+\022)/organization" +
+      "-manager/v1/saml/federations\022\316\001\n\006Create\022" +
+      "A.yandex.cloud.organizationmanager.v1.sa" +
+      "ml.CreateFederationRequest\032!.yandex.clou" +
+      "d.operation.Operation\"^\202\323\344\223\002.\")/organiza" +
+      "tion-manager/v1/saml/federations:\001*\262\322*&\n" +
+      "\030CreateFederationMetadata\022\nFederation\022\336\001" +
+      "\n\006Update\022A.yandex.cloud.organizationmana" +
+      "ger.v1.saml.UpdateFederationRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"n\202\323\344\223\002>29" +
+      "/organization-manager/v1/saml/federation" +
+      "s/{federation_id}:\001*\262\322*&\n\030UpdateFederati" +
+      "onMetadata\022\nFederation\022\346\001\n\006Delete\022A.yand" +
+      "ex.cloud.organizationmanager.v1.saml.Del" +
+      "eteFederationRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"v\202\323\344\223\002;*9/organization-m" +
+      "anager/v1/saml/federations/{federation_i" +
+      "d}\262\322*1\n\030DeleteFederationMetadata\022\025google" +
+      ".protobuf.Empty\022\236\002\n\017AddUserAccounts\022I.ya" +
+      "ndex.cloud.organizationmanager.v1.saml.A" +
+      "ddFederatedUserAccountsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\234\001\202\323\344\223\002N\"I/org" +
+      "anization-manager/v1/saml/federations/{f" +
+      "ederation_id}:addUserAccounts:\001*\262\322*D\n Ad" +
+      "dFederatedUserAccountsMetadata\022 AddFeder" +
+      "atedUserAccountsResponse\022\377\001\n\020ListUserAcc" +
+      "ounts\022J.yandex.cloud.organizationmanager" +
+      ".v1.saml.ListFederatedUserAccountsReques" +
+      "t\032K.yandex.cloud.organizationmanager.v1." +
+      "saml.ListFederatedUserAccountsResponse\"R" +
+      "\202\323\344\223\002L\022J/organization-manager/v1/saml/fe" +
+      "derations/{federation_id}:listUserAccoun" +
+      "ts\022\365\001\n\016ListOperations\022I.yandex.cloud.org" +
+      "anizationmanager.v1.saml.ListFederationO" +
+      "perationsRequest\032J.yandex.cloud.organiza" +
+      "tionmanager.v1.saml.ListFederationOperat" +
+      "ionsResponse\"L\202\323\344\223\002F\022D/organization-mana" +
+      "ger/v1/saml/federations/{federation_id}/" +
+      "operationsB\201\001\n,yandex.cloud.api.organiza" +
+      "tionmanager.v1.samlZQgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/organizati" +
+      "onmanager/v1/saml;samlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17826,7 +18058,7 @@ public final class FederationServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_descriptor,
-        new java.lang.String[] { "FederationId", "PageSize", "PageToken", });
+        new java.lang.String[] { "FederationId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsResponse_fieldAccessorTable = new

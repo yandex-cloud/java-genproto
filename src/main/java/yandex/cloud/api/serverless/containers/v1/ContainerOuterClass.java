@@ -2646,6 +2646,33 @@ public final class ContainerOuterClass {
      * <code>.yandex.cloud.serverless.containers.v1.ProvisionPolicy provision_policy = 13;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ProvisionPolicyOrBuilder getProvisionPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Policy for scaling instances of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+     * @return Whether the scalingPolicy field is set.
+     */
+    boolean hasScalingPolicy();
+    /**
+     * <pre>
+     * Policy for scaling instances of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+     * @return The scalingPolicy.
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy getScalingPolicy();
+    /**
+     * <pre>
+     * Policy for scaling instances of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder getScalingPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Revision}
@@ -2817,6 +2844,19 @@ public final class ContainerOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(provisionPolicy_);
                 provisionPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder subBuilder = null;
+              if (scalingPolicy_ != null) {
+                subBuilder = scalingPolicy_.toBuilder();
+              }
+              scalingPolicy_ = input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(scalingPolicy_);
+                scalingPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3526,6 +3566,44 @@ public final class ContainerOuterClass {
       return getProvisionPolicy();
     }
 
+    public static final int SCALING_POLICY_FIELD_NUMBER = 14;
+    private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy scalingPolicy_;
+    /**
+     * <pre>
+     * Policy for scaling instances of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+     * @return Whether the scalingPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasScalingPolicy() {
+      return scalingPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Policy for scaling instances of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+     * @return The scalingPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy getScalingPolicy() {
+      return scalingPolicy_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.getDefaultInstance() : scalingPolicy_;
+    }
+    /**
+     * <pre>
+     * Policy for scaling instances of the revision.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder getScalingPolicyOrBuilder() {
+      return getScalingPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3578,6 +3656,9 @@ public final class ContainerOuterClass {
       }
       if (provisionPolicy_ != null) {
         output.writeMessage(13, getProvisionPolicy());
+      }
+      if (scalingPolicy_ != null) {
+        output.writeMessage(14, getScalingPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -3635,6 +3716,10 @@ public final class ContainerOuterClass {
       if (provisionPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getProvisionPolicy());
+      }
+      if (scalingPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getScalingPolicy());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3694,6 +3779,11 @@ public final class ContainerOuterClass {
         if (!getProvisionPolicy()
             .equals(other.getProvisionPolicy())) return false;
       }
+      if (hasScalingPolicy() != other.hasScalingPolicy()) return false;
+      if (hasScalingPolicy()) {
+        if (!getScalingPolicy()
+            .equals(other.getScalingPolicy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3745,6 +3835,10 @@ public final class ContainerOuterClass {
       if (hasProvisionPolicy()) {
         hash = (37 * hash) + PROVISION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getProvisionPolicy().hashCode();
+      }
+      if (hasScalingPolicy()) {
+        hash = (37 * hash) + SCALING_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getScalingPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3934,6 +4028,12 @@ public final class ContainerOuterClass {
           provisionPolicy_ = null;
           provisionPolicyBuilder_ = null;
         }
+        if (scalingPolicyBuilder_ == null) {
+          scalingPolicy_ = null;
+        } else {
+          scalingPolicy_ = null;
+          scalingPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -4005,6 +4105,11 @@ public final class ContainerOuterClass {
           result.provisionPolicy_ = provisionPolicy_;
         } else {
           result.provisionPolicy_ = provisionPolicyBuilder_.build();
+        }
+        if (scalingPolicyBuilder_ == null) {
+          result.scalingPolicy_ = scalingPolicy_;
+        } else {
+          result.scalingPolicy_ = scalingPolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4119,6 +4224,9 @@ public final class ContainerOuterClass {
         }
         if (other.hasProvisionPolicy()) {
           mergeProvisionPolicy(other.getProvisionPolicy());
+        }
+        if (other.hasScalingPolicy()) {
+          mergeScalingPolicy(other.getScalingPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5909,6 +6017,161 @@ public final class ContainerOuterClass {
           provisionPolicy_ = null;
         }
         return provisionPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy scalingPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder> scalingPolicyBuilder_;
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       * @return Whether the scalingPolicy field is set.
+       */
+      public boolean hasScalingPolicy() {
+        return scalingPolicyBuilder_ != null || scalingPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       * @return The scalingPolicy.
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy getScalingPolicy() {
+        if (scalingPolicyBuilder_ == null) {
+          return scalingPolicy_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.getDefaultInstance() : scalingPolicy_;
+        } else {
+          return scalingPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      public Builder setScalingPolicy(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy value) {
+        if (scalingPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scalingPolicy_ = value;
+          onChanged();
+        } else {
+          scalingPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      public Builder setScalingPolicy(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder builderForValue) {
+        if (scalingPolicyBuilder_ == null) {
+          scalingPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          scalingPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      public Builder mergeScalingPolicy(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy value) {
+        if (scalingPolicyBuilder_ == null) {
+          if (scalingPolicy_ != null) {
+            scalingPolicy_ =
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.newBuilder(scalingPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            scalingPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          scalingPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      public Builder clearScalingPolicy() {
+        if (scalingPolicyBuilder_ == null) {
+          scalingPolicy_ = null;
+          onChanged();
+        } else {
+          scalingPolicy_ = null;
+          scalingPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder getScalingPolicyBuilder() {
+        
+        onChanged();
+        return getScalingPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder getScalingPolicyOrBuilder() {
+        if (scalingPolicyBuilder_ != null) {
+          return scalingPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return scalingPolicy_ == null ?
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.getDefaultInstance() : scalingPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Policy for scaling instances of the revision.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder> 
+          getScalingPolicyFieldBuilder() {
+        if (scalingPolicyBuilder_ == null) {
+          scalingPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder>(
+                  getScalingPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          scalingPolicy_ = null;
+        }
+        return scalingPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12804,6 +13067,616 @@ public final class ContainerOuterClass {
 
   }
 
+  public interface ScalingPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.ScalingPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Upper limit for instance count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_instances_limit = 1;</code>
+     * @return The zoneInstancesLimit.
+     */
+    long getZoneInstancesLimit();
+
+    /**
+     * <pre>
+     * Upper limit of requests count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_requests_limit = 2;</code>
+     * @return The zoneRequestsLimit.
+     */
+    long getZoneRequestsLimit();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.containers.v1.ScalingPolicy}
+   */
+  public static final class ScalingPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.ScalingPolicy)
+      ScalingPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScalingPolicy.newBuilder() to construct.
+    private ScalingPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScalingPolicy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScalingPolicy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ScalingPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              zoneInstancesLimit_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              zoneRequestsLimit_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder.class);
+    }
+
+    public static final int ZONE_INSTANCES_LIMIT_FIELD_NUMBER = 1;
+    private long zoneInstancesLimit_;
+    /**
+     * <pre>
+     * Upper limit for instance count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_instances_limit = 1;</code>
+     * @return The zoneInstancesLimit.
+     */
+    @java.lang.Override
+    public long getZoneInstancesLimit() {
+      return zoneInstancesLimit_;
+    }
+
+    public static final int ZONE_REQUESTS_LIMIT_FIELD_NUMBER = 2;
+    private long zoneRequestsLimit_;
+    /**
+     * <pre>
+     * Upper limit of requests count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_requests_limit = 2;</code>
+     * @return The zoneRequestsLimit.
+     */
+    @java.lang.Override
+    public long getZoneRequestsLimit() {
+      return zoneRequestsLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (zoneInstancesLimit_ != 0L) {
+        output.writeInt64(1, zoneInstancesLimit_);
+      }
+      if (zoneRequestsLimit_ != 0L) {
+        output.writeInt64(2, zoneRequestsLimit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (zoneInstancesLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, zoneInstancesLimit_);
+      }
+      if (zoneRequestsLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, zoneRequestsLimit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy other = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy) obj;
+
+      if (getZoneInstancesLimit()
+          != other.getZoneInstancesLimit()) return false;
+      if (getZoneRequestsLimit()
+          != other.getZoneRequestsLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ZONE_INSTANCES_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getZoneInstancesLimit());
+      hash = (37 * hash) + ZONE_REQUESTS_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getZoneRequestsLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.ScalingPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.ScalingPolicy)
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        zoneInstancesLimit_ = 0L;
+
+        zoneRequestsLimit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy build() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy buildPartial() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy(this);
+        result.zoneInstancesLimit_ = zoneInstancesLimit_;
+        result.zoneRequestsLimit_ = zoneRequestsLimit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy) {
+          return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy other) {
+        if (other == yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy.getDefaultInstance()) return this;
+        if (other.getZoneInstancesLimit() != 0L) {
+          setZoneInstancesLimit(other.getZoneInstancesLimit());
+        }
+        if (other.getZoneRequestsLimit() != 0L) {
+          setZoneRequestsLimit(other.getZoneRequestsLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long zoneInstancesLimit_ ;
+      /**
+       * <pre>
+       * Upper limit for instance count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_instances_limit = 1;</code>
+       * @return The zoneInstancesLimit.
+       */
+      @java.lang.Override
+      public long getZoneInstancesLimit() {
+        return zoneInstancesLimit_;
+      }
+      /**
+       * <pre>
+       * Upper limit for instance count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_instances_limit = 1;</code>
+       * @param value The zoneInstancesLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneInstancesLimit(long value) {
+        
+        zoneInstancesLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Upper limit for instance count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_instances_limit = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneInstancesLimit() {
+        
+        zoneInstancesLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long zoneRequestsLimit_ ;
+      /**
+       * <pre>
+       * Upper limit of requests count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_requests_limit = 2;</code>
+       * @return The zoneRequestsLimit.
+       */
+      @java.lang.Override
+      public long getZoneRequestsLimit() {
+        return zoneRequestsLimit_;
+      }
+      /**
+       * <pre>
+       * Upper limit of requests count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_requests_limit = 2;</code>
+       * @param value The zoneRequestsLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneRequestsLimit(long value) {
+        
+        zoneRequestsLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Upper limit of requests count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_requests_limit = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneRequestsLimit() {
+        
+        zoneRequestsLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.ScalingPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.ScalingPolicy)
+    private static final yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy();
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScalingPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<ScalingPolicy>() {
+      @java.lang.Override
+      public ScalingPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ScalingPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScalingPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScalingPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_containers_v1_Container_descriptor;
   private static final 
@@ -12859,6 +13732,11 @@ public final class ContainerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_containers_v1_Connectivity_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12883,7 +13761,7 @@ public final class ContainerOuterClass {
       "us\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
       "\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
       "D\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETIN" +
-      "G\020\003\022\t\n\005ERROR\020\004\"\311\005\n\010Revision\022\n\n\002id\030\001 \001(\t\022" +
+      "G\020\003\022\t\n\005ERROR\020\004\"\227\006\n\010Revision\022\n\n\002id\030\001 \001(\t\022" +
       "\024\n\014container_id\030\002 \001(\t\022\023\n\013description\030\003 \001" +
       "(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf" +
       ".Timestamp\022;\n\005image\030\005 \001(\0132,.yandex.cloud" +
@@ -12899,31 +13777,34 @@ public final class ContainerOuterClass {
       "\01323.yandex.cloud.serverless.containers.v" +
       "1.Connectivity\022P\n\020provision_policy\030\r \001(\013" +
       "26.yandex.cloud.serverless.containers.v1" +
-      ".ProvisionPolicy\"H\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010" +
-      "OBSOLETE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022" +
-      "\024\n\014image_digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132." +
-      ".yandex.cloud.serverless.containers.v1.C" +
-      "ommand\0229\n\004args\030\004 \001(\0132+.yandex.cloud.serv" +
-      "erless.containers.v1.Args\022y\n\013environment" +
-      "\030\005 \003(\0132=.yandex.cloud.serverless.contain" +
-      "ers.v1.Image.EnvironmentEntryB%\212\3101\006<=409" +
-      "6\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_" +
-      "dir\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007comm" +
-      "and\030\001 \003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResou" +
-      "rces\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-8589" +
-      "934592\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_f" +
-      "raction\030\003 \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPol" +
-      "icy\022\025\n\rmin_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002" +
-      "id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(" +
-      "\t\022\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\tref" +
-      "erence\"6\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001" +
-      "(\t\022\022\n\nsubnet_ids\030\002 \003(\tB\201\001\n)yandex.cloud." +
-      "api.serverless.containers.v1ZTgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/s" +
-      "erverless/containers/v1;containersb\006prot" +
-      "o3"
+      ".ProvisionPolicy\022L\n\016scaling_policy\030\016 \001(\013" +
+      "24.yandex.cloud.serverless.containers.v1" +
+      ".ScalingPolicy\"H\n\006Status\022\026\n\022STATUS_UNSPE" +
+      "CIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OB" +
+      "SOLETE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022\024\n" +
+      "\014image_digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132..y" +
+      "andex.cloud.serverless.containers.v1.Com" +
+      "mand\0229\n\004args\030\004 \001(\0132+.yandex.cloud.server" +
+      "less.containers.v1.Args\022y\n\013environment\030\005" +
+      " \003(\0132=.yandex.cloud.serverless.container" +
+      "s.v1.Image.EnvironmentEntryB%\212\3101\006<=4096\262" +
+      "\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_di" +
+      "r\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007comman" +
+      "d\030\001 \003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResourc" +
+      "es\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-858993" +
+      "4592\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_fra" +
+      "ction\030\003 \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPolic" +
+      "y\022\025\n\rmin_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id" +
+      "\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022" +
+      "\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\trefer" +
+      "ence\"6\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t" +
+      "\022\022\n\nsubnet_ids\030\002 \003(\t\"J\n\rScalingPolicy\022\034\n" +
+      "\024zone_instances_limit\030\001 \001(\003\022\033\n\023zone_requ" +
+      "ests_limit\030\002 \001(\003B\201\001\n)yandex.cloud.api.se" +
+      "rverless.containers.v1ZTgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/serverl" +
+      "ess/containers/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12949,7 +13830,7 @@ public final class ContainerOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_Revision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Revision_descriptor,
-        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", "ProvisionPolicy", });
+        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", });
     internal_static_yandex_cloud_serverless_containers_v1_Image_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_serverless_containers_v1_Image_fieldAccessorTable = new
@@ -12998,6 +13879,12 @@ public final class ContainerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor,
         new java.lang.String[] { "NetworkId", "SubnetIds", });
+    internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor,
+        new java.lang.String[] { "ZoneInstancesLimit", "ZoneRequestsLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

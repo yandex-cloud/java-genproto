@@ -2606,6 +2606,55 @@ public final class BucketServiceOuterClass {
      * <code>.yandex.cloud.storage.v1.ACL acl = 7;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ACLOrBuilder getAclOrBuilder();
+
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> 
+        getTagsList();
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index);
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    int getTagsCount();
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+        getTagsOrBuilderList();
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.CreateBucketRequest}
@@ -2623,6 +2672,7 @@ public final class BucketServiceOuterClass {
       name_ = "";
       folderId_ = "";
       defaultStorageClass_ = "";
+      tags_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2645,6 +2695,7 @@ public final class BucketServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2704,6 +2755,15 @@ public final class BucketServiceOuterClass {
 
               break;
             }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tags_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Tag>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tags_.add(
+                  input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2719,6 +2779,9 @@ public final class BucketServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tags_ = java.util.Collections.unmodifiableList(tags_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2982,6 +3045,71 @@ public final class BucketServiceOuterClass {
       return getAcl();
     }
 
+    public static final int TAGS_FIELD_NUMBER = 8;
+    private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_;
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+        getTagsOrBuilderList() {
+      return tags_;
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
+        int index) {
+      return tags_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3014,6 +3142,9 @@ public final class BucketServiceOuterClass {
       if (acl_ != null) {
         output.writeMessage(7, getAcl());
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        output.writeMessage(8, tags_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3043,6 +3174,10 @@ public final class BucketServiceOuterClass {
       if (acl_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getAcl());
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, tags_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3077,6 +3212,8 @@ public final class BucketServiceOuterClass {
         if (!getAcl()
             .equals(other.getAcl())) return false;
       }
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3104,6 +3241,10 @@ public final class BucketServiceOuterClass {
       if (hasAcl()) {
         hash = (37 * hash) + ACL_FIELD_NUMBER;
         hash = (53 * hash) + getAcl().hashCode();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3233,6 +3374,7 @@ public final class BucketServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTagsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3257,6 +3399,12 @@ public final class BucketServiceOuterClass {
         } else {
           acl_ = null;
           aclBuilder_ = null;
+        }
+        if (tagsBuilder_ == null) {
+          tags_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          tagsBuilder_.clear();
         }
         return this;
       }
@@ -3284,6 +3432,7 @@ public final class BucketServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest buildPartial() {
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest result = new yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketRequest(this);
+        int from_bitField0_ = bitField0_;
         result.name_ = name_;
         result.folderId_ = folderId_;
         result.defaultStorageClass_ = defaultStorageClass_;
@@ -3297,6 +3446,15 @@ public final class BucketServiceOuterClass {
           result.acl_ = acl_;
         } else {
           result.acl_ = aclBuilder_.build();
+        }
+        if (tagsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tags_ = java.util.Collections.unmodifiableList(tags_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3367,6 +3525,32 @@ public final class BucketServiceOuterClass {
         if (other.hasAcl()) {
           mergeAcl(other.getAcl());
         }
+        if (tagsBuilder_ == null) {
+          if (!other.tags_.isEmpty()) {
+            if (tags_.isEmpty()) {
+              tags_ = other.tags_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTagsIsMutable();
+              tags_.addAll(other.tags_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tags_.isEmpty()) {
+            if (tagsBuilder_.isEmpty()) {
+              tagsBuilder_.dispose();
+              tagsBuilder_ = null;
+              tags_ = other.tags_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tagsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTagsFieldBuilder() : null;
+            } else {
+              tagsBuilder_.addAllMessages(other.tags_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3395,6 +3579,7 @@ public final class BucketServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -4081,6 +4266,336 @@ public final class BucketServiceOuterClass {
           acl_ = null;
         }
         return aclBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_ =
+        java.util.Collections.emptyList();
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tags_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Tag>(tags_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> tagsBuilder_;
+
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagsList() {
+        if (tagsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tags_);
+        } else {
+          return tagsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public int getTagsCount() {
+        if (tagsBuilder_ == null) {
+          return tags_.size();
+        } else {
+          return tagsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index) {
+        if (tagsBuilder_ == null) {
+          return tags_.get(index);
+        } else {
+          return tagsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder setTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTagsIsMutable();
+          tags_.set(index, value);
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder setTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder addTags(yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTagsIsMutable();
+          tags_.add(value);
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder addTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTagsIsMutable();
+          tags_.add(index, value);
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder addTags(
+          yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder addTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Tag> values) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tags_);
+          onChanged();
+        } else {
+          tagsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tagsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public Builder removeTags(int index) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.remove(index);
+          onChanged();
+        } else {
+          tagsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder getTagsBuilder(
+          int index) {
+        return getTagsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
+          int index) {
+        if (tagsBuilder_ == null) {
+          return tags_.get(index);  } else {
+          return tagsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+           getTagsOrBuilderList() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tags_);
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagsBuilder() {
+        return getTagsFieldBuilder().addBuilder(
+            yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagsBuilder(
+          int index) {
+        return getTagsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder> 
+           getTagsBuilderList() {
+        return getTagsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder>(
+                  tags_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5067,6 +5582,55 @@ public final class BucketServiceOuterClass {
      * <code>.yandex.cloud.storage.v1.ACL acl = 11;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ACLOrBuilder getAclOrBuilder();
+
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> 
+        getTagsList();
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index);
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    int getTagsCount();
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+        getTagsOrBuilderList();
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.UpdateBucketRequest}
@@ -5086,6 +5650,7 @@ public final class BucketServiceOuterClass {
       cors_ = java.util.Collections.emptyList();
       versioning_ = 0;
       lifecycleRules_ = java.util.Collections.emptyList();
+      tags_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -5225,6 +5790,15 @@ public final class BucketServiceOuterClass {
 
               break;
             }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                tags_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Tag>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              tags_.add(
+                  input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5245,6 +5819,9 @@ public final class BucketServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           lifecycleRules_ = java.util.Collections.unmodifiableList(lifecycleRules_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          tags_ = java.util.Collections.unmodifiableList(tags_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5740,6 +6317,71 @@ public final class BucketServiceOuterClass {
       return getAcl();
     }
 
+    public static final int TAGS_FIELD_NUMBER = 12;
+    private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_;
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+        getTagsOrBuilderList() {
+      return tags_;
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <pre>
+     * List of object tag for the bucket.
+     * TODO: documentation details.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
+        int index) {
+      return tags_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5786,6 +6428,9 @@ public final class BucketServiceOuterClass {
       }
       if (acl_ != null) {
         output.writeMessage(11, getAcl());
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        output.writeMessage(12, tags_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5838,6 +6483,10 @@ public final class BucketServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getAcl());
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, tags_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5889,6 +6538,8 @@ public final class BucketServiceOuterClass {
         if (!getAcl()
             .equals(other.getAcl())) return false;
       }
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5936,6 +6587,10 @@ public final class BucketServiceOuterClass {
       if (hasAcl()) {
         hash = (37 * hash) + ACL_FIELD_NUMBER;
         hash = (53 * hash) + getAcl().hashCode();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6067,6 +6722,7 @@ public final class BucketServiceOuterClass {
                 .alwaysUseFieldBuilders) {
           getCorsFieldBuilder();
           getLifecycleRulesFieldBuilder();
+          getTagsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6121,6 +6777,12 @@ public final class BucketServiceOuterClass {
         } else {
           acl_ = null;
           aclBuilder_ = null;
+        }
+        if (tagsBuilder_ == null) {
+          tags_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          tagsBuilder_.clear();
         }
         return this;
       }
@@ -6195,6 +6857,15 @@ public final class BucketServiceOuterClass {
           result.acl_ = acl_;
         } else {
           result.acl_ = aclBuilder_.build();
+        }
+        if (tagsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tags_ = java.util.Collections.unmodifiableList(tags_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -6324,6 +6995,32 @@ public final class BucketServiceOuterClass {
         }
         if (other.hasAcl()) {
           mergeAcl(other.getAcl());
+        }
+        if (tagsBuilder_ == null) {
+          if (!other.tags_.isEmpty()) {
+            if (tags_.isEmpty()) {
+              tags_ = other.tags_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTagsIsMutable();
+              tags_.addAll(other.tags_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tags_.isEmpty()) {
+            if (tagsBuilder_.isEmpty()) {
+              tagsBuilder_.dispose();
+              tagsBuilder_ = null;
+              tags_ = other.tags_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tagsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTagsFieldBuilder() : null;
+            } else {
+              tagsBuilder_.addAllMessages(other.tags_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8161,6 +8858,336 @@ public final class BucketServiceOuterClass {
           acl_ = null;
         }
         return aclBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_ =
+        java.util.Collections.emptyList();
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tags_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Tag>(tags_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> tagsBuilder_;
+
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagsList() {
+        if (tagsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tags_);
+        } else {
+          return tagsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public int getTagsCount() {
+        if (tagsBuilder_ == null) {
+          return tags_.size();
+        } else {
+          return tagsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index) {
+        if (tagsBuilder_ == null) {
+          return tags_.get(index);
+        } else {
+          return tagsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder setTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTagsIsMutable();
+          tags_.set(index, value);
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder setTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder addTags(yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTagsIsMutable();
+          tags_.add(value);
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder addTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTagsIsMutable();
+          tags_.add(index, value);
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder addTags(
+          yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder addTags(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tagsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Tag> values) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tags_);
+          onChanged();
+        } else {
+          tagsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tagsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public Builder removeTags(int index) {
+        if (tagsBuilder_ == null) {
+          ensureTagsIsMutable();
+          tags_.remove(index);
+          onChanged();
+        } else {
+          tagsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder getTagsBuilder(
+          int index) {
+        return getTagsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
+          int index) {
+        if (tagsBuilder_ == null) {
+          return tags_.get(index);  } else {
+          return tagsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+           getTagsOrBuilderList() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tags_);
+        }
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagsBuilder() {
+        return getTagsFieldBuilder().addBuilder(
+            yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagsBuilder(
+          int index) {
+        return getTagsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of object tag for the bucket.
+       * TODO: documentation details.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder> 
+           getTagsBuilderList() {
+        return getTagsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder>(
+                  tags_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15891,88 +16918,90 @@ public final class BucketServiceOuterClass {
       "FULL\020\003\"5\n\022ListBucketsRequest\022\037\n\tfolder_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"G\n\023ListBucketsResp" +
       "onse\0220\n\007buckets\030\001 \003(\0132\037.yandex.cloud.sto" +
-      "rage.v1.Bucket\"\365\001\n\023CreateBucketRequest\022\022" +
+      "rage.v1.Bucket\"\241\002\n\023CreateBucketRequest\022\022" +
       "\n\004name\030\001 \001(\tB\004\350\3071\001\022\037\n\tfolder_id\030\002 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022\035\n\025default_storage_class\030\004 \001" +
       "(\t\022\020\n\010max_size\030\005 \001(\003\022M\n\026anonymous_access" +
       "_flags\030\006 \001(\0132-.yandex.cloud.storage.v1.A" +
       "nonymousAccessFlags\022)\n\003acl\030\007 \001(\0132\034.yande" +
-      "x.cloud.storage.v1.ACL\"$\n\024CreateBucketMe" +
-      "tadata\022\014\n\004name\030\001 \001(\t\"\242\004\n\023UpdateBucketReq" +
-      "uest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0224\n\nfield_mask\030\002" +
-      " \001(\0132\032.google.protobuf.FieldMaskB\004\350\3071\001\022M" +
-      "\n\026anonymous_access_flags\030\003 \001(\0132-.yandex." +
-      "cloud.storage.v1.AnonymousAccessFlags\022\035\n" +
-      "\025default_storage_class\030\004 \001(\t\022\020\n\010max_size" +
-      "\030\005 \001(\003\022/\n\004cors\030\006 \003(\0132!.yandex.cloud.stor" +
-      "age.v1.CorsRule\022B\n\020website_settings\030\007 \001(" +
-      "\0132(.yandex.cloud.storage.v1.WebsiteSetti" +
-      "ngs\0227\n\nversioning\030\010 \001(\0162#.yandex.cloud.s" +
-      "torage.v1.Versioning\022?\n\017lifecycle_rules\030" +
-      "\t \003(\0132&.yandex.cloud.storage.v1.Lifecycl" +
-      "eRule\022\'\n\006policy\030\n \001(\0132\027.google.protobuf." +
-      "Struct\022)\n\003acl\030\013 \001(\0132\034.yandex.cloud.stora" +
-      "ge.v1.ACL\"$\n\024UpdateBucketMetadata\022\014\n\004nam" +
-      "e\030\001 \001(\t\")\n\023DeleteBucketRequest\022\022\n\004name\030\001" +
-      " \001(\tB\004\350\3071\001\"$\n\024DeleteBucketMetadata\022\014\n\004na" +
-      "me\030\001 \001(\t\"+\n\025GetBucketStatsRequest\022\022\n\004nam" +
-      "e\030\001 \001(\tB\004\350\3071\001\"1\n\033GetBucketHTTPSConfigReq" +
-      "uest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"n\n\034SelfManagedH" +
-      "TTPSConfigParams\022&\n\017certificate_pem\030\001 \001(" +
-      "\tB\r\212\3101\t<=3145728\022&\n\017private_key_pem\030\002 \001(" +
-      "\tB\r\212\3101\t<=3145728\"=\n#CertificateManagerHT" +
-      "TPSConfigParams\022\026\n\016certificate_id\030\001 \001(\t\"" +
-      "\355\001\n\033SetBucketHTTPSConfigRequest\022\022\n\004name\030" +
-      "\001 \001(\tB\004\350\3071\001\022M\n\014self_managed\030\002 \001(\01325.yand" +
-      "ex.cloud.storage.v1.SelfManagedHTTPSConf" +
-      "igParamsH\000\022[\n\023certificate_manager\030\003 \001(\0132" +
-      "<.yandex.cloud.storage.v1.CertificateMan" +
-      "agerHTTPSConfigParamsH\000B\016\n\006params\022\004\300\3011\001\"" +
-      ",\n\034SetBucketHTTPSConfigMetadata\022\014\n\004name\030" +
-      "\001 \001(\t\"4\n\036DeleteBucketHTTPSConfigRequest\022" +
-      "\022\n\004name\030\001 \001(\tB\004\350\3071\001\"/\n\037DeleteBucketHTTPS" +
-      "ConfigMetadata\022\014\n\004name\030\001 \001(\t2\341\013\n\rBucketS" +
-      "ervice\022~\n\004List\022+.yandex.cloud.storage.v1" +
-      ".ListBucketsRequest\032,.yandex.cloud.stora" +
-      "ge.v1.ListBucketsResponse\"\033\202\323\344\223\002\025\022\023/stor" +
-      "age/v1/buckets\022u\n\003Get\022).yandex.cloud.sto" +
-      "rage.v1.GetBucketRequest\032\037.yandex.cloud." +
-      "storage.v1.Bucket\"\"\202\323\344\223\002\034\022\032/storage/v1/b" +
-      "uckets/{name}\022\233\001\n\006Create\022,.yandex.cloud." +
-      "storage.v1.CreateBucketRequest\032!.yandex." +
-      "cloud.operation.Operation\"@\202\323\344\223\002\030\"\023/stor" +
-      "age/v1/buckets:\001*\262\322*\036\n\024CreateBucketMetad" +
-      "ata\022\006Bucket\022\242\001\n\006Update\022,.yandex.cloud.st" +
-      "orage.v1.UpdateBucketRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"G\202\323\344\223\002\0372\032/storag" +
-      "e/v1/buckets/{name}:\001*\262\322*\036\n\024UpdateBucket" +
-      "Metadata\022\006Bucket\022\256\001\n\006Delete\022,.yandex.clo" +
-      "ud.storage.v1.DeleteBucketRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"S\202\323\344\223\002\034*\032/s" +
-      "torage/v1/buckets/{name}\262\322*-\n\024DeleteBuck" +
-      "etMetadata\022\025google.protobuf.Empty\022\215\001\n\010Ge" +
-      "tStats\022..yandex.cloud.storage.v1.GetBuck" +
-      "etStatsRequest\032$.yandex.cloud.storage.v1" +
-      ".BucketStats\"+\202\323\344\223\002%\022#/storage/v1/bucket" +
-      "s/{name}:getStats\022\237\001\n\016GetHTTPSConfig\0224.y" +
-      "andex.cloud.storage.v1.GetBucketHTTPSCon" +
-      "figRequest\032$.yandex.cloud.storage.v1.HTT" +
-      "PSConfig\"1\202\323\344\223\002+\022)/storage/v1/buckets/{n" +
-      "ame}:getHttpsConfig\022\316\001\n\016SetHTTPSConfig\0224" +
-      ".yandex.cloud.storage.v1.SetBucketHTTPSC" +
-      "onfigRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"c\202\323\344\223\002.\")/storage/v1/buckets/{na" +
-      "me}:setHttpsConfig:\001*\262\322*+\n\034SetBucketHTTP" +
-      "SConfigMetadata\022\013HTTPSConfig\022\341\001\n\021DeleteH" +
-      "TTPSConfig\0227.yandex.cloud.storage.v1.Del" +
-      "eteBucketHTTPSConfigRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"p\202\323\344\223\002.\",/storage" +
-      "/v1/buckets/{name}:deleteHttpsConfig\262\322*8" +
-      "\n\037DeleteBucketHTTPSConfigMetadata\022\025googl" +
-      "e.protobuf.EmptyBb\n\033yandex.cloud.api.sto" +
-      "rage.v1ZCgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/storage/v1;storageb\006pr" +
-      "oto3"
+      "x.cloud.storage.v1.ACL\022*\n\004tags\030\010 \003(\0132\034.y" +
+      "andex.cloud.storage.v1.Tag\"$\n\024CreateBuck" +
+      "etMetadata\022\014\n\004name\030\001 \001(\t\"\316\004\n\023UpdateBucke" +
+      "tRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0224\n\nfield_ma" +
+      "sk\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350\307" +
+      "1\001\022M\n\026anonymous_access_flags\030\003 \001(\0132-.yan" +
+      "dex.cloud.storage.v1.AnonymousAccessFlag" +
+      "s\022\035\n\025default_storage_class\030\004 \001(\t\022\020\n\010max_" +
+      "size\030\005 \001(\003\022/\n\004cors\030\006 \003(\0132!.yandex.cloud." +
+      "storage.v1.CorsRule\022B\n\020website_settings\030" +
+      "\007 \001(\0132(.yandex.cloud.storage.v1.WebsiteS" +
+      "ettings\0227\n\nversioning\030\010 \001(\0162#.yandex.clo" +
+      "ud.storage.v1.Versioning\022?\n\017lifecycle_ru" +
+      "les\030\t \003(\0132&.yandex.cloud.storage.v1.Life" +
+      "cycleRule\022\'\n\006policy\030\n \001(\0132\027.google.proto" +
+      "buf.Struct\022)\n\003acl\030\013 \001(\0132\034.yandex.cloud.s" +
+      "torage.v1.ACL\022*\n\004tags\030\014 \003(\0132\034.yandex.clo" +
+      "ud.storage.v1.Tag\"$\n\024UpdateBucketMetadat" +
+      "a\022\014\n\004name\030\001 \001(\t\")\n\023DeleteBucketRequest\022\022" +
+      "\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024DeleteBucketMetada" +
+      "ta\022\014\n\004name\030\001 \001(\t\"+\n\025GetBucketStatsReques" +
+      "t\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"1\n\033GetBucketHTTPSC" +
+      "onfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"n\n\034Self" +
+      "ManagedHTTPSConfigParams\022&\n\017certificate_" +
+      "pem\030\001 \001(\tB\r\212\3101\t<=3145728\022&\n\017private_key_" +
+      "pem\030\002 \001(\tB\r\212\3101\t<=3145728\"=\n#CertificateM" +
+      "anagerHTTPSConfigParams\022\026\n\016certificate_i" +
+      "d\030\001 \001(\t\"\355\001\n\033SetBucketHTTPSConfigRequest\022" +
+      "\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n\014self_managed\030\002 \001(" +
+      "\01325.yandex.cloud.storage.v1.SelfManagedH" +
+      "TTPSConfigParamsH\000\022[\n\023certificate_manage" +
+      "r\030\003 \001(\0132<.yandex.cloud.storage.v1.Certif" +
+      "icateManagerHTTPSConfigParamsH\000B\016\n\006param" +
+      "s\022\004\300\3011\001\",\n\034SetBucketHTTPSConfigMetadata\022" +
+      "\014\n\004name\030\001 \001(\t\"4\n\036DeleteBucketHTTPSConfig" +
+      "Request\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"/\n\037DeleteBuc" +
+      "ketHTTPSConfigMetadata\022\014\n\004name\030\001 \001(\t2\341\013\n" +
+      "\rBucketService\022~\n\004List\022+.yandex.cloud.st" +
+      "orage.v1.ListBucketsRequest\032,.yandex.clo" +
+      "ud.storage.v1.ListBucketsResponse\"\033\202\323\344\223\002" +
+      "\025\022\023/storage/v1/buckets\022u\n\003Get\022).yandex.c" +
+      "loud.storage.v1.GetBucketRequest\032\037.yande" +
+      "x.cloud.storage.v1.Bucket\"\"\202\323\344\223\002\034\022\032/stor" +
+      "age/v1/buckets/{name}\022\233\001\n\006Create\022,.yande" +
+      "x.cloud.storage.v1.CreateBucketRequest\032!" +
+      ".yandex.cloud.operation.Operation\"@\202\323\344\223\002" +
+      "\030\"\023/storage/v1/buckets:\001*\262\322*\036\n\024CreateBuc" +
+      "ketMetadata\022\006Bucket\022\242\001\n\006Update\022,.yandex." +
+      "cloud.storage.v1.UpdateBucketRequest\032!.y" +
+      "andex.cloud.operation.Operation\"G\202\323\344\223\002\0372" +
+      "\032/storage/v1/buckets/{name}:\001*\262\322*\036\n\024Upda" +
+      "teBucketMetadata\022\006Bucket\022\256\001\n\006Delete\022,.ya" +
+      "ndex.cloud.storage.v1.DeleteBucketReques" +
+      "t\032!.yandex.cloud.operation.Operation\"S\202\323" +
+      "\344\223\002\034*\032/storage/v1/buckets/{name}\262\322*-\n\024De" +
+      "leteBucketMetadata\022\025google.protobuf.Empt" +
+      "y\022\215\001\n\010GetStats\022..yandex.cloud.storage.v1" +
+      ".GetBucketStatsRequest\032$.yandex.cloud.st" +
+      "orage.v1.BucketStats\"+\202\323\344\223\002%\022#/storage/v" +
+      "1/buckets/{name}:getStats\022\237\001\n\016GetHTTPSCo" +
+      "nfig\0224.yandex.cloud.storage.v1.GetBucket" +
+      "HTTPSConfigRequest\032$.yandex.cloud.storag" +
+      "e.v1.HTTPSConfig\"1\202\323\344\223\002+\022)/storage/v1/bu" +
+      "ckets/{name}:getHttpsConfig\022\316\001\n\016SetHTTPS" +
+      "Config\0224.yandex.cloud.storage.v1.SetBuck" +
+      "etHTTPSConfigRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"c\202\323\344\223\002.\")/storage/v1/buc" +
+      "kets/{name}:setHttpsConfig:\001*\262\322*+\n\034SetBu" +
+      "cketHTTPSConfigMetadata\022\013HTTPSConfig\022\341\001\n" +
+      "\021DeleteHTTPSConfig\0227.yandex.cloud.storag" +
+      "e.v1.DeleteBucketHTTPSConfigRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"p\202\323\344\223\002.\"," +
+      "/storage/v1/buckets/{name}:deleteHttpsCo" +
+      "nfig\262\322*8\n\037DeleteBucketHTTPSConfigMetadat" +
+      "a\022\025google.protobuf.EmptyBb\n\033yandex.cloud" +
+      ".api.storage.v1ZCgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/storage/v1;sto" +
+      "rageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16008,7 +17037,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_CreateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_CreateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "FolderId", "DefaultStorageClass", "MaxSize", "AnonymousAccessFlags", "Acl", });
+        new java.lang.String[] { "Name", "FolderId", "DefaultStorageClass", "MaxSize", "AnonymousAccessFlags", "Acl", "Tags", });
     internal_static_yandex_cloud_storage_v1_CreateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_storage_v1_CreateBucketMetadata_fieldAccessorTable = new
@@ -16020,7 +17049,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "FieldMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", });
+        new java.lang.String[] { "Name", "FieldMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", });
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_fieldAccessorTable = new

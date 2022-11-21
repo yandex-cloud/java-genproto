@@ -652,7 +652,7 @@ public final class RoleServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -663,7 +663,7 @@ public final class RoleServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -813,7 +813,7 @@ public final class RoleServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -836,7 +836,7 @@ public final class RoleServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1300,7 +1300,7 @@ public final class RoleServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1322,7 +1322,7 @@ public final class RoleServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1345,7 +1345,7 @@ public final class RoleServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1366,7 +1366,7 @@ public final class RoleServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1382,7 +1382,7 @@ public final class RoleServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -2711,20 +2711,20 @@ public final class RoleServiceOuterClass {
       "tions.proto\032\035yandex/cloud/validation.pro" +
       "to\032\036yandex/cloud/iam/v1/role.proto\"/\n\016Ge" +
       "tRoleRequest\022\035\n\007role_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"l\n\020ListRolesRequest\022\035\n\tpage_size\030\001 \001" +
-      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\002 \001(\tB\t\212\3101\005" +
-      "<=100\022\032\n\006filter\030\003 \001(\tB\n\212\3101\006<=1000\"V\n\021Lis" +
-      "tRolesResponse\022(\n\005roles\030\001 \003(\0132\031.yandex.c" +
-      "loud.iam.v1.Role\022\027\n\017next_page_token\030\002 \001(" +
-      "\t2\343\001\n\013RoleService\022f\n\003Get\022#.yandex.cloud." +
-      "iam.v1.GetRoleRequest\032\031.yandex.cloud.iam" +
-      ".v1.Role\"\037\202\323\344\223\002\031\022\027/iam/v1/roles/{role_id" +
-      "}\022l\n\004List\022%.yandex.cloud.iam.v1.ListRole" +
-      "sRequest\032&.yandex.cloud.iam.v1.ListRoles" +
-      "Response\"\025\202\323\344\223\002\017\022\r/iam/v1/rolesBV\n\027yande" +
-      "x.cloud.api.iam.v1Z;github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/iam/v1;iamb" +
-      "\006proto3"
+      "=50\"m\n\020ListRolesRequest\022\035\n\tpage_size\030\001 \001" +
+      "(\003B\n\372\3071\006<=1000\022\036\n\npage_token\030\002 \001(\tB\n\212\3101\006" +
+      "<=2000\022\032\n\006filter\030\003 \001(\tB\n\212\3101\006<=1000\"V\n\021Li" +
+      "stRolesResponse\022(\n\005roles\030\001 \003(\0132\031.yandex." +
+      "cloud.iam.v1.Role\022\027\n\017next_page_token\030\002 \001" +
+      "(\t2\343\001\n\013RoleService\022f\n\003Get\022#.yandex.cloud" +
+      ".iam.v1.GetRoleRequest\032\031.yandex.cloud.ia" +
+      "m.v1.Role\"\037\202\323\344\223\002\031\022\027/iam/v1/roles/{role_i" +
+      "d}\022l\n\004List\022%.yandex.cloud.iam.v1.ListRol" +
+      "esRequest\032&.yandex.cloud.iam.v1.ListRole" +
+      "sResponse\"\025\202\323\344\223\002\017\022\r/iam/v1/rolesBV\n\027yand" +
+      "ex.cloud.api.iam.v1Z;github.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/iam/v1;iam" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
