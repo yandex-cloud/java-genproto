@@ -2094,7 +2094,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -2104,13 +2104,309 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
      * @return The binlogTransactionDependencyTracking.
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogTransactionDependencyTracking getBinlogTransactionDependencyTracking();
+
+    /**
+     * <pre>
+     * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+     * @return Whether the autocommit field is set.
+     */
+    boolean hasAutocommit();
+    /**
+     * <pre>
+     * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+     * @return The autocommit.
+     */
+    com.google.protobuf.BoolValue getAutocommit();
+    /**
+     * <pre>
+     * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAutocommitOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables periodic output for the standard InnoDB Monitor.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+     * @return Whether the innodbStatusOutput field is set.
+     */
+    boolean hasInnodbStatusOutput();
+    /**
+     * <pre>
+     * Enables or disables periodic output for the standard InnoDB Monitor.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+     * @return The innodbStatusOutput.
+     */
+    com.google.protobuf.BoolValue getInnodbStatusOutput();
+    /**
+     * <pre>
+     * Enables or disables periodic output for the standard InnoDB Monitor.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInnodbStatusOutputOrBuilder();
+
+    /**
+     * <pre>
+     * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+     * @return Whether the innodbStrictMode field is set.
+     */
+    boolean hasInnodbStrictMode();
+    /**
+     * <pre>
+     * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+     * @return The innodbStrictMode.
+     */
+    com.google.protobuf.BoolValue getInnodbStrictMode();
+    /**
+     * <pre>
+     * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInnodbStrictModeOrBuilder();
+
+    /**
+     * <pre>
+     * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+     * @return Whether the innodbPrintLockWaitTimeoutInfo field is set.
+     */
+    boolean hasInnodbPrintLockWaitTimeoutInfo();
+    /**
+     * <pre>
+     * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+     * @return The innodbPrintLockWaitTimeoutInfo.
+     */
+    com.google.protobuf.BoolValue getInnodbPrintLockWaitTimeoutInfo();
+    /**
+     * <pre>
+     * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInnodbPrintLockWaitTimeoutInfoOrBuilder();
+
+    /**
+     * <pre>
+     * System variable specifies the verbosity for handling events intended for the error log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+     * @return Whether the logErrorVerbosity field is set.
+     */
+    boolean hasLogErrorVerbosity();
+    /**
+     * <pre>
+     * System variable specifies the verbosity for handling events intended for the error log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+     * @return The logErrorVerbosity.
+     */
+    com.google.protobuf.Int64Value getLogErrorVerbosity();
+    /**
+     * <pre>
+     * System variable specifies the verbosity for handling events intended for the error log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogErrorVerbosityOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return Whether the maxDigestLength field is set.
+     */
+    boolean hasMaxDigestLength();
+    /**
+     * <pre>
+     * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return The maxDigestLength.
+     */
+    com.google.protobuf.Int64Value getMaxDigestLength();
+    /**
+     * <pre>
+     * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxDigestLengthOrBuilder();
+
+    /**
+     * <pre>
+     * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+     * @return Whether the lockWaitTimeout field is set.
+     */
+    boolean hasLockWaitTimeout();
+    /**
+     * <pre>
+     * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+     * @return The lockWaitTimeout.
+     */
+    com.google.protobuf.Int64Value getLockWaitTimeout();
+    /**
+     * <pre>
+     * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLockWaitTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * This variable limits the total number of prepared statements in the server.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+     * @return Whether the maxPreparedStmtCount field is set.
+     */
+    boolean hasMaxPreparedStmtCount();
+    /**
+     * <pre>
+     * This variable limits the total number of prepared statements in the server.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+     * @return The maxPreparedStmtCount.
+     */
+    com.google.protobuf.Int64Value getMaxPreparedStmtCount();
+    /**
+     * <pre>
+     * This variable limits the total number of prepared statements in the server.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxPreparedStmtCountOrBuilder();
+
+    /**
+     * <pre>
+     * The system variable enables control over optimizer behavior.
+     * For details, see [MySQL documentation for the variable]
+     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+     * </pre>
+     *
+     * <code>string optimizer_switch = 80;</code>
+     * @return The optimizerSwitch.
+     */
+    java.lang.String getOptimizerSwitch();
+    /**
+     * <pre>
+     * The system variable enables control over optimizer behavior.
+     * For details, see [MySQL documentation for the variable]
+     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+     * </pre>
+     *
+     * <code>string optimizer_switch = 80;</code>
+     * @return The bytes for optimizerSwitch.
+     */
+    com.google.protobuf.ByteString
+        getOptimizerSwitchBytes();
+
+    /**
+     * <pre>
+     * The maximum depth of search performed by the query optimizer
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+     * @return Whether the optimizerSearchDepth field is set.
+     */
+    boolean hasOptimizerSearchDepth();
+    /**
+     * <pre>
+     * The maximum depth of search performed by the query optimizer
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+     * @return The optimizerSearchDepth.
+     */
+    com.google.protobuf.Int64Value getOptimizerSearchDepth();
+    /**
+     * <pre>
+     * The maximum depth of search performed by the query optimizer
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOptimizerSearchDepthOrBuilder();
   }
   /**
    * <pre>
@@ -2140,6 +2436,7 @@ public final class Mysql80 {
       logSlowRateType_ = 0;
       logSlowFilter_ = java.util.Collections.emptyList();
       binlogTransactionDependencyTracking_ = 0;
+      optimizerSwitch_ = "";
     }
 
     @java.lang.Override
@@ -3051,6 +3348,129 @@ public final class Mysql80 {
               int rawValue = input.readEnum();
 
               binlogTransactionDependencyTracking_ = rawValue;
+              break;
+            }
+            case 578: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (autocommit_ != null) {
+                subBuilder = autocommit_.toBuilder();
+              }
+              autocommit_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autocommit_);
+                autocommit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 586: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (innodbStatusOutput_ != null) {
+                subBuilder = innodbStatusOutput_.toBuilder();
+              }
+              innodbStatusOutput_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbStatusOutput_);
+                innodbStatusOutput_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 594: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (innodbStrictMode_ != null) {
+                subBuilder = innodbStrictMode_.toBuilder();
+              }
+              innodbStrictMode_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbStrictMode_);
+                innodbStrictMode_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 602: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (innodbPrintLockWaitTimeoutInfo_ != null) {
+                subBuilder = innodbPrintLockWaitTimeoutInfo_.toBuilder();
+              }
+              innodbPrintLockWaitTimeoutInfo_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbPrintLockWaitTimeoutInfo_);
+                innodbPrintLockWaitTimeoutInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 610: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logErrorVerbosity_ != null) {
+                subBuilder = logErrorVerbosity_.toBuilder();
+              }
+              logErrorVerbosity_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logErrorVerbosity_);
+                logErrorVerbosity_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 618: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxDigestLength_ != null) {
+                subBuilder = maxDigestLength_.toBuilder();
+              }
+              maxDigestLength_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxDigestLength_);
+                maxDigestLength_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 626: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (lockWaitTimeout_ != null) {
+                subBuilder = lockWaitTimeout_.toBuilder();
+              }
+              lockWaitTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lockWaitTimeout_);
+                lockWaitTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 634: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxPreparedStmtCount_ != null) {
+                subBuilder = maxPreparedStmtCount_.toBuilder();
+              }
+              maxPreparedStmtCount_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxPreparedStmtCount_);
+                maxPreparedStmtCount_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 642: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              optimizerSwitch_ = s;
+              break;
+            }
+            case 650: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (optimizerSearchDepth_ != null) {
+                subBuilder = optimizerSearchDepth_.toBuilder();
+              }
+              optimizerSearchDepth_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(optimizerSearchDepth_);
+                optimizerSearchDepth_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7208,7 +7628,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -7220,7 +7640,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-     * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -7230,6 +7650,427 @@ public final class Mysql80 {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogTransactionDependencyTracking result = yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogTransactionDependencyTracking.valueOf(binlogTransactionDependencyTracking_);
       return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogTransactionDependencyTracking.UNRECOGNIZED : result;
+    }
+
+    public static final int AUTOCOMMIT_FIELD_NUMBER = 72;
+    private com.google.protobuf.BoolValue autocommit_;
+    /**
+     * <pre>
+     * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+     * @return Whether the autocommit field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutocommit() {
+      return autocommit_ != null;
+    }
+    /**
+     * <pre>
+     * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+     * @return The autocommit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAutocommit() {
+      return autocommit_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autocommit_;
+    }
+    /**
+     * <pre>
+     * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAutocommitOrBuilder() {
+      return getAutocommit();
+    }
+
+    public static final int INNODB_STATUS_OUTPUT_FIELD_NUMBER = 73;
+    private com.google.protobuf.BoolValue innodbStatusOutput_;
+    /**
+     * <pre>
+     * Enables or disables periodic output for the standard InnoDB Monitor.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+     * @return Whether the innodbStatusOutput field is set.
+     */
+    @java.lang.Override
+    public boolean hasInnodbStatusOutput() {
+      return innodbStatusOutput_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables periodic output for the standard InnoDB Monitor.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+     * @return The innodbStatusOutput.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInnodbStatusOutput() {
+      return innodbStatusOutput_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbStatusOutput_;
+    }
+    /**
+     * <pre>
+     * Enables or disables periodic output for the standard InnoDB Monitor.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInnodbStatusOutputOrBuilder() {
+      return getInnodbStatusOutput();
+    }
+
+    public static final int INNODB_STRICT_MODE_FIELD_NUMBER = 74;
+    private com.google.protobuf.BoolValue innodbStrictMode_;
+    /**
+     * <pre>
+     * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+     * @return Whether the innodbStrictMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasInnodbStrictMode() {
+      return innodbStrictMode_ != null;
+    }
+    /**
+     * <pre>
+     * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+     * @return The innodbStrictMode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInnodbStrictMode() {
+      return innodbStrictMode_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbStrictMode_;
+    }
+    /**
+     * <pre>
+     * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInnodbStrictModeOrBuilder() {
+      return getInnodbStrictMode();
+    }
+
+    public static final int INNODB_PRINT_LOCK_WAIT_TIMEOUT_INFO_FIELD_NUMBER = 75;
+    private com.google.protobuf.BoolValue innodbPrintLockWaitTimeoutInfo_;
+    /**
+     * <pre>
+     * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+     * @return Whether the innodbPrintLockWaitTimeoutInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasInnodbPrintLockWaitTimeoutInfo() {
+      return innodbPrintLockWaitTimeoutInfo_ != null;
+    }
+    /**
+     * <pre>
+     * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+     * @return The innodbPrintLockWaitTimeoutInfo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInnodbPrintLockWaitTimeoutInfo() {
+      return innodbPrintLockWaitTimeoutInfo_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbPrintLockWaitTimeoutInfo_;
+    }
+    /**
+     * <pre>
+     * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInnodbPrintLockWaitTimeoutInfoOrBuilder() {
+      return getInnodbPrintLockWaitTimeoutInfo();
+    }
+
+    public static final int LOG_ERROR_VERBOSITY_FIELD_NUMBER = 76;
+    private com.google.protobuf.Int64Value logErrorVerbosity_;
+    /**
+     * <pre>
+     * System variable specifies the verbosity for handling events intended for the error log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+     * @return Whether the logErrorVerbosity field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogErrorVerbosity() {
+      return logErrorVerbosity_ != null;
+    }
+    /**
+     * <pre>
+     * System variable specifies the verbosity for handling events intended for the error log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+     * @return The logErrorVerbosity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLogErrorVerbosity() {
+      return logErrorVerbosity_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logErrorVerbosity_;
+    }
+    /**
+     * <pre>
+     * System variable specifies the verbosity for handling events intended for the error log
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLogErrorVerbosityOrBuilder() {
+      return getLogErrorVerbosity();
+    }
+
+    public static final int MAX_DIGEST_LENGTH_FIELD_NUMBER = 77;
+    private com.google.protobuf.Int64Value maxDigestLength_;
+    /**
+     * <pre>
+     * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return Whether the maxDigestLength field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxDigestLength() {
+      return maxDigestLength_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+     * @return The maxDigestLength.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxDigestLength() {
+      return maxDigestLength_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxDigestLength_;
+    }
+    /**
+     * <pre>
+     * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxDigestLengthOrBuilder() {
+      return getMaxDigestLength();
+    }
+
+    public static final int LOCK_WAIT_TIMEOUT_FIELD_NUMBER = 78;
+    private com.google.protobuf.Int64Value lockWaitTimeout_;
+    /**
+     * <pre>
+     * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+     * @return Whether the lockWaitTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasLockWaitTimeout() {
+      return lockWaitTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+     * @return The lockWaitTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getLockWaitTimeout() {
+      return lockWaitTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lockWaitTimeout_;
+    }
+    /**
+     * <pre>
+     * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getLockWaitTimeoutOrBuilder() {
+      return getLockWaitTimeout();
+    }
+
+    public static final int MAX_PREPARED_STMT_COUNT_FIELD_NUMBER = 79;
+    private com.google.protobuf.Int64Value maxPreparedStmtCount_;
+    /**
+     * <pre>
+     * This variable limits the total number of prepared statements in the server.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+     * @return Whether the maxPreparedStmtCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxPreparedStmtCount() {
+      return maxPreparedStmtCount_ != null;
+    }
+    /**
+     * <pre>
+     * This variable limits the total number of prepared statements in the server.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+     * @return The maxPreparedStmtCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxPreparedStmtCount() {
+      return maxPreparedStmtCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedStmtCount_;
+    }
+    /**
+     * <pre>
+     * This variable limits the total number of prepared statements in the server.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedStmtCountOrBuilder() {
+      return getMaxPreparedStmtCount();
+    }
+
+    public static final int OPTIMIZER_SWITCH_FIELD_NUMBER = 80;
+    private volatile java.lang.Object optimizerSwitch_;
+    /**
+     * <pre>
+     * The system variable enables control over optimizer behavior.
+     * For details, see [MySQL documentation for the variable]
+     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+     * </pre>
+     *
+     * <code>string optimizer_switch = 80;</code>
+     * @return The optimizerSwitch.
+     */
+    @java.lang.Override
+    public java.lang.String getOptimizerSwitch() {
+      java.lang.Object ref = optimizerSwitch_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        optimizerSwitch_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The system variable enables control over optimizer behavior.
+     * For details, see [MySQL documentation for the variable]
+     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+     * </pre>
+     *
+     * <code>string optimizer_switch = 80;</code>
+     * @return The bytes for optimizerSwitch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOptimizerSwitchBytes() {
+      java.lang.Object ref = optimizerSwitch_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        optimizerSwitch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPTIMIZER_SEARCH_DEPTH_FIELD_NUMBER = 81;
+    private com.google.protobuf.Int64Value optimizerSearchDepth_;
+    /**
+     * <pre>
+     * The maximum depth of search performed by the query optimizer
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+     * @return Whether the optimizerSearchDepth field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptimizerSearchDepth() {
+      return optimizerSearchDepth_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum depth of search performed by the query optimizer
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+     * @return The optimizerSearchDepth.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOptimizerSearchDepth() {
+      return optimizerSearchDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : optimizerSearchDepth_;
+    }
+    /**
+     * <pre>
+     * The maximum depth of search performed by the query optimizer
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOptimizerSearchDepthOrBuilder() {
+      return getOptimizerSearchDepth();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7467,6 +8308,36 @@ public final class Mysql80 {
       }
       if (binlogTransactionDependencyTracking_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogTransactionDependencyTracking.BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED.getNumber()) {
         output.writeEnum(71, binlogTransactionDependencyTracking_);
+      }
+      if (autocommit_ != null) {
+        output.writeMessage(72, getAutocommit());
+      }
+      if (innodbStatusOutput_ != null) {
+        output.writeMessage(73, getInnodbStatusOutput());
+      }
+      if (innodbStrictMode_ != null) {
+        output.writeMessage(74, getInnodbStrictMode());
+      }
+      if (innodbPrintLockWaitTimeoutInfo_ != null) {
+        output.writeMessage(75, getInnodbPrintLockWaitTimeoutInfo());
+      }
+      if (logErrorVerbosity_ != null) {
+        output.writeMessage(76, getLogErrorVerbosity());
+      }
+      if (maxDigestLength_ != null) {
+        output.writeMessage(77, getMaxDigestLength());
+      }
+      if (lockWaitTimeout_ != null) {
+        output.writeMessage(78, getLockWaitTimeout());
+      }
+      if (maxPreparedStmtCount_ != null) {
+        output.writeMessage(79, getMaxPreparedStmtCount());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optimizerSwitch_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 80, optimizerSwitch_);
+      }
+      if (optimizerSearchDepth_ != null) {
+        output.writeMessage(81, getOptimizerSearchDepth());
       }
       unknownFields.writeTo(output);
     }
@@ -7773,6 +8644,45 @@ public final class Mysql80 {
       if (binlogTransactionDependencyTracking_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.BinlogTransactionDependencyTracking.BINLOG_TRANSACTION_DEPENDENCY_TRACKING_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(71, binlogTransactionDependencyTracking_);
+      }
+      if (autocommit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(72, getAutocommit());
+      }
+      if (innodbStatusOutput_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(73, getInnodbStatusOutput());
+      }
+      if (innodbStrictMode_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(74, getInnodbStrictMode());
+      }
+      if (innodbPrintLockWaitTimeoutInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(75, getInnodbPrintLockWaitTimeoutInfo());
+      }
+      if (logErrorVerbosity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(76, getLogErrorVerbosity());
+      }
+      if (maxDigestLength_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(77, getMaxDigestLength());
+      }
+      if (lockWaitTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(78, getLockWaitTimeout());
+      }
+      if (maxPreparedStmtCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(79, getMaxPreparedStmtCount());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optimizerSwitch_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(80, optimizerSwitch_);
+      }
+      if (optimizerSearchDepth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(81, getOptimizerSearchDepth());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8103,6 +9013,53 @@ public final class Mysql80 {
             .equals(other.getInnodbCompressionLevel())) return false;
       }
       if (binlogTransactionDependencyTracking_ != other.binlogTransactionDependencyTracking_) return false;
+      if (hasAutocommit() != other.hasAutocommit()) return false;
+      if (hasAutocommit()) {
+        if (!getAutocommit()
+            .equals(other.getAutocommit())) return false;
+      }
+      if (hasInnodbStatusOutput() != other.hasInnodbStatusOutput()) return false;
+      if (hasInnodbStatusOutput()) {
+        if (!getInnodbStatusOutput()
+            .equals(other.getInnodbStatusOutput())) return false;
+      }
+      if (hasInnodbStrictMode() != other.hasInnodbStrictMode()) return false;
+      if (hasInnodbStrictMode()) {
+        if (!getInnodbStrictMode()
+            .equals(other.getInnodbStrictMode())) return false;
+      }
+      if (hasInnodbPrintLockWaitTimeoutInfo() != other.hasInnodbPrintLockWaitTimeoutInfo()) return false;
+      if (hasInnodbPrintLockWaitTimeoutInfo()) {
+        if (!getInnodbPrintLockWaitTimeoutInfo()
+            .equals(other.getInnodbPrintLockWaitTimeoutInfo())) return false;
+      }
+      if (hasLogErrorVerbosity() != other.hasLogErrorVerbosity()) return false;
+      if (hasLogErrorVerbosity()) {
+        if (!getLogErrorVerbosity()
+            .equals(other.getLogErrorVerbosity())) return false;
+      }
+      if (hasMaxDigestLength() != other.hasMaxDigestLength()) return false;
+      if (hasMaxDigestLength()) {
+        if (!getMaxDigestLength()
+            .equals(other.getMaxDigestLength())) return false;
+      }
+      if (hasLockWaitTimeout() != other.hasLockWaitTimeout()) return false;
+      if (hasLockWaitTimeout()) {
+        if (!getLockWaitTimeout()
+            .equals(other.getLockWaitTimeout())) return false;
+      }
+      if (hasMaxPreparedStmtCount() != other.hasMaxPreparedStmtCount()) return false;
+      if (hasMaxPreparedStmtCount()) {
+        if (!getMaxPreparedStmtCount()
+            .equals(other.getMaxPreparedStmtCount())) return false;
+      }
+      if (!getOptimizerSwitch()
+          .equals(other.getOptimizerSwitch())) return false;
+      if (hasOptimizerSearchDepth() != other.hasOptimizerSearchDepth()) return false;
+      if (hasOptimizerSearchDepth()) {
+        if (!getOptimizerSearchDepth()
+            .equals(other.getOptimizerSearchDepth())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8380,6 +9337,44 @@ public final class Mysql80 {
       }
       hash = (37 * hash) + BINLOG_TRANSACTION_DEPENDENCY_TRACKING_FIELD_NUMBER;
       hash = (53 * hash) + binlogTransactionDependencyTracking_;
+      if (hasAutocommit()) {
+        hash = (37 * hash) + AUTOCOMMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getAutocommit().hashCode();
+      }
+      if (hasInnodbStatusOutput()) {
+        hash = (37 * hash) + INNODB_STATUS_OUTPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbStatusOutput().hashCode();
+      }
+      if (hasInnodbStrictMode()) {
+        hash = (37 * hash) + INNODB_STRICT_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbStrictMode().hashCode();
+      }
+      if (hasInnodbPrintLockWaitTimeoutInfo()) {
+        hash = (37 * hash) + INNODB_PRINT_LOCK_WAIT_TIMEOUT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbPrintLockWaitTimeoutInfo().hashCode();
+      }
+      if (hasLogErrorVerbosity()) {
+        hash = (37 * hash) + LOG_ERROR_VERBOSITY_FIELD_NUMBER;
+        hash = (53 * hash) + getLogErrorVerbosity().hashCode();
+      }
+      if (hasMaxDigestLength()) {
+        hash = (37 * hash) + MAX_DIGEST_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxDigestLength().hashCode();
+      }
+      if (hasLockWaitTimeout()) {
+        hash = (37 * hash) + LOCK_WAIT_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getLockWaitTimeout().hashCode();
+      }
+      if (hasMaxPreparedStmtCount()) {
+        hash = (37 * hash) + MAX_PREPARED_STMT_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxPreparedStmtCount().hashCode();
+      }
+      hash = (37 * hash) + OPTIMIZER_SWITCH_FIELD_NUMBER;
+      hash = (53 * hash) + getOptimizerSwitch().hashCode();
+      if (hasOptimizerSearchDepth()) {
+        hash = (37 * hash) + OPTIMIZER_SEARCH_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + getOptimizerSearchDepth().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8899,6 +9894,62 @@ public final class Mysql80 {
         }
         binlogTransactionDependencyTracking_ = 0;
 
+        if (autocommitBuilder_ == null) {
+          autocommit_ = null;
+        } else {
+          autocommit_ = null;
+          autocommitBuilder_ = null;
+        }
+        if (innodbStatusOutputBuilder_ == null) {
+          innodbStatusOutput_ = null;
+        } else {
+          innodbStatusOutput_ = null;
+          innodbStatusOutputBuilder_ = null;
+        }
+        if (innodbStrictModeBuilder_ == null) {
+          innodbStrictMode_ = null;
+        } else {
+          innodbStrictMode_ = null;
+          innodbStrictModeBuilder_ = null;
+        }
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          innodbPrintLockWaitTimeoutInfo_ = null;
+        } else {
+          innodbPrintLockWaitTimeoutInfo_ = null;
+          innodbPrintLockWaitTimeoutInfoBuilder_ = null;
+        }
+        if (logErrorVerbosityBuilder_ == null) {
+          logErrorVerbosity_ = null;
+        } else {
+          logErrorVerbosity_ = null;
+          logErrorVerbosityBuilder_ = null;
+        }
+        if (maxDigestLengthBuilder_ == null) {
+          maxDigestLength_ = null;
+        } else {
+          maxDigestLength_ = null;
+          maxDigestLengthBuilder_ = null;
+        }
+        if (lockWaitTimeoutBuilder_ == null) {
+          lockWaitTimeout_ = null;
+        } else {
+          lockWaitTimeout_ = null;
+          lockWaitTimeoutBuilder_ = null;
+        }
+        if (maxPreparedStmtCountBuilder_ == null) {
+          maxPreparedStmtCount_ = null;
+        } else {
+          maxPreparedStmtCount_ = null;
+          maxPreparedStmtCountBuilder_ = null;
+        }
+        optimizerSwitch_ = "";
+
+        if (optimizerSearchDepthBuilder_ == null) {
+          optimizerSearchDepth_ = null;
+        } else {
+          optimizerSearchDepth_ = null;
+          optimizerSearchDepthBuilder_ = null;
+        }
         return this;
       }
 
@@ -9245,6 +10296,52 @@ public final class Mysql80 {
           result.innodbCompressionLevel_ = innodbCompressionLevelBuilder_.build();
         }
         result.binlogTransactionDependencyTracking_ = binlogTransactionDependencyTracking_;
+        if (autocommitBuilder_ == null) {
+          result.autocommit_ = autocommit_;
+        } else {
+          result.autocommit_ = autocommitBuilder_.build();
+        }
+        if (innodbStatusOutputBuilder_ == null) {
+          result.innodbStatusOutput_ = innodbStatusOutput_;
+        } else {
+          result.innodbStatusOutput_ = innodbStatusOutputBuilder_.build();
+        }
+        if (innodbStrictModeBuilder_ == null) {
+          result.innodbStrictMode_ = innodbStrictMode_;
+        } else {
+          result.innodbStrictMode_ = innodbStrictModeBuilder_.build();
+        }
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          result.innodbPrintLockWaitTimeoutInfo_ = innodbPrintLockWaitTimeoutInfo_;
+        } else {
+          result.innodbPrintLockWaitTimeoutInfo_ = innodbPrintLockWaitTimeoutInfoBuilder_.build();
+        }
+        if (logErrorVerbosityBuilder_ == null) {
+          result.logErrorVerbosity_ = logErrorVerbosity_;
+        } else {
+          result.logErrorVerbosity_ = logErrorVerbosityBuilder_.build();
+        }
+        if (maxDigestLengthBuilder_ == null) {
+          result.maxDigestLength_ = maxDigestLength_;
+        } else {
+          result.maxDigestLength_ = maxDigestLengthBuilder_.build();
+        }
+        if (lockWaitTimeoutBuilder_ == null) {
+          result.lockWaitTimeout_ = lockWaitTimeout_;
+        } else {
+          result.lockWaitTimeout_ = lockWaitTimeoutBuilder_.build();
+        }
+        if (maxPreparedStmtCountBuilder_ == null) {
+          result.maxPreparedStmtCount_ = maxPreparedStmtCount_;
+        } else {
+          result.maxPreparedStmtCount_ = maxPreparedStmtCountBuilder_.build();
+        }
+        result.optimizerSwitch_ = optimizerSwitch_;
+        if (optimizerSearchDepthBuilder_ == null) {
+          result.optimizerSearchDepth_ = optimizerSearchDepth_;
+        } else {
+          result.optimizerSearchDepth_ = optimizerSearchDepthBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -9522,6 +10619,37 @@ public final class Mysql80 {
         }
         if (other.binlogTransactionDependencyTracking_ != 0) {
           setBinlogTransactionDependencyTrackingValue(other.getBinlogTransactionDependencyTrackingValue());
+        }
+        if (other.hasAutocommit()) {
+          mergeAutocommit(other.getAutocommit());
+        }
+        if (other.hasInnodbStatusOutput()) {
+          mergeInnodbStatusOutput(other.getInnodbStatusOutput());
+        }
+        if (other.hasInnodbStrictMode()) {
+          mergeInnodbStrictMode(other.getInnodbStrictMode());
+        }
+        if (other.hasInnodbPrintLockWaitTimeoutInfo()) {
+          mergeInnodbPrintLockWaitTimeoutInfo(other.getInnodbPrintLockWaitTimeoutInfo());
+        }
+        if (other.hasLogErrorVerbosity()) {
+          mergeLogErrorVerbosity(other.getLogErrorVerbosity());
+        }
+        if (other.hasMaxDigestLength()) {
+          mergeMaxDigestLength(other.getMaxDigestLength());
+        }
+        if (other.hasLockWaitTimeout()) {
+          mergeLockWaitTimeout(other.getLockWaitTimeout());
+        }
+        if (other.hasMaxPreparedStmtCount()) {
+          mergeMaxPreparedStmtCount(other.getMaxPreparedStmtCount());
+        }
+        if (!other.getOptimizerSwitch().isEmpty()) {
+          optimizerSwitch_ = other.optimizerSwitch_;
+          onChanged();
+        }
+        if (other.hasOptimizerSearchDepth()) {
+          mergeOptimizerSearchDepth(other.getOptimizerSearchDepth());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20477,7 +21605,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -20489,7 +21617,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -20505,7 +21633,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -20520,7 +21648,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -20539,7 +21667,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Specifies how the source mysqld generates the dependency information that it writes in the binary log to help replicas determine which transactions can be executed in parallel.
-       * For details, see [MySQL documentation for the variabl](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_tracking).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.BinlogTransactionDependencyTracking binlog_transaction_dependency_tracking = 71;</code>
@@ -20550,6 +21678,1593 @@ public final class Mysql80 {
         binlogTransactionDependencyTracking_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue autocommit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autocommitBuilder_;
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       * @return Whether the autocommit field is set.
+       */
+      public boolean hasAutocommit() {
+        return autocommitBuilder_ != null || autocommit_ != null;
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       * @return The autocommit.
+       */
+      public com.google.protobuf.BoolValue getAutocommit() {
+        if (autocommitBuilder_ == null) {
+          return autocommit_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autocommit_;
+        } else {
+          return autocommitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      public Builder setAutocommit(com.google.protobuf.BoolValue value) {
+        if (autocommitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autocommit_ = value;
+          onChanged();
+        } else {
+          autocommitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      public Builder setAutocommit(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (autocommitBuilder_ == null) {
+          autocommit_ = builderForValue.build();
+          onChanged();
+        } else {
+          autocommitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      public Builder mergeAutocommit(com.google.protobuf.BoolValue value) {
+        if (autocommitBuilder_ == null) {
+          if (autocommit_ != null) {
+            autocommit_ =
+              com.google.protobuf.BoolValue.newBuilder(autocommit_).mergeFrom(value).buildPartial();
+          } else {
+            autocommit_ = value;
+          }
+          onChanged();
+        } else {
+          autocommitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      public Builder clearAutocommit() {
+        if (autocommitBuilder_ == null) {
+          autocommit_ = null;
+          onChanged();
+        } else {
+          autocommit_ = null;
+          autocommitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAutocommitBuilder() {
+        
+        onChanged();
+        return getAutocommitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAutocommitOrBuilder() {
+        if (autocommitBuilder_ != null) {
+          return autocommitBuilder_.getMessageOrBuilder();
+        } else {
+          return autocommit_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : autocommit_;
+        }
+      }
+      /**
+       * <pre>
+       * Config specific will be all changes to a table take effect immediately or you must use COMMIT to accept a transaction or ROLLBACK to cancel it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue autocommit = 72;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAutocommitFieldBuilder() {
+        if (autocommitBuilder_ == null) {
+          autocommitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAutocommit(),
+                  getParentForChildren(),
+                  isClean());
+          autocommit_ = null;
+        }
+        return autocommitBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue innodbStatusOutput_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbStatusOutputBuilder_;
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       * @return Whether the innodbStatusOutput field is set.
+       */
+      public boolean hasInnodbStatusOutput() {
+        return innodbStatusOutputBuilder_ != null || innodbStatusOutput_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       * @return The innodbStatusOutput.
+       */
+      public com.google.protobuf.BoolValue getInnodbStatusOutput() {
+        if (innodbStatusOutputBuilder_ == null) {
+          return innodbStatusOutput_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbStatusOutput_;
+        } else {
+          return innodbStatusOutputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      public Builder setInnodbStatusOutput(com.google.protobuf.BoolValue value) {
+        if (innodbStatusOutputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbStatusOutput_ = value;
+          onChanged();
+        } else {
+          innodbStatusOutputBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      public Builder setInnodbStatusOutput(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (innodbStatusOutputBuilder_ == null) {
+          innodbStatusOutput_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbStatusOutputBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      public Builder mergeInnodbStatusOutput(com.google.protobuf.BoolValue value) {
+        if (innodbStatusOutputBuilder_ == null) {
+          if (innodbStatusOutput_ != null) {
+            innodbStatusOutput_ =
+              com.google.protobuf.BoolValue.newBuilder(innodbStatusOutput_).mergeFrom(value).buildPartial();
+          } else {
+            innodbStatusOutput_ = value;
+          }
+          onChanged();
+        } else {
+          innodbStatusOutputBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      public Builder clearInnodbStatusOutput() {
+        if (innodbStatusOutputBuilder_ == null) {
+          innodbStatusOutput_ = null;
+          onChanged();
+        } else {
+          innodbStatusOutput_ = null;
+          innodbStatusOutputBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInnodbStatusOutputBuilder() {
+        
+        onChanged();
+        return getInnodbStatusOutputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInnodbStatusOutputOrBuilder() {
+        if (innodbStatusOutputBuilder_ != null) {
+          return innodbStatusOutputBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbStatusOutput_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : innodbStatusOutput_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables periodic output for the standard InnoDB Monitor.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_status_output).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_status_output = 73;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInnodbStatusOutputFieldBuilder() {
+        if (innodbStatusOutputBuilder_ == null) {
+          innodbStatusOutputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInnodbStatusOutput(),
+                  getParentForChildren(),
+                  isClean());
+          innodbStatusOutput_ = null;
+        }
+        return innodbStatusOutputBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue innodbStrictMode_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbStrictModeBuilder_;
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       * @return Whether the innodbStrictMode field is set.
+       */
+      public boolean hasInnodbStrictMode() {
+        return innodbStrictModeBuilder_ != null || innodbStrictMode_ != null;
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       * @return The innodbStrictMode.
+       */
+      public com.google.protobuf.BoolValue getInnodbStrictMode() {
+        if (innodbStrictModeBuilder_ == null) {
+          return innodbStrictMode_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbStrictMode_;
+        } else {
+          return innodbStrictModeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      public Builder setInnodbStrictMode(com.google.protobuf.BoolValue value) {
+        if (innodbStrictModeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbStrictMode_ = value;
+          onChanged();
+        } else {
+          innodbStrictModeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      public Builder setInnodbStrictMode(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (innodbStrictModeBuilder_ == null) {
+          innodbStrictMode_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbStrictModeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      public Builder mergeInnodbStrictMode(com.google.protobuf.BoolValue value) {
+        if (innodbStrictModeBuilder_ == null) {
+          if (innodbStrictMode_ != null) {
+            innodbStrictMode_ =
+              com.google.protobuf.BoolValue.newBuilder(innodbStrictMode_).mergeFrom(value).buildPartial();
+          } else {
+            innodbStrictMode_ = value;
+          }
+          onChanged();
+        } else {
+          innodbStrictModeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      public Builder clearInnodbStrictMode() {
+        if (innodbStrictModeBuilder_ == null) {
+          innodbStrictMode_ = null;
+          onChanged();
+        } else {
+          innodbStrictMode_ = null;
+          innodbStrictModeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInnodbStrictModeBuilder() {
+        
+        onChanged();
+        return getInnodbStrictModeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInnodbStrictModeOrBuilder() {
+        if (innodbStrictModeBuilder_ != null) {
+          return innodbStrictModeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbStrictMode_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : innodbStrictMode_;
+        }
+      }
+      /**
+       * <pre>
+       * When innodb_strict_mode is enabled, InnoDB returns errors rather than warnings when checking for invalid or incompatible table options.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_strict_mode).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_strict_mode = 74;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInnodbStrictModeFieldBuilder() {
+        if (innodbStrictModeBuilder_ == null) {
+          innodbStrictModeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInnodbStrictMode(),
+                  getParentForChildren(),
+                  isClean());
+          innodbStrictMode_ = null;
+        }
+        return innodbStrictModeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue innodbPrintLockWaitTimeoutInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbPrintLockWaitTimeoutInfoBuilder_;
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       * @return Whether the innodbPrintLockWaitTimeoutInfo field is set.
+       */
+      public boolean hasInnodbPrintLockWaitTimeoutInfo() {
+        return innodbPrintLockWaitTimeoutInfoBuilder_ != null || innodbPrintLockWaitTimeoutInfo_ != null;
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       * @return The innodbPrintLockWaitTimeoutInfo.
+       */
+      public com.google.protobuf.BoolValue getInnodbPrintLockWaitTimeoutInfo() {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          return innodbPrintLockWaitTimeoutInfo_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbPrintLockWaitTimeoutInfo_;
+        } else {
+          return innodbPrintLockWaitTimeoutInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      public Builder setInnodbPrintLockWaitTimeoutInfo(com.google.protobuf.BoolValue value) {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbPrintLockWaitTimeoutInfo_ = value;
+          onChanged();
+        } else {
+          innodbPrintLockWaitTimeoutInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      public Builder setInnodbPrintLockWaitTimeoutInfo(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          innodbPrintLockWaitTimeoutInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbPrintLockWaitTimeoutInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      public Builder mergeInnodbPrintLockWaitTimeoutInfo(com.google.protobuf.BoolValue value) {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          if (innodbPrintLockWaitTimeoutInfo_ != null) {
+            innodbPrintLockWaitTimeoutInfo_ =
+              com.google.protobuf.BoolValue.newBuilder(innodbPrintLockWaitTimeoutInfo_).mergeFrom(value).buildPartial();
+          } else {
+            innodbPrintLockWaitTimeoutInfo_ = value;
+          }
+          onChanged();
+        } else {
+          innodbPrintLockWaitTimeoutInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      public Builder clearInnodbPrintLockWaitTimeoutInfo() {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          innodbPrintLockWaitTimeoutInfo_ = null;
+          onChanged();
+        } else {
+          innodbPrintLockWaitTimeoutInfo_ = null;
+          innodbPrintLockWaitTimeoutInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInnodbPrintLockWaitTimeoutInfoBuilder() {
+        
+        onChanged();
+        return getInnodbPrintLockWaitTimeoutInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInnodbPrintLockWaitTimeoutInfoOrBuilder() {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ != null) {
+          return innodbPrintLockWaitTimeoutInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbPrintLockWaitTimeoutInfo_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : innodbPrintLockWaitTimeoutInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * Makes InnoDB to write information about all lock wait timeout errors into the log file.
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/8.0/diagnostics/innodb_show_status.html?highlight=innodb_print_lock_wait_timeout_info).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_print_lock_wait_timeout_info = 75;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInnodbPrintLockWaitTimeoutInfoFieldBuilder() {
+        if (innodbPrintLockWaitTimeoutInfoBuilder_ == null) {
+          innodbPrintLockWaitTimeoutInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInnodbPrintLockWaitTimeoutInfo(),
+                  getParentForChildren(),
+                  isClean());
+          innodbPrintLockWaitTimeoutInfo_ = null;
+        }
+        return innodbPrintLockWaitTimeoutInfoBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logErrorVerbosity_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logErrorVerbosityBuilder_;
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       * @return Whether the logErrorVerbosity field is set.
+       */
+      public boolean hasLogErrorVerbosity() {
+        return logErrorVerbosityBuilder_ != null || logErrorVerbosity_ != null;
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       * @return The logErrorVerbosity.
+       */
+      public com.google.protobuf.Int64Value getLogErrorVerbosity() {
+        if (logErrorVerbosityBuilder_ == null) {
+          return logErrorVerbosity_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logErrorVerbosity_;
+        } else {
+          return logErrorVerbosityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      public Builder setLogErrorVerbosity(com.google.protobuf.Int64Value value) {
+        if (logErrorVerbosityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logErrorVerbosity_ = value;
+          onChanged();
+        } else {
+          logErrorVerbosityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      public Builder setLogErrorVerbosity(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logErrorVerbosityBuilder_ == null) {
+          logErrorVerbosity_ = builderForValue.build();
+          onChanged();
+        } else {
+          logErrorVerbosityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      public Builder mergeLogErrorVerbosity(com.google.protobuf.Int64Value value) {
+        if (logErrorVerbosityBuilder_ == null) {
+          if (logErrorVerbosity_ != null) {
+            logErrorVerbosity_ =
+              com.google.protobuf.Int64Value.newBuilder(logErrorVerbosity_).mergeFrom(value).buildPartial();
+          } else {
+            logErrorVerbosity_ = value;
+          }
+          onChanged();
+        } else {
+          logErrorVerbosityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      public Builder clearLogErrorVerbosity() {
+        if (logErrorVerbosityBuilder_ == null) {
+          logErrorVerbosity_ = null;
+          onChanged();
+        } else {
+          logErrorVerbosity_ = null;
+          logErrorVerbosityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogErrorVerbosityBuilder() {
+        
+        onChanged();
+        return getLogErrorVerbosityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogErrorVerbosityOrBuilder() {
+        if (logErrorVerbosityBuilder_ != null) {
+          return logErrorVerbosityBuilder_.getMessageOrBuilder();
+        } else {
+          return logErrorVerbosity_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logErrorVerbosity_;
+        }
+      }
+      /**
+       * <pre>
+       * System variable specifies the verbosity for handling events intended for the error log
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_error_verbosity = 76 [(.yandex.cloud.value) = "1-3"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogErrorVerbosityFieldBuilder() {
+        if (logErrorVerbosityBuilder_ == null) {
+          logErrorVerbosityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogErrorVerbosity(),
+                  getParentForChildren(),
+                  isClean());
+          logErrorVerbosity_ = null;
+        }
+        return logErrorVerbosityBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxDigestLength_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxDigestLengthBuilder_;
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       * @return Whether the maxDigestLength field is set.
+       */
+      public boolean hasMaxDigestLength() {
+        return maxDigestLengthBuilder_ != null || maxDigestLength_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       * @return The maxDigestLength.
+       */
+      public com.google.protobuf.Int64Value getMaxDigestLength() {
+        if (maxDigestLengthBuilder_ == null) {
+          return maxDigestLength_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxDigestLength_;
+        } else {
+          return maxDigestLengthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder setMaxDigestLength(com.google.protobuf.Int64Value value) {
+        if (maxDigestLengthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxDigestLength_ = value;
+          onChanged();
+        } else {
+          maxDigestLengthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder setMaxDigestLength(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxDigestLengthBuilder_ == null) {
+          maxDigestLength_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxDigestLengthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder mergeMaxDigestLength(com.google.protobuf.Int64Value value) {
+        if (maxDigestLengthBuilder_ == null) {
+          if (maxDigestLength_ != null) {
+            maxDigestLength_ =
+              com.google.protobuf.Int64Value.newBuilder(maxDigestLength_).mergeFrom(value).buildPartial();
+          } else {
+            maxDigestLength_ = value;
+          }
+          onChanged();
+        } else {
+          maxDigestLengthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder clearMaxDigestLength() {
+        if (maxDigestLengthBuilder_ == null) {
+          maxDigestLength_ = null;
+          onChanged();
+        } else {
+          maxDigestLength_ = null;
+          maxDigestLengthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxDigestLengthBuilder() {
+        
+        onChanged();
+        return getMaxDigestLengthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxDigestLengthOrBuilder() {
+        if (maxDigestLengthBuilder_ != null) {
+          return maxDigestLengthBuilder_.getMessageOrBuilder();
+        } else {
+          return maxDigestLength_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxDigestLength_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of bytes of memory reserved per session for computation of normalized statement digests.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_digest_length = 77 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxDigestLengthFieldBuilder() {
+        if (maxDigestLengthBuilder_ == null) {
+          maxDigestLengthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxDigestLength(),
+                  getParentForChildren(),
+                  isClean());
+          maxDigestLength_ = null;
+        }
+        return maxDigestLengthBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value lockWaitTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lockWaitTimeoutBuilder_;
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       * @return Whether the lockWaitTimeout field is set.
+       */
+      public boolean hasLockWaitTimeout() {
+        return lockWaitTimeoutBuilder_ != null || lockWaitTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       * @return The lockWaitTimeout.
+       */
+      public com.google.protobuf.Int64Value getLockWaitTimeout() {
+        if (lockWaitTimeoutBuilder_ == null) {
+          return lockWaitTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lockWaitTimeout_;
+        } else {
+          return lockWaitTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      public Builder setLockWaitTimeout(com.google.protobuf.Int64Value value) {
+        if (lockWaitTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lockWaitTimeout_ = value;
+          onChanged();
+        } else {
+          lockWaitTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      public Builder setLockWaitTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (lockWaitTimeoutBuilder_ == null) {
+          lockWaitTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          lockWaitTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      public Builder mergeLockWaitTimeout(com.google.protobuf.Int64Value value) {
+        if (lockWaitTimeoutBuilder_ == null) {
+          if (lockWaitTimeout_ != null) {
+            lockWaitTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(lockWaitTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            lockWaitTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          lockWaitTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      public Builder clearLockWaitTimeout() {
+        if (lockWaitTimeoutBuilder_ == null) {
+          lockWaitTimeout_ = null;
+          onChanged();
+        } else {
+          lockWaitTimeout_ = null;
+          lockWaitTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLockWaitTimeoutBuilder() {
+        
+        onChanged();
+        return getLockWaitTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLockWaitTimeoutOrBuilder() {
+        if (lockWaitTimeoutBuilder_ != null) {
+          return lockWaitTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return lockWaitTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : lockWaitTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * This variable specifies the timeout in seconds for attempts to acquire metadata locks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lock_wait_timeout = 78 [(.yandex.cloud.value) = "1-31536000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLockWaitTimeoutFieldBuilder() {
+        if (lockWaitTimeoutBuilder_ == null) {
+          lockWaitTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLockWaitTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          lockWaitTimeout_ = null;
+        }
+        return lockWaitTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxPreparedStmtCount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedStmtCountBuilder_;
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       * @return Whether the maxPreparedStmtCount field is set.
+       */
+      public boolean hasMaxPreparedStmtCount() {
+        return maxPreparedStmtCountBuilder_ != null || maxPreparedStmtCount_ != null;
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       * @return The maxPreparedStmtCount.
+       */
+      public com.google.protobuf.Int64Value getMaxPreparedStmtCount() {
+        if (maxPreparedStmtCountBuilder_ == null) {
+          return maxPreparedStmtCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedStmtCount_;
+        } else {
+          return maxPreparedStmtCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      public Builder setMaxPreparedStmtCount(com.google.protobuf.Int64Value value) {
+        if (maxPreparedStmtCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxPreparedStmtCount_ = value;
+          onChanged();
+        } else {
+          maxPreparedStmtCountBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      public Builder setMaxPreparedStmtCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxPreparedStmtCountBuilder_ == null) {
+          maxPreparedStmtCount_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxPreparedStmtCountBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      public Builder mergeMaxPreparedStmtCount(com.google.protobuf.Int64Value value) {
+        if (maxPreparedStmtCountBuilder_ == null) {
+          if (maxPreparedStmtCount_ != null) {
+            maxPreparedStmtCount_ =
+              com.google.protobuf.Int64Value.newBuilder(maxPreparedStmtCount_).mergeFrom(value).buildPartial();
+          } else {
+            maxPreparedStmtCount_ = value;
+          }
+          onChanged();
+        } else {
+          maxPreparedStmtCountBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      public Builder clearMaxPreparedStmtCount() {
+        if (maxPreparedStmtCountBuilder_ == null) {
+          maxPreparedStmtCount_ = null;
+          onChanged();
+        } else {
+          maxPreparedStmtCount_ = null;
+          maxPreparedStmtCountBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxPreparedStmtCountBuilder() {
+        
+        onChanged();
+        return getMaxPreparedStmtCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedStmtCountOrBuilder() {
+        if (maxPreparedStmtCountBuilder_ != null) {
+          return maxPreparedStmtCountBuilder_.getMessageOrBuilder();
+        } else {
+          return maxPreparedStmtCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedStmtCount_;
+        }
+      }
+      /**
+       * <pre>
+       * This variable limits the total number of prepared statements in the server.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_stmt_count = 79 [(.yandex.cloud.value) = "0-4194304"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxPreparedStmtCountFieldBuilder() {
+        if (maxPreparedStmtCountBuilder_ == null) {
+          maxPreparedStmtCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxPreparedStmtCount(),
+                  getParentForChildren(),
+                  isClean());
+          maxPreparedStmtCount_ = null;
+        }
+        return maxPreparedStmtCountBuilder_;
+      }
+
+      private java.lang.Object optimizerSwitch_ = "";
+      /**
+       * <pre>
+       * The system variable enables control over optimizer behavior.
+       * For details, see [MySQL documentation for the variable]
+       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+       * </pre>
+       *
+       * <code>string optimizer_switch = 80;</code>
+       * @return The optimizerSwitch.
+       */
+      public java.lang.String getOptimizerSwitch() {
+        java.lang.Object ref = optimizerSwitch_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          optimizerSwitch_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The system variable enables control over optimizer behavior.
+       * For details, see [MySQL documentation for the variable]
+       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+       * </pre>
+       *
+       * <code>string optimizer_switch = 80;</code>
+       * @return The bytes for optimizerSwitch.
+       */
+      public com.google.protobuf.ByteString
+          getOptimizerSwitchBytes() {
+        java.lang.Object ref = optimizerSwitch_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          optimizerSwitch_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The system variable enables control over optimizer behavior.
+       * For details, see [MySQL documentation for the variable]
+       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+       * </pre>
+       *
+       * <code>string optimizer_switch = 80;</code>
+       * @param value The optimizerSwitch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptimizerSwitch(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        optimizerSwitch_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The system variable enables control over optimizer behavior.
+       * For details, see [MySQL documentation for the variable]
+       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+       * </pre>
+       *
+       * <code>string optimizer_switch = 80;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptimizerSwitch() {
+        
+        optimizerSwitch_ = getDefaultInstance().getOptimizerSwitch();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The system variable enables control over optimizer behavior.
+       * For details, see [MySQL documentation for the variable]
+       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
+       * </pre>
+       *
+       * <code>string optimizer_switch = 80;</code>
+       * @param value The bytes for optimizerSwitch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptimizerSwitchBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        optimizerSwitch_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value optimizerSearchDepth_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> optimizerSearchDepthBuilder_;
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       * @return Whether the optimizerSearchDepth field is set.
+       */
+      public boolean hasOptimizerSearchDepth() {
+        return optimizerSearchDepthBuilder_ != null || optimizerSearchDepth_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       * @return The optimizerSearchDepth.
+       */
+      public com.google.protobuf.Int64Value getOptimizerSearchDepth() {
+        if (optimizerSearchDepthBuilder_ == null) {
+          return optimizerSearchDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : optimizerSearchDepth_;
+        } else {
+          return optimizerSearchDepthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      public Builder setOptimizerSearchDepth(com.google.protobuf.Int64Value value) {
+        if (optimizerSearchDepthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          optimizerSearchDepth_ = value;
+          onChanged();
+        } else {
+          optimizerSearchDepthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      public Builder setOptimizerSearchDepth(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (optimizerSearchDepthBuilder_ == null) {
+          optimizerSearchDepth_ = builderForValue.build();
+          onChanged();
+        } else {
+          optimizerSearchDepthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      public Builder mergeOptimizerSearchDepth(com.google.protobuf.Int64Value value) {
+        if (optimizerSearchDepthBuilder_ == null) {
+          if (optimizerSearchDepth_ != null) {
+            optimizerSearchDepth_ =
+              com.google.protobuf.Int64Value.newBuilder(optimizerSearchDepth_).mergeFrom(value).buildPartial();
+          } else {
+            optimizerSearchDepth_ = value;
+          }
+          onChanged();
+        } else {
+          optimizerSearchDepthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      public Builder clearOptimizerSearchDepth() {
+        if (optimizerSearchDepthBuilder_ == null) {
+          optimizerSearchDepth_ = null;
+          onChanged();
+        } else {
+          optimizerSearchDepth_ = null;
+          optimizerSearchDepthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOptimizerSearchDepthBuilder() {
+        
+        onChanged();
+        return getOptimizerSearchDepthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOptimizerSearchDepthOrBuilder() {
+        if (optimizerSearchDepthBuilder_ != null) {
+          return optimizerSearchDepthBuilder_.getMessageOrBuilder();
+        } else {
+          return optimizerSearchDepth_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : optimizerSearchDepth_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum depth of search performed by the query optimizer
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value optimizer_search_depth = 81 [(.yandex.cloud.value) = "0-62"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOptimizerSearchDepthFieldBuilder() {
+        if (optimizerSearchDepthBuilder_ == null) {
+          optimizerSearchDepthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOptimizerSearchDepth(),
+                  getParentForChildren(),
+                  isClean());
+          optimizerSearchDepth_ = null;
+        }
+        return optimizerSearchDepthBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21848,7 +24563,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\2743\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\2478\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -21980,49 +24695,65 @@ public final class Mysql80 {
       "transaction_dependency_tracking\030G \001(\0162T." +
       "yandex.cloud.mdb.mysql.v1.config.MysqlCo" +
       "nfig8_0.BinlogTransactionDependencyTrack" +
-      "ing\"\210\004\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000" +
-      "\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES" +
-      "\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HI" +
-      "GH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n" +
-      "\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH" +
-      "_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033" +
-      "\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_D" +
-      "ATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\026\n\022ONLY_FULL_" +
-      "GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022" +
-      "\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022" +
-      "\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_T" +
-      "ABLES\020\024\022\034\n\030TIME_TRUNCATE_FRACTIONAL\020\025\022\010\n" +
-      "\004ANSI\020\026\022\017\n\013TRADITIONAL\020\027\022\024\n\020NO_DIR_IN_CR" +
-      "EATE\020\030\"t\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSP" +
-      "ECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025" +
-      "CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWO" +
-      "RD\020\003\"x\n\024TransactionIsolation\022%\n!TRANSACT" +
-      "ION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMM" +
-      "ITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZ" +
-      "ABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_I" +
-      "MAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020" +
-      "\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SL" +
-      "AVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATAB" +
-      "ASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateT" +
-      "ype\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022" +
-      "\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilte" +
-      "rType\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIE" +
-      "D\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP" +
-      "_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILES" +
-      "ORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\223\001\n#BinlogTr" +
-      "ansactionDependencyTracking\0226\n2BINLOG_TR" +
-      "ANSACTION_DEPENDENCY_TRACKING_UNSPECIFIE" +
-      "D\020\000\022\020\n\014COMMIT_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020W" +
-      "RITESET_SESSION\020\003\"\360\001\n\021MysqlConfigSet8_0\022" +
-      "J\n\020effective_config\030\001 \001(\01320.yandex.cloud" +
-      ".mdb.mysql.v1.config.MysqlConfig8_0\022E\n\013u" +
-      "ser_config\030\002 \001(\01320.yandex.cloud.mdb.mysq" +
-      "l.v1.config.MysqlConfig8_0\022H\n\016default_co" +
-      "nfig\030\003 \001(\01320.yandex.cloud.mdb.mysql.v1.c" +
-      "onfig.MysqlConfig8_0Br\n$yandex.cloud.api" +
-      ".mdb.mysql.v1.configZJgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/mysql" +
-      "/v1/config;mysqlb\006proto3"
+      "ing\022.\n\nautocommit\030H \001(\0132\032.google.protobu" +
+      "f.BoolValue\0228\n\024innodb_status_output\030I \001(" +
+      "\0132\032.google.protobuf.BoolValue\0226\n\022innodb_" +
+      "strict_mode\030J \001(\0132\032.google.protobuf.Bool" +
+      "Value\022G\n#innodb_print_lock_wait_timeout_" +
+      "info\030K \001(\0132\032.google.protobuf.BoolValue\022A" +
+      "\n\023log_error_verbosity\030L \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\0031-3\022E\n\021max_digest_" +
+      "length\030M \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\r\372\3071\t0-1048576\022F\n\021lock_wait_timeout\030N " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\016\372\3071\n1-" +
+      "31536000\022K\n\027max_prepared_stmt_count\030O \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\r\372\3071\t0-41" +
+      "94304\022\030\n\020optimizer_switch\030P \001(\t\022E\n\026optim" +
+      "izer_search_depth\030Q \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\010\372\3071\0040-62\"\210\004\n\007SQLMode\022\027\n\023SQ" +
+      "LMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DAT" +
+      "ES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVIS" +
+      "ION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020" +
+      "\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZER" +
+      "O\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGI" +
+      "NE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRAC" +
+      "TION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_D" +
+      "ATE\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHA" +
+      "R_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022" +
+      "\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020" +
+      "\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNC" +
+      "ATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONA" +
+      "L\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022" +
+      "\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NA" +
+      "TIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD" +
+      "\020\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIs" +
+      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
+      "FIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE" +
+      "_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowIm" +
+      "age\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n" +
+      "\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021Slav" +
+      "eParallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNS" +
+      "PECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOC" +
+      "K\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_SLOW_RATE_" +
+      "TYPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\t\n\005QUERY" +
+      "\020\002\"\241\001\n\021LogSlowFilterType\022$\n LOG_SLOW_FIL" +
+      "TER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n" +
+      "\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021TMP_TABLE" +
+      "_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FILESORT_ON_" +
+      "DISK\020\006\"\223\001\n#BinlogTransactionDependencyTr" +
+      "acking\0226\n2BINLOG_TRANSACTION_DEPENDENCY_" +
+      "TRACKING_UNSPECIFIED\020\000\022\020\n\014COMMIT_ORDER\020\001" +
+      "\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET_SESSION\020\003\"\360\001\n" +
+      "\021MysqlConfigSet8_0\022J\n\020effective_config\030\001" +
+      " \001(\01320.yandex.cloud.mdb.mysql.v1.config." +
+      "MysqlConfig8_0\022E\n\013user_config\030\002 \001(\01320.ya" +
+      "ndex.cloud.mdb.mysql.v1.config.MysqlConf" +
+      "ig8_0\022H\n\016default_config\030\003 \001(\01320.yandex.c" +
+      "loud.mdb.mysql.v1.config.MysqlConfig8_0B" +
+      "r\n$yandex.cloud.api.mdb.mysql.v1.configZ" +
+      "Jgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/mdb/mysql/v1/config;mysqlb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22035,7 +24766,7 @@ public final class Mysql80 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_fieldAccessorTable = new
