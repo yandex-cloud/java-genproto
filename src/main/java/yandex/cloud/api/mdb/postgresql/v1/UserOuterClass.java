@@ -5402,6 +5402,201 @@ public final class UserOuterClass {
      * @return The logStatement.
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement getLogStatement();
+
+    /**
+     * <pre>
+     * Mode that the connection pooler is working in with specified user.
+     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+     * @return The enum numeric value on the wire for poolMode.
+     */
+    int getPoolModeValue();
+    /**
+     * <pre>
+     * Mode that the connection pooler is working in with specified user.
+     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+     * @return The poolMode.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode getPoolMode();
+
+    /**
+     * <pre>
+     * User can use prepared statements with transaction pooling.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+     * @return Whether the preparedStatementsPooling field is set.
+     */
+    boolean hasPreparedStatementsPooling();
+    /**
+     * <pre>
+     * User can use prepared statements with transaction pooling.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+     * @return The preparedStatementsPooling.
+     */
+    com.google.protobuf.BoolValue getPreparedStatementsPooling();
+    /**
+     * <pre>
+     * User can use prepared statements with transaction pooling.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPreparedStatementsPoolingOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time (in seconds) for synchronization between standby and primary
+     * 
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+     * @return Whether the catchupTimeout field is set.
+     */
+    boolean hasCatchupTimeout();
+    /**
+     * <pre>
+     * The maximum time (in seconds) for synchronization between standby and primary
+     * 
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+     * @return The catchupTimeout.
+     */
+    com.google.protobuf.Int64Value getCatchupTimeout();
+    /**
+     * <pre>
+     * The maximum time (in seconds) for synchronization between standby and primary
+     * 
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCatchupTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+     * Terminate replication connections that are inactive for longer than this amount of time. 
+     * Default value: `6000` (60 seconds).
+     * Value of `0` disables the timeout mechanism.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+     * @return Whether the walSenderTimeout field is set.
+     */
+    boolean hasWalSenderTimeout();
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+     * Terminate replication connections that are inactive for longer than this amount of time. 
+     * Default value: `6000` (60 seconds).
+     * Value of `0` disables the timeout mechanism.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+     * @return The walSenderTimeout.
+     */
+    com.google.protobuf.Int64Value getWalSenderTimeout();
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+     * Terminate replication connections that are inactive for longer than this amount of time. 
+     * Default value: `6000` (60 seconds).
+     * Value of `0` disables the timeout mechanism.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getWalSenderTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+     * Values of `0` (default) disables the timeout.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * @return Whether the idleInTransactionSessionTimeout field is set.
+     */
+    boolean hasIdleInTransactionSessionTimeout();
+    /**
+     * <pre>
+     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+     * Values of `0` (default) disables the timeout.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * @return The idleInTransactionSessionTimeout.
+     */
+    com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout();
+    /**
+     * <pre>
+     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+     * Values of `0` (default) disables the timeout.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for statement
+     * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+     * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+     * Value of `0` (default) disables the timeout
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+     * @return Whether the statementTimeout field is set.
+     */
+    boolean hasStatementTimeout();
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for statement
+     * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+     * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+     * Value of `0` (default) disables the timeout
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+     * @return The statementTimeout.
+     */
+    com.google.protobuf.Int64Value getStatementTimeout();
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for statement
+     * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+     * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+     * Value of `0` (default) disables the timeout
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getStatementTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -5423,6 +5618,7 @@ public final class UserOuterClass {
       defaultTransactionIsolation_ = 0;
       synchronousCommit_ = 0;
       logStatement_ = 0;
+      poolMode_ = 0;
     }
 
     @java.lang.Override
@@ -5510,6 +5706,77 @@ public final class UserOuterClass {
               int rawValue = input.readEnum();
 
               logStatement_ = rawValue;
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              poolMode_ = rawValue;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (preparedStatementsPooling_ != null) {
+                subBuilder = preparedStatementsPooling_.toBuilder();
+              }
+              preparedStatementsPooling_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(preparedStatementsPooling_);
+                preparedStatementsPooling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (catchupTimeout_ != null) {
+                subBuilder = catchupTimeout_.toBuilder();
+              }
+              catchupTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(catchupTimeout_);
+                catchupTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (walSenderTimeout_ != null) {
+                subBuilder = walSenderTimeout_.toBuilder();
+              }
+              walSenderTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(walSenderTimeout_);
+                walSenderTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (idleInTransactionSessionTimeout_ != null) {
+                subBuilder = idleInTransactionSessionTimeout_.toBuilder();
+              }
+              idleInTransactionSessionTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(idleInTransactionSessionTimeout_);
+                idleInTransactionSessionTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (statementTimeout_ != null) {
+                subBuilder = statementTimeout_.toBuilder();
+              }
+              statementTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(statementTimeout_);
+                statementTimeout_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6074,6 +6341,156 @@ public final class UserOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode}
+     */
+    public enum PoolingMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>POOLING_MODE_UNSPECIFIED = 0;</code>
+       */
+      POOLING_MODE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * (default) server connection will be assigned to it for the whole duration the client stays connected
+       * </pre>
+       *
+       * <code>SESSION = 1;</code>
+       */
+      SESSION(1),
+      /**
+       * <pre>
+       * server connection is assigned to a client only during a transaction
+       * </pre>
+       *
+       * <code>TRANSACTION = 2;</code>
+       */
+      TRANSACTION(2),
+      /**
+       * <pre>
+       * server connection will be put back into the pool immediately after a query completes
+       * </pre>
+       *
+       * <code>STATEMENT = 3;</code>
+       */
+      STATEMENT(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>POOLING_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int POOLING_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * (default) server connection will be assigned to it for the whole duration the client stays connected
+       * </pre>
+       *
+       * <code>SESSION = 1;</code>
+       */
+      public static final int SESSION_VALUE = 1;
+      /**
+       * <pre>
+       * server connection is assigned to a client only during a transaction
+       * </pre>
+       *
+       * <code>TRANSACTION = 2;</code>
+       */
+      public static final int TRANSACTION_VALUE = 2;
+      /**
+       * <pre>
+       * server connection will be put back into the pool immediately after a query completes
+       * </pre>
+       *
+       * <code>STATEMENT = 3;</code>
+       */
+      public static final int STATEMENT_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PoolingMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PoolingMode forNumber(int value) {
+        switch (value) {
+          case 0: return POOLING_MODE_UNSPECIFIED;
+          case 1: return SESSION;
+          case 2: return TRANSACTION;
+          case 3: return STATEMENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PoolingMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PoolingMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PoolingMode>() {
+              public PoolingMode findValueByNumber(int number) {
+                return PoolingMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(3);
+      }
+
+      private static final PoolingMode[] VALUES = values();
+
+      public static PoolingMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PoolingMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode)
+    }
+
     public static final int DEFAULT_TRANSACTION_ISOLATION_FIELD_NUMBER = 1;
     private int defaultTransactionIsolation_;
     /**
@@ -6308,6 +6725,264 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement.UNRECOGNIZED : result;
     }
 
+    public static final int POOL_MODE_FIELD_NUMBER = 7;
+    private int poolMode_;
+    /**
+     * <pre>
+     * Mode that the connection pooler is working in with specified user.
+     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+     * @return The enum numeric value on the wire for poolMode.
+     */
+    @java.lang.Override public int getPoolModeValue() {
+      return poolMode_;
+    }
+    /**
+     * <pre>
+     * Mode that the connection pooler is working in with specified user.
+     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+     * @return The poolMode.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode getPoolMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode.valueOf(poolMode_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode.UNRECOGNIZED : result;
+    }
+
+    public static final int PREPARED_STATEMENTS_POOLING_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue preparedStatementsPooling_;
+    /**
+     * <pre>
+     * User can use prepared statements with transaction pooling.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+     * @return Whether the preparedStatementsPooling field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreparedStatementsPooling() {
+      return preparedStatementsPooling_ != null;
+    }
+    /**
+     * <pre>
+     * User can use prepared statements with transaction pooling.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+     * @return The preparedStatementsPooling.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPreparedStatementsPooling() {
+      return preparedStatementsPooling_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preparedStatementsPooling_;
+    }
+    /**
+     * <pre>
+     * User can use prepared statements with transaction pooling.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPreparedStatementsPoolingOrBuilder() {
+      return getPreparedStatementsPooling();
+    }
+
+    public static final int CATCHUP_TIMEOUT_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value catchupTimeout_;
+    /**
+     * <pre>
+     * The maximum time (in seconds) for synchronization between standby and primary
+     * 
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+     * @return Whether the catchupTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasCatchupTimeout() {
+      return catchupTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time (in seconds) for synchronization between standby and primary
+     * 
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+     * @return The catchupTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCatchupTimeout() {
+      return catchupTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : catchupTimeout_;
+    }
+    /**
+     * <pre>
+     * The maximum time (in seconds) for synchronization between standby and primary
+     * 
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCatchupTimeoutOrBuilder() {
+      return getCatchupTimeout();
+    }
+
+    public static final int WAL_SENDER_TIMEOUT_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value walSenderTimeout_;
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+     * Terminate replication connections that are inactive for longer than this amount of time. 
+     * Default value: `6000` (60 seconds).
+     * Value of `0` disables the timeout mechanism.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+     * @return Whether the walSenderTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasWalSenderTimeout() {
+      return walSenderTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+     * Terminate replication connections that are inactive for longer than this amount of time. 
+     * Default value: `6000` (60 seconds).
+     * Value of `0` disables the timeout mechanism.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+     * @return The walSenderTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getWalSenderTimeout() {
+      return walSenderTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : walSenderTimeout_;
+    }
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+     * Terminate replication connections that are inactive for longer than this amount of time. 
+     * Default value: `6000` (60 seconds).
+     * Value of `0` disables the timeout mechanism.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getWalSenderTimeoutOrBuilder() {
+      return getWalSenderTimeout();
+    }
+
+    public static final int IDLE_IN_TRANSACTION_SESSION_TIMEOUT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value idleInTransactionSessionTimeout_;
+    /**
+     * <pre>
+     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+     * Values of `0` (default) disables the timeout.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * @return Whether the idleInTransactionSessionTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdleInTransactionSessionTimeout() {
+      return idleInTransactionSessionTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+     * Values of `0` (default) disables the timeout.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * @return The idleInTransactionSessionTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout() {
+      return idleInTransactionSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleInTransactionSessionTimeout_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+     * Values of `0` (default) disables the timeout.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
+      return getIdleInTransactionSessionTimeout();
+    }
+
+    public static final int STATEMENT_TIMEOUT_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value statementTimeout_;
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for statement
+     * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+     * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+     * Value of `0` (default) disables the timeout
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+     * @return Whether the statementTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatementTimeout() {
+      return statementTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for statement
+     * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+     * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+     * Value of `0` (default) disables the timeout
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+     * @return The statementTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getStatementTimeout() {
+      return statementTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementTimeout_;
+    }
+    /**
+     * <pre>
+     * The maximum time (in milliseconds) to wait for statement
+     * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+     * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+     * Value of `0` (default) disables the timeout
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getStatementTimeoutOrBuilder() {
+      return getStatementTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6339,6 +7014,24 @@ public final class UserOuterClass {
       }
       if (logStatement_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, logStatement_);
+      }
+      if (poolMode_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode.POOLING_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, poolMode_);
+      }
+      if (preparedStatementsPooling_ != null) {
+        output.writeMessage(8, getPreparedStatementsPooling());
+      }
+      if (catchupTimeout_ != null) {
+        output.writeMessage(9, getCatchupTimeout());
+      }
+      if (walSenderTimeout_ != null) {
+        output.writeMessage(10, getWalSenderTimeout());
+      }
+      if (idleInTransactionSessionTimeout_ != null) {
+        output.writeMessage(11, getIdleInTransactionSessionTimeout());
+      }
+      if (statementTimeout_ != null) {
+        output.writeMessage(12, getStatementTimeout());
       }
       unknownFields.writeTo(output);
     }
@@ -6373,6 +7066,30 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, logStatement_);
       }
+      if (poolMode_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode.POOLING_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, poolMode_);
+      }
+      if (preparedStatementsPooling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getPreparedStatementsPooling());
+      }
+      if (catchupTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getCatchupTimeout());
+      }
+      if (walSenderTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getWalSenderTimeout());
+      }
+      if (idleInTransactionSessionTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getIdleInTransactionSessionTimeout());
+      }
+      if (statementTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getStatementTimeout());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6406,6 +7123,32 @@ public final class UserOuterClass {
             .equals(other.getTempFileLimit())) return false;
       }
       if (logStatement_ != other.logStatement_) return false;
+      if (poolMode_ != other.poolMode_) return false;
+      if (hasPreparedStatementsPooling() != other.hasPreparedStatementsPooling()) return false;
+      if (hasPreparedStatementsPooling()) {
+        if (!getPreparedStatementsPooling()
+            .equals(other.getPreparedStatementsPooling())) return false;
+      }
+      if (hasCatchupTimeout() != other.hasCatchupTimeout()) return false;
+      if (hasCatchupTimeout()) {
+        if (!getCatchupTimeout()
+            .equals(other.getCatchupTimeout())) return false;
+      }
+      if (hasWalSenderTimeout() != other.hasWalSenderTimeout()) return false;
+      if (hasWalSenderTimeout()) {
+        if (!getWalSenderTimeout()
+            .equals(other.getWalSenderTimeout())) return false;
+      }
+      if (hasIdleInTransactionSessionTimeout() != other.hasIdleInTransactionSessionTimeout()) return false;
+      if (hasIdleInTransactionSessionTimeout()) {
+        if (!getIdleInTransactionSessionTimeout()
+            .equals(other.getIdleInTransactionSessionTimeout())) return false;
+      }
+      if (hasStatementTimeout() != other.hasStatementTimeout()) return false;
+      if (hasStatementTimeout()) {
+        if (!getStatementTimeout()
+            .equals(other.getStatementTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6435,6 +7178,28 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + LOG_STATEMENT_FIELD_NUMBER;
       hash = (53 * hash) + logStatement_;
+      hash = (37 * hash) + POOL_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + poolMode_;
+      if (hasPreparedStatementsPooling()) {
+        hash = (37 * hash) + PREPARED_STATEMENTS_POOLING_FIELD_NUMBER;
+        hash = (53 * hash) + getPreparedStatementsPooling().hashCode();
+      }
+      if (hasCatchupTimeout()) {
+        hash = (37 * hash) + CATCHUP_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getCatchupTimeout().hashCode();
+      }
+      if (hasWalSenderTimeout()) {
+        hash = (37 * hash) + WAL_SENDER_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getWalSenderTimeout().hashCode();
+      }
+      if (hasIdleInTransactionSessionTimeout()) {
+        hash = (37 * hash) + IDLE_IN_TRANSACTION_SESSION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getIdleInTransactionSessionTimeout().hashCode();
+      }
+      if (hasStatementTimeout()) {
+        hash = (37 * hash) + STATEMENT_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getStatementTimeout().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6596,6 +7361,38 @@ public final class UserOuterClass {
         }
         logStatement_ = 0;
 
+        poolMode_ = 0;
+
+        if (preparedStatementsPoolingBuilder_ == null) {
+          preparedStatementsPooling_ = null;
+        } else {
+          preparedStatementsPooling_ = null;
+          preparedStatementsPoolingBuilder_ = null;
+        }
+        if (catchupTimeoutBuilder_ == null) {
+          catchupTimeout_ = null;
+        } else {
+          catchupTimeout_ = null;
+          catchupTimeoutBuilder_ = null;
+        }
+        if (walSenderTimeoutBuilder_ == null) {
+          walSenderTimeout_ = null;
+        } else {
+          walSenderTimeout_ = null;
+          walSenderTimeoutBuilder_ = null;
+        }
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          idleInTransactionSessionTimeout_ = null;
+        } else {
+          idleInTransactionSessionTimeout_ = null;
+          idleInTransactionSessionTimeoutBuilder_ = null;
+        }
+        if (statementTimeoutBuilder_ == null) {
+          statementTimeout_ = null;
+        } else {
+          statementTimeout_ = null;
+          statementTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -6640,6 +7437,32 @@ public final class UserOuterClass {
           result.tempFileLimit_ = tempFileLimitBuilder_.build();
         }
         result.logStatement_ = logStatement_;
+        result.poolMode_ = poolMode_;
+        if (preparedStatementsPoolingBuilder_ == null) {
+          result.preparedStatementsPooling_ = preparedStatementsPooling_;
+        } else {
+          result.preparedStatementsPooling_ = preparedStatementsPoolingBuilder_.build();
+        }
+        if (catchupTimeoutBuilder_ == null) {
+          result.catchupTimeout_ = catchupTimeout_;
+        } else {
+          result.catchupTimeout_ = catchupTimeoutBuilder_.build();
+        }
+        if (walSenderTimeoutBuilder_ == null) {
+          result.walSenderTimeout_ = walSenderTimeout_;
+        } else {
+          result.walSenderTimeout_ = walSenderTimeoutBuilder_.build();
+        }
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          result.idleInTransactionSessionTimeout_ = idleInTransactionSessionTimeout_;
+        } else {
+          result.idleInTransactionSessionTimeout_ = idleInTransactionSessionTimeoutBuilder_.build();
+        }
+        if (statementTimeoutBuilder_ == null) {
+          result.statementTimeout_ = statementTimeout_;
+        } else {
+          result.statementTimeout_ = statementTimeoutBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6705,6 +7528,24 @@ public final class UserOuterClass {
         }
         if (other.logStatement_ != 0) {
           setLogStatementValue(other.getLogStatementValue());
+        }
+        if (other.poolMode_ != 0) {
+          setPoolModeValue(other.getPoolModeValue());
+        }
+        if (other.hasPreparedStatementsPooling()) {
+          mergePreparedStatementsPooling(other.getPreparedStatementsPooling());
+        }
+        if (other.hasCatchupTimeout()) {
+          mergeCatchupTimeout(other.getCatchupTimeout());
+        }
+        if (other.hasWalSenderTimeout()) {
+          mergeWalSenderTimeout(other.getWalSenderTimeout());
+        }
+        if (other.hasIdleInTransactionSessionTimeout()) {
+          mergeIdleInTransactionSessionTimeout(other.getIdleInTransactionSessionTimeout());
+        }
+        if (other.hasStatementTimeout()) {
+          mergeStatementTimeout(other.getStatementTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7532,6 +8373,977 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private int poolMode_ = 0;
+      /**
+       * <pre>
+       * Mode that the connection pooler is working in with specified user.
+       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+       * @return The enum numeric value on the wire for poolMode.
+       */
+      @java.lang.Override public int getPoolModeValue() {
+        return poolMode_;
+      }
+      /**
+       * <pre>
+       * Mode that the connection pooler is working in with specified user.
+       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+       * @param value The enum numeric value on the wire for poolMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolModeValue(int value) {
+        
+        poolMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mode that the connection pooler is working in with specified user.
+       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+       * @return The poolMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode getPoolMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode.valueOf(poolMode_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Mode that the connection pooler is working in with specified user.
+       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+       * @param value The poolMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolMode(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.PoolingMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        poolMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mode that the connection pooler is working in with specified user.
+       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolMode() {
+        
+        poolMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue preparedStatementsPooling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preparedStatementsPoolingBuilder_;
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       * @return Whether the preparedStatementsPooling field is set.
+       */
+      public boolean hasPreparedStatementsPooling() {
+        return preparedStatementsPoolingBuilder_ != null || preparedStatementsPooling_ != null;
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       * @return The preparedStatementsPooling.
+       */
+      public com.google.protobuf.BoolValue getPreparedStatementsPooling() {
+        if (preparedStatementsPoolingBuilder_ == null) {
+          return preparedStatementsPooling_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preparedStatementsPooling_;
+        } else {
+          return preparedStatementsPoolingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      public Builder setPreparedStatementsPooling(com.google.protobuf.BoolValue value) {
+        if (preparedStatementsPoolingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          preparedStatementsPooling_ = value;
+          onChanged();
+        } else {
+          preparedStatementsPoolingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      public Builder setPreparedStatementsPooling(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (preparedStatementsPoolingBuilder_ == null) {
+          preparedStatementsPooling_ = builderForValue.build();
+          onChanged();
+        } else {
+          preparedStatementsPoolingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      public Builder mergePreparedStatementsPooling(com.google.protobuf.BoolValue value) {
+        if (preparedStatementsPoolingBuilder_ == null) {
+          if (preparedStatementsPooling_ != null) {
+            preparedStatementsPooling_ =
+              com.google.protobuf.BoolValue.newBuilder(preparedStatementsPooling_).mergeFrom(value).buildPartial();
+          } else {
+            preparedStatementsPooling_ = value;
+          }
+          onChanged();
+        } else {
+          preparedStatementsPoolingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      public Builder clearPreparedStatementsPooling() {
+        if (preparedStatementsPoolingBuilder_ == null) {
+          preparedStatementsPooling_ = null;
+          onChanged();
+        } else {
+          preparedStatementsPooling_ = null;
+          preparedStatementsPoolingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPreparedStatementsPoolingBuilder() {
+        
+        onChanged();
+        return getPreparedStatementsPoolingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPreparedStatementsPoolingOrBuilder() {
+        if (preparedStatementsPoolingBuilder_ != null) {
+          return preparedStatementsPoolingBuilder_.getMessageOrBuilder();
+        } else {
+          return preparedStatementsPooling_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : preparedStatementsPooling_;
+        }
+      }
+      /**
+       * <pre>
+       * User can use prepared statements with transaction pooling.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPreparedStatementsPoolingFieldBuilder() {
+        if (preparedStatementsPoolingBuilder_ == null) {
+          preparedStatementsPoolingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPreparedStatementsPooling(),
+                  getParentForChildren(),
+                  isClean());
+          preparedStatementsPooling_ = null;
+        }
+        return preparedStatementsPoolingBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value catchupTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> catchupTimeoutBuilder_;
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       * @return Whether the catchupTimeout field is set.
+       */
+      public boolean hasCatchupTimeout() {
+        return catchupTimeoutBuilder_ != null || catchupTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       * @return The catchupTimeout.
+       */
+      public com.google.protobuf.Int64Value getCatchupTimeout() {
+        if (catchupTimeoutBuilder_ == null) {
+          return catchupTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : catchupTimeout_;
+        } else {
+          return catchupTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      public Builder setCatchupTimeout(com.google.protobuf.Int64Value value) {
+        if (catchupTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          catchupTimeout_ = value;
+          onChanged();
+        } else {
+          catchupTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      public Builder setCatchupTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (catchupTimeoutBuilder_ == null) {
+          catchupTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          catchupTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      public Builder mergeCatchupTimeout(com.google.protobuf.Int64Value value) {
+        if (catchupTimeoutBuilder_ == null) {
+          if (catchupTimeout_ != null) {
+            catchupTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(catchupTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            catchupTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          catchupTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      public Builder clearCatchupTimeout() {
+        if (catchupTimeoutBuilder_ == null) {
+          catchupTimeout_ = null;
+          onChanged();
+        } else {
+          catchupTimeout_ = null;
+          catchupTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCatchupTimeoutBuilder() {
+        
+        onChanged();
+        return getCatchupTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCatchupTimeoutOrBuilder() {
+        if (catchupTimeoutBuilder_ != null) {
+          return catchupTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return catchupTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : catchupTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in seconds) for synchronization between standby and primary
+       * 
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCatchupTimeoutFieldBuilder() {
+        if (catchupTimeoutBuilder_ == null) {
+          catchupTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCatchupTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          catchupTimeout_ = null;
+        }
+        return catchupTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value walSenderTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> walSenderTimeoutBuilder_;
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       * @return Whether the walSenderTimeout field is set.
+       */
+      public boolean hasWalSenderTimeout() {
+        return walSenderTimeoutBuilder_ != null || walSenderTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       * @return The walSenderTimeout.
+       */
+      public com.google.protobuf.Int64Value getWalSenderTimeout() {
+        if (walSenderTimeoutBuilder_ == null) {
+          return walSenderTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : walSenderTimeout_;
+        } else {
+          return walSenderTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      public Builder setWalSenderTimeout(com.google.protobuf.Int64Value value) {
+        if (walSenderTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          walSenderTimeout_ = value;
+          onChanged();
+        } else {
+          walSenderTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      public Builder setWalSenderTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (walSenderTimeoutBuilder_ == null) {
+          walSenderTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          walSenderTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      public Builder mergeWalSenderTimeout(com.google.protobuf.Int64Value value) {
+        if (walSenderTimeoutBuilder_ == null) {
+          if (walSenderTimeout_ != null) {
+            walSenderTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(walSenderTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            walSenderTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          walSenderTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      public Builder clearWalSenderTimeout() {
+        if (walSenderTimeoutBuilder_ == null) {
+          walSenderTimeout_ = null;
+          onChanged();
+        } else {
+          walSenderTimeout_ = null;
+          walSenderTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getWalSenderTimeoutBuilder() {
+        
+        onChanged();
+        return getWalSenderTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getWalSenderTimeoutOrBuilder() {
+        if (walSenderTimeoutBuilder_ != null) {
+          return walSenderTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return walSenderTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : walSenderTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
+       * Terminate replication connections that are inactive for longer than this amount of time. 
+       * Default value: `6000` (60 seconds).
+       * Value of `0` disables the timeout mechanism.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getWalSenderTimeoutFieldBuilder() {
+        if (walSenderTimeoutBuilder_ == null) {
+          walSenderTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getWalSenderTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          walSenderTimeout_ = null;
+        }
+        return walSenderTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value idleInTransactionSessionTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idleInTransactionSessionTimeoutBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * @return Whether the idleInTransactionSessionTimeout field is set.
+       */
+      public boolean hasIdleInTransactionSessionTimeout() {
+        return idleInTransactionSessionTimeoutBuilder_ != null || idleInTransactionSessionTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * @return The idleInTransactionSessionTimeout.
+       */
+      public com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout() {
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          return idleInTransactionSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleInTransactionSessionTimeout_;
+        } else {
+          return idleInTransactionSessionTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      public Builder setIdleInTransactionSessionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          idleInTransactionSessionTimeout_ = value;
+          onChanged();
+        } else {
+          idleInTransactionSessionTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      public Builder setIdleInTransactionSessionTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          idleInTransactionSessionTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          idleInTransactionSessionTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      public Builder mergeIdleInTransactionSessionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          if (idleInTransactionSessionTimeout_ != null) {
+            idleInTransactionSessionTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(idleInTransactionSessionTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            idleInTransactionSessionTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          idleInTransactionSessionTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      public Builder clearIdleInTransactionSessionTimeout() {
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          idleInTransactionSessionTimeout_ = null;
+          onChanged();
+        } else {
+          idleInTransactionSessionTimeout_ = null;
+          idleInTransactionSessionTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getIdleInTransactionSessionTimeoutBuilder() {
+        
+        onChanged();
+        return getIdleInTransactionSessionTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
+        if (idleInTransactionSessionTimeoutBuilder_ != null) {
+          return idleInTransactionSessionTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return idleInTransactionSessionTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : idleInTransactionSessionTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
+       * Values of `0` (default) disables the timeout.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getIdleInTransactionSessionTimeoutFieldBuilder() {
+        if (idleInTransactionSessionTimeoutBuilder_ == null) {
+          idleInTransactionSessionTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getIdleInTransactionSessionTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          idleInTransactionSessionTimeout_ = null;
+        }
+        return idleInTransactionSessionTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value statementTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementTimeoutBuilder_;
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       * @return Whether the statementTimeout field is set.
+       */
+      public boolean hasStatementTimeout() {
+        return statementTimeoutBuilder_ != null || statementTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       * @return The statementTimeout.
+       */
+      public com.google.protobuf.Int64Value getStatementTimeout() {
+        if (statementTimeoutBuilder_ == null) {
+          return statementTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementTimeout_;
+        } else {
+          return statementTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      public Builder setStatementTimeout(com.google.protobuf.Int64Value value) {
+        if (statementTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statementTimeout_ = value;
+          onChanged();
+        } else {
+          statementTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      public Builder setStatementTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (statementTimeoutBuilder_ == null) {
+          statementTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          statementTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      public Builder mergeStatementTimeout(com.google.protobuf.Int64Value value) {
+        if (statementTimeoutBuilder_ == null) {
+          if (statementTimeout_ != null) {
+            statementTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(statementTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            statementTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          statementTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      public Builder clearStatementTimeout() {
+        if (statementTimeoutBuilder_ == null) {
+          statementTimeout_ = null;
+          onChanged();
+        } else {
+          statementTimeout_ = null;
+          statementTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getStatementTimeoutBuilder() {
+        
+        onChanged();
+        return getStatementTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getStatementTimeoutOrBuilder() {
+        if (statementTimeoutBuilder_ != null) {
+          return statementTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return statementTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : statementTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time (in milliseconds) to wait for statement
+       * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
+       * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
+       * Value of `0` (default) disables the timeout
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getStatementTimeoutFieldBuilder() {
+        if (statementTimeoutBuilder_ == null) {
+          statementTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getStatementTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          statementTimeout_ = null;
+        }
+        return statementTimeoutBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7634,7 +9446,7 @@ public final class UserOuterClass {
       "\030\005 \001(\0132,.yandex.cloud.mdb.postgresql.v1." +
       "UserSettings\022)\n\005login\030\006 \001(\0132\032.google.pro" +
       "tobuf.BoolValue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=6" +
-      "3\362\3071\r[a-zA-Z0-9_]*\"\237\010\n\014UserSettings\022h\n\035d" +
+      "3\362\3071\r[a-zA-Z0-9_]*\"\370\013\n\014UserSettings\022h\n\035d" +
       "efault_transaction_isolation\030\001 \001(\0162A.yan" +
       "dex.cloud.mdb.postgresql.v1.UserSettings" +
       ".TransactionIsolation\0221\n\014lock_timeout\030\002 " +
@@ -7646,25 +9458,36 @@ public final class UserOuterClass {
       "le_limit\030\005 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\022P\n\rlog_statement\030\006 \001(\01629.yandex.clou" +
       "d.mdb.postgresql.v1.UserSettings.LogStat" +
-      "ement\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONO" +
-      "US_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_C" +
-      "OMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034" +
-      "\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRON" +
-      "OUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS" +
-      "_COMMIT_REMOTE_APPLY\020\005\"\212\001\n\014LogStatement\022" +
-      "\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_ST" +
-      "ATEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n" +
-      "\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_AL" +
-      "L\020\004\"\346\001\n\024TransactionIsolation\022%\n!TRANSACT" +
-      "ION_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTI" +
-      "ON_ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRANS" +
-      "ACTION_ISOLATION_READ_COMMITTED\020\002\022)\n%TRA" +
-      "NSACTION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"" +
-      "TRANSACTION_ISOLATION_SERIALIZABLE\020\004Bs\n\"" +
-      "yandex.cloud.api.mdb.postgresql.v1ZMgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/postgresql/v1;postgresqlb\006proto" +
-      "3"
+      "ement\022K\n\tpool_mode\030\007 \001(\01628.yandex.cloud." +
+      "mdb.postgresql.v1.UserSettings.PoolingMo" +
+      "de\022?\n\033prepared_statements_pooling\030\010 \001(\0132" +
+      "\032.google.protobuf.BoolValue\0224\n\017catchup_t" +
+      "imeout\030\t \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0227\n\022wal_sender_timeout\030\n \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022H\n#idle_in_transactio" +
+      "n_session_timeout\030\013 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021statement_timeout\030\014 \001(\0132" +
+      "\033.google.protobuf.Int64Value\"\326\001\n\021Synchro" +
+      "nousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECI" +
+      "FIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYN" +
+      "CHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COM" +
+      "MIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE" +
+      "_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_AP" +
+      "PLY\020\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_" +
+      "UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n" +
+      "\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MO" +
+      "D\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Transacti" +
+      "onIsolation\022%\n!TRANSACTION_ISOLATION_UNS" +
+      "PECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_READ" +
+      "_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_" +
+      "READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATIO" +
+      "N_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLA" +
+      "TION_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030PO" +
+      "OLING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n" +
+      "\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003Bs\n\"yandex." +
+      "cloud.api.mdb.postgresql.v1ZMgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/md" +
+      "b/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7695,7 +9518,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor,
-        new java.lang.String[] { "DefaultTransactionIsolation", "LockTimeout", "LogMinDurationStatement", "SynchronousCommit", "TempFileLimit", "LogStatement", });
+        new java.lang.String[] { "DefaultTransactionIsolation", "LockTimeout", "LogMinDurationStatement", "SynchronousCommit", "TempFileLimit", "LogStatement", "PoolMode", "PreparedStatementsPooling", "CatchupTimeout", "WalSenderTimeout", "IdleInTransactionSessionTimeout", "StatementTimeout", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

@@ -3713,6 +3713,16 @@ public final class AddressServiceOuterClass {
      */
     yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ExternalIpv4AddressSpecOrBuilder getExternalIpv4AddressSpecOrBuilder();
 
+    /**
+     * <pre>
+     * Specifies if address protected from deletion.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 10;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
+
     public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest.AddressSpecCase getAddressSpecCase();
   }
   /**
@@ -3807,6 +3817,11 @@ public final class AddressServiceOuterClass {
                 addressSpec_ = subBuilder.buildPartial();
               }
               addressSpecCase_ = 5;
+              break;
+            }
+            case 80: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -4162,6 +4177,21 @@ public final class AddressServiceOuterClass {
       return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ExternalIpv4AddressSpec.getDefaultInstance();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 10;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Specifies if address protected from deletion.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 10;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4193,6 +4223,9 @@ public final class AddressServiceOuterClass {
           4);
       if (addressSpecCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ExternalIpv4AddressSpec) addressSpec_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(10, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -4226,6 +4259,10 @@ public final class AddressServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ExternalIpv4AddressSpec) addressSpec_);
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4249,6 +4286,8 @@ public final class AddressServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!getAddressSpecCase().equals(other.getAddressSpecCase())) return false;
       switch (addressSpecCase_) {
         case 5:
@@ -4279,6 +4318,9 @@ public final class AddressServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       switch (addressSpecCase_) {
         case 5:
           hash = (37 * hash) + EXTERNAL_IPV4_ADDRESS_SPEC_FIELD_NUMBER;
@@ -4449,6 +4491,8 @@ public final class AddressServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        deletionProtection_ = false;
+
         addressSpecCase_ = 0;
         addressSpec_ = null;
         return this;
@@ -4490,6 +4534,7 @@ public final class AddressServiceOuterClass {
             result.addressSpec_ = externalIpv4AddressSpecBuilder_.build();
           }
         }
+        result.deletionProtection_ = deletionProtection_;
         result.addressSpecCase_ = addressSpecCase_;
         onBuilt();
         return result;
@@ -4553,6 +4598,9 @@ public final class AddressServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
+        }
         switch (other.getAddressSpecCase()) {
           case EXTERNAL_IPV4_ADDRESS_SPEC: {
             mergeExternalIpv4AddressSpec(other.getExternalIpv4AddressSpec());
@@ -5203,6 +5251,49 @@ public final class AddressServiceOuterClass {
         addressSpecCase_ = 5;
         onChanged();;
         return externalIpv4AddressSpecBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Specifies if address protected from deletion.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 10;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Specifies if address protected from deletion.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 10;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies if address protected from deletion.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7097,6 +7188,16 @@ public final class AddressServiceOuterClass {
      * @return The reserved.
      */
     boolean getReserved();
+
+    /**
+     * <pre>
+     * Specifies if address protected from deletion.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 7;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateAddressRequest}
@@ -7194,6 +7295,11 @@ public final class AddressServiceOuterClass {
             case 48: {
 
               reserved_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -7552,6 +7658,21 @@ public final class AddressServiceOuterClass {
       return reserved_;
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 7;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Specifies if address protected from deletion.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 7;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7586,6 +7707,9 @@ public final class AddressServiceOuterClass {
           5);
       if (reserved_ != false) {
         output.writeBool(6, reserved_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(7, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -7623,6 +7747,10 @@ public final class AddressServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, reserved_);
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7653,6 +7781,8 @@ public final class AddressServiceOuterClass {
           other.internalGetLabels())) return false;
       if (getReserved()
           != other.getReserved()) return false;
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7681,6 +7811,9 @@ public final class AddressServiceOuterClass {
       hash = (37 * hash) + RESERVED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getReserved());
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7851,6 +7984,8 @@ public final class AddressServiceOuterClass {
         internalGetMutableLabels().clear();
         reserved_ = false;
 
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -7889,6 +8024,7 @@ public final class AddressServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.reserved_ = reserved_;
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -7956,6 +8092,9 @@ public final class AddressServiceOuterClass {
             other.internalGetLabels());
         if (other.getReserved() != false) {
           setReserved(other.getReserved());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8673,6 +8812,49 @@ public final class AddressServiceOuterClass {
       public Builder clearReserved() {
         
         reserved_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Specifies if address protected from deletion.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Specifies if address protected from deletion.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies if address protected from deletion.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -13977,7 +14159,7 @@ public final class AddressServiceOuterClass {
       "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\016\n\006f" +
       "ilter\030\004 \001(\t\"a\n\025ListAddressesResponse\022/\n\t" +
       "addresses\030\001 \003(\0132\034.yandex.cloud.vpc.v1.Ad" +
-      "dress\022\027\n\017next_page_token\030\002 \001(\t\"\244\003\n\024Creat" +
+      "dress\022\027\n\017next_page_token\030\002 \001(\t\"\301\003\n\024Creat" +
       "eAddressRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
       "\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0" +
       "-9]{1,61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t" +
@@ -13986,69 +14168,71 @@ public final class AddressServiceOuterClass {
       "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
       "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022R\n\032external_i" +
       "pv4_address_spec\030\005 \001(\0132,.yandex.cloud.vp" +
-      "c.v1.ExternalIpv4AddressSpecH\000\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n" +
-      "\014address_spec\"{\n\027ExternalIpv4AddressSpec" +
-      "\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_id\030\002 \001(\t\022>\n\014re" +
-      "quirements\030\003 \001(\0132(.yandex.cloud.vpc.v1.A" +
-      "ddressRequirements\"+\n\025CreateAddressMetad" +
-      "ata\022\022\n\naddress_id\030\001 \001(\t\"\204\003\n\024UpdateAddres" +
-      "sRequest\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a" +
-      "-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(" +
-      "\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\005 \003(\01325.yandex.c" +
-      "loud.vpc.v1.UpdateAddressRequest.LabelsE" +
-      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\020\n\010reserve" +
-      "d\030\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"+\n\025UpdateAddressMetadata\022" +
-      "\022\n\naddress_id\030\001 \001(\t\"8\n\024DeleteAddressRequ" +
-      "est\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n" +
-      "\025DeleteAddressMetadata\022\022\n\naddress_id\030\001 \001" +
-      "(\t\"~\n\034ListAddressOperationsRequest\022 \n\nad" +
-      "dress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\"o\n\035ListAddressOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"c\n\022MoveAddressRequest\022 \n\naddress_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folde" +
-      "r_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveAddressM" +
-      "etadata\022\022\n\naddress_id\030\001 \001(\t2\307\t\n\016AddressS" +
-      "ervice\022s\n\003Get\022&.yandex.cloud.vpc.v1.GetA" +
-      "ddressRequest\032\034.yandex.cloud.vpc.v1.Addr" +
-      "ess\"&\202\323\344\223\002 \022\036/vpc/v1/addresses/{address_" +
-      "id}\022|\n\nGetByValue\022-.yandex.cloud.vpc.v1." +
-      "GetAddressByValueRequest\032\034.yandex.cloud." +
-      "vpc.v1.Address\"!\202\323\344\223\002\033\022\031/vpc/v1/addresse" +
-      "s:byValue\022x\n\004List\022).yandex.cloud.vpc.v1." +
-      "ListAddressesRequest\032*.yandex.cloud.vpc." +
-      "v1.ListAddressesResponse\"\031\202\323\344\223\002\023\022\021/vpc/v" +
-      "1/addresses\022\230\001\n\006Create\022).yandex.cloud.vp" +
-      "c.v1.CreateAddressRequest\032!.yandex.cloud" +
-      ".operation.Operation\"@\202\323\344\223\002\026\"\021/vpc/v1/ad" +
-      "dresses:\001*\262\322* \n\025CreateAddressMetadata\022\007A" +
-      "ddress\022\245\001\n\006Update\022).yandex.cloud.vpc.v1." +
-      "UpdateAddressRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"M\202\323\344\223\002#2\036/vpc/v1/address" +
-      "es/{address_id}:\001*\262\322* \n\025UpdateAddressMet" +
-      "adata\022\007Address\022\260\001\n\006Delete\022).yandex.cloud" +
-      ".vpc.v1.DeleteAddressRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"X\202\323\344\223\002 *\036/vpc/v1" +
-      "/addresses/{address_id}\262\322*.\n\025DeleteAddre" +
-      "ssMetadata\022\025google.protobuf.Empty\022\252\001\n\016Li" +
-      "stOperations\0221.yandex.cloud.vpc.v1.ListA" +
-      "ddressOperationsRequest\0322.yandex.cloud.v" +
-      "pc.v1.ListAddressOperationsResponse\"1\202\323\344" +
-      "\223\002+\022)/vpc/v1/addresses/{address_id}/oper" +
-      "ations\022\244\001\n\004Move\022\'.yandex.cloud.vpc.v1.Mo" +
-      "veAddressRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"P\202\323\344\223\002(\"#/vpc/v1/addresses/{" +
-      "address_id}:move:\001*\262\322*\036\n\023MoveAddressMeta" +
-      "data\022\007AddressBV\n\027yandex.cloud.api.vpc.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/vpc/v1;vpcb\006proto3"
+      "c.v1.ExternalIpv4AddressSpecH\000\022\033\n\023deleti" +
+      "on_protection\030\n \001(\010\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014address_sp" +
+      "ec\"{\n\027ExternalIpv4AddressSpec\022\017\n\007address" +
+      "\030\001 \001(\t\022\017\n\007zone_id\030\002 \001(\t\022>\n\014requirements\030" +
+      "\003 \001(\0132(.yandex.cloud.vpc.v1.AddressRequi" +
+      "rements\"+\n\025CreateAddressMetadata\022\022\n\naddr" +
+      "ess_id\030\001 \001(\t\"\241\003\n\024UpdateAddressRequest\022 \n" +
+      "\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013updat" +
+      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61" +
+      "}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
+      "6\022\206\001\n\006labels\030\005 \003(\01325.yandex.cloud.vpc.v1" +
+      ".UpdateAddressRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\022\020\n\010reserved\030\006 \001(\010\022\033\n\023" +
+      "deletion_protection\030\007 \001(\010\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Upda" +
+      "teAddressMetadata\022\022\n\naddress_id\030\001 \001(\t\"8\n" +
+      "\024DeleteAddressRequest\022 \n\naddress_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteAddressMetadata" +
+      "\022\022\n\naddress_id\030\001 \001(\t\"~\n\034ListAddressOpera" +
+      "tionsRequest\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListAddr" +
+      "essOperationsResponse\0225\n\noperations\030\001 \003(" +
+      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"c\n\022MoveAddressRequ" +
+      "est\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n" +
+      "\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\")\n\023MoveAddressMetadata\022\022\n\naddress_id\030" +
+      "\001 \001(\t2\307\t\n\016AddressService\022s\n\003Get\022&.yandex" +
+      ".cloud.vpc.v1.GetAddressRequest\032\034.yandex" +
+      ".cloud.vpc.v1.Address\"&\202\323\344\223\002 \022\036/vpc/v1/a" +
+      "ddresses/{address_id}\022|\n\nGetByValue\022-.ya" +
+      "ndex.cloud.vpc.v1.GetAddressByValueReque" +
+      "st\032\034.yandex.cloud.vpc.v1.Address\"!\202\323\344\223\002\033" +
+      "\022\031/vpc/v1/addresses:byValue\022x\n\004List\022).ya" +
+      "ndex.cloud.vpc.v1.ListAddressesRequest\032*" +
+      ".yandex.cloud.vpc.v1.ListAddressesRespon" +
+      "se\"\031\202\323\344\223\002\023\022\021/vpc/v1/addresses\022\230\001\n\006Create" +
+      "\022).yandex.cloud.vpc.v1.CreateAddressRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"@" +
+      "\202\323\344\223\002\026\"\021/vpc/v1/addresses:\001*\262\322* \n\025Create" +
+      "AddressMetadata\022\007Address\022\245\001\n\006Update\022).ya" +
+      "ndex.cloud.vpc.v1.UpdateAddressRequest\032!" +
+      ".yandex.cloud.operation.Operation\"M\202\323\344\223\002" +
+      "#2\036/vpc/v1/addresses/{address_id}:\001*\262\322* " +
+      "\n\025UpdateAddressMetadata\022\007Address\022\260\001\n\006Del" +
+      "ete\022).yandex.cloud.vpc.v1.DeleteAddressR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"X\202\323\344\223\002 *\036/vpc/v1/addresses/{address_id" +
+      "}\262\322*.\n\025DeleteAddressMetadata\022\025google.pro" +
+      "tobuf.Empty\022\252\001\n\016ListOperations\0221.yandex." +
+      "cloud.vpc.v1.ListAddressOperationsReques" +
+      "t\0322.yandex.cloud.vpc.v1.ListAddressOpera" +
+      "tionsResponse\"1\202\323\344\223\002+\022)/vpc/v1/addresses" +
+      "/{address_id}/operations\022\244\001\n\004Move\022\'.yand" +
+      "ex.cloud.vpc.v1.MoveAddressRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"P\202\323\344\223\002(\"#/" +
+      "vpc/v1/addresses/{address_id}:move:\001*\262\322*" +
+      "\036\n\023MoveAddressMetadata\022\007AddressBV\n\027yande" +
+      "x.cloud.api.vpc.v1Z;github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/vpc/v1;vpcb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14089,7 +14273,7 @@ public final class AddressServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_CreateAddressRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_CreateAddressRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ExternalIpv4AddressSpec", "AddressSpec", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ExternalIpv4AddressSpec", "DeletionProtection", "AddressSpec", });
     internal_static_yandex_cloud_vpc_v1_CreateAddressRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_CreateAddressRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_CreateAddressRequest_LabelsEntry_fieldAccessorTable = new
@@ -14113,7 +14297,7 @@ public final class AddressServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_UpdateAddressRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UpdateAddressRequest_descriptor,
-        new java.lang.String[] { "AddressId", "UpdateMask", "Name", "Description", "Labels", "Reserved", });
+        new java.lang.String[] { "AddressId", "UpdateMask", "Name", "Description", "Labels", "Reserved", "DeletionProtection", });
     internal_static_yandex_cloud_vpc_v1_UpdateAddressRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_UpdateAddressRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_UpdateAddressRequest_LabelsEntry_fieldAccessorTable = new
