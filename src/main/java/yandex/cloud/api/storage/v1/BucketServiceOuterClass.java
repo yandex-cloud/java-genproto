@@ -5631,6 +5631,36 @@ public final class BucketServiceOuterClass {
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+     * @return Whether the objectLock field is set.
+     */
+    boolean hasObjectLock();
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+     * @return The objectLock.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getObjectLock();
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.UpdateBucketRequest}
@@ -5797,6 +5827,19 @@ public final class BucketServiceOuterClass {
               }
               tags_.add(
                   input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry));
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder subBuilder = null;
+              if (objectLock_ != null) {
+                subBuilder = objectLock_.toBuilder();
+              }
+              objectLock_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(objectLock_);
+                objectLock_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6382,6 +6425,47 @@ public final class BucketServiceOuterClass {
       return tags_.get(index);
     }
 
+    public static final int OBJECT_LOCK_FIELD_NUMBER = 13;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock objectLock_;
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+     * @return Whether the objectLock field is set.
+     */
+    @java.lang.Override
+    public boolean hasObjectLock() {
+      return objectLock_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+     * @return The objectLock.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getObjectLock() {
+      return objectLock_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance() : objectLock_;
+    }
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder() {
+      return getObjectLock();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6431,6 +6515,9 @@ public final class BucketServiceOuterClass {
       }
       for (int i = 0; i < tags_.size(); i++) {
         output.writeMessage(12, tags_.get(i));
+      }
+      if (objectLock_ != null) {
+        output.writeMessage(13, getObjectLock());
       }
       unknownFields.writeTo(output);
     }
@@ -6487,6 +6574,10 @@ public final class BucketServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, tags_.get(i));
       }
+      if (objectLock_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getObjectLock());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6540,6 +6631,11 @@ public final class BucketServiceOuterClass {
       }
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
+      if (hasObjectLock() != other.hasObjectLock()) return false;
+      if (hasObjectLock()) {
+        if (!getObjectLock()
+            .equals(other.getObjectLock())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6591,6 +6687,10 @@ public final class BucketServiceOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (hasObjectLock()) {
+        hash = (37 * hash) + OBJECT_LOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectLock().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6784,6 +6884,12 @@ public final class BucketServiceOuterClass {
         } else {
           tagsBuilder_.clear();
         }
+        if (objectLockBuilder_ == null) {
+          objectLock_ = null;
+        } else {
+          objectLock_ = null;
+          objectLockBuilder_ = null;
+        }
         return this;
       }
 
@@ -6866,6 +6972,11 @@ public final class BucketServiceOuterClass {
           result.tags_ = tags_;
         } else {
           result.tags_ = tagsBuilder_.build();
+        }
+        if (objectLockBuilder_ == null) {
+          result.objectLock_ = objectLock_;
+        } else {
+          result.objectLock_ = objectLockBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7021,6 +7132,9 @@ public final class BucketServiceOuterClass {
               tagsBuilder_.addAllMessages(other.tags_);
             }
           }
+        }
+        if (other.hasObjectLock()) {
+          mergeObjectLock(other.getObjectLock());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9188,6 +9302,170 @@ public final class BucketServiceOuterClass {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock objectLock_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder> objectLockBuilder_;
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       * @return Whether the objectLock field is set.
+       */
+      public boolean hasObjectLock() {
+        return objectLockBuilder_ != null || objectLock_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       * @return The objectLock.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getObjectLock() {
+        if (objectLockBuilder_ == null) {
+          return objectLock_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance() : objectLock_;
+        } else {
+          return objectLockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      public Builder setObjectLock(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock value) {
+        if (objectLockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objectLock_ = value;
+          onChanged();
+        } else {
+          objectLockBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      public Builder setObjectLock(
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder builderForValue) {
+        if (objectLockBuilder_ == null) {
+          objectLock_ = builderForValue.build();
+          onChanged();
+        } else {
+          objectLockBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      public Builder mergeObjectLock(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock value) {
+        if (objectLockBuilder_ == null) {
+          if (objectLock_ != null) {
+            objectLock_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.newBuilder(objectLock_).mergeFrom(value).buildPartial();
+          } else {
+            objectLock_ = value;
+          }
+          onChanged();
+        } else {
+          objectLockBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      public Builder clearObjectLock() {
+        if (objectLockBuilder_ == null) {
+          objectLock_ = null;
+          onChanged();
+        } else {
+          objectLock_ = null;
+          objectLockBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder getObjectLockBuilder() {
+        
+        onChanged();
+        return getObjectLockFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder() {
+        if (objectLockBuilder_ != null) {
+          return objectLockBuilder_.getMessageOrBuilder();
+        } else {
+          return objectLock_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance() : objectLock_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder> 
+          getObjectLockFieldBuilder() {
+        if (objectLockBuilder_ == null) {
+          objectLockBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder>(
+                  getObjectLock(),
+                  getParentForChildren(),
+                  isClean());
+          objectLock_ = null;
+        }
+        return objectLockBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16926,7 +17204,7 @@ public final class BucketServiceOuterClass {
       "nonymousAccessFlags\022)\n\003acl\030\007 \001(\0132\034.yande" +
       "x.cloud.storage.v1.ACL\022*\n\004tags\030\010 \003(\0132\034.y" +
       "andex.cloud.storage.v1.Tag\"$\n\024CreateBuck" +
-      "etMetadata\022\014\n\004name\030\001 \001(\t\"\316\004\n\023UpdateBucke" +
+      "etMetadata\022\014\n\004name\030\001 \001(\t\"\210\005\n\023UpdateBucke" +
       "tRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0224\n\nfield_ma" +
       "sk\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350\307" +
       "1\001\022M\n\026anonymous_access_flags\030\003 \001(\0132-.yan" +
@@ -16941,67 +17219,68 @@ public final class BucketServiceOuterClass {
       "cycleRule\022\'\n\006policy\030\n \001(\0132\027.google.proto" +
       "buf.Struct\022)\n\003acl\030\013 \001(\0132\034.yandex.cloud.s" +
       "torage.v1.ACL\022*\n\004tags\030\014 \003(\0132\034.yandex.clo" +
-      "ud.storage.v1.Tag\"$\n\024UpdateBucketMetadat" +
-      "a\022\014\n\004name\030\001 \001(\t\")\n\023DeleteBucketRequest\022\022" +
-      "\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024DeleteBucketMetada" +
-      "ta\022\014\n\004name\030\001 \001(\t\"+\n\025GetBucketStatsReques" +
-      "t\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"1\n\033GetBucketHTTPSC" +
-      "onfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"n\n\034Self" +
-      "ManagedHTTPSConfigParams\022&\n\017certificate_" +
-      "pem\030\001 \001(\tB\r\212\3101\t<=3145728\022&\n\017private_key_" +
-      "pem\030\002 \001(\tB\r\212\3101\t<=3145728\"=\n#CertificateM" +
-      "anagerHTTPSConfigParams\022\026\n\016certificate_i" +
-      "d\030\001 \001(\t\"\355\001\n\033SetBucketHTTPSConfigRequest\022" +
-      "\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n\014self_managed\030\002 \001(" +
-      "\01325.yandex.cloud.storage.v1.SelfManagedH" +
-      "TTPSConfigParamsH\000\022[\n\023certificate_manage" +
-      "r\030\003 \001(\0132<.yandex.cloud.storage.v1.Certif" +
-      "icateManagerHTTPSConfigParamsH\000B\016\n\006param" +
-      "s\022\004\300\3011\001\",\n\034SetBucketHTTPSConfigMetadata\022" +
-      "\014\n\004name\030\001 \001(\t\"4\n\036DeleteBucketHTTPSConfig" +
-      "Request\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"/\n\037DeleteBuc" +
-      "ketHTTPSConfigMetadata\022\014\n\004name\030\001 \001(\t2\341\013\n" +
-      "\rBucketService\022~\n\004List\022+.yandex.cloud.st" +
-      "orage.v1.ListBucketsRequest\032,.yandex.clo" +
-      "ud.storage.v1.ListBucketsResponse\"\033\202\323\344\223\002" +
-      "\025\022\023/storage/v1/buckets\022u\n\003Get\022).yandex.c" +
-      "loud.storage.v1.GetBucketRequest\032\037.yande" +
-      "x.cloud.storage.v1.Bucket\"\"\202\323\344\223\002\034\022\032/stor" +
-      "age/v1/buckets/{name}\022\233\001\n\006Create\022,.yande" +
-      "x.cloud.storage.v1.CreateBucketRequest\032!" +
-      ".yandex.cloud.operation.Operation\"@\202\323\344\223\002" +
-      "\030\"\023/storage/v1/buckets:\001*\262\322*\036\n\024CreateBuc" +
-      "ketMetadata\022\006Bucket\022\242\001\n\006Update\022,.yandex." +
-      "cloud.storage.v1.UpdateBucketRequest\032!.y" +
-      "andex.cloud.operation.Operation\"G\202\323\344\223\002\0372" +
-      "\032/storage/v1/buckets/{name}:\001*\262\322*\036\n\024Upda" +
-      "teBucketMetadata\022\006Bucket\022\256\001\n\006Delete\022,.ya" +
-      "ndex.cloud.storage.v1.DeleteBucketReques" +
-      "t\032!.yandex.cloud.operation.Operation\"S\202\323" +
-      "\344\223\002\034*\032/storage/v1/buckets/{name}\262\322*-\n\024De" +
-      "leteBucketMetadata\022\025google.protobuf.Empt" +
-      "y\022\215\001\n\010GetStats\022..yandex.cloud.storage.v1" +
-      ".GetBucketStatsRequest\032$.yandex.cloud.st" +
-      "orage.v1.BucketStats\"+\202\323\344\223\002%\022#/storage/v" +
-      "1/buckets/{name}:getStats\022\237\001\n\016GetHTTPSCo" +
-      "nfig\0224.yandex.cloud.storage.v1.GetBucket" +
-      "HTTPSConfigRequest\032$.yandex.cloud.storag" +
-      "e.v1.HTTPSConfig\"1\202\323\344\223\002+\022)/storage/v1/bu" +
-      "ckets/{name}:getHttpsConfig\022\316\001\n\016SetHTTPS" +
-      "Config\0224.yandex.cloud.storage.v1.SetBuck" +
-      "etHTTPSConfigRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"c\202\323\344\223\002.\")/storage/v1/buc" +
-      "kets/{name}:setHttpsConfig:\001*\262\322*+\n\034SetBu" +
-      "cketHTTPSConfigMetadata\022\013HTTPSConfig\022\341\001\n" +
-      "\021DeleteHTTPSConfig\0227.yandex.cloud.storag" +
-      "e.v1.DeleteBucketHTTPSConfigRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"p\202\323\344\223\002.\"," +
-      "/storage/v1/buckets/{name}:deleteHttpsCo" +
-      "nfig\262\322*8\n\037DeleteBucketHTTPSConfigMetadat" +
-      "a\022\025google.protobuf.EmptyBb\n\033yandex.cloud" +
-      ".api.storage.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/storage/v1;sto" +
-      "rageb\006proto3"
+      "ud.storage.v1.Tag\0228\n\013object_lock\030\r \001(\0132#" +
+      ".yandex.cloud.storage.v1.ObjectLock\"$\n\024U" +
+      "pdateBucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023Del" +
+      "eteBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024" +
+      "DeleteBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025Ge" +
+      "tBucketStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"" +
+      "1\n\033GetBucketHTTPSConfigRequest\022\022\n\004name\030\001" +
+      " \001(\tB\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigPara" +
+      "ms\022&\n\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=31457" +
+      "28\022&\n\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=31457" +
+      "28\"=\n#CertificateManagerHTTPSConfigParam" +
+      "s\022\026\n\016certificate_id\030\001 \001(\t\"\355\001\n\033SetBucketH" +
+      "TTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n" +
+      "\014self_managed\030\002 \001(\01325.yandex.cloud.stora" +
+      "ge.v1.SelfManagedHTTPSConfigParamsH\000\022[\n\023" +
+      "certificate_manager\030\003 \001(\0132<.yandex.cloud" +
+      ".storage.v1.CertificateManagerHTTPSConfi" +
+      "gParamsH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketHT" +
+      "TPSConfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036Delet" +
+      "eBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB" +
+      "\004\350\3071\001\"/\n\037DeleteBucketHTTPSConfigMetadata" +
+      "\022\014\n\004name\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004List" +
+      "\022+.yandex.cloud.storage.v1.ListBucketsRe" +
+      "quest\032,.yandex.cloud.storage.v1.ListBuck" +
+      "etsResponse\"\033\202\323\344\223\002\025\022\023/storage/v1/buckets" +
+      "\022u\n\003Get\022).yandex.cloud.storage.v1.GetBuc" +
+      "ketRequest\032\037.yandex.cloud.storage.v1.Buc" +
+      "ket\"\"\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}\022" +
+      "\233\001\n\006Create\022,.yandex.cloud.storage.v1.Cre" +
+      "ateBucketRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"@\202\323\344\223\002\030\"\023/storage/v1/buckets" +
+      ":\001*\262\322*\036\n\024CreateBucketMetadata\022\006Bucket\022\242\001" +
+      "\n\006Update\022,.yandex.cloud.storage.v1.Updat" +
+      "eBucketRequest\032!.yandex.cloud.operation." +
+      "Operation\"G\202\323\344\223\002\0372\032/storage/v1/buckets/{" +
+      "name}:\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Buck" +
+      "et\022\256\001\n\006Delete\022,.yandex.cloud.storage.v1." +
+      "DeleteBucketRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"S\202\323\344\223\002\034*\032/storage/v1/buck" +
+      "ets/{name}\262\322*-\n\024DeleteBucketMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\215\001\n\010GetStats\022..yande" +
+      "x.cloud.storage.v1.GetBucketStatsRequest" +
+      "\032$.yandex.cloud.storage.v1.BucketStats\"+" +
+      "\202\323\344\223\002%\022#/storage/v1/buckets/{name}:getSt" +
+      "ats\022\237\001\n\016GetHTTPSConfig\0224.yandex.cloud.st" +
+      "orage.v1.GetBucketHTTPSConfigRequest\032$.y" +
+      "andex.cloud.storage.v1.HTTPSConfig\"1\202\323\344\223" +
+      "\002+\022)/storage/v1/buckets/{name}:getHttpsC" +
+      "onfig\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud." +
+      "storage.v1.SetBucketHTTPSConfigRequest\032!" +
+      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
+      ".\")/storage/v1/buckets/{name}:setHttpsCo" +
+      "nfig:\001*\262\322*+\n\034SetBucketHTTPSConfigMetadat" +
+      "a\022\013HTTPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227.y" +
+      "andex.cloud.storage.v1.DeleteBucketHTTPS" +
+      "ConfigRequest\032!.yandex.cloud.operation.O" +
+      "peration\"p\202\323\344\223\002.\",/storage/v1/buckets/{n" +
+      "ame}:deleteHttpsConfig\262\322*8\n\037DeleteBucket" +
+      "HTTPSConfigMetadata\022\025google.protobuf.Emp" +
+      "tyBb\n\033yandex.cloud.api.storage.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/storage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17049,7 +17328,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "FieldMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", });
+        new java.lang.String[] { "Name", "FieldMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", });
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_fieldAccessorTable = new

@@ -2673,6 +2673,33 @@ public final class ContainerOuterClass {
      * <code>.yandex.cloud.serverless.containers.v1.ScalingPolicy scaling_policy = 14;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.ScalingPolicyOrBuilder getScalingPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Options for logging from the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.Revision}
@@ -2857,6 +2884,19 @@ public final class ContainerOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(scalingPolicy_);
                 scalingPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3604,6 +3644,44 @@ public final class ContainerOuterClass {
       return getScalingPolicy();
     }
 
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 15;
+    private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Options for logging from the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for logging from the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Options for logging from the container.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3659,6 +3737,9 @@ public final class ContainerOuterClass {
       }
       if (scalingPolicy_ != null) {
         output.writeMessage(14, getScalingPolicy());
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(15, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -3720,6 +3801,10 @@ public final class ContainerOuterClass {
       if (scalingPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getScalingPolicy());
+      }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getLogOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3784,6 +3869,11 @@ public final class ContainerOuterClass {
         if (!getScalingPolicy()
             .equals(other.getScalingPolicy())) return false;
       }
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3839,6 +3929,10 @@ public final class ContainerOuterClass {
       if (hasScalingPolicy()) {
         hash = (37 * hash) + SCALING_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getScalingPolicy().hashCode();
+      }
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4034,6 +4128,12 @@ public final class ContainerOuterClass {
           scalingPolicy_ = null;
           scalingPolicyBuilder_ = null;
         }
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -4110,6 +4210,11 @@ public final class ContainerOuterClass {
           result.scalingPolicy_ = scalingPolicy_;
         } else {
           result.scalingPolicy_ = scalingPolicyBuilder_.build();
+        }
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4227,6 +4332,9 @@ public final class ContainerOuterClass {
         }
         if (other.hasScalingPolicy()) {
           mergeScalingPolicy(other.getScalingPolicy());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6172,6 +6280,161 @@ public final class ContainerOuterClass {
           scalingPolicy_ = null;
         }
         return scalingPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the container.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13067,6 +13330,1228 @@ public final class ContainerOuterClass {
 
   }
 
+  public interface LogOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.LogOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Is logging from container disabled.
+     * </pre>
+     *
+     * <code>bool disabled = 1;</code>
+     * @return The disabled.
+     */
+    boolean getDisabled();
+
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the logGroupId field is set.
+     */
+    boolean hasLogGroupId();
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The logGroupId.
+     */
+    java.lang.String getLogGroupId();
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for logGroupId.
+     */
+    com.google.protobuf.ByteString
+        getLogGroupIdBytes();
+
+    /**
+     * <pre>
+     * Entry should be written to default log group for specified folder.
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the folderId field is set.
+     */
+    boolean hasFolderId();
+    /**
+     * <pre>
+     * Entry should be written to default log group for specified folder.
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Entry should be written to default log group for specified folder.
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Minimum log entry level.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+     * @return The enum numeric value on the wire for minLevel.
+     */
+    int getMinLevelValue();
+    /**
+     * <pre>
+     * Minimum log entry level.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+     * @return The minLevel.
+     */
+    yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getMinLevel();
+
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.DestinationCase getDestinationCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.containers.v1.LogOptions}
+   */
+  public static final class LogOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.containers.v1.LogOptions)
+      LogOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogOptions.newBuilder() to construct.
+    private LogOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogOptions() {
+      minLevel_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              disabled_ = input.readBool();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              destinationCase_ = 2;
+              destination_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              destinationCase_ = 3;
+              destination_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              minLevel_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_LogOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_LogOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder.class);
+    }
+
+    private int destinationCase_ = 0;
+    private java.lang.Object destination_;
+    public enum DestinationCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LOG_GROUP_ID(2),
+      FOLDER_ID(3),
+      DESTINATION_NOT_SET(0);
+      private final int value;
+      private DestinationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DestinationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DestinationCase forNumber(int value) {
+        switch (value) {
+          case 2: return LOG_GROUP_ID;
+          case 3: return FOLDER_ID;
+          case 0: return DESTINATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DestinationCase
+    getDestinationCase() {
+      return DestinationCase.forNumber(
+          destinationCase_);
+    }
+
+    public static final int DISABLED_FIELD_NUMBER = 1;
+    private boolean disabled_;
+    /**
+     * <pre>
+     * Is logging from container disabled.
+     * </pre>
+     *
+     * <code>bool disabled = 1;</code>
+     * @return The disabled.
+     */
+    @java.lang.Override
+    public boolean getDisabled() {
+      return disabled_;
+    }
+
+    public static final int LOG_GROUP_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the logGroupId field is set.
+     */
+    public boolean hasLogGroupId() {
+      return destinationCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The logGroupId.
+     */
+    public java.lang.String getLogGroupId() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 2) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (destinationCase_ == 2) {
+          destination_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
+     * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for logGroupId.
+     */
+    public com.google.protobuf.ByteString
+        getLogGroupIdBytes() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 2) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (destinationCase_ == 2) {
+          destination_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Entry should be written to default log group for specified folder.
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return Whether the folderId field is set.
+     */
+    public boolean hasFolderId() {
+      return destinationCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Entry should be written to default log group for specified folder.
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The folderId.
+     */
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 3) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (destinationCase_ == 3) {
+          destination_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entry should be written to default log group for specified folder.
+     * </pre>
+     *
+     * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * @return The bytes for folderId.
+     */
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = "";
+      if (destinationCase_ == 3) {
+        ref = destination_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (destinationCase_ == 3) {
+          destination_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_LEVEL_FIELD_NUMBER = 4;
+    private int minLevel_;
+    /**
+     * <pre>
+     * Minimum log entry level.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+     * @return The enum numeric value on the wire for minLevel.
+     */
+    @java.lang.Override public int getMinLevelValue() {
+      return minLevel_;
+    }
+    /**
+     * <pre>
+     * Minimum log entry level.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+     * @return The minLevel.
+     */
+    @java.lang.Override public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getMinLevel() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(minLevel_);
+      return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (disabled_ != false) {
+        output.writeBool(1, disabled_);
+      }
+      if (destinationCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destination_);
+      }
+      if (destinationCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destination_);
+      }
+      if (minLevel_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, minLevel_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (disabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, disabled_);
+      }
+      if (destinationCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destination_);
+      }
+      if (destinationCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destination_);
+      }
+      if (minLevel_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, minLevel_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions other = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions) obj;
+
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (minLevel_ != other.minLevel_) return false;
+      if (!getDestinationCase().equals(other.getDestinationCase())) return false;
+      switch (destinationCase_) {
+        case 2:
+          if (!getLogGroupId()
+              .equals(other.getLogGroupId())) return false;
+          break;
+        case 3:
+          if (!getFolderId()
+              .equals(other.getFolderId())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisabled());
+      hash = (37 * hash) + MIN_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + minLevel_;
+      switch (destinationCase_) {
+        case 2:
+          hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getLogGroupId().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getFolderId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.containers.v1.LogOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.containers.v1.LogOptions)
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_LogOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_LogOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.class, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        disabled_ = false;
+
+        minLevel_ = 0;
+
+        destinationCase_ = 0;
+        destination_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.internal_static_yandex_cloud_serverless_containers_v1_LogOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions build() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions buildPartial() {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions(this);
+        result.disabled_ = disabled_;
+        if (destinationCase_ == 2) {
+          result.destination_ = destination_;
+        }
+        if (destinationCase_ == 3) {
+          result.destination_ = destination_;
+        }
+        result.minLevel_ = minLevel_;
+        result.destinationCase_ = destinationCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions) {
+          return mergeFrom((yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions other) {
+        if (other == yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions.getDefaultInstance()) return this;
+        if (other.getDisabled() != false) {
+          setDisabled(other.getDisabled());
+        }
+        if (other.minLevel_ != 0) {
+          setMinLevelValue(other.getMinLevelValue());
+        }
+        switch (other.getDestinationCase()) {
+          case LOG_GROUP_ID: {
+            destinationCase_ = 2;
+            destination_ = other.destination_;
+            onChanged();
+            break;
+          }
+          case FOLDER_ID: {
+            destinationCase_ = 3;
+            destination_ = other.destination_;
+            onChanged();
+            break;
+          }
+          case DESTINATION_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int destinationCase_ = 0;
+      private java.lang.Object destination_;
+      public DestinationCase
+          getDestinationCase() {
+        return DestinationCase.forNumber(
+            destinationCase_);
+      }
+
+      public Builder clearDestination() {
+        destinationCase_ = 0;
+        destination_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private boolean disabled_ ;
+      /**
+       * <pre>
+       * Is logging from container disabled.
+       * </pre>
+       *
+       * <code>bool disabled = 1;</code>
+       * @return The disabled.
+       */
+      @java.lang.Override
+      public boolean getDisabled() {
+        return disabled_;
+      }
+      /**
+       * <pre>
+       * Is logging from container disabled.
+       * </pre>
+       *
+       * <code>bool disabled = 1;</code>
+       * @param value The disabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisabled(boolean value) {
+        
+        disabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Is logging from container disabled.
+       * </pre>
+       *
+       * <code>bool disabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisabled() {
+        
+        disabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return Whether the logGroupId field is set.
+       */
+      @java.lang.Override
+      public boolean hasLogGroupId() {
+        return destinationCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The logGroupId.
+       */
+      @java.lang.Override
+      public java.lang.String getLogGroupId() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 2) {
+          ref = destination_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (destinationCase_ == 2) {
+            destination_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for logGroupId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLogGroupIdBytes() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 2) {
+          ref = destination_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (destinationCase_ == 2) {
+            destination_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The logGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  destinationCase_ = 2;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogGroupId() {
+        if (destinationCase_ == 2) {
+          destinationCase_ = 0;
+          destination_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
+       * <code>string log_group_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for logGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        destinationCase_ = 2;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Entry should be written to default log group for specified folder.
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return Whether the folderId field is set.
+       */
+      @java.lang.Override
+      public boolean hasFolderId() {
+        return destinationCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Entry should be written to default log group for specified folder.
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 3) {
+          ref = destination_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (destinationCase_ == 3) {
+            destination_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry should be written to default log group for specified folder.
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return The bytes for folderId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = "";
+        if (destinationCase_ == 3) {
+          ref = destination_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (destinationCase_ == 3) {
+            destination_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entry should be written to default log group for specified folder.
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  destinationCase_ = 3;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry should be written to default log group for specified folder.
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        if (destinationCase_ == 3) {
+          destinationCase_ = 0;
+          destination_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Entry should be written to default log group for specified folder.
+       * </pre>
+       *
+       * <code>string folder_id = 3 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        destinationCase_ = 3;
+        destination_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int minLevel_ = 0;
+      /**
+       * <pre>
+       * Minimum log entry level.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+       * @return The enum numeric value on the wire for minLevel.
+       */
+      @java.lang.Override public int getMinLevelValue() {
+        return minLevel_;
+      }
+      /**
+       * <pre>
+       * Minimum log entry level.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+       * @param value The enum numeric value on the wire for minLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinLevelValue(int value) {
+        
+        minLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum log entry level.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+       * @return The minLevel.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getMinLevel() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(minLevel_);
+        return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Minimum log entry level.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+       * @param value The minLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        minLevel_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum log entry level.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level min_level = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinLevel() {
+        
+        minLevel_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.containers.v1.LogOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.containers.v1.LogOptions)
+    private static final yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions();
+    }
+
+    public static yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogOptions>
+        PARSER = new com.google.protobuf.AbstractParser<LogOptions>() {
+      @java.lang.Override
+      public LogOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ScalingPolicyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.containers.v1.ScalingPolicy)
       com.google.protobuf.MessageOrBuilder {
@@ -13733,6 +15218,11 @@ public final class ContainerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_containers_v1_Connectivity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_containers_v1_LogOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_containers_v1_LogOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13750,67 +15240,77 @@ public final class ContainerOuterClass {
       "container.proto\022%yandex.cloud.serverless" +
       ".containers.v1\032\036google/protobuf/duration" +
       ".proto\032\037google/protobuf/timestamp.proto\032" +
-      "\035yandex/cloud/validation.proto\"\245\003\n\tConta" +
-      "iner\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\nc" +
-      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022L" +
-      "\n\006labels\030\006 \003(\0132<.yandex.cloud.serverless" +
-      ".containers.v1.Container.LabelsEntry\022\013\n\003" +
-      "url\030\010 \001(\t\022G\n\006status\030\t \001(\01627.yandex.cloud" +
-      ".serverless.containers.v1.Container.Stat" +
-      "us\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
-      "D\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETIN" +
-      "G\020\003\022\t\n\005ERROR\020\004\"\227\006\n\010Revision\022\n\n\002id\030\001 \001(\t\022" +
-      "\024\n\014container_id\030\002 \001(\t\022\023\n\013description\030\003 \001" +
-      "(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022;\n\005image\030\005 \001(\0132,.yandex.cloud" +
-      ".serverless.containers.v1.Image\022C\n\tresou" +
-      "rces\030\006 \001(\01320.yandex.cloud.serverless.con" +
-      "tainers.v1.Resources\0224\n\021execution_timeou" +
-      "t\030\007 \001(\0132\031.google.protobuf.Duration\022\023\n\013co" +
-      "ncurrency\030\010 \001(\003\022\032\n\022service_account_id\030\t " +
-      "\001(\t\022F\n\006status\030\n \001(\01626.yandex.cloud.serve" +
-      "rless.containers.v1.Revision.Status\022>\n\007s" +
-      "ecrets\030\013 \003(\0132-.yandex.cloud.serverless.c" +
-      "ontainers.v1.Secret\022I\n\014connectivity\030\014 \001(" +
-      "\01323.yandex.cloud.serverless.containers.v" +
-      "1.Connectivity\022P\n\020provision_policy\030\r \001(\013" +
-      "26.yandex.cloud.serverless.containers.v1" +
-      ".ProvisionPolicy\022L\n\016scaling_policy\030\016 \001(\013" +
-      "24.yandex.cloud.serverless.containers.v1" +
-      ".ScalingPolicy\"H\n\006Status\022\026\n\022STATUS_UNSPE" +
-      "CIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OB" +
-      "SOLETE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022\024\n" +
-      "\014image_digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132..y" +
-      "andex.cloud.serverless.containers.v1.Com" +
-      "mand\0229\n\004args\030\004 \001(\0132+.yandex.cloud.server" +
-      "less.containers.v1.Args\022y\n\013environment\030\005" +
-      " \003(\0132=.yandex.cloud.serverless.container" +
-      "s.v1.Image.EnvironmentEntryB%\212\3101\006<=4096\262" +
-      "\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_di" +
-      "r\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007comman" +
-      "d\030\001 \003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResourc" +
-      "es\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-858993" +
-      "4592\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_fra" +
-      "ction\030\003 \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPolic" +
-      "y\022\025\n\rmin_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id" +
-      "\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022" +
-      "\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\trefer" +
-      "ence\"6\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t" +
-      "\022\022\n\nsubnet_ids\030\002 \003(\t\"J\n\rScalingPolicy\022\034\n" +
-      "\024zone_instances_limit\030\001 \001(\003\022\033\n\023zone_requ" +
-      "ests_limit\030\002 \001(\003B\201\001\n)yandex.cloud.api.se" +
-      "rverless.containers.v1ZTgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/serverl" +
-      "ess/containers/v1;containersb\006proto3"
+      "\'yandex/cloud/logging/v1/log_entry.proto" +
+      "\032\035yandex/cloud/validation.proto\"\245\003\n\tCont" +
+      "ainer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\n" +
+      "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
+      "L\n\006labels\030\006 \003(\0132<.yandex.cloud.serverles" +
+      "s.containers.v1.Container.LabelsEntry\022\013\n" +
+      "\003url\030\010 \001(\t\022G\n\006status\030\t \001(\01627.yandex.clou" +
+      "d.serverless.containers.v1.Container.Sta" +
+      "tus\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETI" +
+      "NG\020\003\022\t\n\005ERROR\020\004\"\337\006\n\010Revision\022\n\n\002id\030\001 \001(\t" +
+      "\022\024\n\014container_id\030\002 \001(\t\022\023\n\013description\030\003 " +
+      "\001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022;\n\005image\030\005 \001(\0132,.yandex.clou" +
+      "d.serverless.containers.v1.Image\022C\n\treso" +
+      "urces\030\006 \001(\01320.yandex.cloud.serverless.co" +
+      "ntainers.v1.Resources\0224\n\021execution_timeo" +
+      "ut\030\007 \001(\0132\031.google.protobuf.Duration\022\023\n\013c" +
+      "oncurrency\030\010 \001(\003\022\032\n\022service_account_id\030\t" +
+      " \001(\t\022F\n\006status\030\n \001(\01626.yandex.cloud.serv" +
+      "erless.containers.v1.Revision.Status\022>\n\007" +
+      "secrets\030\013 \003(\0132-.yandex.cloud.serverless." +
+      "containers.v1.Secret\022I\n\014connectivity\030\014 \001" +
+      "(\01323.yandex.cloud.serverless.containers." +
+      "v1.Connectivity\022P\n\020provision_policy\030\r \001(" +
+      "\01326.yandex.cloud.serverless.containers.v" +
+      "1.ProvisionPolicy\022L\n\016scaling_policy\030\016 \001(" +
+      "\01324.yandex.cloud.serverless.containers.v" +
+      "1.ScalingPolicy\022F\n\013log_options\030\017 \001(\01321.y" +
+      "andex.cloud.serverless.containers.v1.Log" +
+      "Options\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OBSOLETE\020" +
+      "\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022\024\n\014image_" +
+      "digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132..yandex.c" +
+      "loud.serverless.containers.v1.Command\0229\n" +
+      "\004args\030\004 \001(\0132+.yandex.cloud.serverless.co" +
+      "ntainers.v1.Args\022y\n\013environment\030\005 \003(\0132=." +
+      "yandex.cloud.serverless.containers.v1.Im" +
+      "age.EnvironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a" +
+      "-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_dir\030\006 \001(\t" +
+      "\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007command\030\001 \003(\t" +
+      "\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResources\022(\n\006m" +
+      "emory\030\001 \001(\003B\030\372\3071\024134217728-8589934592\022\026\n" +
+      "\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_fraction\030\003" +
+      " \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPolicy\022\025\n\rmi" +
+      "n_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022" +
+      "\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024envi" +
+      "ronment_variable\030\004 \001(\tH\000B\013\n\treference\"6\n" +
+      "\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\nsub" +
+      "net_ids\030\002 \003(\t\"\340\001\n\nLogOptions\022\020\n\010disabled" +
+      "\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA" +
+      "-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id" +
+      "\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63" +
+      "})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud." +
+      "logging.v1.LogLevel.LevelB\r\n\013destination" +
+      "\"J\n\rScalingPolicy\022\034\n\024zone_instances_limi" +
+      "t\030\001 \001(\003\022\033\n\023zone_requests_limit\030\002 \001(\003B\201\001\n" +
+      ")yandex.cloud.api.serverless.containers." +
+      "v1ZTgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/serverless/containers/v1;co" +
+      "ntainersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_serverless_containers_v1_Container_descriptor =
@@ -13830,7 +15330,7 @@ public final class ContainerOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_Revision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Revision_descriptor,
-        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", });
+        new java.lang.String[] { "Id", "ContainerId", "Description", "CreatedAt", "Image", "Resources", "ExecutionTimeout", "Concurrency", "ServiceAccountId", "Status", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", });
     internal_static_yandex_cloud_serverless_containers_v1_Image_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_serverless_containers_v1_Image_fieldAccessorTable = new
@@ -13879,8 +15379,14 @@ public final class ContainerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_Connectivity_descriptor,
         new java.lang.String[] { "NetworkId", "SubnetIds", });
-    internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor =
+    internal_static_yandex_cloud_serverless_containers_v1_LogOptions_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_serverless_containers_v1_LogOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_containers_v1_LogOptions_descriptor,
+        new java.lang.String[] { "Disabled", "LogGroupId", "FolderId", "MinLevel", "Destination", });
+    internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_ScalingPolicy_descriptor,
@@ -13889,11 +15395,13 @@ public final class ContainerOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

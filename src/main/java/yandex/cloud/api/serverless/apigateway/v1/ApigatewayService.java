@@ -3068,6 +3068,33 @@ public final class ApigatewayService {
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder();
 
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
     public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.CreateApiGatewayRequest.SpecCase getSpecCase();
   }
   /**
@@ -3165,6 +3192,19 @@ public final class ApigatewayService {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(connectivity_);
                 connectivity_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3593,6 +3633,44 @@ public final class ApigatewayService {
       return getConnectivity();
     }
 
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3627,6 +3705,9 @@ public final class ApigatewayService {
       }
       if (connectivity_ != null) {
         output.writeMessage(6, getConnectivity());
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(7, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -3663,6 +3744,10 @@ public final class ApigatewayService {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getConnectivity());
       }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3690,6 +3775,11 @@ public final class ApigatewayService {
       if (hasConnectivity()) {
         if (!getConnectivity()
             .equals(other.getConnectivity())) return false;
+      }
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
       }
       if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
@@ -3724,6 +3814,10 @@ public final class ApigatewayService {
       if (hasConnectivity()) {
         hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
         hash = (53 * hash) + getConnectivity().hashCode();
+      }
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
       }
       switch (specCase_) {
         case 5:
@@ -3901,6 +3995,12 @@ public final class ApigatewayService {
           connectivity_ = null;
           connectivityBuilder_ = null;
         }
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         specCase_ = 0;
         spec_ = null;
         return this;
@@ -3942,6 +4042,11 @@ public final class ApigatewayService {
           result.connectivity_ = connectivity_;
         } else {
           result.connectivity_ = connectivityBuilder_.build();
+        }
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
         }
         result.specCase_ = specCase_;
         onBuilt();
@@ -4008,6 +4113,9 @@ public final class ApigatewayService {
             other.internalGetLabels());
         if (other.hasConnectivity()) {
           mergeConnectivity(other.getConnectivity());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         switch (other.getSpecCase()) {
           case OPENAPI_SPEC: {
@@ -4797,6 +4905,161 @@ public final class ApigatewayService {
         }
         return connectivityBuilder_;
       }
+
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5065,6 +5328,33 @@ public final class ApigatewayService {
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.ConnectivityOrBuilder getConnectivityOrBuilder();
 
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
     public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.UpdateApiGatewayRequest.SpecCase getSpecCase();
   }
   /**
@@ -5175,6 +5465,19 @@ public final class ApigatewayService {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(connectivity_);
                 connectivity_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5649,6 +5952,44 @@ public final class ApigatewayService {
       return getConnectivity();
     }
 
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 8;
+    private yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Options for logging from the API gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5686,6 +6027,9 @@ public final class ApigatewayService {
       }
       if (connectivity_ != null) {
         output.writeMessage(7, getConnectivity());
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(8, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -5726,6 +6070,10 @@ public final class ApigatewayService {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getConnectivity());
       }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5758,6 +6106,11 @@ public final class ApigatewayService {
       if (hasConnectivity()) {
         if (!getConnectivity()
             .equals(other.getConnectivity())) return false;
+      }
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
       }
       if (!getSpecCase().equals(other.getSpecCase())) return false;
       switch (specCase_) {
@@ -5796,6 +6149,10 @@ public final class ApigatewayService {
       if (hasConnectivity()) {
         hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
         hash = (53 * hash) + getConnectivity().hashCode();
+      }
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
       }
       switch (specCase_) {
         case 6:
@@ -5979,6 +6336,12 @@ public final class ApigatewayService {
           connectivity_ = null;
           connectivityBuilder_ = null;
         }
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         specCase_ = 0;
         spec_ = null;
         return this;
@@ -6025,6 +6388,11 @@ public final class ApigatewayService {
           result.connectivity_ = connectivity_;
         } else {
           result.connectivity_ = connectivityBuilder_.build();
+        }
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
         }
         result.specCase_ = specCase_;
         onBuilt();
@@ -6094,6 +6462,9 @@ public final class ApigatewayService {
             other.internalGetLabels());
         if (other.hasConnectivity()) {
           mergeConnectivity(other.getConnectivity());
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         switch (other.getSpecCase()) {
           case OPENAPI_SPEC: {
@@ -7051,6 +7422,161 @@ public final class ApigatewayService {
           connectivity_ = null;
         }
         return connectivityBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging from the API gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptions.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17276,7 +17802,7 @@ public final class ApigatewayService {
       "\t\"z\n\026ListApiGatewayResponse\022G\n\014api_gatew" +
       "ays\030\001 \003(\01321.yandex.cloud.serverless.apig" +
       "ateway.v1.ApiGateway\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"\314\003\n\027CreateApiGatewayRequest\022\027\n\tfol" +
+      "\002 \001(\t\"\224\004\n\027CreateApiGatewayRequest\022\027\n\tfol" +
       "der_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[" +
       "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
       "ption\030\003 \001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\004 \003(\0132" +
@@ -17286,115 +17812,118 @@ public final class ApigatewayService {
       "63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\026\n\014openapi_" +
       "spec\030\005 \001(\tH\000\022I\n\014connectivity\030\006 \001(\01323.yan" +
       "dex.cloud.serverless.apigateway.v1.Conne" +
-      "ctivity\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"\202\004\n\027UpdateA" +
-      "piGatewayRequest\022\034\n\016api_gateway_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z" +
-      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
-      "on\030\004 \001(\tB\t\212\3101\005<=256\022\243\001\n\006labels\030\005 \003(\0132J.y" +
-      "andex.cloud.serverless.apigateway.v1.Upd" +
-      "ateApiGatewayRequest.LabelsEntryBG\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262" +
-      "\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\026\n\014openapi_spe" +
-      "c\030\006 \001(\tH\000\022I\n\014connectivity\030\007 \001(\01323.yandex" +
-      ".cloud.serverless.apigateway.v1.Connecti" +
-      "vity\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027DeleteApiGa" +
-      "tewayRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\307" +
-      "1\001\"]\n\020AddDomainRequest\022\034\n\016api_gateway_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\023\n\013domain_name\030\003 \001(\t\022\026\n\016cer" +
-      "tificate_id\030\004 \001(\t\"L\n\023RemoveDomainRequest" +
-      "\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain" +
-      "_id\030\002 \001(\tB\004\350\3071\001\"2\n\030CreateApiGatewayMetad" +
-      "ata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030UpdateApi" +
-      "GatewayMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"" +
-      "2\n\030DeleteApiGatewayMetadata\022\026\n\016api_gatew" +
-      "ay_id\030\001 \001(\t\"k\n\021AddDomainMetadata\022\026\n\016api_" +
-      "gateway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\022\023\n\013d" +
-      "omain_name\030\003 \001(\t\022\026\n\016certificate_id\030\004 \001(\t" +
-      "\"A\n\024RemoveDomainMetadata\022\026\n\016api_gateway_" +
-      "id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025ListOper" +
-      "ationsRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
-      "\tB\n\212\3101\006<=1000\"h\n\026ListOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\300\001\n\025GetOpenapiSpecRequest\022\034\n\016api_gateway" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C.yandex" +
-      ".cloud.serverless.apigateway.v1.GetOpena" +
-      "piSpecRequest.Format\"4\n\006Format\022\026\n\022FORMAT" +
-      "_UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026Ge" +
-      "tOpenapiSpecResponse\022\026\n\016api_gateway_id\030\001" +
-      " \001(\t\022\024\n\014openapi_spec\030\002 \001(\t2\332\023\n\021ApiGatewa" +
-      "yService\022\253\001\n\003Get\022;.yandex.cloud.serverle" +
-      "ss.apigateway.v1.GetApiGatewayRequest\0321." +
-      "yandex.cloud.serverless.apigateway.v1.Ap" +
-      "iGateway\"4\202\323\344\223\002.\022,/apigateways/v1/apigat" +
-      "eways/{api_gateway_id}\022\250\001\n\004List\022<.yandex" +
-      ".cloud.serverless.apigateway.v1.ListApiG" +
-      "atewayRequest\032=.yandex.cloud.serverless." +
-      "apigateway.v1.ListApiGatewayResponse\"#\202\323" +
-      "\344\223\002\035\022\033/apigateways/v1/apigateways\022\275\001\n\006Cr" +
-      "eate\022>.yandex.cloud.serverless.apigatewa" +
-      "y.v1.CreateApiGatewayRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"P\202\323\344\223\002 \"\033/apigat" +
-      "eways/v1/apigateways:\001*\262\322*&\n\030CreateApiGa" +
-      "tewayMetadata\022\nApiGateway\022\316\001\n\006Update\022>.y" +
-      "andex.cloud.serverless.apigateway.v1.Upd" +
-      "ateApiGatewayRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"a\202\323\344\223\00212,/apigateways/v1" +
-      "/apigateways/{api_gateway_id}:\001*\262\322*&\n\030Up" +
-      "dateApiGatewayMetadata\022\nApiGateway\022\326\001\n\006D" +
-      "elete\022>.yandex.cloud.serverless.apigatew" +
-      "ay.v1.DeleteApiGatewayRequest\032!.yandex.c" +
-      "loud.operation.Operation\"i\202\323\344\223\002.*,/apiga" +
-      "teways/v1/apigateways/{api_gateway_id}\262\322" +
-      "*1\n\030DeleteApiGatewayMetadata\022\025google.pro" +
-      "tobuf.Empty\022\330\001\n\tAddDomain\0227.yandex.cloud" +
-      ".serverless.apigateway.v1.AddDomainReque" +
-      "st\032!.yandex.cloud.operation.Operation\"o\202" +
-      "\323\344\223\002;\"6/apigateways/v1/apigateways/{api_" +
-      "gateway_id}:addDomain:\001*\262\322**\n\021AddDomainM" +
-      "etadata\022\025google.protobuf.Empty\022\344\001\n\014Remov" +
-      "eDomain\022:.yandex.cloud.serverless.apigat" +
-      "eway.v1.RemoveDomainRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"u\202\323\344\223\002>\"9/apigate" +
-      "ways/v1/apigateways/{api_gateway_id}:rem" +
-      "oveDomain:\001*\262\322*-\n\024RemoveDomainMetadata\022\025" +
-      "google.protobuf.Empty\022\310\001\n\016GetOpenapiSpec" +
-      "\022<.yandex.cloud.serverless.apigateway.v1" +
-      ".GetOpenapiSpecRequest\032=.yandex.cloud.se" +
-      "rverless.apigateway.v1.GetOpenapiSpecRes" +
-      "ponse\"9\202\323\344\223\0023\0221/apigateways/v1/apigatewa" +
-      "ys/{api_gateway_id}:spec\022\316\001\n\016ListOperati" +
-      "ons\022<.yandex.cloud.serverless.apigateway" +
-      ".v1.ListOperationsRequest\032=.yandex.cloud" +
-      ".serverless.apigateway.v1.ListOperations" +
-      "Response\"?\202\323\344\223\0029\0227/apigateways/v1/apigat" +
-      "eways/{api_gateway_id}/operations\022\273\001\n\022Li" +
-      "stAccessBindings\022..yandex.cloud.access.L" +
-      "istAccessBindingsRequest\032/.yandex.cloud." +
-      "access.ListAccessBindingsResponse\"D\202\323\344\223\002" +
-      ">\022</apigateways/v1/apigateways/{resource" +
-      "_id}:listAccessBindings\022\353\001\n\021SetAccessBin" +
-      "dings\022-.yandex.cloud.access.SetAccessBin" +
-      "dingsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\203\001\202\323\344\223\002@\";/apigateways/v1/apigat" +
-      "eways/{resource_id}:setAccessBindings:\001*" +
-      "\262\322*9\n access.SetAccessBindingsMetadata\022\025" +
-      "google.protobuf.Empty\022\367\001\n\024UpdateAccessBi" +
-      "ndings\0220.yandex.cloud.access.UpdateAcces" +
-      "sBindingsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\211\001\202\323\344\223\002C2>/apigateways/v1/ap" +
-      "igateways/{resource_id}:updateAccessBind" +
-      "ings:\001*\262\322*<\n#access.UpdateAccessBindings" +
-      "Metadata\022\025google.protobuf.EmptyB\201\001\n)yand" +
-      "ex.cloud.api.serverless.apigateway.v1ZTg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/serverless/apigateway/v1;apigate" +
-      "wayb\006proto3"
+      "ctivity\022F\n\013log_options\030\007 \001(\01321.yandex.cl" +
+      "oud.serverless.apigateway.v1.LogOptions\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"\312\004\n\027UpdateApiGatewa" +
+      "yRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022/" +
+      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0" +
+      "-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\t" +
+      "B\t\212\3101\005<=256\022\243\001\n\006labels\030\005 \003(\0132J.yandex.cl" +
+      "oud.serverless.apigateway.v1.UpdateApiGa" +
+      "tewayRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
+      "63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-" +
+      "z][-_./\\@0-9a-z]*\022\026\n\014openapi_spec\030\006 \001(\tH" +
+      "\000\022I\n\014connectivity\030\007 \001(\01323.yandex.cloud.s" +
+      "erverless.apigateway.v1.Connectivity\022F\n\013" +
+      "log_options\030\010 \001(\01321.yandex.cloud.serverl" +
+      "ess.apigateway.v1.LogOptions\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004s" +
+      "pec\022\004\300\3011\001\"7\n\027DeleteApiGatewayRequest\022\034\n\016" +
+      "api_gateway_id\030\001 \001(\tB\004\350\3071\001\"]\n\020AddDomainR" +
+      "equest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\023\n\013" +
+      "domain_name\030\003 \001(\t\022\026\n\016certificate_id\030\004 \001(" +
+      "\t\"L\n\023RemoveDomainRequest\022\034\n\016api_gateway_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(\tB\004\350\3071\001\"" +
+      "2\n\030CreateApiGatewayMetadata\022\026\n\016api_gatew" +
+      "ay_id\030\001 \001(\t\"2\n\030UpdateApiGatewayMetadata\022" +
+      "\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030DeleteApiGate" +
+      "wayMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"k\n\021A" +
+      "ddDomainMetadata\022\026\n\016api_gateway_id\030\001 \001(\t" +
+      "\022\021\n\tdomain_id\030\002 \001(\t\022\023\n\013domain_name\030\003 \001(\t" +
+      "\022\026\n\016certificate_id\030\004 \001(\t\"A\n\024RemoveDomain" +
+      "Metadata\022\026\n\016api_gateway_id\030\001 \001(\t\022\021\n\tdoma" +
+      "in_id\030\002 \001(\t\"\217\001\n\025ListOperationsRequest\022\034\n" +
+      "\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n" +
+      "\026ListOperationsResponse\0225\n\noperations\030\001 " +
+      "\003(\0132!.yandex.cloud.operation.Operation\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\300\001\n\025GetOpenapiSp" +
+      "ecRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "S\n\006format\030\002 \001(\0162C.yandex.cloud.serverles" +
+      "s.apigateway.v1.GetOpenapiSpecRequest.Fo" +
+      "rmat\"4\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\010" +
+      "\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026GetOpenapiSpecResp" +
+      "onse\022\026\n\016api_gateway_id\030\001 \001(\t\022\024\n\014openapi_" +
+      "spec\030\002 \001(\t2\332\023\n\021ApiGatewayService\022\253\001\n\003Get" +
+      "\022;.yandex.cloud.serverless.apigateway.v1" +
+      ".GetApiGatewayRequest\0321.yandex.cloud.ser" +
+      "verless.apigateway.v1.ApiGateway\"4\202\323\344\223\002." +
+      "\022,/apigateways/v1/apigateways/{api_gatew" +
+      "ay_id}\022\250\001\n\004List\022<.yandex.cloud.serverles" +
+      "s.apigateway.v1.ListApiGatewayRequest\032=." +
+      "yandex.cloud.serverless.apigateway.v1.Li" +
+      "stApiGatewayResponse\"#\202\323\344\223\002\035\022\033/apigatewa" +
+      "ys/v1/apigateways\022\275\001\n\006Create\022>.yandex.cl" +
+      "oud.serverless.apigateway.v1.CreateApiGa" +
+      "tewayRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"P\202\323\344\223\002 \"\033/apigateways/v1/apigate" +
+      "ways:\001*\262\322*&\n\030CreateApiGatewayMetadata\022\nA" +
+      "piGateway\022\316\001\n\006Update\022>.yandex.cloud.serv" +
+      "erless.apigateway.v1.UpdateApiGatewayReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "a\202\323\344\223\00212,/apigateways/v1/apigateways/{ap" +
+      "i_gateway_id}:\001*\262\322*&\n\030UpdateApiGatewayMe" +
+      "tadata\022\nApiGateway\022\326\001\n\006Delete\022>.yandex.c" +
+      "loud.serverless.apigateway.v1.DeleteApiG" +
+      "atewayRequest\032!.yandex.cloud.operation.O" +
+      "peration\"i\202\323\344\223\002.*,/apigateways/v1/apigat" +
+      "eways/{api_gateway_id}\262\322*1\n\030DeleteApiGat" +
+      "ewayMetadata\022\025google.protobuf.Empty\022\330\001\n\t" +
+      "AddDomain\0227.yandex.cloud.serverless.apig" +
+      "ateway.v1.AddDomainRequest\032!.yandex.clou" +
+      "d.operation.Operation\"o\202\323\344\223\002;\"6/apigatew" +
+      "ays/v1/apigateways/{api_gateway_id}:addD" +
+      "omain:\001*\262\322**\n\021AddDomainMetadata\022\025google." +
+      "protobuf.Empty\022\344\001\n\014RemoveDomain\022:.yandex" +
+      ".cloud.serverless.apigateway.v1.RemoveDo" +
+      "mainRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"u\202\323\344\223\002>\"9/apigateways/v1/apigatew" +
+      "ays/{api_gateway_id}:removeDomain:\001*\262\322*-" +
+      "\n\024RemoveDomainMetadata\022\025google.protobuf." +
+      "Empty\022\310\001\n\016GetOpenapiSpec\022<.yandex.cloud." +
+      "serverless.apigateway.v1.GetOpenapiSpecR" +
+      "equest\032=.yandex.cloud.serverless.apigate" +
+      "way.v1.GetOpenapiSpecResponse\"9\202\323\344\223\0023\0221/" +
+      "apigateways/v1/apigateways/{api_gateway_" +
+      "id}:spec\022\316\001\n\016ListOperations\022<.yandex.clo" +
+      "ud.serverless.apigateway.v1.ListOperatio" +
+      "nsRequest\032=.yandex.cloud.serverless.apig" +
+      "ateway.v1.ListOperationsResponse\"?\202\323\344\223\0029" +
+      "\0227/apigateways/v1/apigateways/{api_gatew" +
+      "ay_id}/operations\022\273\001\n\022ListAccessBindings" +
+      "\022..yandex.cloud.access.ListAccessBinding" +
+      "sRequest\032/.yandex.cloud.access.ListAcces" +
+      "sBindingsResponse\"D\202\323\344\223\002>\022</apigateways/" +
+      "v1/apigateways/{resource_id}:listAccessB" +
+      "indings\022\353\001\n\021SetAccessBindings\022-.yandex.c" +
+      "loud.access.SetAccessBindingsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"\203\001\202\323\344\223\002@" +
+      "\";/apigateways/v1/apigateways/{resource_" +
+      "id}:setAccessBindings:\001*\262\322*9\n access.Set" +
+      "AccessBindingsMetadata\022\025google.protobuf." +
+      "Empty\022\367\001\n\024UpdateAccessBindings\0220.yandex." +
+      "cloud.access.UpdateAccessBindingsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\211\001\202\323" +
+      "\344\223\002C2>/apigateways/v1/apigateways/{resou" +
+      "rce_id}:updateAccessBindings:\001*\262\322*<\n#acc" +
+      "ess.UpdateAccessBindingsMetadata\022\025google" +
+      ".protobuf.EmptyB\201\001\n)yandex.cloud.api.ser" +
+      "verless.apigateway.v1ZTgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/serverle" +
+      "ss/apigateway/v1;apigatewayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17430,7 +17959,7 @@ public final class ApigatewayService {
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "OpenapiSpec", "Connectivity", "Spec", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "OpenapiSpec", "Connectivity", "LogOptions", "Spec", });
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayRequest_LabelsEntry_fieldAccessorTable = new
@@ -17442,7 +17971,7 @@ public final class ApigatewayService {
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_descriptor,
-        new java.lang.String[] { "ApiGatewayId", "UpdateMask", "Name", "Description", "Labels", "OpenapiSpec", "Connectivity", "Spec", });
+        new java.lang.String[] { "ApiGatewayId", "UpdateMask", "Name", "Description", "Labels", "OpenapiSpec", "Connectivity", "LogOptions", "Spec", });
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayRequest_LabelsEntry_fieldAccessorTable = new

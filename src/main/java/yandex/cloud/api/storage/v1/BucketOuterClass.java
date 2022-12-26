@@ -601,6 +601,36 @@ public final class BucketOuterClass {
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+     * @return Whether the objectLock field is set.
+     */
+    boolean hasObjectLock();
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+     * @return The objectLock.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getObjectLock();
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder();
   }
   /**
    * <pre>
@@ -786,6 +816,19 @@ public final class BucketOuterClass {
               }
               tags_.add(
                   input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry));
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder subBuilder = null;
+              if (objectLock_ != null) {
+                subBuilder = objectLock_.toBuilder();
+              }
+              objectLock_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(objectLock_);
+                objectLock_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1463,6 +1506,47 @@ public final class BucketOuterClass {
       return tags_.get(index);
     }
 
+    public static final int OBJECT_LOCK_FIELD_NUMBER = 15;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock objectLock_;
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+     * @return Whether the objectLock field is set.
+     */
+    @java.lang.Override
+    public boolean hasObjectLock() {
+      return objectLock_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+     * @return The objectLock.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getObjectLock() {
+      return objectLock_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance() : objectLock_;
+    }
+    /**
+     * <pre>
+     * Configuration for object lock on the bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder() {
+      return getObjectLock();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1518,6 +1602,9 @@ public final class BucketOuterClass {
       }
       for (int i = 0; i < tags_.size(); i++) {
         output.writeMessage(14, tags_.get(i));
+      }
+      if (objectLock_ != null) {
+        output.writeMessage(15, getObjectLock());
       }
       unknownFields.writeTo(output);
     }
@@ -1580,6 +1667,10 @@ public final class BucketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, tags_.get(i));
       }
+      if (objectLock_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getObjectLock());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1637,6 +1728,11 @@ public final class BucketOuterClass {
           .equals(other.getLifecycleRulesList())) return false;
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
+      if (hasObjectLock() != other.hasObjectLock()) return false;
+      if (hasObjectLock()) {
+        if (!getObjectLock()
+            .equals(other.getObjectLock())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1692,6 +1788,10 @@ public final class BucketOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (hasObjectLock()) {
+        hash = (37 * hash) + OBJECT_LOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectLock().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1894,6 +1994,12 @@ public final class BucketOuterClass {
         } else {
           tagsBuilder_.clear();
         }
+        if (objectLockBuilder_ == null) {
+          objectLock_ = null;
+        } else {
+          objectLock_ = null;
+          objectLockBuilder_ = null;
+        }
         return this;
       }
 
@@ -1978,6 +2084,11 @@ public final class BucketOuterClass {
           result.tags_ = tags_;
         } else {
           result.tags_ = tagsBuilder_.build();
+        }
+        if (objectLockBuilder_ == null) {
+          result.objectLock_ = objectLock_;
+        } else {
+          result.objectLock_ = objectLockBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2141,6 +2252,9 @@ public final class BucketOuterClass {
               tagsBuilder_.addAllMessages(other.tags_);
             }
           }
+        }
+        if (other.hasObjectLock()) {
+          mergeObjectLock(other.getObjectLock());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4500,6 +4614,170 @@ public final class BucketOuterClass {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock objectLock_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder> objectLockBuilder_;
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       * @return Whether the objectLock field is set.
+       */
+      public boolean hasObjectLock() {
+        return objectLockBuilder_ != null || objectLock_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       * @return The objectLock.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getObjectLock() {
+        if (objectLockBuilder_ == null) {
+          return objectLock_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance() : objectLock_;
+        } else {
+          return objectLockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      public Builder setObjectLock(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock value) {
+        if (objectLockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objectLock_ = value;
+          onChanged();
+        } else {
+          objectLockBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      public Builder setObjectLock(
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder builderForValue) {
+        if (objectLockBuilder_ == null) {
+          objectLock_ = builderForValue.build();
+          onChanged();
+        } else {
+          objectLockBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      public Builder mergeObjectLock(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock value) {
+        if (objectLockBuilder_ == null) {
+          if (objectLock_ != null) {
+            objectLock_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.newBuilder(objectLock_).mergeFrom(value).buildPartial();
+          } else {
+            objectLock_ = value;
+          }
+          onChanged();
+        } else {
+          objectLockBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      public Builder clearObjectLock() {
+        if (objectLockBuilder_ == null) {
+          objectLock_ = null;
+          onChanged();
+        } else {
+          objectLock_ = null;
+          objectLockBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder getObjectLockBuilder() {
+        
+        onChanged();
+        return getObjectLockFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder() {
+        if (objectLockBuilder_ != null) {
+          return objectLockBuilder_.getMessageOrBuilder();
+        } else {
+          return objectLock_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance() : objectLock_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for object lock on the bucket.
+       * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder> 
+          getObjectLockFieldBuilder() {
+        if (objectLockBuilder_ == null) {
+          objectLockBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder>(
+                  getObjectLock(),
+                  getParentForChildren(),
+                  isClean());
+          objectLock_ = null;
+        }
+        return objectLockBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22144,6 +22422,60 @@ public final class BucketOuterClass {
        */
       com.google.protobuf.ByteString
           getPrefixBytes();
+
+      /**
+       * <pre>
+       * Size that the object must be greater.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+       * @return Whether the objectSizeGreaterThan field is set.
+       */
+      boolean hasObjectSizeGreaterThan();
+      /**
+       * <pre>
+       * Size that the object must be greater.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+       * @return The objectSizeGreaterThan.
+       */
+      com.google.protobuf.Int64Value getObjectSizeGreaterThan();
+      /**
+       * <pre>
+       * Size that the object must be greater.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder();
+
+      /**
+       * <pre>
+       * Size that the object must be less t.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+       * @return Whether the objectSizeLessThan field is set.
+       */
+      boolean hasObjectSizeLessThan();
+      /**
+       * <pre>
+       * Size that the object must be less t.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+       * @return The objectSizeLessThan.
+       */
+      com.google.protobuf.Int64Value getObjectSizeLessThan();
+      /**
+       * <pre>
+       * Size that the object must be less t.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.storage.v1.LifecycleRule.RuleFilter}
@@ -22195,6 +22527,32 @@ public final class BucketOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 prefix_ = s;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (objectSizeGreaterThan_ != null) {
+                  subBuilder = objectSizeGreaterThan_.toBuilder();
+                }
+                objectSizeGreaterThan_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(objectSizeGreaterThan_);
+                  objectSizeGreaterThan_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (objectSizeLessThan_ != null) {
+                  subBuilder = objectSizeLessThan_.toBuilder();
+                }
+                objectSizeLessThan_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(objectSizeLessThan_);
+                  objectSizeLessThan_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -22275,6 +22633,82 @@ public final class BucketOuterClass {
         }
       }
 
+      public static final int OBJECT_SIZE_GREATER_THAN_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int64Value objectSizeGreaterThan_;
+      /**
+       * <pre>
+       * Size that the object must be greater.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+       * @return Whether the objectSizeGreaterThan field is set.
+       */
+      @java.lang.Override
+      public boolean hasObjectSizeGreaterThan() {
+        return objectSizeGreaterThan_ != null;
+      }
+      /**
+       * <pre>
+       * Size that the object must be greater.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+       * @return The objectSizeGreaterThan.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getObjectSizeGreaterThan() {
+        return objectSizeGreaterThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
+      }
+      /**
+       * <pre>
+       * Size that the object must be greater.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder() {
+        return getObjectSizeGreaterThan();
+      }
+
+      public static final int OBJECT_SIZE_LESS_THAN_FIELD_NUMBER = 3;
+      private com.google.protobuf.Int64Value objectSizeLessThan_;
+      /**
+       * <pre>
+       * Size that the object must be less t.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+       * @return Whether the objectSizeLessThan field is set.
+       */
+      @java.lang.Override
+      public boolean hasObjectSizeLessThan() {
+        return objectSizeLessThan_ != null;
+      }
+      /**
+       * <pre>
+       * Size that the object must be less t.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+       * @return The objectSizeLessThan.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getObjectSizeLessThan() {
+        return objectSizeLessThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
+      }
+      /**
+       * <pre>
+       * Size that the object must be less t.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder() {
+        return getObjectSizeLessThan();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -22292,6 +22726,12 @@ public final class BucketOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
         }
+        if (objectSizeGreaterThan_ != null) {
+          output.writeMessage(2, getObjectSizeGreaterThan());
+        }
+        if (objectSizeLessThan_ != null) {
+          output.writeMessage(3, getObjectSizeLessThan());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -22303,6 +22743,14 @@ public final class BucketOuterClass {
         size = 0;
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
+        }
+        if (objectSizeGreaterThan_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getObjectSizeGreaterThan());
+        }
+        if (objectSizeLessThan_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getObjectSizeLessThan());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -22321,6 +22769,16 @@ public final class BucketOuterClass {
 
         if (!getPrefix()
             .equals(other.getPrefix())) return false;
+        if (hasObjectSizeGreaterThan() != other.hasObjectSizeGreaterThan()) return false;
+        if (hasObjectSizeGreaterThan()) {
+          if (!getObjectSizeGreaterThan()
+              .equals(other.getObjectSizeGreaterThan())) return false;
+        }
+        if (hasObjectSizeLessThan() != other.hasObjectSizeLessThan()) return false;
+        if (hasObjectSizeLessThan()) {
+          if (!getObjectSizeLessThan()
+              .equals(other.getObjectSizeLessThan())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -22334,6 +22792,14 @@ public final class BucketOuterClass {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + PREFIX_FIELD_NUMBER;
         hash = (53 * hash) + getPrefix().hashCode();
+        if (hasObjectSizeGreaterThan()) {
+          hash = (37 * hash) + OBJECT_SIZE_GREATER_THAN_FIELD_NUMBER;
+          hash = (53 * hash) + getObjectSizeGreaterThan().hashCode();
+        }
+        if (hasObjectSizeLessThan()) {
+          hash = (37 * hash) + OBJECT_SIZE_LESS_THAN_FIELD_NUMBER;
+          hash = (53 * hash) + getObjectSizeLessThan().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -22469,6 +22935,18 @@ public final class BucketOuterClass {
           super.clear();
           prefix_ = "";
 
+          if (objectSizeGreaterThanBuilder_ == null) {
+            objectSizeGreaterThan_ = null;
+          } else {
+            objectSizeGreaterThan_ = null;
+            objectSizeGreaterThanBuilder_ = null;
+          }
+          if (objectSizeLessThanBuilder_ == null) {
+            objectSizeLessThan_ = null;
+          } else {
+            objectSizeLessThan_ = null;
+            objectSizeLessThanBuilder_ = null;
+          }
           return this;
         }
 
@@ -22496,6 +22974,16 @@ public final class BucketOuterClass {
         public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter buildPartial() {
           yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter result = new yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter(this);
           result.prefix_ = prefix_;
+          if (objectSizeGreaterThanBuilder_ == null) {
+            result.objectSizeGreaterThan_ = objectSizeGreaterThan_;
+          } else {
+            result.objectSizeGreaterThan_ = objectSizeGreaterThanBuilder_.build();
+          }
+          if (objectSizeLessThanBuilder_ == null) {
+            result.objectSizeLessThan_ = objectSizeLessThan_;
+          } else {
+            result.objectSizeLessThan_ = objectSizeLessThanBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -22547,6 +23035,12 @@ public final class BucketOuterClass {
           if (!other.getPrefix().isEmpty()) {
             prefix_ = other.prefix_;
             onChanged();
+          }
+          if (other.hasObjectSizeGreaterThan()) {
+            mergeObjectSizeGreaterThan(other.getObjectSizeGreaterThan());
+          }
+          if (other.hasObjectSizeLessThan()) {
+            mergeObjectSizeLessThan(other.getObjectSizeLessThan());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -22671,6 +23165,316 @@ public final class BucketOuterClass {
           prefix_ = value;
           onChanged();
           return this;
+        }
+
+        private com.google.protobuf.Int64Value objectSizeGreaterThan_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> objectSizeGreaterThanBuilder_;
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         * @return Whether the objectSizeGreaterThan field is set.
+         */
+        public boolean hasObjectSizeGreaterThan() {
+          return objectSizeGreaterThanBuilder_ != null || objectSizeGreaterThan_ != null;
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         * @return The objectSizeGreaterThan.
+         */
+        public com.google.protobuf.Int64Value getObjectSizeGreaterThan() {
+          if (objectSizeGreaterThanBuilder_ == null) {
+            return objectSizeGreaterThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
+          } else {
+            return objectSizeGreaterThanBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        public Builder setObjectSizeGreaterThan(com.google.protobuf.Int64Value value) {
+          if (objectSizeGreaterThanBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            objectSizeGreaterThan_ = value;
+            onChanged();
+          } else {
+            objectSizeGreaterThanBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        public Builder setObjectSizeGreaterThan(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (objectSizeGreaterThanBuilder_ == null) {
+            objectSizeGreaterThan_ = builderForValue.build();
+            onChanged();
+          } else {
+            objectSizeGreaterThanBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        public Builder mergeObjectSizeGreaterThan(com.google.protobuf.Int64Value value) {
+          if (objectSizeGreaterThanBuilder_ == null) {
+            if (objectSizeGreaterThan_ != null) {
+              objectSizeGreaterThan_ =
+                com.google.protobuf.Int64Value.newBuilder(objectSizeGreaterThan_).mergeFrom(value).buildPartial();
+            } else {
+              objectSizeGreaterThan_ = value;
+            }
+            onChanged();
+          } else {
+            objectSizeGreaterThanBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        public Builder clearObjectSizeGreaterThan() {
+          if (objectSizeGreaterThanBuilder_ == null) {
+            objectSizeGreaterThan_ = null;
+            onChanged();
+          } else {
+            objectSizeGreaterThan_ = null;
+            objectSizeGreaterThanBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getObjectSizeGreaterThanBuilder() {
+          
+          onChanged();
+          return getObjectSizeGreaterThanFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder() {
+          if (objectSizeGreaterThanBuilder_ != null) {
+            return objectSizeGreaterThanBuilder_.getMessageOrBuilder();
+          } else {
+            return objectSizeGreaterThan_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
+          }
+        }
+        /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getObjectSizeGreaterThanFieldBuilder() {
+          if (objectSizeGreaterThanBuilder_ == null) {
+            objectSizeGreaterThanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getObjectSizeGreaterThan(),
+                    getParentForChildren(),
+                    isClean());
+            objectSizeGreaterThan_ = null;
+          }
+          return objectSizeGreaterThanBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value objectSizeLessThan_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> objectSizeLessThanBuilder_;
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         * @return Whether the objectSizeLessThan field is set.
+         */
+        public boolean hasObjectSizeLessThan() {
+          return objectSizeLessThanBuilder_ != null || objectSizeLessThan_ != null;
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         * @return The objectSizeLessThan.
+         */
+        public com.google.protobuf.Int64Value getObjectSizeLessThan() {
+          if (objectSizeLessThanBuilder_ == null) {
+            return objectSizeLessThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
+          } else {
+            return objectSizeLessThanBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        public Builder setObjectSizeLessThan(com.google.protobuf.Int64Value value) {
+          if (objectSizeLessThanBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            objectSizeLessThan_ = value;
+            onChanged();
+          } else {
+            objectSizeLessThanBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        public Builder setObjectSizeLessThan(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (objectSizeLessThanBuilder_ == null) {
+            objectSizeLessThan_ = builderForValue.build();
+            onChanged();
+          } else {
+            objectSizeLessThanBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        public Builder mergeObjectSizeLessThan(com.google.protobuf.Int64Value value) {
+          if (objectSizeLessThanBuilder_ == null) {
+            if (objectSizeLessThan_ != null) {
+              objectSizeLessThan_ =
+                com.google.protobuf.Int64Value.newBuilder(objectSizeLessThan_).mergeFrom(value).buildPartial();
+            } else {
+              objectSizeLessThan_ = value;
+            }
+            onChanged();
+          } else {
+            objectSizeLessThanBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        public Builder clearObjectSizeLessThan() {
+          if (objectSizeLessThanBuilder_ == null) {
+            objectSizeLessThan_ = null;
+            onChanged();
+          } else {
+            objectSizeLessThan_ = null;
+            objectSizeLessThanBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getObjectSizeLessThanBuilder() {
+          
+          onChanged();
+          return getObjectSizeLessThanFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder() {
+          if (objectSizeLessThanBuilder_ != null) {
+            return objectSizeLessThanBuilder_.getMessageOrBuilder();
+          } else {
+            return objectSizeLessThan_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
+          }
+        }
+        /**
+         * <pre>
+         * Size that the object must be less t.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getObjectSizeLessThanFieldBuilder() {
+          if (objectSizeLessThanBuilder_ == null) {
+            objectSizeLessThanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getObjectSizeLessThan(),
+                    getParentForChildren(),
+                    isClean());
+            objectSizeLessThan_ = null;
+          }
+          return objectSizeLessThanBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -34935,6 +35739,1864 @@ public final class BucketOuterClass {
 
   }
 
+  public interface ObjectLockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.ObjectLock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus getStatus();
+
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+     * @return Whether the defaultRetention field is set.
+     */
+    boolean hasDefaultRetention();
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+     * @return The defaultRetention.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultRetention();
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder getDefaultRetentionOrBuilder();
+  }
+  /**
+   * <pre>
+   * A resource for Object Lock configuration of a bucket.
+   * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.storage.v1.ObjectLock}
+   */
+  public static final class ObjectLock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.ObjectLock)
+      ObjectLockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ObjectLock.newBuilder() to construct.
+    private ObjectLock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ObjectLock() {
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ObjectLock();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ObjectLock(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder subBuilder = null;
+              if (defaultRetention_ != null) {
+                subBuilder = defaultRetention_.toBuilder();
+              }
+              defaultRetention_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaultRetention_);
+                defaultRetention_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.class, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Activity status of the object lock settings on the bucket
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus}
+     */
+    public enum ObjectLockStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>OBJECT_LOCK_STATUS_UNSPECIFIED = 0;</code>
+       */
+      OBJECT_LOCK_STATUS_UNSPECIFIED(0),
+      /**
+       * <code>OBJECT_LOCK_STATUS_DISABLED = 1;</code>
+       */
+      OBJECT_LOCK_STATUS_DISABLED(1),
+      /**
+       * <code>OBJECT_LOCK_STATUS_ENABLED = 2;</code>
+       */
+      OBJECT_LOCK_STATUS_ENABLED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>OBJECT_LOCK_STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int OBJECT_LOCK_STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>OBJECT_LOCK_STATUS_DISABLED = 1;</code>
+       */
+      public static final int OBJECT_LOCK_STATUS_DISABLED_VALUE = 1;
+      /**
+       * <code>OBJECT_LOCK_STATUS_ENABLED = 2;</code>
+       */
+      public static final int OBJECT_LOCK_STATUS_ENABLED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ObjectLockStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ObjectLockStatus forNumber(int value) {
+        switch (value) {
+          case 0: return OBJECT_LOCK_STATUS_UNSPECIFIED;
+          case 1: return OBJECT_LOCK_STATUS_DISABLED;
+          case 2: return OBJECT_LOCK_STATUS_ENABLED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ObjectLockStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ObjectLockStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ObjectLockStatus>() {
+              public ObjectLockStatus findValueByNumber(int number) {
+                return ObjectLockStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ObjectLockStatus[] VALUES = values();
+
+      public static ObjectLockStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ObjectLockStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus)
+    }
+
+    public interface DefaultRetentionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.ObjectLock.DefaultRetention)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      int getModeValue();
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+       * @return The mode.
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode getMode();
+
+      /**
+       * <pre>
+       * Number of days for locking
+       * </pre>
+       *
+       * <code>int64 days = 2;</code>
+       * @return Whether the days field is set.
+       */
+      boolean hasDays();
+      /**
+       * <pre>
+       * Number of days for locking
+       * </pre>
+       *
+       * <code>int64 days = 2;</code>
+       * @return The days.
+       */
+      long getDays();
+
+      /**
+       * <pre>
+       * Number of years for locking
+       * </pre>
+       *
+       * <code>int64 years = 3;</code>
+       * @return Whether the years field is set.
+       */
+      boolean hasYears();
+      /**
+       * <pre>
+       * Number of years for locking
+       * </pre>
+       *
+       * <code>int64 years = 3;</code>
+       * @return The years.
+       */
+      long getYears();
+
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.PeriodCase getPeriodCase();
+    }
+    /**
+     * <pre>
+     * Default lock configuration for added objects
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.ObjectLock.DefaultRetention}
+     */
+    public static final class DefaultRetention extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.ObjectLock.DefaultRetention)
+        DefaultRetentionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DefaultRetention.newBuilder() to construct.
+      private DefaultRetention(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DefaultRetention() {
+        mode_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DefaultRetention();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DefaultRetention(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                mode_ = rawValue;
+                break;
+              }
+              case 16: {
+                period_ = input.readInt64();
+                periodCase_ = 2;
+                break;
+              }
+              case 24: {
+                period_ = input.readInt64();
+                periodCase_ = 3;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.class, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * Lock type
+       * </pre>
+       *
+       * Protobuf enum {@code yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode}
+       */
+      public enum Mode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>MODE_UNSPECIFIED = 0;</code>
+         */
+        MODE_UNSPECIFIED(0),
+        /**
+         * <code>MODE_GOVERNANCE = 1;</code>
+         */
+        MODE_GOVERNANCE(1),
+        /**
+         * <code>MODE_COMPLIANCE = 2;</code>
+         */
+        MODE_COMPLIANCE(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>MODE_UNSPECIFIED = 0;</code>
+         */
+        public static final int MODE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>MODE_GOVERNANCE = 1;</code>
+         */
+        public static final int MODE_GOVERNANCE_VALUE = 1;
+        /**
+         * <code>MODE_COMPLIANCE = 2;</code>
+         */
+        public static final int MODE_COMPLIANCE_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Mode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Mode forNumber(int value) {
+          switch (value) {
+            case 0: return MODE_UNSPECIFIED;
+            case 1: return MODE_GOVERNANCE;
+            case 2: return MODE_COMPLIANCE;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Mode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Mode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Mode>() {
+                public Mode findValueByNumber(int number) {
+                  return Mode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Mode[] VALUES = values();
+
+        public static Mode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Mode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode)
+      }
+
+      private int periodCase_ = 0;
+      private java.lang.Object period_;
+      public enum PeriodCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        DAYS(2),
+        YEARS(3),
+        PERIOD_NOT_SET(0);
+        private final int value;
+        private PeriodCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static PeriodCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static PeriodCase forNumber(int value) {
+          switch (value) {
+            case 2: return DAYS;
+            case 3: return YEARS;
+            case 0: return PERIOD_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public PeriodCase
+      getPeriodCase() {
+        return PeriodCase.forNumber(
+            periodCase_);
+      }
+
+      public static final int MODE_FIELD_NUMBER = 1;
+      private int mode_;
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+       * @return The mode.
+       */
+      @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode result = yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.UNRECOGNIZED : result;
+      }
+
+      public static final int DAYS_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * Number of days for locking
+       * </pre>
+       *
+       * <code>int64 days = 2;</code>
+       * @return Whether the days field is set.
+       */
+      @java.lang.Override
+      public boolean hasDays() {
+        return periodCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Number of days for locking
+       * </pre>
+       *
+       * <code>int64 days = 2;</code>
+       * @return The days.
+       */
+      @java.lang.Override
+      public long getDays() {
+        if (periodCase_ == 2) {
+          return (java.lang.Long) period_;
+        }
+        return 0L;
+      }
+
+      public static final int YEARS_FIELD_NUMBER = 3;
+      /**
+       * <pre>
+       * Number of years for locking
+       * </pre>
+       *
+       * <code>int64 years = 3;</code>
+       * @return Whether the years field is set.
+       */
+      @java.lang.Override
+      public boolean hasYears() {
+        return periodCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Number of years for locking
+       * </pre>
+       *
+       * <code>int64 years = 3;</code>
+       * @return The years.
+       */
+      @java.lang.Override
+      public long getYears() {
+        if (periodCase_ == 3) {
+          return (java.lang.Long) period_;
+        }
+        return 0L;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (mode_ != yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.MODE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(1, mode_);
+        }
+        if (periodCase_ == 2) {
+          output.writeInt64(
+              2, (long)((java.lang.Long) period_));
+        }
+        if (periodCase_ == 3) {
+          output.writeInt64(
+              3, (long)((java.lang.Long) period_));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (mode_ != yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.MODE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, mode_);
+        }
+        if (periodCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(
+                2, (long)((java.lang.Long) period_));
+        }
+        if (periodCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(
+                3, (long)((java.lang.Long) period_));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention other = (yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention) obj;
+
+        if (mode_ != other.mode_) return false;
+        if (!getPeriodCase().equals(other.getPeriodCase())) return false;
+        switch (periodCase_) {
+          case 2:
+            if (getDays()
+                != other.getDays()) return false;
+            break;
+          case 3:
+            if (getYears()
+                != other.getYears()) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + MODE_FIELD_NUMBER;
+        hash = (53 * hash) + mode_;
+        switch (periodCase_) {
+          case 2:
+            hash = (37 * hash) + DAYS_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                getDays());
+            break;
+          case 3:
+            hash = (37 * hash) + YEARS_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                getYears());
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Default lock configuration for added objects
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.storage.v1.ObjectLock.DefaultRetention}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.ObjectLock.DefaultRetention)
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.class, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          mode_ = 0;
+
+          periodCase_ = 0;
+          period_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention result = new yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention(this);
+          result.mode_ = mode_;
+          if (periodCase_ == 2) {
+            result.period_ = period_;
+          }
+          if (periodCase_ == 3) {
+            result.period_ = period_;
+          }
+          result.periodCase_ = periodCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDefaultInstance()) return this;
+          if (other.mode_ != 0) {
+            setModeValue(other.getModeValue());
+          }
+          switch (other.getPeriodCase()) {
+            case DAYS: {
+              setDays(other.getDays());
+              break;
+            }
+            case YEARS: {
+              setYears(other.getYears());
+              break;
+            }
+            case PERIOD_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int periodCase_ = 0;
+        private java.lang.Object period_;
+        public PeriodCase
+            getPeriodCase() {
+          return PeriodCase.forNumber(
+              periodCase_);
+        }
+
+        public Builder clearPeriod() {
+          periodCase_ = 0;
+          period_ = null;
+          onChanged();
+          return this;
+        }
+
+
+        private int mode_ = 0;
+        /**
+         * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+         * @return The enum numeric value on the wire for mode.
+         */
+        @java.lang.Override public int getModeValue() {
+          return mode_;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+         * @param value The enum numeric value on the wire for mode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModeValue(int value) {
+          
+          mode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+         * @return The mode.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode getMode() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode result = yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.valueOf(mode_);
+          return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.UNRECOGNIZED : result;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+         * @param value The mode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMode(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          mode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMode() {
+          
+          mode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Number of days for locking
+         * </pre>
+         *
+         * <code>int64 days = 2;</code>
+         * @return Whether the days field is set.
+         */
+        public boolean hasDays() {
+          return periodCase_ == 2;
+        }
+        /**
+         * <pre>
+         * Number of days for locking
+         * </pre>
+         *
+         * <code>int64 days = 2;</code>
+         * @return The days.
+         */
+        public long getDays() {
+          if (periodCase_ == 2) {
+            return (java.lang.Long) period_;
+          }
+          return 0L;
+        }
+        /**
+         * <pre>
+         * Number of days for locking
+         * </pre>
+         *
+         * <code>int64 days = 2;</code>
+         * @param value The days to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDays(long value) {
+          periodCase_ = 2;
+          period_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of days for locking
+         * </pre>
+         *
+         * <code>int64 days = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDays() {
+          if (periodCase_ == 2) {
+            periodCase_ = 0;
+            period_ = null;
+            onChanged();
+          }
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Number of years for locking
+         * </pre>
+         *
+         * <code>int64 years = 3;</code>
+         * @return Whether the years field is set.
+         */
+        public boolean hasYears() {
+          return periodCase_ == 3;
+        }
+        /**
+         * <pre>
+         * Number of years for locking
+         * </pre>
+         *
+         * <code>int64 years = 3;</code>
+         * @return The years.
+         */
+        public long getYears() {
+          if (periodCase_ == 3) {
+            return (java.lang.Long) period_;
+          }
+          return 0L;
+        }
+        /**
+         * <pre>
+         * Number of years for locking
+         * </pre>
+         *
+         * <code>int64 years = 3;</code>
+         * @param value The years to set.
+         * @return This builder for chaining.
+         */
+        public Builder setYears(long value) {
+          periodCase_ = 3;
+          period_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of years for locking
+         * </pre>
+         *
+         * <code>int64 years = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearYears() {
+          if (periodCase_ == 3) {
+            periodCase_ = 0;
+            period_ = null;
+            onChanged();
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.ObjectLock.DefaultRetention)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.ObjectLock.DefaultRetention)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DefaultRetention>
+          PARSER = new com.google.protobuf.AbstractParser<DefaultRetention>() {
+        @java.lang.Override
+        public DefaultRetention parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DefaultRetention(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DefaultRetention> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DefaultRetention> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus result = yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.valueOf(status_);
+      return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int DEFAULT_RETENTION_FIELD_NUMBER = 3;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention defaultRetention_;
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+     * @return Whether the defaultRetention field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultRetention() {
+      return defaultRetention_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+     * @return The defaultRetention.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultRetention() {
+      return defaultRetention_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDefaultInstance() : defaultRetention_;
+    }
+    /**
+     * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder getDefaultRetentionOrBuilder() {
+      return getDefaultRetention();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.OBJECT_LOCK_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      if (defaultRetention_ != null) {
+        output.writeMessage(3, getDefaultRetention());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.OBJECT_LOCK_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      if (defaultRetention_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDefaultRetention());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock other = (yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock) obj;
+
+      if (status_ != other.status_) return false;
+      if (hasDefaultRetention() != other.hasDefaultRetention()) return false;
+      if (hasDefaultRetention()) {
+        if (!getDefaultRetention()
+            .equals(other.getDefaultRetention())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasDefaultRetention()) {
+        hash = (37 * hash) + DEFAULT_RETENTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultRetention().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A resource for Object Lock configuration of a bucket.
+     * For details about the concept, see [documentation](/docs/storage/concepts/object-lock).
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.ObjectLock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.ObjectLock)
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.class, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        if (defaultRetentionBuilder_ == null) {
+          defaultRetention_ = null;
+        } else {
+          defaultRetention_ = null;
+          defaultRetentionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock build() {
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock buildPartial() {
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock result = new yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock(this);
+        result.status_ = status_;
+        if (defaultRetentionBuilder_ == null) {
+          result.defaultRetention_ = defaultRetention_;
+        } else {
+          result.defaultRetention_ = defaultRetentionBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock) {
+          return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock other) {
+        if (other == yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasDefaultRetention()) {
+          mergeDefaultRetention(other.getDefaultRetention());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus result = yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.valueOf(status_);
+        return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention defaultRetention_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder> defaultRetentionBuilder_;
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       * @return Whether the defaultRetention field is set.
+       */
+      public boolean hasDefaultRetention() {
+        return defaultRetentionBuilder_ != null || defaultRetention_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       * @return The defaultRetention.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultRetention() {
+        if (defaultRetentionBuilder_ == null) {
+          return defaultRetention_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDefaultInstance() : defaultRetention_;
+        } else {
+          return defaultRetentionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      public Builder setDefaultRetention(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention value) {
+        if (defaultRetentionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultRetention_ = value;
+          onChanged();
+        } else {
+          defaultRetentionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      public Builder setDefaultRetention(
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder builderForValue) {
+        if (defaultRetentionBuilder_ == null) {
+          defaultRetention_ = builderForValue.build();
+          onChanged();
+        } else {
+          defaultRetentionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      public Builder mergeDefaultRetention(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention value) {
+        if (defaultRetentionBuilder_ == null) {
+          if (defaultRetention_ != null) {
+            defaultRetention_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.newBuilder(defaultRetention_).mergeFrom(value).buildPartial();
+          } else {
+            defaultRetention_ = value;
+          }
+          onChanged();
+        } else {
+          defaultRetentionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      public Builder clearDefaultRetention() {
+        if (defaultRetentionBuilder_ == null) {
+          defaultRetention_ = null;
+          onChanged();
+        } else {
+          defaultRetention_ = null;
+          defaultRetentionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder getDefaultRetentionBuilder() {
+        
+        onChanged();
+        return getDefaultRetentionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder getDefaultRetentionOrBuilder() {
+        if (defaultRetentionBuilder_ != null) {
+          return defaultRetentionBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultRetention_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDefaultInstance() : defaultRetention_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder> 
+          getDefaultRetentionFieldBuilder() {
+        if (defaultRetentionBuilder_ == null) {
+          defaultRetentionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder>(
+                  getDefaultRetention(),
+                  getParentForChildren(),
+                  isClean());
+          defaultRetention_ = null;
+        }
+        return defaultRetentionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.ObjectLock)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.ObjectLock)
+    private static final yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock();
+    }
+
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ObjectLock>
+        PARSER = new com.google.protobuf.AbstractParser<ObjectLock>() {
+      @java.lang.Override
+      public ObjectLock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ObjectLock(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ObjectLock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ObjectLock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_storage_v1_Bucket_descriptor;
   private static final 
@@ -35055,6 +37717,16 @@ public final class BucketOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_HTTPSConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_ObjectLock_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35068,7 +37740,7 @@ public final class BucketOuterClass {
       "yandex.cloud.storage.v1\032\034google/protobuf" +
       "/struct.proto\032\037google/protobuf/timestamp" +
       ".proto\032\036google/protobuf/wrappers.proto\032\035" +
-      "yandex/cloud/validation.proto\"\324\004\n\006Bucket" +
+      "yandex/cloud/validation.proto\"\216\005\n\006Bucket" +
       "\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tfolder_id\030" +
       "\003 \001(\t\022M\n\026anonymous_access_flags\030\004 \001(\0132-." +
       "yandex.cloud.storage.v1.AnonymousAccessF" +
@@ -35083,126 +37755,144 @@ public final class BucketOuterClass {
       "yandex.cloud.storage.v1.WebsiteSettings\022" +
       "?\n\017lifecycle_rules\030\r \003(\0132&.yandex.cloud." +
       "storage.v1.LifecycleRule\022*\n\004tags\030\016 \003(\0132\034" +
-      ".yandex.cloud.storage.v1.Tag\"!\n\003Tag\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\222\004\n\003ACL\0222\n\006grant" +
-      "s\030\001 \003(\0132\".yandex.cloud.storage.v1.ACL.Gr" +
-      "ant\032\326\003\n\005Grant\022G\n\npermission\030\001 \001(\0162-.yand" +
-      "ex.cloud.storage.v1.ACL.Grant.Permission" +
-      "B\004\350\3071\001\022F\n\ngrant_type\030\002 \001(\0162,.yandex.clou" +
-      "d.storage.v1.ACL.Grant.GrantTypeB\004\350\3071\001\022\022" +
-      "\n\ngrantee_id\030\003 \001(\t\"\243\001\n\nPermission\022\032\n\026PER" +
-      "MISSION_UNSPECIFIED\020\000\022\033\n\027PERMISSION_FULL" +
-      "_CONTROL\020\001\022\024\n\020PERMISSION_WRITE\020\002\022\030\n\024PERM" +
-      "ISSION_WRITE_ACP\020\003\022\023\n\017PERMISSION_READ\020\004\022" +
-      "\027\n\023PERMISSION_READ_ACP\020\005\"\201\001\n\tGrantType\022\032" +
-      "\n\026GRANT_TYPE_UNSPECIFIED\020\000\022\026\n\022GRANT_TYPE" +
-      "_ACCOUNT\020\001\022&\n\"GRANT_TYPE_ALL_AUTHENTICAT" +
-      "ED_USERS\020\002\022\030\n\024GRANT_TYPE_ALL_USERS\020\003\"\233\001\n" +
-      "\024AnonymousAccessFlags\022(\n\004read\030\001 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022(\n\004list\030\002 \001(\0132\032." +
-      "google.protobuf.BoolValue\022/\n\013config_read" +
-      "\030\003 \001(\0132\032.google.protobuf.BoolValue\"\344\002\n\010C" +
-      "orsRule\022\n\n\002id\030\001 \001(\t\022M\n\017allowed_methods\030\002" +
-      " \003(\0162(.yandex.cloud.storage.v1.CorsRule." +
-      "MethodB\n\202\3101\002>0\220\3101\001\022\027\n\017allowed_headers\030\003 " +
-      "\003(\t\022\037\n\017allowed_origins\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016" +
-      "expose_headers\030\005 \003(\t\0224\n\017max_age_seconds\030" +
-      "\006 \001(\0132\033.google.protobuf.Int64Value\"u\n\006Me" +
-      "thod\022\026\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_G" +
-      "ET\020\001\022\017\n\013METHOD_HEAD\020\002\022\017\n\013METHOD_POST\020\003\022\016" +
-      "\n\nMETHOD_PUT\020\004\022\021\n\rMETHOD_DELETE\020\005\"\274\006\n\017We" +
-      "bsiteSettings\022\r\n\005index\030\001 \001(\t\022\r\n\005error\030\002 " +
-      "\001(\t\022N\n\025redirect_all_requests\030\003 \001(\0132/.yan" +
-      "dex.cloud.storage.v1.WebsiteSettings.Sch" +
-      "eme\022K\n\rrouting_rules\030\004 \003(\01324.yandex.clou" +
-      "d.storage.v1.WebsiteSettings.RoutingRule" +
-      "\032_\n\006Scheme\022C\n\010protocol\030\001 \001(\01621.yandex.cl" +
-      "oud.storage.v1.WebsiteSettings.Protocol\022" +
-      "\020\n\010hostname\030\002 \001(\t\032O\n\tCondition\022\'\n\037http_e" +
-      "rror_code_returned_equals\030\001 \001(\t\022\031\n\021key_p" +
-      "refix_equals\030\002 \001(\t\032\322\001\n\010Redirect\022\020\n\010hostn" +
-      "ame\030\001 \001(\t\0224\n\022http_redirect_code\030\002 \001(\tB\030\362" +
-      "\3071\0243(0[1-9]|[1-9][0-9])\022C\n\010protocol\030\003 \001(" +
-      "\01621.yandex.cloud.storage.v1.WebsiteSetti" +
-      "ngs.Protocol\022\037\n\027replace_key_prefix_with\030" +
-      "\004 \001(\t\022\030\n\020replace_key_with\030\005 \001(\t\032\231\001\n\013Rout" +
-      "ingRule\022E\n\tcondition\030\001 \001(\01322.yandex.clou" +
-      "d.storage.v1.WebsiteSettings.Condition\022C" +
-      "\n\010redirect\030\002 \001(\01321.yandex.cloud.storage." +
-      "v1.WebsiteSettings.Redirect\"K\n\010Protocol\022" +
-      "\030\n\024PROTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HT" +
-      "TP\020\001\022\022\n\016PROTOCOL_HTTPS\020\002\"\370\010\n\rLifecycleRu" +
-      "le\022(\n\002id\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321." +
-      "yandex.cloud.storage.v1.LifecycleRule.Ru" +
-      "leFilter\022E\n\nexpiration\030\004 \001(\01321.yandex.cl" +
-      "oud.storage.v1.LifecycleRule.Expiration\022" +
-      "F\n\013transitions\030\005 \003(\01321.yandex.cloud.stor" +
-      "age.v1.LifecycleRule.Transition\022[\n!abort" +
-      "_incomplete_multipart_upload\030\006 \001(\01320.yan" +
-      "dex.cloud.storage.v1.LifecycleRule.After" +
-      "Days\022Z\n\025noncurrent_expiration\030\007 \001(\0132;.ya" +
-      "ndex.cloud.storage.v1.LifecycleRule.Nonc" +
-      "urrentExpiration\022[\n\026noncurrent_transitio" +
-      "ns\030\010 \003(\0132;.yandex.cloud.storage.v1.Lifec" +
-      "ycleRule.NoncurrentTransition\032G\n\tAfterDa" +
-      "ys\022:\n\025days_after_expiration\030\001 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\032L\n\024NoncurrentExpi" +
-      "ration\0224\n\017noncurrent_days\030\001 \001(\0132\033.google" +
-      ".protobuf.Int64Value\032i\n\024NoncurrentTransi" +
-      "tion\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022\033\n\rstorage_class\030\002 \001(" +
-      "\tB\004\350\3071\001\032~\n\nTransition\022(\n\004date\030\001 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033." +
-      "google.protobuf.Int64Value\022\033\n\rstorage_cl" +
-      "ass\030\004 \001(\tB\004\350\3071\001\032\243\001\n\nExpiration\022(\n\004date\030\001" +
-      " \001(\0132\032.google.protobuf.Timestamp\022)\n\004days" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022@\n\034e" +
-      "xpired_object_delete_marker\030\003 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\032\034\n\nRuleFilter\022\016\n\006p" +
-      "refix\030\001 \001(\t\"\335\001\n\010Counters\022\032\n\022simple_objec" +
-      "t_size\030\001 \001(\003\022\033\n\023simple_object_count\030\002 \001(" +
-      "\003\022\032\n\022objects_parts_size\030\003 \001(\003\022\033\n\023objects" +
-      "_parts_count\030\004 \001(\003\022\036\n\026multipart_objects_" +
-      "size\030\005 \001(\003\022\037\n\027multipart_objects_count\030\006 " +
-      "\001(\003\022\036\n\026active_multipart_count\030\007 \001(\003\"]\n\023O" +
-      "ptionalSizeByClass\022\025\n\rstorage_class\030\001 \001(" +
-      "\t\022/\n\nclass_size\030\002 \001(\0132\033.google.protobuf." +
-      "Int64Value\"8\n\013SizeByClass\022\025\n\rstorage_cla" +
-      "ss\030\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"]\n\017Counters" +
-      "ByClass\022\025\n\rstorage_class\030\001 \001(\t\0223\n\010counte" +
-      "rs\030\002 \001(\0132!.yandex.cloud.storage.v1.Count" +
-      "ers\"\252\004\n\013BucketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max" +
-      "_size\030\002 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022\021\n\tused_size\030\003 \001(\003\022M\n\027storage_class_max" +
-      "_sizes\030\004 \003(\0132,.yandex.cloud.storage.v1.O" +
-      "ptionalSizeByClass\022F\n\030storage_class_used" +
-      "_sizes\030\005 \003(\0132$.yandex.cloud.storage.v1.S" +
-      "izeByClass\022H\n\026storage_class_counters\030\006 \003" +
-      "(\0132(.yandex.cloud.storage.v1.CountersByC" +
-      "lass\022;\n\025default_storage_class\030\007 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022M\n\026anonymous_a" +
-      "ccess_flags\030\010 \001(\0132-.yandex.cloud.storage" +
-      ".v1.AnonymousAccessFlags\022.\n\ncreated_at\030\t" +
-      " \001(\0132\032.google.protobuf.Timestamp\022.\n\nupda" +
-      "ted_at\030\n \001(\0132\032.google.protobuf.Timestamp" +
-      "\"\301\003\n\013HTTPSConfig\022\014\n\004name\030\001 \001(\t\022D\n\013source" +
-      "_type\030\002 \001(\0162/.yandex.cloud.storage.v1.HT" +
-      "TPSConfig.SourceType\022,\n\006issuer\030\003 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022-\n\007subject\030\004 " +
-      "\001(\0132\034.google.protobuf.StringValue\022\021\n\tdns" +
-      "_names\030\005 \003(\t\022.\n\nnot_before\030\006 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022-\n\tnot_after\030\007 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\026\n\016certifica" +
-      "te_id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027SOURCE_TYPE" +
-      "_UNSPECIFIED\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAG" +
-      "ED\020\001\022.\n*SOURCE_TYPE_MANAGED_BY_CERTIFICA" +
-      "TE_MANAGER\020\002*s\n\nVersioning\022\032\n\026VERSIONING" +
-      "_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISABLED\020\001\022" +
-      "\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSIONING_SU" +
-      "SPENDED\020\003Bb\n\033yandex.cloud.api.storage.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/storage/v1;storageb\006proto3"
+      ".yandex.cloud.storage.v1.Tag\0228\n\013object_l" +
+      "ock\030\017 \001(\0132#.yandex.cloud.storage.v1.Obje" +
+      "ctLock\"!\n\003Tag\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t\"\222\004\n\003ACL\0222\n\006grants\030\001 \003(\0132\".yandex.cloud" +
+      ".storage.v1.ACL.Grant\032\326\003\n\005Grant\022G\n\npermi" +
+      "ssion\030\001 \001(\0162-.yandex.cloud.storage.v1.AC" +
+      "L.Grant.PermissionB\004\350\3071\001\022F\n\ngrant_type\030\002" +
+      " \001(\0162,.yandex.cloud.storage.v1.ACL.Grant" +
+      ".GrantTypeB\004\350\3071\001\022\022\n\ngrantee_id\030\003 \001(\t\"\243\001\n" +
+      "\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000\022" +
+      "\033\n\027PERMISSION_FULL_CONTROL\020\001\022\024\n\020PERMISSI" +
+      "ON_WRITE\020\002\022\030\n\024PERMISSION_WRITE_ACP\020\003\022\023\n\017" +
+      "PERMISSION_READ\020\004\022\027\n\023PERMISSION_READ_ACP" +
+      "\020\005\"\201\001\n\tGrantType\022\032\n\026GRANT_TYPE_UNSPECIFI" +
+      "ED\020\000\022\026\n\022GRANT_TYPE_ACCOUNT\020\001\022&\n\"GRANT_TY" +
+      "PE_ALL_AUTHENTICATED_USERS\020\002\022\030\n\024GRANT_TY" +
+      "PE_ALL_USERS\020\003\"\233\001\n\024AnonymousAccessFlags\022" +
+      "(\n\004read\030\001 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022(\n\004list\030\002 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022/\n\013config_read\030\003 \001(\0132\032.google.protob" +
+      "uf.BoolValue\"\344\002\n\010CorsRule\022\n\n\002id\030\001 \001(\t\022M\n" +
+      "\017allowed_methods\030\002 \003(\0162(.yandex.cloud.st" +
+      "orage.v1.CorsRule.MethodB\n\202\3101\002>0\220\3101\001\022\027\n\017" +
+      "allowed_headers\030\003 \003(\t\022\037\n\017allowed_origins" +
+      "\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016expose_headers\030\005 \003(\t\0224" +
+      "\n\017max_age_seconds\030\006 \001(\0132\033.google.protobu" +
+      "f.Int64Value\"u\n\006Method\022\026\n\022METHOD_UNSPECI" +
+      "FIED\020\000\022\016\n\nMETHOD_GET\020\001\022\017\n\013METHOD_HEAD\020\002\022" +
+      "\017\n\013METHOD_POST\020\003\022\016\n\nMETHOD_PUT\020\004\022\021\n\rMETH" +
+      "OD_DELETE\020\005\"\274\006\n\017WebsiteSettings\022\r\n\005index" +
+      "\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\022N\n\025redirect_all_re" +
+      "quests\030\003 \001(\0132/.yandex.cloud.storage.v1.W" +
+      "ebsiteSettings.Scheme\022K\n\rrouting_rules\030\004" +
+      " \003(\01324.yandex.cloud.storage.v1.WebsiteSe" +
+      "ttings.RoutingRule\032_\n\006Scheme\022C\n\010protocol" +
+      "\030\001 \001(\01621.yandex.cloud.storage.v1.Website" +
+      "Settings.Protocol\022\020\n\010hostname\030\002 \001(\t\032O\n\tC" +
+      "ondition\022\'\n\037http_error_code_returned_equ" +
+      "als\030\001 \001(\t\022\031\n\021key_prefix_equals\030\002 \001(\t\032\322\001\n" +
+      "\010Redirect\022\020\n\010hostname\030\001 \001(\t\0224\n\022http_redi" +
+      "rect_code\030\002 \001(\tB\030\362\3071\0243(0[1-9]|[1-9][0-9]" +
+      ")\022C\n\010protocol\030\003 \001(\01621.yandex.cloud.stora" +
+      "ge.v1.WebsiteSettings.Protocol\022\037\n\027replac" +
+      "e_key_prefix_with\030\004 \001(\t\022\030\n\020replace_key_w" +
+      "ith\030\005 \001(\t\032\231\001\n\013RoutingRule\022E\n\tcondition\030\001" +
+      " \001(\01322.yandex.cloud.storage.v1.WebsiteSe" +
+      "ttings.Condition\022C\n\010redirect\030\002 \001(\01321.yan" +
+      "dex.cloud.storage.v1.WebsiteSettings.Red" +
+      "irect\"K\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIE" +
+      "D\020\000\022\021\n\rPROTOCOL_HTTP\020\001\022\022\n\016PROTOCOL_HTTPS" +
+      "\020\002\"\364\t\n\rLifecycleRule\022(\n\002id\030\001 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\022\017\n\007enabled\030\002 \001(\010\022" +
+      "A\n\006filter\030\003 \001(\01321.yandex.cloud.storage.v" +
+      "1.LifecycleRule.RuleFilter\022E\n\nexpiration" +
+      "\030\004 \001(\01321.yandex.cloud.storage.v1.Lifecyc" +
+      "leRule.Expiration\022F\n\013transitions\030\005 \003(\01321" +
+      ".yandex.cloud.storage.v1.LifecycleRule.T" +
+      "ransition\022[\n!abort_incomplete_multipart_" +
+      "upload\030\006 \001(\01320.yandex.cloud.storage.v1.L" +
+      "ifecycleRule.AfterDays\022Z\n\025noncurrent_exp" +
+      "iration\030\007 \001(\0132;.yandex.cloud.storage.v1." +
+      "LifecycleRule.NoncurrentExpiration\022[\n\026no" +
+      "ncurrent_transitions\030\010 \003(\0132;.yandex.clou" +
+      "d.storage.v1.LifecycleRule.NoncurrentTra" +
+      "nsition\032G\n\tAfterDays\022:\n\025days_after_expir" +
+      "ation\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "\032L\n\024NoncurrentExpiration\0224\n\017noncurrent_d" +
+      "ays\030\001 \001(\0132\033.google.protobuf.Int64Value\032i" +
+      "\n\024NoncurrentTransition\0224\n\017noncurrent_day" +
+      "s\030\001 \001(\0132\033.google.protobuf.Int64Value\022\033\n\r" +
+      "storage_class\030\002 \001(\tB\004\350\3071\001\032~\n\nTransition\022" +
+      "(\n\004date\030\001 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022)\n\004days\030\002 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022\033\n\rstorage_class\030\004 \001(\tB\004\350\3071\001\032\243\001\n\nEx" +
+      "piration\022(\n\004date\030\001 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022)\n\004days\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022@\n\034expired_object_delete_m" +
+      "arker\030\003 \001(\0132\032.google.protobuf.BoolValue\032" +
+      "\227\001\n\nRuleFilter\022\016\n\006prefix\030\001 \001(\t\022=\n\030object" +
+      "_size_greater_than\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022:\n\025object_size_less_than\030\003" +
+      " \001(\0132\033.google.protobuf.Int64Value\"\335\001\n\010Co" +
+      "unters\022\032\n\022simple_object_size\030\001 \001(\003\022\033\n\023si" +
+      "mple_object_count\030\002 \001(\003\022\032\n\022objects_parts" +
+      "_size\030\003 \001(\003\022\033\n\023objects_parts_count\030\004 \001(\003" +
+      "\022\036\n\026multipart_objects_size\030\005 \001(\003\022\037\n\027mult" +
+      "ipart_objects_count\030\006 \001(\003\022\036\n\026active_mult" +
+      "ipart_count\030\007 \001(\003\"]\n\023OptionalSizeByClass" +
+      "\022\025\n\rstorage_class\030\001 \001(\t\022/\n\nclass_size\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64Value\"8\n\013Size" +
+      "ByClass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n\nclass_" +
+      "size\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\rstorage" +
+      "_class\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!.yandex." +
+      "cloud.storage.v1.Counters\"\252\004\n\013BucketStat" +
+      "s\022\014\n\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022\021\n\tused_size\030\003 \001(" +
+      "\003\022M\n\027storage_class_max_sizes\030\004 \003(\0132,.yan" +
+      "dex.cloud.storage.v1.OptionalSizeByClass" +
+      "\022F\n\030storage_class_used_sizes\030\005 \003(\0132$.yan" +
+      "dex.cloud.storage.v1.SizeByClass\022H\n\026stor" +
+      "age_class_counters\030\006 \003(\0132(.yandex.cloud." +
+      "storage.v1.CountersByClass\022;\n\025default_st" +
+      "orage_class\030\007 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\022M\n\026anonymous_access_flags\030\010 \001(\0132" +
+      "-.yandex.cloud.storage.v1.AnonymousAcces" +
+      "sFlags\022.\n\ncreated_at\030\t \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022.\n\nupdated_at\030\n \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\"\301\003\n\013HTTPSConfig\022\014" +
+      "\n\004name\030\001 \001(\t\022D\n\013source_type\030\002 \001(\0162/.yand" +
+      "ex.cloud.storage.v1.HTTPSConfig.SourceTy" +
+      "pe\022,\n\006issuer\030\003 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022-\n\007subject\030\004 \001(\0132\034.google.proto" +
+      "buf.StringValue\022\021\n\tdns_names\030\005 \003(\t\022.\n\nno" +
+      "t_before\030\006 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022-\n\tnot_after\030\007 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\026\n\016certificate_id\030\010 \001(\t\"w\n\nSou" +
+      "rceType\022\033\n\027SOURCE_TYPE_UNSPECIFIED\020\000\022\034\n\030" +
+      "SOURCE_TYPE_SELF_MANAGED\020\001\022.\n*SOURCE_TYP" +
+      "E_MANAGED_BY_CERTIFICATE_MANAGER\020\002\"\363\003\n\nO" +
+      "bjectLock\022D\n\006status\030\002 \001(\01624.yandex.cloud" +
+      ".storage.v1.ObjectLock.ObjectLockStatus\022" +
+      "O\n\021default_retention\030\003 \001(\01324.yandex.clou" +
+      "d.storage.v1.ObjectLock.DefaultRetention" +
+      "\032\324\001\n\020DefaultRetention\022G\n\004mode\030\001 \001(\01629.ya" +
+      "ndex.cloud.storage.v1.ObjectLock.Default" +
+      "Retention.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005years\030" +
+      "\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\023\n" +
+      "\017MODE_GOVERNANCE\020\001\022\023\n\017MODE_COMPLIANCE\020\002B" +
+      "\016\n\006period\022\004\300\3011\001\"w\n\020ObjectLockStatus\022\"\n\036O" +
+      "BJECT_LOCK_STATUS_UNSPECIFIED\020\000\022\037\n\033OBJEC" +
+      "T_LOCK_STATUS_DISABLED\020\001\022\036\n\032OBJECT_LOCK_" +
+      "STATUS_ENABLED\020\002*s\n\nVersioning\022\032\n\026VERSIO" +
+      "NING_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISABLE" +
+      "D\020\001\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSIONIN" +
+      "G_SUSPENDED\020\003Bb\n\033yandex.cloud.api.storag" +
+      "e.v1ZCgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/storage/v1;storageb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35217,7 +37907,7 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_Bucket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_Bucket_descriptor,
-        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", });
+        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", });
     internal_static_yandex_cloud_storage_v1_Tag_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_storage_v1_Tag_fieldAccessorTable = new
@@ -35319,7 +38009,7 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_descriptor,
-        new java.lang.String[] { "Prefix", });
+        new java.lang.String[] { "Prefix", "ObjectSizeGreaterThan", "ObjectSizeLessThan", });
     internal_static_yandex_cloud_storage_v1_Counters_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_storage_v1_Counters_fieldAccessorTable = new
@@ -35356,8 +38046,21 @@ public final class BucketOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_HTTPSConfig_descriptor,
         new java.lang.String[] { "Name", "SourceType", "Issuer", "Subject", "DnsNames", "NotBefore", "NotAfter", "CertificateId", });
+    internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_storage_v1_ObjectLock_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor,
+        new java.lang.String[] { "Status", "DefaultRetention", });
+    internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor =
+      internal_static_yandex_cloud_storage_v1_ObjectLock_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor,
+        new java.lang.String[] { "Mode", "Days", "Years", "Period", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
