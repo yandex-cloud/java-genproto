@@ -17030,6 +17030,16 @@ public final class LoadBalancerOuterClass {
      */
     boolean getAllowHttp10();
 
+    /**
+     * <pre>
+     * When unset, will preserve the incoming x-request-id header, otherwise would rewrite it with a new value.
+     * </pre>
+     *
+     * <code>bool rewrite_request_id = 4;</code>
+     * @return The rewriteRequestId.
+     */
+    boolean getRewriteRequestId();
+
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler.ProtocolSettingsCase getProtocolSettingsCase();
   }
   /**
@@ -17105,6 +17115,11 @@ public final class LoadBalancerOuterClass {
             case 24: {
               protocolSettings_ = input.readBool();
               protocolSettingsCase_ = 3;
+              break;
+            }
+            case 32: {
+
+              rewriteRequestId_ = input.readBool();
               break;
             }
             default: {
@@ -17305,6 +17320,21 @@ public final class LoadBalancerOuterClass {
       return false;
     }
 
+    public static final int REWRITE_REQUEST_ID_FIELD_NUMBER = 4;
+    private boolean rewriteRequestId_;
+    /**
+     * <pre>
+     * When unset, will preserve the incoming x-request-id header, otherwise would rewrite it with a new value.
+     * </pre>
+     *
+     * <code>bool rewrite_request_id = 4;</code>
+     * @return The rewriteRequestId.
+     */
+    @java.lang.Override
+    public boolean getRewriteRequestId() {
+      return rewriteRequestId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17329,6 +17359,9 @@ public final class LoadBalancerOuterClass {
         output.writeBool(
             3, (boolean)((java.lang.Boolean) protocolSettings_));
       }
+      if (rewriteRequestId_ != false) {
+        output.writeBool(4, rewriteRequestId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17350,6 +17383,10 @@ public final class LoadBalancerOuterClass {
           .computeBoolSize(
               3, (boolean)((java.lang.Boolean) protocolSettings_));
       }
+      if (rewriteRequestId_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, rewriteRequestId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17367,6 +17404,8 @@ public final class LoadBalancerOuterClass {
 
       if (!getHttpRouterId()
           .equals(other.getHttpRouterId())) return false;
+      if (getRewriteRequestId()
+          != other.getRewriteRequestId()) return false;
       if (!getProtocolSettingsCase().equals(other.getProtocolSettingsCase())) return false;
       switch (protocolSettingsCase_) {
         case 2:
@@ -17393,6 +17432,9 @@ public final class LoadBalancerOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + HTTP_ROUTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getHttpRouterId().hashCode();
+      hash = (37 * hash) + REWRITE_REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRewriteRequestId());
       switch (protocolSettingsCase_) {
         case 2:
           hash = (37 * hash) + HTTP2_OPTIONS_FIELD_NUMBER;
@@ -17545,6 +17587,8 @@ public final class LoadBalancerOuterClass {
         super.clear();
         httpRouterId_ = "";
 
+        rewriteRequestId_ = false;
+
         protocolSettingsCase_ = 0;
         protocolSettings_ = null;
         return this;
@@ -17584,6 +17628,7 @@ public final class LoadBalancerOuterClass {
         if (protocolSettingsCase_ == 3) {
           result.protocolSettings_ = protocolSettings_;
         }
+        result.rewriteRequestId_ = rewriteRequestId_;
         result.protocolSettingsCase_ = protocolSettingsCase_;
         onBuilt();
         return result;
@@ -17636,6 +17681,9 @@ public final class LoadBalancerOuterClass {
         if (!other.getHttpRouterId().isEmpty()) {
           httpRouterId_ = other.httpRouterId_;
           onChanged();
+        }
+        if (other.getRewriteRequestId() != false) {
+          setRewriteRequestId(other.getRewriteRequestId());
         }
         switch (other.getProtocolSettingsCase()) {
           case HTTP2_OPTIONS: {
@@ -18040,6 +18088,49 @@ public final class LoadBalancerOuterClass {
           protocolSettings_ = null;
           onChanged();
         }
+        return this;
+      }
+
+      private boolean rewriteRequestId_ ;
+      /**
+       * <pre>
+       * When unset, will preserve the incoming x-request-id header, otherwise would rewrite it with a new value.
+       * </pre>
+       *
+       * <code>bool rewrite_request_id = 4;</code>
+       * @return The rewriteRequestId.
+       */
+      @java.lang.Override
+      public boolean getRewriteRequestId() {
+        return rewriteRequestId_;
+      }
+      /**
+       * <pre>
+       * When unset, will preserve the incoming x-request-id header, otherwise would rewrite it with a new value.
+       * </pre>
+       *
+       * <code>bool rewrite_request_id = 4;</code>
+       * @param value The rewriteRequestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewriteRequestId(boolean value) {
+        
+        rewriteRequestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When unset, will preserve the incoming x-request-id header, otherwise would rewrite it with a new value.
+       * </pre>
+       *
+       * <code>bool rewrite_request_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewriteRequestId() {
+        
+        rewriteRequestId_ = false;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -24874,39 +24965,39 @@ public final class LoadBalancerOuterClass {
       "alancer.v1.StreamHandlerB\004\350\3071\001\".\n\014Http2O" +
       "ptions\022\036\n\026max_concurrent_streams\030\001 \001(\003\"/" +
       "\n\rStreamHandler\022\036\n\020backend_group_id\030\001 \001(" +
-      "\tB\004\350\3071\001\"\232\001\n\013HttpHandler\022\026\n\016http_router_i" +
+      "\tB\004\350\3071\001\"\266\001\n\013HttpHandler\022\026\n\016http_router_i" +
       "d\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex." +
       "cloud.apploadbalancer.v1.Http2OptionsH\000\022" +
-      "\026\n\014allow_http10\030\003 \001(\010H\000B\023\n\021protocol_sett" +
-      "ings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(\010" +
-      "\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014ser" +
-      "ver_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\013" +
-      "2+.yandex.cloud.apploadbalancer.v1.TlsHa" +
-      "ndlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_handl" +
-      "er\030\002 \001(\0132,.yandex.cloud.apploadbalancer." +
-      "v1.HttpHandlerH\000\022H\n\016stream_handler\030\004 \001(\013" +
-      "2..yandex.cloud.apploadbalancer.v1.Strea" +
-      "mHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\3101" +
-      "\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006" +
-      "status\030\001 \001(\0132>.yandex.cloud.apploadbalan" +
-      "cer.v1.TargetState.HealthcheckStatus\022=\n\006" +
-      "target\030\002 \001(\0132\'.yandex.cloud.apploadbalan" +
-      "cer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatus" +
-      "\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.cloud.a" +
-      "pploadbalancer.v1.TargetState.ZoneHealth" +
-      "checkStatus\032\215\001\n\025ZoneHealthcheckStatus\022\025\n" +
-      "\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.y" +
-      "andex.cloud.apploadbalancer.v1.TargetSta" +
-      "te.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006S" +
-      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY" +
-      "\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003" +
-      "\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScale" +
-      "Policy\022!\n\rmin_zone_size\030\001 \001(\003B\n\372\3071\0060-100" +
-      "0\022\034\n\010max_size\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yande" +
-      "x.cloud.api.apploadbalancer.v1ZSgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/apploadbalancer/v1;apploadbalancerb\006pro" +
-      "to3"
+      "\026\n\014allow_http10\030\003 \001(\010H\000\022\032\n\022rewrite_reque" +
+      "st_id\030\004 \001(\010B\023\n\021protocol_settings\"\"\n\tRedi" +
+      "rects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010SniMatc" +
+      "h\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\002 " +
+      "\003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.yandex.cl" +
+      "oud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001\"" +
+      "\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 \001(\0132,.y" +
+      "andex.cloud.apploadbalancer.v1.HttpHandl" +
+      "erH\000\022H\n\016stream_handler\030\004 \001(\0132..yandex.cl" +
+      "oud.apploadbalancer.v1.StreamHandlerH\000\022\037" +
+      "\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017\n\007handl" +
+      "er\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006status\030\001 \001(\013" +
+      "2>.yandex.cloud.apploadbalancer.v1.Targe" +
+      "tState.HealthcheckStatus\022=\n\006target\030\002 \001(\013" +
+      "2\'.yandex.cloud.apploadbalancer.v1.Targe" +
+      "tB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rzone_sta" +
+      "tuses\030\001 \003(\0132B.yandex.cloud.apploadbalanc" +
+      "er.v1.TargetState.ZoneHealthcheckStatus\032" +
+      "\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex.cloud." +
+      "apploadbalancer.v1.TargetState.Status\022\030\n" +
+      "\020failed_active_hc\030\003 \001(\010\"n\n\006Status\022\026\n\022STA" +
+      "TUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n\021PARTIA" +
+      "LLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAINING" +
+      "\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScalePolicy\022!\n\rmi" +
+      "n_zone_size\030\001 \001(\003B\n\372\3071\0060-1000\022\034\n\010max_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yandex.cloud.api." +
+      "apploadbalancer.v1ZSgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/apploadbala" +
+      "ncer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25011,7 +25102,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_HttpHandler_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpHandler_descriptor,
-        new java.lang.String[] { "HttpRouterId", "Http2Options", "AllowHttp10", "ProtocolSettings", });
+        new java.lang.String[] { "HttpRouterId", "Http2Options", "AllowHttp10", "RewriteRequestId", "ProtocolSettings", });
     internal_static_yandex_cloud_apploadbalancer_v1_Redirects_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_apploadbalancer_v1_Redirects_fieldAccessorTable = new

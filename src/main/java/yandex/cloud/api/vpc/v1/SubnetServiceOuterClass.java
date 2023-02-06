@@ -19444,7 +19444,7 @@ public final class SubnetServiceOuterClass {
       "\017\n\007address\030\001 \001(\t\0222\n\nip_version\030\002 \001(\0162\036.y" +
       "andex.cloud.vpc.v1.IpVersion\0225\n\nreferenc" +
       "es\030\003 \003(\0132!.yandex.cloud.reference.Refere" +
-      "nce2\237\014\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
+      "nce2\317\014\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
       "oud.vpc.v1.GetSubnetRequest\032\033.yandex.clo" +
       "ud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnet" +
       "s/{subnet_id}\022r\n\004List\022\'.yandex.cloud.vpc" +
@@ -19480,12 +19480,13 @@ public final class SubnetServiceOuterClass {
       ".vpc.v1.MoveSubnetRequest\032!.yandex.cloud" +
       ".operation.Operation\"K\202\323\344\223\002%\" /vpc/v1/su" +
       "bnets/{subnet_id}:move:\001*\262\322*\034\n\022MoveSubne" +
-      "tMetadata\022\006Subnet\022r\n\021ListUsedAddresses\022-" +
-      ".yandex.cloud.vpc.v1.ListUsedAddressesRe" +
-      "quest\032..yandex.cloud.vpc.v1.ListUsedAddr" +
-      "essesResponseBV\n\027yandex.cloud.api.vpc.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/vpc/v1;vpcb\006proto3"
+      "tMetadata\022\006Subnet\022\241\001\n\021ListUsedAddresses\022" +
+      "-.yandex.cloud.vpc.v1.ListUsedAddressesR" +
+      "equest\032..yandex.cloud.vpc.v1.ListUsedAdd" +
+      "ressesResponse\"-\202\323\344\223\002\'\022%/vpc/v1/subnets/" +
+      "{subnet_id}/addressesBV\n\027yandex.cloud.ap" +
+      "i.vpc.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

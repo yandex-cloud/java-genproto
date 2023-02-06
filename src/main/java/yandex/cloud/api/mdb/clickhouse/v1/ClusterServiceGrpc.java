@@ -948,6 +948,37 @@ public final class ClusterServiceGrpc {
     return getDeleteShardGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest,
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse> getListExternalDictionariesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListExternalDictionaries",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest.class,
+      responseType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest,
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse> getListExternalDictionariesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse> getListExternalDictionariesMethod;
+    if ((getListExternalDictionariesMethod = ClusterServiceGrpc.getListExternalDictionariesMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListExternalDictionariesMethod = ClusterServiceGrpc.getListExternalDictionariesMethod) == null) {
+          ClusterServiceGrpc.getListExternalDictionariesMethod = getListExternalDictionariesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListExternalDictionaries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListExternalDictionaries"))
+              .build();
+        }
+      }
+    }
+    return getListExternalDictionariesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterExternalDictionaryRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateExternalDictionaryMethod;
 
@@ -1396,6 +1427,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves a list of external dictionaries that belong to specified cluster.
+     * </pre>
+     */
+    public void listExternalDictionaries(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListExternalDictionariesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an external dictionary for the specified ClickHouse cluster.
      * </pre>
      */
@@ -1636,6 +1677,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_SHARD_GROUP)))
+          .addMethod(
+            getListExternalDictionariesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest,
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse>(
+                  this, METHODID_LIST_EXTERNAL_DICTIONARIES)))
           .addMethod(
             getCreateExternalDictionaryMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2012,6 +2060,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves a list of external dictionaries that belong to specified cluster.
+     * </pre>
+     */
+    public void listExternalDictionaries(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListExternalDictionariesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an external dictionary for the specified ClickHouse cluster.
      * </pre>
      */
@@ -2362,6 +2421,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteShardGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of external dictionaries that belong to specified cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse listExternalDictionaries(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListExternalDictionariesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2735,6 +2804,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves a list of external dictionaries that belong to specified cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse> listExternalDictionaries(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListExternalDictionariesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an external dictionary for the specified ClickHouse cluster.
      * </pre>
      */
@@ -2797,9 +2877,10 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_CREATE_SHARD_GROUP = 27;
   private static final int METHODID_UPDATE_SHARD_GROUP = 28;
   private static final int METHODID_DELETE_SHARD_GROUP = 29;
-  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 30;
-  private static final int METHODID_UPDATE_EXTERNAL_DICTIONARY = 31;
-  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 32;
+  private static final int METHODID_LIST_EXTERNAL_DICTIONARIES = 30;
+  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 31;
+  private static final int METHODID_UPDATE_EXTERNAL_DICTIONARY = 32;
+  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 33;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2938,6 +3019,10 @@ public final class ClusterServiceGrpc {
           serviceImpl.deleteShardGroup((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_LIST_EXTERNAL_DICTIONARIES:
+          serviceImpl.listExternalDictionaries((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterExternalDictionariesResponse>) responseObserver);
+          break;
         case METHODID_CREATE_EXTERNAL_DICTIONARY:
           serviceImpl.createExternalDictionary((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterExternalDictionaryRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
@@ -3041,6 +3126,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getCreateShardGroupMethod())
               .addMethod(getUpdateShardGroupMethod())
               .addMethod(getDeleteShardGroupMethod())
+              .addMethod(getListExternalDictionariesMethod())
               .addMethod(getCreateExternalDictionaryMethod())
               .addMethod(getUpdateExternalDictionaryMethod())
               .addMethod(getDeleteExternalDictionaryMethod())

@@ -198,6 +198,25 @@ public final class Stt {
      * @return The literatureText.
      */
     boolean getLiteratureText();
+
+    /**
+     * <pre>
+     * Define phone formatting mode
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+     * @return The enum numeric value on the wire for phoneFormattingMode.
+     */
+    int getPhoneFormattingModeValue();
+    /**
+     * <pre>
+     * Define phone formatting mode
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+     * @return The phoneFormattingMode.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode getPhoneFormattingMode();
   }
   /**
    * <pre>
@@ -217,6 +236,7 @@ public final class Stt {
     }
     private TextNormalizationOptions() {
       textNormalization_ = 0;
+      phoneFormattingMode_ = 0;
     }
 
     @java.lang.Override
@@ -263,6 +283,12 @@ public final class Stt {
             case 24: {
 
               literatureText_ = input.readBool();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              phoneFormattingMode_ = rawValue;
               break;
             }
             default: {
@@ -434,6 +460,122 @@ public final class Stt {
       // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.TextNormalizationOptions.TextNormalization)
     }
 
+    /**
+     * Protobuf enum {@code speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode}
+     */
+    public enum PhoneFormattingMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PHONE_FORMATTING_MODE_UNSPECIFIED = 0;</code>
+       */
+      PHONE_FORMATTING_MODE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Disable phone formatting
+       * </pre>
+       *
+       * <code>PHONE_FORMATTING_MODE_DISABLED = 1;</code>
+       */
+      PHONE_FORMATTING_MODE_DISABLED(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>PHONE_FORMATTING_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int PHONE_FORMATTING_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Disable phone formatting
+       * </pre>
+       *
+       * <code>PHONE_FORMATTING_MODE_DISABLED = 1;</code>
+       */
+      public static final int PHONE_FORMATTING_MODE_DISABLED_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PhoneFormattingMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PhoneFormattingMode forNumber(int value) {
+        switch (value) {
+          case 0: return PHONE_FORMATTING_MODE_UNSPECIFIED;
+          case 1: return PHONE_FORMATTING_MODE_DISABLED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PhoneFormattingMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PhoneFormattingMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PhoneFormattingMode>() {
+              public PhoneFormattingMode findValueByNumber(int number) {
+                return PhoneFormattingMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final PhoneFormattingMode[] VALUES = values();
+
+      public static PhoneFormattingMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PhoneFormattingMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode)
+    }
+
     public static final int TEXT_NORMALIZATION_FIELD_NUMBER = 1;
     private int textNormalization_;
     /**
@@ -483,6 +625,33 @@ public final class Stt {
       return literatureText_;
     }
 
+    public static final int PHONE_FORMATTING_MODE_FIELD_NUMBER = 4;
+    private int phoneFormattingMode_;
+    /**
+     * <pre>
+     * Define phone formatting mode
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+     * @return The enum numeric value on the wire for phoneFormattingMode.
+     */
+    @java.lang.Override public int getPhoneFormattingModeValue() {
+      return phoneFormattingMode_;
+    }
+    /**
+     * <pre>
+     * Define phone formatting mode
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+     * @return The phoneFormattingMode.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode getPhoneFormattingMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode result = yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode.valueOf(phoneFormattingMode_);
+      return result == null ? yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -506,6 +675,9 @@ public final class Stt {
       if (literatureText_ != false) {
         output.writeBool(3, literatureText_);
       }
+      if (phoneFormattingMode_ != yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode.PHONE_FORMATTING_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, phoneFormattingMode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -527,6 +699,10 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, literatureText_);
       }
+      if (phoneFormattingMode_ != yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode.PHONE_FORMATTING_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, phoneFormattingMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -547,6 +723,7 @@ public final class Stt {
           != other.getProfanityFilter()) return false;
       if (getLiteratureText()
           != other.getLiteratureText()) return false;
+      if (phoneFormattingMode_ != other.phoneFormattingMode_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -566,6 +743,8 @@ public final class Stt {
       hash = (37 * hash) + LITERATURE_TEXT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getLiteratureText());
+      hash = (37 * hash) + PHONE_FORMATTING_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + phoneFormattingMode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -709,6 +888,8 @@ public final class Stt {
 
         literatureText_ = false;
 
+        phoneFormattingMode_ = 0;
+
         return this;
       }
 
@@ -738,6 +919,7 @@ public final class Stt {
         result.textNormalization_ = textNormalization_;
         result.profanityFilter_ = profanityFilter_;
         result.literatureText_ = literatureText_;
+        result.phoneFormattingMode_ = phoneFormattingMode_;
         onBuilt();
         return result;
       }
@@ -794,6 +976,9 @@ public final class Stt {
         }
         if (other.getLiteratureText() != false) {
           setLiteratureText(other.getLiteratureText());
+        }
+        if (other.phoneFormattingMode_ != 0) {
+          setPhoneFormattingModeValue(other.getPhoneFormattingModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -960,6 +1145,80 @@ public final class Stt {
       public Builder clearLiteratureText() {
         
         literatureText_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int phoneFormattingMode_ = 0;
+      /**
+       * <pre>
+       * Define phone formatting mode
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+       * @return The enum numeric value on the wire for phoneFormattingMode.
+       */
+      @java.lang.Override public int getPhoneFormattingModeValue() {
+        return phoneFormattingMode_;
+      }
+      /**
+       * <pre>
+       * Define phone formatting mode
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+       * @param value The enum numeric value on the wire for phoneFormattingMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneFormattingModeValue(int value) {
+        
+        phoneFormattingMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define phone formatting mode
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+       * @return The phoneFormattingMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode getPhoneFormattingMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode result = yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode.valueOf(phoneFormattingMode_);
+        return result == null ? yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Define phone formatting mode
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+       * @param value The phoneFormattingMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhoneFormattingMode(yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.PhoneFormattingMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        phoneFormattingMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define phone formatting mode
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.TextNormalizationOptions.PhoneFormattingMode phone_formatting_mode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhoneFormattingMode() {
+        
+        phoneFormattingMode_ = 0;
         onChanged();
         return this;
       }
@@ -23677,104 +23936,108 @@ public final class Stt {
   static {
     java.lang.String[] descriptorData = {
       "\n yandex/cloud/ai/stt/v3/stt.proto\022\020spee" +
-      "chkit.stt.v3\"\241\002\n\030TextNormalizationOption" +
+      "chkit.stt.v3\"\342\003\n\030TextNormalizationOption" +
       "s\022X\n\022text_normalization\030\001 \001(\0162<.speechki" +
       "t.stt.v3.TextNormalizationOptions.TextNo" +
       "rmalization\022\030\n\020profanity_filter\030\002 \001(\010\022\027\n" +
-      "\017literature_text\030\003 \001(\010\"x\n\021TextNormalizat" +
-      "ion\022\"\n\036TEXT_NORMALIZATION_UNSPECIFIED\020\000\022" +
-      "\036\n\032TEXT_NORMALIZATION_ENABLED\020\001\022\037\n\033TEXT_" +
-      "NORMALIZATION_DISABLED\020\002\"\316\001\n\024DefaultEouC" +
-      "lassifier\022C\n\004type\030\001 \001(\01625.speechkit.stt." +
-      "v3.DefaultEouClassifier.EouSensitivity\022\'" +
-      "\n\037max_pause_between_words_hint_ms\030\002 \001(\003\"" +
-      "H\n\016EouSensitivity\022\037\n\033EOU_SENSITIVITY_UNS" +
-      "PECIFIED\020\000\022\013\n\007DEFAULT\020\001\022\010\n\004HIGH\020\002\"\027\n\025Ext" +
-      "ernalEouClassifier\"\262\001\n\024EouClassifierOpti" +
-      "ons\022D\n\022default_classifier\030\001 \001(\0132&.speech" +
-      "kit.stt.v3.DefaultEouClassifierH\000\022F\n\023ext" +
-      "ernal_classifier\030\002 \001(\0132\'.speechkit.stt.v" +
-      "3.ExternalEouClassifierH\000B\014\n\nClassifier\"" +
-      "\307\001\n\010RawAudio\022@\n\016audio_encoding\030\001 \001(\0162(.s" +
-      "peechkit.stt.v3.RawAudio.AudioEncoding\022\031" +
-      "\n\021sample_rate_hertz\030\002 \001(\003\022\033\n\023audio_chann" +
-      "el_count\030\003 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDIO" +
-      "_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020" +
-      "\001\"\277\001\n\016ContainerAudio\022Q\n\024container_audio_" +
-      "type\030\001 \001(\01623.speechkit.stt.v3.ContainerA" +
-      "udio.ContainerAudioType\"Z\n\022ContainerAudi" +
-      "oType\022$\n CONTAINER_AUDIO_TYPE_UNSPECIFIE" +
-      "D\020\000\022\007\n\003WAV\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n\022" +
-      "AudioFormatOptions\022/\n\traw_audio\030\001 \001(\0132\032." +
-      "speechkit.stt.v3.RawAudioH\000\022;\n\017container" +
-      "_audio\030\002 \001(\0132 .speechkit.stt.v3.Containe" +
-      "rAudioH\000B\r\n\013AudioFormat\"\367\001\n\032LanguageRest" +
-      "rictionOptions\022^\n\020restriction_type\030\001 \001(\016" +
-      "2D.speechkit.stt.v3.LanguageRestrictionO" +
-      "ptions.LanguageRestrictionType\022\025\n\rlangua" +
-      "ge_code\030\002 \003(\t\"b\n\027LanguageRestrictionType" +
-      "\022)\n%LANGUAGE_RESTRICTION_TYPE_UNSPECIFIE" +
-      "D\020\000\022\r\n\tWHITELIST\020\001\022\r\n\tBLACKLIST\020\002\"\262\003\n\027Re" +
-      "cognitionModelOptions\022\r\n\005model\030\001 \001(\t\022:\n\014" +
-      "audio_format\030\002 \001(\0132$.speechkit.stt.v3.Au" +
-      "dioFormatOptions\022F\n\022text_normalization\030\003" +
-      " \001(\0132*.speechkit.stt.v3.TextNormalizatio" +
-      "nOptions\022J\n\024language_restriction\030\004 \001(\0132," +
-      ".speechkit.stt.v3.LanguageRestrictionOpt" +
-      "ions\022\\\n\025audio_processing_type\030\005 \001(\0162=.sp" +
-      "eechkit.stt.v3.RecognitionModelOptions.A" +
-      "udioProcessingType\"Z\n\023AudioProcessingTyp" +
-      "e\022%\n!AUDIO_PROCESSING_TYPE_UNSPECIFIED\020\000" +
-      "\022\r\n\tREAL_TIME\020\001\022\r\n\tFULL_DATA\020\002\"\230\001\n\020Strea" +
-      "mingOptions\022D\n\021recognition_model\030\001 \001(\0132)" +
-      ".speechkit.stt.v3.RecognitionModelOption" +
-      "s\022>\n\016eou_classifier\030\002 \001(\0132&.speechkit.st" +
-      "t.v3.EouClassifierOptions\"\032\n\nAudioChunk\022" +
-      "\014\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013duratio" +
-      "n_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022=" +
-      "\n\017session_options\030\001 \001(\0132\".speechkit.stt." +
-      "v3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034.s" +
-      "peechkit.stt.v3.AudioChunkH\000\0227\n\rsilence_" +
-      "chunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceCh" +
-      "unkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.Eo" +
-      "uH\000B\007\n\005Event\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rst" +
-      "art_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@" +
-      "\n\022LanguageEstimation\022\025\n\rlanguage_code\030\001 " +
-      "\001(\t\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Alternative" +
-      "\022%\n\005words\030\001 \003(\0132\026.speechkit.stt.v3.Word\022" +
-      "\014\n\004text\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013" +
-      "end_time_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n" +
-      "\tlanguages\030\006 \003(\0132$.speechkit.stt.v3.Lang" +
-      "uageEstimation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002" +
-      " \001(\003\"]\n\021AlternativeUpdate\0223\n\014alternative" +
-      "s\030\001 \003(\0132\035.speechkit.stt.v3.Alternative\022\023" +
-      "\n\013channel_tag\030\002 \001(\t\"\231\001\n\014AudioCursors\022\030\n\020" +
-      "received_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030" +
-      "\002 \001(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_" +
-      "time_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eo" +
-      "u_time_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013fi" +
-      "nal_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\013" +
-      "2#.speechkit.stt.v3.AlternativeUpdateH\000B" +
-      "\006\n\004Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\016" +
-      "2\032.speechkit.stt.v3.CodeType\022\017\n\007message\030" +
-      "\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017us" +
-      "er_request_id\030\002 \001(\t\"\274\003\n\021StreamingRespons" +
-      "e\0223\n\014session_uuid\030\001 \001(\0132\035.speechkit.stt." +
-      "v3.SessionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036." +
-      "speechkit.stt.v3.AudioCursors\022\035\n\025respons" +
-      "e_wall_time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#." +
-      "speechkit.stt.v3.AlternativeUpdateH\000\0224\n\005" +
-      "final\030\005 \001(\0132#.speechkit.stt.v3.Alternati" +
-      "veUpdateH\000\0221\n\neou_update\030\006 \001(\0132\033.speechk" +
-      "it.stt.v3.EouUpdateH\000\022=\n\020final_refinemen" +
-      "t\030\007 \001(\0132!.speechkit.stt.v3.FinalRefineme" +
-      "ntH\000\0223\n\013status_code\030\010 \001(\0132\034.speechkit.st" +
-      "t.v3.StatusCodeH\000B\007\n\005Event*K\n\010CodeType\022\031" +
-      "\n\025CODE_TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022\013" +
-      "\n\007WARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud." +
-      "api.ai.stt.v3Z>github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/ai/stt/v3;sttb\006p" +
-      "roto3"
+      "\017literature_text\030\003 \001(\010\022]\n\025phone_formatti" +
+      "ng_mode\030\004 \001(\0162>.speechkit.stt.v3.TextNor" +
+      "malizationOptions.PhoneFormattingMode\"x\n" +
+      "\021TextNormalization\022\"\n\036TEXT_NORMALIZATION" +
+      "_UNSPECIFIED\020\000\022\036\n\032TEXT_NORMALIZATION_ENA" +
+      "BLED\020\001\022\037\n\033TEXT_NORMALIZATION_DISABLED\020\002\"" +
+      "`\n\023PhoneFormattingMode\022%\n!PHONE_FORMATTI" +
+      "NG_MODE_UNSPECIFIED\020\000\022\"\n\036PHONE_FORMATTIN" +
+      "G_MODE_DISABLED\020\001\"\316\001\n\024DefaultEouClassifi" +
+      "er\022C\n\004type\030\001 \001(\01625.speechkit.stt.v3.Defa" +
+      "ultEouClassifier.EouSensitivity\022\'\n\037max_p" +
+      "ause_between_words_hint_ms\030\002 \001(\003\"H\n\016EouS" +
+      "ensitivity\022\037\n\033EOU_SENSITIVITY_UNSPECIFIE" +
+      "D\020\000\022\013\n\007DEFAULT\020\001\022\010\n\004HIGH\020\002\"\027\n\025ExternalEo" +
+      "uClassifier\"\262\001\n\024EouClassifierOptions\022D\n\022" +
+      "default_classifier\030\001 \001(\0132&.speechkit.stt" +
+      ".v3.DefaultEouClassifierH\000\022F\n\023external_c" +
+      "lassifier\030\002 \001(\0132\'.speechkit.stt.v3.Exter" +
+      "nalEouClassifierH\000B\014\n\nClassifier\"\307\001\n\010Raw" +
+      "Audio\022@\n\016audio_encoding\030\001 \001(\0162(.speechki" +
+      "t.stt.v3.RawAudio.AudioEncoding\022\031\n\021sampl" +
+      "e_rate_hertz\030\002 \001(\003\022\033\n\023audio_channel_coun" +
+      "t\030\003 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDIO_ENCODI" +
+      "NG_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020\001\"\277\001\n\016C" +
+      "ontainerAudio\022Q\n\024container_audio_type\030\001 " +
+      "\001(\01623.speechkit.stt.v3.ContainerAudio.Co" +
+      "ntainerAudioType\"Z\n\022ContainerAudioType\022$" +
+      "\n CONTAINER_AUDIO_TYPE_UNSPECIFIED\020\000\022\007\n\003" +
+      "WAV\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n\022AudioFo" +
+      "rmatOptions\022/\n\traw_audio\030\001 \001(\0132\032.speechk" +
+      "it.stt.v3.RawAudioH\000\022;\n\017container_audio\030" +
+      "\002 \001(\0132 .speechkit.stt.v3.ContainerAudioH" +
+      "\000B\r\n\013AudioFormat\"\367\001\n\032LanguageRestriction" +
+      "Options\022^\n\020restriction_type\030\001 \001(\0162D.spee" +
+      "chkit.stt.v3.LanguageRestrictionOptions." +
+      "LanguageRestrictionType\022\025\n\rlanguage_code" +
+      "\030\002 \003(\t\"b\n\027LanguageRestrictionType\022)\n%LAN" +
+      "GUAGE_RESTRICTION_TYPE_UNSPECIFIED\020\000\022\r\n\t" +
+      "WHITELIST\020\001\022\r\n\tBLACKLIST\020\002\"\262\003\n\027Recogniti" +
+      "onModelOptions\022\r\n\005model\030\001 \001(\t\022:\n\014audio_f" +
+      "ormat\030\002 \001(\0132$.speechkit.stt.v3.AudioForm" +
+      "atOptions\022F\n\022text_normalization\030\003 \001(\0132*." +
+      "speechkit.stt.v3.TextNormalizationOption" +
+      "s\022J\n\024language_restriction\030\004 \001(\0132,.speech" +
+      "kit.stt.v3.LanguageRestrictionOptions\022\\\n" +
+      "\025audio_processing_type\030\005 \001(\0162=.speechkit" +
+      ".stt.v3.RecognitionModelOptions.AudioPro" +
+      "cessingType\"Z\n\023AudioProcessingType\022%\n!AU" +
+      "DIO_PROCESSING_TYPE_UNSPECIFIED\020\000\022\r\n\tREA" +
+      "L_TIME\020\001\022\r\n\tFULL_DATA\020\002\"\230\001\n\020StreamingOpt" +
+      "ions\022D\n\021recognition_model\030\001 \001(\0132).speech" +
+      "kit.stt.v3.RecognitionModelOptions\022>\n\016eo" +
+      "u_classifier\030\002 \001(\0132&.speechkit.stt.v3.Eo" +
+      "uClassifierOptions\"\032\n\nAudioChunk\022\014\n\004data" +
+      "\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013duration_ms\030\001 " +
+      "\001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022=\n\017sessi" +
+      "on_options\030\001 \001(\0132\".speechkit.stt.v3.Stre" +
+      "amingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034.speechki" +
+      "t.stt.v3.AudioChunkH\000\0227\n\rsilence_chunk\030\003" +
+      " \001(\0132\036.speechkit.stt.v3.SilenceChunkH\000\022$" +
+      "\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.EouH\000B\007\n\005" +
+      "Event\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_tim" +
+      "e_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@\n\022Langu" +
+      "ageEstimation\022\025\n\rlanguage_code\030\001 \001(\t\022\023\n\013" +
+      "probability\030\002 \001(\001\"\273\001\n\013Alternative\022%\n\005wor" +
+      "ds\030\001 \003(\0132\026.speechkit.stt.v3.Word\022\014\n\004text" +
+      "\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013end_tim" +
+      "e_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n\tlangua" +
+      "ges\030\006 \003(\0132$.speechkit.stt.v3.LanguageEst" +
+      "imation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(\003\"]\n" +
+      "\021AlternativeUpdate\0223\n\014alternatives\030\001 \003(\013" +
+      "2\035.speechkit.stt.v3.Alternative\022\023\n\013chann" +
+      "el_tag\030\002 \001(\t\"\231\001\n\014AudioCursors\022\030\n\020receive" +
+      "d_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001(\003\022\027" +
+      "\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_time_ms" +
+      "\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_time_" +
+      "ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013final_ind" +
+      "ex\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\0132#.spee" +
+      "chkit.stt.v3.AlternativeUpdateH\000B\006\n\004Type" +
+      "\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\0162\032.spee" +
+      "chkit.stt.v3.CodeType\022\017\n\007message\030\002 \001(\t\"4" +
+      "\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_requ" +
+      "est_id\030\002 \001(\t\"\274\003\n\021StreamingResponse\0223\n\014se" +
+      "ssion_uuid\030\001 \001(\0132\035.speechkit.stt.v3.Sess" +
+      "ionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036.speechk" +
+      "it.stt.v3.AudioCursors\022\035\n\025response_wall_" +
+      "time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.speechk" +
+      "it.stt.v3.AlternativeUpdateH\000\0224\n\005final\030\005" +
+      " \001(\0132#.speechkit.stt.v3.AlternativeUpdat" +
+      "eH\000\0221\n\neou_update\030\006 \001(\0132\033.speechkit.stt." +
+      "v3.EouUpdateH\000\022=\n\020final_refinement\030\007 \001(\013" +
+      "2!.speechkit.stt.v3.FinalRefinementH\000\0223\n" +
+      "\013status_code\030\010 \001(\0132\034.speechkit.stt.v3.St" +
+      "atusCodeH\000B\007\n\005Event*K\n\010CodeType\022\031\n\025CODE_" +
+      "TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNI" +
+      "NG\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud.api.ai." +
+      "stt.v3Z>github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/ai/stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23785,7 +24048,7 @@ public final class Stt {
     internal_static_speechkit_stt_v3_TextNormalizationOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_TextNormalizationOptions_descriptor,
-        new java.lang.String[] { "TextNormalization", "ProfanityFilter", "LiteratureText", });
+        new java.lang.String[] { "TextNormalization", "ProfanityFilter", "LiteratureText", "PhoneFormattingMode", });
     internal_static_speechkit_stt_v3_DefaultEouClassifier_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_speechkit_stt_v3_DefaultEouClassifier_fieldAccessorTable = new
