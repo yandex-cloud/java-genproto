@@ -2631,6 +2631,63 @@ public final class UserOuterClass {
      * @return The role.
      */
     yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission.AccessRole getRole();
+
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @return A list containing the allowHosts.
+     */
+    java.util.List<java.lang.String>
+        getAllowHostsList();
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @return The count of allowHosts.
+     */
+    int getAllowHostsCount();
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @param index The index of the element to return.
+     * @return The allowHosts at the given index.
+     */
+    java.lang.String getAllowHosts(int index);
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowHosts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowHostsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Permission}
@@ -2647,6 +2704,7 @@ public final class UserOuterClass {
     private Permission() {
       topicName_ = "";
       role_ = 0;
+      allowHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2669,6 +2727,7 @@ public final class UserOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2691,6 +2750,15 @@ public final class UserOuterClass {
               role_ = rawValue;
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                allowHosts_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              allowHosts_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2706,6 +2774,9 @@ public final class UserOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          allowHosts_ = allowHosts_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2948,6 +3019,73 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission.AccessRole.UNRECOGNIZED : result;
     }
 
+    public static final int ALLOW_HOSTS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList allowHosts_;
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @return A list containing the allowHosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowHostsList() {
+      return allowHosts_;
+    }
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @return The count of allowHosts.
+     */
+    public int getAllowHostsCount() {
+      return allowHosts_.size();
+    }
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @param index The index of the element to return.
+     * @return The allowHosts at the given index.
+     */
+    public java.lang.String getAllowHosts(int index) {
+      return allowHosts_.get(index);
+    }
+    /**
+     * <pre>
+     * Lists hosts allowed for this permission.
+     * When not defined, access from any host is allowed.
+     * Bare in mind that the same host might appear in multiple permissions at the same time,
+     * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+     * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+     * </pre>
+     *
+     * <code>repeated string allow_hosts = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowHosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowHostsBytes(int index) {
+      return allowHosts_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2968,6 +3106,9 @@ public final class UserOuterClass {
       if (role_ != yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission.AccessRole.ACCESS_ROLE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, role_);
       }
+      for (int i = 0; i < allowHosts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, allowHosts_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2983,6 +3124,14 @@ public final class UserOuterClass {
       if (role_ != yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission.AccessRole.ACCESS_ROLE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, role_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowHosts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowHosts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowHostsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3002,6 +3151,8 @@ public final class UserOuterClass {
       if (!getTopicName()
           .equals(other.getTopicName())) return false;
       if (role_ != other.role_) return false;
+      if (!getAllowHostsList()
+          .equals(other.getAllowHostsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3017,6 +3168,10 @@ public final class UserOuterClass {
       hash = (53 * hash) + getTopicName().hashCode();
       hash = (37 * hash) + ROLE_FIELD_NUMBER;
       hash = (53 * hash) + role_;
+      if (getAllowHostsCount() > 0) {
+        hash = (37 * hash) + ALLOW_HOSTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowHostsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3154,6 +3309,8 @@ public final class UserOuterClass {
 
         role_ = 0;
 
+        allowHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -3180,8 +3337,14 @@ public final class UserOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission buildPartial() {
         yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission result = new yandex.cloud.api.mdb.kafka.v1.UserOuterClass.Permission(this);
+        int from_bitField0_ = bitField0_;
         result.topicName_ = topicName_;
         result.role_ = role_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          allowHosts_ = allowHosts_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.allowHosts_ = allowHosts_;
         onBuilt();
         return result;
       }
@@ -3237,6 +3400,16 @@ public final class UserOuterClass {
         if (other.role_ != 0) {
           setRoleValue(other.getRoleValue());
         }
+        if (!other.allowHosts_.isEmpty()) {
+          if (allowHosts_.isEmpty()) {
+            allowHosts_ = other.allowHosts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAllowHostsIsMutable();
+            allowHosts_.addAll(other.allowHosts_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3265,6 +3438,7 @@ public final class UserOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object topicName_ = "";
       /**
@@ -3440,6 +3614,188 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList allowHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAllowHostsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          allowHosts_ = new com.google.protobuf.LazyStringArrayList(allowHosts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @return A list containing the allowHosts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowHostsList() {
+        return allowHosts_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @return The count of allowHosts.
+       */
+      public int getAllowHostsCount() {
+        return allowHosts_.size();
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @param index The index of the element to return.
+       * @return The allowHosts at the given index.
+       */
+      public java.lang.String getAllowHosts(int index) {
+        return allowHosts_.get(index);
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowHosts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowHostsBytes(int index) {
+        return allowHosts_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The allowHosts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowHosts(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAllowHostsIsMutable();
+        allowHosts_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @param value The allowHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowHosts(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAllowHostsIsMutable();
+        allowHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @param values The allowHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowHosts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowHostsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowHosts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowHosts() {
+        allowHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Lists hosts allowed for this permission.
+       * When not defined, access from any host is allowed.
+       * Bare in mind that the same host might appear in multiple permissions at the same time,
+       * hence removing individual permission doesn't automatically restricts access from the [allow_hosts] of the permission.
+       * If the same host(s) is listed for another permission of the same principal/topic, the host(s) remains allowed.
+       * </pre>
+       *
+       * <code>repeated string allow_hosts = 4;</code>
+       * @param value The bytes of the allowHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowHostsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAllowHostsIsMutable();
+        allowHosts_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3525,15 +3881,16 @@ public final class UserOuterClass {
       "\001\n\010UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\0051-256" +
       "\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071" +
       "\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yandex" +
-      ".cloud.mdb.kafka.v1.Permission\"\326\001\n\nPermi" +
+      ".cloud.mdb.kafka.v1.Permission\"\353\001\n\nPermi" +
       "ssion\022\022\n\ntopic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\0162" +
       "0.yandex.cloud.mdb.kafka.v1.Permission.A" +
-      "ccessRole\"t\n\nAccessRole\022\033\n\027ACCESS_ROLE_U" +
-      "NSPECIFIED\020\000\022\030\n\024ACCESS_ROLE_PRODUCER\020\001\022\030" +
-      "\n\024ACCESS_ROLE_CONSUMER\020\002\022\025\n\021ACCESS_ROLE_" +
-      "ADMIN\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/kafka/v1;kafkab\006proto3"
+      "ccessRole\022\023\n\013allow_hosts\030\004 \003(\t\"t\n\nAccess" +
+      "Role\022\033\n\027ACCESS_ROLE_UNSPECIFIED\020\000\022\030\n\024ACC" +
+      "ESS_ROLE_PRODUCER\020\001\022\030\n\024ACCESS_ROLE_CONSU" +
+      "MER\020\002\022\025\n\021ACCESS_ROLE_ADMIN\020\003Bd\n\035yandex.c" +
+      "loud.api.mdb.kafka.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/kafk" +
+      "a/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3557,7 +3914,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_Permission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Permission_descriptor,
-        new java.lang.String[] { "TopicName", "Role", });
+        new java.lang.String[] { "TopicName", "Role", "AllowHosts", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

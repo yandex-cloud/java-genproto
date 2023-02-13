@@ -5135,6 +5135,10 @@ public final class Postgresql11 {
        * <code>SHARED_PRELOAD_LIBRARIES_PGAUDIT = 8;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PGAUDIT(8),
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_TRGM = 9;</code>
+       */
+      SHARED_PRELOAD_LIBRARIES_PG_TRGM(9),
       UNRECOGNIZED(-1),
       ;
 
@@ -5174,6 +5178,10 @@ public final class Postgresql11 {
        * <code>SHARED_PRELOAD_LIBRARIES_PGAUDIT = 8;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PGAUDIT_VALUE = 8;
+      /**
+       * <code>SHARED_PRELOAD_LIBRARIES_PG_TRGM = 9;</code>
+       */
+      public static final int SHARED_PRELOAD_LIBRARIES_PG_TRGM_VALUE = 9;
 
 
       public final int getNumber() {
@@ -5209,6 +5217,7 @@ public final class Postgresql11 {
           case 6: return SHARED_PRELOAD_LIBRARIES_PGLOGICAL;
           case 7: return SHARED_PRELOAD_LIBRARIES_PG_PREWARM;
           case 8: return SHARED_PRELOAD_LIBRARIES_PGAUDIT;
+          case 9: return SHARED_PRELOAD_LIBRARIES_PG_TRGM;
           default: return null;
         }
       }
@@ -30578,7 +30587,7 @@ public final class Postgresql11 {
       "postgresql11.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\261X\n\022PostgresqlConfig11\0224\n\017max_connectio" +
+      "\"\327X\n\022PostgresqlConfig11\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -30833,7 +30842,7 @@ public final class Postgresql11 {
       "AN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEB" +
       "UG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRIN" +
       "T_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT" +
-      "_VERBOSE\020\004\"\212\003\n\026SharedPreloadLibraries\022(\n" +
+      "_VERBOSE\020\004\"\260\003\n\026SharedPreloadLibraries\022(\n" +
       "$SHARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022" +
       ")\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN" +
       "\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_P" +
@@ -30843,35 +30852,36 @@ public final class Postgresql11 {
       "G_CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PGL" +
       "OGICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG_" +
       "PREWARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES_PG" +
-      "AUDIT\020\010\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRO" +
-      "NOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS" +
-      "_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002" +
-      "\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHR" +
-      "ONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONO" +
-      "US_COMMIT_REMOTE_APPLY\020\005\"\346\001\n\024Transaction" +
-      "Isolation\022%\n!TRANSACTION_ISOLATION_UNSPE" +
-      "CIFIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_U" +
-      "NCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_RE" +
-      "AD_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_" +
-      "REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATI" +
-      "ON_SERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEV" +
-      "EL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022" +
-      "\025\n\021WAL_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026X" +
-      "ML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BA" +
-      "SE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022" +
-      "\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTIO" +
-      "N_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\217\002\n" +
-      "\025PostgresqlConfigSet11\022S\n\020effective_conf" +
-      "ig\030\001 \001(\01329.yandex.cloud.mdb.postgresql.v" +
-      "1.config.PostgresqlConfig11\022N\n\013user_conf" +
-      "ig\030\002 \001(\01329.yandex.cloud.mdb.postgresql.v" +
-      "1.config.PostgresqlConfig11\022Q\n\016default_c" +
-      "onfig\030\003 \001(\01329.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlConfig11B\201\001\n)yande" +
-      "x.cloud.api.mdb.postgresql.v1.configZTgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/mdb/postgresql/v1/config;postgres" +
-      "qlb\006proto3"
+      "AUDIT\020\010\022$\n SHARED_PRELOAD_LIBRARIES_PG_T" +
+      "RGM\020\t\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONO" +
+      "US_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_C" +
+      "OMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034" +
+      "\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRON" +
+      "OUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS" +
+      "_COMMIT_REMOTE_APPLY\020\005\"\346\001\n\024TransactionIs" +
+      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
+      "FIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNC" +
+      "OMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ" +
+      "_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_RE" +
+      "PEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION" +
+      "_SERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL" +
+      "_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n" +
+      "\021WAL_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML" +
+      "_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE" +
+      "64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n" +
+      "\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_" +
+      "DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\217\002\n\025P" +
+      "ostgresqlConfigSet11\022S\n\020effective_config" +
+      "\030\001 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlConfig11\022N\n\013user_config" +
+      "\030\002 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlConfig11\022Q\n\016default_con" +
+      "fig\030\003 \001(\01329.yandex.cloud.mdb.postgresql." +
+      "v1.config.PostgresqlConfig11B\201\001\n)yandex." +
+      "cloud.api.mdb.postgresql.v1.configZTgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/mdb/postgresql/v1/config;postgresql" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

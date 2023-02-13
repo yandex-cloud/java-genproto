@@ -5456,9 +5456,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum time (in seconds) for synchronization between standby and primary
-     * 
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+     * Pooler will reject connections to the replica with a lag above this threshold.
+     * It can be useful to prevent application from reading stale data.
+     * Default value: 0
+     * Value of `0` disables this mechanism
      * </pre>
      *
      * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -5467,9 +5469,11 @@ public final class UserOuterClass {
     boolean hasCatchupTimeout();
     /**
      * <pre>
-     * The maximum time (in seconds) for synchronization between standby and primary
-     * 
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+     * Pooler will reject connections to the replica with a lag above this threshold.
+     * It can be useful to prevent application from reading stale data.
+     * Default value: 0
+     * Value of `0` disables this mechanism
      * </pre>
      *
      * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -5478,9 +5482,11 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getCatchupTimeout();
     /**
      * <pre>
-     * The maximum time (in seconds) for synchronization between standby and primary
-     * 
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+     * Pooler will reject connections to the replica with a lag above this threshold.
+     * It can be useful to prevent application from reading stale data.
+     * Default value: 0
+     * Value of `0` disables this mechanism
      * </pre>
      *
      * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -6799,9 +6805,11 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value catchupTimeout_;
     /**
      * <pre>
-     * The maximum time (in seconds) for synchronization between standby and primary
-     * 
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+     * Pooler will reject connections to the replica with a lag above this threshold.
+     * It can be useful to prevent application from reading stale data.
+     * Default value: 0
+     * Value of `0` disables this mechanism
      * </pre>
      *
      * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -6813,9 +6821,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum time (in seconds) for synchronization between standby and primary
-     * 
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+     * Pooler will reject connections to the replica with a lag above this threshold.
+     * It can be useful to prevent application from reading stale data.
+     * Default value: 0
+     * Value of `0` disables this mechanism
      * </pre>
      *
      * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -6827,9 +6837,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum time (in seconds) for synchronization between standby and primary
-     * 
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+     * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+     * Pooler will reject connections to the replica with a lag above this threshold.
+     * It can be useful to prevent application from reading stale data.
+     * Default value: 0
+     * Value of `0` disables this mechanism
      * </pre>
      *
      * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8622,9 +8634,11 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> catchupTimeoutBuilder_;
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8635,9 +8649,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8652,9 +8668,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8674,9 +8692,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8694,9 +8714,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8718,9 +8740,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8738,9 +8762,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8752,9 +8778,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
@@ -8769,9 +8797,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in seconds) for synchronization between standby and primary
-       * 
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/warm-standby.html)
+       * The connection pooler setting. It determines the maximum allowed replication lag (in seconds).
+       * Pooler will reject connections to the replica with a lag above this threshold.
+       * It can be useful to prevent application from reading stale data.
+       * Default value: 0
+       * Value of `0` disables this mechanism
        * </pre>
        *
        * <code>.google.protobuf.Int64Value catchup_timeout = 9;</code>
