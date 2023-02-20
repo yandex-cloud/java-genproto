@@ -395,7 +395,12 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -404,7 +409,12 @@ public final class LoadBalancerOuterClass {
     boolean hasAutoScalePolicy();
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -413,7 +423,12 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy();
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -1549,7 +1564,12 @@ public final class LoadBalancerOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -1561,7 +1581,12 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -1573,7 +1598,12 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4041,7 +4071,12 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> autoScalePolicyBuilder_;
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4052,7 +4087,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4067,7 +4107,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4087,7 +4132,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4105,7 +4155,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4127,7 +4182,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4145,7 +4205,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4157,7 +4222,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -4172,7 +4242,12 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 14;</code>
@@ -24183,7 +24258,10 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Lower limit for the number of resource units in each zone.
+     * Lower limit for the number of resource units in each availability zone.
+     * If not specified previously (using other instruments such as management console), the default value is 2.
+     * To revert to it, specify it explicitly.
+     * The minimum value is 2.
      * </pre>
      *
      * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24193,7 +24271,10 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Upper limit for the total number of resource units across all zones.
+     * Upper limit for the total number of resource units across all availability zones.
+     * If a positive value is specified, it must be at least [min_zone_size] multiplied by the size of
+     * [AllocationPolicy.locations].
+     * If the value is 0, there is no upper limit.
      * </pre>
      *
      * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24202,6 +24283,10 @@ public final class LoadBalancerOuterClass {
     long getMaxSize();
   }
   /**
+   * <pre>
+   * A resource for scaling settings of an application load balancer.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AutoScalePolicy}
    */
   public static final class AutoScalePolicy extends
@@ -24292,7 +24377,10 @@ public final class LoadBalancerOuterClass {
     private long minZoneSize_;
     /**
      * <pre>
-     * Lower limit for the number of resource units in each zone.
+     * Lower limit for the number of resource units in each availability zone.
+     * If not specified previously (using other instruments such as management console), the default value is 2.
+     * To revert to it, specify it explicitly.
+     * The minimum value is 2.
      * </pre>
      *
      * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24307,7 +24395,10 @@ public final class LoadBalancerOuterClass {
     private long maxSize_;
     /**
      * <pre>
-     * Upper limit for the total number of resource units across all zones.
+     * Upper limit for the total number of resource units across all availability zones.
+     * If a positive value is specified, it must be at least [min_zone_size] multiplied by the size of
+     * [AllocationPolicy.locations].
+     * If the value is 0, there is no upper limit.
      * </pre>
      *
      * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24487,6 +24578,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A resource for scaling settings of an application load balancer.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AutoScalePolicy}
      */
     public static final class Builder extends
@@ -24642,7 +24737,10 @@ public final class LoadBalancerOuterClass {
       private long minZoneSize_ ;
       /**
        * <pre>
-       * Lower limit for the number of resource units in each zone.
+       * Lower limit for the number of resource units in each availability zone.
+       * If not specified previously (using other instruments such as management console), the default value is 2.
+       * To revert to it, specify it explicitly.
+       * The minimum value is 2.
        * </pre>
        *
        * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24654,7 +24752,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Lower limit for the number of resource units in each zone.
+       * Lower limit for the number of resource units in each availability zone.
+       * If not specified previously (using other instruments such as management console), the default value is 2.
+       * To revert to it, specify it explicitly.
+       * The minimum value is 2.
        * </pre>
        *
        * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24669,7 +24770,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Lower limit for the number of resource units in each zone.
+       * Lower limit for the number of resource units in each availability zone.
+       * If not specified previously (using other instruments such as management console), the default value is 2.
+       * To revert to it, specify it explicitly.
+       * The minimum value is 2.
        * </pre>
        *
        * <code>int64 min_zone_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24685,7 +24789,10 @@ public final class LoadBalancerOuterClass {
       private long maxSize_ ;
       /**
        * <pre>
-       * Upper limit for the total number of resource units across all zones.
+       * Upper limit for the total number of resource units across all availability zones.
+       * If a positive value is specified, it must be at least [min_zone_size] multiplied by the size of
+       * [AllocationPolicy.locations].
+       * If the value is 0, there is no upper limit.
        * </pre>
        *
        * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24697,7 +24804,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Upper limit for the total number of resource units across all zones.
+       * Upper limit for the total number of resource units across all availability zones.
+       * If a positive value is specified, it must be at least [min_zone_size] multiplied by the size of
+       * [AllocationPolicy.locations].
+       * If the value is 0, there is no upper limit.
        * </pre>
        *
        * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -24712,7 +24822,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Upper limit for the total number of resource units across all zones.
+       * Upper limit for the total number of resource units across all availability zones.
+       * If a positive value is specified, it must be at least [min_zone_size] multiplied by the size of
+       * [AllocationPolicy.locations].
+       * If the value is 0, there is no upper limit.
        * </pre>
        *
        * <code>int64 max_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>

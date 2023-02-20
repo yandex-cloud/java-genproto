@@ -4474,7 +4474,12 @@ public final class LoadBalancerServiceOuterClass {
 
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * New scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -4483,7 +4488,12 @@ public final class LoadBalancerServiceOuterClass {
     boolean hasAutoScalePolicy();
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * New scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -4492,7 +4502,12 @@ public final class LoadBalancerServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy();
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * New scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -5256,7 +5271,12 @@ public final class LoadBalancerServiceOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * New scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -5268,7 +5288,12 @@ public final class LoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * New scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -5280,7 +5305,12 @@ public final class LoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * New scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7412,7 +7442,12 @@ public final class LoadBalancerServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> autoScalePolicyBuilder_;
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7423,7 +7458,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7438,7 +7478,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7458,7 +7503,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7476,7 +7526,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7498,7 +7553,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7516,7 +7576,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7528,7 +7593,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -7543,7 +7613,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * New scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 9;</code>
@@ -8680,7 +8755,12 @@ public final class LoadBalancerServiceOuterClass {
 
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -8689,7 +8769,12 @@ public final class LoadBalancerServiceOuterClass {
     boolean hasAutoScalePolicy();
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -8698,7 +8783,12 @@ public final class LoadBalancerServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy getAutoScalePolicy();
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -9449,7 +9539,12 @@ public final class LoadBalancerServiceOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy autoScalePolicy_;
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -9461,7 +9556,12 @@ public final class LoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -9473,7 +9573,12 @@ public final class LoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * Autoscale settings of the application load balancer.
+     * Scaling settings of the application load balancer.
+     * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+     * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+     * and within limitations specified in these settings.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11472,7 +11577,12 @@ public final class LoadBalancerServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AutoScalePolicyOrBuilder> autoScalePolicyBuilder_;
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11483,7 +11593,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11498,7 +11613,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11518,7 +11638,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11536,7 +11661,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11558,7 +11688,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11576,7 +11711,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11588,7 +11728,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>
@@ -11603,7 +11748,12 @@ public final class LoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Autoscale settings of the application load balancer.
+       * Scaling settings of the application load balancer.
+       * The scaling settings relate to a special internal instance group which facilitates the balancer's work.
+       * Instances in this group are called _resource units_. The group is scaled automatically based on incoming load
+       * and within limitations specified in these settings.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lcu-scaling).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AutoScalePolicy auto_scale_policy = 10;</code>

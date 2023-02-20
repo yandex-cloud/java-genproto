@@ -815,6 +815,33 @@ public final class InstanceOuterClass {
 
     /**
      * <pre>
+     * GPU settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+     * @return Whether the gpuSettings field is set.
+     */
+    boolean hasGpuSettings();
+    /**
+     * <pre>
+     * GPU settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+     * @return The gpuSettings.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings getGpuSettings();
+    /**
+     * <pre>
+     * GPU settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder getGpuSettingsOrBuilder();
+
+    /**
+     * <pre>
      * A domain name of the instance. FQDN is defined by the server
      * in the format `&lt;hostname&gt;.&lt;region_id&gt;.internal` when the instance is created.
      * If the hostname were not specified when the instance was created, FQDN would be `&lt;id&gt;.auto.internal`.
@@ -1206,6 +1233,19 @@ public final class InstanceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(metadataOptions_);
                 metadataOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 210: {
+              yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder subBuilder = null;
+              if (gpuSettings_ != null) {
+                subBuilder = gpuSettings_.toBuilder();
+              }
+              gpuSettings_ = input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpuSettings_);
+                gpuSettings_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2422,6 +2462,44 @@ public final class InstanceOuterClass {
       return networkInterfaces_.get(index);
     }
 
+    public static final int GPU_SETTINGS_FIELD_NUMBER = 26;
+    private yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings gpuSettings_;
+    /**
+     * <pre>
+     * GPU settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+     * @return Whether the gpuSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpuSettings() {
+      return gpuSettings_ != null;
+    }
+    /**
+     * <pre>
+     * GPU settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+     * @return The gpuSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings getGpuSettings() {
+      return gpuSettings_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.getDefaultInstance() : gpuSettings_;
+    }
+    /**
+     * <pre>
+     * GPU settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder getGpuSettingsOrBuilder() {
+      return getGpuSettings();
+    }
+
     public static final int FQDN_FIELD_NUMBER = 16;
     private volatile java.lang.Object fqdn_;
     /**
@@ -2720,6 +2798,9 @@ public final class InstanceOuterClass {
       if (metadataOptions_ != null) {
         output.writeMessage(23, getMetadataOptions());
       }
+      if (gpuSettings_ != null) {
+        output.writeMessage(26, getGpuSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2821,6 +2902,10 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, getMetadataOptions());
       }
+      if (gpuSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getGpuSettings());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2881,6 +2966,11 @@ public final class InstanceOuterClass {
           .equals(other.getFilesystemsList())) return false;
       if (!getNetworkInterfacesList()
           .equals(other.getNetworkInterfacesList())) return false;
+      if (hasGpuSettings() != other.hasGpuSettings()) return false;
+      if (hasGpuSettings()) {
+        if (!getGpuSettings()
+            .equals(other.getGpuSettings())) return false;
+      }
       if (!getFqdn()
           .equals(other.getFqdn())) return false;
       if (hasSchedulingPolicy() != other.hasSchedulingPolicy()) return false;
@@ -2964,6 +3054,10 @@ public final class InstanceOuterClass {
       if (getNetworkInterfacesCount() > 0) {
         hash = (37 * hash) + NETWORK_INTERFACES_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkInterfacesList().hashCode();
+      }
+      if (hasGpuSettings()) {
+        hash = (37 * hash) + GPU_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getGpuSettings().hashCode();
       }
       hash = (37 * hash) + FQDN_FIELD_NUMBER;
       hash = (53 * hash) + getFqdn().hashCode();
@@ -3212,6 +3306,12 @@ public final class InstanceOuterClass {
         } else {
           networkInterfacesBuilder_.clear();
         }
+        if (gpuSettingsBuilder_ == null) {
+          gpuSettings_ = null;
+        } else {
+          gpuSettings_ = null;
+          gpuSettingsBuilder_ = null;
+        }
         fqdn_ = "";
 
         if (schedulingPolicyBuilder_ == null) {
@@ -3327,6 +3427,11 @@ public final class InstanceOuterClass {
           result.networkInterfaces_ = networkInterfaces_;
         } else {
           result.networkInterfaces_ = networkInterfacesBuilder_.build();
+        }
+        if (gpuSettingsBuilder_ == null) {
+          result.gpuSettings_ = gpuSettings_;
+        } else {
+          result.gpuSettings_ = gpuSettingsBuilder_.build();
         }
         result.fqdn_ = fqdn_;
         if (schedulingPolicyBuilder_ == null) {
@@ -3539,6 +3644,9 @@ public final class InstanceOuterClass {
               networkInterfacesBuilder_.addAllMessages(other.networkInterfaces_);
             }
           }
+        }
+        if (other.hasGpuSettings()) {
+          mergeGpuSettings(other.getGpuSettings());
         }
         if (!other.getFqdn().isEmpty()) {
           fqdn_ = other.fqdn_;
@@ -6399,6 +6507,161 @@ public final class InstanceOuterClass {
           networkInterfaces_ = null;
         }
         return networkInterfacesBuilder_;
+      }
+
+      private yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings gpuSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder> gpuSettingsBuilder_;
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       * @return Whether the gpuSettings field is set.
+       */
+      public boolean hasGpuSettings() {
+        return gpuSettingsBuilder_ != null || gpuSettings_ != null;
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       * @return The gpuSettings.
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings getGpuSettings() {
+        if (gpuSettingsBuilder_ == null) {
+          return gpuSettings_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.getDefaultInstance() : gpuSettings_;
+        } else {
+          return gpuSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      public Builder setGpuSettings(yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings value) {
+        if (gpuSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpuSettings_ = value;
+          onChanged();
+        } else {
+          gpuSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      public Builder setGpuSettings(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder builderForValue) {
+        if (gpuSettingsBuilder_ == null) {
+          gpuSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpuSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      public Builder mergeGpuSettings(yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings value) {
+        if (gpuSettingsBuilder_ == null) {
+          if (gpuSettings_ != null) {
+            gpuSettings_ =
+              yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.newBuilder(gpuSettings_).mergeFrom(value).buildPartial();
+          } else {
+            gpuSettings_ = value;
+          }
+          onChanged();
+        } else {
+          gpuSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      public Builder clearGpuSettings() {
+        if (gpuSettingsBuilder_ == null) {
+          gpuSettings_ = null;
+          onChanged();
+        } else {
+          gpuSettings_ = null;
+          gpuSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder getGpuSettingsBuilder() {
+        
+        onChanged();
+        return getGpuSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder getGpuSettingsOrBuilder() {
+        if (gpuSettingsBuilder_ != null) {
+          return gpuSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return gpuSettings_ == null ?
+              yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.getDefaultInstance() : gpuSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * GPU settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.GpuSettings gpu_settings = 26;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder> 
+          getGpuSettingsFieldBuilder() {
+        if (gpuSettingsBuilder_ == null) {
+          gpuSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder>(
+                  getGpuSettings(),
+                  getParentForChildren(),
+                  isClean());
+          gpuSettings_ = null;
+        }
+        return gpuSettingsBuilder_;
       }
 
       private java.lang.Object fqdn_ = "";
@@ -17472,6 +17735,610 @@ public final class InstanceOuterClass {
 
   }
 
+  public interface GpuSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.GpuSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Attach instance to specified GPU cluster.
+     * </pre>
+     *
+     * <code>string gpu_cluster_id = 1;</code>
+     * @return The gpuClusterId.
+     */
+    java.lang.String getGpuClusterId();
+    /**
+     * <pre>
+     * Attach instance to specified GPU cluster.
+     * </pre>
+     *
+     * <code>string gpu_cluster_id = 1;</code>
+     * @return The bytes for gpuClusterId.
+     */
+    com.google.protobuf.ByteString
+        getGpuClusterIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.GpuSettings}
+   */
+  public static final class GpuSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.GpuSettings)
+      GpuSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GpuSettings.newBuilder() to construct.
+    private GpuSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GpuSettings() {
+      gpuClusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GpuSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GpuSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gpuClusterId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_GpuSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_GpuSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.class, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder.class);
+    }
+
+    public static final int GPU_CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object gpuClusterId_;
+    /**
+     * <pre>
+     * Attach instance to specified GPU cluster.
+     * </pre>
+     *
+     * <code>string gpu_cluster_id = 1;</code>
+     * @return The gpuClusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getGpuClusterId() {
+      java.lang.Object ref = gpuClusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gpuClusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Attach instance to specified GPU cluster.
+     * </pre>
+     *
+     * <code>string gpu_cluster_id = 1;</code>
+     * @return The bytes for gpuClusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGpuClusterIdBytes() {
+      java.lang.Object ref = gpuClusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gpuClusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gpuClusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gpuClusterId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gpuClusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gpuClusterId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings other = (yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings) obj;
+
+      if (!getGpuClusterId()
+          .equals(other.getGpuClusterId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GPU_CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGpuClusterId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.GpuSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.GpuSettings)
+        yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_GpuSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_GpuSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.class, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        gpuClusterId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_GpuSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings build() {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings result = new yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings(this);
+        result.gpuClusterId_ = gpuClusterId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.getDefaultInstance()) return this;
+        if (!other.getGpuClusterId().isEmpty()) {
+          gpuClusterId_ = other.gpuClusterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object gpuClusterId_ = "";
+      /**
+       * <pre>
+       * Attach instance to specified GPU cluster.
+       * </pre>
+       *
+       * <code>string gpu_cluster_id = 1;</code>
+       * @return The gpuClusterId.
+       */
+      public java.lang.String getGpuClusterId() {
+        java.lang.Object ref = gpuClusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gpuClusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Attach instance to specified GPU cluster.
+       * </pre>
+       *
+       * <code>string gpu_cluster_id = 1;</code>
+       * @return The bytes for gpuClusterId.
+       */
+      public com.google.protobuf.ByteString
+          getGpuClusterIdBytes() {
+        java.lang.Object ref = gpuClusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gpuClusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Attach instance to specified GPU cluster.
+       * </pre>
+       *
+       * <code>string gpu_cluster_id = 1;</code>
+       * @param value The gpuClusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gpuClusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Attach instance to specified GPU cluster.
+       * </pre>
+       *
+       * <code>string gpu_cluster_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGpuClusterId() {
+        
+        gpuClusterId_ = getDefaultInstance().getGpuClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Attach instance to specified GPU cluster.
+       * </pre>
+       *
+       * <code>string gpu_cluster_id = 1;</code>
+       * @param value The bytes for gpuClusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gpuClusterId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.GpuSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.GpuSettings)
+    private static final yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GpuSettings>
+        PARSER = new com.google.protobuf.AbstractParser<GpuSettings>() {
+      @java.lang.Override
+      public GpuSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GpuSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GpuSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GpuSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PlacementPolicyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.PlacementPolicy)
       com.google.protobuf.MessageOrBuilder {
@@ -20779,6 +21646,11 @@ public final class InstanceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_NetworkSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_GpuSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_GpuSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20804,7 +21676,7 @@ public final class InstanceOuterClass {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/compute/v1/instance.proto" +
       "\022\027yandex.cloud.compute.v1\032\037google/protob" +
-      "uf/timestamp.proto\"\244\n\n\010Instance\022\n\n\002id\030\001 " +
+      "uf/timestamp.proto\"\340\n\n\010Instance\022\n\n\002id\030\001 " +
       "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
       "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
       " \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(" +
@@ -20824,75 +21696,78 @@ public final class InstanceOuterClass {
       "k\022@\n\013filesystems\030\025 \003(\0132+.yandex.cloud.co" +
       "mpute.v1.AttachedFilesystem\022E\n\022network_i" +
       "nterfaces\030\016 \003(\0132).yandex.cloud.compute.v" +
-      "1.NetworkInterface\022\014\n\004fqdn\030\020 \001(\t\022D\n\021sche" +
-      "duling_policy\030\021 \001(\0132).yandex.cloud.compu" +
-      "te.v1.SchedulingPolicy\022\032\n\022service_accoun" +
-      "t_id\030\022 \001(\t\022B\n\020network_settings\030\023 \001(\0132(.y" +
-      "andex.cloud.compute.v1.NetworkSettings\022B" +
-      "\n\020placement_policy\030\024 \001(\0132(.yandex.cloud." +
-      "compute.v1.PlacementPolicy\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMet" +
-      "adataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"\254\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n" +
-      "\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010STOPPING" +
-      "\020\003\022\013\n\007STOPPED\020\004\022\014\n\010STARTING\020\005\022\016\n\nRESTART" +
-      "ING\020\006\022\014\n\010UPDATING\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHE" +
-      "D\020\t\022\014\n\010DELETING\020\n\"O\n\tResources\022\016\n\006memory" +
-      "\030\001 \001(\003\022\r\n\005cores\030\002 \001(\003\022\025\n\rcore_fraction\030\003" +
-      " \001(\003\022\014\n\004gpus\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004m" +
-      "ode\030\001 \001(\0162*.yandex.cloud.compute.v1.Atta" +
-      "chedDisk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013au" +
-      "to_delete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode" +
-      "\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n" +
-      "\nREAD_WRITE\020\002\"6\n\021AttachedLocalDisk\022\014\n\004si" +
-      "ze\030\001 \001(\003\022\023\n\013device_name\030\002 \001(\t\"\275\001\n\022Attach" +
-      "edFilesystem\022>\n\004mode\030\001 \001(\01620.yandex.clou" +
-      "d.compute.v1.AttachedFilesystem.Mode\022\023\n\013" +
-      "device_name\030\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t" +
-      "\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_O" +
-      "NLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterfa" +
-      "ce\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021" +
-      "\n\tsubnet_id\030\003 \001(\t\022C\n\022primary_v4_address\030" +
-      "\004 \001(\0132\'.yandex.cloud.compute.v1.PrimaryA" +
-      "ddress\022C\n\022primary_v6_address\030\005 \001(\0132\'.yan" +
-      "dex.cloud.compute.v1.PrimaryAddress\022\032\n\022s" +
-      "ecurity_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddre" +
-      "ss\022\017\n\007address\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 " +
-      "\001(\0132$.yandex.cloud.compute.v1.OneToOneNa" +
-      "t\0227\n\013dns_records\030\003 \003(\0132\".yandex.cloud.co" +
-      "mpute.v1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007ad" +
-      "dress\030\001 \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex" +
-      ".cloud.compute.v1.IpVersion\0227\n\013dns_recor" +
-      "ds\030\003 \003(\0132\".yandex.cloud.compute.v1.DnsRe" +
-      "cord\"H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_z" +
-      "one_id\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'" +
-      "\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"" +
-      "\256\001\n\017NetworkSettings\022;\n\004type\030\001 \001(\0162-.yand" +
-      "ex.cloud.compute.v1.NetworkSettings.Type" +
-      "\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDA" +
-      "RD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWA" +
-      "RE_ACCELERATED\020\003\"\301\002\n\017PlacementPolicy\022\032\n\022" +
-      "placement_group_id\030\001 \001(\t\022V\n\023host_affinit" +
-      "y_rules\030\002 \003(\01329.yandex.cloud.compute.v1." +
-      "PlacementPolicy.HostAffinityRule\032\271\001\n\020Hos" +
-      "tAffinityRule\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B" +
-      ".yandex.cloud.compute.v1.PlacementPolicy" +
-      ".HostAffinityRule.Operator\022\016\n\006values\030\003 \003" +
-      "(\t\"8\n\010Operator\022\030\n\024OPERATOR_UNSPECIFIED\020\000" +
-      "\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\241\002\n\017MetadataOptions" +
-      "\022B\n\021gce_http_endpoint\030\001 \001(\0162\'.yandex.clo" +
-      "ud.compute.v1.MetadataOption\022E\n\024aws_v1_h" +
-      "ttp_endpoint\030\002 \001(\0162\'.yandex.cloud.comput" +
-      "e.v1.MetadataOption\022?\n\016gce_http_token\030\003 " +
-      "\001(\0162\'.yandex.cloud.compute.v1.MetadataOp" +
-      "tion\022B\n\021aws_v1_http_token\030\004 \001(\0162\'.yandex" +
-      ".cloud.compute.v1.MetadataOption*;\n\tIpVe" +
-      "rsion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV" +
-      "4\020\001\022\010\n\004IPV6\020\002*L\n\016MetadataOption\022\037\n\033METAD" +
-      "ATA_OPTION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n" +
-      "\010DISABLED\020\002Bb\n\033yandex.cloud.api.compute." +
-      "v1ZCgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/compute/v1;computeb\006proto3"
+      "1.NetworkInterface\022:\n\014gpu_settings\030\032 \001(\013" +
+      "2$.yandex.cloud.compute.v1.GpuSettings\022\014" +
+      "\n\004fqdn\030\020 \001(\t\022D\n\021scheduling_policy\030\021 \001(\0132" +
+      ").yandex.cloud.compute.v1.SchedulingPoli" +
+      "cy\022\032\n\022service_account_id\030\022 \001(\t\022B\n\020networ" +
+      "k_settings\030\023 \001(\0132(.yandex.cloud.compute." +
+      "v1.NetworkSettings\022B\n\020placement_policy\030\024" +
+      " \001(\0132(.yandex.cloud.compute.v1.Placement" +
+      "Policy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Status\022\026\n\022STA" +
+      "TUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007R" +
+      "UNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014\n\010S" +
+      "TARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPDATING\020\007\022" +
+      "\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELETING\020\n\"O\n" +
+      "\tResources\022\016\n\006memory\030\001 \001(\003\022\r\n\005cores\030\002 \001(" +
+      "\003\022\025\n\rcore_fraction\030\003 \001(\003\022\014\n\004gpus\030\004 \001(\003\"\300" +
+      "\001\n\014AttachedDisk\0228\n\004mode\030\001 \001(\0162*.yandex.c" +
+      "loud.compute.v1.AttachedDisk.Mode\022\023\n\013dev" +
+      "ice_name\030\002 \001(\t\022\023\n\013auto_delete\030\003 \001(\010\022\017\n\007d" +
+      "isk_id\030\004 \001(\t\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED" +
+      "\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"6\n\021Att" +
+      "achedLocalDisk\022\014\n\004size\030\001 \001(\003\022\023\n\013device_n" +
+      "ame\030\002 \001(\t\"\275\001\n\022AttachedFilesystem\022>\n\004mode" +
+      "\030\001 \001(\01620.yandex.cloud.compute.v1.Attache" +
+      "dFilesystem.Mode\022\023\n\013device_name\030\002 \001(\t\022\025\n" +
+      "\rfilesystem_id\030\003 \001(\t\";\n\004Mode\022\024\n\020MODE_UNS" +
+      "PECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020" +
+      "\002\"\357\001\n\020NetworkInterface\022\r\n\005index\030\001 \001(\t\022\023\n" +
+      "\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022C\n" +
+      "\022primary_v4_address\030\004 \001(\0132\'.yandex.cloud" +
+      ".compute.v1.PrimaryAddress\022C\n\022primary_v6" +
+      "_address\030\005 \001(\0132\'.yandex.cloud.compute.v1" +
+      ".PrimaryAddress\022\032\n\022security_group_ids\030\006 " +
+      "\003(\t\"\230\001\n\016PrimaryAddress\022\017\n\007address\030\001 \001(\t\022" +
+      "<\n\016one_to_one_nat\030\002 \001(\0132$.yandex.cloud.c" +
+      "ompute.v1.OneToOneNat\0227\n\013dns_records\030\003 \003" +
+      "(\0132\".yandex.cloud.compute.v1.DnsRecord\"\217" +
+      "\001\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\0226\n\nip_ve" +
+      "rsion\030\002 \001(\0162\".yandex.cloud.compute.v1.Ip" +
+      "Version\0227\n\013dns_records\030\003 \003(\0132\".yandex.cl" +
+      "oud.compute.v1.DnsRecord\"H\n\tDnsRecord\022\014\n" +
+      "\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_id\030\002 \001(\t\022\013\n\003ttl\030" +
+      "\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'\n\020SchedulingPolicy\022\023" +
+      "\n\013preemptible\030\001 \001(\010\"\256\001\n\017NetworkSettings\022" +
+      ";\n\004type\030\001 \001(\0162-.yandex.cloud.compute.v1." +
+      "NetworkSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNS" +
+      "PECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACC" +
+      "ELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"%\n\013" +
+      "GpuSettings\022\026\n\016gpu_cluster_id\030\001 \001(\t\"\301\002\n\017" +
+      "PlacementPolicy\022\032\n\022placement_group_id\030\001 " +
+      "\001(\t\022V\n\023host_affinity_rules\030\002 \003(\01329.yande" +
+      "x.cloud.compute.v1.PlacementPolicy.HostA" +
+      "ffinityRule\032\271\001\n\020HostAffinityRule\022\013\n\003key\030" +
+      "\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.cloud.compute" +
+      ".v1.PlacementPolicy.HostAffinityRule.Ope" +
+      "rator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPE" +
+      "RATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"" +
+      "\241\002\n\017MetadataOptions\022B\n\021gce_http_endpoint" +
+      "\030\001 \001(\0162\'.yandex.cloud.compute.v1.Metadat" +
+      "aOption\022E\n\024aws_v1_http_endpoint\030\002 \001(\0162\'." +
+      "yandex.cloud.compute.v1.MetadataOption\022?" +
+      "\n\016gce_http_token\030\003 \001(\0162\'.yandex.cloud.co" +
+      "mpute.v1.MetadataOption\022B\n\021aws_v1_http_t" +
+      "oken\030\004 \001(\0162\'.yandex.cloud.compute.v1.Met" +
+      "adataOption*;\n\tIpVersion\022\032\n\026IP_VERSION_U" +
+      "NSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016Meta" +
+      "dataOption\022\037\n\033METADATA_OPTION_UNSPECIFIE" +
+      "D\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002Bb\n\033yandex" +
+      ".cloud.api.compute.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/compute/" +
+      "v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20904,7 +21779,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Instance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_fieldAccessorTable = new
@@ -20977,8 +21852,14 @@ public final class InstanceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_NetworkSettings_descriptor,
         new java.lang.String[] { "Type", });
-    internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor =
+    internal_static_yandex_cloud_compute_v1_GpuSettings_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_compute_v1_GpuSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_GpuSettings_descriptor,
+        new java.lang.String[] { "GpuClusterId", });
+    internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor,
@@ -20990,7 +21871,7 @@ public final class InstanceOuterClass {
         internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor,
         new java.lang.String[] { "Key", "Op", "Values", });
     internal_static_yandex_cloud_compute_v1_MetadataOptions_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_compute_v1_MetadataOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_MetadataOptions_descriptor,

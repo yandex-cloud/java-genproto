@@ -2289,6 +2289,51 @@ public final class Postgresql11 {
      * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getGeqoSeedOrBuilder();
+
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the pgTrgmSimilarityThreshold field is set.
+     */
+    boolean hasPgTrgmSimilarityThreshold();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The pgTrgmSimilarityThreshold.
+     */
+    com.google.protobuf.DoubleValue getPgTrgmSimilarityThreshold();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getPgTrgmSimilarityThresholdOrBuilder();
+
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the pgTrgmWordSimilarityThreshold field is set.
+     */
+    boolean hasPgTrgmWordSimilarityThreshold();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The pgTrgmWordSimilarityThreshold.
+     */
+    com.google.protobuf.DoubleValue getPgTrgmWordSimilarityThreshold();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getPgTrgmWordSimilarityThresholdOrBuilder();
+
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the pgTrgmStrictWordSimilarityThreshold field is set.
+     */
+    boolean hasPgTrgmStrictWordSimilarityThreshold();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The pgTrgmStrictWordSimilarityThreshold.
+     */
+    com.google.protobuf.DoubleValue getPgTrgmStrictWordSimilarityThreshold();
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getPgTrgmStrictWordSimilarityThresholdOrBuilder();
   }
   /**
    * <pre>
@@ -3961,6 +4006,45 @@ public final class Postgresql11 {
 
               break;
             }
+            case 1274: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (pgTrgmSimilarityThreshold_ != null) {
+                subBuilder = pgTrgmSimilarityThreshold_.toBuilder();
+              }
+              pgTrgmSimilarityThreshold_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgTrgmSimilarityThreshold_);
+                pgTrgmSimilarityThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1282: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (pgTrgmWordSimilarityThreshold_ != null) {
+                subBuilder = pgTrgmWordSimilarityThreshold_.toBuilder();
+              }
+              pgTrgmWordSimilarityThreshold_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgTrgmWordSimilarityThreshold_);
+                pgTrgmWordSimilarityThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1290: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (pgTrgmStrictWordSimilarityThreshold_ != null) {
+                subBuilder = pgTrgmStrictWordSimilarityThreshold_.toBuilder();
+              }
+              pgTrgmStrictWordSimilarityThreshold_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgTrgmStrictWordSimilarityThreshold_);
+                pgTrgmStrictWordSimilarityThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5135,10 +5219,6 @@ public final class Postgresql11 {
        * <code>SHARED_PRELOAD_LIBRARIES_PGAUDIT = 8;</code>
        */
       SHARED_PRELOAD_LIBRARIES_PGAUDIT(8),
-      /**
-       * <code>SHARED_PRELOAD_LIBRARIES_PG_TRGM = 9;</code>
-       */
-      SHARED_PRELOAD_LIBRARIES_PG_TRGM(9),
       UNRECOGNIZED(-1),
       ;
 
@@ -5178,10 +5258,6 @@ public final class Postgresql11 {
        * <code>SHARED_PRELOAD_LIBRARIES_PGAUDIT = 8;</code>
        */
       public static final int SHARED_PRELOAD_LIBRARIES_PGAUDIT_VALUE = 8;
-      /**
-       * <code>SHARED_PRELOAD_LIBRARIES_PG_TRGM = 9;</code>
-       */
-      public static final int SHARED_PRELOAD_LIBRARIES_PG_TRGM_VALUE = 9;
 
 
       public final int getNumber() {
@@ -5217,7 +5293,6 @@ public final class Postgresql11 {
           case 6: return SHARED_PRELOAD_LIBRARIES_PGLOGICAL;
           case 7: return SHARED_PRELOAD_LIBRARIES_PG_PREWARM;
           case 8: return SHARED_PRELOAD_LIBRARIES_PGAUDIT;
-          case 9: return SHARED_PRELOAD_LIBRARIES_PG_TRGM;
           default: return null;
         }
       }
@@ -9628,6 +9703,84 @@ public final class Postgresql11 {
       return getGeqoSeed();
     }
 
+    public static final int PG_TRGM_SIMILARITY_THRESHOLD_FIELD_NUMBER = 159;
+    private com.google.protobuf.DoubleValue pgTrgmSimilarityThreshold_;
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the pgTrgmSimilarityThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasPgTrgmSimilarityThreshold() {
+      return pgTrgmSimilarityThreshold_ != null;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The pgTrgmSimilarityThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValue getPgTrgmSimilarityThreshold() {
+      return pgTrgmSimilarityThreshold_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmSimilarityThreshold_;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getPgTrgmSimilarityThresholdOrBuilder() {
+      return getPgTrgmSimilarityThreshold();
+    }
+
+    public static final int PG_TRGM_WORD_SIMILARITY_THRESHOLD_FIELD_NUMBER = 160;
+    private com.google.protobuf.DoubleValue pgTrgmWordSimilarityThreshold_;
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the pgTrgmWordSimilarityThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasPgTrgmWordSimilarityThreshold() {
+      return pgTrgmWordSimilarityThreshold_ != null;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The pgTrgmWordSimilarityThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValue getPgTrgmWordSimilarityThreshold() {
+      return pgTrgmWordSimilarityThreshold_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmWordSimilarityThreshold_;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getPgTrgmWordSimilarityThresholdOrBuilder() {
+      return getPgTrgmWordSimilarityThreshold();
+    }
+
+    public static final int PG_TRGM_STRICT_WORD_SIMILARITY_THRESHOLD_FIELD_NUMBER = 161;
+    private com.google.protobuf.DoubleValue pgTrgmStrictWordSimilarityThreshold_;
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return Whether the pgTrgmStrictWordSimilarityThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasPgTrgmStrictWordSimilarityThreshold() {
+      return pgTrgmStrictWordSimilarityThreshold_ != null;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     * @return The pgTrgmStrictWordSimilarityThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValue getPgTrgmStrictWordSimilarityThreshold() {
+      return pgTrgmStrictWordSimilarityThreshold_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmStrictWordSimilarityThreshold_;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getPgTrgmStrictWordSimilarityThresholdOrBuilder() {
+      return getPgTrgmStrictWordSimilarityThreshold();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10042,6 +10195,15 @@ public final class Postgresql11 {
       }
       if (geqoSeed_ != null) {
         output.writeMessage(158, getGeqoSeed());
+      }
+      if (pgTrgmSimilarityThreshold_ != null) {
+        output.writeMessage(159, getPgTrgmSimilarityThreshold());
+      }
+      if (pgTrgmWordSimilarityThreshold_ != null) {
+        output.writeMessage(160, getPgTrgmWordSimilarityThreshold());
+      }
+      if (pgTrgmStrictWordSimilarityThreshold_ != null) {
+        output.writeMessage(161, getPgTrgmStrictWordSimilarityThreshold());
       }
       unknownFields.writeTo(output);
     }
@@ -10585,6 +10747,18 @@ public final class Postgresql11 {
       if (geqoSeed_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(158, getGeqoSeed());
+      }
+      if (pgTrgmSimilarityThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(159, getPgTrgmSimilarityThreshold());
+      }
+      if (pgTrgmWordSimilarityThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(160, getPgTrgmWordSimilarityThreshold());
+      }
+      if (pgTrgmStrictWordSimilarityThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(161, getPgTrgmStrictWordSimilarityThreshold());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11187,6 +11361,21 @@ public final class Postgresql11 {
         if (!getGeqoSeed()
             .equals(other.getGeqoSeed())) return false;
       }
+      if (hasPgTrgmSimilarityThreshold() != other.hasPgTrgmSimilarityThreshold()) return false;
+      if (hasPgTrgmSimilarityThreshold()) {
+        if (!getPgTrgmSimilarityThreshold()
+            .equals(other.getPgTrgmSimilarityThreshold())) return false;
+      }
+      if (hasPgTrgmWordSimilarityThreshold() != other.hasPgTrgmWordSimilarityThreshold()) return false;
+      if (hasPgTrgmWordSimilarityThreshold()) {
+        if (!getPgTrgmWordSimilarityThreshold()
+            .equals(other.getPgTrgmWordSimilarityThreshold())) return false;
+      }
+      if (hasPgTrgmStrictWordSimilarityThreshold() != other.hasPgTrgmStrictWordSimilarityThreshold()) return false;
+      if (hasPgTrgmStrictWordSimilarityThreshold()) {
+        if (!getPgTrgmStrictWordSimilarityThreshold()
+            .equals(other.getPgTrgmStrictWordSimilarityThreshold())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11689,6 +11878,18 @@ public final class Postgresql11 {
       if (hasGeqoSeed()) {
         hash = (37 * hash) + GEQO_SEED_FIELD_NUMBER;
         hash = (53 * hash) + getGeqoSeed().hashCode();
+      }
+      if (hasPgTrgmSimilarityThreshold()) {
+        hash = (37 * hash) + PG_TRGM_SIMILARITY_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getPgTrgmSimilarityThreshold().hashCode();
+      }
+      if (hasPgTrgmWordSimilarityThreshold()) {
+        hash = (37 * hash) + PG_TRGM_WORD_SIMILARITY_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getPgTrgmWordSimilarityThreshold().hashCode();
+      }
+      if (hasPgTrgmStrictWordSimilarityThreshold()) {
+        hash = (37 * hash) + PG_TRGM_STRICT_WORD_SIMILARITY_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getPgTrgmStrictWordSimilarityThreshold().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12545,6 +12746,24 @@ public final class Postgresql11 {
           geqoSeed_ = null;
           geqoSeedBuilder_ = null;
         }
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          pgTrgmSimilarityThreshold_ = null;
+        } else {
+          pgTrgmSimilarityThreshold_ = null;
+          pgTrgmSimilarityThresholdBuilder_ = null;
+        }
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmWordSimilarityThreshold_ = null;
+        } else {
+          pgTrgmWordSimilarityThreshold_ = null;
+          pgTrgmWordSimilarityThresholdBuilder_ = null;
+        }
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmStrictWordSimilarityThreshold_ = null;
+        } else {
+          pgTrgmStrictWordSimilarityThreshold_ = null;
+          pgTrgmStrictWordSimilarityThresholdBuilder_ = null;
+        }
         return this;
       }
 
@@ -13160,6 +13379,21 @@ public final class Postgresql11 {
         } else {
           result.geqoSeed_ = geqoSeedBuilder_.build();
         }
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          result.pgTrgmSimilarityThreshold_ = pgTrgmSimilarityThreshold_;
+        } else {
+          result.pgTrgmSimilarityThreshold_ = pgTrgmSimilarityThresholdBuilder_.build();
+        }
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          result.pgTrgmWordSimilarityThreshold_ = pgTrgmWordSimilarityThreshold_;
+        } else {
+          result.pgTrgmWordSimilarityThreshold_ = pgTrgmWordSimilarityThresholdBuilder_.build();
+        }
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          result.pgTrgmStrictWordSimilarityThreshold_ = pgTrgmStrictWordSimilarityThreshold_;
+        } else {
+          result.pgTrgmStrictWordSimilarityThreshold_ = pgTrgmStrictWordSimilarityThresholdBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13612,6 +13846,15 @@ public final class Postgresql11 {
         }
         if (other.hasGeqoSeed()) {
           mergeGeqoSeed(other.getGeqoSeed());
+        }
+        if (other.hasPgTrgmSimilarityThreshold()) {
+          mergePgTrgmSimilarityThreshold(other.getPgTrgmSimilarityThreshold());
+        }
+        if (other.hasPgTrgmWordSimilarityThreshold()) {
+          mergePgTrgmWordSimilarityThreshold(other.getPgTrgmWordSimilarityThreshold());
+        }
+        if (other.hasPgTrgmStrictWordSimilarityThreshold()) {
+          mergePgTrgmStrictWordSimilarityThreshold(other.getPgTrgmStrictWordSimilarityThreshold());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -29289,6 +29532,363 @@ public final class Postgresql11 {
         }
         return geqoSeedBuilder_;
       }
+
+      private com.google.protobuf.DoubleValue pgTrgmSimilarityThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> pgTrgmSimilarityThresholdBuilder_;
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return Whether the pgTrgmSimilarityThreshold field is set.
+       */
+      public boolean hasPgTrgmSimilarityThreshold() {
+        return pgTrgmSimilarityThresholdBuilder_ != null || pgTrgmSimilarityThreshold_ != null;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return The pgTrgmSimilarityThreshold.
+       */
+      public com.google.protobuf.DoubleValue getPgTrgmSimilarityThreshold() {
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          return pgTrgmSimilarityThreshold_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmSimilarityThreshold_;
+        } else {
+          return pgTrgmSimilarityThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setPgTrgmSimilarityThreshold(com.google.protobuf.DoubleValue value) {
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgTrgmSimilarityThreshold_ = value;
+          onChanged();
+        } else {
+          pgTrgmSimilarityThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setPgTrgmSimilarityThreshold(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          pgTrgmSimilarityThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgTrgmSimilarityThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder mergePgTrgmSimilarityThreshold(com.google.protobuf.DoubleValue value) {
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          if (pgTrgmSimilarityThreshold_ != null) {
+            pgTrgmSimilarityThreshold_ =
+              com.google.protobuf.DoubleValue.newBuilder(pgTrgmSimilarityThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            pgTrgmSimilarityThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          pgTrgmSimilarityThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder clearPgTrgmSimilarityThreshold() {
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          pgTrgmSimilarityThreshold_ = null;
+          onChanged();
+        } else {
+          pgTrgmSimilarityThreshold_ = null;
+          pgTrgmSimilarityThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getPgTrgmSimilarityThresholdBuilder() {
+        
+        onChanged();
+        return getPgTrgmSimilarityThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getPgTrgmSimilarityThresholdOrBuilder() {
+        if (pgTrgmSimilarityThresholdBuilder_ != null) {
+          return pgTrgmSimilarityThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return pgTrgmSimilarityThreshold_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmSimilarityThreshold_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_similarity_threshold = 159 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getPgTrgmSimilarityThresholdFieldBuilder() {
+        if (pgTrgmSimilarityThresholdBuilder_ == null) {
+          pgTrgmSimilarityThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getPgTrgmSimilarityThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          pgTrgmSimilarityThreshold_ = null;
+        }
+        return pgTrgmSimilarityThresholdBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue pgTrgmWordSimilarityThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> pgTrgmWordSimilarityThresholdBuilder_;
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return Whether the pgTrgmWordSimilarityThreshold field is set.
+       */
+      public boolean hasPgTrgmWordSimilarityThreshold() {
+        return pgTrgmWordSimilarityThresholdBuilder_ != null || pgTrgmWordSimilarityThreshold_ != null;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return The pgTrgmWordSimilarityThreshold.
+       */
+      public com.google.protobuf.DoubleValue getPgTrgmWordSimilarityThreshold() {
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          return pgTrgmWordSimilarityThreshold_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmWordSimilarityThreshold_;
+        } else {
+          return pgTrgmWordSimilarityThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setPgTrgmWordSimilarityThreshold(com.google.protobuf.DoubleValue value) {
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgTrgmWordSimilarityThreshold_ = value;
+          onChanged();
+        } else {
+          pgTrgmWordSimilarityThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setPgTrgmWordSimilarityThreshold(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmWordSimilarityThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgTrgmWordSimilarityThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder mergePgTrgmWordSimilarityThreshold(com.google.protobuf.DoubleValue value) {
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          if (pgTrgmWordSimilarityThreshold_ != null) {
+            pgTrgmWordSimilarityThreshold_ =
+              com.google.protobuf.DoubleValue.newBuilder(pgTrgmWordSimilarityThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            pgTrgmWordSimilarityThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          pgTrgmWordSimilarityThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder clearPgTrgmWordSimilarityThreshold() {
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmWordSimilarityThreshold_ = null;
+          onChanged();
+        } else {
+          pgTrgmWordSimilarityThreshold_ = null;
+          pgTrgmWordSimilarityThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getPgTrgmWordSimilarityThresholdBuilder() {
+        
+        onChanged();
+        return getPgTrgmWordSimilarityThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getPgTrgmWordSimilarityThresholdOrBuilder() {
+        if (pgTrgmWordSimilarityThresholdBuilder_ != null) {
+          return pgTrgmWordSimilarityThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return pgTrgmWordSimilarityThreshold_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmWordSimilarityThreshold_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_word_similarity_threshold = 160 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getPgTrgmWordSimilarityThresholdFieldBuilder() {
+        if (pgTrgmWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmWordSimilarityThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getPgTrgmWordSimilarityThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          pgTrgmWordSimilarityThreshold_ = null;
+        }
+        return pgTrgmWordSimilarityThresholdBuilder_;
+      }
+
+      private com.google.protobuf.DoubleValue pgTrgmStrictWordSimilarityThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> pgTrgmStrictWordSimilarityThresholdBuilder_;
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return Whether the pgTrgmStrictWordSimilarityThreshold field is set.
+       */
+      public boolean hasPgTrgmStrictWordSimilarityThreshold() {
+        return pgTrgmStrictWordSimilarityThresholdBuilder_ != null || pgTrgmStrictWordSimilarityThreshold_ != null;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       * @return The pgTrgmStrictWordSimilarityThreshold.
+       */
+      public com.google.protobuf.DoubleValue getPgTrgmStrictWordSimilarityThreshold() {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          return pgTrgmStrictWordSimilarityThreshold_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmStrictWordSimilarityThreshold_;
+        } else {
+          return pgTrgmStrictWordSimilarityThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setPgTrgmStrictWordSimilarityThreshold(com.google.protobuf.DoubleValue value) {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgTrgmStrictWordSimilarityThreshold_ = value;
+          onChanged();
+        } else {
+          pgTrgmStrictWordSimilarityThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder setPgTrgmStrictWordSimilarityThreshold(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmStrictWordSimilarityThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgTrgmStrictWordSimilarityThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder mergePgTrgmStrictWordSimilarityThreshold(com.google.protobuf.DoubleValue value) {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          if (pgTrgmStrictWordSimilarityThreshold_ != null) {
+            pgTrgmStrictWordSimilarityThreshold_ =
+              com.google.protobuf.DoubleValue.newBuilder(pgTrgmStrictWordSimilarityThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            pgTrgmStrictWordSimilarityThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          pgTrgmStrictWordSimilarityThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public Builder clearPgTrgmStrictWordSimilarityThreshold() {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmStrictWordSimilarityThreshold_ = null;
+          onChanged();
+        } else {
+          pgTrgmStrictWordSimilarityThreshold_ = null;
+          pgTrgmStrictWordSimilarityThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getPgTrgmStrictWordSimilarityThresholdBuilder() {
+        
+        onChanged();
+        return getPgTrgmStrictWordSimilarityThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getPgTrgmStrictWordSimilarityThresholdOrBuilder() {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ != null) {
+          return pgTrgmStrictWordSimilarityThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return pgTrgmStrictWordSimilarityThreshold_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : pgTrgmStrictWordSimilarityThreshold_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getPgTrgmStrictWordSimilarityThresholdFieldBuilder() {
+        if (pgTrgmStrictWordSimilarityThresholdBuilder_ == null) {
+          pgTrgmStrictWordSimilarityThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getPgTrgmStrictWordSimilarityThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          pgTrgmStrictWordSimilarityThreshold_ = null;
+        }
+        return pgTrgmStrictWordSimilarityThresholdBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -30587,7 +31187,7 @@ public final class Postgresql11 {
       "postgresql11.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\327X\n\022PostgresqlConfig11\0224\n\017max_connectio" +
+      "\"\270Z\n\022PostgresqlConfig11\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -30808,80 +31408,85 @@ public final class Postgresql11 {
       "uf.Int64Value\022G\n\023geqo_selection_bias\030\235\001 " +
       "\001(\0132\034.google.protobuf.DoubleValueB\013\372\3071\0071" +
       ".5-2.0\022=\n\tgeqo_seed\030\236\001 \001(\0132\034.google.prot" +
-      "obuf.DoubleValueB\013\372\3071\0070.0-1.0\"\232\001\n\016Backsl" +
-      "ashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIED\020" +
-      "\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOT" +
-      "E_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKS" +
-      "LASH_QUOTE_SAFE_ENCODING\020\004\"[\n\013ByteaOutpu" +
-      "t\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA" +
-      "_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"" +
-      "\232\001\n\023ConstraintExclusion\022$\n CONSTRAINT_EX" +
-      "CLUSION_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCL" +
-      "USION_ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002" +
-      "\022\"\n\036CONSTRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n" +
-      "\021ForceParallelMode\022#\n\037FORCE_PARALLEL_MOD" +
-      "E_UNSPECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_O" +
-      "N\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORC" +
-      "E_PARALLEL_MODE_REGRESS\020\003\"\231\001\n\021LogErrorVe" +
-      "rbosity\022#\n\037LOG_ERROR_VERBOSITY_UNSPECIFI" +
-      "ED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033L" +
-      "OG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERRO" +
-      "R_VERBOSITY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LO" +
-      "G_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG" +
-      "5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_D" +
-      "EBUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEV" +
-      "EL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LE" +
-      "VEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017L" +
-      "OG_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n" +
-      "\017LOG_LEVEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031L" +
-      "OG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEM" +
-      "ENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG" +
-      "_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"" +
-      "\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PLAN" +
-      "_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PL" +
-      "AN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEB" +
-      "UG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRIN" +
-      "T_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT" +
-      "_VERBOSE\020\004\"\260\003\n\026SharedPreloadLibraries\022(\n" +
-      "$SHARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022" +
-      ")\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN" +
-      "\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_P" +
-      "LAN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMESC" +
-      "ALEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_Q" +
-      "UALSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_P" +
-      "G_CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PGL" +
-      "OGICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG_" +
-      "PREWARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES_PG" +
-      "AUDIT\020\010\022$\n SHARED_PRELOAD_LIBRARIES_PG_T" +
-      "RGM\020\t\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONO" +
-      "US_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_C" +
-      "OMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034" +
-      "\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRON" +
-      "OUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS" +
-      "_COMMIT_REMOTE_APPLY\020\005\"\346\001\n\024TransactionIs" +
-      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
-      "FIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNC" +
-      "OMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ" +
-      "_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_RE" +
-      "PEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION" +
-      "_SERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL" +
-      "_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n" +
-      "\021WAL_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML" +
-      "_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE" +
-      "64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n" +
-      "\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_" +
-      "DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\217\002\n\025P" +
-      "ostgresqlConfigSet11\022S\n\020effective_config" +
-      "\030\001 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlConfig11\022N\n\013user_config" +
-      "\030\002 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlConfig11\022Q\n\016default_con" +
-      "fig\030\003 \001(\01329.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlConfig11B\201\001\n)yandex." +
-      "cloud.api.mdb.postgresql.v1.configZTgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/postgresql/v1/config;postgresql" +
-      "b\006proto3"
+      "obuf.DoubleValueB\013\372\3071\0070.0-1.0\022P\n\034pg_trgm" +
+      "_similarity_threshold\030\237\001 \001(\0132\034.google.pr" +
+      "otobuf.DoubleValueB\013\372\3071\0070.0-1.0\022U\n!pg_tr" +
+      "gm_word_similarity_threshold\030\240\001 \001(\0132\034.go" +
+      "ogle.protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022\\" +
+      "\n(pg_trgm_strict_word_similarity_thresho" +
+      "ld\030\241\001 \001(\0132\034.google.protobuf.DoubleValueB" +
+      "\013\372\3071\0070.0-1.0\"\232\001\n\016BackslashQuote\022\037\n\033BACKS" +
+      "LASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QU" +
+      "OTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLA" +
+      "SH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_E" +
+      "NCODING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT" +
+      "_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024" +
+      "BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023ConstraintExc" +
+      "lusion\022$\n CONSTRAINT_EXCLUSION_UNSPECIFI" +
+      "ED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CON" +
+      "STRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_EX" +
+      "CLUSION_PARTITION\020\003\"\222\001\n\021ForceParallelMod" +
+      "e\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022\032" +
+      "\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARA" +
+      "LLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_R" +
+      "EGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ER" +
+      "ROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR" +
+      "_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSIT" +
+      "Y_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBO" +
+      "SE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFI" +
+      "ED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_" +
+      "DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LE" +
+      "VEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLO" +
+      "G_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021L" +
+      "OG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022" +
+      "\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020" +
+      "\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSP" +
+      "ECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG" +
+      "_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022" +
+      "\025\n\021LOG_STATEMENT_ALL\020\004\"\320\001\n\024PgHintPlanDeb" +
+      "ugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRINT_UNSP" +
+      "ECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRINT_OF" +
+      "F\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!" +
+      "PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020\003\022$\n P" +
+      "G_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\212\003\n\026Sh" +
+      "aredPreloadLibraries\022(\n$SHARED_PRELOAD_L" +
+      "IBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_PRELOAD" +
+      "_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED_PREL" +
+      "OAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$SHARED_P" +
+      "RELOAD_LIBRARIES_TIMESCALEDB\020\003\022)\n%SHARED" +
+      "_PRELOAD_LIBRARIES_PG_QUALSTATS\020\004\022$\n SHA" +
+      "RED_PRELOAD_LIBRARIES_PG_CRON\020\005\022&\n\"SHARE" +
+      "D_PRELOAD_LIBRARIES_PGLOGICAL\020\006\022\'\n#SHARE" +
+      "D_PRELOAD_LIBRARIES_PG_PREWARM\020\007\022$\n SHAR" +
+      "ED_PRELOAD_LIBRARIES_PGAUDIT\020\010\"\326\001\n\021Synch" +
+      "ronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPE" +
+      "CIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026S" +
+      "YNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_C" +
+      "OMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMO" +
+      "TE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_" +
+      "APPLY\020\005\"\346\001\n\024TransactionIsolation\022%\n!TRAN" +
+      "SACTION_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANS" +
+      "ACTION_ISOLATION_READ_UNCOMMITTED\020\001\022(\n$T" +
+      "RANSACTION_ISOLATION_READ_COMMITTED\020\002\022)\n" +
+      "%TRANSACTION_ISOLATION_REPEATABLE_READ\020\003" +
+      "\022&\n\"TRANSACTION_ISOLATION_SERIALIZABLE\020\004" +
+      "\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022" +
+      "\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGI" +
+      "CAL\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECI" +
+      "FIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BIN" +
+      "ARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNS" +
+      "PECIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022X" +
+      "ML_OPTION_CONTENT\020\002\"\217\002\n\025PostgresqlConfig" +
+      "Set11\022S\n\020effective_config\030\001 \001(\01329.yandex" +
+      ".cloud.mdb.postgresql.v1.config.Postgres" +
+      "qlConfig11\022N\n\013user_config\030\002 \001(\01329.yandex" +
+      ".cloud.mdb.postgresql.v1.config.Postgres" +
+      "qlConfig11\022Q\n\016default_config\030\003 \001(\01329.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlConfig11B\201\001\n)yandex.cloud.api.mdb.p" +
+      "ostgresql.v1.configZTgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/postgr" +
+      "esql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30894,7 +31499,7 @@ public final class Postgresql11 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig11_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig11_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "VacuumCleanupIndexScaleFactor", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "VacuumCleanupIndexScaleFactor", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet11_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet11_fieldAccessorTable = new

@@ -204,6 +204,36 @@ public final class UserOuterClass {
      */
     com.google.protobuf.ByteString
         getGrantsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * <pre>
@@ -319,6 +349,19 @@ public final class UserOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               grants_.add(s);
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -651,6 +694,47 @@ public final class UserOuterClass {
       return grants_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -685,6 +769,9 @@ public final class UserOuterClass {
       }
       for (int i = 0; i < grants_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, grants_.getRaw(i));
+      }
+      if (deletionProtection_ != null) {
+        output.writeMessage(8, getDeletionProtection());
       }
       unknownFields.writeTo(output);
     }
@@ -725,6 +812,10 @@ public final class UserOuterClass {
         size += dataSize;
         size += 1 * getGrantsList().size();
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -760,6 +851,11 @@ public final class UserOuterClass {
       }
       if (!getGrantsList()
           .equals(other.getGrantsList())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -793,6 +889,10 @@ public final class UserOuterClass {
       if (getGrantsCount() > 0) {
         hash = (37 * hash) + GRANTS_FIELD_NUMBER;
         hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -959,6 +1059,12 @@ public final class UserOuterClass {
         }
         grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -1013,6 +1119,11 @@ public final class UserOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.grants_ = grants_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1113,6 +1224,9 @@ public final class UserOuterClass {
             grants_.addAll(other.grants_);
           }
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2137,6 +2251,170 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3019,6 +3297,36 @@ public final class UserOuterClass {
      */
     com.google.protobuf.ByteString
         getGrantsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSpec}
@@ -3137,6 +3445,19 @@ public final class UserOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               grants_.add(s);
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3510,6 +3831,47 @@ public final class UserOuterClass {
       return grants_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3544,6 +3906,9 @@ public final class UserOuterClass {
       }
       for (int i = 0; i < grants_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, grants_.getRaw(i));
+      }
+      if (deletionProtection_ != null) {
+        output.writeMessage(8, getDeletionProtection());
       }
       unknownFields.writeTo(output);
     }
@@ -3584,6 +3949,10 @@ public final class UserOuterClass {
         size += dataSize;
         size += 1 * getGrantsList().size();
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3622,6 +3991,11 @@ public final class UserOuterClass {
       }
       if (!getGrantsList()
           .equals(other.getGrantsList())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3656,6 +4030,10 @@ public final class UserOuterClass {
       if (getGrantsCount() > 0) {
         hash = (37 * hash) + GRANTS_FIELD_NUMBER;
         hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3821,6 +4199,12 @@ public final class UserOuterClass {
         }
         grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -3879,6 +4263,11 @@ public final class UserOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.grants_ = grants_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3979,6 +4368,9 @@ public final class UserOuterClass {
             grants_.addAll(other.grants_);
           }
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5169,6 +5561,170 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5497,7 +6053,7 @@ public final class UserOuterClass {
      * <pre>
      * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
      * Terminate replication connections that are inactive for longer than this amount of time. 
-     * Default value: `6000` (60 seconds).
+     * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
      * </pre>
@@ -5510,7 +6066,7 @@ public final class UserOuterClass {
      * <pre>
      * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
      * Terminate replication connections that are inactive for longer than this amount of time. 
-     * Default value: `6000` (60 seconds).
+     * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
      * </pre>
@@ -5523,7 +6079,7 @@ public final class UserOuterClass {
      * <pre>
      * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
      * Terminate replication connections that are inactive for longer than this amount of time. 
-     * Default value: `6000` (60 seconds).
+     * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
      * </pre>
@@ -6857,7 +7413,7 @@ public final class UserOuterClass {
      * <pre>
      * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
      * Terminate replication connections that are inactive for longer than this amount of time. 
-     * Default value: `6000` (60 seconds).
+     * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
      * </pre>
@@ -6873,7 +7429,7 @@ public final class UserOuterClass {
      * <pre>
      * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
      * Terminate replication connections that are inactive for longer than this amount of time. 
-     * Default value: `6000` (60 seconds).
+     * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
      * </pre>
@@ -6889,7 +7445,7 @@ public final class UserOuterClass {
      * <pre>
      * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
      * Terminate replication connections that are inactive for longer than this amount of time. 
-     * Default value: `6000` (60 seconds).
+     * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
      * </pre>
@@ -8827,7 +9383,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8842,7 +9398,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8861,7 +9417,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8885,7 +9441,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8907,7 +9463,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8933,7 +9489,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8955,7 +9511,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8971,7 +9527,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -8990,7 +9546,7 @@ public final class UserOuterClass {
        * <pre>
        * The maximum time (in milliseconds) to wait for WAL replication (can be set only for PostgreSQL 12+)
        * Terminate replication connections that are inactive for longer than this amount of time. 
-       * Default value: `6000` (60 seconds).
+       * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
        * </pre>
@@ -9459,65 +10015,68 @@ public final class UserOuterClass {
       "\n)yandex/cloud/mdb/postgresql/v1/user.pr" +
       "oto\022\036yandex.cloud.mdb.postgresql.v1\032\036goo" +
       "gle/protobuf/wrappers.proto\032\035yandex/clou" +
-      "d/validation.proto\"\223\002\n\004User\022\014\n\004name\030\001 \001(" +
+      "d/validation.proto\"\314\002\n\004User\022\014\n\004name\030\001 \001(" +
       "\t\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissions\030\003 \003" +
       "(\0132*.yandex.cloud.mdb.postgresql.v1.Perm" +
       "ission\022\022\n\nconn_limit\030\004 \001(\003\022>\n\010settings\030\005" +
       " \001(\0132,.yandex.cloud.mdb.postgresql.v1.Us" +
       "erSettings\022)\n\005login\030\006 \001(\0132\032.google.proto" +
       "buf.BoolValue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=63\362" +
-      "\3071\r[a-zA-Z0-9_]*\"#\n\nPermission\022\025\n\rdataba" +
-      "se_name\030\001 \001(\t\"\352\002\n\010UserSpec\022+\n\004name\030\001 \001(\t" +
-      "B\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022\037\n\010passw" +
-      "ord\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022?\n\013permissions\030" +
-      "\003 \003(\0132*.yandex.cloud.mdb.postgresql.v1.P" +
-      "ermission\0229\n\nconn_limit\030\004 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\010\372\3071\004>=10\022>\n\010settings" +
-      "\030\005 \001(\0132,.yandex.cloud.mdb.postgresql.v1." +
-      "UserSettings\022)\n\005login\030\006 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=6" +
-      "3\362\3071\r[a-zA-Z0-9_]*\"\370\013\n\014UserSettings\022h\n\035d" +
-      "efault_transaction_isolation\030\001 \001(\0162A.yan" +
-      "dex.cloud.mdb.postgresql.v1.UserSettings" +
-      ".TransactionIsolation\0221\n\014lock_timeout\030\002 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022?\n\032log_" +
-      "min_duration_statement\030\003 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022Z\n\022synchronous_commit\030" +
-      "\004 \001(\0162>.yandex.cloud.mdb.postgresql.v1.U" +
-      "serSettings.SynchronousCommit\0224\n\017temp_fi" +
-      "le_limit\030\005 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022P\n\rlog_statement\030\006 \001(\01629.yandex.clou" +
-      "d.mdb.postgresql.v1.UserSettings.LogStat" +
-      "ement\022K\n\tpool_mode\030\007 \001(\01628.yandex.cloud." +
-      "mdb.postgresql.v1.UserSettings.PoolingMo" +
-      "de\022?\n\033prepared_statements_pooling\030\010 \001(\0132" +
-      "\032.google.protobuf.BoolValue\0224\n\017catchup_t" +
-      "imeout\030\t \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0227\n\022wal_sender_timeout\030\n \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022H\n#idle_in_transactio" +
-      "n_session_timeout\030\013 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0226\n\021statement_timeout\030\014 \001(\0132" +
-      "\033.google.protobuf.Int64Value\"\326\001\n\021Synchro" +
-      "nousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECI" +
-      "FIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYN" +
-      "CHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COM" +
-      "MIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE" +
-      "_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_AP" +
-      "PLY\020\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_" +
-      "UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n" +
-      "\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MO" +
-      "D\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Transacti" +
-      "onIsolation\022%\n!TRANSACTION_ISOLATION_UNS" +
-      "PECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_READ" +
-      "_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_" +
-      "READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATIO" +
-      "N_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLA" +
-      "TION_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030PO" +
-      "OLING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n" +
-      "\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003Bs\n\"yandex." +
-      "cloud.api.mdb.postgresql.v1ZMgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/md" +
-      "b/postgresql/v1;postgresqlb\006proto3"
+      "\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_protection\030" +
+      "\010 \001(\0132\032.google.protobuf.BoolValue\"#\n\nPer" +
+      "mission\022\025\n\rdatabase_name\030\001 \001(\t\"\243\003\n\010UserS" +
+      "pec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA" +
+      "-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-12" +
+      "8\022?\n\013permissions\030\003 \003(\0132*.yandex.cloud.md" +
+      "b.postgresql.v1.Permission\0229\n\nconn_limit" +
+      "\030\004 \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071" +
+      "\004>=10\022>\n\010settings\030\005 \001(\0132,.yandex.cloud.m" +
+      "db.postgresql.v1.UserSettings\022)\n\005login\030\006" +
+      " \001(\0132\032.google.protobuf.BoolValue\022)\n\006gran" +
+      "ts\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\0227\n\023d" +
+      "eletion_protection\030\010 \001(\0132\032.google.protob" +
+      "uf.BoolValue\"\370\013\n\014UserSettings\022h\n\035default" +
+      "_transaction_isolation\030\001 \001(\0162A.yandex.cl" +
+      "oud.mdb.postgresql.v1.UserSettings.Trans" +
+      "actionIsolation\0221\n\014lock_timeout\030\002 \001(\0132\033." +
+      "google.protobuf.Int64Value\022?\n\032log_min_du" +
+      "ration_statement\030\003 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022Z\n\022synchronous_commit\030\004 \001(\0162" +
+      ">.yandex.cloud.mdb.postgresql.v1.UserSet" +
+      "tings.SynchronousCommit\0224\n\017temp_file_lim" +
+      "it\030\005 \001(\0132\033.google.protobuf.Int64Value\022P\n" +
+      "\rlog_statement\030\006 \001(\01629.yandex.cloud.mdb." +
+      "postgresql.v1.UserSettings.LogStatement\022" +
+      "K\n\tpool_mode\030\007 \001(\01628.yandex.cloud.mdb.po" +
+      "stgresql.v1.UserSettings.PoolingMode\022?\n\033" +
+      "prepared_statements_pooling\030\010 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\0224\n\017catchup_timeout" +
+      "\030\t \001(\0132\033.google.protobuf.Int64Value\0227\n\022w" +
+      "al_sender_timeout\030\n \001(\0132\033.google.protobu" +
+      "f.Int64Value\022H\n#idle_in_transaction_sess" +
+      "ion_timeout\030\013 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0226\n\021statement_timeout\030\014 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\"\326\001\n\021SynchronousCo" +
+      "mmit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000" +
+      "\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONO" +
+      "US_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LO" +
+      "CAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRITE" +
+      "\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"" +
+      "\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPEC" +
+      "IFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_S" +
+      "TATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n" +
+      "\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIsol" +
+      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
+      "ED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOM" +
+      "MITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_C" +
+      "OMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPE" +
+      "ATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_S" +
+      "ERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLING_" +
+      "MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANS" +
+      "ACTION\020\002\022\r\n\tSTATEMENT\020\003Bs\n\"yandex.cloud." +
+      "api.mdb.postgresql.v1ZMgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/post" +
+      "gresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9530,7 +10089,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ConnLimit", "Settings", "Login", "Grants", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_Permission_fieldAccessorTable = new
@@ -9542,7 +10101,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_fieldAccessorTable = new

@@ -755,6 +755,16 @@ public final class CertificateOuterClass {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Mark imported certificates without uploaded chain or with chain which not lead to root certificate
+     * </pre>
+     *
+     * <code>bool incomplete_chain = 19;</code>
+     * @return The incompleteChain.
+     */
+    boolean getIncompleteChain();
   }
   /**
    * <pre>
@@ -970,6 +980,11 @@ public final class CertificateOuterClass {
             case 144: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 152: {
+
+              incompleteChain_ = input.readBool();
               break;
             }
             default: {
@@ -2014,6 +2029,21 @@ public final class CertificateOuterClass {
       return deletionProtection_;
     }
 
+    public static final int INCOMPLETE_CHAIN_FIELD_NUMBER = 19;
+    private boolean incompleteChain_;
+    /**
+     * <pre>
+     * Mark imported certificates without uploaded chain or with chain which not lead to root certificate
+     * </pre>
+     *
+     * <code>bool incomplete_chain = 19;</code>
+     * @return The incompleteChain.
+     */
+    @java.lang.Override
+    public boolean getIncompleteChain() {
+      return incompleteChain_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2084,6 +2114,9 @@ public final class CertificateOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(18, deletionProtection_);
+      }
+      if (incompleteChain_ != false) {
+        output.writeBool(19, incompleteChain_);
       }
       unknownFields.writeTo(output);
     }
@@ -2169,6 +2202,10 @@ public final class CertificateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(18, deletionProtection_);
       }
+      if (incompleteChain_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(19, incompleteChain_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2233,6 +2270,8 @@ public final class CertificateOuterClass {
           .equals(other.getChallengesList())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (getIncompleteChain()
+          != other.getIncompleteChain()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2297,6 +2336,9 @@ public final class CertificateOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + INCOMPLETE_CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIncompleteChain());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2516,6 +2558,8 @@ public final class CertificateOuterClass {
         }
         deletionProtection_ = false;
 
+        incompleteChain_ = false;
+
         return this;
       }
 
@@ -2594,6 +2638,7 @@ public final class CertificateOuterClass {
           result.challenges_ = challengesBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
+        result.incompleteChain_ = incompleteChain_;
         onBuilt();
         return result;
       }
@@ -2731,6 +2776,9 @@ public final class CertificateOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.getIncompleteChain() != false) {
+          setIncompleteChain(other.getIncompleteChain());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5018,6 +5066,49 @@ public final class CertificateOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean incompleteChain_ ;
+      /**
+       * <pre>
+       * Mark imported certificates without uploaded chain or with chain which not lead to root certificate
+       * </pre>
+       *
+       * <code>bool incomplete_chain = 19;</code>
+       * @return The incompleteChain.
+       */
+      @java.lang.Override
+      public boolean getIncompleteChain() {
+        return incompleteChain_;
+      }
+      /**
+       * <pre>
+       * Mark imported certificates without uploaded chain or with chain which not lead to root certificate
+       * </pre>
+       *
+       * <code>bool incomplete_chain = 19;</code>
+       * @param value The incompleteChain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncompleteChain(boolean value) {
+        
+        incompleteChain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mark imported certificates without uploaded chain or with chain which not lead to root certificate
+       * </pre>
+       *
+       * <code>bool incomplete_chain = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncompleteChain() {
+        
+        incompleteChain_ = false;
         onChanged();
         return this;
       }
@@ -10555,7 +10646,7 @@ public final class CertificateOuterClass {
       "\n4yandex/cloud/certificatemanager/v1/cer" +
       "tificate.proto\022\"yandex.cloud.certificate" +
       "manager.v1\032\037google/protobuf/timestamp.pr" +
-      "oto\"\340\006\n\013Certificate\022\n\n\002id\030\001 \001(\t\022\021\n\tfolde" +
+      "oto\"\372\006\n\013Certificate\022\n\n\002id\030\001 \001(\t\022\021\n\tfolde" +
       "r_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google." +
       "protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013desc" +
       "ription\030\005 \001(\t\022K\n\006labels\030\006 \003(\0132;.yandex.c" +
@@ -10572,37 +10663,38 @@ public final class CertificateOuterClass {
       "\nnot_before\030\020 \001(\0132\032.google.protobuf.Time" +
       "stamp\022A\n\nchallenges\030\021 \003(\0132-.yandex.cloud" +
       ".certificatemanager.v1.Challenge\022\033\n\023dele" +
-      "tion_protection\030\022 \001(\010\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"x\n\006Status\022\026" +
-      "\n\022STATUS_UNSPECIFIED\020\000\022\016\n\nVALIDATING\020\001\022\013" +
-      "\n\007INVALID\020\002\022\n\n\006ISSUED\020\003\022\013\n\007REVOKED\020\004\022\014\n\010" +
-      "RENEWING\020\005\022\022\n\016RENEWAL_FAILED\020\006\"\214\005\n\tChall" +
-      "enge\022\016\n\006domain\030\001 \001(\t\022?\n\004type\030\002 \001(\01621.yan" +
-      "dex.cloud.certificatemanager.v1.Challeng" +
-      "eType\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022.\n\nupdated_at\030\004 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022D\n\006status\030\005 \001(\01624." +
-      "yandex.cloud.certificatemanager.v1.Chall" +
-      "enge.Status\022\017\n\007message\030\006 \001(\t\022\r\n\005error\030\007 " +
-      "\001(\t\022P\n\rdns_challenge\030\010 \001(\01327.yandex.clou" +
-      "d.certificatemanager.v1.Challenge.DnsRec" +
-      "ordH\000\022P\n\016http_challenge\030\t \001(\01326.yandex.c" +
-      "loud.certificatemanager.v1.Challenge.Htt" +
-      "pFileH\000\0326\n\tDnsRecord\022\014\n\004name\030\001 \001(\t\022\014\n\004ty" +
-      "pe\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032(\n\010HttpFile\022\013\n\003u" +
-      "rl\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\"U\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\013\n\007PENDING\020\001\022\016\n\nPROC" +
-      "ESSING\020\002\022\t\n\005VALID\020\003\022\013\n\007INVALID\020\004B\013\n\tchal" +
-      "lenge\"]\n\007Version\022\n\n\002id\030\001 \001(\t\022\026\n\016certific" +
-      "ate_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp*N\n\017CertificateType\022" +
-      " \n\034CERTIFICATE_TYPE_UNSPECIFIED\020\000\022\014\n\010IMP" +
-      "ORTED\020\001\022\013\n\007MANAGED\020\002*B\n\rChallengeType\022\036\n" +
-      "\032CHALLENGE_TYPE_UNSPECIFIED\020\000\022\007\n\003DNS\020\001\022\010" +
-      "\n\004HTTP\020\002B\203\001\n&yandex.cloud.api.certificat" +
-      "emanager.v1ZYgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/certificatemanager" +
-      "/v1;certificatemanagerb\006proto3"
+      "tion_protection\030\022 \001(\010\022\030\n\020incomplete_chai" +
+      "n\030\023 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"x\n\006Status\022\026\n\022STATUS_UNSPE" +
+      "CIFIED\020\000\022\016\n\nVALIDATING\020\001\022\013\n\007INVALID\020\002\022\n\n" +
+      "\006ISSUED\020\003\022\013\n\007REVOKED\020\004\022\014\n\010RENEWING\020\005\022\022\n\016" +
+      "RENEWAL_FAILED\020\006\"\214\005\n\tChallenge\022\016\n\006domain" +
+      "\030\001 \001(\t\022?\n\004type\030\002 \001(\01621.yandex.cloud.cert" +
+      "ificatemanager.v1.ChallengeType\022.\n\ncreat" +
+      "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
+      ".\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022D\n\006status\030\005 \001(\01624.yandex.cloud.c" +
+      "ertificatemanager.v1.Challenge.Status\022\017\n" +
+      "\007message\030\006 \001(\t\022\r\n\005error\030\007 \001(\t\022P\n\rdns_cha" +
+      "llenge\030\010 \001(\01327.yandex.cloud.certificatem" +
+      "anager.v1.Challenge.DnsRecordH\000\022P\n\016http_" +
+      "challenge\030\t \001(\01326.yandex.cloud.certifica" +
+      "temanager.v1.Challenge.HttpFileH\000\0326\n\tDns" +
+      "Record\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\r\n\005va" +
+      "lue\030\003 \001(\t\032(\n\010HttpFile\022\013\n\003url\030\001 \001(\t\022\017\n\007co" +
+      "ntent\030\002 \001(\t\"U\n\006Status\022\026\n\022STATUS_UNSPECIF" +
+      "IED\020\000\022\013\n\007PENDING\020\001\022\016\n\nPROCESSING\020\002\022\t\n\005VA" +
+      "LID\020\003\022\013\n\007INVALID\020\004B\013\n\tchallenge\"]\n\007Versi" +
+      "on\022\n\n\002id\030\001 \001(\t\022\026\n\016certificate_id\030\002 \001(\t\022." +
+      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp*N\n\017CertificateType\022 \n\034CERTIFICATE" +
+      "_TYPE_UNSPECIFIED\020\000\022\014\n\010IMPORTED\020\001\022\013\n\007MAN" +
+      "AGED\020\002*B\n\rChallengeType\022\036\n\032CHALLENGE_TYP" +
+      "E_UNSPECIFIED\020\000\022\007\n\003DNS\020\001\022\010\n\004HTTP\020\002B\203\001\n&y" +
+      "andex.cloud.api.certificatemanager.v1ZYg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/certificatemanager/v1;certificat" +
+      "emanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10614,7 +10706,7 @@ public final class CertificateOuterClass {
     internal_static_yandex_cloud_certificatemanager_v1_Certificate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_certificatemanager_v1_Certificate_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Type", "Domains", "Status", "Issuer", "Subject", "Serial", "UpdatedAt", "IssuedAt", "NotAfter", "NotBefore", "Challenges", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Type", "Domains", "Status", "Issuer", "Subject", "Serial", "UpdatedAt", "IssuedAt", "NotAfter", "NotBefore", "Challenges", "DeletionProtection", "IncompleteChain", });
     internal_static_yandex_cloud_certificatemanager_v1_Certificate_LabelsEntry_descriptor =
       internal_static_yandex_cloud_certificatemanager_v1_Certificate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_certificatemanager_v1_Certificate_LabelsEntry_fieldAccessorTable = new

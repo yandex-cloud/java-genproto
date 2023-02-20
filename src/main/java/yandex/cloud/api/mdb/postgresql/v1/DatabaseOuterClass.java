@@ -185,6 +185,36 @@ public final class DatabaseOuterClass {
      */
     com.google.protobuf.ByteString
         getTemplateDbBytes();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * <pre>
@@ -287,6 +317,19 @@ public final class DatabaseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               templateDb_ = s;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -664,6 +707,47 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -699,6 +783,9 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, templateDb_);
       }
+      if (deletionProtection_ != null) {
+        output.writeMessage(8, getDeletionProtection());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -730,6 +817,10 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, templateDb_);
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -759,6 +850,11 @@ public final class DatabaseOuterClass {
           .equals(other.getExtensionsList())) return false;
       if (!getTemplateDb()
           .equals(other.getTemplateDb())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -786,6 +882,10 @@ public final class DatabaseOuterClass {
       }
       hash = (37 * hash) + TEMPLATE_DB_FIELD_NUMBER;
       hash = (53 * hash) + getTemplateDb().hashCode();
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -943,6 +1043,12 @@ public final class DatabaseOuterClass {
         }
         templateDb_ = "";
 
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -985,6 +1091,11 @@ public final class DatabaseOuterClass {
           result.extensions_ = extensionsBuilder_.build();
         }
         result.templateDb_ = templateDb_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1082,6 +1193,9 @@ public final class DatabaseOuterClass {
         if (!other.getTemplateDb().isEmpty()) {
           templateDb_ = other.templateDb_;
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2009,6 +2123,170 @@ public final class DatabaseOuterClass {
         templateDb_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3015,6 +3293,36 @@ public final class DatabaseOuterClass {
      */
     com.google.protobuf.ByteString
         getTemplateDbBytes();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DatabaseSpec}
@@ -3105,6 +3413,19 @@ public final class DatabaseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               templateDb_ = s;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3438,6 +3759,47 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 7;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3470,6 +3832,9 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, templateDb_);
       }
+      if (deletionProtection_ != null) {
+        output.writeMessage(7, getDeletionProtection());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3498,6 +3863,10 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateDb_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, templateDb_);
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3525,6 +3894,11 @@ public final class DatabaseOuterClass {
           .equals(other.getExtensionsList())) return false;
       if (!getTemplateDb()
           .equals(other.getTemplateDb())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3550,6 +3924,10 @@ public final class DatabaseOuterClass {
       }
       hash = (37 * hash) + TEMPLATE_DB_FIELD_NUMBER;
       hash = (53 * hash) + getTemplateDb().hashCode();
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3700,6 +4078,12 @@ public final class DatabaseOuterClass {
         }
         templateDb_ = "";
 
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -3741,6 +4125,11 @@ public final class DatabaseOuterClass {
           result.extensions_ = extensionsBuilder_.build();
         }
         result.templateDb_ = templateDb_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3834,6 +4223,9 @@ public final class DatabaseOuterClass {
         if (!other.getTemplateDb().isEmpty()) {
           templateDb_ = other.templateDb_;
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4671,6 +5063,170 @@ public final class DatabaseOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4750,28 +5306,32 @@ public final class DatabaseOuterClass {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/mdb/postgresql/v1/databas" +
       "e.proto\022\036yandex.cloud.mdb.postgresql.v1\032" +
-      "\035yandex/cloud/validation.proto\"\265\001\n\010Datab" +
-      "ase\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\r\n" +
-      "\005owner\030\003 \001(\t\022\022\n\nlc_collate\030\004 \001(\t\022\020\n\010lc_c" +
-      "type\030\005 \001(\t\022=\n\nextensions\030\006 \003(\0132).yandex." +
-      "cloud.mdb.postgresql.v1.Extension\022\023\n\013tem" +
-      "plate_db\030\007 \001(\t\"*\n\tExtension\022\014\n\004name\030\001 \001(" +
-      "\t\022\017\n\007version\030\002 \001(\t\"\262\002\n\014DatabaseSpec\022,\n\004n" +
-      "ame\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]" +
-      "*\022,\n\005owner\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-" +
-      "Z0-9_]*\022+\n\nlc_collate\030\003 \001(\tB\027\362\3071\023|[a-zA-" +
-      "Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004 \001(\tB\027\362\3071\023|[a-" +
-      "zA-Z_]+.UTF-8|C\022=\n\nextensions\030\005 \003(\0132).ya" +
-      "ndex.cloud.mdb.postgresql.v1.Extension\022/" +
-      "\n\013template_db\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z" +
-      "0-9_-]*Bs\n\"yandex.cloud.api.mdb.postgres" +
-      "ql.v1ZMgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/mdb/postgresql/v1;postgr" +
-      "esqlb\006proto3"
+      "\036google/protobuf/wrappers.proto\032\035yandex/" +
+      "cloud/validation.proto\"\356\001\n\010Database\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\r\n\005owner\030\003" +
+      " \001(\t\022\022\n\nlc_collate\030\004 \001(\t\022\020\n\010lc_ctype\030\005 \001" +
+      "(\t\022=\n\nextensions\030\006 \003(\0132).yandex.cloud.md" +
+      "b.postgresql.v1.Extension\022\023\n\013template_db" +
+      "\030\007 \001(\t\0227\n\023deletion_protection\030\010 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\"*\n\tExtension\022\014\n\004" +
+      "name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"\353\002\n\014Database" +
+      "Spec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022,\n\005owner\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362" +
+      "\3071\r[a-zA-Z0-9_]*\022+\n\nlc_collate\030\003 \001(\tB\027\362\307" +
+      "1\023|[a-zA-Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004 \001(\tB" +
+      "\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022=\n\nextensions\030\005" +
+      " \003(\0132).yandex.cloud.mdb.postgresql.v1.Ex" +
+      "tension\022/\n\013template_db\030\006 \001(\tB\032\212\3101\004<=63\362\307" +
+      "1\016[a-zA-Z0-9_-]*\0227\n\023deletion_protection\030" +
+      "\007 \001(\0132\032.google.protobuf.BoolValueBs\n\"yan" +
+      "dex.cloud.api.mdb.postgresql.v1ZMgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_postgresql_v1_Database_descriptor =
@@ -4779,7 +5339,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Database_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Owner", "LcCollate", "LcCtype", "Extensions", "TemplateDb", });
+        new java.lang.String[] { "Name", "ClusterId", "Owner", "LcCollate", "LcCtype", "Extensions", "TemplateDb", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Extension_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_Extension_fieldAccessorTable = new
@@ -4791,7 +5351,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_DatabaseSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_DatabaseSpec_descriptor,
-        new java.lang.String[] { "Name", "Owner", "LcCollate", "LcCtype", "Extensions", "TemplateDb", });
+        new java.lang.String[] { "Name", "Owner", "LcCollate", "LcCtype", "Extensions", "TemplateDb", "DeletionProtection", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
@@ -4799,6 +5359,7 @@ public final class DatabaseOuterClass {
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 
