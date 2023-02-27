@@ -12443,7 +12443,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return A list containing the subnetIds.
      */
     java.util.List<java.lang.String>
@@ -12454,7 +12454,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return The count of subnetIds.
      */
     int getSubnetIdsCount();
@@ -12464,7 +12464,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the element to return.
      * @return The subnetIds at the given index.
      */
@@ -12475,7 +12475,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the value to return.
      * @return The bytes of the subnetIds at the given index.
      */
@@ -12638,7 +12638,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return A list containing the subnetIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -12651,7 +12651,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return The count of subnetIds.
      */
     public int getSubnetIdsCount() {
@@ -12663,7 +12663,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the element to return.
      * @return The subnetIds at the given index.
      */
@@ -12676,7 +12676,7 @@ public final class ContainerOuterClass {
      * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
      * </pre>
      *
-     * <code>repeated string subnet_ids = 2;</code>
+     * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the value to return.
      * @return The bytes of the subnetIds at the given index.
      */
@@ -13136,7 +13136,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @return A list containing the subnetIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -13149,7 +13149,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @return The count of subnetIds.
        */
       public int getSubnetIdsCount() {
@@ -13161,7 +13161,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param index The index of the element to return.
        * @return The subnetIds at the given index.
        */
@@ -13174,7 +13174,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param index The index of the value to return.
        * @return The bytes of the subnetIds at the given index.
        */
@@ -13188,7 +13188,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param index The index to set the value at.
        * @param value The subnetIds to set.
        * @return This builder for chaining.
@@ -13209,7 +13209,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param value The subnetIds to add.
        * @return This builder for chaining.
        */
@@ -13229,7 +13229,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param values The subnetIds to add.
        * @return This builder for chaining.
        */
@@ -13247,7 +13247,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearSubnetIds() {
@@ -13262,7 +13262,7 @@ public final class ContainerOuterClass {
        * Deprecated, it is sufficient to specify only network_id, without the list of subnet_ids.
        * </pre>
        *
-       * <code>repeated string subnet_ids = 2;</code>
+       * <code>repeated string subnet_ids = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param value The bytes of the subnetIds to add.
        * @return This builder for chaining.
        */
@@ -15290,20 +15290,20 @@ public final class ContainerOuterClass {
       " \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPolicy\022\025\n\rmi" +
       "n_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022" +
       "\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024envi" +
-      "ronment_variable\030\004 \001(\tH\000B\013\n\treference\"6\n" +
-      "\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\nsub" +
-      "net_ids\030\002 \003(\t\"\340\001\n\nLogOptions\022\020\n\010disabled" +
-      "\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA" +
-      "-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id" +
-      "\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63" +
-      "})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud." +
-      "logging.v1.LogLevel.LevelB\r\n\013destination" +
-      "\"J\n\rScalingPolicy\022\034\n\024zone_instances_limi" +
-      "t\030\001 \001(\003\022\033\n\023zone_requests_limit\030\002 \001(\003B\201\001\n" +
-      ")yandex.cloud.api.serverless.containers." +
-      "v1ZTgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/serverless/containers/v1;co" +
-      "ntainersb\006proto3"
+      "ronment_variable\030\004 \001(\tH\000B\013\n\treference\"B\n" +
+      "\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\036\n\nsub" +
+      "net_ids\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\340\001\n\nLogOptions" +
+      "\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\t" +
+      "B#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022" +
+      "8\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-" +
+      "Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.y" +
+      "andex.cloud.logging.v1.LogLevel.LevelB\r\n" +
+      "\013destination\"J\n\rScalingPolicy\022\034\n\024zone_in" +
+      "stances_limit\030\001 \001(\003\022\033\n\023zone_requests_lim" +
+      "it\030\002 \001(\003B\201\001\n)yandex.cloud.api.serverless" +
+      ".containers.v1ZTgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/serverless/cont" +
+      "ainers/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15396,6 +15396,7 @@ public final class ContainerOuterClass {
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.unique);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

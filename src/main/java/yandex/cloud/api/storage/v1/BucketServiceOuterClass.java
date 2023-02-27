@@ -2610,7 +2610,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2620,7 +2619,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2629,7 +2627,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2638,7 +2635,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2648,7 +2644,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3050,7 +3045,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3062,7 +3056,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3075,7 +3068,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3087,7 +3079,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3099,7 +3090,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4283,7 +4273,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4298,7 +4287,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4313,7 +4301,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4328,7 +4315,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4350,7 +4336,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4369,7 +4354,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4390,7 +4374,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4412,7 +4395,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4431,7 +4413,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4450,7 +4431,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4470,7 +4450,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4488,7 +4467,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4506,7 +4484,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4518,7 +4495,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4533,7 +4509,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4549,7 +4524,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4561,7 +4535,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4574,7 +4547,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -5586,7 +5558,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5596,7 +5567,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5605,7 +5575,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5614,7 +5583,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5624,7 +5592,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6365,7 +6332,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6377,7 +6343,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6390,7 +6355,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6402,7 +6366,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6414,7 +6377,6 @@ public final class BucketServiceOuterClass {
     /**
      * <pre>
      * List of object tag for the bucket.
-     * TODO: documentation details.
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -8989,7 +8951,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9004,7 +8965,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9019,7 +8979,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9034,7 +8993,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9056,7 +9014,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9075,7 +9032,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9096,7 +9052,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9118,7 +9073,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9137,7 +9091,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9156,7 +9109,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9176,7 +9128,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9194,7 +9145,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9212,7 +9162,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9224,7 +9173,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9239,7 +9187,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9255,7 +9202,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9267,7 +9213,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9280,7 +9225,6 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * List of object tag for the bucket.
-       * TODO: documentation details.
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>

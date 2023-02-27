@@ -9004,7 +9004,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return A list containing the subnetId.
      */
     java.util.List<java.lang.String>
@@ -9015,7 +9015,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return The count of subnetId.
      */
     int getSubnetIdCount();
@@ -9025,7 +9025,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the element to return.
      * @return The subnetId at the given index.
      */
@@ -9036,7 +9036,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the value to return.
      * @return The bytes of the subnetId at the given index.
      */
@@ -9201,7 +9201,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return A list containing the subnetId.
      */
     public com.google.protobuf.ProtocolStringList
@@ -9214,7 +9214,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @return The count of subnetId.
      */
     public int getSubnetIdCount() {
@@ -9226,7 +9226,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the element to return.
      * @return The subnetId at the given index.
      */
@@ -9239,7 +9239,7 @@ public final class FunctionOuterClass {
      * It's essential to specify at least one subnet for each availability zones.
      * </pre>
      *
-     * <code>repeated string subnet_id = 2;</code>
+     * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
      * @param index The index of the value to return.
      * @return The bytes of the subnetId at the given index.
      */
@@ -9704,7 +9704,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @return A list containing the subnetId.
        */
       public com.google.protobuf.ProtocolStringList
@@ -9717,7 +9717,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @return The count of subnetId.
        */
       public int getSubnetIdCount() {
@@ -9729,7 +9729,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param index The index of the element to return.
        * @return The subnetId at the given index.
        */
@@ -9742,7 +9742,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param index The index of the value to return.
        * @return The bytes of the subnetId at the given index.
        */
@@ -9756,7 +9756,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param index The index to set the value at.
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -9777,7 +9777,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param value The subnetId to add.
        * @return This builder for chaining.
        */
@@ -9797,7 +9797,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param values The subnetId to add.
        * @return This builder for chaining.
        */
@@ -9815,7 +9815,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearSubnetId() {
@@ -9830,7 +9830,7 @@ public final class FunctionOuterClass {
        * It's essential to specify at least one subnet for each availability zones.
        * </pre>
        *
-       * <code>repeated string subnet_id = 2;</code>
+       * <code>repeated string subnet_id = 2 [(.yandex.cloud.length) = "&gt;0", (.yandex.cloud.unique) = true];</code>
        * @param value The bytes of the subnetId to add.
        * @return This builder for chaining.
        */
@@ -14134,26 +14134,26 @@ public final class FunctionOuterClass {
       "\002\"5\n\tResources\022(\n\006memory\030\001 \001(\003B\030\372\3071\0241342" +
       "17728-4294967296\"O\n\007Package\022\031\n\013bucket_na" +
       "me\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071" +
-      "\001\022\016\n\006sha256\030\003 \001(\t\"5\n\014Connectivity\022\022\n\nnet" +
-      "work_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \003(\t\"\362\001\n\rSca" +
-      "lingPolicy\022\023\n\013function_id\030\001 \001(\t\022\013\n\003tag\030\002" +
-      " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022/\n\013modified_at\030\004 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022#\n\033provisioned_ins" +
-      "tances_count\030\006 \001(\003\022\034\n\024zone_instances_lim" +
-      "it\030\007 \001(\003\022\033\n\023zone_requests_limit\030\010 \001(\003\"b\n" +
-      "\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022" +
-      "\013\n\003key\030\003 \001(\t\022\036\n\024environment_variable\030\004 \001" +
-      "(\tH\000B\013\n\treference\"\340\001\n\nLogOptions\022\020\n\010disa" +
-      "bled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([" +
-      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolde" +
-      "r_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{" +
-      "0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cl" +
-      "oud.logging.v1.LogLevel.LevelB\r\n\013destina" +
-      "tionB~\n(yandex.cloud.api.serverless.func" +
-      "tions.v1ZRgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/serverless/functions/" +
-      "v1;functionsb\006proto3"
+      "\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nnet" +
+      "work_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002>0" +
+      "\220\3101\001\"\362\001\n\rScalingPolicy\022\023\n\013function_id\030\001 " +
+      "\001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022/\n\013modified_at\030" +
+      "\004 \001(\0132\032.google.protobuf.Timestamp\022#\n\033pro" +
+      "visioned_instances_count\030\006 \001(\003\022\034\n\024zone_i" +
+      "nstances_limit\030\007 \001(\003\022\033\n\023zone_requests_li" +
+      "mit\030\010 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversi" +
+      "on_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_" +
+      "variable\030\004 \001(\tH\000B\013\n\treference\"\340\001\n\nLogOpt" +
+      "ions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_group_id\030\002" +
+      " \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})" +
+      "?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a" +
+      "-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\016" +
+      "2\'.yandex.cloud.logging.v1.LogLevel.Leve" +
+      "lB\r\n\013destinationB~\n(yandex.cloud.api.ser" +
+      "verless.functions.v1ZRgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/serverles" +
+      "s/functions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14235,6 +14235,7 @@ public final class FunctionOuterClass {
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.unique);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -23866,6 +23866,5437 @@ public final class RegistryServiceOuterClass {
 
   }
 
+  public interface AddDataStreamExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.AddDataStreamExportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the YDS export. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the YDS export. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * ID of the registry to add a YDS export for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry to add a YDS export for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * MQTT topic whose messages export to YDS.
+     * </pre>
+     *
+     * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The mqttTopicFilter.
+     */
+    java.lang.String getMqttTopicFilter();
+    /**
+     * <pre>
+     * MQTT topic whose messages export to YDS.
+     * </pre>
+     *
+     * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for mqttTopicFilter.
+     */
+    com.google.protobuf.ByteString
+        getMqttTopicFilterBytes();
+
+    /**
+     * <pre>
+     * YDS database.
+     * </pre>
+     *
+     * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <pre>
+     * YDS database.
+     * </pre>
+     *
+     * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseBytes();
+
+    /**
+     * <pre>
+     * YDS stream name.
+     * </pre>
+     *
+     * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The stream.
+     */
+    java.lang.String getStream();
+    /**
+     * <pre>
+     * YDS stream name.
+     * </pre>
+     *
+     * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for stream.
+     */
+    com.google.protobuf.ByteString
+        getStreamBytes();
+
+    /**
+     * <pre>
+     * ID of the service account which has permission to write to data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account which has permission to write to data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDataStreamExportRequest}
+   */
+  public static final class AddDataStreamExportRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddDataStreamExportRequest)
+      AddDataStreamExportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddDataStreamExportRequest.newBuilder() to construct.
+    private AddDataStreamExportRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddDataStreamExportRequest() {
+      name_ = "";
+      registryId_ = "";
+      mqttTopicFilter_ = "";
+      database_ = "";
+      stream_ = "";
+      serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDataStreamExportRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddDataStreamExportRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mqttTopicFilter_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              database_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stream_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the YDS export. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the YDS export. The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry to add a YDS export for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry to add a YDS export for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MQTT_TOPIC_FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object mqttTopicFilter_;
+    /**
+     * <pre>
+     * MQTT topic whose messages export to YDS.
+     * </pre>
+     *
+     * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The mqttTopicFilter.
+     */
+    @java.lang.Override
+    public java.lang.String getMqttTopicFilter() {
+      java.lang.Object ref = mqttTopicFilter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mqttTopicFilter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * MQTT topic whose messages export to YDS.
+     * </pre>
+     *
+     * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for mqttTopicFilter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMqttTopicFilterBytes() {
+      java.lang.Object ref = mqttTopicFilter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mqttTopicFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object database_;
+    /**
+     * <pre>
+     * YDS database.
+     * </pre>
+     *
+     * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The database.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * YDS database.
+     * </pre>
+     *
+     * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for database.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STREAM_FIELD_NUMBER = 6;
+    private volatile java.lang.Object stream_;
+    /**
+     * <pre>
+     * YDS stream name.
+     * </pre>
+     *
+     * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The stream.
+     */
+    @java.lang.Override
+    public java.lang.String getStream() {
+      java.lang.Object ref = stream_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stream_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * YDS stream name.
+     * </pre>
+     *
+     * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for stream.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStreamBytes() {
+      java.lang.Object ref = stream_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stream_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account which has permission to write to data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account which has permission to write to data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopicFilter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mqttTopicFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, database_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stream_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, stream_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, serviceAccountId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopicFilter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, mqttTopicFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, database_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stream_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, stream_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, serviceAccountId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getMqttTopicFilter()
+          .equals(other.getMqttTopicFilter())) return false;
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
+      if (!getStream()
+          .equals(other.getStream())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (37 * hash) + MQTT_TOPIC_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMqttTopicFilter().hashCode();
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + STREAM_FIELD_NUMBER;
+      hash = (53 * hash) + getStream().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDataStreamExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.AddDataStreamExportRequest)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        registryId_ = "";
+
+        mqttTopicFilter_ = "";
+
+        database_ = "";
+
+        stream_ = "";
+
+        serviceAccountId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest(this);
+        result.name_ = name_;
+        result.registryId_ = registryId_;
+        result.mqttTopicFilter_ = mqttTopicFilter_;
+        result.database_ = database_;
+        result.stream_ = stream_;
+        result.serviceAccountId_ = serviceAccountId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (!other.getMqttTopicFilter().isEmpty()) {
+          mqttTopicFilter_ = other.mqttTopicFilter_;
+          onChanged();
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (!other.getStream().isEmpty()) {
+          stream_ = other.stream_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the YDS export. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the YDS export. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the YDS export. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the YDS export. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the YDS export. The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry to add a YDS export for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to add a YDS export for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to add a YDS export for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to add a YDS export for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to add a YDS export for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mqttTopicFilter_ = "";
+      /**
+       * <pre>
+       * MQTT topic whose messages export to YDS.
+       * </pre>
+       *
+       * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The mqttTopicFilter.
+       */
+      public java.lang.String getMqttTopicFilter() {
+        java.lang.Object ref = mqttTopicFilter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mqttTopicFilter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * MQTT topic whose messages export to YDS.
+       * </pre>
+       *
+       * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for mqttTopicFilter.
+       */
+      public com.google.protobuf.ByteString
+          getMqttTopicFilterBytes() {
+        java.lang.Object ref = mqttTopicFilter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mqttTopicFilter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * MQTT topic whose messages export to YDS.
+       * </pre>
+       *
+       * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The mqttTopicFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqttTopicFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mqttTopicFilter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MQTT topic whose messages export to YDS.
+       * </pre>
+       *
+       * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMqttTopicFilter() {
+        
+        mqttTopicFilter_ = getDefaultInstance().getMqttTopicFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MQTT topic whose messages export to YDS.
+       * </pre>
+       *
+       * <code>string mqtt_topic_filter = 4 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for mqttTopicFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqttTopicFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mqttTopicFilter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <pre>
+       * YDS database.
+       * </pre>
+       *
+       * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * YDS database.
+       * </pre>
+       *
+       * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * YDS database.
+       * </pre>
+       *
+       * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * YDS database.
+       * </pre>
+       *
+       * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+        
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * YDS database.
+       * </pre>
+       *
+       * <code>string database = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stream_ = "";
+      /**
+       * <pre>
+       * YDS stream name.
+       * </pre>
+       *
+       * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The stream.
+       */
+      public java.lang.String getStream() {
+        java.lang.Object ref = stream_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stream_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * YDS stream name.
+       * </pre>
+       *
+       * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The bytes for stream.
+       */
+      public com.google.protobuf.ByteString
+          getStreamBytes() {
+        java.lang.Object ref = stream_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stream_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * YDS stream name.
+       * </pre>
+       *
+       * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The stream to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStream(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stream_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * YDS stream name.
+       * </pre>
+       *
+       * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStream() {
+        
+        stream_ = getDefaultInstance().getStream();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * YDS stream name.
+       * </pre>
+       *
+       * <code>string stream = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The bytes for stream to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreamBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stream_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account which has permission to write to data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to write to data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to write to data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to write to data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to write to data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.AddDataStreamExportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.AddDataStreamExportRequest)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddDataStreamExportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddDataStreamExportRequest>() {
+      @java.lang.Override
+      public AddDataStreamExportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddDataStreamExportRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddDataStreamExportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddDataStreamExportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddDataStreamExportMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry for which the YDS export was added.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry for which the YDS export was added.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * ID of the added YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2;</code>
+     * @return The dataStreamExportId.
+     */
+    java.lang.String getDataStreamExportId();
+    /**
+     * <pre>
+     * ID of the added YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2;</code>
+     * @return The bytes for dataStreamExportId.
+     */
+    com.google.protobuf.ByteString
+        getDataStreamExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata}
+   */
+  public static final class AddDataStreamExportMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata)
+      AddDataStreamExportMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddDataStreamExportMetadata.newBuilder() to construct.
+    private AddDataStreamExportMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddDataStreamExportMetadata() {
+      registryId_ = "";
+      dataStreamExportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDataStreamExportMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddDataStreamExportMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataStreamExportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry for which the YDS export was added.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry for which the YDS export was added.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_STREAM_EXPORT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object dataStreamExportId_;
+    /**
+     * <pre>
+     * ID of the added YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2;</code>
+     * @return The dataStreamExportId.
+     */
+    @java.lang.Override
+    public java.lang.String getDataStreamExportId() {
+      java.lang.Object ref = dataStreamExportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataStreamExportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the added YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2;</code>
+     * @return The bytes for dataStreamExportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataStreamExportIdBytes() {
+      java.lang.Object ref = dataStreamExportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataStreamExportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStreamExportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataStreamExportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStreamExportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataStreamExportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getDataStreamExportId()
+          .equals(other.getDataStreamExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (37 * hash) + DATA_STREAM_EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDataStreamExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        dataStreamExportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata(this);
+        result.registryId_ = registryId_;
+        result.dataStreamExportId_ = dataStreamExportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (!other.getDataStreamExportId().isEmpty()) {
+          dataStreamExportId_ = other.dataStreamExportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry for which the YDS export was added.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry for which the YDS export was added.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry for which the YDS export was added.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry for which the YDS export was added.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry for which the YDS export was added.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataStreamExportId_ = "";
+      /**
+       * <pre>
+       * ID of the added YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2;</code>
+       * @return The dataStreamExportId.
+       */
+      public java.lang.String getDataStreamExportId() {
+        java.lang.Object ref = dataStreamExportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataStreamExportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the added YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2;</code>
+       * @return The bytes for dataStreamExportId.
+       */
+      public com.google.protobuf.ByteString
+          getDataStreamExportIdBytes() {
+        java.lang.Object ref = dataStreamExportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataStreamExportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the added YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2;</code>
+       * @param value The dataStreamExportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataStreamExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataStreamExportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the added YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataStreamExportId() {
+        
+        dataStreamExportId_ = getDefaultInstance().getDataStreamExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the added YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2;</code>
+       * @param value The bytes for dataStreamExportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataStreamExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataStreamExportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.AddDataStreamExportMetadata)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddDataStreamExportMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AddDataStreamExportMetadata>() {
+      @java.lang.Override
+      public AddDataStreamExportMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddDataStreamExportMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddDataStreamExportMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddDataStreamExportMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteDataStreamExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export is being deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export is being deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * ID of the YDS export to delete.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The dataStreamExportId.
+     */
+    java.lang.String getDataStreamExportId();
+    /**
+     * <pre>
+     * ID of the YDS export to delete.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for dataStreamExportId.
+     */
+    com.google.protobuf.ByteString
+        getDataStreamExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest}
+   */
+  public static final class DeleteDataStreamExportRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest)
+      DeleteDataStreamExportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteDataStreamExportRequest.newBuilder() to construct.
+    private DeleteDataStreamExportRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteDataStreamExportRequest() {
+      registryId_ = "";
+      dataStreamExportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDataStreamExportRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteDataStreamExportRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataStreamExportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export is being deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export is being deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_STREAM_EXPORT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object dataStreamExportId_;
+    /**
+     * <pre>
+     * ID of the YDS export to delete.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The dataStreamExportId.
+     */
+    @java.lang.Override
+    public java.lang.String getDataStreamExportId() {
+      java.lang.Object ref = dataStreamExportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataStreamExportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the YDS export to delete.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for dataStreamExportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataStreamExportIdBytes() {
+      java.lang.Object ref = dataStreamExportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataStreamExportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStreamExportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataStreamExportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStreamExportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataStreamExportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getDataStreamExportId()
+          .equals(other.getDataStreamExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (37 * hash) + DATA_STREAM_EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDataStreamExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        dataStreamExportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest(this);
+        result.registryId_ = registryId_;
+        result.dataStreamExportId_ = dataStreamExportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (!other.getDataStreamExportId().isEmpty()) {
+          dataStreamExportId_ = other.dataStreamExportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export is being deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export is being deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export is being deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export is being deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export is being deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataStreamExportId_ = "";
+      /**
+       * <pre>
+       * ID of the YDS export to delete.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The dataStreamExportId.
+       */
+      public java.lang.String getDataStreamExportId() {
+        java.lang.Object ref = dataStreamExportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataStreamExportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the YDS export to delete.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for dataStreamExportId.
+       */
+      public com.google.protobuf.ByteString
+          getDataStreamExportIdBytes() {
+        java.lang.Object ref = dataStreamExportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataStreamExportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the YDS export to delete.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The dataStreamExportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataStreamExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataStreamExportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the YDS export to delete.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataStreamExportId() {
+        
+        dataStreamExportId_ = getDefaultInstance().getDataStreamExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the YDS export to delete.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for dataStreamExportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataStreamExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataStreamExportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.DeleteDataStreamExportRequest)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteDataStreamExportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteDataStreamExportRequest>() {
+      @java.lang.Override
+      public DeleteDataStreamExportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteDataStreamExportRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteDataStreamExportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteDataStreamExportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteDataStreamExportMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export was deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export was deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * ID of the deleted YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The dataStreamExportId.
+     */
+    java.lang.String getDataStreamExportId();
+    /**
+     * <pre>
+     * ID of the deleted YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for dataStreamExportId.
+     */
+    com.google.protobuf.ByteString
+        getDataStreamExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata}
+   */
+  public static final class DeleteDataStreamExportMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata)
+      DeleteDataStreamExportMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteDataStreamExportMetadata.newBuilder() to construct.
+    private DeleteDataStreamExportMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteDataStreamExportMetadata() {
+      registryId_ = "";
+      dataStreamExportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteDataStreamExportMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteDataStreamExportMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataStreamExportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export was deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of a registry for which the YDS export was deleted.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_STREAM_EXPORT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object dataStreamExportId_;
+    /**
+     * <pre>
+     * ID of the deleted YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The dataStreamExportId.
+     */
+    @java.lang.Override
+    public java.lang.String getDataStreamExportId() {
+      java.lang.Object ref = dataStreamExportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataStreamExportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the deleted YDS export.
+     * </pre>
+     *
+     * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for dataStreamExportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataStreamExportIdBytes() {
+      java.lang.Object ref = dataStreamExportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataStreamExportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStreamExportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataStreamExportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataStreamExportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataStreamExportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!getDataStreamExportId()
+          .equals(other.getDataStreamExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (37 * hash) + DATA_STREAM_EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDataStreamExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        dataStreamExportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata(this);
+        result.registryId_ = registryId_;
+        result.dataStreamExportId_ = dataStreamExportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (!other.getDataStreamExportId().isEmpty()) {
+          dataStreamExportId_ = other.dataStreamExportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export was deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export was deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export was deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export was deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of a registry for which the YDS export was deleted.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataStreamExportId_ = "";
+      /**
+       * <pre>
+       * ID of the deleted YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The dataStreamExportId.
+       */
+      public java.lang.String getDataStreamExportId() {
+        java.lang.Object ref = dataStreamExportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataStreamExportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the deleted YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for dataStreamExportId.
+       */
+      public com.google.protobuf.ByteString
+          getDataStreamExportIdBytes() {
+        java.lang.Object ref = dataStreamExportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataStreamExportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the deleted YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The dataStreamExportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataStreamExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataStreamExportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the deleted YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataStreamExportId() {
+        
+        dataStreamExportId_ = getDefaultInstance().getDataStreamExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the deleted YDS export.
+       * </pre>
+       *
+       * <code>string data_stream_export_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for dataStreamExportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataStreamExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataStreamExportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.DeleteDataStreamExportMetadata)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteDataStreamExportMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteDataStreamExportMetadata>() {
+      @java.lang.Override
+      public DeleteDataStreamExportMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteDataStreamExportMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteDataStreamExportMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteDataStreamExportMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListDataStreamExportsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry to list YDS exports in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry to list YDS exports in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest}
+   */
+  public static final class ListDataStreamExportsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest)
+      ListDataStreamExportsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDataStreamExportsRequest.newBuilder() to construct.
+    private ListDataStreamExportsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDataStreamExportsRequest() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDataStreamExportsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDataStreamExportsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry to list YDS exports in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry to list YDS exports in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry to list YDS exports in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to list YDS exports in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to list YDS exports in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to list YDS exports in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to list YDS exports in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.ListDataStreamExportsRequest)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDataStreamExportsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListDataStreamExportsRequest>() {
+      @java.lang.Override
+      public ListDataStreamExportsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDataStreamExportsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDataStreamExportsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDataStreamExportsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListDataStreamExportsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport> 
+        getDataStreamExportsList();
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport getDataStreamExports(int index);
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    int getDataStreamExportsCount();
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder> 
+        getDataStreamExportsOrBuilderList();
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder getDataStreamExportsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse}
+   */
+  public static final class ListDataStreamExportsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse)
+      ListDataStreamExportsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListDataStreamExportsResponse.newBuilder() to construct.
+    private ListDataStreamExportsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListDataStreamExportsResponse() {
+      dataStreamExports_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListDataStreamExportsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListDataStreamExportsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dataStreamExports_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dataStreamExports_.add(
+                  input.readMessage(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          dataStreamExports_ = java.util.Collections.unmodifiableList(dataStreamExports_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.Builder.class);
+    }
+
+    public static final int DATA_STREAM_EXPORTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport> dataStreamExports_;
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport> getDataStreamExportsList() {
+      return dataStreamExports_;
+    }
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder> 
+        getDataStreamExportsOrBuilderList() {
+      return dataStreamExports_;
+    }
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    @java.lang.Override
+    public int getDataStreamExportsCount() {
+      return dataStreamExports_.size();
+    }
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport getDataStreamExports(int index) {
+      return dataStreamExports_.get(index);
+    }
+    /**
+     * <pre>
+     * List of YDS exports for the specified registry.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder getDataStreamExportsOrBuilder(
+        int index) {
+      return dataStreamExports_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < dataStreamExports_.size(); i++) {
+        output.writeMessage(1, dataStreamExports_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < dataStreamExports_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, dataStreamExports_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse) obj;
+
+      if (!getDataStreamExportsList()
+          .equals(other.getDataStreamExportsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDataStreamExportsCount() > 0) {
+        hash = (37 * hash) + DATA_STREAM_EXPORTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataStreamExportsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDataStreamExportsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (dataStreamExportsBuilder_ == null) {
+          dataStreamExports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          dataStreamExportsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (dataStreamExportsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            dataStreamExports_ = java.util.Collections.unmodifiableList(dataStreamExports_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.dataStreamExports_ = dataStreamExports_;
+        } else {
+          result.dataStreamExports_ = dataStreamExportsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.getDefaultInstance()) return this;
+        if (dataStreamExportsBuilder_ == null) {
+          if (!other.dataStreamExports_.isEmpty()) {
+            if (dataStreamExports_.isEmpty()) {
+              dataStreamExports_ = other.dataStreamExports_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDataStreamExportsIsMutable();
+              dataStreamExports_.addAll(other.dataStreamExports_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataStreamExports_.isEmpty()) {
+            if (dataStreamExportsBuilder_.isEmpty()) {
+              dataStreamExportsBuilder_.dispose();
+              dataStreamExportsBuilder_ = null;
+              dataStreamExports_ = other.dataStreamExports_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              dataStreamExportsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataStreamExportsFieldBuilder() : null;
+            } else {
+              dataStreamExportsBuilder_.addAllMessages(other.dataStreamExports_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport> dataStreamExports_ =
+        java.util.Collections.emptyList();
+      private void ensureDataStreamExportsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          dataStreamExports_ = new java.util.ArrayList<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport>(dataStreamExports_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder> dataStreamExportsBuilder_;
+
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport> getDataStreamExportsList() {
+        if (dataStreamExportsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataStreamExports_);
+        } else {
+          return dataStreamExportsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public int getDataStreamExportsCount() {
+        if (dataStreamExportsBuilder_ == null) {
+          return dataStreamExports_.size();
+        } else {
+          return dataStreamExportsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport getDataStreamExports(int index) {
+        if (dataStreamExportsBuilder_ == null) {
+          return dataStreamExports_.get(index);
+        } else {
+          return dataStreamExportsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder setDataStreamExports(
+          int index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport value) {
+        if (dataStreamExportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.set(index, value);
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder setDataStreamExports(
+          int index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder builderForValue) {
+        if (dataStreamExportsBuilder_ == null) {
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder addDataStreamExports(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport value) {
+        if (dataStreamExportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.add(value);
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder addDataStreamExports(
+          int index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport value) {
+        if (dataStreamExportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.add(index, value);
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder addDataStreamExports(
+          yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder builderForValue) {
+        if (dataStreamExportsBuilder_ == null) {
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder addDataStreamExports(
+          int index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder builderForValue) {
+        if (dataStreamExportsBuilder_ == null) {
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder addAllDataStreamExports(
+          java.lang.Iterable<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport> values) {
+        if (dataStreamExportsBuilder_ == null) {
+          ensureDataStreamExportsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataStreamExports_);
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder clearDataStreamExports() {
+        if (dataStreamExportsBuilder_ == null) {
+          dataStreamExports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public Builder removeDataStreamExports(int index) {
+        if (dataStreamExportsBuilder_ == null) {
+          ensureDataStreamExportsIsMutable();
+          dataStreamExports_.remove(index);
+          onChanged();
+        } else {
+          dataStreamExportsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder getDataStreamExportsBuilder(
+          int index) {
+        return getDataStreamExportsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder getDataStreamExportsOrBuilder(
+          int index) {
+        if (dataStreamExportsBuilder_ == null) {
+          return dataStreamExports_.get(index);  } else {
+          return dataStreamExportsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder> 
+           getDataStreamExportsOrBuilderList() {
+        if (dataStreamExportsBuilder_ != null) {
+          return dataStreamExportsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataStreamExports_);
+        }
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder addDataStreamExportsBuilder() {
+        return getDataStreamExportsFieldBuilder().addBuilder(
+            yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder addDataStreamExportsBuilder(
+          int index) {
+        return getDataStreamExportsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of YDS exports for the specified registry.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.iot.devices.v1.DataStreamExport data_stream_exports = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder> 
+           getDataStreamExportsBuilderList() {
+        return getDataStreamExportsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder> 
+          getDataStreamExportsFieldBuilder() {
+        if (dataStreamExportsBuilder_ == null) {
+          dataStreamExportsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExport.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DataStreamExportOrBuilder>(
+                  dataStreamExports_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataStreamExports_ = null;
+        }
+        return dataStreamExportsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.ListDataStreamExportsResponse)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListDataStreamExportsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListDataStreamExportsResponse>() {
+      @java.lang.Override
+      public ListDataStreamExportsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListDataStreamExportsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListDataStreamExportsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListDataStreamExportsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_GetRegistryRequest_descriptor;
   private static final 
@@ -24011,6 +29442,36 @@ public final class RegistryServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_ListRegistryOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24104,80 +29565,111 @@ public final class RegistryServiceOuterClass {
       "\212\3101\006<=1000\"p\n\036ListRegistryOperationsResp" +
       "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
       "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t2\211\026\n\017RegistryService\022\217\001\n\003Get\022/.yande" +
-      "x.cloud.iot.devices.v1.GetRegistryReques" +
-      "t\032%.yandex.cloud.iot.devices.v1.Registry" +
-      "\"0\202\323\344\223\002*\022(/iot-devices/v1/registries/{re" +
-      "gistry_id}\022\227\001\n\tGetByName\0225.yandex.cloud." +
-      "iot.devices.v1.GetByNameRegistryRequest\032" +
-      "%.yandex.cloud.iot.devices.v1.Registry\"," +
-      "\202\323\344\223\002&\022$/iot-devices/v1/registries:getBy" +
-      "Name\022\223\001\n\004List\0222.yandex.cloud.iot.devices" +
-      ".v1.ListRegistriesRequest\0323.yandex.cloud" +
-      ".iot.devices.v1.ListRegistriesResponse\"\"" +
-      "\202\323\344\223\002\034\022\032/iot-devices/v1/registries\022\254\001\n\006C" +
-      "reate\0222.yandex.cloud.iot.devices.v1.Crea" +
-      "teRegistryRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"K\202\323\344\223\002\037\"\032/iot-devices/v1/re" +
-      "gistries:\001*\262\322*\"\n\026CreateRegistryMetadata\022" +
-      "\010Registry\022\272\001\n\006Update\0222.yandex.cloud.iot." +
-      "devices.v1.UpdateRegistryRequest\032!.yande" +
-      "x.cloud.operation.Operation\"Y\202\323\344\223\002-2(/io" +
-      "t-devices/v1/registries/{registry_id}:\001*" +
-      "\262\322*\"\n\026UpdateRegistryMetadata\022\010Registry\022\304" +
-      "\001\n\006Delete\0222.yandex.cloud.iot.devices.v1." +
-      "DeleteRegistryRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"c\202\323\344\223\002**(/iot-devices/v" +
-      "1/registries/{registry_id}\262\322*/\n\026DeleteRe" +
-      "gistryMetadata\022\025google.protobuf.Empty\022\316\001" +
-      "\n\020ListCertificates\022<.yandex.cloud.iot.de" +
-      "vices.v1.ListRegistryCertificatesRequest" +
-      "\032=.yandex.cloud.iot.devices.v1.ListRegis" +
-      "tryCertificatesResponse\"=\202\323\344\223\0027\0225/iot-de" +
-      "vices/v1/registries/{registry_id}/certif" +
-      "icates\022\352\001\n\016AddCertificate\022:.yandex.cloud" +
-      ".iot.devices.v1.AddRegistryCertificateRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"y\202\323\344\223\002:\"5/iot-devices/v1/registries/{re" +
-      "gistry_id}/certificates:\001*\262\322*5\n\036AddRegis" +
-      "tryCertificateMetadata\022\023RegistryCertific" +
-      "ate\022\201\002\n\021DeleteCertificate\022=.yandex.cloud" +
-      ".iot.devices.v1.DeleteRegistryCertificat" +
+      " \001(\t\"\372\001\n\032AddDataStreamExportRequest\022(\n\004n" +
+      "ame\030\001 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022!\n" +
+      "\013registry_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022%\n\021mqtt" +
+      "_topic_filter\030\004 \001(\tB\n\212\3101\006<=1024\022\037\n\010datab" +
+      "ase\030\005 \001(\tB\r\350\3071\001\212\3101\005<=512\022\035\n\006stream\030\006 \001(\t" +
+      "B\r\350\3071\001\212\3101\005<=512\022(\n\022service_account_id\030\007 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"Q\n\033AddDataStreamExport" +
+      "Metadata\022\023\n\013registry_id\030\001 \001(\t\022\035\n\025data_st" +
+      "ream_export_id\030\002 \001(\t\"o\n\035DeleteDataStream" +
+      "ExportRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022+\n\025data_stream_export_id\030\002 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\"`\n\036DeleteDataStreamExportM" +
+      "etadata\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022#\n\025da" +
+      "ta_stream_export_id\030\002 \001(\tB\004\350\3071\001\"A\n\034ListD" +
+      "ataStreamExportsRequest\022!\n\013registry_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"k\n\035ListDataStreamExpo" +
+      "rtsResponse\022J\n\023data_stream_exports\030\001 \003(\013" +
+      "2-.yandex.cloud.iot.devices.v1.DataStrea" +
+      "mExport2\372\031\n\017RegistryService\022\217\001\n\003Get\022/.ya" +
+      "ndex.cloud.iot.devices.v1.GetRegistryReq" +
+      "uest\032%.yandex.cloud.iot.devices.v1.Regis" +
+      "try\"0\202\323\344\223\002*\022(/iot-devices/v1/registries/" +
+      "{registry_id}\022\227\001\n\tGetByName\0225.yandex.clo" +
+      "ud.iot.devices.v1.GetByNameRegistryReque" +
+      "st\032%.yandex.cloud.iot.devices.v1.Registr" +
+      "y\",\202\323\344\223\002&\022$/iot-devices/v1/registries:ge" +
+      "tByName\022\223\001\n\004List\0222.yandex.cloud.iot.devi" +
+      "ces.v1.ListRegistriesRequest\0323.yandex.cl" +
+      "oud.iot.devices.v1.ListRegistriesRespons" +
+      "e\"\"\202\323\344\223\002\034\022\032/iot-devices/v1/registries\022\254\001" +
+      "\n\006Create\0222.yandex.cloud.iot.devices.v1.C" +
+      "reateRegistryRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"K\202\323\344\223\002\037\"\032/iot-devices/v1" +
+      "/registries:\001*\262\322*\"\n\026CreateRegistryMetada" +
+      "ta\022\010Registry\022\272\001\n\006Update\0222.yandex.cloud.i" +
+      "ot.devices.v1.UpdateRegistryRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"Y\202\323\344\223\002-2(" +
+      "/iot-devices/v1/registries/{registry_id}" +
+      ":\001*\262\322*\"\n\026UpdateRegistryMetadata\022\010Registr" +
+      "y\022\304\001\n\006Delete\0222.yandex.cloud.iot.devices." +
+      "v1.DeleteRegistryRequest\032!.yandex.cloud." +
+      "operation.Operation\"c\202\323\344\223\002**(/iot-device" +
+      "s/v1/registries/{registry_id}\262\322*/\n\026Delet" +
+      "eRegistryMetadata\022\025google.protobuf.Empty" +
+      "\022\316\001\n\020ListCertificates\022<.yandex.cloud.iot" +
+      ".devices.v1.ListRegistryCertificatesRequ" +
+      "est\032=.yandex.cloud.iot.devices.v1.ListRe" +
+      "gistryCertificatesResponse\"=\202\323\344\223\0027\0225/iot" +
+      "-devices/v1/registries/{registry_id}/cer" +
+      "tificates\022\352\001\n\016AddCertificate\022:.yandex.cl" +
+      "oud.iot.devices.v1.AddRegistryCertificat" +
       "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\211\001\202\323\344\223\002E*C/iot-devices/v1/registries" +
-      "/{registry_id}/certificates/{fingerprint" +
-      "}\262\322*:\n!DeleteRegistryCertificateMetadata" +
-      "\022\025google.protobuf.Empty\022\302\001\n\rListPassword" +
-      "s\0229.yandex.cloud.iot.devices.v1.ListRegi" +
-      "stryPasswordsRequest\032:.yandex.cloud.iot." +
-      "devices.v1.ListRegistryPasswordsResponse" +
-      "\":\202\323\344\223\0024\0222/iot-devices/v1/registries/{re" +
-      "gistry_id}/passwords\022\333\001\n\013AddPassword\0227.y" +
-      "andex.cloud.iot.devices.v1.AddRegistryPa" +
-      "sswordRequest\032!.yandex.cloud.operation.O" +
-      "peration\"p\202\323\344\223\0027\"2/iot-devices/v1/regist" +
-      "ries/{registry_id}/passwords:\001*\262\322*/\n\033Add" +
-      "RegistryPasswordMetadata\022\020RegistryPasswo" +
-      "rd\022\365\001\n\016DeletePassword\022:.yandex.cloud.iot" +
-      ".devices.v1.DeleteRegistryPasswordReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\203\001\202" +
-      "\323\344\223\002B*@/iot-devices/v1/registries/{regis" +
-      "try_id}/passwords/{password_id}\262\322*7\n\036Del" +
-      "eteRegistryPasswordMetadata\022\025google.prot" +
-      "obuf.Empty\022\332\001\n\026ListDeviceTopicAliases\022:." +
-      "yandex.cloud.iot.devices.v1.ListDeviceTo" +
-      "picAliasesRequest\032;.yandex.cloud.iot.dev" +
-      "ices.v1.ListDeviceTopicAliasesResponse\"G" +
-      "\202\323\344\223\002A\022?/iot-devices/v1/registries/{regi" +
-      "stry_id}:listDeviceTopicAliases\022\306\001\n\016List" +
-      "Operations\022:.yandex.cloud.iot.devices.v1" +
-      ".ListRegistryOperationsRequest\032;.yandex." +
+      "ion\"y\202\323\344\223\002:\"5/iot-devices/v1/registries/" +
+      "{registry_id}/certificates:\001*\262\322*5\n\036AddRe" +
+      "gistryCertificateMetadata\022\023RegistryCerti" +
+      "ficate\022\201\002\n\021DeleteCertificate\022=.yandex.cl" +
+      "oud.iot.devices.v1.DeleteRegistryCertifi" +
+      "cateRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\211\001\202\323\344\223\002E*C/iot-devices/v1/registr" +
+      "ies/{registry_id}/certificates/{fingerpr" +
+      "int}\262\322*:\n!DeleteRegistryCertificateMetad" +
+      "ata\022\025google.protobuf.Empty\022\302\001\n\rListPassw" +
+      "ords\0229.yandex.cloud.iot.devices.v1.ListR" +
+      "egistryPasswordsRequest\032:.yandex.cloud.i" +
+      "ot.devices.v1.ListRegistryPasswordsRespo" +
+      "nse\":\202\323\344\223\0024\0222/iot-devices/v1/registries/" +
+      "{registry_id}/passwords\022\333\001\n\013AddPassword\022" +
+      "7.yandex.cloud.iot.devices.v1.AddRegistr" +
+      "yPasswordRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"p\202\323\344\223\0027\"2/iot-devices/v1/reg" +
+      "istries/{registry_id}/passwords:\001*\262\322*/\n\033" +
+      "AddRegistryPasswordMetadata\022\020RegistryPas" +
+      "sword\022\365\001\n\016DeletePassword\022:.yandex.cloud." +
+      "iot.devices.v1.DeleteRegistryPasswordReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\203\001\202\323\344\223\002B*@/iot-devices/v1/registries/{re" +
+      "gistry_id}/passwords/{password_id}\262\322*7\n\036" +
+      "DeleteRegistryPasswordMetadata\022\025google.p" +
+      "rotobuf.Empty\022\332\001\n\026ListDeviceTopicAliases" +
+      "\022:.yandex.cloud.iot.devices.v1.ListDevic" +
+      "eTopicAliasesRequest\032;.yandex.cloud.iot." +
+      "devices.v1.ListDeviceTopicAliasesRespons" +
+      "e\"G\202\323\344\223\002A\022?/iot-devices/v1/registries/{r" +
+      "egistry_id}:listDeviceTopicAliases\022\216\001\n\025L" +
+      "istDataStreamExports\0229.yandex.cloud.iot." +
+      "devices.v1.ListDataStreamExportsRequest\032" +
+      ":.yandex.cloud.iot.devices.v1.ListDataSt" +
+      "reamExportsResponse\022\246\001\n\023AddDataStreamExp" +
+      "ort\0227.yandex.cloud.iot.devices.v1.AddDat" +
+      "aStreamExportRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"3\262\322*/\n\033AddDataStreamExpo" +
+      "rtMetadata\022\020DataStreamExport\022\264\001\n\026DeleteD" +
+      "ataStreamExport\022:.yandex.cloud.iot.devic" +
+      "es.v1.DeleteDataStreamExportRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\";\262\322*7\n\036De" +
+      "leteDataStreamExportMetadata\022\025google.pro" +
+      "tobuf.Empty\022\306\001\n\016ListOperations\022:.yandex." +
       "cloud.iot.devices.v1.ListRegistryOperati" +
-      "onsResponse\";\202\323\344\223\0025\0223/iot-devices/v1/reg" +
-      "istries/{registry_id}/operationsBj\n\037yand" +
-      "ex.cloud.api.iot.devices.v1ZGgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/io" +
-      "t/devices/v1;devicesb\006proto3"
+      "onsRequest\032;.yandex.cloud.iot.devices.v1" +
+      ".ListRegistryOperationsResponse\";\202\323\344\223\0025\022" +
+      "3/iot-devices/v1/registries/{registry_id" +
+      "}/operationsBj\n\037yandex.cloud.api.iot.dev" +
+      "ices.v1ZGgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/iot/devices/v1;devices" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24363,6 +29855,42 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListRegistryOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportRequest_descriptor,
+        new java.lang.String[] { "Name", "RegistryId", "MqttTopicFilter", "Database", "Stream", "ServiceAccountId", });
+    internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_AddDataStreamExportMetadata_descriptor,
+        new java.lang.String[] { "RegistryId", "DataStreamExportId", });
+    internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportRequest_descriptor,
+        new java.lang.String[] { "RegistryId", "DataStreamExportId", });
+    internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_DeleteDataStreamExportMetadata_descriptor,
+        new java.lang.String[] { "RegistryId", "DataStreamExportId", });
+    internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsRequest_descriptor,
+        new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor,
+        new java.lang.String[] { "DataStreamExports", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

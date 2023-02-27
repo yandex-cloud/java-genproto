@@ -421,6 +421,99 @@ public final class RegistryServiceGrpc {
     return getListDeviceTopicAliasesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest,
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse> getListDataStreamExportsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListDataStreamExports",
+      requestType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.class,
+      responseType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest,
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse> getListDataStreamExportsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse> getListDataStreamExportsMethod;
+    if ((getListDataStreamExportsMethod = RegistryServiceGrpc.getListDataStreamExportsMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getListDataStreamExportsMethod = RegistryServiceGrpc.getListDataStreamExportsMethod) == null) {
+          RegistryServiceGrpc.getListDataStreamExportsMethod = getListDataStreamExportsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDataStreamExports"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListDataStreamExports"))
+              .build();
+        }
+      }
+    }
+    return getListDataStreamExportsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDataStreamExportMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddDataStreamExport",
+      requestType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDataStreamExportMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDataStreamExportMethod;
+    if ((getAddDataStreamExportMethod = RegistryServiceGrpc.getAddDataStreamExportMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getAddDataStreamExportMethod = RegistryServiceGrpc.getAddDataStreamExportMethod) == null) {
+          RegistryServiceGrpc.getAddDataStreamExportMethod = getAddDataStreamExportMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddDataStreamExport"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("AddDataStreamExport"))
+              .build();
+        }
+      }
+    }
+    return getAddDataStreamExportMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteDataStreamExportMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDataStreamExport",
+      requestType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteDataStreamExportMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteDataStreamExportMethod;
+    if ((getDeleteDataStreamExportMethod = RegistryServiceGrpc.getDeleteDataStreamExportMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getDeleteDataStreamExportMethod = RegistryServiceGrpc.getDeleteDataStreamExportMethod) == null) {
+          RegistryServiceGrpc.getDeleteDataStreamExportMethod = getDeleteDataStreamExportMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDataStreamExport"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("DeleteDataStreamExport"))
+              .build();
+        }
+      }
+    }
+    return getDeleteDataStreamExportMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest,
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> getListOperationsMethod;
 
@@ -633,6 +726,36 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of YDS exports for the specified registry.
+     * </pre>
+     */
+    public void listDataStreamExports(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDataStreamExportsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds YDS export for the specified registry.
+     * </pre>
+     */
+    public void addDataStreamExport(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddDataStreamExportMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified YDS export.
+     * </pre>
+     */
+    public void deleteDataStreamExport(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDataStreamExportMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified registry.
      * </pre>
      */
@@ -734,6 +857,27 @@ public final class RegistryServiceGrpc {
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse>(
                   this, METHODID_LIST_DEVICE_TOPIC_ALIASES)))
+          .addMethod(
+            getListDataStreamExportsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest,
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse>(
+                  this, METHODID_LIST_DATA_STREAM_EXPORTS)))
+          .addMethod(
+            getAddDataStreamExportMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_DATA_STREAM_EXPORT)))
+          .addMethod(
+            getDeleteDataStreamExportMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_DATA_STREAM_EXPORT)))
           .addMethod(
             getListOperationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -905,6 +1049,39 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of YDS exports for the specified registry.
+     * </pre>
+     */
+    public void listDataStreamExports(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListDataStreamExportsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds YDS export for the specified registry.
+     * </pre>
+     */
+    public void addDataStreamExport(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddDataStreamExportMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified YDS export.
+     * </pre>
+     */
+    public void deleteDataStreamExport(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDataStreamExportMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified registry.
      * </pre>
      */
@@ -1058,6 +1235,36 @@ public final class RegistryServiceGrpc {
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDeviceTopicAliasesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of YDS exports for the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse listDataStreamExports(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListDataStreamExportsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Adds YDS export for the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addDataStreamExport(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddDataStreamExportMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified YDS export.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteDataStreamExport(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDataStreamExportMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1231,6 +1438,39 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of YDS exports for the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse> listDataStreamExports(
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListDataStreamExportsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Adds YDS export for the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addDataStreamExport(
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddDataStreamExportMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified YDS export.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteDataStreamExport(
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDataStreamExportMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified registry.
      * </pre>
      */
@@ -1254,7 +1494,10 @@ public final class RegistryServiceGrpc {
   private static final int METHODID_ADD_PASSWORD = 10;
   private static final int METHODID_DELETE_PASSWORD = 11;
   private static final int METHODID_LIST_DEVICE_TOPIC_ALIASES = 12;
-  private static final int METHODID_LIST_OPERATIONS = 13;
+  private static final int METHODID_LIST_DATA_STREAM_EXPORTS = 13;
+  private static final int METHODID_ADD_DATA_STREAM_EXPORT = 14;
+  private static final int METHODID_DELETE_DATA_STREAM_EXPORT = 15;
+  private static final int METHODID_LIST_OPERATIONS = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1324,6 +1567,18 @@ public final class RegistryServiceGrpc {
         case METHODID_LIST_DEVICE_TOPIC_ALIASES:
           serviceImpl.listDeviceTopicAliases((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_DATA_STREAM_EXPORTS:
+          serviceImpl.listDataStreamExports((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDataStreamExportsResponse>) responseObserver);
+          break;
+        case METHODID_ADD_DATA_STREAM_EXPORT:
+          serviceImpl.addDataStreamExport((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddDataStreamExportRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_DATA_STREAM_EXPORT:
+          serviceImpl.deleteDataStreamExport((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteDataStreamExportRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest) request,
@@ -1403,6 +1658,9 @@ public final class RegistryServiceGrpc {
               .addMethod(getAddPasswordMethod())
               .addMethod(getDeletePasswordMethod())
               .addMethod(getListDeviceTopicAliasesMethod())
+              .addMethod(getListDataStreamExportsMethod())
+              .addMethod(getAddDataStreamExportMethod())
+              .addMethod(getDeleteDataStreamExportMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }
