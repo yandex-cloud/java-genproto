@@ -235,7 +235,7 @@ public final class ImageOuterClass {
   }
   /**
    * <pre>
-   * An Image resource. For more information, see [Docker image](/docs/cloud/container-registry/docker-image).
+   * An Image resource. For more information, see [Docker image](/docs/container-registry/concepts/docker-image).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.Image}
@@ -989,7 +989,7 @@ public final class ImageOuterClass {
     }
     /**
      * <pre>
-     * An Image resource. For more information, see [Docker image](/docs/cloud/container-registry/docker-image).
+     * An Image resource. For more information, see [Docker image](/docs/container-registry/concepts/docker-image).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.containerregistry.v1.Image}

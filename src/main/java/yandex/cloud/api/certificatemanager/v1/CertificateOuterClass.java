@@ -768,7 +768,7 @@ public final class CertificateOuterClass {
   }
   /**
    * <pre>
-   * A certificate. For details about the concept, see [documentation](docs/certificate-manager/concepts/).
+   * A certificate. For details about the concept, see [documentation](/docs/certificate-manager/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.Certificate}
@@ -2436,7 +2436,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * A certificate. For details about the concept, see [documentation](docs/certificate-manager/concepts/).
+     * A certificate. For details about the concept, see [documentation](/docs/certificate-manager/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.certificatemanager.v1.Certificate}

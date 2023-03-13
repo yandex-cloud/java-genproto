@@ -3612,7 +3612,7 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -3621,7 +3621,7 @@ public final class InstanceGroupServiceOuterClass {
     boolean hasHealthChecksSpec();
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -3630,7 +3630,7 @@ public final class InstanceGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec getHealthChecksSpec();
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -4413,7 +4413,7 @@ public final class InstanceGroupServiceOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec healthChecksSpec_;
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -4425,7 +4425,7 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -4437,7 +4437,7 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6547,7 +6547,7 @@ public final class InstanceGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpecOrBuilder> healthChecksSpecBuilder_;
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6558,7 +6558,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6573,7 +6573,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6593,7 +6593,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6611,7 +6611,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6633,7 +6633,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6651,7 +6651,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6663,7 +6663,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -6678,7 +6678,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -8991,7 +8991,7 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -9000,7 +9000,7 @@ public final class InstanceGroupServiceOuterClass {
     boolean hasHealthChecksSpec();
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -9009,7 +9009,7 @@ public final class InstanceGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec getHealthChecksSpec();
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -9822,7 +9822,7 @@ public final class InstanceGroupServiceOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec healthChecksSpec_;
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -9834,7 +9834,7 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -9846,7 +9846,7 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -11999,7 +11999,7 @@ public final class InstanceGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpecOrBuilder> healthChecksSpecBuilder_;
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12010,7 +12010,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12025,7 +12025,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12045,7 +12045,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12063,7 +12063,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12085,7 +12085,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12103,7 +12103,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12115,7 +12115,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>
@@ -12130,7 +12130,7 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Health checking specification. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+       * Health checking specification. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.HealthChecksSpec health_checks_spec = 11;</code>

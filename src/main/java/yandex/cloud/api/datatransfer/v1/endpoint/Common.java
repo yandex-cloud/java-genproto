@@ -24,14 +24,26 @@ public final class Common {
      */
     OBJECT_TRANSFER_STAGE_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Before data transfer
+     * </pre>
+     *
      * <code>BEFORE_DATA = 1;</code>
      */
     BEFORE_DATA(1),
     /**
+     * <pre>
+     * After data transfer
+     * </pre>
+     *
      * <code>AFTER_DATA = 2;</code>
      */
     AFTER_DATA(2),
     /**
+     * <pre>
+     * Don't copy
+     * </pre>
+     *
      * <code>NEVER = 3;</code>
      */
     NEVER(3),
@@ -43,14 +55,26 @@ public final class Common {
      */
     public static final int OBJECT_TRANSFER_STAGE_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Before data transfer
+     * </pre>
+     *
      * <code>BEFORE_DATA = 1;</code>
      */
     public static final int BEFORE_DATA_VALUE = 1;
     /**
+     * <pre>
+     * After data transfer
+     * </pre>
+     *
      * <code>AFTER_DATA = 2;</code>
      */
     public static final int AFTER_DATA_VALUE = 2;
     /**
+     * <pre>
+     * Don't copy
+     * </pre>
+     *
      * <code>NEVER = 3;</code>
      */
     public static final int NEVER_VALUE = 3;
@@ -150,14 +174,26 @@ public final class Common {
      */
     CLEANUP_POLICY_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Don't cleanup
+     * </pre>
+     *
      * <code>DISABLED = 1;</code>
      */
     DISABLED(1),
     /**
+     * <pre>
+     * Drop
+     * </pre>
+     *
      * <code>DROP = 2;</code>
      */
     DROP(2),
     /**
+     * <pre>
+     * Truncate
+     * </pre>
+     *
      * <code>TRUNCATE = 3;</code>
      */
     TRUNCATE(3),
@@ -169,14 +205,26 @@ public final class Common {
      */
     public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Don't cleanup
+     * </pre>
+     *
      * <code>DISABLED = 1;</code>
      */
     public static final int DISABLED_VALUE = 1;
     /**
+     * <pre>
+     * Drop
+     * </pre>
+     *
      * <code>DROP = 2;</code>
      */
     public static final int DROP_VALUE = 2;
     /**
+     * <pre>
+     * Truncate
+     * </pre>
+     *
      * <code>TRUNCATE = 3;</code>
      */
     public static final int TRUNCATE_VALUE = 3;
@@ -266,13 +314,238 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.datatransfer.v1.endpoint.ColumnType}
+   */
+  public enum ColumnType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>COLUMN_TYPE_UNSPECIFIED = 0;</code>
+     */
+    COLUMN_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>INT64 = 14;</code>
+     */
+    INT64(14),
+    /**
+     * <code>INT32 = 1;</code>
+     */
+    INT32(1),
+    /**
+     * <code>INT16 = 2;</code>
+     */
+    INT16(2),
+    /**
+     * <code>INT8 = 3;</code>
+     */
+    INT8(3),
+    /**
+     * <code>UINT64 = 4;</code>
+     */
+    UINT64(4),
+    /**
+     * <code>UINT32 = 5;</code>
+     */
+    UINT32(5),
+    /**
+     * <code>UINT16 = 6;</code>
+     */
+    UINT16(6),
+    /**
+     * <code>UINT8 = 7;</code>
+     */
+    UINT8(7),
+    /**
+     * <code>DOUBLE = 8;</code>
+     */
+    DOUBLE(8),
+    /**
+     * <code>BOOLEAN = 9;</code>
+     */
+    BOOLEAN(9),
+    /**
+     * <code>STRING = 10;</code>
+     */
+    STRING(10),
+    /**
+     * <code>UTF8 = 11;</code>
+     */
+    UTF8(11),
+    /**
+     * <code>ANY = 12;</code>
+     */
+    ANY(12),
+    /**
+     * <code>DATETIME = 13;</code>
+     */
+    DATETIME(13),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>COLUMN_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int COLUMN_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>INT64 = 14;</code>
+     */
+    public static final int INT64_VALUE = 14;
+    /**
+     * <code>INT32 = 1;</code>
+     */
+    public static final int INT32_VALUE = 1;
+    /**
+     * <code>INT16 = 2;</code>
+     */
+    public static final int INT16_VALUE = 2;
+    /**
+     * <code>INT8 = 3;</code>
+     */
+    public static final int INT8_VALUE = 3;
+    /**
+     * <code>UINT64 = 4;</code>
+     */
+    public static final int UINT64_VALUE = 4;
+    /**
+     * <code>UINT32 = 5;</code>
+     */
+    public static final int UINT32_VALUE = 5;
+    /**
+     * <code>UINT16 = 6;</code>
+     */
+    public static final int UINT16_VALUE = 6;
+    /**
+     * <code>UINT8 = 7;</code>
+     */
+    public static final int UINT8_VALUE = 7;
+    /**
+     * <code>DOUBLE = 8;</code>
+     */
+    public static final int DOUBLE_VALUE = 8;
+    /**
+     * <code>BOOLEAN = 9;</code>
+     */
+    public static final int BOOLEAN_VALUE = 9;
+    /**
+     * <code>STRING = 10;</code>
+     */
+    public static final int STRING_VALUE = 10;
+    /**
+     * <code>UTF8 = 11;</code>
+     */
+    public static final int UTF8_VALUE = 11;
+    /**
+     * <code>ANY = 12;</code>
+     */
+    public static final int ANY_VALUE = 12;
+    /**
+     * <code>DATETIME = 13;</code>
+     */
+    public static final int DATETIME_VALUE = 13;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ColumnType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ColumnType forNumber(int value) {
+      switch (value) {
+        case 0: return COLUMN_TYPE_UNSPECIFIED;
+        case 14: return INT64;
+        case 1: return INT32;
+        case 2: return INT16;
+        case 3: return INT8;
+        case 4: return UINT64;
+        case 5: return UINT32;
+        case 6: return UINT16;
+        case 7: return UINT8;
+        case 8: return DOUBLE;
+        case 9: return BOOLEAN;
+        case 10: return STRING;
+        case 11: return UTF8;
+        case 12: return ANY;
+        case 13: return DATETIME;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ColumnType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ColumnType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ColumnType>() {
+            public ColumnType findValueByNumber(int number) {
+              return ColumnType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final ColumnType[] VALUES = values();
+
+    public static ColumnType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ColumnType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.endpoint.ColumnType)
+  }
+
   public interface AltNameOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.AltName)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * From table name
+     * Source table name
      * </pre>
      *
      * <code>string from_name = 1;</code>
@@ -281,7 +554,7 @@ public final class Common {
     java.lang.String getFromName();
     /**
      * <pre>
-     * From table name
+     * Source table name
      * </pre>
      *
      * <code>string from_name = 1;</code>
@@ -292,7 +565,7 @@ public final class Common {
 
     /**
      * <pre>
-     * To table name
+     * Target table name
      * </pre>
      *
      * <code>string to_name = 2;</code>
@@ -301,7 +574,7 @@ public final class Common {
     java.lang.String getToName();
     /**
      * <pre>
-     * To table name
+     * Target table name
      * </pre>
      *
      * <code>string to_name = 2;</code>
@@ -405,7 +678,7 @@ public final class Common {
     private volatile java.lang.Object fromName_;
     /**
      * <pre>
-     * From table name
+     * Source table name
      * </pre>
      *
      * <code>string from_name = 1;</code>
@@ -426,7 +699,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * From table name
+     * Source table name
      * </pre>
      *
      * <code>string from_name = 1;</code>
@@ -451,7 +724,7 @@ public final class Common {
     private volatile java.lang.Object toName_;
     /**
      * <pre>
-     * To table name
+     * Target table name
      * </pre>
      *
      * <code>string to_name = 2;</code>
@@ -472,7 +745,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * To table name
+     * Target table name
      * </pre>
      *
      * <code>string to_name = 2;</code>
@@ -815,7 +1088,7 @@ public final class Common {
       private java.lang.Object fromName_ = "";
       /**
        * <pre>
-       * From table name
+       * Source table name
        * </pre>
        *
        * <code>string from_name = 1;</code>
@@ -835,7 +1108,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * From table name
+       * Source table name
        * </pre>
        *
        * <code>string from_name = 1;</code>
@@ -856,7 +1129,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * From table name
+       * Source table name
        * </pre>
        *
        * <code>string from_name = 1;</code>
@@ -875,7 +1148,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * From table name
+       * Source table name
        * </pre>
        *
        * <code>string from_name = 1;</code>
@@ -889,7 +1162,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * From table name
+       * Source table name
        * </pre>
        *
        * <code>string from_name = 1;</code>
@@ -911,7 +1184,7 @@ public final class Common {
       private java.lang.Object toName_ = "";
       /**
        * <pre>
-       * To table name
+       * Target table name
        * </pre>
        *
        * <code>string to_name = 2;</code>
@@ -931,7 +1204,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * To table name
+       * Target table name
        * </pre>
        *
        * <code>string to_name = 2;</code>
@@ -952,7 +1225,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * To table name
+       * Target table name
        * </pre>
        *
        * <code>string to_name = 2;</code>
@@ -971,7 +1244,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * To table name
+       * Target table name
        * </pre>
        *
        * <code>string to_name = 2;</code>
@@ -985,7 +1258,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * To table name
+       * Target table name
        * </pre>
        *
        * <code>string to_name = 2;</code>
@@ -1062,7 +1335,7 @@ public final class Common {
 
     /**
      * <pre>
-     * Password
+     * Raw secret value
      * </pre>
      *
      * <code>string raw = 1;</code>
@@ -1071,7 +1344,7 @@ public final class Common {
     boolean hasRaw();
     /**
      * <pre>
-     * Password
+     * Raw secret value
      * </pre>
      *
      * <code>string raw = 1;</code>
@@ -1080,7 +1353,7 @@ public final class Common {
     java.lang.String getRaw();
     /**
      * <pre>
-     * Password
+     * Raw secret value
      * </pre>
      *
      * <code>string raw = 1;</code>
@@ -1216,7 +1489,7 @@ public final class Common {
     public static final int RAW_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Password
+     * Raw secret value
      * </pre>
      *
      * <code>string raw = 1;</code>
@@ -1227,7 +1500,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Password
+     * Raw secret value
      * </pre>
      *
      * <code>string raw = 1;</code>
@@ -1252,7 +1525,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Password
+     * Raw secret value
      * </pre>
      *
      * <code>string raw = 1;</code>
@@ -1619,7 +1892,7 @@ public final class Common {
 
       /**
        * <pre>
-       * Password
+       * Raw secret value
        * </pre>
        *
        * <code>string raw = 1;</code>
@@ -1631,7 +1904,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Password
+       * Raw secret value
        * </pre>
        *
        * <code>string raw = 1;</code>
@@ -1657,7 +1930,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Password
+       * Raw secret value
        * </pre>
        *
        * <code>string raw = 1;</code>
@@ -1684,7 +1957,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Password
+       * Raw secret value
        * </pre>
        *
        * <code>string raw = 1;</code>
@@ -1703,7 +1976,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Password
+       * Raw secret value
        * </pre>
        *
        * <code>string raw = 1;</code>
@@ -1719,7 +1992,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Password
+       * Raw secret value
        * </pre>
        *
        * <code>string raw = 1;</code>
@@ -1785,6 +2058,973 @@ public final class Common {
 
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ColSchemaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.ColSchema)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType getType();
+
+    /**
+     * <code>bool key = 3;</code>
+     * @return The key.
+     */
+    boolean getKey();
+
+    /**
+     * <code>bool required = 4;</code>
+     * @return The required.
+     */
+    boolean getRequired();
+
+    /**
+     * <code>string path = 5;</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <code>string path = 5;</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ColSchema}
+   */
+  public static final class ColSchema extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.ColSchema)
+      ColSchemaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ColSchema.newBuilder() to construct.
+    private ColSchema(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ColSchema() {
+      name_ = "";
+      type_ = 0;
+      path_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ColSchema();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ColSchema(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 24: {
+
+              key_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              required_ = input.readBool();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              path_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.valueOf(type_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.UNRECOGNIZED : result;
+    }
+
+    public static final int KEY_FIELD_NUMBER = 3;
+    private boolean key_;
+    /**
+     * <code>bool key = 3;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public boolean getKey() {
+      return key_;
+    }
+
+    public static final int REQUIRED_FIELD_NUMBER = 4;
+    private boolean required_;
+    /**
+     * <code>bool required = 4;</code>
+     * @return The required.
+     */
+    @java.lang.Override
+    public boolean getRequired() {
+      return required_;
+    }
+
+    public static final int PATH_FIELD_NUMBER = 5;
+    private volatile java.lang.Object path_;
+    /**
+     * <code>string path = 5;</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        path_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string path = 5;</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (type_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.COLUMN_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, type_);
+      }
+      if (key_ != false) {
+        output.writeBool(3, key_);
+      }
+      if (required_ != false) {
+        output.writeBool(4, required_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, path_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (type_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.COLUMN_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      if (key_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, key_);
+      }
+      if (required_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, required_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, path_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (type_ != other.type_) return false;
+      if (getKey()
+          != other.getKey()) return false;
+      if (getRequired()
+          != other.getRequired()) return false;
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getKey());
+      hash = (37 * hash) + REQUIRED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRequired());
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ColSchema}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.ColSchema)
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        type_ = 0;
+
+        key_ = false;
+
+        required_ = false;
+
+        path_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema(this);
+        result.name_ = name_;
+        result.type_ = type_;
+        result.key_ = key_;
+        result.required_ = required_;
+        result.path_ = path_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.getKey() != false) {
+          setKey(other.getKey());
+        }
+        if (other.getRequired() != false) {
+          setRequired(other.getRequired());
+        }
+        if (!other.getPath().isEmpty()) {
+          path_ = other.path_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.valueOf(type_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean key_ ;
+      /**
+       * <code>bool key = 3;</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public boolean getKey() {
+        return key_;
+      }
+      /**
+       * <code>bool key = 3;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(boolean value) {
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool key = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean required_ ;
+      /**
+       * <code>bool required = 4;</code>
+       * @return The required.
+       */
+      @java.lang.Override
+      public boolean getRequired() {
+        return required_;
+      }
+      /**
+       * <code>bool required = 4;</code>
+       * @param value The required to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequired(boolean value) {
+        
+        required_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool required = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequired() {
+        
+        required_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object path_ = "";
+      /**
+       * <code>string path = 5;</code>
+       * @return The path.
+       */
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string path = 5;</code>
+       * @return The bytes for path.
+       */
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string path = 5;</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string path = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        
+        path_ = getDefaultInstance().getPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string path = 5;</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.ColSchema)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.ColSchema)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ColSchema>
+        PARSER = new com.google.protobuf.AbstractParser<ColSchema>() {
+      @java.lang.Override
+      public ColSchema parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ColSchema(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ColSchema> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ColSchema> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4063,6 +5303,3691 @@ public final class Common {
 
   }
 
+  public interface DataTransformationOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Cloud function
+     * </pre>
+     *
+     * <code>string cloud_function = 1;</code>
+     * @return The cloudFunction.
+     */
+    java.lang.String getCloudFunction();
+    /**
+     * <pre>
+     * Cloud function
+     * </pre>
+     *
+     * <code>string cloud_function = 1;</code>
+     * @return The bytes for cloudFunction.
+     */
+    com.google.protobuf.ByteString
+        getCloudFunctionBytes();
+
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Number of retries
+     * </pre>
+     *
+     * <code>int64 number_of_retries = 2;</code>
+     * @return The numberOfRetries.
+     */
+    long getNumberOfRetries();
+
+    /**
+     * <pre>
+     * Buffer size for function
+     * </pre>
+     *
+     * <code>string buffer_size = 3;</code>
+     * @return The bufferSize.
+     */
+    java.lang.String getBufferSize();
+    /**
+     * <pre>
+     * Buffer size for function
+     * </pre>
+     *
+     * <code>string buffer_size = 3;</code>
+     * @return The bytes for bufferSize.
+     */
+    com.google.protobuf.ByteString
+        getBufferSizeBytes();
+
+    /**
+     * <pre>
+     * Flush interval
+     * </pre>
+     *
+     * <code>string buffer_flush_interval = 4;</code>
+     * @return The bufferFlushInterval.
+     */
+    java.lang.String getBufferFlushInterval();
+    /**
+     * <pre>
+     * Flush interval
+     * </pre>
+     *
+     * <code>string buffer_flush_interval = 4;</code>
+     * @return The bytes for bufferFlushInterval.
+     */
+    com.google.protobuf.ByteString
+        getBufferFlushIntervalBytes();
+
+    /**
+     * <pre>
+     * Invocation timeout
+     * </pre>
+     *
+     * <code>string invocation_timeout = 5;</code>
+     * @return The invocationTimeout.
+     */
+    java.lang.String getInvocationTimeout();
+    /**
+     * <pre>
+     * Invocation timeout
+     * </pre>
+     *
+     * <code>string invocation_timeout = 5;</code>
+     * @return The bytes for invocationTimeout.
+     */
+    com.google.protobuf.ByteString
+        getInvocationTimeoutBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions}
+   */
+  public static final class DataTransformationOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions)
+      DataTransformationOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataTransformationOptions.newBuilder() to construct.
+    private DataTransformationOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataTransformationOptions() {
+      cloudFunction_ = "";
+      serviceAccountId_ = "";
+      bufferSize_ = "";
+      bufferFlushInterval_ = "";
+      invocationTimeout_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataTransformationOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DataTransformationOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cloudFunction_ = s;
+              break;
+            }
+            case 16: {
+
+              numberOfRetries_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bufferSize_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bufferFlushInterval_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              invocationTimeout_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.Builder.class);
+    }
+
+    public static final int CLOUD_FUNCTION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cloudFunction_;
+    /**
+     * <pre>
+     * Cloud function
+     * </pre>
+     *
+     * <code>string cloud_function = 1;</code>
+     * @return The cloudFunction.
+     */
+    @java.lang.Override
+    public java.lang.String getCloudFunction() {
+      java.lang.Object ref = cloudFunction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cloudFunction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Cloud function
+     * </pre>
+     *
+     * <code>string cloud_function = 1;</code>
+     * @return The bytes for cloudFunction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCloudFunctionBytes() {
+      java.lang.Object ref = cloudFunction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cloudFunction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_OF_RETRIES_FIELD_NUMBER = 2;
+    private long numberOfRetries_;
+    /**
+     * <pre>
+     * Number of retries
+     * </pre>
+     *
+     * <code>int64 number_of_retries = 2;</code>
+     * @return The numberOfRetries.
+     */
+    @java.lang.Override
+    public long getNumberOfRetries() {
+      return numberOfRetries_;
+    }
+
+    public static final int BUFFER_SIZE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object bufferSize_;
+    /**
+     * <pre>
+     * Buffer size for function
+     * </pre>
+     *
+     * <code>string buffer_size = 3;</code>
+     * @return The bufferSize.
+     */
+    @java.lang.Override
+    public java.lang.String getBufferSize() {
+      java.lang.Object ref = bufferSize_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bufferSize_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Buffer size for function
+     * </pre>
+     *
+     * <code>string buffer_size = 3;</code>
+     * @return The bytes for bufferSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBufferSizeBytes() {
+      java.lang.Object ref = bufferSize_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bufferSize_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUFFER_FLUSH_INTERVAL_FIELD_NUMBER = 4;
+    private volatile java.lang.Object bufferFlushInterval_;
+    /**
+     * <pre>
+     * Flush interval
+     * </pre>
+     *
+     * <code>string buffer_flush_interval = 4;</code>
+     * @return The bufferFlushInterval.
+     */
+    @java.lang.Override
+    public java.lang.String getBufferFlushInterval() {
+      java.lang.Object ref = bufferFlushInterval_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bufferFlushInterval_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Flush interval
+     * </pre>
+     *
+     * <code>string buffer_flush_interval = 4;</code>
+     * @return The bytes for bufferFlushInterval.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBufferFlushIntervalBytes() {
+      java.lang.Object ref = bufferFlushInterval_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bufferFlushInterval_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INVOCATION_TIMEOUT_FIELD_NUMBER = 5;
+    private volatile java.lang.Object invocationTimeout_;
+    /**
+     * <pre>
+     * Invocation timeout
+     * </pre>
+     *
+     * <code>string invocation_timeout = 5;</code>
+     * @return The invocationTimeout.
+     */
+    @java.lang.Override
+    public java.lang.String getInvocationTimeout() {
+      java.lang.Object ref = invocationTimeout_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        invocationTimeout_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Invocation timeout
+     * </pre>
+     *
+     * <code>string invocation_timeout = 5;</code>
+     * @return The bytes for invocationTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInvocationTimeoutBytes() {
+      java.lang.Object ref = invocationTimeout_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        invocationTimeout_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudFunction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cloudFunction_);
+      }
+      if (numberOfRetries_ != 0L) {
+        output.writeInt64(2, numberOfRetries_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bufferSize_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bufferSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bufferFlushInterval_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bufferFlushInterval_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invocationTimeout_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, invocationTimeout_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, serviceAccountId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cloudFunction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cloudFunction_);
+      }
+      if (numberOfRetries_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, numberOfRetries_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bufferSize_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bufferSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bufferFlushInterval_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bufferFlushInterval_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invocationTimeout_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, invocationTimeout_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, serviceAccountId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions) obj;
+
+      if (!getCloudFunction()
+          .equals(other.getCloudFunction())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (getNumberOfRetries()
+          != other.getNumberOfRetries()) return false;
+      if (!getBufferSize()
+          .equals(other.getBufferSize())) return false;
+      if (!getBufferFlushInterval()
+          .equals(other.getBufferFlushInterval())) return false;
+      if (!getInvocationTimeout()
+          .equals(other.getInvocationTimeout())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLOUD_FUNCTION_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudFunction().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + NUMBER_OF_RETRIES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumberOfRetries());
+      hash = (37 * hash) + BUFFER_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getBufferSize().hashCode();
+      hash = (37 * hash) + BUFFER_FLUSH_INTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + getBufferFlushInterval().hashCode();
+      hash = (37 * hash) + INVOCATION_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + getInvocationTimeout().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions)
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cloudFunction_ = "";
+
+        serviceAccountId_ = "";
+
+        numberOfRetries_ = 0L;
+
+        bufferSize_ = "";
+
+        bufferFlushInterval_ = "";
+
+        invocationTimeout_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions(this);
+        result.cloudFunction_ = cloudFunction_;
+        result.serviceAccountId_ = serviceAccountId_;
+        result.numberOfRetries_ = numberOfRetries_;
+        result.bufferSize_ = bufferSize_;
+        result.bufferFlushInterval_ = bufferFlushInterval_;
+        result.invocationTimeout_ = invocationTimeout_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.getDefaultInstance()) return this;
+        if (!other.getCloudFunction().isEmpty()) {
+          cloudFunction_ = other.cloudFunction_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.getNumberOfRetries() != 0L) {
+          setNumberOfRetries(other.getNumberOfRetries());
+        }
+        if (!other.getBufferSize().isEmpty()) {
+          bufferSize_ = other.bufferSize_;
+          onChanged();
+        }
+        if (!other.getBufferFlushInterval().isEmpty()) {
+          bufferFlushInterval_ = other.bufferFlushInterval_;
+          onChanged();
+        }
+        if (!other.getInvocationTimeout().isEmpty()) {
+          invocationTimeout_ = other.invocationTimeout_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cloudFunction_ = "";
+      /**
+       * <pre>
+       * Cloud function
+       * </pre>
+       *
+       * <code>string cloud_function = 1;</code>
+       * @return The cloudFunction.
+       */
+      public java.lang.String getCloudFunction() {
+        java.lang.Object ref = cloudFunction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cloudFunction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud function
+       * </pre>
+       *
+       * <code>string cloud_function = 1;</code>
+       * @return The bytes for cloudFunction.
+       */
+      public com.google.protobuf.ByteString
+          getCloudFunctionBytes() {
+        java.lang.Object ref = cloudFunction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cloudFunction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud function
+       * </pre>
+       *
+       * <code>string cloud_function = 1;</code>
+       * @param value The cloudFunction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloudFunction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cloudFunction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud function
+       * </pre>
+       *
+       * <code>string cloud_function = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCloudFunction() {
+        
+        cloudFunction_ = getDefaultInstance().getCloudFunction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud function
+       * </pre>
+       *
+       * <code>string cloud_function = 1;</code>
+       * @param value The bytes for cloudFunction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloudFunctionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cloudFunction_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long numberOfRetries_ ;
+      /**
+       * <pre>
+       * Number of retries
+       * </pre>
+       *
+       * <code>int64 number_of_retries = 2;</code>
+       * @return The numberOfRetries.
+       */
+      @java.lang.Override
+      public long getNumberOfRetries() {
+        return numberOfRetries_;
+      }
+      /**
+       * <pre>
+       * Number of retries
+       * </pre>
+       *
+       * <code>int64 number_of_retries = 2;</code>
+       * @param value The numberOfRetries to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberOfRetries(long value) {
+        
+        numberOfRetries_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of retries
+       * </pre>
+       *
+       * <code>int64 number_of_retries = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumberOfRetries() {
+        
+        numberOfRetries_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bufferSize_ = "";
+      /**
+       * <pre>
+       * Buffer size for function
+       * </pre>
+       *
+       * <code>string buffer_size = 3;</code>
+       * @return The bufferSize.
+       */
+      public java.lang.String getBufferSize() {
+        java.lang.Object ref = bufferSize_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bufferSize_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Buffer size for function
+       * </pre>
+       *
+       * <code>string buffer_size = 3;</code>
+       * @return The bytes for bufferSize.
+       */
+      public com.google.protobuf.ByteString
+          getBufferSizeBytes() {
+        java.lang.Object ref = bufferSize_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bufferSize_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Buffer size for function
+       * </pre>
+       *
+       * <code>string buffer_size = 3;</code>
+       * @param value The bufferSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBufferSize(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bufferSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Buffer size for function
+       * </pre>
+       *
+       * <code>string buffer_size = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBufferSize() {
+        
+        bufferSize_ = getDefaultInstance().getBufferSize();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Buffer size for function
+       * </pre>
+       *
+       * <code>string buffer_size = 3;</code>
+       * @param value The bytes for bufferSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBufferSizeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bufferSize_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bufferFlushInterval_ = "";
+      /**
+       * <pre>
+       * Flush interval
+       * </pre>
+       *
+       * <code>string buffer_flush_interval = 4;</code>
+       * @return The bufferFlushInterval.
+       */
+      public java.lang.String getBufferFlushInterval() {
+        java.lang.Object ref = bufferFlushInterval_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bufferFlushInterval_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Flush interval
+       * </pre>
+       *
+       * <code>string buffer_flush_interval = 4;</code>
+       * @return The bytes for bufferFlushInterval.
+       */
+      public com.google.protobuf.ByteString
+          getBufferFlushIntervalBytes() {
+        java.lang.Object ref = bufferFlushInterval_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bufferFlushInterval_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Flush interval
+       * </pre>
+       *
+       * <code>string buffer_flush_interval = 4;</code>
+       * @param value The bufferFlushInterval to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBufferFlushInterval(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bufferFlushInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flush interval
+       * </pre>
+       *
+       * <code>string buffer_flush_interval = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBufferFlushInterval() {
+        
+        bufferFlushInterval_ = getDefaultInstance().getBufferFlushInterval();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flush interval
+       * </pre>
+       *
+       * <code>string buffer_flush_interval = 4;</code>
+       * @param value The bytes for bufferFlushInterval to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBufferFlushIntervalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bufferFlushInterval_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object invocationTimeout_ = "";
+      /**
+       * <pre>
+       * Invocation timeout
+       * </pre>
+       *
+       * <code>string invocation_timeout = 5;</code>
+       * @return The invocationTimeout.
+       */
+      public java.lang.String getInvocationTimeout() {
+        java.lang.Object ref = invocationTimeout_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          invocationTimeout_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Invocation timeout
+       * </pre>
+       *
+       * <code>string invocation_timeout = 5;</code>
+       * @return The bytes for invocationTimeout.
+       */
+      public com.google.protobuf.ByteString
+          getInvocationTimeoutBytes() {
+        java.lang.Object ref = invocationTimeout_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invocationTimeout_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Invocation timeout
+       * </pre>
+       *
+       * <code>string invocation_timeout = 5;</code>
+       * @param value The invocationTimeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvocationTimeout(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        invocationTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Invocation timeout
+       * </pre>
+       *
+       * <code>string invocation_timeout = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvocationTimeout() {
+        
+        invocationTimeout_ = getDefaultInstance().getInvocationTimeout();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Invocation timeout
+       * </pre>
+       *
+       * <code>string invocation_timeout = 5;</code>
+       * @param value The bytes for invocationTimeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvocationTimeoutBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        invocationTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataTransformationOptions>
+        PARSER = new com.google.protobuf.AbstractParser<DataTransformationOptions>() {
+      @java.lang.Override
+      public DataTransformationOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DataTransformationOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataTransformationOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataTransformationOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FieldListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.FieldList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> 
+        getFieldsList();
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getFields(int index);
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    int getFieldsCount();
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder> 
+        getFieldsOrBuilderList();
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder getFieldsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.FieldList}
+   */
+  public static final class FieldList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.FieldList)
+      FieldListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FieldList.newBuilder() to construct.
+    private FieldList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FieldList() {
+      fields_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FieldList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FieldList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fields_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fields_.add(
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fields_ = java.util.Collections.unmodifiableList(fields_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder.class);
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> fields_;
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> getFieldsList() {
+      return fields_;
+    }
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder> 
+        getFieldsOrBuilderList() {
+      return fields_;
+    }
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    @java.lang.Override
+    public int getFieldsCount() {
+      return fields_.size();
+    }
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getFields(int index) {
+      return fields_.get(index);
+    }
+    /**
+     * <pre>
+     * Column schema
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder getFieldsOrBuilder(
+        int index) {
+      return fields_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fields_.size(); i++) {
+        output.writeMessage(2, fields_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fields_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, fields_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) obj;
+
+      if (!getFieldsList()
+          .equals(other.getFieldsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFieldsCount() > 0) {
+        hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.FieldList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.FieldList)
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFieldsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (fieldsBuilder_ == null) {
+          fields_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          fieldsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList(this);
+        int from_bitField0_ = bitField0_;
+        if (fieldsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fields_ = java.util.Collections.unmodifiableList(fields_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fields_ = fields_;
+        } else {
+          result.fields_ = fieldsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance()) return this;
+        if (fieldsBuilder_ == null) {
+          if (!other.fields_.isEmpty()) {
+            if (fields_.isEmpty()) {
+              fields_ = other.fields_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFieldsIsMutable();
+              fields_.addAll(other.fields_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fields_.isEmpty()) {
+            if (fieldsBuilder_.isEmpty()) {
+              fieldsBuilder_.dispose();
+              fieldsBuilder_ = null;
+              fields_ = other.fields_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              fieldsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFieldsFieldBuilder() : null;
+            } else {
+              fieldsBuilder_.addAllMessages(other.fields_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> fields_ =
+        java.util.Collections.emptyList();
+      private void ensureFieldsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fields_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema>(fields_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder> fieldsBuilder_;
+
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> getFieldsList() {
+        if (fieldsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fields_);
+        } else {
+          return fieldsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public int getFieldsCount() {
+        if (fieldsBuilder_ == null) {
+          return fields_.size();
+        } else {
+          return fieldsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getFields(int index) {
+        if (fieldsBuilder_ == null) {
+          return fields_.get(index);
+        } else {
+          return fieldsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder setFields(
+          int index, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldsIsMutable();
+          fields_.set(index, value);
+          onChanged();
+        } else {
+          fieldsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder setFields(
+          int index, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder addFields(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldsIsMutable();
+          fields_.add(value);
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder addFields(
+          int index, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldsIsMutable();
+          fields_.add(index, value);
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder addFields(
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder addFields(
+          int index, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder addAllFields(
+          java.lang.Iterable<? extends yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> values) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fields_);
+          onChanged();
+        } else {
+          fieldsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder clearFields() {
+        if (fieldsBuilder_ == null) {
+          fields_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          fieldsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public Builder removeFields(int index) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.remove(index);
+          onChanged();
+        } else {
+          fieldsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder getFieldsBuilder(
+          int index) {
+        return getFieldsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder getFieldsOrBuilder(
+          int index) {
+        if (fieldsBuilder_ == null) {
+          return fields_.get(index);  } else {
+          return fieldsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder> 
+           getFieldsOrBuilderList() {
+        if (fieldsBuilder_ != null) {
+          return fieldsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fields_);
+        }
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder addFieldsBuilder() {
+        return getFieldsFieldBuilder().addBuilder(
+            yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder addFieldsBuilder(
+          int index) {
+        return getFieldsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Column schema
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder> 
+           getFieldsBuilderList() {
+        return getFieldsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder> 
+          getFieldsFieldBuilder() {
+        if (fieldsBuilder_ == null) {
+          fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchemaOrBuilder>(
+                  fields_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fields_ = null;
+        }
+        return fieldsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.FieldList)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.FieldList)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FieldList>
+        PARSER = new com.google.protobuf.AbstractParser<FieldList>() {
+      @java.lang.Override
+      public FieldList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FieldList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FieldList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FieldList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataSchemaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.DataSchema)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return Whether the fields field is set.
+     */
+    boolean hasFields();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return The fields.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder();
+
+    /**
+     * <code>string json_fields = 1;</code>
+     * @return Whether the jsonFields field is set.
+     */
+    boolean hasJsonFields();
+    /**
+     * <code>string json_fields = 1;</code>
+     * @return The jsonFields.
+     */
+    java.lang.String getJsonFields();
+    /**
+     * <code>string json_fields = 1;</code>
+     * @return The bytes for jsonFields.
+     */
+    com.google.protobuf.ByteString
+        getJsonFieldsBytes();
+
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.SchemaCase getSchemaCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.DataSchema}
+   */
+  public static final class DataSchema extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.DataSchema)
+      DataSchemaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataSchema.newBuilder() to construct.
+    private DataSchema(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataSchema() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataSchema();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DataSchema(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              schemaCase_ = 1;
+              schema_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder subBuilder = null;
+              if (schemaCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_).toBuilder();
+              }
+              schema_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_);
+                schema_ = subBuilder.buildPartial();
+              }
+              schemaCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.Builder.class);
+    }
+
+    private int schemaCase_ = 0;
+    private java.lang.Object schema_;
+    public enum SchemaCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FIELDS(2),
+      JSON_FIELDS(1),
+      SCHEMA_NOT_SET(0);
+      private final int value;
+      private SchemaCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SchemaCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SchemaCase forNumber(int value) {
+        switch (value) {
+          case 2: return FIELDS;
+          case 1: return JSON_FIELDS;
+          case 0: return SCHEMA_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SchemaCase
+    getSchemaCase() {
+      return SchemaCase.forNumber(
+          schemaCase_);
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return Whether the fields field is set.
+     */
+    @java.lang.Override
+    public boolean hasFields() {
+      return schemaCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return The fields.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields() {
+      if (schemaCase_ == 2) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder() {
+      if (schemaCase_ == 2) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+    }
+
+    public static final int JSON_FIELDS_FIELD_NUMBER = 1;
+    /**
+     * <code>string json_fields = 1;</code>
+     * @return Whether the jsonFields field is set.
+     */
+    public boolean hasJsonFields() {
+      return schemaCase_ == 1;
+    }
+    /**
+     * <code>string json_fields = 1;</code>
+     * @return The jsonFields.
+     */
+    public java.lang.String getJsonFields() {
+      java.lang.Object ref = "";
+      if (schemaCase_ == 1) {
+        ref = schema_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (schemaCase_ == 1) {
+          schema_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string json_fields = 1;</code>
+     * @return The bytes for jsonFields.
+     */
+    public com.google.protobuf.ByteString
+        getJsonFieldsBytes() {
+      java.lang.Object ref = "";
+      if (schemaCase_ == 1) {
+        ref = schema_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (schemaCase_ == 1) {
+          schema_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (schemaCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, schema_);
+      }
+      if (schemaCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (schemaCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, schema_);
+      }
+      if (schemaCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema) obj;
+
+      if (!getSchemaCase().equals(other.getSchemaCase())) return false;
+      switch (schemaCase_) {
+        case 2:
+          if (!getFields()
+              .equals(other.getFields())) return false;
+          break;
+        case 1:
+          if (!getJsonFields()
+              .equals(other.getJsonFields())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (schemaCase_) {
+        case 2:
+          hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+          hash = (53 * hash) + getFields().hashCode();
+          break;
+        case 1:
+          hash = (37 * hash) + JSON_FIELDS_FIELD_NUMBER;
+          hash = (53 * hash) + getJsonFields().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.DataSchema}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.DataSchema)
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchemaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        schemaCase_ = 0;
+        schema_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema(this);
+        if (schemaCase_ == 2) {
+          if (fieldsBuilder_ == null) {
+            result.schema_ = schema_;
+          } else {
+            result.schema_ = fieldsBuilder_.build();
+          }
+        }
+        if (schemaCase_ == 1) {
+          result.schema_ = schema_;
+        }
+        result.schemaCase_ = schemaCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.getDefaultInstance()) return this;
+        switch (other.getSchemaCase()) {
+          case FIELDS: {
+            mergeFields(other.getFields());
+            break;
+          }
+          case JSON_FIELDS: {
+            schemaCase_ = 1;
+            schema_ = other.schema_;
+            onChanged();
+            break;
+          }
+          case SCHEMA_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int schemaCase_ = 0;
+      private java.lang.Object schema_;
+      public SchemaCase
+          getSchemaCase() {
+        return SchemaCase.forNumber(
+            schemaCase_);
+      }
+
+      public Builder clearSchema() {
+        schemaCase_ = 0;
+        schema_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder> fieldsBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       * @return Whether the fields field is set.
+       */
+      @java.lang.Override
+      public boolean hasFields() {
+        return schemaCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       * @return The fields.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields() {
+        if (fieldsBuilder_ == null) {
+          if (schemaCase_ == 2) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+        } else {
+          if (schemaCase_ == 2) {
+            return fieldsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      public Builder setFields(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schema_ = value;
+          onChanged();
+        } else {
+          fieldsBuilder_.setMessage(value);
+        }
+        schemaCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      public Builder setFields(
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          schema_ = builderForValue.build();
+          onChanged();
+        } else {
+          fieldsBuilder_.setMessage(builderForValue.build());
+        }
+        schemaCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      public Builder mergeFields(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList value) {
+        if (fieldsBuilder_ == null) {
+          if (schemaCase_ == 2 &&
+              schema_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance()) {
+            schema_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            schema_ = value;
+          }
+          onChanged();
+        } else {
+          if (schemaCase_ == 2) {
+            fieldsBuilder_.mergeFrom(value);
+          }
+          fieldsBuilder_.setMessage(value);
+        }
+        schemaCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      public Builder clearFields() {
+        if (fieldsBuilder_ == null) {
+          if (schemaCase_ == 2) {
+            schemaCase_ = 0;
+            schema_ = null;
+            onChanged();
+          }
+        } else {
+          if (schemaCase_ == 2) {
+            schemaCase_ = 0;
+            schema_ = null;
+          }
+          fieldsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder getFieldsBuilder() {
+        return getFieldsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder() {
+        if ((schemaCase_ == 2) && (fieldsBuilder_ != null)) {
+          return fieldsBuilder_.getMessageOrBuilder();
+        } else {
+          if (schemaCase_ == 2) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder> 
+          getFieldsFieldBuilder() {
+        if (fieldsBuilder_ == null) {
+          if (!(schemaCase_ == 2)) {
+            schema_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+          }
+          fieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_,
+                  getParentForChildren(),
+                  isClean());
+          schema_ = null;
+        }
+        schemaCase_ = 2;
+        onChanged();;
+        return fieldsBuilder_;
+      }
+
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return Whether the jsonFields field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonFields() {
+        return schemaCase_ == 1;
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return The jsonFields.
+       */
+      @java.lang.Override
+      public java.lang.String getJsonFields() {
+        java.lang.Object ref = "";
+        if (schemaCase_ == 1) {
+          ref = schema_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (schemaCase_ == 1) {
+            schema_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return The bytes for jsonFields.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJsonFieldsBytes() {
+        java.lang.Object ref = "";
+        if (schemaCase_ == 1) {
+          ref = schema_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (schemaCase_ == 1) {
+            schema_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @param value The jsonFields to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonFields(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  schemaCase_ = 1;
+        schema_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonFields() {
+        if (schemaCase_ == 1) {
+          schemaCase_ = 0;
+          schema_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @param value The bytes for jsonFields to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonFieldsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        schemaCase_ = 1;
+        schema_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.DataSchema)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.DataSchema)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataSchema>
+        PARSER = new com.google.protobuf.AbstractParser<DataSchema>() {
+      @java.lang.Override
+      public DataSchema parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DataSchema(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataSchema> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataSchema> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NoAuthOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.NoAuth)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * No authentication
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.NoAuth}
+   */
+  public static final class NoAuth extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datatransfer.v1.endpoint.NoAuth)
+      NoAuthOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NoAuth.newBuilder() to construct.
+    private NoAuth(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NoAuth() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NoAuth();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NoAuth(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth other = (yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * No authentication
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.NoAuth}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datatransfer.v1.endpoint.NoAuth)
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuthOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.class, yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth getDefaultInstanceForType() {
+        return yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth build() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth buildPartial() {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth) {
+          return mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth other) {
+        if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datatransfer.v1.endpoint.NoAuth)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datatransfer.v1.endpoint.NoAuth)
+    private static final yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth();
+    }
+
+    public static yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NoAuth>
+        PARSER = new com.google.protobuf.AbstractParser<NoAuth>() {
+      @java.lang.Override
+      public NoAuth parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NoAuth(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NoAuth> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NoAuth> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.NoAuth getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_endpoint_AltName_descriptor;
   private static final 
@@ -4073,6 +8998,11 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_endpoint_Secret_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSMode_descriptor;
   private static final 
@@ -4088,6 +9018,26 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datatransfer_v1_endpoint_ColumnValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4102,21 +9052,40 @@ public final class Common {
       "v1.endpoint\032\033google/protobuf/empty.proto" +
       "\"-\n\007AltName\022\021\n\tfrom_name\030\001 \001(\t\022\017\n\007to_nam" +
       "e\030\002 \001(\t\" \n\006Secret\022\r\n\003raw\030\001 \001(\tH\000B\007\n\005valu" +
-      "e\"\206\001\n\007TLSMode\022*\n\010disabled\030\001 \001(\0132\026.google" +
-      ".protobuf.EmptyH\000\022C\n\007enabled\030\002 \001(\01320.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.TLSCo" +
-      "nfigH\000B\n\n\010tls_mode\"#\n\tTLSConfig\022\026\n\016ca_ce" +
-      "rtificate\030\001 \001(\t\".\n\013ColumnValue\022\026\n\014string" +
-      "_value\030\001 \001(\tH\000B\007\n\005value*h\n\023ObjectTransfe" +
-      "rStage\022%\n!OBJECT_TRANSFER_STAGE_UNSPECIF" +
-      "IED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t" +
-      "\n\005NEVER\020\003*U\n\rCleanupPolicy\022\036\n\032CLEANUP_PO" +
-      "LICY_UNSPECIFIED\020\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP" +
-      "\020\002\022\014\n\010TRUNCATE\020\003B\247\001\n)yandex.cloud.api.da" +
-      "tatransfer.v1.endpointZRgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/datatra" +
-      "nsfer/v1/endpoint;endpoint\252\002%Yandex.Clou" +
-      "d.Datatransfer.V1.EndPointb\006proto3"
+      "e\"\207\001\n\tColSchema\022\014\n\004name\030\001 \001(\t\022?\n\004type\030\002 " +
+      "\001(\01621.yandex.cloud.datatransfer.v1.endpo" +
+      "int.ColumnType\022\013\n\003key\030\003 \001(\010\022\020\n\010required\030" +
+      "\004 \001(\010\022\014\n\004path\030\005 \001(\t\"\206\001\n\007TLSMode\022*\n\010disab" +
+      "led\030\001 \001(\0132\026.google.protobuf.EmptyH\000\022C\n\007e" +
+      "nabled\030\002 \001(\01320.yandex.cloud.datatransfer" +
+      ".v1.endpoint.TLSConfigH\000B\n\n\010tls_mode\"#\n\t" +
+      "TLSConfig\022\026\n\016ca_certificate\030\001 \001(\t\".\n\013Col" +
+      "umnValue\022\026\n\014string_value\030\001 \001(\tH\000B\007\n\005valu" +
+      "e\"\272\001\n\031DataTransformationOptions\022\026\n\016cloud" +
+      "_function\030\001 \001(\t\022\032\n\022service_account_id\030\010 " +
+      "\001(\t\022\031\n\021number_of_retries\030\002 \001(\003\022\023\n\013buffer" +
+      "_size\030\003 \001(\t\022\035\n\025buffer_flush_interval\030\004 \001" +
+      "(\t\022\032\n\022invocation_timeout\030\005 \001(\t\"M\n\tFieldL" +
+      "ist\022@\n\006fields\030\002 \003(\01320.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.ColSchema\"q\n\nDataSch" +
+      "ema\022B\n\006fields\030\002 \001(\01320.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.FieldListH\000\022\025\n\013json_" +
+      "fields\030\001 \001(\tH\000B\010\n\006schema\"\010\n\006NoAuth*h\n\023Ob" +
+      "jectTransferStage\022%\n!OBJECT_TRANSFER_STA" +
+      "GE_UNSPECIFIED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFT" +
+      "ER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rCleanupPolicy\022\036\n" +
+      "\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\014\n\010DISABLE" +
+      "D\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*\311\001\n\nColumnTy" +
+      "pe\022\033\n\027COLUMN_TYPE_UNSPECIFIED\020\000\022\t\n\005INT64" +
+      "\020\016\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006UI" +
+      "NT64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8\020" +
+      "\007\022\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022\010" +
+      "\n\004UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\rB\247\001\n)yand" +
+      "ex.cloud.api.datatransfer.v1.endpointZRg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/datatransfer/v1/endpoint;endpoin" +
+      "t\252\002%Yandex.Cloud.Datatransfer.V1.EndPoin" +
+      "tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4135,24 +9104,54 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_Secret_descriptor,
         new java.lang.String[] { "Raw", "Value", });
-    internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSMode_descriptor =
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_ColSchema_descriptor,
+        new java.lang.String[] { "Name", "Type", "Key", "Required", "Path", });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSMode_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSMode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSMode_descriptor,
         new java.lang.String[] { "Disabled", "Enabled", "TlsMode", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSConfig_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_TLSConfig_descriptor,
         new java.lang.String[] { "CaCertificate", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ColumnValue_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ColumnValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ColumnValue_descriptor,
         new java.lang.String[] { "StringValue", "Value", });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor,
+        new java.lang.String[] { "CloudFunction", "ServiceAccountId", "NumberOfRetries", "BufferSize", "BufferFlushInterval", "InvocationTimeout", });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor,
+        new java.lang.String[] { "Fields", });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor,
+        new java.lang.String[] { "Fields", "JsonFields", "Schema", });
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

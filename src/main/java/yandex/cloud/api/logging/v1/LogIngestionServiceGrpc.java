@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
+ * A set of methods for writing to log groups.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -95,7 +95,7 @@ public final class LogIngestionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
+   * A set of methods for writing to log groups.
    * </pre>
    */
   public static abstract class LogIngestionServiceImplBase implements io.grpc.BindableService {
@@ -125,7 +125,7 @@ public final class LogIngestionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
+   * A set of methods for writing to log groups.
    * </pre>
    */
   public static final class LogIngestionServiceStub extends io.grpc.stub.AbstractAsyncStub<LogIngestionServiceStub> {
@@ -154,7 +154,7 @@ public final class LogIngestionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
+   * A set of methods for writing to log groups.
    * </pre>
    */
   public static final class LogIngestionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LogIngestionServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class LogIngestionServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for writing to log groups. To make a request use `ingester.logging.yandexcloud.net`.
+   * A set of methods for writing to log groups.
    * </pre>
    */
   public static final class LogIngestionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LogIngestionServiceFutureStub> {

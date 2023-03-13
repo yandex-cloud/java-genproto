@@ -4756,6 +4756,36 @@ public final class UserServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getGrantsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UpdateUserRequest}
@@ -4886,6 +4916,19 @@ public final class UserServiceOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               grants_.add(s);
+              break;
+            }
+            case 82: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5306,6 +5349,47 @@ public final class UserServiceOuterClass {
       return grants_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 10;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5346,6 +5430,9 @@ public final class UserServiceOuterClass {
       }
       for (int i = 0; i < grants_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, grants_.getRaw(i));
+      }
+      if (deletionProtection_ != null) {
+        output.writeMessage(10, getDeletionProtection());
       }
       unknownFields.writeTo(output);
     }
@@ -5393,6 +5480,10 @@ public final class UserServiceOuterClass {
         size += dataSize;
         size += 1 * getGrantsList().size();
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5435,6 +5526,11 @@ public final class UserServiceOuterClass {
       }
       if (!getGrantsList()
           .equals(other.getGrantsList())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5474,6 +5570,10 @@ public final class UserServiceOuterClass {
       if (getGrantsCount() > 0) {
         hash = (37 * hash) + GRANTS_FIELD_NUMBER;
         hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5643,6 +5743,12 @@ public final class UserServiceOuterClass {
         }
         grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -5703,6 +5809,11 @@ public final class UserServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.grants_ = grants_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5810,6 +5921,9 @@ public final class UserServiceOuterClass {
             grants_.addAll(other.grants_);
           }
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7094,6 +7208,170 @@ public final class UserServiceOuterClass {
         grants_.add(value);
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13284,7 +13562,7 @@ public final class UserServiceOuterClass {
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec\030\002 \001(\0132(" +
       ".yandex.cloud.mdb.postgresql.v1.UserSpec" +
       "B\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\252\003\n\021UpdateUs" +
+      "id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\343\003\n\021UpdateUs" +
       "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r" +
       "[a-zA-Z0-9_]*\022/\n\013update_mask\030\003 \001(\0132\032.goo" +
@@ -13295,65 +13573,66 @@ public final class UserServiceOuterClass {
       " \001(\0132,.yandex.cloud.mdb.postgresql.v1.Us" +
       "erSettings\022)\n\005login\030\010 \001(\0132\032.google.proto" +
       "buf.BoolValue\022)\n\006grants\030\t \003(\tB\031\212\3101\004<=63\362" +
-      "\3071\r[a-zA-Z0-9_]*\";\n\022UpdateUserMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"g\n" +
-      "\021DeleteUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101" +
-      "\004<=63\362\3071\r[a-zA-Z0-9_]*\";\n\022DeleteUserMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 " +
-      "\001(\t\"\266\001\n\032GrantUserPermissionRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_nam" +
-      "e\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022D" +
-      "\n\npermission\030\003 \001(\0132*.yandex.cloud.mdb.po" +
-      "stgresql.v1.PermissionB\004\350\3071\001\"D\n\033GrantUse" +
-      "rPermissionMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
-      "\021\n\tuser_name\030\002 \001(\t\"\250\001\n\033RevokeUserPermiss" +
-      "ionRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071" +
-      "\r[a-zA-Z0-9_]*\0225\n\rdatabase_name\030\003 \001(\tB\036\350" +
-      "\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034RevokeU" +
-      "serPermissionMetadata\022\022\n\ncluster_id\030\001 \001(" +
-      "\t\022\021\n\tuser_name\030\002 \001(\t2\255\013\n\013UserService\022\243\001\n" +
-      "\003Get\022..yandex.cloud.mdb.postgresql.v1.Ge" +
-      "tUserRequest\032$.yandex.cloud.mdb.postgres" +
-      "ql.v1.User\"F\202\323\344\223\002@\022>/managed-postgresql/" +
-      "v1/clusters/{cluster_id}/users/{user_nam" +
-      "e}\022\247\001\n\004List\0220.yandex.cloud.mdb.postgresq" +
-      "l.v1.ListUsersRequest\0321.yandex.cloud.mdb" +
-      ".postgresql.v1.ListUsersResponse\":\202\323\344\223\0024" +
-      "\0222/managed-postgresql/v1/clusters/{clust" +
-      "er_id}/users\022\273\001\n\006Create\0221.yandex.cloud.m" +
-      "db.postgresql.v1.CreateUserRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"[\202\323\344\223\0027\"2/" +
-      "managed-postgresql/v1/clusters/{cluster_" +
-      "id}/users:\001*\262\322*\032\n\022CreateUserMetadata\022\004Us" +
-      "er\022\307\001\n\006Update\0221.yandex.cloud.mdb.postgre" +
-      "sql.v1.UpdateUserRequest\032!.yandex.cloud." +
-      "operation.Operation\"g\202\323\344\223\002C2>/managed-po" +
-      "stgresql/v1/clusters/{cluster_id}/users/" +
-      "{user_name}:\001*\262\322*\032\n\022UpdateUserMetadata\022\004" +
-      "User\022\325\001\n\006Delete\0221.yandex.cloud.mdb.postg" +
-      "resql.v1.DeleteUserRequest\032!.yandex.clou" +
-      "d.operation.Operation\"u\202\323\344\223\002@*>/managed-" +
-      "postgresql/v1/clusters/{cluster_id}/user" +
-      "s/{user_name}\262\322*+\n\022DeleteUserMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\363\001\n\017GrantPermission" +
-      "\022:.yandex.cloud.mdb.postgresql.v1.GrantU" +
-      "serPermissionRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\200\001\202\323\344\223\002S\"N/managed-postg" +
-      "resql/v1/clusters/{cluster_id}/users/{us" +
-      "er_name}:grantPermission:\001*\262\322*#\n\033GrantUs" +
-      "erPermissionMetadata\022\004User\022\367\001\n\020RevokePer" +
-      "mission\022;.yandex.cloud.mdb.postgresql.v1" +
-      ".RevokeUserPermissionRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\202\001\202\323\344\223\002T\"O/manag" +
-      "ed-postgresql/v1/clusters/{cluster_id}/u" +
-      "sers/{user_name}:revokePermission:\001*\262\322*$" +
-      "\n\034RevokeUserPermissionMetadata\022\004UserBs\n\"" +
-      "yandex.cloud.api.mdb.postgresql.v1ZMgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/postgresql/v1;postgresqlb\006proto" +
-      "3"
+      "\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_protection\030" +
+      "\n \001(\0132\032.google.protobuf.BoolValue\";\n\022Upd" +
+      "ateUserMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tu" +
+      "ser_name\030\002 \001(\t\"g\n\021DeleteUserRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_na" +
+      "me\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\"" +
+      ";\n\022DeleteUserMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\022\021\n\tuser_name\030\002 \001(\t\"\266\001\n\032GrantUserPermis" +
+      "sionRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\307" +
+      "1\r[a-zA-Z0-9_]*\022D\n\npermission\030\003 \001(\0132*.ya" +
+      "ndex.cloud.mdb.postgresql.v1.PermissionB" +
+      "\004\350\3071\001\"D\n\033GrantUserPermissionMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\250\001\n\033" +
+      "RevokeUserPermissionRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\t" +
+      "B\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\0225\n\rdatab" +
+      "ase_name\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
+      "-9_-]*\"E\n\034RevokeUserPermissionMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t2\255\013" +
+      "\n\013UserService\022\243\001\n\003Get\022..yandex.cloud.mdb" +
+      ".postgresql.v1.GetUserRequest\032$.yandex.c" +
+      "loud.mdb.postgresql.v1.User\"F\202\323\344\223\002@\022>/ma" +
+      "naged-postgresql/v1/clusters/{cluster_id" +
+      "}/users/{user_name}\022\247\001\n\004List\0220.yandex.cl" +
+      "oud.mdb.postgresql.v1.ListUsersRequest\0321" +
+      ".yandex.cloud.mdb.postgresql.v1.ListUser" +
+      "sResponse\":\202\323\344\223\0024\0222/managed-postgresql/v" +
+      "1/clusters/{cluster_id}/users\022\273\001\n\006Create" +
+      "\0221.yandex.cloud.mdb.postgresql.v1.Create" +
+      "UserRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"[\202\323\344\223\0027\"2/managed-postgresql/v1/c" +
+      "lusters/{cluster_id}/users:\001*\262\322*\032\n\022Creat" +
+      "eUserMetadata\022\004User\022\307\001\n\006Update\0221.yandex." +
+      "cloud.mdb.postgresql.v1.UpdateUserReques" +
+      "t\032!.yandex.cloud.operation.Operation\"g\202\323" +
+      "\344\223\002C2>/managed-postgresql/v1/clusters/{c" +
+      "luster_id}/users/{user_name}:\001*\262\322*\032\n\022Upd" +
+      "ateUserMetadata\022\004User\022\325\001\n\006Delete\0221.yande" +
+      "x.cloud.mdb.postgresql.v1.DeleteUserRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"u" +
+      "\202\323\344\223\002@*>/managed-postgresql/v1/clusters/" +
+      "{cluster_id}/users/{user_name}\262\322*+\n\022Dele" +
+      "teUserMetadata\022\025google.protobuf.Empty\022\363\001" +
+      "\n\017GrantPermission\022:.yandex.cloud.mdb.pos" +
+      "tgresql.v1.GrantUserPermissionRequest\032!." +
+      "yandex.cloud.operation.Operation\"\200\001\202\323\344\223\002" +
+      "S\"N/managed-postgresql/v1/clusters/{clus" +
+      "ter_id}/users/{user_name}:grantPermissio" +
+      "n:\001*\262\322*#\n\033GrantUserPermissionMetadata\022\004U" +
+      "ser\022\367\001\n\020RevokePermission\022;.yandex.cloud." +
+      "mdb.postgresql.v1.RevokeUserPermissionRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\202\001\202\323\344\223\002T\"O/managed-postgresql/v1/cluste" +
+      "rs/{cluster_id}/users/{user_name}:revoke" +
+      "Permission:\001*\262\322*$\n\034RevokeUserPermissionM" +
+      "etadata\022\004UserBs\n\"yandex.cloud.api.mdb.po" +
+      "stgresql.v1ZMgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/postgresql/v1;" +
+      "postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13401,7 +13680,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_fieldAccessorTable = new

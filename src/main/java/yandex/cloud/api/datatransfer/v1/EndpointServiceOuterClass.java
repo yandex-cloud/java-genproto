@@ -609,10 +609,12 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The maximum number of endpoints to be sent in the response message. If the
-     * folder contains more endpoints than page_size, next_page_token will be included
-     * in the response message. Include it into the subsequent ListEndpointRequest to
-     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-     * for this field is 500.
+     * folder contains more endpoints than `page_size`, `next_page_token` will be
+     * included
+     * in the response message. Include it into the subsequent `ListEndpointRequest` to
+     * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+     * value
+     * for this field is `500`.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -623,8 +625,9 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the endpoints page to be fetched. Should be empty in
-     * the first ListEndpointsRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListEndpointsResponse.
+     * the first `ListEndpointsRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListEndpointsResponse`.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -634,8 +637,9 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the endpoints page to be fetched. Should be empty in
-     * the first ListEndpointsRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListEndpointsResponse.
+     * the first `ListEndpointsRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListEndpointsResponse`.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -791,10 +795,12 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The maximum number of endpoints to be sent in the response message. If the
-     * folder contains more endpoints than page_size, next_page_token will be included
-     * in the response message. Include it into the subsequent ListEndpointRequest to
-     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-     * for this field is 500.
+     * folder contains more endpoints than `page_size`, `next_page_token` will be
+     * included
+     * in the response message. Include it into the subsequent `ListEndpointRequest` to
+     * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+     * value
+     * for this field is `500`.
      * </pre>
      *
      * <code>int64 page_size = 2;</code>
@@ -810,8 +816,9 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the endpoints page to be fetched. Should be empty in
-     * the first ListEndpointsRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListEndpointsResponse.
+     * the first `ListEndpointsRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListEndpointsResponse`.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -833,8 +840,9 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the endpoints page to be fetched. Should be empty in
-     * the first ListEndpointsRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListEndpointsResponse.
+     * the first `ListEndpointsRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListEndpointsResponse`.
      * </pre>
      *
      * <code>string page_token = 3;</code>
@@ -1292,10 +1300,12 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The maximum number of endpoints to be sent in the response message. If the
-       * folder contains more endpoints than page_size, next_page_token will be included
-       * in the response message. Include it into the subsequent ListEndpointRequest to
-       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-       * for this field is 500.
+       * folder contains more endpoints than `page_size`, `next_page_token` will be
+       * included
+       * in the response message. Include it into the subsequent `ListEndpointRequest` to
+       * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+       * value
+       * for this field is `500`.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -1308,10 +1318,12 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The maximum number of endpoints to be sent in the response message. If the
-       * folder contains more endpoints than page_size, next_page_token will be included
-       * in the response message. Include it into the subsequent ListEndpointRequest to
-       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-       * for this field is 500.
+       * folder contains more endpoints than `page_size`, `next_page_token` will be
+       * included
+       * in the response message. Include it into the subsequent `ListEndpointRequest` to
+       * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+       * value
+       * for this field is `500`.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -1327,10 +1339,12 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The maximum number of endpoints to be sent in the response message. If the
-       * folder contains more endpoints than page_size, next_page_token will be included
-       * in the response message. Include it into the subsequent ListEndpointRequest to
-       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-       * for this field is 500.
+       * folder contains more endpoints than `page_size`, `next_page_token` will be
+       * included
+       * in the response message. Include it into the subsequent `ListEndpointRequest` to
+       * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+       * value
+       * for this field is `500`.
        * </pre>
        *
        * <code>int64 page_size = 2;</code>
@@ -1347,8 +1361,9 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the endpoints page to be fetched. Should be empty in
-       * the first ListEndpointsRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListEndpointsResponse.
+       * the first `ListEndpointsRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListEndpointsResponse`.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -1369,8 +1384,9 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the endpoints page to be fetched. Should be empty in
-       * the first ListEndpointsRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListEndpointsResponse.
+       * the first `ListEndpointsRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListEndpointsResponse`.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -1392,8 +1408,9 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the endpoints page to be fetched. Should be empty in
-       * the first ListEndpointsRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListEndpointsResponse.
+       * the first `ListEndpointsRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListEndpointsResponse`.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -1413,8 +1430,9 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the endpoints page to be fetched. Should be empty in
-       * the first ListEndpointsRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListEndpointsResponse.
+       * the first `ListEndpointsRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListEndpointsResponse`.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -1429,8 +1447,9 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the endpoints page to be fetched. Should be empty in
-       * the first ListEndpointsRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListEndpointsResponse.
+       * the first `ListEndpointsRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListEndpointsResponse`.
        * </pre>
        *
        * <code>string page_token = 3;</code>
@@ -1508,8 +1527,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1519,8 +1538,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1529,8 +1548,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1539,8 +1558,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1550,8 +1569,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1562,8 +1581,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the next endpoints page. This field is empty if there
-     * are no more endpoints in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+     * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
      * page.
      * </pre>
      *
@@ -1574,8 +1593,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the next endpoints page. This field is empty if there
-     * are no more endpoints in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+     * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
      * page.
      * </pre>
      *
@@ -1688,8 +1707,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1701,8 +1720,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1715,8 +1734,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1728,8 +1747,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1741,8 +1760,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * The list of endpoints. If there are more endpoints in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListEndpointsRequest to fetch the next endpoints page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListEndpointsRequest` to fetch the next endpoints page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -1758,8 +1777,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the next endpoints page. This field is empty if there
-     * are no more endpoints in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+     * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
      * page.
      * </pre>
      *
@@ -1782,8 +1801,8 @@ public final class EndpointServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the next endpoints page. This field is empty if there
-     * are no more endpoints in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+     * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+     * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
      * page.
      * </pre>
      *
@@ -2179,8 +2198,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2195,8 +2214,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2211,8 +2230,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2227,8 +2246,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2250,8 +2269,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2270,8 +2289,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2292,8 +2311,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2315,8 +2334,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2335,8 +2354,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2355,8 +2374,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2376,8 +2395,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2395,8 +2414,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2414,8 +2433,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2427,8 +2446,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2443,8 +2462,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2460,8 +2479,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2473,8 +2492,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2487,8 +2506,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * The list of endpoints. If there are more endpoints in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListEndpointsRequest to fetch the next endpoints page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListEndpointsRequest` to fetch the next endpoints page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Endpoint endpoints = 1;</code>
@@ -2516,8 +2535,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the next endpoints page. This field is empty if there
-       * are no more endpoints in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+       * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
        * page.
        * </pre>
        *
@@ -2539,8 +2558,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the next endpoints page. This field is empty if there
-       * are no more endpoints in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+       * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
        * page.
        * </pre>
        *
@@ -2563,8 +2582,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the next endpoints page. This field is empty if there
-       * are no more endpoints in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+       * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
        * page.
        * </pre>
        *
@@ -2585,8 +2604,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the next endpoints page. This field is empty if there
-       * are no more endpoints in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+       * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
        * page.
        * </pre>
        *
@@ -2602,8 +2621,8 @@ public final class EndpointServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the next endpoints page. This field is empty if there
-       * are no more endpoints in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListEndpointsRequest to fetch the next endpoints
+       * are no more endpoints in the folder. Otherwise, it is non-empty and should be
+       * included in the subsequent `ListEndpointsRequest` to fetch the next endpoints
        * page.
        * </pre>
        *
@@ -4766,8 +4785,8 @@ public final class EndpointServiceOuterClass {
      * <pre>
      * Field mask specifying endpoint fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -4779,8 +4798,8 @@ public final class EndpointServiceOuterClass {
      * <pre>
      * Field mask specifying endpoint fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -4792,8 +4811,8 @@ public final class EndpointServiceOuterClass {
      * <pre>
      * Field mask specifying endpoint fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -5214,8 +5233,8 @@ public final class EndpointServiceOuterClass {
      * <pre>
      * Field mask specifying endpoint fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -5230,8 +5249,8 @@ public final class EndpointServiceOuterClass {
      * <pre>
      * Field mask specifying endpoint fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -5246,8 +5265,8 @@ public final class EndpointServiceOuterClass {
      * <pre>
      * Field mask specifying endpoint fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -6286,8 +6305,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6301,8 +6320,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6320,8 +6339,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6344,8 +6363,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6366,8 +6385,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6392,8 +6411,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6414,8 +6433,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6430,8 +6449,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -6449,8 +6468,8 @@ public final class EndpointServiceOuterClass {
        * <pre>
        * Field mask specifying endpoint fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *

@@ -2282,8 +2282,8 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Field mask specifying transfer fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -2295,8 +2295,8 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Field mask specifying transfer fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -2308,8 +2308,8 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Field mask specifying transfer fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -2679,8 +2679,8 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Field mask specifying transfer fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -2695,8 +2695,8 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Field mask specifying transfer fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -2711,8 +2711,8 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Field mask specifying transfer fields to be updated. Semantics for this field is
      * described here:
-     * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-     * The only exception is that if the repeated field is specified in the mask, then
+     * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+     * The only exception: if the repeated field is specified in the mask, then
      * the new value replaces the old one instead of being appended to the old one.
      * </pre>
      *
@@ -3566,8 +3566,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3581,8 +3581,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3600,8 +3600,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3624,8 +3624,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3646,8 +3646,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3672,8 +3672,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3694,8 +3694,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3710,8 +3710,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -3729,8 +3729,8 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Field mask specifying transfer fields to be updated. Semantics for this field is
        * described here:
-       * https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask
-       * The only exception is that if the repeated field is specified in the mask, then
+       * &lt;https://pkg.go.dev/google.golang.org/protobuf/types/known/fieldmaskpb#FieldMask&gt;
+       * The only exception: if the repeated field is specified in the mask, then
        * the new value replaces the old one instead of being appended to the old one.
        * </pre>
        *
@@ -5533,10 +5533,13 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The maximum number of transfers to be sent in the response message. If the
-     * folder contains more transfers than page_size, next_page_token will be included
-     * in the response message. Include it into the subsequent ListTransfersRequest to
-     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-     * for this field is 500.
+     * folder contains more transfers than `page_size`, `next_page_token` will be
+     * included
+     * in the response message. Include it into the subsequent `ListTransfersRequest`
+     * to
+     * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+     * value
+     * for this field is `500`.
      * </pre>
      *
      * <code>int64 page_size = 3;</code>
@@ -5547,8 +5550,9 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the transfers page to be fetched. Should be empty in
-     * the first ListTransfersRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListTransfersResponse.
+     * the first `ListTransfersRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListTransfersResponse`.
      * </pre>
      *
      * <code>string page_token = 4;</code>
@@ -5558,8 +5562,9 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the transfers page to be fetched. Should be empty in
-     * the first ListTransfersRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListTransfersResponse.
+     * the first `ListTransfersRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListTransfersResponse`.
      * </pre>
      *
      * <code>string page_token = 4;</code>
@@ -5715,10 +5720,13 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The maximum number of transfers to be sent in the response message. If the
-     * folder contains more transfers than page_size, next_page_token will be included
-     * in the response message. Include it into the subsequent ListTransfersRequest to
-     * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-     * for this field is 500.
+     * folder contains more transfers than `page_size`, `next_page_token` will be
+     * included
+     * in the response message. Include it into the subsequent `ListTransfersRequest`
+     * to
+     * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+     * value
+     * for this field is `500`.
      * </pre>
      *
      * <code>int64 page_size = 3;</code>
@@ -5734,8 +5742,9 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the transfers page to be fetched. Should be empty in
-     * the first ListTransfersRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListTransfersResponse.
+     * the first `ListTransfersRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListTransfersResponse`.
      * </pre>
      *
      * <code>string page_token = 4;</code>
@@ -5757,8 +5766,9 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * Opaque value identifying the transfers page to be fetched. Should be empty in
-     * the first ListTransfersRequest. Subsequent request should have this field filled
-     * with the next_page_token from the previous ListTransfersResponse.
+     * the first `ListTransfersRequest`. Subsequent requests should have this field
+     * filled
+     * with the `next_page_token` from the previous `ListTransfersResponse`.
      * </pre>
      *
      * <code>string page_token = 4;</code>
@@ -6216,10 +6226,13 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The maximum number of transfers to be sent in the response message. If the
-       * folder contains more transfers than page_size, next_page_token will be included
-       * in the response message. Include it into the subsequent ListTransfersRequest to
-       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-       * for this field is 500.
+       * folder contains more transfers than `page_size`, `next_page_token` will be
+       * included
+       * in the response message. Include it into the subsequent `ListTransfersRequest`
+       * to
+       * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+       * value
+       * for this field is `500`.
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
@@ -6232,10 +6245,13 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The maximum number of transfers to be sent in the response message. If the
-       * folder contains more transfers than page_size, next_page_token will be included
-       * in the response message. Include it into the subsequent ListTransfersRequest to
-       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-       * for this field is 500.
+       * folder contains more transfers than `page_size`, `next_page_token` will be
+       * included
+       * in the response message. Include it into the subsequent `ListTransfersRequest`
+       * to
+       * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+       * value
+       * for this field is `500`.
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
@@ -6251,10 +6267,13 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The maximum number of transfers to be sent in the response message. If the
-       * folder contains more transfers than page_size, next_page_token will be included
-       * in the response message. Include it into the subsequent ListTransfersRequest to
-       * fetch the next page. Defaults to 100 if not specified. The maximum allowed value
-       * for this field is 500.
+       * folder contains more transfers than `page_size`, `next_page_token` will be
+       * included
+       * in the response message. Include it into the subsequent `ListTransfersRequest`
+       * to
+       * fetch the next page. Defaults to `100` if not specified. The maximum allowed
+       * value
+       * for this field is `500`.
        * </pre>
        *
        * <code>int64 page_size = 3;</code>
@@ -6271,8 +6290,9 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the transfers page to be fetched. Should be empty in
-       * the first ListTransfersRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListTransfersResponse.
+       * the first `ListTransfersRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListTransfersResponse`.
        * </pre>
        *
        * <code>string page_token = 4;</code>
@@ -6293,8 +6313,9 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the transfers page to be fetched. Should be empty in
-       * the first ListTransfersRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListTransfersResponse.
+       * the first `ListTransfersRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListTransfersResponse`.
        * </pre>
        *
        * <code>string page_token = 4;</code>
@@ -6316,8 +6337,9 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the transfers page to be fetched. Should be empty in
-       * the first ListTransfersRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListTransfersResponse.
+       * the first `ListTransfersRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListTransfersResponse`.
        * </pre>
        *
        * <code>string page_token = 4;</code>
@@ -6337,8 +6359,9 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the transfers page to be fetched. Should be empty in
-       * the first ListTransfersRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListTransfersResponse.
+       * the first `ListTransfersRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListTransfersResponse`.
        * </pre>
        *
        * <code>string page_token = 4;</code>
@@ -6353,8 +6376,9 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * Opaque value identifying the transfers page to be fetched. Should be empty in
-       * the first ListTransfersRequest. Subsequent request should have this field filled
-       * with the next_page_token from the previous ListTransfersResponse.
+       * the first `ListTransfersRequest`. Subsequent requests should have this field
+       * filled
+       * with the `next_page_token` from the previous `ListTransfersResponse`.
        * </pre>
        *
        * <code>string page_token = 4;</code>
@@ -6432,8 +6456,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6443,8 +6467,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6453,8 +6477,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6463,8 +6487,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6474,8 +6498,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6487,7 +6511,7 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Opaque value identifying the next transfers page. This field is empty if there
      * are no more transfers in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * included in the subsequent `ListTransfersRequest` to fetch the next transfers
      * page.
      * </pre>
      *
@@ -6499,7 +6523,7 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Opaque value identifying the next transfers page. This field is empty if there
      * are no more transfers in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * included in the subsequent `ListTransfersRequest` to fetch the next transfers
      * page.
      * </pre>
      *
@@ -6612,8 +6636,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6625,8 +6649,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6639,8 +6663,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6652,8 +6676,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6665,8 +6689,8 @@ public final class TransferServiceOuterClass {
     /**
      * <pre>
      * The list of transfers. If there are more transfers in the folder, then
-     * next_page_token is a non-empty string to be included into the subsequent
-     * ListTransfersRequest to fetch the next transfers page.
+     * `next_page_token` is a non-empty string to be included into the subsequent
+     * `ListTransfersRequest` to fetch the next transfers page.
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -6683,7 +6707,7 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Opaque value identifying the next transfers page. This field is empty if there
      * are no more transfers in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * included in the subsequent `ListTransfersRequest` to fetch the next transfers
      * page.
      * </pre>
      *
@@ -6707,7 +6731,7 @@ public final class TransferServiceOuterClass {
      * <pre>
      * Opaque value identifying the next transfers page. This field is empty if there
      * are no more transfers in the folder. Otherwise it is non-empty and should be
-     * included in the subsequent ListTransfersRequest to fetch the next transfers
+     * included in the subsequent `ListTransfersRequest` to fetch the next transfers
      * page.
      * </pre>
      *
@@ -7103,8 +7127,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7119,8 +7143,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7135,8 +7159,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7151,8 +7175,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7174,8 +7198,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7194,8 +7218,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7216,8 +7240,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7239,8 +7263,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7259,8 +7283,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7279,8 +7303,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7300,8 +7324,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7319,8 +7343,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7338,8 +7362,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7351,8 +7375,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7367,8 +7391,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7384,8 +7408,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7397,8 +7421,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7411,8 +7435,8 @@ public final class TransferServiceOuterClass {
       /**
        * <pre>
        * The list of transfers. If there are more transfers in the folder, then
-       * next_page_token is a non-empty string to be included into the subsequent
-       * ListTransfersRequest to fetch the next transfers page.
+       * `next_page_token` is a non-empty string to be included into the subsequent
+       * `ListTransfersRequest` to fetch the next transfers page.
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.Transfer transfers = 1;</code>
@@ -7441,7 +7465,7 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Opaque value identifying the next transfers page. This field is empty if there
        * are no more transfers in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * included in the subsequent `ListTransfersRequest` to fetch the next transfers
        * page.
        * </pre>
        *
@@ -7464,7 +7488,7 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Opaque value identifying the next transfers page. This field is empty if there
        * are no more transfers in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * included in the subsequent `ListTransfersRequest` to fetch the next transfers
        * page.
        * </pre>
        *
@@ -7488,7 +7512,7 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Opaque value identifying the next transfers page. This field is empty if there
        * are no more transfers in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * included in the subsequent `ListTransfersRequest` to fetch the next transfers
        * page.
        * </pre>
        *
@@ -7510,7 +7534,7 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Opaque value identifying the next transfers page. This field is empty if there
        * are no more transfers in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * included in the subsequent `ListTransfersRequest` to fetch the next transfers
        * page.
        * </pre>
        *
@@ -7527,7 +7551,7 @@ public final class TransferServiceOuterClass {
        * <pre>
        * Opaque value identifying the next transfers page. This field is empty if there
        * are no more transfers in the folder. Otherwise it is non-empty and should be
-       * included in the subsequent ListTransfersRequest to fetch the next transfers
+       * included in the subsequent `ListTransfersRequest` to fetch the next transfers
        * page.
        * </pre>
        *

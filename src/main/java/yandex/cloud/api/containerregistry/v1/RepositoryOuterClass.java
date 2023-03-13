@@ -62,7 +62,7 @@ public final class RepositoryOuterClass {
   }
   /**
    * <pre>
-   * A Repository resource. For more information, see [Repository](/docs/cloud/container-registry/repository).
+   * A Repository resource. For more information, see [Repository](/docs/container-registry/concepts/repository).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.containerregistry.v1.Repository}
@@ -415,7 +415,7 @@ public final class RepositoryOuterClass {
     }
     /**
      * <pre>
-     * A Repository resource. For more information, see [Repository](/docs/cloud/container-registry/repository).
+     * A Repository resource. For more information, see [Repository](/docs/container-registry/concepts/repository).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.containerregistry.v1.Repository}

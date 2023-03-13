@@ -174,34 +174,66 @@ public final class TransferOuterClass {
      */
     TRANSFER_STATUS_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Transfer does some work before running
+     * </pre>
+     *
      * <code>CREATING = 1;</code>
      */
     CREATING(1),
     /**
+     * <pre>
+     * Transfer created but not started by user
+     * </pre>
+     *
      * <code>CREATED = 2;</code>
      */
     CREATED(2),
     /**
+     * <pre>
+     * Transfer currently doing replication work
+     * </pre>
+     *
      * <code>RUNNING = 3;</code>
      */
     RUNNING(3),
     /**
+     * <pre>
+     * Transfer shutdown
+     * </pre>
+     *
      * <code>STOPPING = 4;</code>
      */
     STOPPING(4),
     /**
+     * <pre>
+     * Transfer stopped by user
+     * </pre>
+     *
      * <code>STOPPED = 5;</code>
      */
     STOPPED(5),
     /**
+     * <pre>
+     * Transfer stopped by system
+     * </pre>
+     *
      * <code>ERROR = 6;</code>
      */
     ERROR(6),
     /**
+     * <pre>
+     * Transfer copy snapshot
+     * </pre>
+     *
      * <code>SNAPSHOTTING = 7;</code>
      */
     SNAPSHOTTING(7),
     /**
+     * <pre>
+     * Transfer reach terminal phase
+     * </pre>
+     *
      * <code>DONE = 8;</code>
      */
     DONE(8),
@@ -213,34 +245,66 @@ public final class TransferOuterClass {
      */
     public static final int TRANSFER_STATUS_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Transfer does some work before running
+     * </pre>
+     *
      * <code>CREATING = 1;</code>
      */
     public static final int CREATING_VALUE = 1;
     /**
+     * <pre>
+     * Transfer created but not started by user
+     * </pre>
+     *
      * <code>CREATED = 2;</code>
      */
     public static final int CREATED_VALUE = 2;
     /**
+     * <pre>
+     * Transfer currently doing replication work
+     * </pre>
+     *
      * <code>RUNNING = 3;</code>
      */
     public static final int RUNNING_VALUE = 3;
     /**
+     * <pre>
+     * Transfer shutdown
+     * </pre>
+     *
      * <code>STOPPING = 4;</code>
      */
     public static final int STOPPING_VALUE = 4;
     /**
+     * <pre>
+     * Transfer stopped by user
+     * </pre>
+     *
      * <code>STOPPED = 5;</code>
      */
     public static final int STOPPED_VALUE = 5;
     /**
+     * <pre>
+     * Transfer stopped by system
+     * </pre>
+     *
      * <code>ERROR = 6;</code>
      */
     public static final int ERROR_VALUE = 6;
     /**
+     * <pre>
+     * Transfer copy snapshot
+     * </pre>
+     *
      * <code>SNAPSHOTTING = 7;</code>
      */
     public static final int SNAPSHOTTING_VALUE = 7;
     /**
+     * <pre>
+     * Transfer reach terminal phase
+     * </pre>
+     *
      * <code>DONE = 8;</code>
      */
     public static final int DONE_VALUE = 8;
@@ -486,6 +550,10 @@ public final class TransferOuterClass {
         getWarningBytes();
   }
   /**
+   * <pre>
+   * Transfer core entity
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.Transfer}
    */
   public static final class Transfer extends
@@ -1293,6 +1361,10 @@ public final class TransferOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Transfer core entity
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.Transfer}
      */
     public static final class Builder extends

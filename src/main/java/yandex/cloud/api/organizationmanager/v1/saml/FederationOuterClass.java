@@ -483,7 +483,7 @@ public final class FederationOuterClass {
   /**
    * <pre>
    * A federation.
-   * For more information, see [SAML-compatible identity federations](/docs/iam/concepts/users/identity-federations).
+   * For more information, see [SAML-compatible identity federations](/docs/iam/concepts/federations).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.Federation}
@@ -1559,7 +1559,7 @@ public final class FederationOuterClass {
     /**
      * <pre>
      * A federation.
-     * For more information, see [SAML-compatible identity federations](/docs/iam/concepts/users/identity-federations).
+     * For more information, see [SAML-compatible identity federations](/docs/iam/concepts/federations).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.Federation}

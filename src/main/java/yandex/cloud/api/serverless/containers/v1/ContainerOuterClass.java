@@ -9909,7 +9909,7 @@ public final class ContainerOuterClass {
      * Amount of memory available to the revision, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
      * @return The memory.
      */
     long getMemory();
@@ -10037,7 +10037,7 @@ public final class ContainerOuterClass {
      * Amount of memory available to the revision, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
      * @return The memory.
      */
     @java.lang.Override
@@ -10424,7 +10424,7 @@ public final class ContainerOuterClass {
        * Amount of memory available to the revision, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
        * @return The memory.
        */
       @java.lang.Override
@@ -10436,7 +10436,7 @@ public final class ContainerOuterClass {
        * Amount of memory available to the revision, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
        * @param value The memory to set.
        * @return This builder for chaining.
        */
@@ -10451,7 +10451,7 @@ public final class ContainerOuterClass {
        * Amount of memory available to the revision, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMemory() {
@@ -15285,7 +15285,7 @@ public final class ContainerOuterClass {
       "\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
       "ue\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007command\030\001 \003(\t" +
       "\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResources\022(\n\006m" +
-      "emory\030\001 \001(\003B\030\372\3071\024134217728-8589934592\022\026\n" +
+      "emory\030\001 \001(\003B\030\372\3071\024134217728-4294967296\022\026\n" +
       "\005cores\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_fraction\030\003" +
       " \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPolicy\022\025\n\rmi" +
       "n_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022" +

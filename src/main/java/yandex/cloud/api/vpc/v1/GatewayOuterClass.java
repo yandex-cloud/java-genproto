@@ -200,7 +200,7 @@ public final class GatewayOuterClass {
   }
   /**
    * <pre>
-   * A Gateway resource. For more information, see [Gateway](/docs/vpc/concepts/gateway).
+   * A Gateway resource. For more information, see [Gateway](/docs/vpc/concepts/gateways).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.Gateway}
@@ -999,7 +999,7 @@ public final class GatewayOuterClass {
     }
     /**
      * <pre>
-     * A Gateway resource. For more information, see [Gateway](/docs/vpc/concepts/gateway).
+     * A Gateway resource. For more information, see [Gateway](/docs/vpc/concepts/gateways).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.vpc.v1.Gateway}

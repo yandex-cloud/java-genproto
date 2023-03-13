@@ -247,7 +247,7 @@ public final class TargetGroupOuterClass {
   }
   /**
    * <pre>
-   * A TargetGroup resource. For more information, see [Target groups and resources](/docs/network-load-balancer/target-resources).
+   * A TargetGroup resource. For more information, see [Target groups and resources](/docs/network-load-balancer/concepts/target-resources).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.TargetGroup}
@@ -1087,7 +1087,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * A TargetGroup resource. For more information, see [Target groups and resources](/docs/network-load-balancer/target-resources).
+     * A TargetGroup resource. For more information, see [Target groups and resources](/docs/network-load-balancer/concepts/target-resources).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.TargetGroup}

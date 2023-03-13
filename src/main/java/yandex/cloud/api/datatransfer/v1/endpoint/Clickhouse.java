@@ -31,6 +31,10 @@ public final class Clickhouse {
      * <code>CLICKHOUSE_CLEANUP_POLICY_DROP = 2;</code>
      */
     CLICKHOUSE_CLEANUP_POLICY_DROP(2),
+    /**
+     * <code>CLICKHOUSE_CLEANUP_POLICY_TRUNCATE = 3;</code>
+     */
+    CLICKHOUSE_CLEANUP_POLICY_TRUNCATE(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -46,6 +50,10 @@ public final class Clickhouse {
      * <code>CLICKHOUSE_CLEANUP_POLICY_DROP = 2;</code>
      */
     public static final int CLICKHOUSE_CLEANUP_POLICY_DROP_VALUE = 2;
+    /**
+     * <code>CLICKHOUSE_CLEANUP_POLICY_TRUNCATE = 3;</code>
+     */
+    public static final int CLICKHOUSE_CLEANUP_POLICY_TRUNCATE_VALUE = 3;
 
 
     public final int getNumber() {
@@ -75,6 +83,7 @@ public final class Clickhouse {
         case 0: return CLICKHOUSE_CLEANUP_POLICY_UNSPECIFIED;
         case 1: return CLICKHOUSE_CLEANUP_POLICY_DISABLED;
         case 2: return CLICKHOUSE_CLEANUP_POLICY_DROP;
+        case 3: return CLICKHOUSE_CLEANUP_POLICY_TRUNCATE;
         default: return null;
       }
     }
@@ -2094,11 +2103,19 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Database
+     * </pre>
+     *
      * <code>string database = 8;</code>
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
+     * <pre>
+     * Database
+     * </pre>
+     *
      * <code>string database = 8;</code>
      * @return The bytes for database.
      */
@@ -2385,6 +2402,10 @@ public final class Clickhouse {
     public static final int DATABASE_FIELD_NUMBER = 8;
     private volatile java.lang.Object database_;
     /**
+     * <pre>
+     * Database
+     * </pre>
+     *
      * <code>string database = 8;</code>
      * @return The database.
      */
@@ -2402,6 +2423,10 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * Database
+     * </pre>
+     *
      * <code>string database = 8;</code>
      * @return The bytes for database.
      */
@@ -3154,6 +3179,10 @@ public final class Clickhouse {
 
       private java.lang.Object database_ = "";
       /**
+       * <pre>
+       * Database
+       * </pre>
+       *
        * <code>string database = 8;</code>
        * @return The database.
        */
@@ -3170,6 +3199,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Database
+       * </pre>
+       *
        * <code>string database = 8;</code>
        * @return The bytes for database.
        */
@@ -3187,6 +3220,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Database
+       * </pre>
+       *
        * <code>string database = 8;</code>
        * @param value The database to set.
        * @return This builder for chaining.
@@ -3202,6 +3239,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Database
+       * </pre>
+       *
        * <code>string database = 8;</code>
        * @return This builder for chaining.
        */
@@ -3212,6 +3253,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Database
+       * </pre>
+       *
        * <code>string database = 8;</code>
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -7708,23 +7753,43 @@ public final class Clickhouse {
         getSecurityGroupsBytes(int index);
 
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @return A list containing the includeTables.
      */
     java.util.List<java.lang.String>
         getIncludeTablesList();
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @return The count of includeTables.
      */
     int getIncludeTablesCount();
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @param index The index of the element to return.
      * @return The includeTables at the given index.
      */
     java.lang.String getIncludeTables(int index);
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @param index The index of the value to return.
      * @return The bytes of the includeTables at the given index.
@@ -7733,23 +7798,43 @@ public final class Clickhouse {
         getIncludeTablesBytes(int index);
 
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @return A list containing the excludeTables.
      */
     java.util.List<java.lang.String>
         getExcludeTablesList();
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @return The count of excludeTables.
      */
     int getExcludeTablesCount();
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @param index The index of the element to return.
      * @return The excludeTables at the given index.
      */
     java.lang.String getExcludeTables(int index);
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @param index The index of the value to return.
      * @return The bytes of the excludeTables at the given index.
@@ -7996,6 +8081,11 @@ public final class Clickhouse {
     public static final int INCLUDE_TABLES_FIELD_NUMBER = 7;
     private com.google.protobuf.LazyStringList includeTables_;
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @return A list containing the includeTables.
      */
@@ -8004,6 +8094,11 @@ public final class Clickhouse {
       return includeTables_;
     }
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @return The count of includeTables.
      */
@@ -8011,6 +8106,11 @@ public final class Clickhouse {
       return includeTables_.size();
     }
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @param index The index of the element to return.
      * @return The includeTables at the given index.
@@ -8019,6 +8119,11 @@ public final class Clickhouse {
       return includeTables_.get(index);
     }
     /**
+     * <pre>
+     * While list of tables for replication. If none or empty list is presented - will
+     * replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string include_tables = 7;</code>
      * @param index The index of the value to return.
      * @return The bytes of the includeTables at the given index.
@@ -8031,6 +8136,11 @@ public final class Clickhouse {
     public static final int EXCLUDE_TABLES_FIELD_NUMBER = 8;
     private com.google.protobuf.LazyStringList excludeTables_;
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @return A list containing the excludeTables.
      */
@@ -8039,6 +8149,11 @@ public final class Clickhouse {
       return excludeTables_;
     }
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @return The count of excludeTables.
      */
@@ -8046,6 +8161,11 @@ public final class Clickhouse {
       return excludeTables_.size();
     }
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @param index The index of the element to return.
      * @return The excludeTables at the given index.
@@ -8054,6 +8174,11 @@ public final class Clickhouse {
       return excludeTables_.get(index);
     }
     /**
+     * <pre>
+     * Exclude list of tables for replication. If none or empty list is presented -
+     * will replicate all tables. Can contain * patterns.
+     * </pre>
+     *
      * <code>repeated string exclude_tables = 8;</code>
      * @param index The index of the value to return.
      * @return The bytes of the excludeTables at the given index.
@@ -8812,6 +8937,11 @@ public final class Clickhouse {
          }
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @return A list containing the includeTables.
        */
@@ -8820,6 +8950,11 @@ public final class Clickhouse {
         return includeTables_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @return The count of includeTables.
        */
@@ -8827,6 +8962,11 @@ public final class Clickhouse {
         return includeTables_.size();
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @param index The index of the element to return.
        * @return The includeTables at the given index.
@@ -8835,6 +8975,11 @@ public final class Clickhouse {
         return includeTables_.get(index);
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @param index The index of the value to return.
        * @return The bytes of the includeTables at the given index.
@@ -8844,6 +8989,11 @@ public final class Clickhouse {
         return includeTables_.getByteString(index);
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @param index The index to set the value at.
        * @param value The includeTables to set.
@@ -8860,6 +9010,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @param value The includeTables to add.
        * @return This builder for chaining.
@@ -8875,6 +9030,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @param values The includeTables to add.
        * @return This builder for chaining.
@@ -8888,6 +9048,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @return This builder for chaining.
        */
@@ -8898,6 +9063,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * While list of tables for replication. If none or empty list is presented - will
+       * replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string include_tables = 7;</code>
        * @param value The bytes of the includeTables to add.
        * @return This builder for chaining.
@@ -8922,6 +9092,11 @@ public final class Clickhouse {
          }
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @return A list containing the excludeTables.
        */
@@ -8930,6 +9105,11 @@ public final class Clickhouse {
         return excludeTables_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @return The count of excludeTables.
        */
@@ -8937,6 +9117,11 @@ public final class Clickhouse {
         return excludeTables_.size();
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @param index The index of the element to return.
        * @return The excludeTables at the given index.
@@ -8945,6 +9130,11 @@ public final class Clickhouse {
         return excludeTables_.get(index);
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @param index The index of the value to return.
        * @return The bytes of the excludeTables at the given index.
@@ -8954,6 +9144,11 @@ public final class Clickhouse {
         return excludeTables_.getByteString(index);
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @param index The index to set the value at.
        * @param value The excludeTables to set.
@@ -8970,6 +9165,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @param value The excludeTables to add.
        * @return This builder for chaining.
@@ -8985,6 +9185,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @param values The excludeTables to add.
        * @return This builder for chaining.
@@ -8998,6 +9203,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @return This builder for chaining.
        */
@@ -9008,6 +9218,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Exclude list of tables for replication. If none or empty list is presented -
+       * will replicate all tables. Can contain * patterns.
+       * </pre>
+       *
        * <code>repeated string exclude_tables = 8;</code>
        * @param value The bytes of the excludeTables to add.
        * @return This builder for chaining.
@@ -9145,24 +9360,44 @@ public final class Clickhouse {
         getClickhouseClusterNameBytes();
 
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName> 
         getAltNamesList();
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName getAltNames(int index);
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     int getAltNamesCount();
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Common.AltNameOrBuilder> 
         getAltNamesOrBuilderList();
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.AltNameOrBuilder getAltNamesOrBuilder(
@@ -9485,6 +9720,10 @@ public final class Clickhouse {
     public static final int ALT_NAMES_FIELD_NUMBER = 17;
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName> altNames_;
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     @java.lang.Override
@@ -9492,6 +9731,10 @@ public final class Clickhouse {
       return altNames_;
     }
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     @java.lang.Override
@@ -9500,6 +9743,10 @@ public final class Clickhouse {
       return altNames_;
     }
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     @java.lang.Override
@@ -9507,6 +9754,10 @@ public final class Clickhouse {
       return altNames_.size();
     }
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     @java.lang.Override
@@ -9514,6 +9765,10 @@ public final class Clickhouse {
       return altNames_.get(index);
     }
     /**
+     * <pre>
+     * Alternative table names in target
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
      */
     @java.lang.Override
@@ -10447,6 +10702,10 @@ public final class Clickhouse {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName, yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.AltNameOrBuilder> altNamesBuilder_;
 
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName> getAltNamesList() {
@@ -10457,6 +10716,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public int getAltNamesCount() {
@@ -10467,6 +10730,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName getAltNames(int index) {
@@ -10477,6 +10744,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder setAltNames(
@@ -10494,6 +10765,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder setAltNames(
@@ -10508,6 +10783,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder addAltNames(yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName value) {
@@ -10524,6 +10803,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder addAltNames(
@@ -10541,6 +10824,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder addAltNames(
@@ -10555,6 +10842,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder addAltNames(
@@ -10569,6 +10860,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder addAllAltNames(
@@ -10584,6 +10879,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder clearAltNames() {
@@ -10597,6 +10896,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public Builder removeAltNames(int index) {
@@ -10610,6 +10913,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.Builder getAltNamesBuilder(
@@ -10617,6 +10924,10 @@ public final class Clickhouse {
         return getAltNamesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.AltNameOrBuilder getAltNamesOrBuilder(
@@ -10627,6 +10938,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Common.AltNameOrBuilder> 
@@ -10638,6 +10953,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.Builder addAltNamesBuilder() {
@@ -10645,6 +10964,10 @@ public final class Clickhouse {
             yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.Builder addAltNamesBuilder(
@@ -10653,6 +10976,10 @@ public final class Clickhouse {
             index, yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Alternative table names in target
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.Builder> 
@@ -11008,10 +11335,11 @@ public final class Clickhouse {
       "atransfer.v1.endpoint.ClickhouseSharding" +
       "\022V\n\016cleanup_policy\030\025 \001(\0162>.yandex.cloud." +
       "datatransfer.v1.endpoint.ClickhouseClean" +
-      "upPolicy*\220\001\n\027ClickhouseCleanupPolicy\022)\n%" +
+      "upPolicy*\270\001\n\027ClickhouseCleanupPolicy\022)\n%" +
       "CLICKHOUSE_CLEANUP_POLICY_UNSPECIFIED\020\000\022" +
       "&\n\"CLICKHOUSE_CLEANUP_POLICY_DISABLED\020\001\022" +
-      "\"\n\036CLICKHOUSE_CLEANUP_POLICY_DROP\020\002B\247\001\n)" +
+      "\"\n\036CLICKHOUSE_CLEANUP_POLICY_DROP\020\002\022&\n\"C" +
+      "LICKHOUSE_CLEANUP_POLICY_TRUNCATE\020\003B\247\001\n)" +
       "yandex.cloud.api.datatransfer.v1.endpoin" +
       "tZRgithub.com/yandex-cloud/go-genproto/y" +
       "andex/cloud/datatransfer/v1/endpoint;end" +

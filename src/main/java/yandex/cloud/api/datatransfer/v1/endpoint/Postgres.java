@@ -66,6 +66,25 @@ public final class Postgres {
 
     /**
      * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The enum numeric value on the wire for sequenceSet.
+     */
+    int getSequenceSetValue();
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The sequenceSet.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet();
+
+    /**
+     * <pre>
      * Tables
      * 
      * CREATE TABLE ...
@@ -227,6 +246,29 @@ public final class Postgres {
 
     /**
      * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The enum numeric value on the wire for materializedView.
+     */
+    int getMaterializedViewValue();
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The materializedView.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView();
+
+    /**
+     * <pre>
      * Functions
      * 
      * CREATE FUNCTION ...
@@ -385,29 +427,6 @@ public final class Postgres {
      * @return The cast.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getCast();
-
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The enum numeric value on the wire for materializedView.
-     */
-    int getMaterializedViewValue();
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The materializedView.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings}
@@ -424,6 +443,7 @@ public final class Postgres {
     private PostgresObjectTransferSettings() {
       sequence_ = 0;
       sequenceOwnedBy_ = 0;
+      sequenceSet_ = 0;
       table_ = 0;
       primaryKey_ = 0;
       fkConstraint_ = 0;
@@ -431,6 +451,7 @@ public final class Postgres {
       constraint_ = 0;
       index_ = 0;
       view_ = 0;
+      materializedView_ = 0;
       function_ = 0;
       trigger_ = 0;
       type_ = 0;
@@ -438,7 +459,6 @@ public final class Postgres {
       collation_ = 0;
       policy_ = 0;
       cast_ = 0;
-      materializedView_ = 0;
     }
 
     @java.lang.Override
@@ -573,6 +593,12 @@ public final class Postgres {
               materializedView_ = rawValue;
               break;
             }
+            case 144: {
+              int rawValue = input.readEnum();
+
+              sequenceSet_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -664,6 +690,33 @@ public final class Postgres {
     @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceOwnedBy() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceOwnedBy_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+    }
+
+    public static final int SEQUENCE_SET_FIELD_NUMBER = 18;
+    private int sequenceSet_;
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The enum numeric value on the wire for sequenceSet.
+     */
+    @java.lang.Override public int getSequenceSetValue() {
+      return sequenceSet_;
+    }
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The sequenceSet.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceSet_);
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
@@ -884,6 +937,37 @@ public final class Postgres {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
+    public static final int MATERIALIZED_VIEW_FIELD_NUMBER = 17;
+    private int materializedView_;
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The enum numeric value on the wire for materializedView.
+     */
+    @java.lang.Override public int getMaterializedViewValue() {
+      return materializedView_;
+    }
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The materializedView.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+    }
+
     public static final int FUNCTION_FIELD_NUMBER = 10;
     private int function_;
     /**
@@ -1101,37 +1185,6 @@ public final class Postgres {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
-    public static final int MATERIALIZED_VIEW_FIELD_NUMBER = 17;
-    private int materializedView_;
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The enum numeric value on the wire for materializedView.
-     */
-    @java.lang.Override public int getMaterializedViewValue() {
-      return materializedView_;
-    }
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The materializedView.
-     */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1196,6 +1249,9 @@ public final class Postgres {
       }
       if (materializedView_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
         output.writeEnum(17, materializedView_);
+      }
+      if (sequenceSet_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(18, sequenceSet_);
       }
       unknownFields.writeTo(output);
     }
@@ -1274,6 +1330,10 @@ public final class Postgres {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, materializedView_);
       }
+      if (sequenceSet_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(18, sequenceSet_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1291,6 +1351,7 @@ public final class Postgres {
 
       if (sequence_ != other.sequence_) return false;
       if (sequenceOwnedBy_ != other.sequenceOwnedBy_) return false;
+      if (sequenceSet_ != other.sequenceSet_) return false;
       if (table_ != other.table_) return false;
       if (primaryKey_ != other.primaryKey_) return false;
       if (fkConstraint_ != other.fkConstraint_) return false;
@@ -1298,6 +1359,7 @@ public final class Postgres {
       if (constraint_ != other.constraint_) return false;
       if (index_ != other.index_) return false;
       if (view_ != other.view_) return false;
+      if (materializedView_ != other.materializedView_) return false;
       if (function_ != other.function_) return false;
       if (trigger_ != other.trigger_) return false;
       if (type_ != other.type_) return false;
@@ -1305,7 +1367,6 @@ public final class Postgres {
       if (collation_ != other.collation_) return false;
       if (policy_ != other.policy_) return false;
       if (cast_ != other.cast_) return false;
-      if (materializedView_ != other.materializedView_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1321,6 +1382,8 @@ public final class Postgres {
       hash = (53 * hash) + sequence_;
       hash = (37 * hash) + SEQUENCE_OWNED_BY_FIELD_NUMBER;
       hash = (53 * hash) + sequenceOwnedBy_;
+      hash = (37 * hash) + SEQUENCE_SET_FIELD_NUMBER;
+      hash = (53 * hash) + sequenceSet_;
       hash = (37 * hash) + TABLE_FIELD_NUMBER;
       hash = (53 * hash) + table_;
       hash = (37 * hash) + PRIMARY_KEY_FIELD_NUMBER;
@@ -1335,6 +1398,8 @@ public final class Postgres {
       hash = (53 * hash) + index_;
       hash = (37 * hash) + VIEW_FIELD_NUMBER;
       hash = (53 * hash) + view_;
+      hash = (37 * hash) + MATERIALIZED_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + materializedView_;
       hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
       hash = (53 * hash) + function_;
       hash = (37 * hash) + TRIGGER_FIELD_NUMBER;
@@ -1349,8 +1414,6 @@ public final class Postgres {
       hash = (53 * hash) + policy_;
       hash = (37 * hash) + CAST_FIELD_NUMBER;
       hash = (53 * hash) + cast_;
-      hash = (37 * hash) + MATERIALIZED_VIEW_FIELD_NUMBER;
-      hash = (53 * hash) + materializedView_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1488,6 +1551,8 @@ public final class Postgres {
 
         sequenceOwnedBy_ = 0;
 
+        sequenceSet_ = 0;
+
         table_ = 0;
 
         primaryKey_ = 0;
@@ -1502,6 +1567,8 @@ public final class Postgres {
 
         view_ = 0;
 
+        materializedView_ = 0;
+
         function_ = 0;
 
         trigger_ = 0;
@@ -1515,8 +1582,6 @@ public final class Postgres {
         policy_ = 0;
 
         cast_ = 0;
-
-        materializedView_ = 0;
 
         return this;
       }
@@ -1546,6 +1611,7 @@ public final class Postgres {
         yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings result = new yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings(this);
         result.sequence_ = sequence_;
         result.sequenceOwnedBy_ = sequenceOwnedBy_;
+        result.sequenceSet_ = sequenceSet_;
         result.table_ = table_;
         result.primaryKey_ = primaryKey_;
         result.fkConstraint_ = fkConstraint_;
@@ -1553,6 +1619,7 @@ public final class Postgres {
         result.constraint_ = constraint_;
         result.index_ = index_;
         result.view_ = view_;
+        result.materializedView_ = materializedView_;
         result.function_ = function_;
         result.trigger_ = trigger_;
         result.type_ = type_;
@@ -1560,7 +1627,6 @@ public final class Postgres {
         result.collation_ = collation_;
         result.policy_ = policy_;
         result.cast_ = cast_;
-        result.materializedView_ = materializedView_;
         onBuilt();
         return result;
       }
@@ -1615,6 +1681,9 @@ public final class Postgres {
         if (other.sequenceOwnedBy_ != 0) {
           setSequenceOwnedByValue(other.getSequenceOwnedByValue());
         }
+        if (other.sequenceSet_ != 0) {
+          setSequenceSetValue(other.getSequenceSetValue());
+        }
         if (other.table_ != 0) {
           setTableValue(other.getTableValue());
         }
@@ -1636,6 +1705,9 @@ public final class Postgres {
         if (other.view_ != 0) {
           setViewValue(other.getViewValue());
         }
+        if (other.materializedView_ != 0) {
+          setMaterializedViewValue(other.getMaterializedViewValue());
+        }
         if (other.function_ != 0) {
           setFunctionValue(other.getFunctionValue());
         }
@@ -1656,9 +1728,6 @@ public final class Postgres {
         }
         if (other.cast_ != 0) {
           setCastValue(other.getCastValue());
-        }
-        if (other.materializedView_ != 0) {
-          setMaterializedViewValue(other.getMaterializedViewValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1853,6 +1922,80 @@ public final class Postgres {
       public Builder clearSequenceOwnedBy() {
         
         sequenceOwnedBy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sequenceSet_ = 0;
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @return The enum numeric value on the wire for sequenceSet.
+       */
+      @java.lang.Override public int getSequenceSetValue() {
+        return sequenceSet_;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @param value The enum numeric value on the wire for sequenceSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceSetValue(int value) {
+        
+        sequenceSet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @return The sequenceSet.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceSet_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @param value The sequenceSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceSet(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        sequenceSet_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceSet() {
+        
+        sequenceSet_ = 0;
         onChanged();
         return this;
       }
@@ -2445,6 +2588,90 @@ public final class Postgres {
         return this;
       }
 
+      private int materializedView_ = 0;
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @return The enum numeric value on the wire for materializedView.
+       */
+      @java.lang.Override public int getMaterializedViewValue() {
+        return materializedView_;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @param value The enum numeric value on the wire for materializedView to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaterializedViewValue(int value) {
+        
+        materializedView_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @return The materializedView.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @param value The materializedView to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaterializedView(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        materializedView_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaterializedView() {
+        
+        materializedView_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int function_ = 0;
       /**
        * <pre>
@@ -3032,90 +3259,6 @@ public final class Postgres {
         onChanged();
         return this;
       }
-
-      private int materializedView_ = 0;
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @return The enum numeric value on the wire for materializedView.
-       */
-      @java.lang.Override public int getMaterializedViewValue() {
-        return materializedView_;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @param value The enum numeric value on the wire for materializedView to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaterializedViewValue(int value) {
-        
-        materializedView_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @return The materializedView.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @param value The materializedView to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaterializedView(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        materializedView_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaterializedView() {
-        
-        materializedView_ = 0;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3200,9 +3343,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Database port
-     * 
-     * Will be used if the cluster ID is not specified. Default: 6432.
+     * Will be used if the cluster ID is not specified.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -3212,8 +3353,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -3223,8 +3362,6 @@ public final class Postgres {
     boolean hasTlsMode();
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -3234,8 +3371,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode();
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -3245,9 +3380,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3256,9 +3389,7 @@ public final class Postgres {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3422,9 +3553,7 @@ public final class Postgres {
     private long port_;
     /**
      * <pre>
-     * Database port
-     * 
-     * Will be used if the cluster ID is not specified. Default: 6432.
+     * Will be used if the cluster ID is not specified.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -3439,8 +3568,6 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -3453,8 +3580,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -3467,8 +3592,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -3483,9 +3606,7 @@ public final class Postgres {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3506,9 +3627,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -4028,9 +4147,7 @@ public final class Postgres {
       private long port_ ;
       /**
        * <pre>
-       * Database port
-       * 
-       * Will be used if the cluster ID is not specified. Default: 6432.
+       * Will be used if the cluster ID is not specified.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -4042,9 +4159,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database port
-       * 
-       * Will be used if the cluster ID is not specified. Default: 6432.
+       * Will be used if the cluster ID is not specified.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -4059,9 +4174,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database port
-       * 
-       * Will be used if the cluster ID is not specified. Default: 6432.
+       * Will be used if the cluster ID is not specified.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -4079,8 +4192,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4092,8 +4203,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4109,8 +4218,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4131,8 +4238,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4151,8 +4256,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4175,8 +4278,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4195,8 +4296,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4209,8 +4308,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4226,8 +4323,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -4250,9 +4345,7 @@ public final class Postgres {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4272,9 +4365,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4295,9 +4386,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4316,9 +4405,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4332,9 +4419,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4411,8 +4496,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
@@ -4422,8 +4505,6 @@ public final class Postgres {
     boolean hasMdbClusterId();
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
@@ -4433,8 +4514,6 @@ public final class Postgres {
     java.lang.String getMdbClusterId();
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
@@ -4446,8 +4525,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise PostgreSQL
      * </pre>
      *
@@ -4457,8 +4534,6 @@ public final class Postgres {
     boolean hasOnPremise();
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise PostgreSQL
      * </pre>
      *
@@ -4468,8 +4543,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres getOnPremise();
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise PostgreSQL
      * </pre>
      *
@@ -4620,8 +4693,6 @@ public final class Postgres {
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
@@ -4633,8 +4704,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
@@ -4660,8 +4729,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for PostgreSQL cluster ID
      * </pre>
      *
@@ -4690,8 +4757,6 @@ public final class Postgres {
     public static final int ON_PREMISE_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise PostgreSQL
      * </pre>
      *
@@ -4704,8 +4769,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise PostgreSQL
      * </pre>
      *
@@ -4721,8 +4784,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise PostgreSQL
      * </pre>
      *
@@ -5104,8 +5165,6 @@ public final class Postgres {
 
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
@@ -5118,8 +5177,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
@@ -5146,8 +5203,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
@@ -5175,8 +5230,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
@@ -5196,8 +5249,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
@@ -5214,8 +5265,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for PostgreSQL cluster ID
        * </pre>
        *
@@ -5239,8 +5288,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgresOrBuilder> onPremiseBuilder_;
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5253,8 +5300,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5277,8 +5322,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5299,8 +5342,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5319,8 +5360,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5347,8 +5386,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5372,8 +5409,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5384,8 +5419,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5404,8 +5437,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise PostgreSQL
        * </pre>
        *
@@ -5488,8 +5519,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -5499,8 +5528,6 @@ public final class Postgres {
     boolean hasConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -5510,8 +5537,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection getConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -5582,8 +5607,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -5593,8 +5616,6 @@ public final class Postgres {
     java.lang.String getUser();
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -5606,8 +5627,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -5617,8 +5636,6 @@ public final class Postgres {
     boolean hasPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -5628,8 +5645,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -5745,11 +5760,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Maximum WAL size for the replication slot
-     * 
-     * Maximum WAL size held by the replication slot. Exceeding this limit will result
-     * in a replication failure and deletion of the replication slot. Unlimited by
-     * default.
+     * Maximum lag of replication slot (in bytes); after exceeding this limit
+     * replication will be aborted.
      * </pre>
      *
      * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -5759,10 +5771,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Database schema for service tables
-     * 
-     * Default: public. Here created technical tables (__consumer_keeper,
-     * __data_transfer_mole_finder).
+     * Database schema for service tables (__consumer_keeper,
+     * __data_transfer_mole_finder). Default is public
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -5771,10 +5781,8 @@ public final class Postgres {
     java.lang.String getServiceSchema();
     /**
      * <pre>
-     * Database schema for service tables
-     * 
-     * Default: public. Here created technical tables (__consumer_keeper,
-     * __data_transfer_mole_finder).
+     * Database schema for service tables (__consumer_keeper,
+     * __data_transfer_mole_finder). Default is public
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -5785,8 +5793,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Schema migration
-     * 
      * Select database objects to be transferred during activation or deactivation.
      * </pre>
      *
@@ -5796,8 +5802,6 @@ public final class Postgres {
     boolean hasObjectTransferSettings();
     /**
      * <pre>
-     * Schema migration
-     * 
      * Select database objects to be transferred during activation or deactivation.
      * </pre>
      *
@@ -5807,8 +5811,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings getObjectTransferSettings();
     /**
      * <pre>
-     * Schema migration
-     * 
      * Select database objects to be transferred during activation or deactivation.
      * </pre>
      *
@@ -6002,8 +6004,6 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection connection_;
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6016,8 +6016,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6030,8 +6028,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6143,8 +6139,6 @@ public final class Postgres {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -6166,8 +6160,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -6193,8 +6185,6 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6207,8 +6197,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6221,8 +6209,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6363,11 +6349,8 @@ public final class Postgres {
     private long slotByteLagLimit_;
     /**
      * <pre>
-     * Maximum WAL size for the replication slot
-     * 
-     * Maximum WAL size held by the replication slot. Exceeding this limit will result
-     * in a replication failure and deletion of the replication slot. Unlimited by
-     * default.
+     * Maximum lag of replication slot (in bytes); after exceeding this limit
+     * replication will be aborted.
      * </pre>
      *
      * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -6382,10 +6365,8 @@ public final class Postgres {
     private volatile java.lang.Object serviceSchema_;
     /**
      * <pre>
-     * Database schema for service tables
-     * 
-     * Default: public. Here created technical tables (__consumer_keeper,
-     * __data_transfer_mole_finder).
+     * Database schema for service tables (__consumer_keeper,
+     * __data_transfer_mole_finder). Default is public
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -6406,10 +6387,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Database schema for service tables
-     * 
-     * Default: public. Here created technical tables (__consumer_keeper,
-     * __data_transfer_mole_finder).
+     * Database schema for service tables (__consumer_keeper,
+     * __data_transfer_mole_finder). Default is public
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -6434,8 +6413,6 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings objectTransferSettings_;
     /**
      * <pre>
-     * Schema migration
-     * 
      * Select database objects to be transferred during activation or deactivation.
      * </pre>
      *
@@ -6448,8 +6425,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Schema migration
-     * 
      * Select database objects to be transferred during activation or deactivation.
      * </pre>
      *
@@ -6462,8 +6437,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Schema migration
-     * 
      * Select database objects to be transferred during activation or deactivation.
      * </pre>
      *
@@ -7027,8 +7000,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder> connectionBuilder_;
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7040,8 +7011,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7057,8 +7026,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7079,8 +7046,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7099,8 +7064,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7123,8 +7086,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7143,8 +7104,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7157,8 +7116,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7174,8 +7131,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7440,8 +7395,6 @@ public final class Postgres {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7462,8 +7415,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7485,8 +7436,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7506,8 +7455,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7522,8 +7469,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7548,8 +7493,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7561,8 +7504,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7578,8 +7519,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7600,8 +7539,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7620,8 +7557,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7644,8 +7579,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7664,8 +7597,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7678,8 +7609,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -7695,8 +7624,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8065,11 +7992,8 @@ public final class Postgres {
       private long slotByteLagLimit_ ;
       /**
        * <pre>
-       * Maximum WAL size for the replication slot
-       * 
-       * Maximum WAL size held by the replication slot. Exceeding this limit will result
-       * in a replication failure and deletion of the replication slot. Unlimited by
-       * default.
+       * Maximum lag of replication slot (in bytes); after exceeding this limit
+       * replication will be aborted.
        * </pre>
        *
        * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -8081,11 +8005,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Maximum WAL size for the replication slot
-       * 
-       * Maximum WAL size held by the replication slot. Exceeding this limit will result
-       * in a replication failure and deletion of the replication slot. Unlimited by
-       * default.
+       * Maximum lag of replication slot (in bytes); after exceeding this limit
+       * replication will be aborted.
        * </pre>
        *
        * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -8100,11 +8021,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Maximum WAL size for the replication slot
-       * 
-       * Maximum WAL size held by the replication slot. Exceeding this limit will result
-       * in a replication failure and deletion of the replication slot. Unlimited by
-       * default.
+       * Maximum lag of replication slot (in bytes); after exceeding this limit
+       * replication will be aborted.
        * </pre>
        *
        * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -8120,10 +8038,8 @@ public final class Postgres {
       private java.lang.Object serviceSchema_ = "";
       /**
        * <pre>
-       * Database schema for service tables
-       * 
-       * Default: public. Here created technical tables (__consumer_keeper,
-       * __data_transfer_mole_finder).
+       * Database schema for service tables (__consumer_keeper,
+       * __data_transfer_mole_finder). Default is public
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8143,10 +8059,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables
-       * 
-       * Default: public. Here created technical tables (__consumer_keeper,
-       * __data_transfer_mole_finder).
+       * Database schema for service tables (__consumer_keeper,
+       * __data_transfer_mole_finder). Default is public
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8167,10 +8081,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables
-       * 
-       * Default: public. Here created technical tables (__consumer_keeper,
-       * __data_transfer_mole_finder).
+       * Database schema for service tables (__consumer_keeper,
+       * __data_transfer_mole_finder). Default is public
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8189,10 +8101,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables
-       * 
-       * Default: public. Here created technical tables (__consumer_keeper,
-       * __data_transfer_mole_finder).
+       * Database schema for service tables (__consumer_keeper,
+       * __data_transfer_mole_finder). Default is public
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8206,10 +8116,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables
-       * 
-       * Default: public. Here created technical tables (__consumer_keeper,
-       * __data_transfer_mole_finder).
+       * Database schema for service tables (__consumer_keeper,
+       * __data_transfer_mole_finder). Default is public
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8233,8 +8141,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettingsOrBuilder> objectTransferSettingsBuilder_;
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8246,8 +8152,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8263,8 +8167,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8285,8 +8187,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8305,8 +8205,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8329,8 +8227,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8349,8 +8245,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8363,8 +8257,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8380,8 +8272,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Schema migration
-       * 
        * Select database objects to be transferred during activation or deactivation.
        * </pre>
        *
@@ -8459,8 +8349,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -8470,8 +8358,6 @@ public final class Postgres {
     boolean hasConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -8481,8 +8367,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection getConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -8553,8 +8437,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -8564,8 +8446,6 @@ public final class Postgres {
     java.lang.String getUser();
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -8577,8 +8457,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -8588,8 +8466,6 @@ public final class Postgres {
     boolean hasPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -8599,8 +8475,6 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -8610,10 +8484,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Cleanup policy
-     * 
      * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * truncate.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -8622,10 +8494,8 @@ public final class Postgres {
     int getCleanupPolicyValue();
     /**
      * <pre>
-     * Cleanup policy
-     * 
      * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * truncate.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -8775,8 +8645,6 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection connection_;
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -8789,8 +8657,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -8803,8 +8669,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -8916,8 +8780,6 @@ public final class Postgres {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -8939,8 +8801,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -8966,8 +8826,6 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -8980,8 +8838,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -8994,8 +8850,6 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -9010,10 +8864,8 @@ public final class Postgres {
     private int cleanupPolicy_;
     /**
      * <pre>
-     * Cleanup policy
-     * 
      * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * truncate.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -9024,10 +8876,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Cleanup policy
-     * 
      * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * truncate.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -9475,8 +9325,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder> connectionBuilder_;
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9488,8 +9336,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9505,8 +9351,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9527,8 +9371,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9547,8 +9389,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9571,8 +9411,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9591,8 +9429,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9605,8 +9441,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9622,8 +9456,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -9888,8 +9720,6 @@ public final class Postgres {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -9910,8 +9740,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -9933,8 +9761,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -9954,8 +9780,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -9970,8 +9794,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -9996,8 +9818,6 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10009,8 +9829,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10026,8 +9844,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10048,8 +9864,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10068,8 +9882,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10092,8 +9904,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10112,8 +9922,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10126,8 +9934,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10143,8 +9949,6 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -10167,10 +9971,8 @@ public final class Postgres {
       private int cleanupPolicy_ = 0;
       /**
        * <pre>
-       * Cleanup policy
-       * 
        * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * truncate.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10181,10 +9983,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
        * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * truncate.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10199,10 +9999,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
        * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * truncate.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10216,10 +10014,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
        * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * truncate.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10237,10 +10033,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
        * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * truncate.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10342,71 +10136,73 @@ public final class Postgres {
       "\n4yandex/cloud/datatransfer/v1/endpoint/" +
       "postgres.proto\022%yandex.cloud.datatransfe" +
       "r.v1.endpoint\0322yandex/cloud/datatransfer" +
-      "/v1/endpoint/common.proto\"\330\n\n\036PostgresOb" +
+      "/v1/endpoint/common.proto\"\252\013\n\036PostgresOb" +
       "jectTransferSettings\022L\n\010sequence\030\001 \001(\0162:" +
       ".yandex.cloud.datatransfer.v1.endpoint.O" +
       "bjectTransferStage\022U\n\021sequence_owned_by\030" +
       "\002 \001(\0162:.yandex.cloud.datatransfer.v1.end" +
-      "point.ObjectTransferStage\022I\n\005table\030\003 \001(\016" +
-      "2:.yandex.cloud.datatransfer.v1.endpoint" +
-      ".ObjectTransferStage\022O\n\013primary_key\030\004 \001(" +
-      "\0162:.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.ObjectTransferStage\022Q\n\rfk_constraint\030\005" +
-      " \001(\0162:.yandex.cloud.datatransfer.v1.endp" +
-      "oint.ObjectTransferStage\022R\n\016default_valu" +
-      "es\030\006 \001(\0162:.yandex.cloud.datatransfer.v1." +
-      "endpoint.ObjectTransferStage\022N\n\nconstrai" +
-      "nt\030\007 \001(\0162:.yandex.cloud.datatransfer.v1." +
-      "endpoint.ObjectTransferStage\022I\n\005index\030\010 " +
+      "point.ObjectTransferStage\022P\n\014sequence_se" +
+      "t\030\022 \001(\0162:.yandex.cloud.datatransfer.v1.e" +
+      "ndpoint.ObjectTransferStage\022I\n\005table\030\003 \001" +
+      "(\0162:.yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.ObjectTransferStage\022O\n\013primary_key\030\004 " +
       "\001(\0162:.yandex.cloud.datatransfer.v1.endpo" +
-      "int.ObjectTransferStage\022H\n\004view\030\t \001(\0162:." +
-      "yandex.cloud.datatransfer.v1.endpoint.Ob" +
-      "jectTransferStage\022L\n\010function\030\n \001(\0162:.ya" +
+      "int.ObjectTransferStage\022Q\n\rfk_constraint" +
+      "\030\005 \001(\0162:.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.ObjectTransferStage\022R\n\016default_va" +
+      "lues\030\006 \001(\0162:.yandex.cloud.datatransfer.v" +
+      "1.endpoint.ObjectTransferStage\022N\n\nconstr" +
+      "aint\030\007 \001(\0162:.yandex.cloud.datatransfer.v" +
+      "1.endpoint.ObjectTransferStage\022I\n\005index\030" +
+      "\010 \001(\0162:.yandex.cloud.datatransfer.v1.end" +
+      "point.ObjectTransferStage\022H\n\004view\030\t \001(\0162" +
+      ":.yandex.cloud.datatransfer.v1.endpoint." +
+      "ObjectTransferStage\022U\n\021materialized_view" +
+      "\030\021 \001(\0162:.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.ObjectTransferStage\022L\n\010function\030\n" +
+      " \001(\0162:.yandex.cloud.datatransfer.v1.endp" +
+      "oint.ObjectTransferStage\022K\n\007trigger\030\013 \001(" +
+      "\0162:.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.ObjectTransferStage\022H\n\004type\030\014 \001(\0162:.ya" +
       "ndex.cloud.datatransfer.v1.endpoint.Obje" +
-      "ctTransferStage\022K\n\007trigger\030\013 \001(\0162:.yande" +
-      "x.cloud.datatransfer.v1.endpoint.ObjectT" +
-      "ransferStage\022H\n\004type\030\014 \001(\0162:.yandex.clou" +
-      "d.datatransfer.v1.endpoint.ObjectTransfe" +
-      "rStage\022H\n\004rule\030\r \001(\0162:.yandex.cloud.data" +
-      "transfer.v1.endpoint.ObjectTransferStage" +
-      "\022M\n\tcollation\030\016 \001(\0162:.yandex.cloud.datat" +
-      "ransfer.v1.endpoint.ObjectTransferStage\022" +
-      "J\n\006policy\030\017 \001(\0162:.yandex.cloud.datatrans" +
-      "fer.v1.endpoint.ObjectTransferStage\022H\n\004c" +
-      "ast\030\020 \001(\0162:.yandex.cloud.datatransfer.v1" +
-      ".endpoint.ObjectTransferStage\022U\n\021materia" +
-      "lized_view\030\021 \001(\0162:.yandex.cloud.datatran" +
-      "sfer.v1.endpoint.ObjectTransferStage\"\205\001\n" +
-      "\021OnPremisePostgres\022\r\n\005hosts\030\005 \003(\t\022\014\n\004por" +
-      "t\030\002 \001(\003\022@\n\010tls_mode\030\006 \001(\0132..yandex.cloud" +
-      ".datatransfer.v1.endpoint.TLSMode\022\021\n\tsub" +
-      "net_id\030\004 \001(\t\"\214\001\n\022PostgresConnection\022\030\n\016m" +
-      "db_cluster_id\030\001 \001(\tH\000\022N\n\non_premise\030\002 \001(" +
-      "\01328.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.OnPremisePostgresH\000B\014\n\nconnection\"\247\003\n\016" +
-      "PostgresSource\022M\n\nconnection\030\001 \001(\01329.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.Postg" +
-      "resConnection\022\027\n\017security_groups\030\016 \003(\t\022\020" +
-      "\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010passwo" +
-      "rd\030\004 \001(\0132-.yandex.cloud.datatransfer.v1." +
-      "endpoint.Secret\022\026\n\016include_tables\030\005 \003(\t\022" +
-      "\026\n\016exclude_tables\030\006 \003(\t\022\033\n\023slot_byte_lag" +
-      "_limit\030\010 \001(\003\022\026\n\016service_schema\030\t \001(\t\022g\n\030" +
-      "object_transfer_settings\030\r \001(\0132E.yandex." +
-      "cloud.datatransfer.v1.endpoint.PostgresO" +
-      "bjectTransferSettings\"\247\002\n\016PostgresTarget" +
-      "\022M\n\nconnection\030\001 \001(\01329.yandex.cloud.data" +
-      "transfer.v1.endpoint.PostgresConnection\022" +
-      "\027\n\017security_groups\030\007 \003(\t\022\020\n\010database\030\002 \001" +
-      "(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.Secre" +
-      "t\022L\n\016cleanup_policy\030\005 \001(\01624.yandex.cloud" +
-      ".datatransfer.v1.endpoint.CleanupPolicyB" +
-      "\247\001\n)yandex.cloud.api.datatransfer.v1.end" +
-      "pointZRgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/datatransfer/v1/endpoint" +
-      ";endpoint\252\002%Yandex.Cloud.Datatransfer.V1" +
-      ".EndPointb\006proto3"
+      "ctTransferStage\022H\n\004rule\030\r \001(\0162:.yandex.c" +
+      "loud.datatransfer.v1.endpoint.ObjectTran" +
+      "sferStage\022M\n\tcollation\030\016 \001(\0162:.yandex.cl" +
+      "oud.datatransfer.v1.endpoint.ObjectTrans" +
+      "ferStage\022J\n\006policy\030\017 \001(\0162:.yandex.cloud." +
+      "datatransfer.v1.endpoint.ObjectTransferS" +
+      "tage\022H\n\004cast\030\020 \001(\0162:.yandex.cloud.datatr" +
+      "ansfer.v1.endpoint.ObjectTransferStage\"\205" +
+      "\001\n\021OnPremisePostgres\022\r\n\005hosts\030\005 \003(\t\022\014\n\004p" +
+      "ort\030\002 \001(\003\022@\n\010tls_mode\030\006 \001(\0132..yandex.clo" +
+      "ud.datatransfer.v1.endpoint.TLSMode\022\021\n\ts" +
+      "ubnet_id\030\004 \001(\t\"\214\001\n\022PostgresConnection\022\030\n" +
+      "\016mdb_cluster_id\030\001 \001(\tH\000\022N\n\non_premise\030\002 " +
+      "\001(\01328.yandex.cloud.datatransfer.v1.endpo" +
+      "int.OnPremisePostgresH\000B\014\n\nconnection\"\247\003" +
+      "\n\016PostgresSource\022M\n\nconnection\030\001 \001(\01329.y" +
+      "andex.cloud.datatransfer.v1.endpoint.Pos" +
+      "tgresConnection\022\027\n\017security_groups\030\016 \003(\t" +
+      "\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010pass" +
+      "word\030\004 \001(\0132-.yandex.cloud.datatransfer.v" +
+      "1.endpoint.Secret\022\026\n\016include_tables\030\005 \003(" +
+      "\t\022\026\n\016exclude_tables\030\006 \003(\t\022\033\n\023slot_byte_l" +
+      "ag_limit\030\010 \001(\003\022\026\n\016service_schema\030\t \001(\t\022g" +
+      "\n\030object_transfer_settings\030\r \001(\0132E.yande" +
+      "x.cloud.datatransfer.v1.endpoint.Postgre" +
+      "sObjectTransferSettings\"\247\002\n\016PostgresTarg" +
+      "et\022M\n\nconnection\030\001 \001(\01329.yandex.cloud.da" +
+      "tatransfer.v1.endpoint.PostgresConnectio" +
+      "n\022\027\n\017security_groups\030\007 \003(\t\022\020\n\010database\030\002" +
+      " \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.y" +
+      "andex.cloud.datatransfer.v1.endpoint.Sec" +
+      "ret\022L\n\016cleanup_policy\030\005 \001(\01624.yandex.clo" +
+      "ud.datatransfer.v1.endpoint.CleanupPolic" +
+      "yB\247\001\n)yandex.cloud.api.datatransfer.v1.e" +
+      "ndpointZRgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/datatransfer/v1/endpoi" +
+      "nt;endpoint\252\002%Yandex.Cloud.Datatransfer." +
+      "V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10418,7 +10214,7 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresObjectTransferSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresObjectTransferSettings_descriptor,
-        new java.lang.String[] { "Sequence", "SequenceOwnedBy", "Table", "PrimaryKey", "FkConstraint", "DefaultValues", "Constraint", "Index", "View", "Function", "Trigger", "Type", "Rule", "Collation", "Policy", "Cast", "MaterializedView", });
+        new java.lang.String[] { "Sequence", "SequenceOwnedBy", "SequenceSet", "Table", "PrimaryKey", "FkConstraint", "DefaultValues", "Constraint", "Index", "View", "MaterializedView", "Function", "Trigger", "Type", "Rule", "Collation", "Policy", "Cast", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_fieldAccessorTable = new

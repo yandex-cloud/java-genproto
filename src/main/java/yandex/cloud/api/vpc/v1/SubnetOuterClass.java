@@ -471,7 +471,7 @@ public final class SubnetOuterClass {
   }
   /**
    * <pre>
-   * A Subnet resource. For more information, see [Subnets](/docs/vpc/concepts/subnets).
+   * A Subnet resource. For more information, see [Subnets](/docs/vpc/concepts/network#subnet).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.Subnet}
@@ -1582,7 +1582,7 @@ public final class SubnetOuterClass {
     }
     /**
      * <pre>
-     * A Subnet resource. For more information, see [Subnets](/docs/vpc/concepts/subnets).
+     * A Subnet resource. For more information, see [Subnets](/docs/vpc/concepts/network#subnet).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.vpc.v1.Subnet}

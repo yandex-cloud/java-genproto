@@ -5256,30 +5256,33 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which attributes of the bucket should be updated.
+     * Update mask that specifies which attributes of the bucket should be updated.
+     * Use * for full update.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
-     * @return Whether the fieldMask field is set.
+     * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the updateMask field is set.
      */
-    boolean hasFieldMask();
+    boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which attributes of the bucket should be updated.
+     * Update mask that specifies which attributes of the bucket should be updated.
+     * Use * for full update.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The fieldMask.
+     * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The updateMask.
      */
-    com.google.protobuf.FieldMask getFieldMask();
+    com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which attributes of the bucket should be updated.
+     * Update mask that specifies which attributes of the bucket should be updated.
+     * Use * for full update.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
-    com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
      * <pre>
@@ -5689,13 +5692,13 @@ public final class BucketServiceOuterClass {
             }
             case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
-              if (fieldMask_ != null) {
-                subBuilder = fieldMask_.toBuilder();
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
               }
-              fieldMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(fieldMask_);
-                fieldMask_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5900,42 +5903,45 @@ public final class BucketServiceOuterClass {
       }
     }
 
-    public static final int FIELD_MASK_FIELD_NUMBER = 2;
-    private com.google.protobuf.FieldMask fieldMask_;
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which attributes of the bucket should be updated.
+     * Update mask that specifies which attributes of the bucket should be updated.
+     * Use * for full update.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
-     * @return Whether the fieldMask field is set.
+     * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the updateMask field is set.
      */
     @java.lang.Override
-    public boolean hasFieldMask() {
-      return fieldMask_ != null;
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
     }
     /**
      * <pre>
-     * Field mask that specifies which attributes of the bucket should be updated.
+     * Update mask that specifies which attributes of the bucket should be updated.
+     * Use * for full update.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The fieldMask.
+     * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The updateMask.
      */
     @java.lang.Override
-    public com.google.protobuf.FieldMask getFieldMask() {
-      return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <pre>
-     * Field mask that specifies which attributes of the bucket should be updated.
+     * Update mask that specifies which attributes of the bucket should be updated.
+     * Use * for full update.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-      return getFieldMask();
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
     }
 
     public static final int ANONYMOUS_ACCESS_FLAGS_FIELD_NUMBER = 3;
@@ -6445,8 +6451,8 @@ public final class BucketServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (fieldMask_ != null) {
-        output.writeMessage(2, getFieldMask());
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
       }
       if (anonymousAccessFlags_ != null) {
         output.writeMessage(3, getAnonymousAccessFlags());
@@ -6493,9 +6499,9 @@ public final class BucketServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (fieldMask_ != null) {
+      if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getFieldMask());
+          .computeMessageSize(2, getUpdateMask());
       }
       if (anonymousAccessFlags_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -6557,10 +6563,10 @@ public final class BucketServiceOuterClass {
 
       if (!getName()
           .equals(other.getName())) return false;
-      if (hasFieldMask() != other.hasFieldMask()) return false;
-      if (hasFieldMask()) {
-        if (!getFieldMask()
-            .equals(other.getFieldMask())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
       if (hasAnonymousAccessFlags() != other.hasAnonymousAccessFlags()) return false;
       if (hasAnonymousAccessFlags()) {
@@ -6611,9 +6617,9 @@ public final class BucketServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      if (hasFieldMask()) {
-        hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
-        hash = (53 * hash) + getFieldMask().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
       }
       if (hasAnonymousAccessFlags()) {
         hash = (37 * hash) + ANONYMOUS_ACCESS_FLAGS_FIELD_NUMBER;
@@ -6792,11 +6798,11 @@ public final class BucketServiceOuterClass {
         super.clear();
         name_ = "";
 
-        if (fieldMaskBuilder_ == null) {
-          fieldMask_ = null;
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
         } else {
-          fieldMask_ = null;
-          fieldMaskBuilder_ = null;
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
         }
         if (anonymousAccessFlagsBuilder_ == null) {
           anonymousAccessFlags_ = null;
@@ -6880,10 +6886,10 @@ public final class BucketServiceOuterClass {
         yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest result = new yandex.cloud.api.storage.v1.BucketServiceOuterClass.UpdateBucketRequest(this);
         int from_bitField0_ = bitField0_;
         result.name_ = name_;
-        if (fieldMaskBuilder_ == null) {
-          result.fieldMask_ = fieldMask_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
         } else {
-          result.fieldMask_ = fieldMaskBuilder_.build();
+          result.updateMask_ = updateMaskBuilder_.build();
         }
         if (anonymousAccessFlagsBuilder_ == null) {
           result.anonymousAccessFlags_ = anonymousAccessFlags_;
@@ -6992,8 +6998,8 @@ public final class BucketServiceOuterClass {
           name_ = other.name_;
           onChanged();
         }
-        if (other.hasFieldMask()) {
-          mergeFieldMask(other.getFieldMask());
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
         }
         if (other.hasAnonymousAccessFlags()) {
           mergeAnonymousAccessFlags(other.getAnonymousAccessFlags());
@@ -7234,159 +7240,168 @@ public final class BucketServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask fieldMask_;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
-       * @return Whether the fieldMask field is set.
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the updateMask field is set.
        */
-      public boolean hasFieldMask() {
-        return fieldMaskBuilder_ != null || fieldMask_ != null;
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The fieldMask.
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The updateMask.
        */
-      public com.google.protobuf.FieldMask getFieldMask() {
-        if (fieldMaskBuilder_ == null) {
-          return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
         } else {
-          return fieldMaskBuilder_.getMessage();
+          return updateMaskBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder setFieldMask(com.google.protobuf.FieldMask value) {
-        if (fieldMaskBuilder_ == null) {
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          fieldMask_ = value;
+          updateMask_ = value;
           onChanged();
         } else {
-          fieldMaskBuilder_.setMessage(value);
+          updateMaskBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder setFieldMask(
+      public Builder setUpdateMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
-        if (fieldMaskBuilder_ == null) {
-          fieldMask_ = builderForValue.build();
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
           onChanged();
         } else {
-          fieldMaskBuilder_.setMessage(builderForValue.build());
+          updateMaskBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
-        if (fieldMaskBuilder_ == null) {
-          if (fieldMask_ != null) {
-            fieldMask_ =
-              com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
           } else {
-            fieldMask_ = value;
+            updateMask_ = value;
           }
           onChanged();
         } else {
-          fieldMaskBuilder_.mergeFrom(value);
+          updateMaskBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder clearFieldMask() {
-        if (fieldMaskBuilder_ == null) {
-          fieldMask_ = null;
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
           onChanged();
         } else {
-          fieldMask_ = null;
-          fieldMaskBuilder_ = null;
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
         
         onChanged();
-        return getFieldMaskFieldBuilder().getBuilder();
+        return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
-      public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-        if (fieldMaskBuilder_ != null) {
-          return fieldMaskBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
         } else {
-          return fieldMask_ == null ?
-              com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
         }
       }
       /**
        * <pre>
-       * Field mask that specifies which attributes of the bucket should be updated.
+       * Update mask that specifies which attributes of the bucket should be updated.
+       * Use * for full update.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
-          getFieldMaskFieldBuilder() {
-        if (fieldMaskBuilder_ == null) {
-          fieldMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
-                  getFieldMask(),
+                  getUpdateMask(),
                   getParentForChildren(),
                   isClean());
-          fieldMask_ = null;
+          updateMask_ = null;
         }
-        return fieldMaskBuilder_;
+        return updateMaskBuilder_;
       }
 
       private yandex.cloud.api.storage.v1.BucketOuterClass.AnonymousAccessFlags anonymousAccessFlags_;
@@ -17148,83 +17163,83 @@ public final class BucketServiceOuterClass {
       "nonymousAccessFlags\022)\n\003acl\030\007 \001(\0132\034.yande" +
       "x.cloud.storage.v1.ACL\022*\n\004tags\030\010 \003(\0132\034.y" +
       "andex.cloud.storage.v1.Tag\"$\n\024CreateBuck" +
-      "etMetadata\022\014\n\004name\030\001 \001(\t\"\210\005\n\023UpdateBucke" +
-      "tRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0224\n\nfield_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350\307" +
-      "1\001\022M\n\026anonymous_access_flags\030\003 \001(\0132-.yan" +
-      "dex.cloud.storage.v1.AnonymousAccessFlag" +
-      "s\022\035\n\025default_storage_class\030\004 \001(\t\022\020\n\010max_" +
-      "size\030\005 \001(\003\022/\n\004cors\030\006 \003(\0132!.yandex.cloud." +
-      "storage.v1.CorsRule\022B\n\020website_settings\030" +
-      "\007 \001(\0132(.yandex.cloud.storage.v1.WebsiteS" +
-      "ettings\0227\n\nversioning\030\010 \001(\0162#.yandex.clo" +
-      "ud.storage.v1.Versioning\022?\n\017lifecycle_ru" +
-      "les\030\t \003(\0132&.yandex.cloud.storage.v1.Life" +
-      "cycleRule\022\'\n\006policy\030\n \001(\0132\027.google.proto" +
-      "buf.Struct\022)\n\003acl\030\013 \001(\0132\034.yandex.cloud.s" +
-      "torage.v1.ACL\022*\n\004tags\030\014 \003(\0132\034.yandex.clo" +
-      "ud.storage.v1.Tag\0228\n\013object_lock\030\r \001(\0132#" +
-      ".yandex.cloud.storage.v1.ObjectLock\"$\n\024U" +
-      "pdateBucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023Del" +
-      "eteBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024" +
-      "DeleteBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025Ge" +
-      "tBucketStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"" +
-      "1\n\033GetBucketHTTPSConfigRequest\022\022\n\004name\030\001" +
-      " \001(\tB\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigPara" +
-      "ms\022&\n\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=31457" +
-      "28\022&\n\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=31457" +
-      "28\"=\n#CertificateManagerHTTPSConfigParam" +
-      "s\022\026\n\016certificate_id\030\001 \001(\t\"\355\001\n\033SetBucketH" +
-      "TTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n" +
-      "\014self_managed\030\002 \001(\01325.yandex.cloud.stora" +
-      "ge.v1.SelfManagedHTTPSConfigParamsH\000\022[\n\023" +
-      "certificate_manager\030\003 \001(\0132<.yandex.cloud" +
-      ".storage.v1.CertificateManagerHTTPSConfi" +
-      "gParamsH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketHT" +
-      "TPSConfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036Delet" +
-      "eBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB" +
-      "\004\350\3071\001\"/\n\037DeleteBucketHTTPSConfigMetadata" +
-      "\022\014\n\004name\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004List" +
-      "\022+.yandex.cloud.storage.v1.ListBucketsRe" +
-      "quest\032,.yandex.cloud.storage.v1.ListBuck" +
-      "etsResponse\"\033\202\323\344\223\002\025\022\023/storage/v1/buckets" +
-      "\022u\n\003Get\022).yandex.cloud.storage.v1.GetBuc" +
-      "ketRequest\032\037.yandex.cloud.storage.v1.Buc" +
-      "ket\"\"\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}\022" +
-      "\233\001\n\006Create\022,.yandex.cloud.storage.v1.Cre" +
-      "ateBucketRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"@\202\323\344\223\002\030\"\023/storage/v1/buckets" +
-      ":\001*\262\322*\036\n\024CreateBucketMetadata\022\006Bucket\022\242\001" +
-      "\n\006Update\022,.yandex.cloud.storage.v1.Updat" +
-      "eBucketRequest\032!.yandex.cloud.operation." +
-      "Operation\"G\202\323\344\223\002\0372\032/storage/v1/buckets/{" +
-      "name}:\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Buck" +
-      "et\022\256\001\n\006Delete\022,.yandex.cloud.storage.v1." +
-      "DeleteBucketRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"S\202\323\344\223\002\034*\032/storage/v1/buck" +
-      "ets/{name}\262\322*-\n\024DeleteBucketMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\215\001\n\010GetStats\022..yande" +
-      "x.cloud.storage.v1.GetBucketStatsRequest" +
-      "\032$.yandex.cloud.storage.v1.BucketStats\"+" +
-      "\202\323\344\223\002%\022#/storage/v1/buckets/{name}:getSt" +
-      "ats\022\237\001\n\016GetHTTPSConfig\0224.yandex.cloud.st" +
-      "orage.v1.GetBucketHTTPSConfigRequest\032$.y" +
-      "andex.cloud.storage.v1.HTTPSConfig\"1\202\323\344\223" +
-      "\002+\022)/storage/v1/buckets/{name}:getHttpsC" +
-      "onfig\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud." +
-      "storage.v1.SetBucketHTTPSConfigRequest\032!" +
-      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
-      ".\")/storage/v1/buckets/{name}:setHttpsCo" +
-      "nfig:\001*\262\322*+\n\034SetBucketHTTPSConfigMetadat" +
-      "a\022\013HTTPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227.y" +
-      "andex.cloud.storage.v1.DeleteBucketHTTPS" +
-      "ConfigRequest\032!.yandex.cloud.operation.O" +
-      "peration\"p\202\323\344\223\002.\",/storage/v1/buckets/{n" +
-      "ame}:deleteHttpsConfig\262\322*8\n\037DeleteBucket" +
-      "HTTPSConfigMetadata\022\025google.protobuf.Emp" +
-      "tyBb\n\033yandex.cloud.api.storage.v1ZCgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/storage/v1;storageb\006proto3"
+      "etMetadata\022\014\n\004name\030\001 \001(\t\"\211\005\n\023UpdateBucke" +
+      "tRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0225\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350" +
+      "\3071\001\022M\n\026anonymous_access_flags\030\003 \001(\0132-.ya" +
+      "ndex.cloud.storage.v1.AnonymousAccessFla" +
+      "gs\022\035\n\025default_storage_class\030\004 \001(\t\022\020\n\010max" +
+      "_size\030\005 \001(\003\022/\n\004cors\030\006 \003(\0132!.yandex.cloud" +
+      ".storage.v1.CorsRule\022B\n\020website_settings" +
+      "\030\007 \001(\0132(.yandex.cloud.storage.v1.Website" +
+      "Settings\0227\n\nversioning\030\010 \001(\0162#.yandex.cl" +
+      "oud.storage.v1.Versioning\022?\n\017lifecycle_r" +
+      "ules\030\t \003(\0132&.yandex.cloud.storage.v1.Lif" +
+      "ecycleRule\022\'\n\006policy\030\n \001(\0132\027.google.prot" +
+      "obuf.Struct\022)\n\003acl\030\013 \001(\0132\034.yandex.cloud." +
+      "storage.v1.ACL\022*\n\004tags\030\014 \003(\0132\034.yandex.cl" +
+      "oud.storage.v1.Tag\0228\n\013object_lock\030\r \001(\0132" +
+      "#.yandex.cloud.storage.v1.ObjectLock\"$\n\024" +
+      "UpdateBucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023De" +
+      "leteBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n" +
+      "\024DeleteBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025G" +
+      "etBucketStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
+      "\"1\n\033GetBucketHTTPSConfigRequest\022\022\n\004name\030" +
+      "\001 \001(\tB\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigPar" +
+      "ams\022&\n\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=3145" +
+      "728\022&\n\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=3145" +
+      "728\"=\n#CertificateManagerHTTPSConfigPara" +
+      "ms\022\026\n\016certificate_id\030\001 \001(\t\"\355\001\n\033SetBucket" +
+      "HTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M" +
+      "\n\014self_managed\030\002 \001(\01325.yandex.cloud.stor" +
+      "age.v1.SelfManagedHTTPSConfigParamsH\000\022[\n" +
+      "\023certificate_manager\030\003 \001(\0132<.yandex.clou" +
+      "d.storage.v1.CertificateManagerHTTPSConf" +
+      "igParamsH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketH" +
+      "TTPSConfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036Dele" +
+      "teBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\t" +
+      "B\004\350\3071\001\"/\n\037DeleteBucketHTTPSConfigMetadat" +
+      "a\022\014\n\004name\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004Lis" +
+      "t\022+.yandex.cloud.storage.v1.ListBucketsR" +
+      "equest\032,.yandex.cloud.storage.v1.ListBuc" +
+      "ketsResponse\"\033\202\323\344\223\002\025\022\023/storage/v1/bucket" +
+      "s\022u\n\003Get\022).yandex.cloud.storage.v1.GetBu" +
+      "cketRequest\032\037.yandex.cloud.storage.v1.Bu" +
+      "cket\"\"\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}" +
+      "\022\233\001\n\006Create\022,.yandex.cloud.storage.v1.Cr" +
+      "eateBucketRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"@\202\323\344\223\002\030\"\023/storage/v1/bucket" +
+      "s:\001*\262\322*\036\n\024CreateBucketMetadata\022\006Bucket\022\242" +
+      "\001\n\006Update\022,.yandex.cloud.storage.v1.Upda" +
+      "teBucketRequest\032!.yandex.cloud.operation" +
+      ".Operation\"G\202\323\344\223\002\0372\032/storage/v1/buckets/" +
+      "{name}:\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Buc" +
+      "ket\022\256\001\n\006Delete\022,.yandex.cloud.storage.v1" +
+      ".DeleteBucketRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"S\202\323\344\223\002\034*\032/storage/v1/buc" +
+      "kets/{name}\262\322*-\n\024DeleteBucketMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\215\001\n\010GetStats\022..yand" +
+      "ex.cloud.storage.v1.GetBucketStatsReques" +
+      "t\032$.yandex.cloud.storage.v1.BucketStats\"" +
+      "+\202\323\344\223\002%\022#/storage/v1/buckets/{name}:getS" +
+      "tats\022\237\001\n\016GetHTTPSConfig\0224.yandex.cloud.s" +
+      "torage.v1.GetBucketHTTPSConfigRequest\032$." +
+      "yandex.cloud.storage.v1.HTTPSConfig\"1\202\323\344" +
+      "\223\002+\022)/storage/v1/buckets/{name}:getHttps" +
+      "Config\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud" +
+      ".storage.v1.SetBucketHTTPSConfigRequest\032" +
+      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
+      "\002.\")/storage/v1/buckets/{name}:setHttpsC" +
+      "onfig:\001*\262\322*+\n\034SetBucketHTTPSConfigMetada" +
+      "ta\022\013HTTPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227." +
+      "yandex.cloud.storage.v1.DeleteBucketHTTP" +
+      "SConfigRequest\032!.yandex.cloud.operation." +
+      "Operation\"p\202\323\344\223\002.\",/storage/v1/buckets/{" +
+      "name}:deleteHttpsConfig\262\322*8\n\037DeleteBucke" +
+      "tHTTPSConfigMetadata\022\025google.protobuf.Em" +
+      "ptyBb\n\033yandex.cloud.api.storage.v1ZCgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/storage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17272,7 +17287,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "FieldMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", });
+        new java.lang.String[] { "Name", "UpdateMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", });
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_fieldAccessorTable = new

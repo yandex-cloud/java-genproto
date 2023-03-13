@@ -46,8 +46,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database port
-     * 
-     * Default: 3306.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -57,8 +55,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -68,8 +64,6 @@ public final class Mysql {
     boolean hasTlsMode();
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -79,8 +73,6 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode();
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -90,9 +82,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -101,9 +91,7 @@ public final class Mysql {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -268,8 +256,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database port
-     * 
-     * Default: 3306.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -284,8 +270,6 @@ public final class Mysql {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -298,8 +282,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -312,8 +294,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * TLS mode
-     * 
      * TLS settings for server connection. Disabled by default.
      * </pre>
      *
@@ -328,9 +308,7 @@ public final class Mysql {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -351,9 +329,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Network interface for endpoint
-     * 
-     * Default: public IPv4.
+     * Network interface for endpoint. If none will assume public ipv4
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -874,8 +850,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database port
-       * 
-       * Default: 3306.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -888,8 +862,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database port
-       * 
-       * Default: 3306.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -905,8 +877,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database port
-       * 
-       * Default: 3306.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -924,8 +894,6 @@ public final class Mysql {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -937,8 +905,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -954,8 +920,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -976,8 +940,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -996,8 +958,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -1020,8 +980,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -1040,8 +998,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -1054,8 +1010,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -1071,8 +1025,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * TLS mode
-       * 
        * TLS settings for server connection. Disabled by default.
        * </pre>
        *
@@ -1095,9 +1047,7 @@ public final class Mysql {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -1117,9 +1067,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -1140,9 +1088,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -1161,9 +1107,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -1177,9 +1121,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint
-       * 
-       * Default: public IPv4.
+       * Network interface for endpoint. If none will assume public ipv4
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -1256,8 +1198,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for MySQL cluster ID
      * </pre>
      *
@@ -1267,8 +1207,6 @@ public final class Mysql {
     boolean hasMdbClusterId();
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for MySQL cluster ID
      * </pre>
      *
@@ -1278,8 +1216,6 @@ public final class Mysql {
     java.lang.String getMdbClusterId();
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for MySQL cluster ID
      * </pre>
      *
@@ -1291,8 +1227,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise MySQL
      * </pre>
      *
@@ -1302,8 +1236,6 @@ public final class Mysql {
     boolean hasOnPremise();
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise MySQL
      * </pre>
      *
@@ -1313,8 +1245,6 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql getOnPremise();
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise MySQL
      * </pre>
      *
@@ -1465,8 +1395,6 @@ public final class Mysql {
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for MySQL cluster ID
      * </pre>
      *
@@ -1478,8 +1406,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for MySQL cluster ID
      * </pre>
      *
@@ -1505,8 +1431,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Managed cluster
-     * 
      * Managed Service for MySQL cluster ID
      * </pre>
      *
@@ -1535,8 +1459,6 @@ public final class Mysql {
     public static final int ON_PREMISE_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise MySQL
      * </pre>
      *
@@ -1549,8 +1471,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise MySQL
      * </pre>
      *
@@ -1566,8 +1486,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * On-premise
-     * 
      * Connection options for on-premise MySQL
      * </pre>
      *
@@ -1949,8 +1867,6 @@ public final class Mysql {
 
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for MySQL cluster ID
        * </pre>
        *
@@ -1963,8 +1879,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for MySQL cluster ID
        * </pre>
        *
@@ -1991,8 +1905,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for MySQL cluster ID
        * </pre>
        *
@@ -2020,8 +1932,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for MySQL cluster ID
        * </pre>
        *
@@ -2041,8 +1951,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for MySQL cluster ID
        * </pre>
        *
@@ -2059,8 +1967,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Managed cluster
-       * 
        * Managed Service for MySQL cluster ID
        * </pre>
        *
@@ -2084,8 +1990,6 @@ public final class Mysql {
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysqlOrBuilder> onPremiseBuilder_;
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2098,8 +2002,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2122,8 +2024,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2144,8 +2044,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2164,8 +2062,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2192,8 +2088,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2217,8 +2111,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2229,8 +2121,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2249,8 +2139,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * On-premise
-       * 
        * Connection options for on-premise MySQL
        * </pre>
        *
@@ -2399,6 +2287,17 @@ public final class Mysql {
      * @return The trigger.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTrigger();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+     * @return The enum numeric value on the wire for tables.
+     */
+    int getTablesValue();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+     * @return The tables.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTables();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings}
@@ -2416,6 +2315,7 @@ public final class Mysql {
       view_ = 0;
       routine_ = 0;
       trigger_ = 0;
+      tables_ = 0;
     }
 
     @java.lang.Override
@@ -2464,6 +2364,12 @@ public final class Mysql {
               int rawValue = input.readEnum();
 
               trigger_ = rawValue;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              tables_ = rawValue;
               break;
             }
             default: {
@@ -2591,6 +2497,25 @@ public final class Mysql {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
+    public static final int TABLES_FIELD_NUMBER = 4;
+    private int tables_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+     * @return The enum numeric value on the wire for tables.
+     */
+    @java.lang.Override public int getTablesValue() {
+      return tables_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+     * @return The tables.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTables() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(tables_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2614,6 +2539,9 @@ public final class Mysql {
       if (trigger_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
         output.writeEnum(3, trigger_);
       }
+      if (tables_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, tables_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2635,6 +2563,10 @@ public final class Mysql {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, trigger_);
       }
+      if (tables_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.OBJECT_TRANSFER_STAGE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, tables_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2653,6 +2585,7 @@ public final class Mysql {
       if (view_ != other.view_) return false;
       if (routine_ != other.routine_) return false;
       if (trigger_ != other.trigger_) return false;
+      if (tables_ != other.tables_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2670,6 +2603,8 @@ public final class Mysql {
       hash = (53 * hash) + routine_;
       hash = (37 * hash) + TRIGGER_FIELD_NUMBER;
       hash = (53 * hash) + trigger_;
+      hash = (37 * hash) + TABLES_FIELD_NUMBER;
+      hash = (53 * hash) + tables_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2809,6 +2744,8 @@ public final class Mysql {
 
         trigger_ = 0;
 
+        tables_ = 0;
+
         return this;
       }
 
@@ -2838,6 +2775,7 @@ public final class Mysql {
         result.view_ = view_;
         result.routine_ = routine_;
         result.trigger_ = trigger_;
+        result.tables_ = tables_;
         onBuilt();
         return result;
       }
@@ -2894,6 +2832,9 @@ public final class Mysql {
         }
         if (other.trigger_ != 0) {
           setTriggerValue(other.getTriggerValue());
+        }
+        if (other.tables_ != 0) {
+          setTablesValue(other.getTablesValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3175,6 +3116,60 @@ public final class Mysql {
         onChanged();
         return this;
       }
+
+      private int tables_ = 0;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+       * @return The enum numeric value on the wire for tables.
+       */
+      @java.lang.Override public int getTablesValue() {
+        return tables_;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+       * @param value The enum numeric value on the wire for tables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTablesValue(int value) {
+        
+        tables_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+       * @return The tables.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getTables() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(tables_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+       * @param value The tables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTables(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        tables_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage tables = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTables() {
+        
+        tables_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3234,8 +3229,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -3245,8 +3238,6 @@ public final class Mysql {
     boolean hasConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -3256,8 +3247,6 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -3360,8 +3349,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -3371,8 +3358,6 @@ public final class Mysql {
     java.lang.String getUser();
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -3384,8 +3369,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -3395,8 +3378,6 @@ public final class Mysql {
     boolean hasPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -3406,8 +3387,6 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -3712,8 +3691,6 @@ public final class Mysql {
     private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -3726,8 +3703,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -3740,8 +3715,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -3911,8 +3884,6 @@ public final class Mysql {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -3934,8 +3905,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -3961,8 +3930,6 @@ public final class Mysql {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -3975,8 +3942,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -3989,8 +3954,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -4719,8 +4682,6 @@ public final class Mysql {
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder> connectionBuilder_;
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4732,8 +4693,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4749,8 +4708,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4771,8 +4728,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4791,8 +4746,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4815,8 +4768,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4835,8 +4786,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4849,8 +4798,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -4866,8 +4813,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -5258,8 +5203,6 @@ public final class Mysql {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -5280,8 +5223,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -5303,8 +5244,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -5324,8 +5263,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -5340,8 +5277,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -5366,8 +5301,6 @@ public final class Mysql {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5379,8 +5312,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5396,8 +5327,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5418,8 +5347,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5438,8 +5365,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5462,8 +5387,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5482,8 +5405,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5496,8 +5417,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -5513,8 +5432,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -6096,8 +6013,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6107,8 +6022,6 @@ public final class Mysql {
     boolean hasConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6118,8 +6031,6 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection getConnection();
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6198,8 +6109,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -6209,8 +6118,6 @@ public final class Mysql {
     java.lang.String getUser();
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -6222,8 +6129,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6233,8 +6138,6 @@ public final class Mysql {
     boolean hasPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6244,8 +6147,6 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6255,8 +6156,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * sql_mode
-     * 
      * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
      * </pre>
      *
@@ -6266,8 +6165,6 @@ public final class Mysql {
     java.lang.String getSqlMode();
     /**
      * <pre>
-     * sql_mode
-     * 
      * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
      * </pre>
      *
@@ -6534,8 +6431,6 @@ public final class Mysql {
     private yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection connection_;
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6548,8 +6443,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6562,8 +6455,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Connection settings
-     * 
      * Database connection settings
      * </pre>
      *
@@ -6683,8 +6574,6 @@ public final class Mysql {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -6706,8 +6595,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Username
-     * 
      * User for database access.
      * </pre>
      *
@@ -6733,8 +6620,6 @@ public final class Mysql {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6747,8 +6632,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6761,8 +6644,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Password
-     * 
      * Password for database access.
      * </pre>
      *
@@ -6777,8 +6658,6 @@ public final class Mysql {
     private volatile java.lang.Object sqlMode_;
     /**
      * <pre>
-     * sql_mode
-     * 
      * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
      * </pre>
      *
@@ -6800,8 +6679,6 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * sql_mode
-     * 
      * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
      * </pre>
      *
@@ -7482,8 +7359,6 @@ public final class Mysql {
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder> connectionBuilder_;
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7495,8 +7370,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7512,8 +7385,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7534,8 +7405,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7554,8 +7423,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7578,8 +7445,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7598,8 +7463,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7612,8 +7475,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7629,8 +7490,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Connection settings
-       * 
        * Database connection settings
        * </pre>
        *
@@ -7915,8 +7774,6 @@ public final class Mysql {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7937,8 +7794,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7960,8 +7815,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7981,8 +7834,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -7997,8 +7848,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Username
-       * 
        * User for database access.
        * </pre>
        *
@@ -8023,8 +7872,6 @@ public final class Mysql {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8036,8 +7883,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8053,8 +7898,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8075,8 +7918,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8095,8 +7936,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8119,8 +7958,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8139,8 +7976,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8153,8 +7988,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8170,8 +8003,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Password
-       * 
        * Password for database access.
        * </pre>
        *
@@ -8194,8 +8025,6 @@ public final class Mysql {
       private java.lang.Object sqlMode_ = "";
       /**
        * <pre>
-       * sql_mode
-       * 
        * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
        * </pre>
        *
@@ -8216,8 +8045,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * sql_mode
-       * 
        * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
        * </pre>
        *
@@ -8239,8 +8066,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * sql_mode
-       * 
        * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
        * </pre>
        *
@@ -8260,8 +8085,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * sql_mode
-       * 
        * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
        * </pre>
        *
@@ -8276,8 +8099,6 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * sql_mode
-       * 
        * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
        * </pre>
        *
@@ -8754,38 +8575,40 @@ public final class Mysql {
       "MysqlConnection\022\030\n\016mdb_cluster_id\030\001 \001(\tH" +
       "\000\022K\n\non_premise\030\002 \001(\01325.yandex.cloud.dat" +
       "atransfer.v1.endpoint.OnPremiseMysqlH\000B\014" +
-      "\n\nconnection\"\201\002\n\033MysqlObjectTransferSett" +
+      "\n\nconnection\"\315\002\n\033MysqlObjectTransferSett" +
       "ings\022H\n\004view\030\001 \001(\0162:.yandex.cloud.datatr" +
       "ansfer.v1.endpoint.ObjectTransferStage\022K" +
       "\n\007routine\030\002 \001(\0162:.yandex.cloud.datatrans" +
       "fer.v1.endpoint.ObjectTransferStage\022K\n\007t" +
       "rigger\030\003 \001(\0162:.yandex.cloud.datatransfer" +
-      ".v1.endpoint.ObjectTransferStage\"\241\003\n\013Mys" +
-      "qlSource\022J\n\nconnection\030\001 \001(\01326.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.MysqlConnec" +
-      "tion\022\027\n\017security_groups\030\016 \003(\t\022\020\n\010databas" +
-      "e\030\002 \001(\t\022\030\n\020service_database\030\017 \001(\t\022\014\n\004use" +
-      "r\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud" +
-      ".datatransfer.v1.endpoint.Secret\022\034\n\024incl" +
-      "ude_tables_regex\030\014 \003(\t\022\034\n\024exclude_tables" +
-      "_regex\030\r \003(\t\022\020\n\010timezone\030\010 \001(\t\022d\n\030object" +
-      "_transfer_settings\030\013 \001(\0132B.yandex.cloud." +
-      "datatransfer.v1.endpoint.MysqlObjectTran" +
-      "sferSettings\"\377\002\n\013MysqlTarget\022J\n\nconnecti" +
-      "on\030\001 \001(\01326.yandex.cloud.datatransfer.v1." +
-      "endpoint.MysqlConnection\022\027\n\017security_gro" +
-      "ups\030\020 \003(\t\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(" +
-      "\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.datat" +
-      "ransfer.v1.endpoint.Secret\022\020\n\010sql_mode\030\005" +
-      " \001(\t\022\036\n\026skip_constraint_checks\030\006 \001(\010\022\020\n\010" +
-      "timezone\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001(\01624" +
-      ".yandex.cloud.datatransfer.v1.endpoint.C" +
-      "leanupPolicy\022\030\n\020service_database\030\017 \001(\tB\247" +
-      "\001\n)yandex.cloud.api.datatransfer.v1.endp" +
-      "ointZRgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/datatransfer/v1/endpoint;" +
-      "endpoint\252\002%Yandex.Cloud.Datatransfer.V1." +
-      "EndPointb\006proto3"
+      ".v1.endpoint.ObjectTransferStage\022J\n\006tabl" +
+      "es\030\004 \001(\0162:.yandex.cloud.datatransfer.v1." +
+      "endpoint.ObjectTransferStage\"\241\003\n\013MysqlSo" +
+      "urce\022J\n\nconnection\030\001 \001(\01326.yandex.cloud." +
+      "datatransfer.v1.endpoint.MysqlConnection" +
+      "\022\027\n\017security_groups\030\016 \003(\t\022\020\n\010database\030\002 " +
+      "\001(\t\022\030\n\020service_database\030\017 \001(\t\022\014\n\004user\030\003 " +
+      "\001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.dat" +
+      "atransfer.v1.endpoint.Secret\022\034\n\024include_" +
+      "tables_regex\030\014 \003(\t\022\034\n\024exclude_tables_reg" +
+      "ex\030\r \003(\t\022\020\n\010timezone\030\010 \001(\t\022d\n\030object_tra" +
+      "nsfer_settings\030\013 \001(\0132B.yandex.cloud.data" +
+      "transfer.v1.endpoint.MysqlObjectTransfer" +
+      "Settings\"\377\002\n\013MysqlTarget\022J\n\nconnection\030\001" +
+      " \001(\01326.yandex.cloud.datatransfer.v1.endp" +
+      "oint.MysqlConnection\022\027\n\017security_groups\030" +
+      "\020 \003(\t\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n" +
+      "\010password\030\004 \001(\0132-.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.Secret\022\020\n\010sql_mode\030\005 \001(\t" +
+      "\022\036\n\026skip_constraint_checks\030\006 \001(\010\022\020\n\010time" +
+      "zone\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001(\01624.yan" +
+      "dex.cloud.datatransfer.v1.endpoint.Clean" +
+      "upPolicy\022\030\n\020service_database\030\017 \001(\tB\247\001\n)y" +
+      "andex.cloud.api.datatransfer.v1.endpoint" +
+      "ZRgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/datatransfer/v1/endpoint;endp" +
+      "oint\252\002%Yandex.Cloud.Datatransfer.V1.EndP" +
+      "ointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8809,7 +8632,7 @@ public final class Mysql {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlObjectTransferSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlObjectTransferSettings_descriptor,
-        new java.lang.String[] { "View", "Routine", "Trigger", });
+        new java.lang.String[] { "View", "Routine", "Trigger", "Tables", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlSource_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlSource_fieldAccessorTable = new

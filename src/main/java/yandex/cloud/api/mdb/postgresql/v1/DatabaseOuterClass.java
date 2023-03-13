@@ -2348,7 +2348,7 @@ public final class DatabaseOuterClass {
     /**
      * <pre>
      * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2358,7 +2358,7 @@ public final class DatabaseOuterClass {
     /**
      * <pre>
      * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2483,7 +2483,7 @@ public final class DatabaseOuterClass {
     /**
      * <pre>
      * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2505,7 +2505,7 @@ public final class DatabaseOuterClass {
     /**
      * <pre>
      * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+     * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2895,7 +2895,7 @@ public final class DatabaseOuterClass {
       /**
        * <pre>
        * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2916,7 +2916,7 @@ public final class DatabaseOuterClass {
       /**
        * <pre>
        * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2938,7 +2938,7 @@ public final class DatabaseOuterClass {
       /**
        * <pre>
        * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2958,7 +2958,7 @@ public final class DatabaseOuterClass {
       /**
        * <pre>
        * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2973,7 +2973,7 @@ public final class DatabaseOuterClass {
       /**
        * <pre>
        * Name of the extension, e.g. `pg_trgm` or `pg_btree`.
-       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/cluster-extensions).
+       * Extensions supported by Managed Service for PostgreSQL are [listed in the Developer's Guide](/docs/managed-postgresql/operations/extensions/cluster-extensions).
        * </pre>
        *
        * <code>string name = 1;</code>

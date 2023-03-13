@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
+ * A set of methods for reading from log groups.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -95,7 +95,7 @@ public final class LogReadingServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
+   * A set of methods for reading from log groups.
    * </pre>
    */
   public static abstract class LogReadingServiceImplBase implements io.grpc.BindableService {
@@ -125,7 +125,7 @@ public final class LogReadingServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
+   * A set of methods for reading from log groups.
    * </pre>
    */
   public static final class LogReadingServiceStub extends io.grpc.stub.AbstractAsyncStub<LogReadingServiceStub> {
@@ -154,7 +154,7 @@ public final class LogReadingServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
+   * A set of methods for reading from log groups.
    * </pre>
    */
   public static final class LogReadingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LogReadingServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class LogReadingServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for reading from log groups. To make a request use `reader.logging.yandexcloud.net`.
+   * A set of methods for reading from log groups.
    * </pre>
    */
   public static final class LogReadingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LogReadingServiceFutureStub> {

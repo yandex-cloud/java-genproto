@@ -1113,11 +1113,19 @@ public final class Mongo {
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongoOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * User name
+     * </pre>
+     *
      * <code>string user = 3;</code>
      * @return The user.
      */
     java.lang.String getUser();
     /**
+     * <pre>
+     * User name
+     * </pre>
+     *
      * <code>string user = 3;</code>
      * @return The bytes for user.
      */
@@ -1125,26 +1133,46 @@ public final class Mongo {
         getUserBytes();
 
     /**
+     * <pre>
+     * Password for user
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      * @return Whether the password field is set.
      */
     boolean hasPassword();
     /**
+     * <pre>
+     * Password for user
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      * @return The password.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
+     * <pre>
+     * Password for user
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder();
 
     /**
+     * <pre>
+     * Database name associated with the credentials
+     * </pre>
+     *
      * <code>string auth_source = 5;</code>
      * @return The authSource.
      */
     java.lang.String getAuthSource();
     /**
+     * <pre>
+     * Database name associated with the credentials
+     * </pre>
+     *
      * <code>string auth_source = 5;</code>
      * @return The bytes for authSource.
      */
@@ -1404,6 +1432,10 @@ public final class Mongo {
     public static final int USER_FIELD_NUMBER = 3;
     private volatile java.lang.Object user_;
     /**
+     * <pre>
+     * User name
+     * </pre>
+     *
      * <code>string user = 3;</code>
      * @return The user.
      */
@@ -1421,6 +1453,10 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * User name
+     * </pre>
+     *
      * <code>string user = 3;</code>
      * @return The bytes for user.
      */
@@ -1442,6 +1478,10 @@ public final class Mongo {
     public static final int PASSWORD_FIELD_NUMBER = 4;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
+     * <pre>
+     * Password for user
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      * @return Whether the password field is set.
      */
@@ -1450,6 +1490,10 @@ public final class Mongo {
       return password_ != null;
     }
     /**
+     * <pre>
+     * Password for user
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      * @return The password.
      */
@@ -1458,6 +1502,10 @@ public final class Mongo {
       return password_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.getDefaultInstance() : password_;
     }
     /**
+     * <pre>
+     * Password for user
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
     @java.lang.Override
@@ -1468,6 +1516,10 @@ public final class Mongo {
     public static final int AUTH_SOURCE_FIELD_NUMBER = 5;
     private volatile java.lang.Object authSource_;
     /**
+     * <pre>
+     * Database name associated with the credentials
+     * </pre>
+     *
      * <code>string auth_source = 5;</code>
      * @return The authSource.
      */
@@ -1485,6 +1537,10 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * Database name associated with the credentials
+     * </pre>
+     *
      * <code>string auth_source = 5;</code>
      * @return The bytes for authSource.
      */
@@ -2173,6 +2229,10 @@ public final class Mongo {
 
       private java.lang.Object user_ = "";
       /**
+       * <pre>
+       * User name
+       * </pre>
+       *
        * <code>string user = 3;</code>
        * @return The user.
        */
@@ -2189,6 +2249,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * User name
+       * </pre>
+       *
        * <code>string user = 3;</code>
        * @return The bytes for user.
        */
@@ -2206,6 +2270,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * User name
+       * </pre>
+       *
        * <code>string user = 3;</code>
        * @param value The user to set.
        * @return This builder for chaining.
@@ -2221,6 +2289,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * User name
+       * </pre>
+       *
        * <code>string user = 3;</code>
        * @return This builder for chaining.
        */
@@ -2231,6 +2303,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * User name
+       * </pre>
+       *
        * <code>string user = 3;</code>
        * @param value The bytes for user to set.
        * @return This builder for chaining.
@@ -2251,6 +2327,10 @@ public final class Mongo {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        * @return Whether the password field is set.
        */
@@ -2258,6 +2338,10 @@ public final class Mongo {
         return passwordBuilder_ != null || password_ != null;
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        * @return The password.
        */
@@ -2269,6 +2353,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       public Builder setPassword(yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret value) {
@@ -2285,6 +2373,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       public Builder setPassword(
@@ -2299,6 +2391,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       public Builder mergePassword(yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret value) {
@@ -2317,6 +2413,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       public Builder clearPassword() {
@@ -2331,6 +2431,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder getPasswordBuilder() {
@@ -2339,6 +2443,10 @@ public final class Mongo {
         return getPasswordFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
@@ -2350,6 +2458,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Password for user
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2368,6 +2480,10 @@ public final class Mongo {
 
       private java.lang.Object authSource_ = "";
       /**
+       * <pre>
+       * Database name associated with the credentials
+       * </pre>
+       *
        * <code>string auth_source = 5;</code>
        * @return The authSource.
        */
@@ -2384,6 +2500,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Database name associated with the credentials
+       * </pre>
+       *
        * <code>string auth_source = 5;</code>
        * @return The bytes for authSource.
        */
@@ -2401,6 +2521,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Database name associated with the credentials
+       * </pre>
+       *
        * <code>string auth_source = 5;</code>
        * @param value The authSource to set.
        * @return This builder for chaining.
@@ -2416,6 +2540,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Database name associated with the credentials
+       * </pre>
+       *
        * <code>string auth_source = 5;</code>
        * @return This builder for chaining.
        */
@@ -2426,6 +2554,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Database name associated with the credentials
+       * </pre>
+       *
        * <code>string auth_source = 5;</code>
        * @param value The bytes for authSource to set.
        * @return This builder for chaining.
@@ -4003,54 +4135,108 @@ public final class Mongo {
         getSecurityGroupsBytes(int index);
 
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> 
         getCollectionsList();
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection getCollections(int index);
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     int getCollectionsCount();
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder> 
         getCollectionsOrBuilderList();
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder getCollectionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> 
         getExcludedCollectionsList();
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection getExcludedCollections(int index);
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     int getExcludedCollectionsCount();
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder> 
         getExcludedCollectionsOrBuilderList();
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder getExcludedCollectionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Read mode for mongo client
+     * </pre>
+     *
      * <code>bool secondary_preferred_mode = 8;</code>
      * @return The secondaryPreferredMode.
      */
@@ -4316,6 +4502,11 @@ public final class Mongo {
     public static final int COLLECTIONS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> collections_;
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     @java.lang.Override
@@ -4323,6 +4514,11 @@ public final class Mongo {
       return collections_;
     }
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     @java.lang.Override
@@ -4331,6 +4527,11 @@ public final class Mongo {
       return collections_;
     }
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     @java.lang.Override
@@ -4338,6 +4539,11 @@ public final class Mongo {
       return collections_.size();
     }
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     @java.lang.Override
@@ -4345,6 +4551,11 @@ public final class Mongo {
       return collections_.get(index);
     }
     /**
+     * <pre>
+     * List of collections for replication. Empty list implies replication of all
+     * tables on the deployment. Allowed to use * as collection name.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
      */
     @java.lang.Override
@@ -4356,6 +4567,11 @@ public final class Mongo {
     public static final int EXCLUDED_COLLECTIONS_FIELD_NUMBER = 7;
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> excludedCollections_;
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     @java.lang.Override
@@ -4363,6 +4579,11 @@ public final class Mongo {
       return excludedCollections_;
     }
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     @java.lang.Override
@@ -4371,6 +4592,11 @@ public final class Mongo {
       return excludedCollections_;
     }
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     @java.lang.Override
@@ -4378,6 +4604,11 @@ public final class Mongo {
       return excludedCollections_.size();
     }
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     @java.lang.Override
@@ -4385,6 +4616,11 @@ public final class Mongo {
       return excludedCollections_.get(index);
     }
     /**
+     * <pre>
+     * List of forbidden collections for replication. Allowed to use * as collection
+     * name for forbid all collections of concrete schema.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
      */
     @java.lang.Override
@@ -4396,6 +4632,10 @@ public final class Mongo {
     public static final int SECONDARY_PREFERRED_MODE_FIELD_NUMBER = 8;
     private boolean secondaryPreferredMode_;
     /**
+     * <pre>
+     * Read mode for mongo client
+     * </pre>
+     *
      * <code>bool secondary_preferred_mode = 8;</code>
      * @return The secondaryPreferredMode.
      */
@@ -5254,6 +5494,11 @@ public final class Mongo {
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder> collectionsBuilder_;
 
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> getCollectionsList() {
@@ -5264,6 +5509,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public int getCollectionsCount() {
@@ -5274,6 +5524,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection getCollections(int index) {
@@ -5284,6 +5539,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder setCollections(
@@ -5301,6 +5561,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder setCollections(
@@ -5315,6 +5580,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder addCollections(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection value) {
@@ -5331,6 +5601,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder addCollections(
@@ -5348,6 +5623,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder addCollections(
@@ -5362,6 +5642,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder addCollections(
@@ -5376,6 +5661,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder addAllCollections(
@@ -5391,6 +5681,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder clearCollections() {
@@ -5404,6 +5699,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public Builder removeCollections(int index) {
@@ -5417,6 +5717,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder getCollectionsBuilder(
@@ -5424,6 +5729,11 @@ public final class Mongo {
         return getCollectionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder getCollectionsOrBuilder(
@@ -5434,6 +5744,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder> 
@@ -5445,6 +5760,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder addCollectionsBuilder() {
@@ -5452,6 +5772,11 @@ public final class Mongo {
             yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder addCollectionsBuilder(
@@ -5460,6 +5785,11 @@ public final class Mongo {
             index, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of collections for replication. Empty list implies replication of all
+       * tables on the deployment. Allowed to use * as collection name.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection collections = 6;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder> 
@@ -5494,6 +5824,11 @@ public final class Mongo {
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder> excludedCollectionsBuilder_;
 
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> getExcludedCollectionsList() {
@@ -5504,6 +5839,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public int getExcludedCollectionsCount() {
@@ -5514,6 +5854,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection getExcludedCollections(int index) {
@@ -5524,6 +5869,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder setExcludedCollections(
@@ -5541,6 +5891,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder setExcludedCollections(
@@ -5555,6 +5910,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder addExcludedCollections(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection value) {
@@ -5571,6 +5931,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder addExcludedCollections(
@@ -5588,6 +5953,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder addExcludedCollections(
@@ -5602,6 +5972,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder addExcludedCollections(
@@ -5616,6 +5991,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder addAllExcludedCollections(
@@ -5631,6 +6011,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder clearExcludedCollections() {
@@ -5644,6 +6029,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public Builder removeExcludedCollections(int index) {
@@ -5657,6 +6047,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder getExcludedCollectionsBuilder(
@@ -5664,6 +6059,11 @@ public final class Mongo {
         return getExcludedCollectionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder getExcludedCollectionsOrBuilder(
@@ -5674,6 +6074,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder> 
@@ -5685,6 +6090,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder addExcludedCollectionsBuilder() {
@@ -5692,6 +6102,11 @@ public final class Mongo {
             yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder addExcludedCollectionsBuilder(
@@ -5700,6 +6115,11 @@ public final class Mongo {
             index, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of forbidden collections for replication. Allowed to use * as collection
+       * name for forbid all collections of concrete schema.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MongoCollection excluded_collections = 7;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder> 
@@ -5723,6 +6143,10 @@ public final class Mongo {
 
       private boolean secondaryPreferredMode_ ;
       /**
+       * <pre>
+       * Read mode for mongo client
+       * </pre>
+       *
        * <code>bool secondary_preferred_mode = 8;</code>
        * @return The secondaryPreferredMode.
        */
@@ -5731,6 +6155,10 @@ public final class Mongo {
         return secondaryPreferredMode_;
       }
       /**
+       * <pre>
+       * Read mode for mongo client
+       * </pre>
+       *
        * <code>bool secondary_preferred_mode = 8;</code>
        * @param value The secondaryPreferredMode to set.
        * @return This builder for chaining.
@@ -5742,6 +6170,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Read mode for mongo client
+       * </pre>
+       *
        * <code>bool secondary_preferred_mode = 8;</code>
        * @return This builder for chaining.
        */
@@ -5877,11 +6309,19 @@ public final class Mongo {
         getSecurityGroupsBytes(int index);
 
     /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
      * <code>string database = 2;</code>
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
      * <code>string database = 2;</code>
      * @return The bytes for database.
      */
@@ -6142,6 +6582,10 @@ public final class Mongo {
     public static final int DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object database_;
     /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
      * <code>string database = 2;</code>
      * @return The database.
      */
@@ -6159,6 +6603,10 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
      * <code>string database = 2;</code>
      * @return The bytes for database.
      */
@@ -6940,6 +7388,10 @@ public final class Mongo {
 
       private java.lang.Object database_ = "";
       /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
        * <code>string database = 2;</code>
        * @return The database.
        */
@@ -6956,6 +7408,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
        * <code>string database = 2;</code>
        * @return The bytes for database.
        */
@@ -6973,6 +7429,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
        * <code>string database = 2;</code>
        * @param value The database to set.
        * @return This builder for chaining.
@@ -6988,6 +7448,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
        * <code>string database = 2;</code>
        * @return This builder for chaining.
        */
@@ -6998,6 +7462,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
        * <code>string database = 2;</code>
        * @param value The bytes for database to set.
        * @return This builder for chaining.
