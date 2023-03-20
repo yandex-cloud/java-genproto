@@ -6218,6 +6218,36 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_19OrBuilder getGreenplumConfigSet619OrBuilder();
 
     /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+     * @return Whether the greenplumConfigSet621 field is set.
+     */
+    boolean hasGreenplumConfigSet621();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+     * @return The greenplumConfigSet621.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21 getGreenplumConfigSet621();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21OrBuilder getGreenplumConfigSet621OrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+     * @return Whether the greenplumConfigSet622 field is set.
+     */
+    boolean hasGreenplumConfigSet622();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+     * @return The greenplumConfigSet622.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22 getGreenplumConfigSet622();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22OrBuilder getGreenplumConfigSet622OrBuilder();
+
+    /**
      * <pre>
      * Odyssey® pool settings.
      * </pre>
@@ -6332,6 +6362,34 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 34: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.Builder subBuilder = null;
+              if (greenplumConfigCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_).toBuilder();
+              }
+              greenplumConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_);
+                greenplumConfig_ = subBuilder.buildPartial();
+              }
+              greenplumConfigCase_ = 4;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.Builder subBuilder = null;
+              if (greenplumConfigCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_).toBuilder();
+              }
+              greenplumConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_);
+                greenplumConfig_ = subBuilder.buildPartial();
+              }
+              greenplumConfigCase_ = 5;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6371,6 +6429,8 @@ public final class ClusterOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       GREENPLUM_CONFIG_SET_6_17(1),
       GREENPLUM_CONFIG_SET_6_19(2),
+      GREENPLUM_CONFIG_SET_6_21(4),
+      GREENPLUM_CONFIG_SET_6_22(5),
       GREENPLUMCONFIG_NOT_SET(0);
       private final int value;
       private GreenplumConfigCase(int value) {
@@ -6390,6 +6450,8 @@ public final class ClusterOuterClass {
         switch (value) {
           case 1: return GREENPLUM_CONFIG_SET_6_17;
           case 2: return GREENPLUM_CONFIG_SET_6_19;
+          case 4: return GREENPLUM_CONFIG_SET_6_21;
+          case 5: return GREENPLUM_CONFIG_SET_6_22;
           case 0: return GREENPLUMCONFIG_NOT_SET;
           default: return null;
         }
@@ -6467,6 +6529,68 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_19.getDefaultInstance();
     }
 
+    public static final int GREENPLUM_CONFIG_SET_6_21_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+     * @return Whether the greenplumConfigSet621 field is set.
+     */
+    @java.lang.Override
+    public boolean hasGreenplumConfigSet621() {
+      return greenplumConfigCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+     * @return The greenplumConfigSet621.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21 getGreenplumConfigSet621() {
+      if (greenplumConfigCase_ == 4) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21OrBuilder getGreenplumConfigSet621OrBuilder() {
+      if (greenplumConfigCase_ == 4) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance();
+    }
+
+    public static final int GREENPLUM_CONFIG_SET_6_22_FIELD_NUMBER = 5;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+     * @return Whether the greenplumConfigSet622 field is set.
+     */
+    @java.lang.Override
+    public boolean hasGreenplumConfigSet622() {
+      return greenplumConfigCase_ == 5;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+     * @return The greenplumConfigSet622.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22 getGreenplumConfigSet622() {
+      if (greenplumConfigCase_ == 5) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22OrBuilder getGreenplumConfigSet622OrBuilder() {
+      if (greenplumConfigCase_ == 5) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance();
+    }
+
     public static final int POOL_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet pool_;
     /**
@@ -6528,6 +6652,12 @@ public final class ClusterOuterClass {
       if (pool_ != null) {
         output.writeMessage(3, getPool());
       }
+      if (greenplumConfigCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_);
+      }
+      if (greenplumConfigCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6548,6 +6678,14 @@ public final class ClusterOuterClass {
       if (pool_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPool());
+      }
+      if (greenplumConfigCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_);
+      }
+      if (greenplumConfigCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6579,6 +6717,14 @@ public final class ClusterOuterClass {
           if (!getGreenplumConfigSet619()
               .equals(other.getGreenplumConfigSet619())) return false;
           break;
+        case 4:
+          if (!getGreenplumConfigSet621()
+              .equals(other.getGreenplumConfigSet621())) return false;
+          break;
+        case 5:
+          if (!getGreenplumConfigSet622()
+              .equals(other.getGreenplumConfigSet622())) return false;
+          break;
         case 0:
         default:
       }
@@ -6605,6 +6751,14 @@ public final class ClusterOuterClass {
         case 2:
           hash = (37 * hash) + GREENPLUM_CONFIG_SET_6_19_FIELD_NUMBER;
           hash = (53 * hash) + getGreenplumConfigSet619().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + GREENPLUM_CONFIG_SET_6_21_FIELD_NUMBER;
+          hash = (53 * hash) + getGreenplumConfigSet621().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + GREENPLUM_CONFIG_SET_6_22_FIELD_NUMBER;
+          hash = (53 * hash) + getGreenplumConfigSet622().hashCode();
           break;
         case 0:
         default:
@@ -6790,6 +6944,20 @@ public final class ClusterOuterClass {
             result.greenplumConfig_ = greenplumConfigSet619Builder_.build();
           }
         }
+        if (greenplumConfigCase_ == 4) {
+          if (greenplumConfigSet621Builder_ == null) {
+            result.greenplumConfig_ = greenplumConfig_;
+          } else {
+            result.greenplumConfig_ = greenplumConfigSet621Builder_.build();
+          }
+        }
+        if (greenplumConfigCase_ == 5) {
+          if (greenplumConfigSet622Builder_ == null) {
+            result.greenplumConfig_ = greenplumConfig_;
+          } else {
+            result.greenplumConfig_ = greenplumConfigSet622Builder_.build();
+          }
+        }
         if (poolBuilder_ == null) {
           result.pool_ = pool_;
         } else {
@@ -6854,6 +7022,14 @@ public final class ClusterOuterClass {
           }
           case GREENPLUM_CONFIG_SET_6_19: {
             mergeGreenplumConfigSet619(other.getGreenplumConfigSet619());
+            break;
+          }
+          case GREENPLUM_CONFIG_SET_6_21: {
+            mergeGreenplumConfigSet621(other.getGreenplumConfigSet621());
+            break;
+          }
+          case GREENPLUM_CONFIG_SET_6_22: {
+            mergeGreenplumConfigSet622(other.getGreenplumConfigSet622());
             break;
           }
           case GREENPLUMCONFIG_NOT_SET: {
@@ -7184,6 +7360,288 @@ public final class ClusterOuterClass {
         greenplumConfigCase_ = 2;
         onChanged();;
         return greenplumConfigSet619Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21OrBuilder> greenplumConfigSet621Builder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       * @return Whether the greenplumConfigSet621 field is set.
+       */
+      @java.lang.Override
+      public boolean hasGreenplumConfigSet621() {
+        return greenplumConfigCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       * @return The greenplumConfigSet621.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21 getGreenplumConfigSet621() {
+        if (greenplumConfigSet621Builder_ == null) {
+          if (greenplumConfigCase_ == 4) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance();
+        } else {
+          if (greenplumConfigCase_ == 4) {
+            return greenplumConfigSet621Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      public Builder setGreenplumConfigSet621(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21 value) {
+        if (greenplumConfigSet621Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          greenplumConfig_ = value;
+          onChanged();
+        } else {
+          greenplumConfigSet621Builder_.setMessage(value);
+        }
+        greenplumConfigCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      public Builder setGreenplumConfigSet621(
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.Builder builderForValue) {
+        if (greenplumConfigSet621Builder_ == null) {
+          greenplumConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          greenplumConfigSet621Builder_.setMessage(builderForValue.build());
+        }
+        greenplumConfigCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      public Builder mergeGreenplumConfigSet621(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21 value) {
+        if (greenplumConfigSet621Builder_ == null) {
+          if (greenplumConfigCase_ == 4 &&
+              greenplumConfig_ != yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance()) {
+            greenplumConfig_ = yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            greenplumConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (greenplumConfigCase_ == 4) {
+            greenplumConfigSet621Builder_.mergeFrom(value);
+          }
+          greenplumConfigSet621Builder_.setMessage(value);
+        }
+        greenplumConfigCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      public Builder clearGreenplumConfigSet621() {
+        if (greenplumConfigSet621Builder_ == null) {
+          if (greenplumConfigCase_ == 4) {
+            greenplumConfigCase_ = 0;
+            greenplumConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (greenplumConfigCase_ == 4) {
+            greenplumConfigCase_ = 0;
+            greenplumConfig_ = null;
+          }
+          greenplumConfigSet621Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.Builder getGreenplumConfigSet621Builder() {
+        return getGreenplumConfigSet621FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21OrBuilder getGreenplumConfigSet621OrBuilder() {
+        if ((greenplumConfigCase_ == 4) && (greenplumConfigSet621Builder_ != null)) {
+          return greenplumConfigSet621Builder_.getMessageOrBuilder();
+        } else {
+          if (greenplumConfigCase_ == 4) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_21 greenplum_config_set_6_21 = 4 [json_name = "greenplumConfigSet_6_21"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21OrBuilder> 
+          getGreenplumConfigSet621FieldBuilder() {
+        if (greenplumConfigSet621Builder_ == null) {
+          if (!(greenplumConfigCase_ == 4)) {
+            greenplumConfig_ = yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.getDefaultInstance();
+          }
+          greenplumConfigSet621Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21OrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_21) greenplumConfig_,
+                  getParentForChildren(),
+                  isClean());
+          greenplumConfig_ = null;
+        }
+        greenplumConfigCase_ = 4;
+        onChanged();;
+        return greenplumConfigSet621Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22OrBuilder> greenplumConfigSet622Builder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       * @return Whether the greenplumConfigSet622 field is set.
+       */
+      @java.lang.Override
+      public boolean hasGreenplumConfigSet622() {
+        return greenplumConfigCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       * @return The greenplumConfigSet622.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22 getGreenplumConfigSet622() {
+        if (greenplumConfigSet622Builder_ == null) {
+          if (greenplumConfigCase_ == 5) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance();
+        } else {
+          if (greenplumConfigCase_ == 5) {
+            return greenplumConfigSet622Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      public Builder setGreenplumConfigSet622(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22 value) {
+        if (greenplumConfigSet622Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          greenplumConfig_ = value;
+          onChanged();
+        } else {
+          greenplumConfigSet622Builder_.setMessage(value);
+        }
+        greenplumConfigCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      public Builder setGreenplumConfigSet622(
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.Builder builderForValue) {
+        if (greenplumConfigSet622Builder_ == null) {
+          greenplumConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          greenplumConfigSet622Builder_.setMessage(builderForValue.build());
+        }
+        greenplumConfigCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      public Builder mergeGreenplumConfigSet622(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22 value) {
+        if (greenplumConfigSet622Builder_ == null) {
+          if (greenplumConfigCase_ == 5 &&
+              greenplumConfig_ != yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance()) {
+            greenplumConfig_ = yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            greenplumConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (greenplumConfigCase_ == 5) {
+            greenplumConfigSet622Builder_.mergeFrom(value);
+          }
+          greenplumConfigSet622Builder_.setMessage(value);
+        }
+        greenplumConfigCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      public Builder clearGreenplumConfigSet622() {
+        if (greenplumConfigSet622Builder_ == null) {
+          if (greenplumConfigCase_ == 5) {
+            greenplumConfigCase_ = 0;
+            greenplumConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (greenplumConfigCase_ == 5) {
+            greenplumConfigCase_ = 0;
+            greenplumConfig_ = null;
+          }
+          greenplumConfigSet622Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.Builder getGreenplumConfigSet622Builder() {
+        return getGreenplumConfigSet622FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22OrBuilder getGreenplumConfigSet622OrBuilder() {
+        if ((greenplumConfigCase_ == 5) && (greenplumConfigSet622Builder_ != null)) {
+          return greenplumConfigSet622Builder_.getMessageOrBuilder();
+        } else {
+          if (greenplumConfigCase_ == 5) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6_22 greenplum_config_set_6_22 = 5 [json_name = "greenplumConfigSet_6_22"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22OrBuilder> 
+          getGreenplumConfigSet622FieldBuilder() {
+        if (greenplumConfigSet622Builder_ == null) {
+          if (!(greenplumConfigCase_ == 5)) {
+            greenplumConfig_ = yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.getDefaultInstance();
+          }
+          greenplumConfigSet622Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22OrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6_22) greenplumConfig_,
+                  getParentForChildren(),
+                  isClean());
+          greenplumConfig_ = null;
+        }
+        greenplumConfigCase_ = 5;
+        onChanged();;
+        return greenplumConfigSet622Builder_;
       }
 
       private yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSet pool_;
@@ -12912,34 +13370,40 @@ public final class ClusterOuterClass {
       "y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATIN" +
       "G\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020" +
       "\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING" +
-      "\020\007\"\330\002\n\020ClusterConfigSet\022s\n\031greenplum_con" +
+      "\020\007\"\302\004\n\020ClusterConfigSet\022s\n\031greenplum_con" +
       "fig_set_6_17\030\001 \001(\01325.yandex.cloud.mdb.gr" +
       "eenplum.v1.GreenplumConfigSet6_17H\000R\027gre" +
       "enplumConfigSet_6_17\022s\n\031greenplum_config" +
       "_set_6_19\030\002 \001(\01325.yandex.cloud.mdb.green" +
       "plum.v1.GreenplumConfigSet6_19H\000R\027greenp" +
-      "lumConfigSet_6_19\022F\n\004pool\030\003 \001(\01328.yandex" +
-      ".cloud.mdb.greenplum.v1.ConnectionPooler" +
-      "ConfigSetB\022\n\020greenplum_config\"=\n\nMonitor" +
-      "ing\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014" +
-      "\n\004link\030\003 \001(\t\"\340\001\n\017GreenplumConfig\022\017\n\007vers" +
-      "ion\030\001 \001(\t\0223\n\023backup_window_start\030\002 \001(\0132\026" +
-      ".google.type.TimeOfDay\0225\n\006access\030\003 \001(\0132%" +
+      "lumConfigSet_6_19\022s\n\031greenplum_config_se" +
+      "t_6_21\030\004 \001(\01325.yandex.cloud.mdb.greenplu" +
+      "m.v1.GreenplumConfigSet6_21H\000R\027greenplum" +
+      "ConfigSet_6_21\022s\n\031greenplum_config_set_6" +
+      "_22\030\005 \001(\01325.yandex.cloud.mdb.greenplum.v" +
+      "1.GreenplumConfigSet6_22H\000R\027greenplumCon" +
+      "figSet_6_22\022F\n\004pool\030\003 \001(\01328.yandex.cloud" +
+      ".mdb.greenplum.v1.ConnectionPoolerConfig" +
+      "SetB\022\n\020greenplum_config\"=\n\nMonitoring\022\014\n" +
+      "\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link" +
+      "\030\003 \001(\t\"\340\001\n\017GreenplumConfig\022\017\n\007version\030\001 " +
+      "\001(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.googl" +
+      "e.type.TimeOfDay\0225\n\006access\030\003 \001(\0132%.yande" +
+      "x.cloud.mdb.greenplum.v1.Access\022\031\n\007zone_" +
+      "id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212" +
+      "\3101\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Acc" +
+      "ess\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022" +
+      "\025\n\rdata_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRest" +
+      "oreConfig\0223\n\023backup_window_start\030\001 \001(\0132\026" +
+      ".google.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%" +
       ".yandex.cloud.mdb.greenplum.v1.Access\022\031\n" +
-      "\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 " +
-      "\001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"" +
-      "C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030" +
-      "\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\326\001\n\026Greenpl" +
-      "umRestoreConfig\0223\n\023backup_window_start\030\001" +
-      " \001(\0132\026.google.type.TimeOfDay\0225\n\006access\030\002" +
-      " \001(\0132%.yandex.cloud.mdb.greenplum.v1.Acc" +
-      "ess\022\031\n\007zone_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet" +
-      "_id\030\004 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030" +
-      "\005 \001(\010\"A\n\020RestoreResources\022\032\n\022resource_pr" +
-      "eset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003Bp\n!yand" +
-      "ex.cloud.api.mdb.greenplum.v1ZKgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/greenplum/v1;greenplumb\006proto3"
+      "\007zone_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 " +
+      "\001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"" +
+      "A\n\020RestoreResources\022\032\n\022resource_preset_i" +
+      "d\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003Bp\n!yandex.clo" +
+      "ud.api.mdb.greenplum.v1ZKgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/gr" +
+      "eenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12967,7 +13431,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_ClusterConfigSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ClusterConfigSet_descriptor,
-        new java.lang.String[] { "GreenplumConfigSet617", "GreenplumConfigSet619", "Pool", "GreenplumConfig", });
+        new java.lang.String[] { "GreenplumConfigSet617", "GreenplumConfigSet619", "GreenplumConfigSet621", "GreenplumConfigSet622", "Pool", "GreenplumConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_Monitoring_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_greenplum_v1_Monitoring_fieldAccessorTable = new

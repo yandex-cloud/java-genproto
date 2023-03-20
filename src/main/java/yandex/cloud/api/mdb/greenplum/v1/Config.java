@@ -15549,7 +15549,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -15558,7 +15558,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -15567,7 +15567,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -15752,7 +15752,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17 effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -15764,7 +15764,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -15776,7 +15776,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16246,7 +16246,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_17OrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16257,7 +16257,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16272,7 +16272,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16292,7 +16292,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16310,7 +16310,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16332,7 +16332,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16350,7 +16350,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16362,7 +16362,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16377,7 +16377,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_17.user_config] and [GreenplumConfigSet6_17.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16764,7 +16764,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16773,7 +16773,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16782,7 +16782,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16967,7 +16967,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19 effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16979,7 +16979,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -16991,7 +16991,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+     * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17461,7 +17461,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_19OrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17472,7 +17472,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17487,7 +17487,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17507,7 +17507,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17525,7 +17525,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17547,7 +17547,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17565,7 +17565,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17577,7 +17577,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17592,7 +17592,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum® cluster (a combination of settings defined in [GreenplumConfigSet6_19.user_config] and [GreenplumConfigSet6_19.default_config]).
+       * Effective settings for a Greenplum® cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_19 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17979,8 +17979,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17989,8 +17988,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -17999,8 +17997,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21 getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18009,7 +18006,7 @@ public final class Config {
 
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18018,7 +18015,7 @@ public final class Config {
     boolean hasUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18027,7 +18024,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21 getUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18036,7 +18033,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -18045,7 +18042,7 @@ public final class Config {
     boolean hasDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -18054,7 +18051,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21 getDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -18181,8 +18178,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21 effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18194,8 +18190,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18207,8 +18202,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18222,7 +18216,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21 userConfig_;
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18234,7 +18228,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18246,7 +18240,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18260,7 +18254,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21 defaultConfig_;
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -18272,7 +18266,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -18284,7 +18278,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -18674,8 +18668,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21OrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18686,8 +18679,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18702,8 +18694,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18723,8 +18714,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18742,8 +18732,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18765,8 +18754,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18784,8 +18772,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18797,8 +18784,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18813,8 +18799,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -18838,7 +18823,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21OrBuilder> userConfigBuilder_;
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18849,7 +18834,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18864,7 +18849,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18884,7 +18869,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18902,7 +18887,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18924,7 +18909,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18942,7 +18927,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18954,7 +18939,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18969,7 +18954,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 user_config = 2;</code>
@@ -18993,7 +18978,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_21OrBuilder> defaultConfigBuilder_;
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19004,7 +18989,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19019,7 +19004,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19039,7 +19024,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19057,7 +19042,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19079,7 +19064,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19097,7 +19082,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19109,7 +19094,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19124,7 +19109,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_21 default_config = 3;</code>
@@ -19201,8 +19186,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19211,8 +19195,7 @@ public final class Config {
     boolean hasEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19221,8 +19204,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22 getEffectiveConfig();
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19231,7 +19213,7 @@ public final class Config {
 
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -19240,7 +19222,7 @@ public final class Config {
     boolean hasUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -19249,7 +19231,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22 getUserConfig();
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -19258,7 +19240,7 @@ public final class Config {
 
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -19267,7 +19249,7 @@ public final class Config {
     boolean hasDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -19276,7 +19258,7 @@ public final class Config {
     yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22 getDefaultConfig();
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -19403,8 +19385,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22 effectiveConfig_;
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19416,8 +19397,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19429,8 +19409,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Effective settings for a Greenplum (a combination of settings defined
-     * in [user_config] and [default_config]).
+     * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19444,7 +19423,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22 userConfig_;
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -19456,7 +19435,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -19468,7 +19447,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * User-defined settings for a Greenplum.
+     * User-defined settings for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -19482,7 +19461,7 @@ public final class Config {
     private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22 defaultConfig_;
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -19494,7 +19473,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -19506,7 +19485,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * Default configuration for a Greenplum.
+     * Default configuration for a Greenplum® cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -19896,8 +19875,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22OrBuilder> effectiveConfigBuilder_;
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19908,8 +19886,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19924,8 +19901,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19945,8 +19921,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19964,8 +19939,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -19987,8 +19961,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -20006,8 +19979,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -20019,8 +19991,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -20035,8 +20006,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Effective settings for a Greenplum (a combination of settings defined
-       * in [user_config] and [default_config]).
+       * Effective settings for a Greenplum®  cluster (a combination of settings defined in [user_config] and [default_config]).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 effective_config = 1 [(.yandex.cloud.required) = true];</code>
@@ -20060,7 +20030,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22OrBuilder> userConfigBuilder_;
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20071,7 +20041,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20086,7 +20056,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20106,7 +20076,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20124,7 +20094,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20146,7 +20116,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20164,7 +20134,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20176,7 +20146,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20191,7 +20161,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * User-defined settings for a Greenplum.
+       * User-defined settings for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 user_config = 2;</code>
@@ -20215,7 +20185,7 @@ public final class Config {
           yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22OrBuilder> defaultConfigBuilder_;
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20226,7 +20196,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20241,7 +20211,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20261,7 +20231,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20279,7 +20249,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20301,7 +20271,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20319,7 +20289,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20331,7 +20301,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>
@@ -20346,7 +20316,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * Default configuration for a Greenplum.
+       * Default configuration for a Greenplum® cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_22 default_config = 3;</code>

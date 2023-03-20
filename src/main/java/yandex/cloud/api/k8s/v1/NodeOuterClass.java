@@ -9311,9 +9311,8 @@ public final class NodeOuterClass {
 
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -9321,9 +9320,8 @@ public final class NodeOuterClass {
     int getMetadataCount();
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -9338,9 +9336,8 @@ public final class NodeOuterClass {
     getMetadata();
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -9349,9 +9346,8 @@ public final class NodeOuterClass {
     getMetadataMap();
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -9362,9 +9358,8 @@ public final class NodeOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -11375,9 +11370,8 @@ public final class NodeOuterClass {
     }
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -11399,9 +11393,8 @@ public final class NodeOuterClass {
     }
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -11413,9 +11406,8 @@ public final class NodeOuterClass {
     }
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -11432,9 +11424,8 @@ public final class NodeOuterClass {
     }
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+     * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13078,9 +13069,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13102,9 +13092,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13116,9 +13105,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13135,9 +13123,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13162,9 +13149,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13187,9 +13173,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
@@ -13208,9 +13193,8 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
+       * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
        * </pre>
        *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>

@@ -11953,6 +11953,50 @@ public final class ContainerServiceOuterClass {
      * <code>.yandex.cloud.serverless.containers.v1.LogOptions log_options = 14;</code>
      */
     yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount> 
+        getS3MountsList();
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount getS3Mounts(int index);
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    int getS3MountsCount();
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder> 
+        getS3MountsOrBuilderList();
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder getS3MountsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.DeployContainerRevisionRequest}
@@ -11971,6 +12015,7 @@ public final class ContainerServiceOuterClass {
       description_ = "";
       serviceAccountId_ = "";
       secrets_ = java.util.Collections.emptyList();
+      s3Mounts_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -12127,6 +12172,15 @@ public final class ContainerServiceOuterClass {
 
               break;
             }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                s3Mounts_ = new java.util.ArrayList<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              s3Mounts_.add(
+                  input.readMessage(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12144,6 +12198,9 @@ public final class ContainerServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           secrets_ = java.util.Collections.unmodifiableList(secrets_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          s3Mounts_ = java.util.Collections.unmodifiableList(s3Mounts_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -12650,6 +12707,66 @@ public final class ContainerServiceOuterClass {
       return getLogOptions();
     }
 
+    public static final int S3_MOUNTS_FIELD_NUMBER = 15;
+    private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount> s3Mounts_;
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount> getS3MountsList() {
+      return s3Mounts_;
+    }
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder> 
+        getS3MountsOrBuilderList() {
+      return s3Mounts_;
+    }
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    @java.lang.Override
+    public int getS3MountsCount() {
+      return s3Mounts_.size();
+    }
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount getS3Mounts(int index) {
+      return s3Mounts_.get(index);
+    }
+    /**
+     * <pre>
+     * S3 mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder getS3MountsOrBuilder(
+        int index) {
+      return s3Mounts_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12699,6 +12816,9 @@ public final class ContainerServiceOuterClass {
       }
       if (logOptions_ != null) {
         output.writeMessage(14, getLogOptions());
+      }
+      for (int i = 0; i < s3Mounts_.size(); i++) {
+        output.writeMessage(15, s3Mounts_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -12753,6 +12873,10 @@ public final class ContainerServiceOuterClass {
       if (logOptions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getLogOptions());
+      }
+      for (int i = 0; i < s3Mounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, s3Mounts_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12814,6 +12938,8 @@ public final class ContainerServiceOuterClass {
         if (!getLogOptions()
             .equals(other.getLogOptions())) return false;
       }
+      if (!getS3MountsList()
+          .equals(other.getS3MountsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12865,6 +12991,10 @@ public final class ContainerServiceOuterClass {
       if (hasLogOptions()) {
         hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getLogOptions().hashCode();
+      }
+      if (getS3MountsCount() > 0) {
+        hash = (37 * hash) + S3_MOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getS3MountsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12995,6 +13125,7 @@ public final class ContainerServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getSecretsFieldBuilder();
+          getS3MountsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -13055,6 +13186,12 @@ public final class ContainerServiceOuterClass {
         } else {
           logOptions_ = null;
           logOptionsBuilder_ = null;
+        }
+        if (s3MountsBuilder_ == null) {
+          s3Mounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          s3MountsBuilder_.clear();
         }
         return this;
       }
@@ -13130,6 +13267,15 @@ public final class ContainerServiceOuterClass {
           result.logOptions_ = logOptions_;
         } else {
           result.logOptions_ = logOptionsBuilder_.build();
+        }
+        if (s3MountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            s3Mounts_ = java.util.Collections.unmodifiableList(s3Mounts_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.s3Mounts_ = s3Mounts_;
+        } else {
+          result.s3Mounts_ = s3MountsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13240,6 +13386,32 @@ public final class ContainerServiceOuterClass {
         }
         if (other.hasLogOptions()) {
           mergeLogOptions(other.getLogOptions());
+        }
+        if (s3MountsBuilder_ == null) {
+          if (!other.s3Mounts_.isEmpty()) {
+            if (s3Mounts_.isEmpty()) {
+              s3Mounts_ = other.s3Mounts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureS3MountsIsMutable();
+              s3Mounts_.addAll(other.s3Mounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.s3Mounts_.isEmpty()) {
+            if (s3MountsBuilder_.isEmpty()) {
+              s3MountsBuilder_.dispose();
+              s3MountsBuilder_ = null;
+              s3Mounts_ = other.s3Mounts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              s3MountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getS3MountsFieldBuilder() : null;
+            } else {
+              s3MountsBuilder_.addAllMessages(other.s3Mounts_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15023,6 +15195,318 @@ public final class ContainerServiceOuterClass {
           logOptions_ = null;
         }
         return logOptionsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount> s3Mounts_ =
+        java.util.Collections.emptyList();
+      private void ensureS3MountsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          s3Mounts_ = new java.util.ArrayList<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount>(s3Mounts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder> s3MountsBuilder_;
+
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount> getS3MountsList() {
+        if (s3MountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(s3Mounts_);
+        } else {
+          return s3MountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public int getS3MountsCount() {
+        if (s3MountsBuilder_ == null) {
+          return s3Mounts_.size();
+        } else {
+          return s3MountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount getS3Mounts(int index) {
+        if (s3MountsBuilder_ == null) {
+          return s3Mounts_.get(index);
+        } else {
+          return s3MountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder setS3Mounts(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount value) {
+        if (s3MountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureS3MountsIsMutable();
+          s3Mounts_.set(index, value);
+          onChanged();
+        } else {
+          s3MountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder setS3Mounts(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder builderForValue) {
+        if (s3MountsBuilder_ == null) {
+          ensureS3MountsIsMutable();
+          s3Mounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          s3MountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder addS3Mounts(yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount value) {
+        if (s3MountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureS3MountsIsMutable();
+          s3Mounts_.add(value);
+          onChanged();
+        } else {
+          s3MountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder addS3Mounts(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount value) {
+        if (s3MountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureS3MountsIsMutable();
+          s3Mounts_.add(index, value);
+          onChanged();
+        } else {
+          s3MountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder addS3Mounts(
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder builderForValue) {
+        if (s3MountsBuilder_ == null) {
+          ensureS3MountsIsMutable();
+          s3Mounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          s3MountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder addS3Mounts(
+          int index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder builderForValue) {
+        if (s3MountsBuilder_ == null) {
+          ensureS3MountsIsMutable();
+          s3Mounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          s3MountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder addAllS3Mounts(
+          java.lang.Iterable<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount> values) {
+        if (s3MountsBuilder_ == null) {
+          ensureS3MountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, s3Mounts_);
+          onChanged();
+        } else {
+          s3MountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder clearS3Mounts() {
+        if (s3MountsBuilder_ == null) {
+          s3Mounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          s3MountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public Builder removeS3Mounts(int index) {
+        if (s3MountsBuilder_ == null) {
+          ensureS3MountsIsMutable();
+          s3Mounts_.remove(index);
+          onChanged();
+        } else {
+          s3MountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder getS3MountsBuilder(
+          int index) {
+        return getS3MountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder getS3MountsOrBuilder(
+          int index) {
+        if (s3MountsBuilder_ == null) {
+          return s3Mounts_.get(index);  } else {
+          return s3MountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder> 
+           getS3MountsOrBuilderList() {
+        if (s3MountsBuilder_ != null) {
+          return s3MountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(s3Mounts_);
+        }
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder addS3MountsBuilder() {
+        return getS3MountsFieldBuilder().addBuilder(
+            yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder addS3MountsBuilder(
+          int index) {
+        return getS3MountsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * S3 mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.containers.v1.S3Mount s3_mounts = 15;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder> 
+           getS3MountsBuilderList() {
+        return getS3MountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder> 
+          getS3MountsFieldBuilder() {
+        if (s3MountsBuilder_ == null) {
+          s3MountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3Mount.Builder, yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.S3MountOrBuilder>(
+                  s3Mounts_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          s3Mounts_ = null;
+        }
+        return s3MountsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21412,7 +21896,7 @@ public final class ContainerServiceOuterClass {
       "\022\004\300\3011\001\"~\n\037ListContainersRevisionsRespons" +
       "e\022B\n\trevisions\030\001 \003(\0132/.yandex.cloud.serv" +
       "erless.containers.v1.Revision\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\316\005\n\036DeployContainerRevisi" +
+      "ge_token\030\002 \001(\t\"\221\006\n\036DeployContainerRevisi" +
       "onRequest\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\023\n" +
       "\013description\030\003 \001(\t\022I\n\tresources\030\005 \001(\01320." +
       "yandex.cloud.serverless.containers.v1.Re" +
@@ -21430,98 +21914,100 @@ public final class ContainerServiceOuterClass {
       "icy\030\r \001(\01324.yandex.cloud.serverless.cont" +
       "ainers.v1.ScalingPolicy\022F\n\013log_options\030\016" +
       " \001(\01321.yandex.cloud.serverless.container" +
-      "s.v1.LogOptions\"\350\002\n\tImageSpec\022\027\n\timage_u" +
-      "rl\030\001 \001(\tB\004\350\3071\001\022?\n\007command\030\002 \001(\0132..yandex" +
-      ".cloud.serverless.containers.v1.Command\022" +
-      "9\n\004args\030\003 \001(\0132+.yandex.cloud.serverless." +
-      "containers.v1.Args\022}\n\013environment\030\004 \003(\0132" +
-      "A.yandex.cloud.serverless.containers.v1." +
-      "ImageSpec.EnvironmentEntryB%\212\3101\006<=4096\262\310" +
-      "1\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_dir" +
-      "\030\005 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037DeployContainerRev" +
-      "isionMetadata\022\035\n\025container_revision_id\030\001" +
-      " \001(\t\"Q\n\030RollbackContainerRequest\022\032\n\014cont" +
-      "ainer_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revision_id\030\002 \001(" +
-      "\tB\004\350\3071\001\"F\n\031RollbackContainerMetadata\022\024\n\014" +
-      "container_id\030\001 \001(\t\022\023\n\013revision_id\030\002 \001(\t\"" +
-      "\226\001\n\036ListContainerOperationsRequest\022\032\n\014co" +
-      "ntainer_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"q\n\037List" +
-      "ContainerOperationsResponse\0225\n\noperation" +
-      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
-      "on\022\027\n\017next_page_token\030\002 \001(\t2\355\024\n\020Containe" +
-      "rService\022\245\001\n\003Get\022:.yandex.cloud.serverle" +
-      "ss.containers.v1.GetContainerRequest\0320.y" +
-      "andex.cloud.serverless.containers.v1.Con" +
-      "tainer\"0\202\323\344\223\002*\022(/containers/v1/container" +
-      "s/{container_id}\022\246\001\n\004List\022<.yandex.cloud" +
-      ".serverless.containers.v1.ListContainers" +
-      "Request\032=.yandex.cloud.serverless.contai" +
-      "ners.v1.ListContainersResponse\"!\202\323\344\223\002\033\022\031" +
-      "/containers/v1/containers\022\270\001\n\006Create\022=.y" +
-      "andex.cloud.serverless.containers.v1.Cre" +
-      "ateContainerRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"L\202\323\344\223\002\036\"\031/containers/v1/c" +
-      "ontainers:\001*\262\322*$\n\027CreateContainerMetadat" +
-      "a\022\tContainer\022\307\001\n\006Update\022=.yandex.cloud.s" +
-      "erverless.containers.v1.UpdateContainerR" +
+      "s.v1.LogOptions\022A\n\ts3_mounts\030\017 \003(\0132..yan" +
+      "dex.cloud.serverless.containers.v1.S3Mou" +
+      "nt\"\350\002\n\tImageSpec\022\027\n\timage_url\030\001 \001(\tB\004\350\3071" +
+      "\001\022?\n\007command\030\002 \001(\0132..yandex.cloud.server" +
+      "less.containers.v1.Command\0229\n\004args\030\003 \001(\013" +
+      "2+.yandex.cloud.serverless.containers.v1" +
+      ".Args\022}\n\013environment\030\004 \003(\0132A.yandex.clou" +
+      "d.serverless.containers.v1.ImageSpec.Env" +
+      "ironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z][" +
+      "a-zA-Z0-9_]*\022\023\n\013working_dir\030\005 \001(\t\0322\n\020Env" +
+      "ironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"@\n\037DeployContainerRevisionMetadata" +
+      "\022\035\n\025container_revision_id\030\001 \001(\t\"Q\n\030Rollb" +
+      "ackContainerRequest\022\032\n\014container_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022\031\n\013revision_id\030\002 \001(\tB\004\350\3071\001\"F\n\031Ro" +
+      "llbackContainerMetadata\022\024\n\014container_id\030" +
+      "\001 \001(\t\022\023\n\013revision_id\030\002 \001(\t\"\226\001\n\036ListConta" +
+      "inerOperationsRequest\022\032\n\014container_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\"q\n\037ListContainerOper" +
+      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
+      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t2\355\024\n\020ContainerService\022\245\001\n\003" +
+      "Get\022:.yandex.cloud.serverless.containers" +
+      ".v1.GetContainerRequest\0320.yandex.cloud.s" +
+      "erverless.containers.v1.Container\"0\202\323\344\223\002" +
+      "*\022(/containers/v1/containers/{container_" +
+      "id}\022\246\001\n\004List\022<.yandex.cloud.serverless.c" +
+      "ontainers.v1.ListContainersRequest\032=.yan" +
+      "dex.cloud.serverless.containers.v1.ListC" +
+      "ontainersResponse\"!\202\323\344\223\002\033\022\031/containers/v" +
+      "1/containers\022\270\001\n\006Create\022=.yandex.cloud.s" +
+      "erverless.containers.v1.CreateContainerR" +
       "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"[\202\323\344\223\002-2(/containers/v1/containers/{co" +
-      "ntainer_id}:\001*\262\322*$\n\027UpdateContainerMetad" +
-      "ata\022\tContainer\022\320\001\n\006Delete\022=.yandex.cloud" +
-      ".serverless.containers.v1.DeleteContaine" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"d\202\323\344\223\002**(/containers/v1/containers/{" +
-      "container_id}\262\322*0\n\027DeleteContainerMetada" +
-      "ta\022\025google.protobuf.Empty\022\325\001\n\016DeployRevi" +
-      "sion\022E.yandex.cloud.serverless.container" +
-      "s.v1.DeployContainerRevisionRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"Y\202\323\344\223\002$\"\037" +
-      "/containers/v1/revisions:deploy:\001*\262\322*+\n\037" +
-      "DeployContainerRevisionMetadata\022\010Revisio" +
-      "n\022\326\001\n\010Rollback\022?.yandex.cloud.serverless" +
-      ".containers.v1.RollbackContainerRequest\032" +
-      "!.yandex.cloud.operation.Operation\"f\202\323\344\223" +
-      "\0026\"1/containers/v1/containers/{container" +
-      "_id}:rollback:\001*\262\322*&\n\031RollbackContainerM" +
-      "etadata\022\tContainer\022\274\001\n\013GetRevision\022B.yan" +
-      "dex.cloud.serverless.containers.v1.GetCo" +
-      "ntainerRevisionRequest\032/.yandex.cloud.se" +
-      "rverless.containers.v1.Revision\"8\202\323\344\223\0022\022" +
-      "0/containers/v1/revisions/{container_rev" +
-      "ision_id}\022\300\001\n\rListRevisions\022E.yandex.clo" +
-      "ud.serverless.containers.v1.ListContaine" +
-      "rsRevisionsRequest\032F.yandex.cloud.server" +
-      "less.containers.v1.ListContainersRevisio" +
-      "nsResponse\" \202\323\344\223\002\032\022\030/containers/v1/revis" +
-      "ions\022\334\001\n\016ListOperations\022E.yandex.cloud.s" +
-      "erverless.containers.v1.ListContainerOpe" +
-      "rationsRequest\032F.yandex.cloud.serverless" +
-      ".containers.v1.ListContainerOperationsRe" +
-      "sponse\";\202\323\344\223\0025\0223/containers/v1/container" +
-      "s/{container_id}/operations\022\271\001\n\022ListAcce" +
-      "ssBindings\022..yandex.cloud.access.ListAcc" +
-      "essBindingsRequest\032/.yandex.cloud.access" +
-      ".ListAccessBindingsResponse\"B\202\323\344\223\002<\022:/co" +
-      "ntainers/v1/containers/{resource_id}:lis" +
-      "tAccessBindings\022\351\001\n\021SetAccessBindings\022-." +
-      "yandex.cloud.access.SetAccessBindingsReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\201\001\202\323\344\223\002>\"9/containers/v1/containers/{res" +
-      "ource_id}:setAccessBindings:\001*\262\322*9\n acce" +
-      "ss.SetAccessBindingsMetadata\022\025google.pro" +
-      "tobuf.Empty\022\365\001\n\024UpdateAccessBindings\0220.y" +
-      "andex.cloud.access.UpdateAccessBindingsR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\207\001\202\323\344\223\002A\"</containers/v1/containers/{r" +
-      "esource_id}:updateAccessBindings:\001*\262\322*<\n" +
-      "#access.UpdateAccessBindingsMetadata\022\025go" +
-      "ogle.protobuf.EmptyB\201\001\n)yandex.cloud.api" +
-      ".serverless.containers.v1ZTgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/serv" +
-      "erless/containers/v1;containersb\006proto3"
+      "n\"L\202\323\344\223\002\036\"\031/containers/v1/containers:\001*\262" +
+      "\322*$\n\027CreateContainerMetadata\022\tContainer\022" +
+      "\307\001\n\006Update\022=.yandex.cloud.serverless.con" +
+      "tainers.v1.UpdateContainerRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"[\202\323\344\223\002-2(/c" +
+      "ontainers/v1/containers/{container_id}:\001" +
+      "*\262\322*$\n\027UpdateContainerMetadata\022\tContaine" +
+      "r\022\320\001\n\006Delete\022=.yandex.cloud.serverless.c" +
+      "ontainers.v1.DeleteContainerRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"d\202\323\344\223\002**(" +
+      "/containers/v1/containers/{container_id}" +
+      "\262\322*0\n\027DeleteContainerMetadata\022\025google.pr" +
+      "otobuf.Empty\022\325\001\n\016DeployRevision\022E.yandex" +
+      ".cloud.serverless.containers.v1.DeployCo" +
+      "ntainerRevisionRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"Y\202\323\344\223\002$\"\037/containers/v" +
+      "1/revisions:deploy:\001*\262\322*+\n\037DeployContain" +
+      "erRevisionMetadata\022\010Revision\022\326\001\n\010Rollbac" +
+      "k\022?.yandex.cloud.serverless.containers.v" +
+      "1.RollbackContainerRequest\032!.yandex.clou" +
+      "d.operation.Operation\"f\202\323\344\223\0026\"1/containe" +
+      "rs/v1/containers/{container_id}:rollback" +
+      ":\001*\262\322*&\n\031RollbackContainerMetadata\022\tCont" +
+      "ainer\022\274\001\n\013GetRevision\022B.yandex.cloud.ser" +
+      "verless.containers.v1.GetContainerRevisi" +
+      "onRequest\032/.yandex.cloud.serverless.cont" +
+      "ainers.v1.Revision\"8\202\323\344\223\0022\0220/containers/" +
+      "v1/revisions/{container_revision_id}\022\300\001\n" +
+      "\rListRevisions\022E.yandex.cloud.serverless" +
+      ".containers.v1.ListContainersRevisionsRe" +
+      "quest\032F.yandex.cloud.serverless.containe" +
+      "rs.v1.ListContainersRevisionsResponse\" \202" +
+      "\323\344\223\002\032\022\030/containers/v1/revisions\022\334\001\n\016List" +
+      "Operations\022E.yandex.cloud.serverless.con" +
+      "tainers.v1.ListContainerOperationsReques" +
+      "t\032F.yandex.cloud.serverless.containers.v" +
+      "1.ListContainerOperationsResponse\";\202\323\344\223\002" +
+      "5\0223/containers/v1/containers/{container_" +
+      "id}/operations\022\271\001\n\022ListAccessBindings\022.." +
+      "yandex.cloud.access.ListAccessBindingsRe" +
+      "quest\032/.yandex.cloud.access.ListAccessBi" +
+      "ndingsResponse\"B\202\323\344\223\002<\022:/containers/v1/c" +
+      "ontainers/{resource_id}:listAccessBindin" +
+      "gs\022\351\001\n\021SetAccessBindings\022-.yandex.cloud." +
+      "access.SetAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\201\001\202\323\344\223\002>\"9/co" +
+      "ntainers/v1/containers/{resource_id}:set" +
+      "AccessBindings:\001*\262\322*9\n access.SetAccessB" +
+      "indingsMetadata\022\025google.protobuf.Empty\022\365" +
+      "\001\n\024UpdateAccessBindings\0220.yandex.cloud.a" +
+      "ccess.UpdateAccessBindingsRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\207\001\202\323\344\223\002A\"</" +
+      "containers/v1/containers/{resource_id}:u" +
+      "pdateAccessBindings:\001*\262\322*<\n#access.Updat" +
+      "eAccessBindingsMetadata\022\025google.protobuf" +
+      ".EmptyB\201\001\n)yandex.cloud.api.serverless.c" +
+      "ontainers.v1ZTgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/serverless/contai" +
+      "ners/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21624,7 +22110,7 @@ public final class ContainerServiceOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_DeployContainerRevisionRequest_descriptor,
-        new java.lang.String[] { "ContainerId", "Description", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSpec", "Concurrency", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", });
+        new java.lang.String[] { "ContainerId", "Description", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSpec", "Concurrency", "Secrets", "Connectivity", "ProvisionPolicy", "ScalingPolicy", "LogOptions", "S3Mounts", });
     internal_static_yandex_cloud_serverless_containers_v1_ImageSpec_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_containers_v1_ImageSpec_fieldAccessorTable = new
