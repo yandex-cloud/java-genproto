@@ -3281,6 +3281,26 @@ public final class BackupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getBackupIdBytes();
+
+    /**
+     * <pre>
+     * ID of the cluster which backup belonged to.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster which backup belonged to.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DeleteBackupMetadata}
@@ -3296,6 +3316,7 @@ public final class BackupServiceOuterClass {
     }
     private DeleteBackupMetadata() {
       backupId_ = "";
+      clusterId_ = "";
     }
 
     @java.lang.Override
@@ -3332,6 +3353,12 @@ public final class BackupServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               backupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
               break;
             }
             default: {
@@ -3412,6 +3439,52 @@ public final class BackupServiceOuterClass {
       }
     }
 
+    public static final int CLUSTER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster which backup belonged to.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster which backup belonged to.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3429,6 +3502,9 @@ public final class BackupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3440,6 +3516,9 @@ public final class BackupServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3458,6 +3537,8 @@ public final class BackupServiceOuterClass {
 
       if (!getBackupId()
           .equals(other.getBackupId())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3471,6 +3552,8 @@ public final class BackupServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getBackupId().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3606,6 +3689,8 @@ public final class BackupServiceOuterClass {
         super.clear();
         backupId_ = "";
 
+        clusterId_ = "";
+
         return this;
       }
 
@@ -3633,6 +3718,7 @@ public final class BackupServiceOuterClass {
       public yandex.cloud.api.mdb.postgresql.v1.BackupServiceOuterClass.DeleteBackupMetadata buildPartial() {
         yandex.cloud.api.mdb.postgresql.v1.BackupServiceOuterClass.DeleteBackupMetadata result = new yandex.cloud.api.mdb.postgresql.v1.BackupServiceOuterClass.DeleteBackupMetadata(this);
         result.backupId_ = backupId_;
+        result.clusterId_ = clusterId_;
         onBuilt();
         return result;
       }
@@ -3683,6 +3769,10 @@ public final class BackupServiceOuterClass {
         if (other == yandex.cloud.api.mdb.postgresql.v1.BackupServiceOuterClass.DeleteBackupMetadata.getDefaultInstance()) return this;
         if (!other.getBackupId().isEmpty()) {
           backupId_ = other.backupId_;
+          onChanged();
+        }
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3809,6 +3899,102 @@ public final class BackupServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster which backup belonged to.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster which backup belonged to.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster which backup belonged to.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster which backup belonged to.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster which backup belonged to.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3910,25 +4096,25 @@ public final class BackupServiceOuterClass {
       "psResponse\0227\n\007backups\030\001 \003(\0132&.yandex.clo" +
       "ud.mdb.postgresql.v1.Backup\022\"\n\017next_page" +
       "_token\030\002 \001(\tB\t\212\3101\005<=100\".\n\023DeleteBackupR" +
-      "equest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\")\n\024Delet" +
-      "eBackupMetadata\022\021\n\tbackup_id\030\001 \001(\t2\207\004\n\rB" +
-      "ackupService\022\223\001\n\003Get\0220.yandex.cloud.mdb." +
-      "postgresql.v1.GetBackupRequest\032&.yandex." +
-      "cloud.mdb.postgresql.v1.Backup\"2\202\323\344\223\002,\022*" +
-      "/managed-postgresql/v1/backups/{backup_i" +
-      "d}\022\227\001\n\004List\0222.yandex.cloud.mdb.postgresq" +
-      "l.v1.ListBackupsRequest\0323.yandex.cloud.m" +
-      "db.postgresql.v1.ListBackupsResponse\"&\202\323" +
-      "\344\223\002 \022\036/managed-postgresql/v1/backups\022\305\001\n" +
-      "\006Delete\0223.yandex.cloud.mdb.postgresql.v1" +
-      ".DeleteBackupRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"c\202\323\344\223\002,**/managed-postgr" +
-      "esql/v1/backups/{backup_id}\262\322*-\n\024DeleteB" +
-      "ackupMetadata\022\025google.protobuf.EmptyBs\n\"" +
-      "yandex.cloud.api.mdb.postgresql.v1ZMgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/postgresql/v1;postgresqlb\006proto" +
-      "3"
+      "equest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\"=\n\024Delet" +
+      "eBackupMetadata\022\021\n\tbackup_id\030\001 \001(\t\022\022\n\ncl" +
+      "uster_id\030\002 \001(\t2\207\004\n\rBackupService\022\223\001\n\003Get" +
+      "\0220.yandex.cloud.mdb.postgresql.v1.GetBac" +
+      "kupRequest\032&.yandex.cloud.mdb.postgresql" +
+      ".v1.Backup\"2\202\323\344\223\002,\022*/managed-postgresql/" +
+      "v1/backups/{backup_id}\022\227\001\n\004List\0222.yandex" +
+      ".cloud.mdb.postgresql.v1.ListBackupsRequ" +
+      "est\0323.yandex.cloud.mdb.postgresql.v1.Lis" +
+      "tBackupsResponse\"&\202\323\344\223\002 \022\036/managed-postg" +
+      "resql/v1/backups\022\305\001\n\006Delete\0223.yandex.clo" +
+      "ud.mdb.postgresql.v1.DeleteBackupRequest" +
+      "\032!.yandex.cloud.operation.Operation\"c\202\323\344" +
+      "\223\002,**/managed-postgresql/v1/backups/{bac" +
+      "kup_id}\262\322*-\n\024DeleteBackupMetadata\022\025googl" +
+      "e.protobuf.EmptyBs\n\"yandex.cloud.api.mdb" +
+      ".postgresql.v1ZMgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/postgresql/" +
+      "v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3968,7 +4154,7 @@ public final class BackupServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_DeleteBackupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_DeleteBackupMetadata_descriptor,
-        new java.lang.String[] { "BackupId", });
+        new java.lang.String[] { "BackupId", "ClusterId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
