@@ -2788,7 +2788,7 @@ public final class BudgetOuterClass {
      * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     java.lang.String getAmount();
@@ -2797,7 +2797,7 @@ public final class BudgetOuterClass {
      * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
@@ -2809,7 +2809,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
@@ -2820,7 +2820,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
@@ -2830,7 +2830,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the element to return.
      * @return The notificationUserAccountIds at the given index.
      */
@@ -2841,7 +2841,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the notificationUserAccountIds at the given index.
      */
@@ -2993,7 +2993,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The endDate.
      */
     java.lang.String getEndDate();
@@ -3003,7 +3003,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for endDate.
      */
     com.google.protobuf.ByteString
@@ -3206,7 +3206,7 @@ public final class BudgetOuterClass {
      * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -3227,7 +3227,7 @@ public final class BudgetOuterClass {
      * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     @java.lang.Override
@@ -3253,7 +3253,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3266,7 +3266,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
@@ -3278,7 +3278,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the element to return.
      * @return The notificationUserAccountIds at the given index.
      */
@@ -3291,7 +3291,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the notificationUserAccountIds at the given index.
      */
@@ -3525,7 +3525,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The endDate.
      */
     @java.lang.Override
@@ -3547,7 +3547,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for endDate.
      */
     @java.lang.Override
@@ -4092,7 +4092,7 @@ public final class BudgetOuterClass {
        * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return The amount.
        */
       public java.lang.String getAmount() {
@@ -4112,7 +4112,7 @@ public final class BudgetOuterClass {
        * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
@@ -4133,7 +4133,7 @@ public final class BudgetOuterClass {
        * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -4152,7 +4152,7 @@ public final class BudgetOuterClass {
        * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -4166,7 +4166,7 @@ public final class BudgetOuterClass {
        * Max cost threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for amount to set.
        * @return This builder for chaining.
        */
@@ -4195,7 +4195,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -4208,7 +4208,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
@@ -4220,7 +4220,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index of the element to return.
        * @return The notificationUserAccountIds at the given index.
        */
@@ -4233,7 +4233,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the notificationUserAccountIds at the given index.
        */
@@ -4247,7 +4247,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index to set the value at.
        * @param value The notificationUserAccountIds to set.
        * @return This builder for chaining.
@@ -4268,7 +4268,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param value The notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -4288,7 +4288,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param values The notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -4306,7 +4306,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
@@ -4321,7 +4321,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param value The bytes of the notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -5057,7 +5057,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @return The endDate.
        */
       public java.lang.String getEndDate() {
@@ -5078,7 +5078,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for endDate.
        */
       public com.google.protobuf.ByteString
@@ -5100,7 +5100,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @param value The endDate to set.
        * @return This builder for chaining.
        */
@@ -5120,7 +5120,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearEndDate() {
@@ -5135,7 +5135,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for endDate to set.
        * @return This builder for chaining.
        */
@@ -5212,7 +5212,7 @@ public final class BudgetOuterClass {
      * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     java.lang.String getAmount();
@@ -5221,7 +5221,7 @@ public final class BudgetOuterClass {
      * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
@@ -5233,7 +5233,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
@@ -5244,7 +5244,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
@@ -5254,7 +5254,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the element to return.
      * @return The notificationUserAccountIds at the given index.
      */
@@ -5265,7 +5265,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the notificationUserAccountIds at the given index.
      */
@@ -5417,7 +5417,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The endDate.
      */
     java.lang.String getEndDate();
@@ -5427,7 +5427,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for endDate.
      */
     com.google.protobuf.ByteString
@@ -5630,7 +5630,7 @@ public final class BudgetOuterClass {
      * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -5651,7 +5651,7 @@ public final class BudgetOuterClass {
      * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     @java.lang.Override
@@ -5677,7 +5677,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -5690,7 +5690,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
@@ -5702,7 +5702,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the element to return.
      * @return The notificationUserAccountIds at the given index.
      */
@@ -5715,7 +5715,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the notificationUserAccountIds at the given index.
      */
@@ -5949,7 +5949,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The endDate.
      */
     @java.lang.Override
@@ -5971,7 +5971,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 7;</code>
+     * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for endDate.
      */
     @java.lang.Override
@@ -6516,7 +6516,7 @@ public final class BudgetOuterClass {
        * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return The amount.
        */
       public java.lang.String getAmount() {
@@ -6536,7 +6536,7 @@ public final class BudgetOuterClass {
        * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
@@ -6557,7 +6557,7 @@ public final class BudgetOuterClass {
        * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -6576,7 +6576,7 @@ public final class BudgetOuterClass {
        * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -6590,7 +6590,7 @@ public final class BudgetOuterClass {
        * Max expense threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for amount to set.
        * @return This builder for chaining.
        */
@@ -6619,7 +6619,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -6632,7 +6632,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
@@ -6644,7 +6644,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index of the element to return.
        * @return The notificationUserAccountIds at the given index.
        */
@@ -6657,7 +6657,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the notificationUserAccountIds at the given index.
        */
@@ -6671,7 +6671,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index to set the value at.
        * @param value The notificationUserAccountIds to set.
        * @return This builder for chaining.
@@ -6692,7 +6692,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param value The notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -6712,7 +6712,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param values The notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -6730,7 +6730,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
@@ -6745,7 +6745,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param value The bytes of the notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -7481,7 +7481,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @return The endDate.
        */
       public java.lang.String getEndDate() {
@@ -7502,7 +7502,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for endDate.
        */
       public com.google.protobuf.ByteString
@@ -7524,7 +7524,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @param value The endDate to set.
        * @return This builder for chaining.
        */
@@ -7544,7 +7544,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearEndDate() {
@@ -7559,7 +7559,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 7;</code>
+       * <code>string end_date = 7 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for endDate to set.
        * @return This builder for chaining.
        */
@@ -7636,7 +7636,7 @@ public final class BudgetOuterClass {
      * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     java.lang.String getAmount();
@@ -7645,7 +7645,7 @@ public final class BudgetOuterClass {
      * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
@@ -7657,7 +7657,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return A list containing the notificationUserAccountIds.
      */
     java.util.List<java.lang.String>
@@ -7668,7 +7668,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return The count of notificationUserAccountIds.
      */
     int getNotificationUserAccountIdsCount();
@@ -7678,7 +7678,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the element to return.
      * @return The notificationUserAccountIds at the given index.
      */
@@ -7689,7 +7689,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the notificationUserAccountIds at the given index.
      */
@@ -7773,7 +7773,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
      * @return The endDate.
      */
     java.lang.String getEndDate();
@@ -7783,7 +7783,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for endDate.
      */
     com.google.protobuf.ByteString
@@ -7925,7 +7925,7 @@ public final class BudgetOuterClass {
      * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -7946,7 +7946,7 @@ public final class BudgetOuterClass {
      * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
      * </pre>
      *
-     * <code>string amount = 1;</code>
+     * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     @java.lang.Override
@@ -7972,7 +7972,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return A list containing the notificationUserAccountIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -7985,7 +7985,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @return The count of notificationUserAccountIds.
      */
     public int getNotificationUserAccountIdsCount() {
@@ -7997,7 +7997,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the element to return.
      * @return The notificationUserAccountIds at the given index.
      */
@@ -8010,7 +8010,7 @@ public final class BudgetOuterClass {
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
-     * <code>repeated string notification_user_account_ids = 2;</code>
+     * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the notificationUserAccountIds at the given index.
      */
@@ -8140,7 +8140,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
      * @return The endDate.
      */
     @java.lang.Override
@@ -8162,7 +8162,7 @@ public final class BudgetOuterClass {
      * Must be the last day of a month and must be formatted like YYYY-MM-DD.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for endDate.
      */
     @java.lang.Override
@@ -8617,7 +8617,7 @@ public final class BudgetOuterClass {
        * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return The amount.
        */
       public java.lang.String getAmount() {
@@ -8637,7 +8637,7 @@ public final class BudgetOuterClass {
        * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
@@ -8658,7 +8658,7 @@ public final class BudgetOuterClass {
        * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -8677,7 +8677,7 @@ public final class BudgetOuterClass {
        * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -8691,7 +8691,7 @@ public final class BudgetOuterClass {
        * Max balance threshold of the budget. Amount currency is the same as corresponding [yandex.cloud.billing.v1.BillingAccount.currency].
        * </pre>
        *
-       * <code>string amount = 1;</code>
+       * <code>string amount = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for amount to set.
        * @return This builder for chaining.
        */
@@ -8720,7 +8720,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return A list containing the notificationUserAccountIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -8733,7 +8733,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return The count of notificationUserAccountIds.
        */
       public int getNotificationUserAccountIdsCount() {
@@ -8745,7 +8745,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index of the element to return.
        * @return The notificationUserAccountIds at the given index.
        */
@@ -8758,7 +8758,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the notificationUserAccountIds at the given index.
        */
@@ -8772,7 +8772,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param index The index to set the value at.
        * @param value The notificationUserAccountIds to set.
        * @return This builder for chaining.
@@ -8793,7 +8793,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param value The notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -8813,7 +8813,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param values The notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -8831,7 +8831,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @return This builder for chaining.
        */
       public Builder clearNotificationUserAccountIds() {
@@ -8846,7 +8846,7 @@ public final class BudgetOuterClass {
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
-       * <code>repeated string notification_user_account_ids = 2;</code>
+       * <code>repeated string notification_user_account_ids = 2 [(.yandex.cloud.size) = "&gt;=1"];</code>
        * @param value The bytes of the notificationUserAccountIds to add.
        * @return This builder for chaining.
        */
@@ -9300,7 +9300,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 5;</code>
+       * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
        * @return The endDate.
        */
       public java.lang.String getEndDate() {
@@ -9321,7 +9321,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 5;</code>
+       * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for endDate.
        */
       public com.google.protobuf.ByteString
@@ -9343,7 +9343,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 5;</code>
+       * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The endDate to set.
        * @return This builder for chaining.
        */
@@ -9363,7 +9363,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 5;</code>
+       * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearEndDate() {
@@ -9378,7 +9378,7 @@ public final class BudgetOuterClass {
        * Must be the last day of a month and must be formatted like YYYY-MM-DD.
        * </pre>
        *
-       * <code>string end_date = 5;</code>
+       * <code>string end_date = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for endDate to set.
        * @return This builder for chaining.
        */
@@ -11686,7 +11686,7 @@ public final class BudgetOuterClass {
      * Type of the rule.
      * </pre>
      *
-     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
@@ -11695,7 +11695,7 @@ public final class BudgetOuterClass {
      * Type of the rule.
      * </pre>
      *
-     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
     yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType getType();
@@ -11707,7 +11707,7 @@ public final class BudgetOuterClass {
      *  * Must be less than budget's amount if type is AMOUNT.
      * </pre>
      *
-     * <code>string amount = 2;</code>
+     * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     java.lang.String getAmount();
@@ -11718,7 +11718,7 @@ public final class BudgetOuterClass {
      *  * Must be less than budget's amount if type is AMOUNT.
      * </pre>
      *
-     * <code>string amount = 2;</code>
+     * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     com.google.protobuf.ByteString
@@ -11885,7 +11885,7 @@ public final class BudgetOuterClass {
      * Type of the rule.
      * </pre>
      *
-     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
@@ -11896,7 +11896,7 @@ public final class BudgetOuterClass {
      * Type of the rule.
      * </pre>
      *
-     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+     * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
     @java.lang.Override public yandex.cloud.api.billing.v1.BudgetOuterClass.ThresholdType getType() {
@@ -11914,7 +11914,7 @@ public final class BudgetOuterClass {
      *  * Must be less than budget's amount if type is AMOUNT.
      * </pre>
      *
-     * <code>string amount = 2;</code>
+     * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
      * @return The amount.
      */
     @java.lang.Override
@@ -11937,7 +11937,7 @@ public final class BudgetOuterClass {
      *  * Must be less than budget's amount if type is AMOUNT.
      * </pre>
      *
-     * <code>string amount = 2;</code>
+     * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for amount.
      */
     @java.lang.Override
@@ -12374,7 +12374,7 @@ public final class BudgetOuterClass {
        * Type of the rule.
        * </pre>
        *
-       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -12385,7 +12385,7 @@ public final class BudgetOuterClass {
        * Type of the rule.
        * </pre>
        *
-       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -12400,7 +12400,7 @@ public final class BudgetOuterClass {
        * Type of the rule.
        * </pre>
        *
-       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
       @java.lang.Override
@@ -12414,7 +12414,7 @@ public final class BudgetOuterClass {
        * Type of the rule.
        * </pre>
        *
-       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -12432,7 +12432,7 @@ public final class BudgetOuterClass {
        * Type of the rule.
        * </pre>
        *
-       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1;</code>
+       * <code>.yandex.cloud.billing.v1.ThresholdType type = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -12450,7 +12450,7 @@ public final class BudgetOuterClass {
        *  * Must be less than budget's amount if type is AMOUNT.
        * </pre>
        *
-       * <code>string amount = 2;</code>
+       * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
        * @return The amount.
        */
       public java.lang.String getAmount() {
@@ -12472,7 +12472,7 @@ public final class BudgetOuterClass {
        *  * Must be less than budget's amount if type is AMOUNT.
        * </pre>
        *
-       * <code>string amount = 2;</code>
+       * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for amount.
        */
       public com.google.protobuf.ByteString
@@ -12495,7 +12495,7 @@ public final class BudgetOuterClass {
        *  * Must be less than budget's amount if type is AMOUNT.
        * </pre>
        *
-       * <code>string amount = 2;</code>
+       * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The amount to set.
        * @return This builder for chaining.
        */
@@ -12516,7 +12516,7 @@ public final class BudgetOuterClass {
        *  * Must be less than budget's amount if type is AMOUNT.
        * </pre>
        *
-       * <code>string amount = 2;</code>
+       * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
@@ -12532,7 +12532,7 @@ public final class BudgetOuterClass {
        *  * Must be less than budget's amount if type is AMOUNT.
        * </pre>
        *
-       * <code>string amount = 2;</code>
+       * <code>string amount = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for amount to set.
        * @return This builder for chaining.
        */
@@ -12812,45 +12812,46 @@ public final class BudgetOuterClass {
       "illing.v1.ExpenseBudgetSpecH\000\022D\n\016balance" +
       "_budget\030\010 \001(\0132*.yandex.cloud.billing.v1." +
       "BalanceBudgetSpecH\000B\023\n\013budget_spec\022\004\300\3011\001" +
-      "\"\302\002\n\016CostBudgetSpec\022\016\n\006amount\030\001 \001(\t\022%\n\035n" +
-      "otification_user_account_ids\030\002 \003(\t\022?\n\017th" +
-      "reshold_rules\030\003 \003(\0132&.yandex.cloud.billi" +
-      "ng.v1.ThresholdRule\022:\n\006filter\030\004 \001(\0132*.ya" +
-      "ndex.cloud.billing.v1.ConsumptionFilter\022" +
-      "@\n\014reset_period\030\005 \001(\0162(.yandex.cloud.bil" +
-      "ling.v1.ResetPeriodTypeH\000\022\024\n\nstart_date\030" +
-      "\006 \001(\tH\000\022\020\n\010end_date\030\007 \001(\tB\022\n\nstart_type\022" +
-      "\004\300\3011\001\"\305\002\n\021ExpenseBudgetSpec\022\016\n\006amount\030\001 " +
-      "\001(\t\022%\n\035notification_user_account_ids\030\002 \003" +
-      "(\t\022?\n\017threshold_rules\030\003 \003(\0132&.yandex.clo" +
-      "ud.billing.v1.ThresholdRule\022:\n\006filter\030\004 " +
-      "\001(\0132*.yandex.cloud.billing.v1.Consumptio" +
-      "nFilter\022@\n\014reset_period\030\005 \001(\0162(.yandex.c" +
-      "loud.billing.v1.ResetPeriodTypeH\000\022\024\n\nsta" +
-      "rt_date\030\006 \001(\tH\000\022\020\n\010end_date\030\007 \001(\tB\022\n\nsta" +
-      "rt_type\022\004\300\3011\001\"\261\001\n\021BalanceBudgetSpec\022\016\n\006a" +
-      "mount\030\001 \001(\t\022%\n\035notification_user_account" +
-      "_ids\030\002 \003(\t\022?\n\017threshold_rules\030\003 \003(\0132&.ya" +
-      "ndex.cloud.billing.v1.ThresholdRule\022\022\n\ns" +
-      "tart_date\030\004 \001(\t\022\020\n\010end_date\030\005 \001(\t\"\177\n\021Con" +
-      "sumptionFilter\022\023\n\013service_ids\030\001 \003(\t\022U\n\025c" +
-      "loud_folders_filters\030\002 \003(\01326.yandex.clou" +
-      "d.billing.v1.CloudFoldersConsumptionFilt" +
-      "er\"E\n\035CloudFoldersConsumptionFilter\022\020\n\010c" +
-      "loud_id\030\001 \001(\t\022\022\n\nfolder_ids\030\002 \003(\t\"|\n\rThr" +
-      "esholdRule\0224\n\004type\030\001 \001(\0162&.yandex.cloud." +
-      "billing.v1.ThresholdType\022\016\n\006amount\030\002 \001(\t" +
-      "\022%\n\035notification_user_account_ids\030\003 \003(\t*" +
-      "U\n\014BudgetStatus\022\035\n\031BUDGET_STATUS_UNSPECI" +
-      "FIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010FINI" +
-      "SHED\020\003*\\\n\017ResetPeriodType\022!\n\035RESET_PERIO" +
-      "D_TYPE_UNSPECIFIED\020\000\022\013\n\007MONTHLY\020\001\022\013\n\007QUA" +
-      "RTER\020\002\022\014\n\010ANNUALLY\020\003*H\n\rThresholdType\022\036\n" +
-      "\032THRESHOLD_TYPE_UNSPECIFIED\020\000\022\013\n\007PERCENT" +
-      "\020\001\022\n\n\006AMOUNT\020\002Bb\n\033yandex.cloud.api.billi" +
-      "ng.v1ZCgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/billing/v1;billingb\006prot" +
-      "o3"
+      "\"\327\002\n\016CostBudgetSpec\022\024\n\006amount\030\001 \001(\tB\004\350\3071" +
+      "\001\022.\n\035notification_user_account_ids\030\002 \003(\t" +
+      "B\007\202\3101\003>=1\022?\n\017threshold_rules\030\003 \003(\0132&.yan" +
+      "dex.cloud.billing.v1.ThresholdRule\022:\n\006fi" +
+      "lter\030\004 \001(\0132*.yandex.cloud.billing.v1.Con" +
+      "sumptionFilter\022@\n\014reset_period\030\005 \001(\0162(.y" +
+      "andex.cloud.billing.v1.ResetPeriodTypeH\000" +
+      "\022\024\n\nstart_date\030\006 \001(\tH\000\022\026\n\010end_date\030\007 \001(\t" +
+      "B\004\350\3071\001B\022\n\nstart_type\022\004\300\3011\001\"\332\002\n\021ExpenseBu" +
+      "dgetSpec\022\024\n\006amount\030\001 \001(\tB\004\350\3071\001\022.\n\035notifi" +
+      "cation_user_account_ids\030\002 \003(\tB\007\202\3101\003>=1\022?" +
+      "\n\017threshold_rules\030\003 \003(\0132&.yandex.cloud.b" +
+      "illing.v1.ThresholdRule\022:\n\006filter\030\004 \001(\0132" +
+      "*.yandex.cloud.billing.v1.ConsumptionFil" +
+      "ter\022@\n\014reset_period\030\005 \001(\0162(.yandex.cloud" +
+      ".billing.v1.ResetPeriodTypeH\000\022\024\n\nstart_d" +
+      "ate\030\006 \001(\tH\000\022\026\n\010end_date\030\007 \001(\tB\004\350\3071\001B\022\n\ns" +
+      "tart_type\022\004\300\3011\001\"\306\001\n\021BalanceBudgetSpec\022\024\n" +
+      "\006amount\030\001 \001(\tB\004\350\3071\001\022.\n\035notification_user" +
+      "_account_ids\030\002 \003(\tB\007\202\3101\003>=1\022?\n\017threshold" +
+      "_rules\030\003 \003(\0132&.yandex.cloud.billing.v1.T" +
+      "hresholdRule\022\022\n\nstart_date\030\004 \001(\t\022\026\n\010end_" +
+      "date\030\005 \001(\tB\004\350\3071\001\"\177\n\021ConsumptionFilter\022\023\n" +
+      "\013service_ids\030\001 \003(\t\022U\n\025cloud_folders_filt" +
+      "ers\030\002 \003(\01326.yandex.cloud.billing.v1.Clou" +
+      "dFoldersConsumptionFilter\"E\n\035CloudFolder" +
+      "sConsumptionFilter\022\020\n\010cloud_id\030\001 \001(\t\022\022\n\n" +
+      "folder_ids\030\002 \003(\t\"\210\001\n\rThresholdRule\022:\n\004ty" +
+      "pe\030\001 \001(\0162&.yandex.cloud.billing.v1.Thres" +
+      "holdTypeB\004\350\3071\001\022\024\n\006amount\030\002 \001(\tB\004\350\3071\001\022%\n\035" +
+      "notification_user_account_ids\030\003 \003(\t*U\n\014B" +
+      "udgetStatus\022\035\n\031BUDGET_STATUS_UNSPECIFIED" +
+      "\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010FINISHED" +
+      "\020\003*\\\n\017ResetPeriodType\022!\n\035RESET_PERIOD_TY" +
+      "PE_UNSPECIFIED\020\000\022\013\n\007MONTHLY\020\001\022\013\n\007QUARTER" +
+      "\020\002\022\014\n\010ANNUALLY\020\003*H\n\rThresholdType\022\036\n\032THR" +
+      "ESHOLD_TYPE_UNSPECIFIED\020\000\022\013\n\007PERCENT\020\001\022\n" +
+      "\n\006AMOUNT\020\002Bb\n\033yandex.cloud.api.billing.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/billing/v1;billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12903,6 +12904,8 @@ public final class BudgetOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();

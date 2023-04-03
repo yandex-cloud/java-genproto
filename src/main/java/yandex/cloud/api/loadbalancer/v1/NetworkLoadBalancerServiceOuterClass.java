@@ -3048,7 +3048,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
 
     /**
      * <pre>
-     * Type of the network load balancer. Only external network load balancers are currently available.
+     * Type of the network load balancer.
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -3057,7 +3057,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of the network load balancer. Only external network load balancers are currently available.
+     * Type of the network load balancer.
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -3621,7 +3621,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of the network load balancer. Only external network load balancers are currently available.
+     * Type of the network load balancer.
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -3632,7 +3632,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * Type of the network load balancer. Only external network load balancers are currently available.
+     * Type of the network load balancer.
      * </pre>
      *
      * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -4883,7 +4883,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of the network load balancer. Only external network load balancers are currently available.
+       * Type of the network load balancer.
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -4894,7 +4894,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the network load balancer. Only external network load balancers are currently available.
+       * Type of the network load balancer.
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -4909,7 +4909,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the network load balancer. Only external network load balancers are currently available.
+       * Type of the network load balancer.
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -4923,7 +4923,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the network load balancer. Only external network load balancers are currently available.
+       * Type of the network load balancer.
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>
@@ -4941,7 +4941,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * Type of the network load balancer. Only external network load balancers are currently available.
+       * Type of the network load balancer.
        * </pre>
        *
        * <code>.yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type type = 6 [(.yandex.cloud.required) = true];</code>

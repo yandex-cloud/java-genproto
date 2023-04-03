@@ -922,10 +922,6 @@ public final class NetworkLoadBalancerOuterClass {
     }
 
     /**
-     * <pre>
-     * Type of the load balancer. Only external load balancers are currently available.
-     * </pre>
-     *
      * Protobuf enum {@code yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.Type}
      */
     public enum Type

@@ -28939,7 +28939,7 @@ public final class TriggerOuterClass {
      * Time in seconds to wait between individual retries.
      * </pre>
      *
-     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
      * @return Whether the interval field is set.
      */
     boolean hasInterval();
@@ -28948,7 +28948,7 @@ public final class TriggerOuterClass {
      * Time in seconds to wait between individual retries.
      * </pre>
      *
-     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
      * @return The interval.
      */
     com.google.protobuf.Duration getInterval();
@@ -28957,7 +28957,7 @@ public final class TriggerOuterClass {
      * Time in seconds to wait between individual retries.
      * </pre>
      *
-     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
      */
     com.google.protobuf.DurationOrBuilder getIntervalOrBuilder();
   }
@@ -29082,7 +29082,7 @@ public final class TriggerOuterClass {
      * Time in seconds to wait between individual retries.
      * </pre>
      *
-     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
      * @return Whether the interval field is set.
      */
     @java.lang.Override
@@ -29094,7 +29094,7 @@ public final class TriggerOuterClass {
      * Time in seconds to wait between individual retries.
      * </pre>
      *
-     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
      * @return The interval.
      */
     @java.lang.Override
@@ -29106,7 +29106,7 @@ public final class TriggerOuterClass {
      * Time in seconds to wait between individual retries.
      * </pre>
      *
-     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
@@ -29501,7 +29501,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        * @return Whether the interval field is set.
        */
       public boolean hasInterval() {
@@ -29512,7 +29512,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        * @return The interval.
        */
       public com.google.protobuf.Duration getInterval() {
@@ -29527,7 +29527,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       public Builder setInterval(com.google.protobuf.Duration value) {
         if (intervalBuilder_ == null) {
@@ -29547,7 +29547,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       public Builder setInterval(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -29565,7 +29565,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       public Builder mergeInterval(com.google.protobuf.Duration value) {
         if (intervalBuilder_ == null) {
@@ -29587,7 +29587,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       public Builder clearInterval() {
         if (intervalBuilder_ == null) {
@@ -29605,7 +29605,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       public com.google.protobuf.Duration.Builder getIntervalBuilder() {
         
@@ -29617,7 +29617,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
         if (intervalBuilder_ != null) {
@@ -29632,7 +29632,7 @@ public final class TriggerOuterClass {
        * Time in seconds to wait between individual retries.
        * </pre>
        *
-       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "10s-1m"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -35116,44 +35116,44 @@ public final class TriggerOuterClass {
       "\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf.Durat" +
       "ionB\t\372\3071\0051s-1m\"e\n\024LoggingBatchSettings\022\027" +
       "\n\004size\030\001 \001(\003B\t\372\3071\0051-100\0224\n\006cutoff\030\002 \001(\0132" +
-      "\031.google.protobuf.DurationB\t\372\3071\0051s-1m\"c\n" +
+      "\031.google.protobuf.DurationB\t\372\3071\0051s-1m\"m\n" +
       "\rRetrySettings\022\037\n\016retry_attempts\030\001 \001(\003B\007" +
-      "\372\3071\0031-5\0221\n\010interval\030\002 \001(\0132\031.google.proto" +
-      "buf.DurationB\004\350\3071\001\"\232\002\n\rBillingBudget\022(\n\022" +
-      "billing_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033" +
-      "\n\tbudget_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n\017invoke_fu" +
-      "nction\030e \001(\0132<.yandex.cloud.serverless.t" +
-      "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
-      "invoke_container\030g \001(\0132=.yandex.cloud.se" +
-      "rverless.triggers.v1.InvokeContainerWith" +
-      "RetryH\000B\016\n\006action\022\004\300\3011\001\"j\n\027DataStreamBat" +
-      "chSettings\022\031\n\004size\030\001 \001(\003B\013\372\3071\0071-65536\0224\n" +
-      "\006cutoff\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "B\t\372\3071\0051s-1m\"\366\002\n\nDataStream\022\020\n\010endpoint\030\001" +
-      " \001(\t\022\020\n\010database\030\002 \001(\t\022\016\n\006stream\030\003 \001(\t\022\032" +
-      "\n\022service_account_id\030\004 \001(\t\022T\n\016batch_sett" +
-      "ings\030\005 \001(\0132<.yandex.cloud.serverless.tri" +
-      "ggers.v1.DataStreamBatchSettings\022W\n\017invo" +
-      "ke_function\030\r \001(\0132<.yandex.cloud.serverl" +
-      "ess.triggers.v1.InvokeFunctionWithRetryH" +
-      "\000\022Y\n\020invoke_container\030\017 \001(\0132=.yandex.clo" +
-      "ud.serverless.triggers.v1.InvokeContaine" +
-      "rWithRetryH\000B\016\n\006action\022\004\300\3011\001\"\331\001\n\004Mail\022\r\n" +
-      "\005email\030\002 \001(\t\022W\n\017invoke_function\030e \001(\0132<." +
+      "\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.google.proto" +
+      "buf.DurationB\016\372\3071\00610s-1m\350\3071\001\"\232\002\n\rBilling" +
+      "Budget\022(\n\022billing_account_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n" +
+      "\017invoke_function\030e \001(\0132<.yandex.cloud.se" +
+      "rverless.triggers.v1.InvokeFunctionWithR" +
+      "etryH\000\022Y\n\020invoke_container\030g \001(\0132=.yande" +
+      "x.cloud.serverless.triggers.v1.InvokeCon" +
+      "tainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\"j\n\027Dat" +
+      "aStreamBatchSettings\022\031\n\004size\030\001 \001(\003B\013\372\3071\007" +
+      "1-65536\0224\n\006cutoff\030\002 \001(\0132\031.google.protobu" +
+      "f.DurationB\t\372\3071\0051s-1m\"\366\002\n\nDataStream\022\020\n\010" +
+      "endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(\t\022\016\n\006stre" +
+      "am\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022T\n\016" +
+      "batch_settings\030\005 \001(\0132<.yandex.cloud.serv" +
+      "erless.triggers.v1.DataStreamBatchSettin" +
+      "gs\022W\n\017invoke_function\030\r \001(\0132<.yandex.clo" +
+      "ud.serverless.triggers.v1.InvokeFunction" +
+      "WithRetryH\000\022Y\n\020invoke_container\030\017 \001(\0132=." +
       "yandex.cloud.serverless.triggers.v1.Invo" +
-      "keFunctionWithRetryH\000\022Y\n\020invoke_containe" +
-      "r\030g \001(\0132=.yandex.cloud.serverless.trigge" +
-      "rs.v1.InvokeContainerWithRetryH\000B\016\n\006acti" +
-      "on\022\004\300\3011\001*\342\001\n\013TriggerType\022\034\n\030TRIGGER_TYPE" +
-      "_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUE" +
-      "UE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESS" +
-      "AGE\020\014\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_R" +
-      "EGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022" +
-      "\n\016BILLING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n" +
-      "\'yandex.cloud.api.serverless.triggers.v1" +
-      "ZPgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/serverless/triggers/v1;trigge" +
-      "rsb\006proto3"
+      "keContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\"\331" +
+      "\001\n\004Mail\022\r\n\005email\030\002 \001(\t\022W\n\017invoke_functio" +
+      "n\030e \001(\0132<.yandex.cloud.serverless.trigge" +
+      "rs.v1.InvokeFunctionWithRetryH\000\022Y\n\020invok" +
+      "e_container\030g \001(\0132=.yandex.cloud.serverl" +
+      "ess.triggers.v1.InvokeContainerWithRetry" +
+      "H\000B\016\n\006action\022\004\300\3011\001*\342\001\n\013TriggerType\022\034\n\030TR" +
+      "IGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rM" +
+      "ESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_B" +
+      "ROKER_MESSAGE\020\014\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022C" +
+      "ONTAINER_REGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007L" +
+      "OGGING\020\010\022\022\n\016BILLING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n" +
+      "\004MAIL\020\013B{\n\'yandex.cloud.api.serverless.t" +
+      "riggers.v1ZPgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/serverless/triggers" +
+      "/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
