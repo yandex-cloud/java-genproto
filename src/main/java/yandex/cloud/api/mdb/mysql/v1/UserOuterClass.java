@@ -50,6 +50,27 @@ public final class UserOuterClass {
      * <code>PROCESS = 3;</code>
      */
     PROCESS(3),
+    /**
+     * <pre>
+     * Enables use of the `FLUSH OPTIMIZER_COSTS` statement.
+     * </pre>
+     *
+     * <code>FLUSH_OPTIMIZER_COSTS = 4;</code>
+     */
+    FLUSH_OPTIMIZER_COSTS(4),
+    /**
+     * <pre>
+     * Enables a user to access definitions and properties of all stored routines (stored procedures and functions), even those for which the user is not named as the routine DEFINER.
+     * This access includes:
+     * The contents of the Information Schema `ROUTINES` table.
+     * The `SHOW CREATE FUNCTION` and `SHOW CREATE PROCEDURE` statements.
+     * The `SHOW FUNCTION CODE` and `SHOW PROCEDURE CODE` statements.
+     * The SHOW `FUNCTION STATUS` and `SHOW PROCEDURE STATUS` statements.
+     * </pre>
+     *
+     * <code>SHOW_ROUTINE = 5;</code>
+     */
+    SHOW_ROUTINE(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -84,6 +105,27 @@ public final class UserOuterClass {
      * <code>PROCESS = 3;</code>
      */
     public static final int PROCESS_VALUE = 3;
+    /**
+     * <pre>
+     * Enables use of the `FLUSH OPTIMIZER_COSTS` statement.
+     * </pre>
+     *
+     * <code>FLUSH_OPTIMIZER_COSTS = 4;</code>
+     */
+    public static final int FLUSH_OPTIMIZER_COSTS_VALUE = 4;
+    /**
+     * <pre>
+     * Enables a user to access definitions and properties of all stored routines (stored procedures and functions), even those for which the user is not named as the routine DEFINER.
+     * This access includes:
+     * The contents of the Information Schema `ROUTINES` table.
+     * The `SHOW CREATE FUNCTION` and `SHOW CREATE PROCEDURE` statements.
+     * The `SHOW FUNCTION CODE` and `SHOW PROCEDURE CODE` statements.
+     * The SHOW `FUNCTION STATUS` and `SHOW PROCEDURE STATUS` statements.
+     * </pre>
+     *
+     * <code>SHOW_ROUTINE = 5;</code>
+     */
+    public static final int SHOW_ROUTINE_VALUE = 5;
 
 
     public final int getNumber() {
@@ -114,6 +156,8 @@ public final class UserOuterClass {
         case 1: return REPLICATION_CLIENT;
         case 2: return REPLICATION_SLAVE;
         case 3: return PROCESS;
+        case 4: return FLUSH_OPTIMIZER_COSTS;
+        case 5: return SHOW_ROUTINE;
         default: return null;
       }
     }
@@ -7496,16 +7540,17 @@ public final class UserOuterClass {
       "ion\022F\n\021connection_limits\030\005 \001(\0132+.yandex." +
       "cloud.mdb.mysql.v1.ConnectionLimits\022D\n\025a" +
       "uthentication_plugin\030\006 \001(\0162%.yandex.clou" +
-      "d.mdb.mysql.v1.AuthPlugin*q\n\020GlobalPermi" +
-      "ssion\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED\020\000" +
-      "\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATION_" +
-      "SLAVE\020\002\022\013\n\007PROCESS\020\003*t\n\nAuthPlugin\022\033\n\027AU" +
-      "TH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_" +
-      "PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n" +
-      "\017SHA256_PASSWORD\020\003Bd\n\035yandex.cloud.api.m" +
-      "db.mysql.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/mysql/v1;mysql" +
-      "b\006proto3"
+      "d.mdb.mysql.v1.AuthPlugin*\236\001\n\020GlobalPerm" +
+      "ission\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED\020" +
+      "\000\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATION" +
+      "_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025FLUSH_OPTIMIZER" +
+      "_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005*t\n\nAuthPlugin" +
+      "\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_N" +
+      "ATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWOR" +
+      "D\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex.cloud" +
+      ".api.mdb.mysql.v1ZCgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/mdb/mysql/v1" +
+      ";mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

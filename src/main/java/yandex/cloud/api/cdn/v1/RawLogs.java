@@ -45,12 +45,20 @@ public final class RawLogs {
     RAW_LOGS_STATUS_OK(2),
     /**
      * <pre>
-     * Raw logs was activated, but logs CDN provider has been failed to store logs.
+     * Raw logs was activated, but CDN provider has been failed to store logs.
      * </pre>
      *
      * <code>RAW_LOGS_STATUS_FAILED = 3;</code>
      */
     RAW_LOGS_STATUS_FAILED(3),
+    /**
+     * <pre>
+     * Raw logs was activated, but logs storing process is expected.
+     * </pre>
+     *
+     * <code>RAW_LOGS_STATUS_PENDING = 4;</code>
+     */
+    RAW_LOGS_STATUS_PENDING(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -76,12 +84,20 @@ public final class RawLogs {
     public static final int RAW_LOGS_STATUS_OK_VALUE = 2;
     /**
      * <pre>
-     * Raw logs was activated, but logs CDN provider has been failed to store logs.
+     * Raw logs was activated, but CDN provider has been failed to store logs.
      * </pre>
      *
      * <code>RAW_LOGS_STATUS_FAILED = 3;</code>
      */
     public static final int RAW_LOGS_STATUS_FAILED_VALUE = 3;
+    /**
+     * <pre>
+     * Raw logs was activated, but logs storing process is expected.
+     * </pre>
+     *
+     * <code>RAW_LOGS_STATUS_PENDING = 4;</code>
+     */
+    public static final int RAW_LOGS_STATUS_PENDING_VALUE = 4;
 
 
     public final int getNumber() {
@@ -112,6 +128,7 @@ public final class RawLogs {
         case 1: return RAW_LOGS_STATUS_NOT_ACTIVATED;
         case 2: return RAW_LOGS_STATUS_OK;
         case 3: return RAW_LOGS_STATUS_FAILED;
+        case 4: return RAW_LOGS_STATUS_PENDING;
         default: return null;
       }
     }
@@ -1207,13 +1224,13 @@ public final class RawLogs {
       "on.proto\"v\n\017RawLogsSettings\022#\n\013bucket_na" +
       "me\030\001 \001(\tB\016\350\3071\001\212\3101\006<=1024\022\037\n\rbucket_regio" +
       "n\030\002 \001(\tB\010\212\3101\004<=50\022\035\n\013file_prefix\030\003 \001(\tB\010" +
-      "\212\3101\004<=50*\207\001\n\rRawLogsStatus\022\037\n\033RAW_LOGS_S" +
+      "\212\3101\004<=50*\244\001\n\rRawLogsStatus\022\037\n\033RAW_LOGS_S" +
       "TATUS_UNSPECIFIED\020\000\022!\n\035RAW_LOGS_STATUS_N" +
       "OT_ACTIVATED\020\001\022\026\n\022RAW_LOGS_STATUS_OK\020\002\022\032" +
-      "\n\026RAW_LOGS_STATUS_FAILED\020\003BV\n\027yandex.clo" +
-      "ud.api.cdn.v1Z;github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/cdn/v1;cdnb\006prot" +
-      "o3"
+      "\n\026RAW_LOGS_STATUS_FAILED\020\003\022\033\n\027RAW_LOGS_S" +
+      "TATUS_PENDING\020\004BV\n\027yandex.cloud.api.cdn." +
+      "v1Z;github.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
