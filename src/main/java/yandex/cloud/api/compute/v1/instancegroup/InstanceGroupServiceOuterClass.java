@@ -19244,7 +19244,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -19255,7 +19255,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -19487,7 +19487,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -19510,7 +19510,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -20134,7 +20134,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -20156,7 +20156,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -20179,7 +20179,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -20200,7 +20200,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -20216,7 +20216,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -21641,7 +21641,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -21652,7 +21652,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -21858,7 +21858,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -21881,7 +21881,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -22462,7 +22462,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -22484,7 +22484,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -22507,7 +22507,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -22528,7 +22528,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -22544,7 +22544,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -25847,7 +25847,7 @@ public final class InstanceGroupServiceOuterClass {
      * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -25857,7 +25857,7 @@ public final class InstanceGroupServiceOuterClass {
      * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -26061,7 +26061,7 @@ public final class InstanceGroupServiceOuterClass {
      * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -26083,7 +26083,7 @@ public final class InstanceGroupServiceOuterClass {
      * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -26660,7 +26660,7 @@ public final class InstanceGroupServiceOuterClass {
        * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -26681,7 +26681,7 @@ public final class InstanceGroupServiceOuterClass {
        * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -26703,7 +26703,7 @@ public final class InstanceGroupServiceOuterClass {
        * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -26723,7 +26723,7 @@ public final class InstanceGroupServiceOuterClass {
        * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -26738,7 +26738,7 @@ public final class InstanceGroupServiceOuterClass {
        * [ListInstanceGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -28071,7 +28071,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -28082,7 +28082,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -28288,7 +28288,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -28311,7 +28311,7 @@ public final class InstanceGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -28892,7 +28892,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -28914,7 +28914,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -28937,7 +28937,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -28958,7 +28958,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -28974,7 +28974,7 @@ public final class InstanceGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -30540,153 +30540,153 @@ public final class InstanceGroupServiceOuterClass {
       "nceGroupMetadata\022\031\n\021instance_group_id\030\001 " +
       "\001(\t\"4\n\027DeleteInstancesMetadata\022\031\n\021instan" +
       "ce_group_id\030\001 \001(\t\"2\n\025StopInstancesMetada" +
-      "ta\022\031\n\021instance_group_id\030\001 \001(\t\"\326\001\n\031ListIn" +
+      "ta\022\031\n\021instance_group_id\030\001 \001(\t\"\327\001\n\031ListIn" +
       "stanceGroupsRequest\022\027\n\tfolder_id\030\001 \001(\tB\004" +
-      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
-      "(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(\01628.yandex.cl" +
-      "oud.compute.v1.instancegroup.InstanceGro" +
-      "upView\"\204\001\n\032ListInstanceGroupsResponse\022M\n" +
-      "\017instance_groups\030\001 \003(\01324.yandex.cloud.co" +
-      "mpute.v1.instancegroup.InstanceGroup\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\246\001\n!ListInstanceGr" +
-      "oupInstancesRequest\022\'\n\021instance_group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\210\001\n\"ListI" +
-      "nstanceGroupInstancesResponse\022I\n\tinstanc" +
-      "es\030\001 \003(\01326.yandex.cloud.compute.v1.insta" +
-      "ncegroup.ManagedInstance\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\210\001\n\026DeleteInstancesRequest\022\'\n\021" +
-      "instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022-\n" +
-      "\024managed_instance_ids\030\002 \003(\tB\017\202\3101\003>=1\212\3101\004" +
-      "<=50\022\026\n\016create_another\030\003 \001(\010\"n\n\024StopInst" +
-      "ancesRequest\022\'\n\021instance_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022-\n\024managed_instance_ids\030\002 " +
-      "\003(\tB\017\202\3101\003>=1\212\3101\004<=50\"\247\001\n\"ListInstanceGro" +
-      "upOperationsRequest\022\'\n\021instance_group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n#ListIn" +
-      "stanceGroupOperationsResponse\0225\n\noperati" +
-      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
-      "tion\022\027\n\017next_page_token\030\002 \001(\t\"\237\001\n\"ListIn" +
-      "stanceGroupLogRecordsRequest\022\037\n\021instance" +
-      "_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003" +
-      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\205\001\n#List" +
-      "InstanceGroupLogRecordsResponse\022E\n\013log_r" +
-      "ecords\030\001 \003(\01320.yandex.cloud.compute.v1.i" +
-      "nstancegroup.LogRecord\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t*(\n\021InstanceGroupView\022\t\n\005BASIC\020\000\022" +
-      "\010\n\004FULL\020\0012\256 \n\024InstanceGroupService\022\263\001\n\003G" +
-      "et\022>.yandex.cloud.compute.v1.instancegro" +
-      "up.GetInstanceGroupRequest\0324.yandex.clou" +
-      "d.compute.v1.instancegroup.InstanceGroup" +
-      "\"6\202\323\344\223\0020\022./compute/v1/instanceGroups/{in" +
-      "stance_group_id}\022\257\001\n\004List\022@.yandex.cloud" +
-      ".compute.v1.instancegroup.ListInstanceGr" +
-      "oupsRequest\032A.yandex.cloud.compute.v1.in" +
-      "stancegroup.ListInstanceGroupsResponse\"\"" +
-      "\202\323\344\223\002\034\022\032/compute/v1/instanceGroups\022\305\001\n\006C" +
-      "reate\022A.yandex.cloud.compute.v1.instance" +
-      "group.CreateInstanceGroupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"U\202\323\344\223\002\037\"\032/co" +
-      "mpute/v1/instanceGroups:\001*\262\322*,\n\033CreateIn" +
-      "stanceGroupMetadata\022\rInstanceGroup\022\332\001\n\016C" +
-      "reateFromYaml\022I.yandex.cloud.compute.v1." +
-      "instancegroup.CreateInstanceGroupFromYam" +
-      "lRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"Z\202\323\344\223\002$\"\037/compute/v1/instanceGroups:" +
-      "yaml:\001*\262\322*,\n\033CreateInstanceGroupMetadata" +
-      "\022\rInstanceGroup\022\331\001\n\006Update\022A.yandex.clou" +
-      "d.compute.v1.instancegroup.UpdateInstanc" +
-      "eGroupRequest\032!.yandex.cloud.operation.O" +
-      "peration\"i\202\323\344\223\00232./compute/v1/instanceGr" +
-      "oups/{instance_group_id}:\001*\262\322*,\n\033UpdateI" +
-      "nstanceGroupMetadata\022\rInstanceGroup\022\356\001\n\016" +
-      "UpdateFromYaml\022I.yandex.cloud.compute.v1" +
-      ".instancegroup.UpdateInstanceGroupFromYa" +
-      "mlRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"n\202\323\344\223\002823/compute/v1/instanceGroups" +
-      "/{instance_group_id}:yaml:\001*\262\322*,\n\033Update" +
-      "InstanceGroupMetadata\022\rInstanceGroup\022\325\001\n" +
-      "\004Stop\022?.yandex.cloud.compute.v1.instance" +
-      "group.StopInstanceGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"i\202\323\344\223\0025\"3/comp" +
-      "ute/v1/instanceGroups/{instance_group_id" +
-      "}:stop\262\322**\n\031StopInstanceGroupMetadata\022\rI" +
-      "nstanceGroup\022\331\001\n\005Start\022@.yandex.cloud.co" +
-      "mpute.v1.instancegroup.StartInstanceGrou" +
-      "pRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"k\202\323\344\223\0026\"4/compute/v1/instanceGroups/" +
-      "{instance_group_id}:start\262\322*+\n\032StartInst" +
-      "anceGroupMetadata\022\rInstanceGroup\022\336\001\n\006Del" +
-      "ete\022A.yandex.cloud.compute.v1.instancegr" +
-      "oup.DeleteInstanceGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"n\202\323\344\223\0020*./comp" +
-      "ute/v1/instanceGroups/{instance_group_id" +
-      "}\262\322*4\n\033DeleteInstanceGroupMetadata\022\025goog" +
-      "le.protobuf.Empty\022\346\001\n\rListInstances\022H.ya" +
-      "ndex.cloud.compute.v1.instancegroup.List" +
-      "InstanceGroupInstancesRequest\032I.yandex.c" +
+      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\np" +
+      "age_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 " +
+      "\001(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(\01628.yandex.c" +
+      "loud.compute.v1.instancegroup.InstanceGr" +
+      "oupView\"\204\001\n\032ListInstanceGroupsResponse\022M" +
+      "\n\017instance_groups\030\001 \003(\01324.yandex.cloud.c" +
+      "ompute.v1.instancegroup.InstanceGroup\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"\247\001\n!ListInstanceG" +
+      "roupInstancesRequest\022\'\n\021instance_group_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=" +
+      "1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\210\001\n\"Lis" +
+      "tInstanceGroupInstancesResponse\022I\n\tinsta" +
+      "nces\030\001 \003(\01326.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ManagedInstance\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"\210\001\n\026DeleteInstancesRequest\022\'" +
+      "\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "-\n\024managed_instance_ids\030\002 \003(\tB\017\202\3101\003>=1\212\310" +
+      "1\004<=50\022\026\n\016create_another\030\003 \001(\010\"n\n\024StopIn" +
+      "stancesRequest\022\'\n\021instance_group_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022-\n\024managed_instance_ids\030" +
+      "\002 \003(\tB\017\202\3101\003>=1\212\3101\004<=50\"\250\001\n\"ListInstanceG" +
+      "roupOperationsRequest\022\'\n\021instance_group_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<" +
+      "=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n#Lis" +
+      "tInstanceGroupOperationsResponse\0225\n\noper" +
+      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
+      "eration\022\027\n\017next_page_token\030\002 \001(\t\"\240\001\n\"Lis" +
+      "tInstanceGroupLogRecordsRequest\022\037\n\021insta" +
+      "nce_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101" +
+      "\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\205\001\n#" +
+      "ListInstanceGroupLogRecordsResponse\022E\n\013l" +
+      "og_records\030\001 \003(\01320.yandex.cloud.compute." +
+      "v1.instancegroup.LogRecord\022\027\n\017next_page_" +
+      "token\030\002 \001(\t*(\n\021InstanceGroupView\022\t\n\005BASI" +
+      "C\020\000\022\010\n\004FULL\020\0012\256 \n\024InstanceGroupService\022\263" +
+      "\001\n\003Get\022>.yandex.cloud.compute.v1.instanc" +
+      "egroup.GetInstanceGroupRequest\0324.yandex." +
+      "cloud.compute.v1.instancegroup.InstanceG" +
+      "roup\"6\202\323\344\223\0020\022./compute/v1/instanceGroups" +
+      "/{instance_group_id}\022\257\001\n\004List\022@.yandex.c" +
       "loud.compute.v1.instancegroup.ListInstan" +
-      "ceGroupInstancesResponse\"@\202\323\344\223\002:\0228/compu" +
-      "te/v1/instanceGroups/{instance_group_id}" +
-      "/instances\022\241\001\n\017DeleteInstances\022=.yandex." +
-      "cloud.compute.v1.instancegroup.DeleteIns" +
-      "tancesRequest\032!.yandex.cloud.operation.O" +
-      "peration\",\262\322*(\n\027DeleteInstancesMetadata\022" +
-      "\rInstanceGroup\022\233\001\n\rStopInstances\022;.yande" +
-      "x.cloud.compute.v1.instancegroup.StopIns" +
-      "tancesRequest\032!.yandex.cloud.operation.O" +
-      "peration\"*\262\322*&\n\025StopInstancesMetadata\022\rI" +
-      "nstanceGroup\022\352\001\n\016ListOperations\022I.yandex" +
-      ".cloud.compute.v1.instancegroup.ListInst" +
-      "anceGroupOperationsRequest\032J.yandex.clou" +
-      "d.compute.v1.instancegroup.ListInstanceG" +
-      "roupOperationsResponse\"A\202\323\344\223\002;\0229/compute" +
-      "/v1/instanceGroups/{instance_group_id}/o" +
-      "perations\022\344\001\n\016ListLogRecords\022I.yandex.cl" +
-      "oud.compute.v1.instancegroup.ListInstanc" +
-      "eGroupLogRecordsRequest\032J.yandex.cloud.c" +
-      "ompute.v1.instancegroup.ListInstanceGrou" +
-      "pLogRecordsResponse\";\202\323\344\223\0025\0223/compute/v1" +
-      "/instanceGroups/{instance_group_id}:logs" +
-      "\022\272\001\n\022ListAccessBindings\022..yandex.cloud.a" +
-      "ccess.ListAccessBindingsRequest\032/.yandex" +
-      ".cloud.access.ListAccessBindingsResponse" +
-      "\"C\202\323\344\223\002=\022;/compute/v1/instanceGroups/{re" +
-      "source_id}:listAccessBindings\022\352\001\n\021SetAcc" +
-      "essBindings\022-.yandex.cloud.access.SetAcc" +
-      "essBindingsRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\202\001\202\323\344\223\002?\":/compute/v1/inst" +
-      "anceGroups/{resource_id}:setAccessBindin" +
-      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
-      "ata\022\025google.protobuf.Empty\022\366\001\n\024UpdateAcc" +
-      "essBindings\0220.yandex.cloud.access.Update" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\210\001\202\323\344\223\002B\"=/compute/v1/i" +
-      "nstanceGroups/{resource_id}:updateAccess" +
-      "Bindings:\001*\262\322*<\n#access.UpdateAccessBind" +
-      "ingsMetadata\022\025google.protobuf.Empty\022\203\002\n\017" +
-      "ResumeProcesses\022J.yandex.cloud.compute.v" +
-      "1.instancegroup.ResumeInstanceGroupProce" +
-      "ssesRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\200\001\202\323\344\223\002C\">/compute/v1/instanceGro" +
-      "ups/{instance_group_id}:resumeProcesses:" +
-      "\001*\262\322*3\n\"ResumeInstanceGroupProcessMetada" +
-      "ta\022\rInstanceGroup\022\376\001\n\016PauseProcesses\022I.y" +
-      "andex.cloud.compute.v1.instancegroup.Pau" +
-      "seInstanceGroupProcessesRequest\032!.yandex" +
-      ".cloud.operation.Operation\"~\202\323\344\223\002B\"=/com" +
+      "ceGroupsRequest\032A.yandex.cloud.compute.v" +
+      "1.instancegroup.ListInstanceGroupsRespon" +
+      "se\"\"\202\323\344\223\002\034\022\032/compute/v1/instanceGroups\022\305" +
+      "\001\n\006Create\022A.yandex.cloud.compute.v1.inst" +
+      "ancegroup.CreateInstanceGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"U\202\323\344\223\002\037\"" +
+      "\032/compute/v1/instanceGroups:\001*\262\322*,\n\033Crea" +
+      "teInstanceGroupMetadata\022\rInstanceGroup\022\332" +
+      "\001\n\016CreateFromYaml\022I.yandex.cloud.compute" +
+      ".v1.instancegroup.CreateInstanceGroupFro" +
+      "mYamlRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"Z\202\323\344\223\002$\"\037/compute/v1/instanceGro" +
+      "ups:yaml:\001*\262\322*,\n\033CreateInstanceGroupMeta" +
+      "data\022\rInstanceGroup\022\331\001\n\006Update\022A.yandex." +
+      "cloud.compute.v1.instancegroup.UpdateIns" +
+      "tanceGroupRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"i\202\323\344\223\00232./compute/v1/instan" +
+      "ceGroups/{instance_group_id}:\001*\262\322*,\n\033Upd" +
+      "ateInstanceGroupMetadata\022\rInstanceGroup\022" +
+      "\356\001\n\016UpdateFromYaml\022I.yandex.cloud.comput" +
+      "e.v1.instancegroup.UpdateInstanceGroupFr" +
+      "omYamlRequest\032!.yandex.cloud.operation.O" +
+      "peration\"n\202\323\344\223\002823/compute/v1/instanceGr" +
+      "oups/{instance_group_id}:yaml:\001*\262\322*,\n\033Up" +
+      "dateInstanceGroupMetadata\022\rInstanceGroup" +
+      "\022\325\001\n\004Stop\022?.yandex.cloud.compute.v1.inst" +
+      "ancegroup.StopInstanceGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"i\202\323\344\223\0025\"3/" +
+      "compute/v1/instanceGroups/{instance_grou" +
+      "p_id}:stop\262\322**\n\031StopInstanceGroupMetadat" +
+      "a\022\rInstanceGroup\022\331\001\n\005Start\022@.yandex.clou" +
+      "d.compute.v1.instancegroup.StartInstance" +
+      "GroupRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"k\202\323\344\223\0026\"4/compute/v1/instanceGro" +
+      "ups/{instance_group_id}:start\262\322*+\n\032Start" +
+      "InstanceGroupMetadata\022\rInstanceGroup\022\336\001\n" +
+      "\006Delete\022A.yandex.cloud.compute.v1.instan" +
+      "cegroup.DeleteInstanceGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"n\202\323\344\223\0020*./" +
+      "compute/v1/instanceGroups/{instance_grou" +
+      "p_id}\262\322*4\n\033DeleteInstanceGroupMetadata\022\025" +
+      "google.protobuf.Empty\022\346\001\n\rListInstances\022" +
+      "H.yandex.cloud.compute.v1.instancegroup." +
+      "ListInstanceGroupInstancesRequest\032I.yand" +
+      "ex.cloud.compute.v1.instancegroup.ListIn" +
+      "stanceGroupInstancesResponse\"@\202\323\344\223\002:\0228/c" +
+      "ompute/v1/instanceGroups/{instance_group" +
+      "_id}/instances\022\241\001\n\017DeleteInstances\022=.yan" +
+      "dex.cloud.compute.v1.instancegroup.Delet" +
+      "eInstancesRequest\032!.yandex.cloud.operati" +
+      "on.Operation\",\262\322*(\n\027DeleteInstancesMetad" +
+      "ata\022\rInstanceGroup\022\233\001\n\rStopInstances\022;.y" +
+      "andex.cloud.compute.v1.instancegroup.Sto" +
+      "pInstancesRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"*\262\322*&\n\025StopInstancesMetadat" +
+      "a\022\rInstanceGroup\022\352\001\n\016ListOperations\022I.ya" +
+      "ndex.cloud.compute.v1.instancegroup.List" +
+      "InstanceGroupOperationsRequest\032J.yandex." +
+      "cloud.compute.v1.instancegroup.ListInsta" +
+      "nceGroupOperationsResponse\"A\202\323\344\223\002;\0229/com" +
       "pute/v1/instanceGroups/{instance_group_i" +
-      "d}:pauseProcesses:\001*\262\322*2\n!PauseInstanceG" +
-      "roupProcessMetadata\022\rInstanceGroupB\204\001\n)y" +
-      "andex.cloud.api.compute.v1.instancegroup" +
-      "ZWgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/compute/v1/instancegroup;inst" +
-      "ancegroupb\006proto3"
+      "d}/operations\022\344\001\n\016ListLogRecords\022I.yande" +
+      "x.cloud.compute.v1.instancegroup.ListIns" +
+      "tanceGroupLogRecordsRequest\032J.yandex.clo" +
+      "ud.compute.v1.instancegroup.ListInstance" +
+      "GroupLogRecordsResponse\";\202\323\344\223\0025\0223/comput" +
+      "e/v1/instanceGroups/{instance_group_id}:" +
+      "logs\022\272\001\n\022ListAccessBindings\022..yandex.clo" +
+      "ud.access.ListAccessBindingsRequest\032/.ya" +
+      "ndex.cloud.access.ListAccessBindingsResp" +
+      "onse\"C\202\323\344\223\002=\022;/compute/v1/instanceGroups" +
+      "/{resource_id}:listAccessBindings\022\352\001\n\021Se" +
+      "tAccessBindings\022-.yandex.cloud.access.Se" +
+      "tAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\202\001\202\323\344\223\002?\":/compute/v1/" +
+      "instanceGroups/{resource_id}:setAccessBi" +
+      "ndings:\001*\262\322*9\n access.SetAccessBindingsM" +
+      "etadata\022\025google.protobuf.Empty\022\366\001\n\024Updat" +
+      "eAccessBindings\0220.yandex.cloud.access.Up" +
+      "dateAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\210\001\202\323\344\223\002B\"=/compute/" +
+      "v1/instanceGroups/{resource_id}:updateAc" +
+      "cessBindings:\001*\262\322*<\n#access.UpdateAccess" +
+      "BindingsMetadata\022\025google.protobuf.Empty\022" +
+      "\203\002\n\017ResumeProcesses\022J.yandex.cloud.compu" +
+      "te.v1.instancegroup.ResumeInstanceGroupP" +
+      "rocessesRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\200\001\202\323\344\223\002C\">/compute/v1/instanc" +
+      "eGroups/{instance_group_id}:resumeProces" +
+      "ses:\001*\262\322*3\n\"ResumeInstanceGroupProcessMe" +
+      "tadata\022\rInstanceGroup\022\376\001\n\016PauseProcesses" +
+      "\022I.yandex.cloud.compute.v1.instancegroup" +
+      ".PauseInstanceGroupProcessesRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"~\202\323\344\223\002B\"=" +
+      "/compute/v1/instanceGroups/{instance_gro" +
+      "up_id}:pauseProcesses:\001*\262\322*2\n!PauseInsta" +
+      "nceGroupProcessMetadata\022\rInstanceGroupB\204" +
+      "\001\n)yandex.cloud.api.compute.v1.instanceg" +
+      "roupZWgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/compute/v1/instancegroup;" +
+      "instancegroupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

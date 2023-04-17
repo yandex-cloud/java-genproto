@@ -9532,6 +9532,21 @@ public final class NodeOuterClass {
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettingsOrBuilder getContainerRuntimeSettingsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+     * @return Whether the containerNetworkSettings field is set.
+     */
+    boolean hasContainerNetworkSettings();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+     * @return The containerNetworkSettings.
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getContainerNetworkSettings();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder getContainerNetworkSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.NodeTemplate}
@@ -9718,6 +9733,19 @@ public final class NodeOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder subBuilder = null;
+              if (containerNetworkSettings_ != null) {
+                subBuilder = containerNetworkSettings_.toBuilder();
+              }
+              containerNetworkSettings_ = input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(containerNetworkSettings_);
+                containerNetworkSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -11063,6 +11091,495 @@ public final class NodeOuterClass {
 
     }
 
+    public interface ContainerNetworkSettingsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>int64 pod_mtu = 1;</code>
+       * @return The podMtu.
+       */
+      long getPodMtu();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings}
+     */
+    public static final class ContainerNetworkSettings extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings)
+        ContainerNetworkSettingsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ContainerNetworkSettings.newBuilder() to construct.
+      private ContainerNetworkSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ContainerNetworkSettings() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ContainerNetworkSettings();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ContainerNetworkSettings(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                podMtu_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.class, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder.class);
+      }
+
+      public static final int POD_MTU_FIELD_NUMBER = 1;
+      private long podMtu_;
+      /**
+       * <code>int64 pod_mtu = 1;</code>
+       * @return The podMtu.
+       */
+      @java.lang.Override
+      public long getPodMtu() {
+        return podMtu_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (podMtu_ != 0L) {
+          output.writeInt64(1, podMtu_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (podMtu_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, podMtu_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings other = (yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings) obj;
+
+        if (getPodMtu()
+            != other.getPodMtu()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + POD_MTU_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPodMtu());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings)
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.class, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          podMtu_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getDefaultInstanceForType() {
+          return yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings build() {
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings buildPartial() {
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings result = new yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings(this);
+          result.podMtu_ = podMtu_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings) {
+            return mergeFrom((yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings other) {
+          if (other == yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.getDefaultInstance()) return this;
+          if (other.getPodMtu() != 0L) {
+            setPodMtu(other.getPodMtu());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long podMtu_ ;
+        /**
+         * <code>int64 pod_mtu = 1;</code>
+         * @return The podMtu.
+         */
+        @java.lang.Override
+        public long getPodMtu() {
+          return podMtu_;
+        }
+        /**
+         * <code>int64 pod_mtu = 1;</code>
+         * @param value The podMtu to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPodMtu(long value) {
+          
+          podMtu_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int64 pod_mtu = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPodMtu() {
+          
+          podMtu_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings)
+      private static final yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings();
+      }
+
+      public static yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ContainerNetworkSettings>
+          PARSER = new com.google.protobuf.AbstractParser<ContainerNetworkSettings>() {
+        @java.lang.Override
+        public ContainerNetworkSettings parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ContainerNetworkSettings(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ContainerNetworkSettings> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ContainerNetworkSettings> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int NAME_FIELD_NUMBER = 13;
     private volatile java.lang.Object name_;
     /**
@@ -11679,6 +12196,32 @@ public final class NodeOuterClass {
       return getContainerRuntimeSettings();
     }
 
+    public static final int CONTAINER_NETWORK_SETTINGS_FIELD_NUMBER = 16;
+    private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings containerNetworkSettings_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+     * @return Whether the containerNetworkSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasContainerNetworkSettings() {
+      return containerNetworkSettings_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+     * @return The containerNetworkSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getContainerNetworkSettings() {
+      return containerNetworkSettings_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.getDefaultInstance() : containerNetworkSettings_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder getContainerNetworkSettingsOrBuilder() {
+      return getContainerNetworkSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11735,6 +12278,9 @@ public final class NodeOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           15);
+      if (containerNetworkSettings_ != null) {
+        output.writeMessage(16, getContainerNetworkSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11802,6 +12348,10 @@ public final class NodeOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(15, labels__);
       }
+      if (containerNetworkSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getContainerNetworkSettings());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11862,6 +12412,11 @@ public final class NodeOuterClass {
         if (!getContainerRuntimeSettings()
             .equals(other.getContainerRuntimeSettings())) return false;
       }
+      if (hasContainerNetworkSettings() != other.hasContainerNetworkSettings()) return false;
+      if (hasContainerNetworkSettings()) {
+        if (!getContainerNetworkSettings()
+            .equals(other.getContainerNetworkSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11916,6 +12471,10 @@ public final class NodeOuterClass {
       if (hasContainerRuntimeSettings()) {
         hash = (37 * hash) + CONTAINER_RUNTIME_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getContainerRuntimeSettings().hashCode();
+      }
+      if (hasContainerNetworkSettings()) {
+        hash = (37 * hash) + CONTAINER_NETWORK_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getContainerNetworkSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12131,6 +12690,12 @@ public final class NodeOuterClass {
           containerRuntimeSettings_ = null;
           containerRuntimeSettingsBuilder_ = null;
         }
+        if (containerNetworkSettingsBuilder_ == null) {
+          containerNetworkSettings_ = null;
+        } else {
+          containerNetworkSettings_ = null;
+          containerNetworkSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -12207,6 +12772,11 @@ public final class NodeOuterClass {
           result.containerRuntimeSettings_ = containerRuntimeSettings_;
         } else {
           result.containerRuntimeSettings_ = containerRuntimeSettingsBuilder_.build();
+        }
+        if (containerNetworkSettingsBuilder_ == null) {
+          result.containerNetworkSettings_ = containerNetworkSettings_;
+        } else {
+          result.containerNetworkSettings_ = containerNetworkSettingsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12314,6 +12884,9 @@ public final class NodeOuterClass {
         }
         if (other.hasContainerRuntimeSettings()) {
           mergeContainerRuntimeSettings(other.getContainerRuntimeSettings());
+        }
+        if (other.hasContainerNetworkSettings()) {
+          mergeContainerNetworkSettings(other.getContainerNetworkSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14249,6 +14822,125 @@ public final class NodeOuterClass {
           containerRuntimeSettings_ = null;
         }
         return containerRuntimeSettingsBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings containerNetworkSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder> containerNetworkSettingsBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       * @return Whether the containerNetworkSettings field is set.
+       */
+      public boolean hasContainerNetworkSettings() {
+        return containerNetworkSettingsBuilder_ != null || containerNetworkSettings_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       * @return The containerNetworkSettings.
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getContainerNetworkSettings() {
+        if (containerNetworkSettingsBuilder_ == null) {
+          return containerNetworkSettings_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.getDefaultInstance() : containerNetworkSettings_;
+        } else {
+          return containerNetworkSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      public Builder setContainerNetworkSettings(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings value) {
+        if (containerNetworkSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          containerNetworkSettings_ = value;
+          onChanged();
+        } else {
+          containerNetworkSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      public Builder setContainerNetworkSettings(
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder builderForValue) {
+        if (containerNetworkSettingsBuilder_ == null) {
+          containerNetworkSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          containerNetworkSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      public Builder mergeContainerNetworkSettings(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings value) {
+        if (containerNetworkSettingsBuilder_ == null) {
+          if (containerNetworkSettings_ != null) {
+            containerNetworkSettings_ =
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.newBuilder(containerNetworkSettings_).mergeFrom(value).buildPartial();
+          } else {
+            containerNetworkSettings_ = value;
+          }
+          onChanged();
+        } else {
+          containerNetworkSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      public Builder clearContainerNetworkSettings() {
+        if (containerNetworkSettingsBuilder_ == null) {
+          containerNetworkSettings_ = null;
+          onChanged();
+        } else {
+          containerNetworkSettings_ = null;
+          containerNetworkSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder getContainerNetworkSettingsBuilder() {
+        
+        onChanged();
+        return getContainerNetworkSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder getContainerNetworkSettingsOrBuilder() {
+        if (containerNetworkSettingsBuilder_ != null) {
+          return containerNetworkSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return containerNetworkSettings_ == null ?
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.getDefaultInstance() : containerNetworkSettings_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder> 
+          getContainerNetworkSettingsFieldBuilder() {
+        if (containerNetworkSettingsBuilder_ == null) {
+          containerNetworkSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder>(
+                  getContainerNetworkSettings(),
+                  getParentForChildren(),
+                  isClean());
+          containerNetworkSettings_ = null;
+        }
+        return containerNetworkSettingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21187,6 +21879,11 @@ public final class NodeOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerRuntimeSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21266,7 +21963,7 @@ public final class NodeOuterClass {
       "PECIFIED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO" +
       "_SCHEDULE\020\002\022\016\n\nNO_EXECUTE\020\003\"<\n\016AttachedV" +
       "olume\022\023\n\013driver_name\030\001 \001(\t\022\025\n\rvolume_han" +
-      "dle\030\002 \001(\t\"\216\n\n\014NodeTemplate\022\027\n\004name\030\r \001(\t" +
+      "dle\030\002 \001(\t\"\233\013\n\014NodeTemplate\022\027\n\004name\030\r \001(\t" +
       "B\t\212\3101\005<=128\022t\n\006labels\030\017 \003(\0132-.yandex.clo" +
       "ud.k8s.v1.NodeTemplate.LabelsEntryB5\202\3101\004" +
       "<=32\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\" +
@@ -21287,44 +21984,47 @@ public final class NodeOuterClass {
       "\013 \001(\01321.yandex.cloud.k8s.v1.NodeTemplate" +
       ".NetworkSettings\022^\n\032container_runtime_se" +
       "ttings\030\014 \001(\0132:.yandex.cloud.k8s.v1.NodeT" +
-      "emplate.ContainerRuntimeSettings\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\032\243\001\n\017NetworkSettings\022J\n\004type\030\001 \001" +
-      "(\01626.yandex.cloud.k8s.v1.NodeTemplate.Ne" +
-      "tworkSettings.TypeB\004\350\3071\001\"D\n\004Type\022\024\n\020TYPE" +
-      "_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE" +
-      "_ACCELERATED\020\002\032\251\001\n\030ContainerRuntimeSetti" +
-      "ngs\022S\n\004type\030\001 \001(\0162?.yandex.cloud.k8s.v1." +
-      "NodeTemplate.ContainerRuntimeSettings.Ty" +
-      "peB\004\350\3071\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n" +
-      "\n\006DOCKER\020\001\022\016\n\nCONTAINERD\020\002\"\324\001\n\024NetworkIn" +
-      "terfaceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027prima" +
-      "ry_v4_address_spec\030\003 \001(\0132$.yandex.cloud." +
-      "k8s.v1.NodeAddressSpec\022E\n\027primary_v6_add" +
-      "ress_spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.No" +
-      "deAddressSpec\022\032\n\022security_group_ids\030\005 \003(" +
-      "\t\"\222\001\n\017NodeAddressSpec\022A\n\023one_to_one_nat_" +
-      "spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOn" +
-      "eNatSpec\022<\n\020dns_record_specs\030\002 \003(\0132\".yan" +
-      "dex.cloud.k8s.v1.DnsRecordSpec\"_\n\rDnsRec" +
-      "ordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_" +
-      "id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003pt" +
-      "r\030\004 \001(\010\"E\n\017OneToOneNatSpec\0222\n\nip_version" +
-      "\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpVersion\"y" +
-      "\n\rResourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0" +
-      "\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fractio" +
-      "n\030\003 \001(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=" +
-      "0\"\200\001\n\010DiskSpec\022L\n\014disk_type_id\030\001 \001(\tB6\362\307" +
-      "12|network-ssd|network-hdd|network-ssd-n" +
-      "onreplicated\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-4" +
-      "398046511104\"\'\n\020SchedulingPolicy\022\023\n\013pree" +
-      "mptible\030\001 \001(\010\"-\n\017PlacementPolicy\022\032\n\022plac" +
-      "ement_group_id\030\001 \001(\t*;\n\tIpVersion\022\032\n\026IP_" +
-      "VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020" +
-      "\002BV\n\027yandex.cloud.api.k8s.v1Z;github.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/k" +
-      "8s/v1;k8sb\006proto3"
+      "emplate.ContainerRuntimeSettings\022^\n\032cont" +
+      "ainer_network_settings\030\020 \001(\0132:.yandex.cl" +
+      "oud.k8s.v1.NodeTemplate.ContainerNetwork" +
+      "Settings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\243\001\n\017NetworkSett" +
+      "ings\022J\n\004type\030\001 \001(\01626.yandex.cloud.k8s.v1" +
+      ".NodeTemplate.NetworkSettings.TypeB\004\350\3071\001" +
+      "\"D\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDA" +
+      "RD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\032\251\001\n\030Conta" +
+      "inerRuntimeSettings\022S\n\004type\030\001 \001(\0162?.yand" +
+      "ex.cloud.k8s.v1.NodeTemplate.ContainerRu" +
+      "ntimeSettings.TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAINERD" +
+      "\020\002\032+\n\030ContainerNetworkSettings\022\017\n\007pod_mt" +
+      "u\030\001 \001(\003\"\324\001\n\024NetworkInterfaceSpec\022\022\n\nsubn" +
+      "et_ids\030\002 \003(\t\022E\n\027primary_v4_address_spec\030" +
+      "\003 \001(\0132$.yandex.cloud.k8s.v1.NodeAddressS" +
+      "pec\022E\n\027primary_v6_address_spec\030\004 \001(\0132$.y" +
+      "andex.cloud.k8s.v1.NodeAddressSpec\022\032\n\022se" +
+      "curity_group_ids\030\005 \003(\t\"\222\001\n\017NodeAddressSp" +
+      "ec\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yandex" +
+      ".cloud.k8s.v1.OneToOneNatSpec\022<\n\020dns_rec" +
+      "ord_specs\030\002 \003(\0132\".yandex.cloud.k8s.v1.Dn" +
+      "sRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001" +
+      "(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001" +
+      "(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"E\n\017OneToOne" +
+      "NatSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.clo" +
+      "ud.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n\006" +
+      "memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372\307" +
+      "1\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100\022" +
+      "\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\200\001\n\010DiskSpec\022L\n\014d" +
+      "isk_type_id\030\001 \001(\tB6\362\30712|network-ssd|netw" +
+      "ork-hdd|network-ssd-nonreplicated\022&\n\tdis" +
+      "k_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Sch" +
+      "edulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017Pl" +
+      "acementPolicy\022\032\n\022placement_group_id\030\001 \001(" +
+      "\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED" +
+      "\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.a" +
+      "pi.k8s.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21379,7 +22079,7 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor,
-        new java.lang.String[] { "Name", "Labels", "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", });
+        new java.lang.String[] { "Name", "Labels", "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", "ContainerNetworkSettings", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_fieldAccessorTable = new
@@ -21404,6 +22104,12 @@ public final class NodeOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerRuntimeSettings_descriptor,
         new java.lang.String[] { "Type", });
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_descriptor =
+      internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_NodeTemplate_ContainerNetworkSettings_descriptor,
+        new java.lang.String[] { "PodMtu", });
     internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_fieldAccessorTable = new

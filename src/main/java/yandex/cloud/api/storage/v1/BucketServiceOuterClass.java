@@ -167,7 +167,7 @@ public final class BucketServiceOuterClass {
        * <pre>
        * Returns basic information about a bucket.
        * The following fields will _not_ be returned: [Bucket.acl], [Bucket.cors], [Bucket.website_settings],
-       * [Bucket.lifecycle_rules].
+       * [Bucket.lifecycle_rules], [Bucket.tags].
        * </pre>
        *
        * <code>VIEW_BASIC = 1;</code>
@@ -176,7 +176,8 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Returns basic information and access control list (ACL) for the bucket.
-       * The following fields will _not_ be returned: [Bucket.cors], [Bucket.website_settings], [Bucket.lifecycle_rules].
+       * The following fields will _not_ be returned: [Bucket.cors], [Bucket.website_settings], [Bucket.lifecycle_rules],
+       * [Bucket.tags].
        * </pre>
        *
        * <code>VIEW_ACL = 2;</code>
@@ -201,7 +202,7 @@ public final class BucketServiceOuterClass {
        * <pre>
        * Returns basic information about a bucket.
        * The following fields will _not_ be returned: [Bucket.acl], [Bucket.cors], [Bucket.website_settings],
-       * [Bucket.lifecycle_rules].
+       * [Bucket.lifecycle_rules], [Bucket.tags].
        * </pre>
        *
        * <code>VIEW_BASIC = 1;</code>
@@ -210,7 +211,8 @@ public final class BucketServiceOuterClass {
       /**
        * <pre>
        * Returns basic information and access control list (ACL) for the bucket.
-       * The following fields will _not_ be returned: [Bucket.cors], [Bucket.website_settings], [Bucket.lifecycle_rules].
+       * The following fields will _not_ be returned: [Bucket.cors], [Bucket.website_settings], [Bucket.lifecycle_rules],
+       * [Bucket.tags].
        * </pre>
        *
        * <code>VIEW_ACL = 2;</code>
@@ -2609,7 +2611,8 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2618,7 +2621,8 @@ public final class BucketServiceOuterClass {
         getTagsList();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2626,7 +2630,8 @@ public final class BucketServiceOuterClass {
     yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index);
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2634,7 +2639,8 @@ public final class BucketServiceOuterClass {
     int getTagsCount();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -2643,7 +2649,8 @@ public final class BucketServiceOuterClass {
         getTagsOrBuilderList();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3044,7 +3051,8 @@ public final class BucketServiceOuterClass {
     private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_;
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3055,7 +3063,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3067,7 +3076,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3078,7 +3088,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -3089,7 +3100,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4272,7 +4284,8 @@ public final class BucketServiceOuterClass {
 
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4286,7 +4299,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4300,7 +4314,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4314,7 +4329,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4335,7 +4351,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4353,7 +4370,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4373,7 +4391,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4394,7 +4413,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4412,7 +4432,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4430,7 +4451,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4449,7 +4471,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4466,7 +4489,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4483,7 +4507,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4494,7 +4519,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4508,7 +4534,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4523,7 +4550,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4534,7 +4562,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -4546,7 +4575,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 8;</code>
@@ -5560,7 +5590,8 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5569,7 +5600,8 @@ public final class BucketServiceOuterClass {
         getTagsList();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5577,7 +5609,8 @@ public final class BucketServiceOuterClass {
     yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index);
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5585,7 +5618,8 @@ public final class BucketServiceOuterClass {
     int getTagsCount();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -5594,7 +5628,8 @@ public final class BucketServiceOuterClass {
         getTagsOrBuilderList();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6337,7 +6372,8 @@ public final class BucketServiceOuterClass {
     private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_;
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6348,7 +6384,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6360,7 +6397,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6371,7 +6409,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -6382,7 +6421,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -8965,7 +9005,8 @@ public final class BucketServiceOuterClass {
 
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -8979,7 +9020,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -8993,7 +9035,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9007,7 +9050,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9028,7 +9072,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9046,7 +9091,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9066,7 +9112,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9087,7 +9134,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9105,7 +9153,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9123,7 +9172,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9142,7 +9192,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9159,7 +9210,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9176,7 +9228,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9187,7 +9240,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9201,7 +9255,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9216,7 +9271,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9227,7 +9283,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>
@@ -9239,7 +9296,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 12;</code>

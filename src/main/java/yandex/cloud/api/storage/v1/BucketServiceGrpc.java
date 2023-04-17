@@ -352,7 +352,7 @@ public final class BucketServiceGrpc {
      * <pre>
      * Retrieves the list of buckets in the specified folder.
      * The following fields will not be returned for buckets in the list: [Bucket.policy], [Bucket.acl], [Bucket.cors],
-     * [Bucket.website_settings], [Bucket.lifecycle_rules].
+     * [Bucket.website_settings], [Bucket.lifecycle_rules], [Bucket.tags].
      * </pre>
      */
     public void list(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request,
@@ -534,7 +534,7 @@ public final class BucketServiceGrpc {
      * <pre>
      * Retrieves the list of buckets in the specified folder.
      * The following fields will not be returned for buckets in the list: [Bucket.policy], [Bucket.acl], [Bucket.cors],
-     * [Bucket.website_settings], [Bucket.lifecycle_rules].
+     * [Bucket.website_settings], [Bucket.lifecycle_rules], [Bucket.tags].
      * </pre>
      */
     public void list(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request,
@@ -657,7 +657,7 @@ public final class BucketServiceGrpc {
      * <pre>
      * Retrieves the list of buckets in the specified folder.
      * The following fields will not be returned for buckets in the list: [Bucket.policy], [Bucket.acl], [Bucket.cors],
-     * [Bucket.website_settings], [Bucket.lifecycle_rules].
+     * [Bucket.website_settings], [Bucket.lifecycle_rules], [Bucket.tags].
      * </pre>
      */
     public yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse list(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsRequest request) {
@@ -771,7 +771,7 @@ public final class BucketServiceGrpc {
      * <pre>
      * Retrieves the list of buckets in the specified folder.
      * The following fields will not be returned for buckets in the list: [Bucket.policy], [Bucket.acl], [Bucket.cors],
-     * [Bucket.website_settings], [Bucket.lifecycle_rules].
+     * [Bucket.website_settings], [Bucket.lifecycle_rules], [Bucket.tags].
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketsResponse> list(

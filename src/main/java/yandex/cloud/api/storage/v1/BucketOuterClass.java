@@ -555,7 +555,8 @@ public final class BucketOuterClass {
 
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -564,7 +565,8 @@ public final class BucketOuterClass {
         getTagsList();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -572,7 +574,8 @@ public final class BucketOuterClass {
     yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTags(int index);
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -580,7 +583,8 @@ public final class BucketOuterClass {
     int getTagsCount();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -589,7 +593,8 @@ public final class BucketOuterClass {
         getTagsOrBuilderList();
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -1440,7 +1445,8 @@ public final class BucketOuterClass {
     private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tags_;
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -1451,7 +1457,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -1463,7 +1470,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -1474,7 +1482,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -1485,7 +1494,8 @@ public final class BucketOuterClass {
     }
     /**
      * <pre>
-     * List of object tag for the bucket.
+     * List of tags for the bucket.
+     * For details, see [documentation](/docs/resource-manager/concepts/labels).
      * </pre>
      *
      * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4290,7 +4300,8 @@ public final class BucketOuterClass {
 
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4304,7 +4315,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4318,7 +4330,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4332,7 +4345,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4353,7 +4367,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4371,7 +4386,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4391,7 +4407,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4412,7 +4429,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4430,7 +4448,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4448,7 +4467,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4467,7 +4487,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4484,7 +4505,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4501,7 +4523,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4512,7 +4535,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4526,7 +4550,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4541,7 +4566,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4552,7 +4578,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4564,7 +4591,8 @@ public final class BucketOuterClass {
       }
       /**
        * <pre>
-       * List of object tag for the bucket.
+       * List of tags for the bucket.
+       * For details, see [documentation](/docs/resource-manager/concepts/labels).
        * </pre>
        *
        * <code>repeated .yandex.cloud.storage.v1.Tag tags = 14;</code>
@@ -4809,11 +4837,19 @@ public final class BucketOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Key of the bucket tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
+     * <pre>
+     * Key of the bucket tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
@@ -4821,11 +4857,19 @@ public final class BucketOuterClass {
         getKeyBytes();
 
     /**
+     * <pre>
+     * Value of the bucket tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
+     * <pre>
+     * Value of the bucket tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The bytes for value.
      */
@@ -4926,6 +4970,10 @@ public final class BucketOuterClass {
     public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
     /**
+     * <pre>
+     * Key of the bucket tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The key.
      */
@@ -4943,6 +4991,10 @@ public final class BucketOuterClass {
       }
     }
     /**
+     * <pre>
+     * Key of the bucket tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
@@ -4964,6 +5016,10 @@ public final class BucketOuterClass {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
+     * <pre>
+     * Value of the bucket tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The value.
      */
@@ -4981,6 +5037,10 @@ public final class BucketOuterClass {
       }
     }
     /**
+     * <pre>
+     * Value of the bucket tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The bytes for value.
      */
@@ -5320,6 +5380,10 @@ public final class BucketOuterClass {
 
       private java.lang.Object key_ = "";
       /**
+       * <pre>
+       * Key of the bucket tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @return The key.
        */
@@ -5336,6 +5400,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Key of the bucket tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @return The bytes for key.
        */
@@ -5353,6 +5421,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Key of the bucket tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @param value The key to set.
        * @return This builder for chaining.
@@ -5368,6 +5440,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Key of the bucket tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @return This builder for chaining.
        */
@@ -5378,6 +5454,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Key of the bucket tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
@@ -5396,6 +5476,10 @@ public final class BucketOuterClass {
 
       private java.lang.Object value_ = "";
       /**
+       * <pre>
+       * Value of the bucket tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return The value.
        */
@@ -5412,6 +5496,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of the bucket tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return The bytes for value.
        */
@@ -5429,6 +5517,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of the bucket tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @param value The value to set.
        * @return This builder for chaining.
@@ -5444,6 +5536,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of the bucket tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return This builder for chaining.
        */
@@ -5454,6 +5550,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of the bucket tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.
