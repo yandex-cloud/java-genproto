@@ -2169,6 +2169,33 @@ public final class Postgresql10 {
      * <code>.google.protobuf.DoubleValue geqo_seed = 158 [(.yandex.cloud.value) = "0.0-1.0"];</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getGeqoSeedOrBuilder();
+
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return Whether the maxStandbyArchiveDelay field is set.
+     */
+    boolean hasMaxStandbyArchiveDelay();
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return The maxStandbyArchiveDelay.
+     */
+    com.google.protobuf.Int64Value getMaxStandbyArchiveDelay();
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder();
   }
   /**
    * <pre>
@@ -3733,6 +3760,19 @@ public final class Postgresql10 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(geqoSeed_);
                 geqoSeed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1298: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxStandbyArchiveDelay_ != null) {
+                subBuilder = maxStandbyArchiveDelay_.toBuilder();
+              }
+              maxStandbyArchiveDelay_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxStandbyArchiveDelay_);
+                maxStandbyArchiveDelay_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9187,6 +9227,44 @@ public final class Postgresql10 {
       return getGeqoSeed();
     }
 
+    public static final int MAX_STANDBY_ARCHIVE_DELAY_FIELD_NUMBER = 162;
+    private com.google.protobuf.Int64Value maxStandbyArchiveDelay_;
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return Whether the maxStandbyArchiveDelay field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxStandbyArchiveDelay() {
+      return maxStandbyArchiveDelay_ != null;
+    }
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return The maxStandbyArchiveDelay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxStandbyArchiveDelay() {
+      return maxStandbyArchiveDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyArchiveDelay_;
+    }
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder() {
+      return getMaxStandbyArchiveDelay();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9577,6 +9655,9 @@ public final class Postgresql10 {
       }
       if (geqoSeed_ != null) {
         output.writeMessage(158, getGeqoSeed());
+      }
+      if (maxStandbyArchiveDelay_ != null) {
+        output.writeMessage(162, getMaxStandbyArchiveDelay());
       }
       unknownFields.writeTo(output);
     }
@@ -10088,6 +10169,10 @@ public final class Postgresql10 {
       if (geqoSeed_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(158, getGeqoSeed());
+      }
+      if (maxStandbyArchiveDelay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(162, getMaxStandbyArchiveDelay());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10650,6 +10735,11 @@ public final class Postgresql10 {
         if (!getGeqoSeed()
             .equals(other.getGeqoSeed())) return false;
       }
+      if (hasMaxStandbyArchiveDelay() != other.hasMaxStandbyArchiveDelay()) return false;
+      if (hasMaxStandbyArchiveDelay()) {
+        if (!getMaxStandbyArchiveDelay()
+            .equals(other.getMaxStandbyArchiveDelay())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11120,6 +11210,10 @@ public final class Postgresql10 {
       if (hasGeqoSeed()) {
         hash = (37 * hash) + GEQO_SEED_FIELD_NUMBER;
         hash = (53 * hash) + getGeqoSeed().hashCode();
+      }
+      if (hasMaxStandbyArchiveDelay()) {
+        hash = (37 * hash) + MAX_STANDBY_ARCHIVE_DELAY_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxStandbyArchiveDelay().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11928,6 +12022,12 @@ public final class Postgresql10 {
           geqoSeed_ = null;
           geqoSeedBuilder_ = null;
         }
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelay_ = null;
+        } else {
+          maxStandbyArchiveDelay_ = null;
+          maxStandbyArchiveDelayBuilder_ = null;
+        }
         return this;
       }
 
@@ -12503,6 +12603,11 @@ public final class Postgresql10 {
         } else {
           result.geqoSeed_ = geqoSeedBuilder_.build();
         }
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          result.maxStandbyArchiveDelay_ = maxStandbyArchiveDelay_;
+        } else {
+          result.maxStandbyArchiveDelay_ = maxStandbyArchiveDelayBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -12931,6 +13036,9 @@ public final class Postgresql10 {
         }
         if (other.hasGeqoSeed()) {
           mergeGeqoSeed(other.getGeqoSeed());
+        }
+        if (other.hasMaxStandbyArchiveDelay()) {
+          mergeMaxStandbyArchiveDelay(other.getMaxStandbyArchiveDelay());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -27656,6 +27764,161 @@ public final class Postgresql10 {
         }
         return geqoSeedBuilder_;
       }
+
+      private com.google.protobuf.Int64Value maxStandbyArchiveDelay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStandbyArchiveDelayBuilder_;
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       * @return Whether the maxStandbyArchiveDelay field is set.
+       */
+      public boolean hasMaxStandbyArchiveDelay() {
+        return maxStandbyArchiveDelayBuilder_ != null || maxStandbyArchiveDelay_ != null;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       * @return The maxStandbyArchiveDelay.
+       */
+      public com.google.protobuf.Int64Value getMaxStandbyArchiveDelay() {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          return maxStandbyArchiveDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyArchiveDelay_;
+        } else {
+          return maxStandbyArchiveDelayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder setMaxStandbyArchiveDelay(com.google.protobuf.Int64Value value) {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxStandbyArchiveDelay_ = value;
+          onChanged();
+        } else {
+          maxStandbyArchiveDelayBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder setMaxStandbyArchiveDelay(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelay_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxStandbyArchiveDelayBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder mergeMaxStandbyArchiveDelay(com.google.protobuf.Int64Value value) {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          if (maxStandbyArchiveDelay_ != null) {
+            maxStandbyArchiveDelay_ =
+              com.google.protobuf.Int64Value.newBuilder(maxStandbyArchiveDelay_).mergeFrom(value).buildPartial();
+          } else {
+            maxStandbyArchiveDelay_ = value;
+          }
+          onChanged();
+        } else {
+          maxStandbyArchiveDelayBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder clearMaxStandbyArchiveDelay() {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelay_ = null;
+          onChanged();
+        } else {
+          maxStandbyArchiveDelay_ = null;
+          maxStandbyArchiveDelayBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxStandbyArchiveDelayBuilder() {
+        
+        onChanged();
+        return getMaxStandbyArchiveDelayFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder() {
+        if (maxStandbyArchiveDelayBuilder_ != null) {
+          return maxStandbyArchiveDelayBuilder_.getMessageOrBuilder();
+        } else {
+          return maxStandbyArchiveDelay_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyArchiveDelay_;
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxStandbyArchiveDelayFieldBuilder() {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxStandbyArchiveDelay(),
+                  getParentForChildren(),
+                  isClean());
+          maxStandbyArchiveDelay_ = null;
+        }
+        return maxStandbyArchiveDelayBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -28954,7 +29217,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\234T\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\335T\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -29162,79 +29425,80 @@ public final class Postgresql10 {
       "\022G\n\023geqo_selection_bias\030\235\001 \001(\0132\034.google." +
       "protobuf.DoubleValueB\013\372\3071\0071.5-2.0\022=\n\tgeq" +
       "o_seed\030\236\001 \001(\0132\034.google.protobuf.DoubleVa" +
-      "lueB\013\372\3071\0070.0-1.0\"S\n\010WalLevel\022\031\n\025WAL_LEVE" +
-      "L_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025" +
-      "\n\021WAL_LEVEL_LOGICAL\020\002\"\326\001\n\021SynchronousCom" +
-      "mit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000\022" +
-      "\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOU" +
-      "S_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOC" +
-      "AL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRITE\020" +
-      "\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"\232" +
-      "\001\n\023ConstraintExclusion\022$\n CONSTRAINT_EXC" +
-      "LUSION_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLU" +
-      "SION_ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022" +
-      "\"\n\036CONSTRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021" +
-      "ForceParallelMode\022#\n\037FORCE_PARALLEL_MODE" +
-      "_UNSPECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON" +
-      "\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE" +
-      "_PARALLEL_MODE_REGRESS\020\003\"\231\001\n\021LogErrorVer" +
-      "bosity\022#\n\037LOG_ERROR_VERBOSITY_UNSPECIFIE" +
-      "D\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LO" +
-      "G_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR" +
-      "_VERBOSITY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG" +
-      "_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5" +
-      "\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DE" +
-      "BUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVE" +
-      "L_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEV" +
-      "EL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LO" +
-      "G_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017" +
-      "LOG_LEVEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031LO" +
-      "G_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEME" +
-      "NT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_" +
-      "STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346" +
-      "\001\n\024TransactionIsolation\022%\n!TRANSACTION_I" +
-      "SOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTION_IS" +
-      "OLATION_READ_UNCOMMITTED\020\001\022(\n$TRANSACTIO" +
-      "N_ISOLATION_READ_COMMITTED\020\002\022)\n%TRANSACT" +
-      "ION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"TRANS" +
-      "ACTION_ISOLATION_SERIALIZABLE\020\004\"[\n\013Bytea" +
-      "Output\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020" +
-      "BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAP" +
-      "ED\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIF" +
-      "IED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINA" +
-      "RY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSP" +
-      "ECIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XM" +
-      "L_OPTION_CONTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n" +
-      "\033BACKSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSL" +
-      "ASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023B" +
-      "ACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_" +
-      "SAFE_ENCODING\020\004\"\320\001\n\024PgHintPlanDebugPrint" +
-      "\022(\n$PG_HINT_PLAN_DEBUG_PRINT_UNSPECIFIED" +
-      "\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033" +
-      "PG_HINT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_HINT" +
-      "_PLAN_DEBUG_PRINT_DETAILED\020\003\022$\n PG_HINT_" +
-      "PLAN_DEBUG_PRINT_VERBOSE\020\004\"\212\003\n\026SharedPre" +
-      "loadLibraries\022(\n$SHARED_PRELOAD_LIBRARIE" +
-      "S_UNSPECIFIED\020\000\022)\n%SHARED_PRELOAD_LIBRAR" +
-      "IES_AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD_LIB" +
-      "RARIES_PG_HINT_PLAN\020\002\022(\n$SHARED_PRELOAD_" +
-      "LIBRARIES_TIMESCALEDB\020\003\022)\n%SHARED_PRELOA" +
-      "D_LIBRARIES_PG_QUALSTATS\020\004\022$\n SHARED_PRE" +
-      "LOAD_LIBRARIES_PG_CRON\020\005\022&\n\"SHARED_PRELO" +
-      "AD_LIBRARIES_PGLOGICAL\020\006\022\'\n#SHARED_PRELO" +
-      "AD_LIBRARIES_PG_PREWARM\020\007\022$\n SHARED_PREL" +
-      "OAD_LIBRARIES_PGAUDIT\020\010\"\225\002\n\025PostgresqlCo" +
-      "nfigSet10\022Y\n\020effective_config\030\001 \001(\01329.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig10B\004\350\3071\001\022N\n\013user_config\030\002 \001(" +
-      "\01329.yandex.cloud.mdb.postgresql.v1.confi" +
-      "g.PostgresqlConfig10\022Q\n\016default_config\030\003" +
-      " \001(\01329.yandex.cloud.mdb.postgresql.v1.co" +
-      "nfig.PostgresqlConfig10B\201\001\n)yandex.cloud" +
-      ".api.mdb.postgresql.v1.configZTgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/postgresql/v1/config;postgresqlb\006pro" +
-      "to3"
+      "lueB\013\372\3071\0070.0-1.0\022?\n\031max_standby_archive_" +
+      "delay\030\242\001 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000" +
+      "\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOG" +
+      "ICAL\020\002\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRON" +
+      "OUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_" +
+      "COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022" +
+      "\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRO" +
+      "NOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOU" +
+      "S_COMMIT_REMOTE_APPLY\020\005\"\232\001\n\023ConstraintEx" +
+      "clusion\022$\n CONSTRAINT_EXCLUSION_UNSPECIF" +
+      "IED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CO" +
+      "NSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_E" +
+      "XCLUSION_PARTITION\020\003\"\222\001\n\021ForceParallelMo" +
+      "de\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022" +
+      "\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PAR" +
+      "ALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_" +
+      "REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_E" +
+      "RROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERRO" +
+      "R_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSI" +
+      "TY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERB" +
+      "OSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
+      "IED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL" +
+      "_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_L" +
+      "EVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rL" +
+      "OG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021" +
+      "LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t" +
+      "\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC" +
+      "\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNS" +
+      "PECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LO" +
+      "G_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003" +
+      "\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionI" +
+      "solation\022%\n!TRANSACTION_ISOLATION_UNSPEC" +
+      "IFIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UN" +
+      "COMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_REA" +
+      "D_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_R" +
+      "EPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATIO" +
+      "N_SERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA" +
+      "_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HE" +
+      "X\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\tXmlBina" +
+      "ry\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BI" +
+      "NARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXml" +
+      "Option\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XM" +
+      "L_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTEN" +
+      "T\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QUOT" +
+      "E_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022" +
+      "BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_" +
+      "OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING\020\004" +
+      "\"\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PLA" +
+      "N_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_P" +
+      "LAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DE" +
+      "BUG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRI" +
+      "NT_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRIN" +
+      "T_VERBOSE\020\004\"\212\003\n\026SharedPreloadLibraries\022(" +
+      "\n$SHARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000" +
+      "\022)\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAI" +
+      "N\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_" +
+      "PLAN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMES" +
+      "CALEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_" +
+      "QUALSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_" +
+      "PG_CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PG" +
+      "LOGICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG" +
+      "_PREWARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES_P" +
+      "GAUDIT\020\010\"\225\002\n\025PostgresqlConfigSet10\022Y\n\020ef" +
+      "fective_config\030\001 \001(\01329.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlConfig10B" +
+      "\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.yandex.clou" +
+      "d.mdb.postgresql.v1.config.PostgresqlCon" +
+      "fig10\022Q\n\016default_config\030\003 \001(\01329.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "Config10B\201\001\n)yandex.cloud.api.mdb.postgr" +
+      "esql.v1.configZTgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/postgresql/" +
+      "v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29247,7 +29511,7 @@ public final class Postgresql10 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "MaxStandbyArchiveDelay", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_fieldAccessorTable = new

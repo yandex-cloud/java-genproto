@@ -2561,6 +2561,33 @@ public final class Postgresql15 {
      * <code>.google.protobuf.DoubleValue pg_trgm_strict_word_similarity_threshold = 161 [(.yandex.cloud.value) = "0.0-1.0"];</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getPgTrgmStrictWordSimilarityThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return Whether the maxStandbyArchiveDelay field is set.
+     */
+    boolean hasMaxStandbyArchiveDelay();
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return The maxStandbyArchiveDelay.
+     */
+    com.google.protobuf.Int64Value getMaxStandbyArchiveDelay();
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder();
   }
   /**
    * <pre>
@@ -4431,6 +4458,19 @@ public final class Postgresql15 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pgTrgmStrictWordSimilarityThreshold_);
                 pgTrgmStrictWordSimilarityThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1298: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxStandbyArchiveDelay_ != null) {
+                subBuilder = maxStandbyArchiveDelay_.toBuilder();
+              }
+              maxStandbyArchiveDelay_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxStandbyArchiveDelay_);
+                maxStandbyArchiveDelay_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10664,6 +10704,44 @@ public final class Postgresql15 {
       return getPgTrgmStrictWordSimilarityThreshold();
     }
 
+    public static final int MAX_STANDBY_ARCHIVE_DELAY_FIELD_NUMBER = 162;
+    private com.google.protobuf.Int64Value maxStandbyArchiveDelay_;
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return Whether the maxStandbyArchiveDelay field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxStandbyArchiveDelay() {
+      return maxStandbyArchiveDelay_ != null;
+    }
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     * @return The maxStandbyArchiveDelay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxStandbyArchiveDelay() {
+      return maxStandbyArchiveDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyArchiveDelay_;
+    }
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder() {
+      return getMaxStandbyArchiveDelay();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11126,6 +11204,9 @@ public final class Postgresql15 {
       }
       if (pgTrgmStrictWordSimilarityThreshold_ != null) {
         output.writeMessage(161, getPgTrgmStrictWordSimilarityThreshold());
+      }
+      if (maxStandbyArchiveDelay_ != null) {
+        output.writeMessage(162, getMaxStandbyArchiveDelay());
       }
       unknownFields.writeTo(output);
     }
@@ -11733,6 +11814,10 @@ public final class Postgresql15 {
       if (pgTrgmStrictWordSimilarityThreshold_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(161, getPgTrgmStrictWordSimilarityThreshold());
+      }
+      if (maxStandbyArchiveDelay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(162, getMaxStandbyArchiveDelay());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12411,6 +12496,11 @@ public final class Postgresql15 {
         if (!getPgTrgmStrictWordSimilarityThreshold()
             .equals(other.getPgTrgmStrictWordSimilarityThreshold())) return false;
       }
+      if (hasMaxStandbyArchiveDelay() != other.hasMaxStandbyArchiveDelay()) return false;
+      if (hasMaxStandbyArchiveDelay()) {
+        if (!getMaxStandbyArchiveDelay()
+            .equals(other.getMaxStandbyArchiveDelay())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12975,6 +13065,10 @@ public final class Postgresql15 {
       if (hasPgTrgmStrictWordSimilarityThreshold()) {
         hash = (37 * hash) + PG_TRGM_STRICT_WORD_SIMILARITY_THRESHOLD_FIELD_NUMBER;
         hash = (53 * hash) + getPgTrgmStrictWordSimilarityThreshold().hashCode();
+      }
+      if (hasMaxStandbyArchiveDelay()) {
+        hash = (37 * hash) + MAX_STANDBY_ARCHIVE_DELAY_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxStandbyArchiveDelay().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13923,6 +14017,12 @@ public final class Postgresql15 {
           pgTrgmStrictWordSimilarityThreshold_ = null;
           pgTrgmStrictWordSimilarityThresholdBuilder_ = null;
         }
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelay_ = null;
+        } else {
+          maxStandbyArchiveDelay_ = null;
+          maxStandbyArchiveDelayBuilder_ = null;
+        }
         return this;
       }
 
@@ -14614,6 +14714,11 @@ public final class Postgresql15 {
         } else {
           result.pgTrgmStrictWordSimilarityThreshold_ = pgTrgmStrictWordSimilarityThresholdBuilder_.build();
         }
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          result.maxStandbyArchiveDelay_ = maxStandbyArchiveDelay_;
+        } else {
+          result.maxStandbyArchiveDelay_ = maxStandbyArchiveDelayBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -15114,6 +15219,9 @@ public final class Postgresql15 {
         }
         if (other.hasPgTrgmStrictWordSimilarityThreshold()) {
           mergePgTrgmStrictWordSimilarityThreshold(other.getPgTrgmStrictWordSimilarityThreshold());
+        }
+        if (other.hasMaxStandbyArchiveDelay()) {
+          mergeMaxStandbyArchiveDelay(other.getMaxStandbyArchiveDelay());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -32738,6 +32846,161 @@ public final class Postgresql15 {
         }
         return pgTrgmStrictWordSimilarityThresholdBuilder_;
       }
+
+      private com.google.protobuf.Int64Value maxStandbyArchiveDelay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStandbyArchiveDelayBuilder_;
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       * @return Whether the maxStandbyArchiveDelay field is set.
+       */
+      public boolean hasMaxStandbyArchiveDelay() {
+        return maxStandbyArchiveDelayBuilder_ != null || maxStandbyArchiveDelay_ != null;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       * @return The maxStandbyArchiveDelay.
+       */
+      public com.google.protobuf.Int64Value getMaxStandbyArchiveDelay() {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          return maxStandbyArchiveDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyArchiveDelay_;
+        } else {
+          return maxStandbyArchiveDelayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder setMaxStandbyArchiveDelay(com.google.protobuf.Int64Value value) {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxStandbyArchiveDelay_ = value;
+          onChanged();
+        } else {
+          maxStandbyArchiveDelayBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder setMaxStandbyArchiveDelay(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelay_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxStandbyArchiveDelayBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder mergeMaxStandbyArchiveDelay(com.google.protobuf.Int64Value value) {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          if (maxStandbyArchiveDelay_ != null) {
+            maxStandbyArchiveDelay_ =
+              com.google.protobuf.Int64Value.newBuilder(maxStandbyArchiveDelay_).mergeFrom(value).buildPartial();
+          } else {
+            maxStandbyArchiveDelay_ = value;
+          }
+          onChanged();
+        } else {
+          maxStandbyArchiveDelayBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public Builder clearMaxStandbyArchiveDelay() {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelay_ = null;
+          onChanged();
+        } else {
+          maxStandbyArchiveDelay_ = null;
+          maxStandbyArchiveDelayBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxStandbyArchiveDelayBuilder() {
+        
+        onChanged();
+        return getMaxStandbyArchiveDelayFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder() {
+        if (maxStandbyArchiveDelayBuilder_ != null) {
+          return maxStandbyArchiveDelayBuilder_.getMessageOrBuilder();
+        } else {
+          return maxStandbyArchiveDelay_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxStandbyArchiveDelay_;
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxStandbyArchiveDelayFieldBuilder() {
+        if (maxStandbyArchiveDelayBuilder_ == null) {
+          maxStandbyArchiveDelayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxStandbyArchiveDelay(),
+                  getParentForChildren(),
+                  isClean());
+          maxStandbyArchiveDelay_ = null;
+        }
+        return maxStandbyArchiveDelayBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -34036,7 +34299,7 @@ public final class Postgresql15 {
       "postgresql15.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\316d\n\022PostgresqlConfig15\0224\n\017max_connectio" +
+      "\"\217e\n\022PostgresqlConfig15\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -34292,83 +34555,84 @@ public final class Postgresql15 {
       "rity_threshold\030\240\001 \001(\0132\034.google.protobuf." +
       "DoubleValueB\013\372\3071\0070.0-1.0\022\\\n(pg_trgm_stri" +
       "ct_word_similarity_threshold\030\241\001 \001(\0132\034.go" +
-      "ogle.protobuf.DoubleValueB\013\372\3071\0070.0-1.0\"\232" +
-      "\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QUOTE_UNS" +
-      "PECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKS" +
-      "LASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003" +
-      "\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING\020\004\"[\n\013B" +
-      "yteaOutput\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000" +
-      "\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_E" +
-      "SCAPED\020\002\"\232\001\n\023ConstraintExclusion\022$\n CONS" +
-      "TRAINT_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CONSTR" +
-      "AINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXCLUS" +
-      "ION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PARTIT" +
-      "ION\020\003\"\222\001\n\021ForceParallelMode\022#\n\037FORCE_PAR" +
-      "ALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026FORCE_PARALL" +
-      "EL_MODE_ON\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF\020" +
-      "\002\022\037\n\033FORCE_PARALLEL_MODE_REGRESS\020\003\"\231\001\n\021L" +
-      "ogErrorVerbosity\022#\n\037LOG_ERROR_VERBOSITY_" +
-      "UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TER" +
-      "SE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n" +
-      "\033LOG_ERROR_VERBOSITY_VERBOSE\020\003\"\222\002\n\010LogLe" +
-      "vel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LE" +
-      "VEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LO" +
-      "G_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024" +
-      "\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022" +
-      "\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNI" +
-      "NG\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_F" +
-      "ATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\212\001\n\014LogState" +
-      "ment\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022L" +
-      "OG_STATEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL" +
-      "\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEME" +
-      "NT_ALL\020\004\"\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_" +
-      "HINT_PLAN_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034P" +
-      "G_HINT_PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT" +
-      "_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_D" +
-      "EBUG_PRINT_DETAILED\020\003\022$\n PG_HINT_PLAN_DE" +
-      "BUG_PRINT_VERBOSE\020\004\"\231\001\n\rPlanCacheMode\022\037\n" +
-      "\033PLAN_CACHE_MODE_UNSPECIFIED\020\000\022\030\n\024PLAN_C" +
-      "ACHE_MODE_AUTO\020\001\022%\n!PLAN_CACHE_MODE_FORC" +
-      "E_CUSTOM_PLAN\020\002\022&\n\"PLAN_CACHE_MODE_FORCE" +
-      "_GENERIC_PLAN\020\003\"\212\003\n\026SharedPreloadLibrari" +
-      "es\022(\n$SHARED_PRELOAD_LIBRARIES_UNSPECIFI" +
-      "ED\020\000\022)\n%SHARED_PRELOAD_LIBRARIES_AUTO_EX" +
-      "PLAIN\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_H" +
-      "INT_PLAN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_T" +
-      "IMESCALEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES" +
-      "_PG_QUALSTATS\020\004\022$\n SHARED_PRELOAD_LIBRAR" +
-      "IES_PG_CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIE" +
-      "S_PGLOGICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIE" +
-      "S_PG_PREWARM\020\007\022$\n SHARED_PRELOAD_LIBRARI" +
-      "ES_PGAUDIT\020\010\"\326\001\n\021SynchronousCommit\022\"\n\036SY" +
-      "NCHRONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHR" +
-      "ONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_" +
-      "OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037S" +
-      "YNCHRONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNC" +
-      "HRONOUS_COMMIT_REMOTE_APPLY\020\005\"\346\001\n\024Transa" +
-      "ctionIsolation\022%\n!TRANSACTION_ISOLATION_" +
-      "UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_R" +
-      "EAD_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATI" +
-      "ON_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOLA" +
-      "TION_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_IS" +
-      "OLATION_SERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WA" +
-      "L_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLI" +
-      "CA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"R\n\tXmlBinary" +
-      "\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINA" +
-      "RY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOp" +
-      "tion\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_" +
-      "OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020" +
-      "\002\"\217\002\n\025PostgresqlConfigSet15\022S\n\020effective" +
-      "_config\030\001 \001(\01329.yandex.cloud.mdb.postgre" +
-      "sql.v1.config.PostgresqlConfig15\022N\n\013user" +
-      "_config\030\002 \001(\01329.yandex.cloud.mdb.postgre" +
-      "sql.v1.config.PostgresqlConfig15\022Q\n\016defa" +
-      "ult_config\030\003 \001(\01329.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfig15B\201\001\n)" +
-      "yandex.cloud.api.mdb.postgresql.v1.confi" +
-      "gZTgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/postgresql/v1/config;pos" +
-      "tgresqlb\006proto3"
+      "ogle.protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022?" +
+      "\n\031max_standby_archive_delay\030\242\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\"\232\001\n\016BackslashQuo" +
+      "te\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017B" +
+      "ACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002" +
+      "\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_Q" +
+      "UOTE_SAFE_ENCODING\020\004\"[\n\013ByteaOutput\022\034\n\030B" +
+      "YTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPU" +
+      "T_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023Co" +
+      "nstraintExclusion\022$\n CONSTRAINT_EXCLUSIO" +
+      "N_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_" +
+      "ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CO" +
+      "NSTRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021Force" +
+      "ParallelMode\022#\n\037FORCE_PARALLEL_MODE_UNSP" +
+      "ECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n" +
+      "\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARA" +
+      "LLEL_MODE_REGRESS\020\003\"\231\001\n\021LogErrorVerbosit" +
+      "y\022#\n\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035" +
+      "\n\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERR" +
+      "OR_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERB" +
+      "OSITY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVE" +
+      "L_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n" +
+      "\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020" +
+      "\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEB" +
+      "UG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NO" +
+      "TICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEV" +
+      "EL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_L" +
+      "EVEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STA" +
+      "TEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NO" +
+      "NE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATE" +
+      "MENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\320\001\n\024Pg" +
+      "HintPlanDebugPrint\022(\n$PG_HINT_PLAN_DEBUG" +
+      "_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEB" +
+      "UG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRI" +
+      "NT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETA" +
+      "ILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_VERBO" +
+      "SE\020\004\"\231\001\n\rPlanCacheMode\022\037\n\033PLAN_CACHE_MOD" +
+      "E_UNSPECIFIED\020\000\022\030\n\024PLAN_CACHE_MODE_AUTO\020" +
+      "\001\022%\n!PLAN_CACHE_MODE_FORCE_CUSTOM_PLAN\020\002" +
+      "\022&\n\"PLAN_CACHE_MODE_FORCE_GENERIC_PLAN\020\003" +
+      "\"\212\003\n\026SharedPreloadLibraries\022(\n$SHARED_PR" +
+      "ELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_" +
+      "PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHAR" +
+      "ED_PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$S" +
+      "HARED_PRELOAD_LIBRARIES_TIMESCALEDB\020\003\022)\n" +
+      "%SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS\020\004" +
+      "\022$\n SHARED_PRELOAD_LIBRARIES_PG_CRON\020\005\022&" +
+      "\n\"SHARED_PRELOAD_LIBRARIES_PGLOGICAL\020\006\022\'" +
+      "\n#SHARED_PRELOAD_LIBRARIES_PG_PREWARM\020\007\022" +
+      "$\n SHARED_PRELOAD_LIBRARIES_PGAUDIT\020\010\"\326\001" +
+      "\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS_COMMI" +
+      "T_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON" +
+      "\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHR" +
+      "ONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMM" +
+      "IT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_" +
+      "REMOTE_APPLY\020\005\"\346\001\n\024TransactionIsolation\022" +
+      "%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022*" +
+      "\n&TRANSACTION_ISOLATION_READ_UNCOMMITTED" +
+      "\020\001\022(\n$TRANSACTION_ISOLATION_READ_COMMITT" +
+      "ED\020\002\022)\n%TRANSACTION_ISOLATION_REPEATABLE" +
+      "_READ\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALI" +
+      "ZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECI" +
+      "FIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEV" +
+      "EL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_" +
+      "UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016" +
+      "XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPT" +
+      "ION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT" +
+      "\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\217\002\n\025Postgresq" +
+      "lConfigSet15\022S\n\020effective_config\030\001 \001(\01329" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlConfig15\022N\n\013user_config\030\002 \001(\01329" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlConfig15\022Q\n\016default_config\030\003 \001(" +
+      "\01329.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfig15B\201\001\n)yandex.cloud.ap" +
+      "i.mdb.postgresql.v1.configZTgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/postgresql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34381,7 +34645,7 @@ public final class Postgresql15 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig15_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig15_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "HashMemMultiplier", "LogicalDecodingWorkMem", "MaintenanceIoConcurrency", "MaxSlotWalKeepSize", "WalKeepSize", "EnableIncrementalSort", "AutovacuumVacuumInsertThreshold", "AutovacuumVacuumInsertScaleFactor", "LogMinDurationSample", "LogStatementSampleRate", "LogParameterMaxLength", "LogParameterMaxLengthOnError", "ClientConnectionCheckInterval", "EnableAsyncAppend", "EnableGathermerge", "EnableMemoize", "LogRecoveryConflictWaits", "VacuumFailsafeAge", "VacuumMultixactFailsafeAge", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "EnableGroupByReordering", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "HashMemMultiplier", "LogicalDecodingWorkMem", "MaintenanceIoConcurrency", "MaxSlotWalKeepSize", "WalKeepSize", "EnableIncrementalSort", "AutovacuumVacuumInsertThreshold", "AutovacuumVacuumInsertScaleFactor", "LogMinDurationSample", "LogStatementSampleRate", "LogParameterMaxLength", "LogParameterMaxLengthOnError", "ClientConnectionCheckInterval", "EnableAsyncAppend", "EnableGathermerge", "EnableMemoize", "LogRecoveryConflictWaits", "VacuumFailsafeAge", "VacuumMultixactFailsafeAge", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "EnableGroupByReordering", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", "MaxStandbyArchiveDelay", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet15_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet15_fieldAccessorTable = new
