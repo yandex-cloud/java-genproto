@@ -13885,6 +13885,16 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Identifies whether Cloud Logging is enabled for audit logs.
+     * </pre>
+     *
+     * <code>bool audit_enabled = 4;</code>
+     * @return The auditEnabled.
+     */
+    boolean getAuditEnabled();
+
+    /**
+     * <pre>
      * Identifies whether Cloud Logging is enabled for cluster-autoscaler.
      * </pre>
      *
@@ -13975,6 +13985,11 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
               destinationCase_ = 3;
               destination_ = s;
+              break;
+            }
+            case 32: {
+
+              auditEnabled_ = input.readBool();
               break;
             }
             case 40: {
@@ -14208,6 +14223,21 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int AUDIT_ENABLED_FIELD_NUMBER = 4;
+    private boolean auditEnabled_;
+    /**
+     * <pre>
+     * Identifies whether Cloud Logging is enabled for audit logs.
+     * </pre>
+     *
+     * <code>bool audit_enabled = 4;</code>
+     * @return The auditEnabled.
+     */
+    @java.lang.Override
+    public boolean getAuditEnabled() {
+      return auditEnabled_;
+    }
+
     public static final int CLUSTER_AUTOSCALER_ENABLED_FIELD_NUMBER = 5;
     private boolean clusterAutoscalerEnabled_;
     /**
@@ -14276,6 +14306,9 @@ public final class ClusterOuterClass {
       if (destinationCase_ == 3) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destination_);
       }
+      if (auditEnabled_ != false) {
+        output.writeBool(4, auditEnabled_);
+      }
       if (clusterAutoscalerEnabled_ != false) {
         output.writeBool(5, clusterAutoscalerEnabled_);
       }
@@ -14303,6 +14336,10 @@ public final class ClusterOuterClass {
       }
       if (destinationCase_ == 3) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destination_);
+      }
+      if (auditEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, auditEnabled_);
       }
       if (clusterAutoscalerEnabled_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -14333,6 +14370,8 @@ public final class ClusterOuterClass {
 
       if (getEnabled()
           != other.getEnabled()) return false;
+      if (getAuditEnabled()
+          != other.getAuditEnabled()) return false;
       if (getClusterAutoscalerEnabled()
           != other.getClusterAutoscalerEnabled()) return false;
       if (getKubeApiserverEnabled()
@@ -14366,6 +14405,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnabled());
+      hash = (37 * hash) + AUDIT_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAuditEnabled());
       hash = (37 * hash) + CLUSTER_AUTOSCALER_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getClusterAutoscalerEnabled());
@@ -14522,6 +14564,8 @@ public final class ClusterOuterClass {
         super.clear();
         enabled_ = false;
 
+        auditEnabled_ = false;
+
         clusterAutoscalerEnabled_ = false;
 
         kubeApiserverEnabled_ = false;
@@ -14563,6 +14607,7 @@ public final class ClusterOuterClass {
         if (destinationCase_ == 3) {
           result.destination_ = destination_;
         }
+        result.auditEnabled_ = auditEnabled_;
         result.clusterAutoscalerEnabled_ = clusterAutoscalerEnabled_;
         result.kubeApiserverEnabled_ = kubeApiserverEnabled_;
         result.eventsEnabled_ = eventsEnabled_;
@@ -14617,6 +14662,9 @@ public final class ClusterOuterClass {
         if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLogging.getDefaultInstance()) return this;
         if (other.getEnabled() != false) {
           setEnabled(other.getEnabled());
+        }
+        if (other.getAuditEnabled() != false) {
+          setAuditEnabled(other.getAuditEnabled());
         }
         if (other.getClusterAutoscalerEnabled() != false) {
           setClusterAutoscalerEnabled(other.getClusterAutoscalerEnabled());
@@ -14969,6 +15017,49 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         destinationCase_ = 3;
         destination_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean auditEnabled_ ;
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for audit logs.
+       * </pre>
+       *
+       * <code>bool audit_enabled = 4;</code>
+       * @return The auditEnabled.
+       */
+      @java.lang.Override
+      public boolean getAuditEnabled() {
+        return auditEnabled_;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for audit logs.
+       * </pre>
+       *
+       * <code>bool audit_enabled = 4;</code>
+       * @param value The auditEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuditEnabled(boolean value) {
+        
+        auditEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifies whether Cloud Logging is enabled for audit logs.
+       * </pre>
+       *
+       * <code>bool audit_enabled = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuditEnabled() {
+        
+        auditEnabled_ = false;
         onChanged();
         return this;
       }
@@ -17168,25 +17259,26 @@ public final class ClusterOuterClass {
       "_cidr_block\030\007 \001(\t\"s\n\027MasterMaintenancePo" +
       "licy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenanc" +
       "e_window\030\002 \001(\0132&.yandex.cloud.k8s.v1.Mai" +
-      "ntenanceWindow\"\210\002\n\rMasterLogging\022\017\n\007enab" +
+      "ntenanceWindow\"\231\002\n\rMasterLogging\022\017\n\007enab" +
       "led\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a" +
       "-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder" +
       "_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0" +
-      ",63})?H\000\022\"\n\032cluster_autoscaler_enabled\030\005" +
-      " \001(\010\022\036\n\026kube_apiserver_enabled\030\006 \001(\010\022\026\n\016" +
-      "events_enabled\030\007 \001(\010B\r\n\013destinationJ\004\010\004\020" +
-      "\005\"\200\001\n\rNetworkPolicy\022=\n\010provider\030\001 \001(\0162+." +
-      "yandex.cloud.k8s.v1.NetworkPolicy.Provid" +
-      "er\"0\n\010Provider\022\030\n\024PROVIDER_UNSPECIFIED\020\000" +
-      "\022\n\n\006CALICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 " +
-      "\001(\t\"\200\001\n\006Cilium\022=\n\014routing_mode\030\001 \001(\0162\'.y" +
-      "andex.cloud.k8s.v1.Cilium.RoutingMode\"7\n" +
-      "\013RoutingMode\022\034\n\030ROUTING_MODE_UNSPECIFIED" +
-      "\020\000\022\n\n\006TUNNEL\020\001*U\n\016ReleaseChannel\022\037\n\033RELE" +
-      "ASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007" +
-      "REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.cloud.ap" +
-      "i.k8s.v1Z;github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      ",63})?H\000\022\025\n\raudit_enabled\030\004 \001(\010\022\"\n\032clust" +
+      "er_autoscaler_enabled\030\005 \001(\010\022\036\n\026kube_apis" +
+      "erver_enabled\030\006 \001(\010\022\026\n\016events_enabled\030\007 " +
+      "\001(\010B\r\n\013destination\"\200\001\n\rNetworkPolicy\022=\n\010" +
+      "provider\030\001 \001(\0162+.yandex.cloud.k8s.v1.Net" +
+      "workPolicy.Provider\"0\n\010Provider\022\030\n\024PROVI" +
+      "DER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMSProv" +
+      "ider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014routi" +
+      "ng_mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1.Cili" +
+      "um.RoutingMode\"7\n\013RoutingMode\022\034\n\030ROUTING" +
+      "_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016Relea" +
+      "seChannel\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED" +
+      "\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV" +
+      "\n\027yandex.cloud.api.k8s.v1Z;github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/k8s/" +
+      "v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17255,7 +17347,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterLogging_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor,
-        new java.lang.String[] { "Enabled", "LogGroupId", "FolderId", "ClusterAutoscalerEnabled", "KubeApiserverEnabled", "EventsEnabled", "Destination", });
+        new java.lang.String[] { "Enabled", "LogGroupId", "FolderId", "AuditEnabled", "ClusterAutoscalerEnabled", "KubeApiserverEnabled", "EventsEnabled", "Destination", });
     internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable = new

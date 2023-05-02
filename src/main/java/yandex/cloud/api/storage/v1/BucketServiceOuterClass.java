@@ -5666,6 +5666,36 @@ public final class BucketServiceOuterClass {
      * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 13;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+     * @return Whether the encryption field is set.
+     */
+    boolean hasEncryption();
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+     * @return The encryption.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption();
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.UpdateBucketRequest}
@@ -5843,6 +5873,19 @@ public final class BucketServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(objectLock_);
                 objectLock_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder subBuilder = null;
+              if (encryption_ != null) {
+                subBuilder = encryption_.toBuilder();
+              }
+              encryption_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(encryption_);
+                encryption_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6474,6 +6517,47 @@ public final class BucketServiceOuterClass {
       return getObjectLock();
     }
 
+    public static final int ENCRYPTION_FIELD_NUMBER = 14;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+     * @return Whether the encryption field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryption() {
+      return encryption_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+     * @return The encryption.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption() {
+      return encryption_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder() {
+      return getEncryption();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6526,6 +6610,9 @@ public final class BucketServiceOuterClass {
       }
       if (objectLock_ != null) {
         output.writeMessage(13, getObjectLock());
+      }
+      if (encryption_ != null) {
+        output.writeMessage(14, getEncryption());
       }
       unknownFields.writeTo(output);
     }
@@ -6586,6 +6673,10 @@ public final class BucketServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getObjectLock());
       }
+      if (encryption_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getEncryption());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6644,6 +6735,11 @@ public final class BucketServiceOuterClass {
         if (!getObjectLock()
             .equals(other.getObjectLock())) return false;
       }
+      if (hasEncryption() != other.hasEncryption()) return false;
+      if (hasEncryption()) {
+        if (!getEncryption()
+            .equals(other.getEncryption())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6699,6 +6795,10 @@ public final class BucketServiceOuterClass {
       if (hasObjectLock()) {
         hash = (37 * hash) + OBJECT_LOCK_FIELD_NUMBER;
         hash = (53 * hash) + getObjectLock().hashCode();
+      }
+      if (hasEncryption()) {
+        hash = (37 * hash) + ENCRYPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryption().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6898,6 +6998,12 @@ public final class BucketServiceOuterClass {
           objectLock_ = null;
           objectLockBuilder_ = null;
         }
+        if (encryptionBuilder_ == null) {
+          encryption_ = null;
+        } else {
+          encryption_ = null;
+          encryptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -6985,6 +7091,11 @@ public final class BucketServiceOuterClass {
           result.objectLock_ = objectLock_;
         } else {
           result.objectLock_ = objectLockBuilder_.build();
+        }
+        if (encryptionBuilder_ == null) {
+          result.encryption_ = encryption_;
+        } else {
+          result.encryption_ = encryptionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7143,6 +7254,9 @@ public final class BucketServiceOuterClass {
         }
         if (other.hasObjectLock()) {
           mergeObjectLock(other.getObjectLock());
+        }
+        if (other.hasEncryption()) {
+          mergeEncryption(other.getEncryption());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9483,6 +9597,170 @@ public final class BucketServiceOuterClass {
           objectLock_ = null;
         }
         return objectLockBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> encryptionBuilder_;
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       * @return Whether the encryption field is set.
+       */
+      public boolean hasEncryption() {
+        return encryptionBuilder_ != null || encryption_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       * @return The encryption.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption() {
+        if (encryptionBuilder_ == null) {
+          return encryption_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+        } else {
+          return encryptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      public Builder setEncryption(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption value) {
+        if (encryptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          encryption_ = value;
+          onChanged();
+        } else {
+          encryptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      public Builder setEncryption(
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder builderForValue) {
+        if (encryptionBuilder_ == null) {
+          encryption_ = builderForValue.build();
+          onChanged();
+        } else {
+          encryptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      public Builder mergeEncryption(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption value) {
+        if (encryptionBuilder_ == null) {
+          if (encryption_ != null) {
+            encryption_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.newBuilder(encryption_).mergeFrom(value).buildPartial();
+          } else {
+            encryption_ = value;
+          }
+          onChanged();
+        } else {
+          encryptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      public Builder clearEncryption() {
+        if (encryptionBuilder_ == null) {
+          encryption_ = null;
+          onChanged();
+        } else {
+          encryption_ = null;
+          encryptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder getEncryptionBuilder() {
+        
+        onChanged();
+        return getEncryptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder() {
+        if (encryptionBuilder_ != null) {
+          return encryptionBuilder_.getMessageOrBuilder();
+        } else {
+          return encryption_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> 
+          getEncryptionFieldBuilder() {
+        if (encryptionBuilder_ == null) {
+          encryptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder>(
+                  getEncryption(),
+                  getParentForChildren(),
+                  isClean());
+          encryption_ = null;
+        }
+        return encryptionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17221,7 +17499,7 @@ public final class BucketServiceOuterClass {
       "nonymousAccessFlags\022)\n\003acl\030\007 \001(\0132\034.yande" +
       "x.cloud.storage.v1.ACL\022*\n\004tags\030\010 \003(\0132\034.y" +
       "andex.cloud.storage.v1.Tag\"$\n\024CreateBuck" +
-      "etMetadata\022\014\n\004name\030\001 \001(\t\"\211\005\n\023UpdateBucke" +
+      "etMetadata\022\014\n\004name\030\001 \001(\t\"\302\005\n\023UpdateBucke" +
       "tRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0225\n\013update_m" +
       "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350" +
       "\3071\001\022M\n\026anonymous_access_flags\030\003 \001(\0132-.ya" +
@@ -17237,67 +17515,69 @@ public final class BucketServiceOuterClass {
       "obuf.Struct\022)\n\003acl\030\013 \001(\0132\034.yandex.cloud." +
       "storage.v1.ACL\022*\n\004tags\030\014 \003(\0132\034.yandex.cl" +
       "oud.storage.v1.Tag\0228\n\013object_lock\030\r \001(\0132" +
-      "#.yandex.cloud.storage.v1.ObjectLock\"$\n\024" +
-      "UpdateBucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023De" +
-      "leteBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n" +
-      "\024DeleteBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025G" +
-      "etBucketStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
-      "\"1\n\033GetBucketHTTPSConfigRequest\022\022\n\004name\030" +
-      "\001 \001(\tB\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigPar" +
-      "ams\022&\n\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=3145" +
-      "728\022&\n\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=3145" +
-      "728\"=\n#CertificateManagerHTTPSConfigPara" +
-      "ms\022\026\n\016certificate_id\030\001 \001(\t\"\355\001\n\033SetBucket" +
-      "HTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M" +
-      "\n\014self_managed\030\002 \001(\01325.yandex.cloud.stor" +
-      "age.v1.SelfManagedHTTPSConfigParamsH\000\022[\n" +
-      "\023certificate_manager\030\003 \001(\0132<.yandex.clou" +
-      "d.storage.v1.CertificateManagerHTTPSConf" +
-      "igParamsH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketH" +
-      "TTPSConfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036Dele" +
-      "teBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\t" +
-      "B\004\350\3071\001\"/\n\037DeleteBucketHTTPSConfigMetadat" +
-      "a\022\014\n\004name\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004Lis" +
-      "t\022+.yandex.cloud.storage.v1.ListBucketsR" +
-      "equest\032,.yandex.cloud.storage.v1.ListBuc" +
-      "ketsResponse\"\033\202\323\344\223\002\025\022\023/storage/v1/bucket" +
-      "s\022u\n\003Get\022).yandex.cloud.storage.v1.GetBu" +
-      "cketRequest\032\037.yandex.cloud.storage.v1.Bu" +
-      "cket\"\"\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}" +
-      "\022\233\001\n\006Create\022,.yandex.cloud.storage.v1.Cr" +
-      "eateBucketRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"@\202\323\344\223\002\030\"\023/storage/v1/bucket" +
-      "s:\001*\262\322*\036\n\024CreateBucketMetadata\022\006Bucket\022\242" +
-      "\001\n\006Update\022,.yandex.cloud.storage.v1.Upda" +
-      "teBucketRequest\032!.yandex.cloud.operation" +
-      ".Operation\"G\202\323\344\223\002\0372\032/storage/v1/buckets/" +
-      "{name}:\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Buc" +
-      "ket\022\256\001\n\006Delete\022,.yandex.cloud.storage.v1" +
-      ".DeleteBucketRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"S\202\323\344\223\002\034*\032/storage/v1/buc" +
-      "kets/{name}\262\322*-\n\024DeleteBucketMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\215\001\n\010GetStats\022..yand" +
-      "ex.cloud.storage.v1.GetBucketStatsReques" +
-      "t\032$.yandex.cloud.storage.v1.BucketStats\"" +
-      "+\202\323\344\223\002%\022#/storage/v1/buckets/{name}:getS" +
-      "tats\022\237\001\n\016GetHTTPSConfig\0224.yandex.cloud.s" +
-      "torage.v1.GetBucketHTTPSConfigRequest\032$." +
-      "yandex.cloud.storage.v1.HTTPSConfig\"1\202\323\344" +
-      "\223\002+\022)/storage/v1/buckets/{name}:getHttps" +
-      "Config\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud" +
-      ".storage.v1.SetBucketHTTPSConfigRequest\032" +
-      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
-      "\002.\")/storage/v1/buckets/{name}:setHttpsC" +
-      "onfig:\001*\262\322*+\n\034SetBucketHTTPSConfigMetada" +
-      "ta\022\013HTTPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227." +
-      "yandex.cloud.storage.v1.DeleteBucketHTTP" +
-      "SConfigRequest\032!.yandex.cloud.operation." +
-      "Operation\"p\202\323\344\223\002.\",/storage/v1/buckets/{" +
-      "name}:deleteHttpsConfig\262\322*8\n\037DeleteBucke" +
-      "tHTTPSConfigMetadata\022\025google.protobuf.Em" +
-      "ptyBb\n\033yandex.cloud.api.storage.v1ZCgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/storage/v1;storageb\006proto3"
+      "#.yandex.cloud.storage.v1.ObjectLock\0227\n\n" +
+      "encryption\030\016 \001(\0132#.yandex.cloud.storage." +
+      "v1.Encryption\"$\n\024UpdateBucketMetadata\022\014\n" +
+      "\004name\030\001 \001(\t\")\n\023DeleteBucketRequest\022\022\n\004na" +
+      "me\030\001 \001(\tB\004\350\3071\001\"$\n\024DeleteBucketMetadata\022\014" +
+      "\n\004name\030\001 \001(\t\"+\n\025GetBucketStatsRequest\022\022\n" +
+      "\004name\030\001 \001(\tB\004\350\3071\001\"1\n\033GetBucketHTTPSConfi" +
+      "gRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"n\n\034SelfMana" +
+      "gedHTTPSConfigParams\022&\n\017certificate_pem\030" +
+      "\001 \001(\tB\r\212\3101\t<=3145728\022&\n\017private_key_pem\030" +
+      "\002 \001(\tB\r\212\3101\t<=3145728\"=\n#CertificateManag" +
+      "erHTTPSConfigParams\022\026\n\016certificate_id\030\001 " +
+      "\001(\t\"\355\001\n\033SetBucketHTTPSConfigRequest\022\022\n\004n" +
+      "ame\030\001 \001(\tB\004\350\3071\001\022M\n\014self_managed\030\002 \001(\01325." +
+      "yandex.cloud.storage.v1.SelfManagedHTTPS" +
+      "ConfigParamsH\000\022[\n\023certificate_manager\030\003 " +
+      "\001(\0132<.yandex.cloud.storage.v1.Certificat" +
+      "eManagerHTTPSConfigParamsH\000B\016\n\006params\022\004\300" +
+      "\3011\001\",\n\034SetBucketHTTPSConfigMetadata\022\014\n\004n" +
+      "ame\030\001 \001(\t\"4\n\036DeleteBucketHTTPSConfigRequ" +
+      "est\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"/\n\037DeleteBucketH" +
+      "TTPSConfigMetadata\022\014\n\004name\030\001 \001(\t2\341\013\n\rBuc" +
+      "ketService\022~\n\004List\022+.yandex.cloud.storag" +
+      "e.v1.ListBucketsRequest\032,.yandex.cloud.s" +
+      "torage.v1.ListBucketsResponse\"\033\202\323\344\223\002\025\022\023/" +
+      "storage/v1/buckets\022u\n\003Get\022).yandex.cloud" +
+      ".storage.v1.GetBucketRequest\032\037.yandex.cl" +
+      "oud.storage.v1.Bucket\"\"\202\323\344\223\002\034\022\032/storage/" +
+      "v1/buckets/{name}\022\233\001\n\006Create\022,.yandex.cl" +
+      "oud.storage.v1.CreateBucketRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"@\202\323\344\223\002\030\"\023/" +
+      "storage/v1/buckets:\001*\262\322*\036\n\024CreateBucketM" +
+      "etadata\022\006Bucket\022\242\001\n\006Update\022,.yandex.clou" +
+      "d.storage.v1.UpdateBucketRequest\032!.yande" +
+      "x.cloud.operation.Operation\"G\202\323\344\223\002\0372\032/st" +
+      "orage/v1/buckets/{name}:\001*\262\322*\036\n\024UpdateBu" +
+      "cketMetadata\022\006Bucket\022\256\001\n\006Delete\022,.yandex" +
+      ".cloud.storage.v1.DeleteBucketRequest\032!." +
+      "yandex.cloud.operation.Operation\"S\202\323\344\223\002\034" +
+      "*\032/storage/v1/buckets/{name}\262\322*-\n\024Delete" +
+      "BucketMetadata\022\025google.protobuf.Empty\022\215\001" +
+      "\n\010GetStats\022..yandex.cloud.storage.v1.Get" +
+      "BucketStatsRequest\032$.yandex.cloud.storag" +
+      "e.v1.BucketStats\"+\202\323\344\223\002%\022#/storage/v1/bu" +
+      "ckets/{name}:getStats\022\237\001\n\016GetHTTPSConfig" +
+      "\0224.yandex.cloud.storage.v1.GetBucketHTTP" +
+      "SConfigRequest\032$.yandex.cloud.storage.v1" +
+      ".HTTPSConfig\"1\202\323\344\223\002+\022)/storage/v1/bucket" +
+      "s/{name}:getHttpsConfig\022\316\001\n\016SetHTTPSConf" +
+      "ig\0224.yandex.cloud.storage.v1.SetBucketHT" +
+      "TPSConfigRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"c\202\323\344\223\002.\")/storage/v1/buckets" +
+      "/{name}:setHttpsConfig:\001*\262\322*+\n\034SetBucket" +
+      "HTTPSConfigMetadata\022\013HTTPSConfig\022\341\001\n\021Del" +
+      "eteHTTPSConfig\0227.yandex.cloud.storage.v1" +
+      ".DeleteBucketHTTPSConfigRequest\032!.yandex" +
+      ".cloud.operation.Operation\"p\202\323\344\223\002.\",/sto" +
+      "rage/v1/buckets/{name}:deleteHttpsConfig" +
+      "\262\322*8\n\037DeleteBucketHTTPSConfigMetadata\022\025g" +
+      "oogle.protobuf.EmptyBb\n\033yandex.cloud.api" +
+      ".storage.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/storage/v1;storage" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17345,7 +17625,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_UpdateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "UpdateMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", });
+        new java.lang.String[] { "Name", "UpdateMask", "AnonymousAccessFlags", "DefaultStorageClass", "MaxSize", "Cors", "WebsiteSettings", "Versioning", "LifecycleRules", "Policy", "Acl", "Tags", "ObjectLock", "Encryption", });
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_storage_v1_UpdateBucketMetadata_fieldAccessorTable = new

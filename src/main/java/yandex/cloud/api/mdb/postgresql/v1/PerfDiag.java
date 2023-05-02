@@ -14,6 +14,3733 @@ public final class PerfDiag {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface SessionStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.SessionState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1;</code>
+     * @return Whether the time field is set.
+     */
+    boolean hasTime();
+    /**
+     * <pre>
+     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1;</code>
+     * @return The time.
+     */
+    com.google.protobuf.Timestamp getTime();
+    /**
+     * <pre>
+     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
+
+    /**
+     * <code>string host = 2;</code>
+     * @return The host.
+     */
+    java.lang.String getHost();
+    /**
+     * <code>string host = 2;</code>
+     * @return The bytes for host.
+     */
+    com.google.protobuf.ByteString
+        getHostBytes();
+
+    /**
+     * <code>int64 pid = 3;</code>
+     * @return The pid.
+     */
+    long getPid();
+
+    /**
+     * <code>string database = 4;</code>
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <code>string database = 4;</code>
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseBytes();
+
+    /**
+     * <code>string user = 5;</code>
+     * @return The user.
+     */
+    java.lang.String getUser();
+    /**
+     * <code>string user = 5;</code>
+     * @return The bytes for user.
+     */
+    com.google.protobuf.ByteString
+        getUserBytes();
+
+    /**
+     * <code>string application_name = 6;</code>
+     * @return The applicationName.
+     */
+    java.lang.String getApplicationName();
+    /**
+     * <code>string application_name = 6;</code>
+     * @return The bytes for applicationName.
+     */
+    com.google.protobuf.ByteString
+        getApplicationNameBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+     * @return Whether the backendStart field is set.
+     */
+    boolean hasBackendStart();
+    /**
+     * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+     * @return The backendStart.
+     */
+    com.google.protobuf.Timestamp getBackendStart();
+    /**
+     * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getBackendStartOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+     * @return Whether the xactStart field is set.
+     */
+    boolean hasXactStart();
+    /**
+     * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+     * @return The xactStart.
+     */
+    com.google.protobuf.Timestamp getXactStart();
+    /**
+     * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getXactStartOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp query_start = 9;</code>
+     * @return Whether the queryStart field is set.
+     */
+    boolean hasQueryStart();
+    /**
+     * <code>.google.protobuf.Timestamp query_start = 9;</code>
+     * @return The queryStart.
+     */
+    com.google.protobuf.Timestamp getQueryStart();
+    /**
+     * <code>.google.protobuf.Timestamp query_start = 9;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getQueryStartOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp state_change = 10;</code>
+     * @return Whether the stateChange field is set.
+     */
+    boolean hasStateChange();
+    /**
+     * <code>.google.protobuf.Timestamp state_change = 10;</code>
+     * @return The stateChange.
+     */
+    com.google.protobuf.Timestamp getStateChange();
+    /**
+     * <code>.google.protobuf.Timestamp state_change = 10;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStateChangeOrBuilder();
+
+    /**
+     * <code>string wait_event_type = 11;</code>
+     * @return The waitEventType.
+     */
+    java.lang.String getWaitEventType();
+    /**
+     * <code>string wait_event_type = 11;</code>
+     * @return The bytes for waitEventType.
+     */
+    com.google.protobuf.ByteString
+        getWaitEventTypeBytes();
+
+    /**
+     * <code>string wait_event = 12;</code>
+     * @return The waitEvent.
+     */
+    java.lang.String getWaitEvent();
+    /**
+     * <code>string wait_event = 12;</code>
+     * @return The bytes for waitEvent.
+     */
+    com.google.protobuf.ByteString
+        getWaitEventBytes();
+
+    /**
+     * <code>string state = 13;</code>
+     * @return The state.
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 13;</code>
+     * @return The bytes for state.
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <code>string query = 14;</code>
+     * @return The query.
+     */
+    java.lang.String getQuery();
+    /**
+     * <code>string query = 14;</code>
+     * @return The bytes for query.
+     */
+    com.google.protobuf.ByteString
+        getQueryBytes();
+
+    /**
+     * <code>string backend_type = 15;</code>
+     * @return The backendType.
+     */
+    java.lang.String getBackendType();
+    /**
+     * <code>string backend_type = 15;</code>
+     * @return The bytes for backendType.
+     */
+    com.google.protobuf.ByteString
+        getBackendTypeBytes();
+
+    /**
+     * <code>string client_addr = 16;</code>
+     * @return The clientAddr.
+     */
+    java.lang.String getClientAddr();
+    /**
+     * <code>string client_addr = 16;</code>
+     * @return The bytes for clientAddr.
+     */
+    com.google.protobuf.ByteString
+        getClientAddrBytes();
+
+    /**
+     * <code>string client_hostname = 17;</code>
+     * @return The clientHostname.
+     */
+    java.lang.String getClientHostname();
+    /**
+     * <code>string client_hostname = 17;</code>
+     * @return The bytes for clientHostname.
+     */
+    com.google.protobuf.ByteString
+        getClientHostnameBytes();
+
+    /**
+     * <code>int64 client_port = 18;</code>
+     * @return The clientPort.
+     */
+    long getClientPort();
+
+    /**
+     * <code>int64 backend_xid = 19;</code>
+     * @return The backendXid.
+     */
+    long getBackendXid();
+
+    /**
+     * <code>int64 backend_xmin = 20;</code>
+     * @return The backendXmin.
+     */
+    long getBackendXmin();
+
+    /**
+     * <code>string blocking_pids = 22;</code>
+     * @return The blockingPids.
+     */
+    java.lang.String getBlockingPids();
+    /**
+     * <code>string blocking_pids = 22;</code>
+     * @return The bytes for blockingPids.
+     */
+    com.google.protobuf.ByteString
+        getBlockingPidsBytes();
+
+    /**
+     * <code>string query_id = 23;</code>
+     * @return The queryId.
+     */
+    java.lang.String getQueryId();
+    /**
+     * <code>string query_id = 23;</code>
+     * @return The bytes for queryId.
+     */
+    com.google.protobuf.ByteString
+        getQueryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.SessionState}
+   */
+  public static final class SessionState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.SessionState)
+      SessionStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SessionState.newBuilder() to construct.
+    private SessionState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SessionState() {
+      host_ = "";
+      database_ = "";
+      user_ = "";
+      applicationName_ = "";
+      waitEventType_ = "";
+      waitEvent_ = "";
+      state_ = "";
+      query_ = "";
+      backendType_ = "";
+      clientAddr_ = "";
+      clientHostname_ = "";
+      blockingPids_ = "";
+      queryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SessionState();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SessionState(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (time_ != null) {
+                subBuilder = time_.toBuilder();
+              }
+              time_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(time_);
+                time_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              host_ = s;
+              break;
+            }
+            case 24: {
+
+              pid_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              database_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              user_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              applicationName_ = s;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (backendStart_ != null) {
+                subBuilder = backendStart_.toBuilder();
+              }
+              backendStart_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backendStart_);
+                backendStart_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (xactStart_ != null) {
+                subBuilder = xactStart_.toBuilder();
+              }
+              xactStart_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(xactStart_);
+                xactStart_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (queryStart_ != null) {
+                subBuilder = queryStart_.toBuilder();
+              }
+              queryStart_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryStart_);
+                queryStart_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (stateChange_ != null) {
+                subBuilder = stateChange_.toBuilder();
+              }
+              stateChange_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(stateChange_);
+                stateChange_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              waitEventType_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              waitEvent_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              query_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backendType_ = s;
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clientAddr_ = s;
+              break;
+            }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clientHostname_ = s;
+              break;
+            }
+            case 144: {
+
+              clientPort_ = input.readInt64();
+              break;
+            }
+            case 152: {
+
+              backendXid_ = input.readInt64();
+              break;
+            }
+            case 160: {
+
+              backendXmin_ = input.readInt64();
+              break;
+            }
+            case 178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              blockingPids_ = s;
+              break;
+            }
+            case 186: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              queryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.PerfDiag.internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.postgresql.v1.PerfDiag.internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.class, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder.class);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp time_;
+    /**
+     * <pre>
+     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1;</code>
+     * @return Whether the time field is set.
+     */
+    @java.lang.Override
+    public boolean hasTime() {
+      return time_ != null;
+    }
+    /**
+     * <pre>
+     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1;</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTime() {
+      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    }
+    /**
+     * <pre>
+     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+      return getTime();
+    }
+
+    public static final int HOST_FIELD_NUMBER = 2;
+    private volatile java.lang.Object host_;
+    /**
+     * <code>string host = 2;</code>
+     * @return The host.
+     */
+    @java.lang.Override
+    public java.lang.String getHost() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        host_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string host = 2;</code>
+     * @return The bytes for host.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostBytes() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        host_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PID_FIELD_NUMBER = 3;
+    private long pid_;
+    /**
+     * <code>int64 pid = 3;</code>
+     * @return The pid.
+     */
+    @java.lang.Override
+    public long getPid() {
+      return pid_;
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object database_;
+    /**
+     * <code>string database = 4;</code>
+     * @return The database.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database = 4;</code>
+     * @return The bytes for database.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object user_;
+    /**
+     * <code>string user = 5;</code>
+     * @return The user.
+     */
+    @java.lang.Override
+    public java.lang.String getUser() {
+      java.lang.Object ref = user_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        user_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user = 5;</code>
+     * @return The bytes for user.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserBytes() {
+      java.lang.Object ref = user_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        user_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPLICATION_NAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object applicationName_;
+    /**
+     * <code>string application_name = 6;</code>
+     * @return The applicationName.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationName() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_name = 6;</code>
+     * @return The bytes for applicationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationNameBytes() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKEND_START_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp backendStart_;
+    /**
+     * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+     * @return Whether the backendStart field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackendStart() {
+      return backendStart_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+     * @return The backendStart.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getBackendStart() {
+      return backendStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : backendStart_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getBackendStartOrBuilder() {
+      return getBackendStart();
+    }
+
+    public static final int XACT_START_FIELD_NUMBER = 8;
+    private com.google.protobuf.Timestamp xactStart_;
+    /**
+     * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+     * @return Whether the xactStart field is set.
+     */
+    @java.lang.Override
+    public boolean hasXactStart() {
+      return xactStart_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+     * @return The xactStart.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getXactStart() {
+      return xactStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : xactStart_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getXactStartOrBuilder() {
+      return getXactStart();
+    }
+
+    public static final int QUERY_START_FIELD_NUMBER = 9;
+    private com.google.protobuf.Timestamp queryStart_;
+    /**
+     * <code>.google.protobuf.Timestamp query_start = 9;</code>
+     * @return Whether the queryStart field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryStart() {
+      return queryStart_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp query_start = 9;</code>
+     * @return The queryStart.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getQueryStart() {
+      return queryStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : queryStart_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp query_start = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getQueryStartOrBuilder() {
+      return getQueryStart();
+    }
+
+    public static final int STATE_CHANGE_FIELD_NUMBER = 10;
+    private com.google.protobuf.Timestamp stateChange_;
+    /**
+     * <code>.google.protobuf.Timestamp state_change = 10;</code>
+     * @return Whether the stateChange field is set.
+     */
+    @java.lang.Override
+    public boolean hasStateChange() {
+      return stateChange_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp state_change = 10;</code>
+     * @return The stateChange.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStateChange() {
+      return stateChange_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : stateChange_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp state_change = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStateChangeOrBuilder() {
+      return getStateChange();
+    }
+
+    public static final int WAIT_EVENT_TYPE_FIELD_NUMBER = 11;
+    private volatile java.lang.Object waitEventType_;
+    /**
+     * <code>string wait_event_type = 11;</code>
+     * @return The waitEventType.
+     */
+    @java.lang.Override
+    public java.lang.String getWaitEventType() {
+      java.lang.Object ref = waitEventType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        waitEventType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string wait_event_type = 11;</code>
+     * @return The bytes for waitEventType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWaitEventTypeBytes() {
+      java.lang.Object ref = waitEventType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        waitEventType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WAIT_EVENT_FIELD_NUMBER = 12;
+    private volatile java.lang.Object waitEvent_;
+    /**
+     * <code>string wait_event = 12;</code>
+     * @return The waitEvent.
+     */
+    @java.lang.Override
+    public java.lang.String getWaitEvent() {
+      java.lang.Object ref = waitEvent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        waitEvent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string wait_event = 12;</code>
+     * @return The bytes for waitEvent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWaitEventBytes() {
+      java.lang.Object ref = waitEvent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        waitEvent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 13;
+    private volatile java.lang.Object state_;
+    /**
+     * <code>string state = 13;</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string state = 13;</code>
+     * @return The bytes for state.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUERY_FIELD_NUMBER = 14;
+    private volatile java.lang.Object query_;
+    /**
+     * <code>string query = 14;</code>
+     * @return The query.
+     */
+    @java.lang.Override
+    public java.lang.String getQuery() {
+      java.lang.Object ref = query_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        query_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string query = 14;</code>
+     * @return The bytes for query.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQueryBytes() {
+      java.lang.Object ref = query_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        query_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKEND_TYPE_FIELD_NUMBER = 15;
+    private volatile java.lang.Object backendType_;
+    /**
+     * <code>string backend_type = 15;</code>
+     * @return The backendType.
+     */
+    @java.lang.Override
+    public java.lang.String getBackendType() {
+      java.lang.Object ref = backendType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backendType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string backend_type = 15;</code>
+     * @return The bytes for backendType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackendTypeBytes() {
+      java.lang.Object ref = backendType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backendType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_ADDR_FIELD_NUMBER = 16;
+    private volatile java.lang.Object clientAddr_;
+    /**
+     * <code>string client_addr = 16;</code>
+     * @return The clientAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getClientAddr() {
+      java.lang.Object ref = clientAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_addr = 16;</code>
+     * @return The bytes for clientAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientAddrBytes() {
+      java.lang.Object ref = clientAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_HOSTNAME_FIELD_NUMBER = 17;
+    private volatile java.lang.Object clientHostname_;
+    /**
+     * <code>string client_hostname = 17;</code>
+     * @return The clientHostname.
+     */
+    @java.lang.Override
+    public java.lang.String getClientHostname() {
+      java.lang.Object ref = clientHostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientHostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_hostname = 17;</code>
+     * @return The bytes for clientHostname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientHostnameBytes() {
+      java.lang.Object ref = clientHostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientHostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_PORT_FIELD_NUMBER = 18;
+    private long clientPort_;
+    /**
+     * <code>int64 client_port = 18;</code>
+     * @return The clientPort.
+     */
+    @java.lang.Override
+    public long getClientPort() {
+      return clientPort_;
+    }
+
+    public static final int BACKEND_XID_FIELD_NUMBER = 19;
+    private long backendXid_;
+    /**
+     * <code>int64 backend_xid = 19;</code>
+     * @return The backendXid.
+     */
+    @java.lang.Override
+    public long getBackendXid() {
+      return backendXid_;
+    }
+
+    public static final int BACKEND_XMIN_FIELD_NUMBER = 20;
+    private long backendXmin_;
+    /**
+     * <code>int64 backend_xmin = 20;</code>
+     * @return The backendXmin.
+     */
+    @java.lang.Override
+    public long getBackendXmin() {
+      return backendXmin_;
+    }
+
+    public static final int BLOCKING_PIDS_FIELD_NUMBER = 22;
+    private volatile java.lang.Object blockingPids_;
+    /**
+     * <code>string blocking_pids = 22;</code>
+     * @return The blockingPids.
+     */
+    @java.lang.Override
+    public java.lang.String getBlockingPids() {
+      java.lang.Object ref = blockingPids_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        blockingPids_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string blocking_pids = 22;</code>
+     * @return The bytes for blockingPids.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBlockingPidsBytes() {
+      java.lang.Object ref = blockingPids_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        blockingPids_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUERY_ID_FIELD_NUMBER = 23;
+    private volatile java.lang.Object queryId_;
+    /**
+     * <code>string query_id = 23;</code>
+     * @return The queryId.
+     */
+    @java.lang.Override
+    public java.lang.String getQueryId() {
+      java.lang.Object ref = queryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        queryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string query_id = 23;</code>
+     * @return The bytes for queryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQueryIdBytes() {
+      java.lang.Object ref = queryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        queryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (time_ != null) {
+        output.writeMessage(1, getTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, host_);
+      }
+      if (pid_ != 0L) {
+        output.writeInt64(3, pid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, database_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, user_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, applicationName_);
+      }
+      if (backendStart_ != null) {
+        output.writeMessage(7, getBackendStart());
+      }
+      if (xactStart_ != null) {
+        output.writeMessage(8, getXactStart());
+      }
+      if (queryStart_ != null) {
+        output.writeMessage(9, getQueryStart());
+      }
+      if (stateChange_ != null) {
+        output.writeMessage(10, getStateChange());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(waitEventType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, waitEventType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(waitEvent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, waitEvent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, state_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, query_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, backendType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, clientAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientHostname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, clientHostname_);
+      }
+      if (clientPort_ != 0L) {
+        output.writeInt64(18, clientPort_);
+      }
+      if (backendXid_ != 0L) {
+        output.writeInt64(19, backendXid_);
+      }
+      if (backendXmin_ != 0L) {
+        output.writeInt64(20, backendXmin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blockingPids_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, blockingPids_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, queryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (time_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, host_);
+      }
+      if (pid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, pid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, database_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, user_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, applicationName_);
+      }
+      if (backendStart_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getBackendStart());
+      }
+      if (xactStart_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getXactStart());
+      }
+      if (queryStart_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getQueryStart());
+      }
+      if (stateChange_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getStateChange());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(waitEventType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, waitEventType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(waitEvent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, waitEvent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, state_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, query_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, backendType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, clientAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientHostname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, clientHostname_);
+      }
+      if (clientPort_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(18, clientPort_);
+      }
+      if (backendXid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(19, backendXid_);
+      }
+      if (backendXmin_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(20, backendXmin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blockingPids_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, blockingPids_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, queryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState other = (yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState) obj;
+
+      if (hasTime() != other.hasTime()) return false;
+      if (hasTime()) {
+        if (!getTime()
+            .equals(other.getTime())) return false;
+      }
+      if (!getHost()
+          .equals(other.getHost())) return false;
+      if (getPid()
+          != other.getPid()) return false;
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
+      if (!getUser()
+          .equals(other.getUser())) return false;
+      if (!getApplicationName()
+          .equals(other.getApplicationName())) return false;
+      if (hasBackendStart() != other.hasBackendStart()) return false;
+      if (hasBackendStart()) {
+        if (!getBackendStart()
+            .equals(other.getBackendStart())) return false;
+      }
+      if (hasXactStart() != other.hasXactStart()) return false;
+      if (hasXactStart()) {
+        if (!getXactStart()
+            .equals(other.getXactStart())) return false;
+      }
+      if (hasQueryStart() != other.hasQueryStart()) return false;
+      if (hasQueryStart()) {
+        if (!getQueryStart()
+            .equals(other.getQueryStart())) return false;
+      }
+      if (hasStateChange() != other.hasStateChange()) return false;
+      if (hasStateChange()) {
+        if (!getStateChange()
+            .equals(other.getStateChange())) return false;
+      }
+      if (!getWaitEventType()
+          .equals(other.getWaitEventType())) return false;
+      if (!getWaitEvent()
+          .equals(other.getWaitEvent())) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
+      if (!getQuery()
+          .equals(other.getQuery())) return false;
+      if (!getBackendType()
+          .equals(other.getBackendType())) return false;
+      if (!getClientAddr()
+          .equals(other.getClientAddr())) return false;
+      if (!getClientHostname()
+          .equals(other.getClientHostname())) return false;
+      if (getClientPort()
+          != other.getClientPort()) return false;
+      if (getBackendXid()
+          != other.getBackendXid()) return false;
+      if (getBackendXmin()
+          != other.getBackendXmin()) return false;
+      if (!getBlockingPids()
+          .equals(other.getBlockingPids())) return false;
+      if (!getQueryId()
+          .equals(other.getQueryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTime()) {
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTime().hashCode();
+      }
+      hash = (37 * hash) + HOST_FIELD_NUMBER;
+      hash = (53 * hash) + getHost().hashCode();
+      hash = (37 * hash) + PID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPid());
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + USER_FIELD_NUMBER;
+      hash = (53 * hash) + getUser().hashCode();
+      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationName().hashCode();
+      if (hasBackendStart()) {
+        hash = (37 * hash) + BACKEND_START_FIELD_NUMBER;
+        hash = (53 * hash) + getBackendStart().hashCode();
+      }
+      if (hasXactStart()) {
+        hash = (37 * hash) + XACT_START_FIELD_NUMBER;
+        hash = (53 * hash) + getXactStart().hashCode();
+      }
+      if (hasQueryStart()) {
+        hash = (37 * hash) + QUERY_START_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryStart().hashCode();
+      }
+      if (hasStateChange()) {
+        hash = (37 * hash) + STATE_CHANGE_FIELD_NUMBER;
+        hash = (53 * hash) + getStateChange().hashCode();
+      }
+      hash = (37 * hash) + WAIT_EVENT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getWaitEventType().hashCode();
+      hash = (37 * hash) + WAIT_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getWaitEvent().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
+      hash = (37 * hash) + QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getQuery().hashCode();
+      hash = (37 * hash) + BACKEND_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getBackendType().hashCode();
+      hash = (37 * hash) + CLIENT_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getClientAddr().hashCode();
+      hash = (37 * hash) + CLIENT_HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClientHostname().hashCode();
+      hash = (37 * hash) + CLIENT_PORT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClientPort());
+      hash = (37 * hash) + BACKEND_XID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBackendXid());
+      hash = (37 * hash) + BACKEND_XMIN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBackendXmin());
+      hash = (37 * hash) + BLOCKING_PIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getBlockingPids().hashCode();
+      hash = (37 * hash) + QUERY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getQueryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.SessionState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.postgresql.v1.SessionState)
+        yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.PerfDiag.internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.postgresql.v1.PerfDiag.internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.class, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (timeBuilder_ == null) {
+          time_ = null;
+        } else {
+          time_ = null;
+          timeBuilder_ = null;
+        }
+        host_ = "";
+
+        pid_ = 0L;
+
+        database_ = "";
+
+        user_ = "";
+
+        applicationName_ = "";
+
+        if (backendStartBuilder_ == null) {
+          backendStart_ = null;
+        } else {
+          backendStart_ = null;
+          backendStartBuilder_ = null;
+        }
+        if (xactStartBuilder_ == null) {
+          xactStart_ = null;
+        } else {
+          xactStart_ = null;
+          xactStartBuilder_ = null;
+        }
+        if (queryStartBuilder_ == null) {
+          queryStart_ = null;
+        } else {
+          queryStart_ = null;
+          queryStartBuilder_ = null;
+        }
+        if (stateChangeBuilder_ == null) {
+          stateChange_ = null;
+        } else {
+          stateChange_ = null;
+          stateChangeBuilder_ = null;
+        }
+        waitEventType_ = "";
+
+        waitEvent_ = "";
+
+        state_ = "";
+
+        query_ = "";
+
+        backendType_ = "";
+
+        clientAddr_ = "";
+
+        clientHostname_ = "";
+
+        clientPort_ = 0L;
+
+        backendXid_ = 0L;
+
+        backendXmin_ = 0L;
+
+        blockingPids_ = "";
+
+        queryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.PerfDiag.internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState build() {
+        yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState buildPartial() {
+        yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState result = new yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState(this);
+        if (timeBuilder_ == null) {
+          result.time_ = time_;
+        } else {
+          result.time_ = timeBuilder_.build();
+        }
+        result.host_ = host_;
+        result.pid_ = pid_;
+        result.database_ = database_;
+        result.user_ = user_;
+        result.applicationName_ = applicationName_;
+        if (backendStartBuilder_ == null) {
+          result.backendStart_ = backendStart_;
+        } else {
+          result.backendStart_ = backendStartBuilder_.build();
+        }
+        if (xactStartBuilder_ == null) {
+          result.xactStart_ = xactStart_;
+        } else {
+          result.xactStart_ = xactStartBuilder_.build();
+        }
+        if (queryStartBuilder_ == null) {
+          result.queryStart_ = queryStart_;
+        } else {
+          result.queryStart_ = queryStartBuilder_.build();
+        }
+        if (stateChangeBuilder_ == null) {
+          result.stateChange_ = stateChange_;
+        } else {
+          result.stateChange_ = stateChangeBuilder_.build();
+        }
+        result.waitEventType_ = waitEventType_;
+        result.waitEvent_ = waitEvent_;
+        result.state_ = state_;
+        result.query_ = query_;
+        result.backendType_ = backendType_;
+        result.clientAddr_ = clientAddr_;
+        result.clientHostname_ = clientHostname_;
+        result.clientPort_ = clientPort_;
+        result.backendXid_ = backendXid_;
+        result.backendXmin_ = backendXmin_;
+        result.blockingPids_ = blockingPids_;
+        result.queryId_ = queryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState) {
+          return mergeFrom((yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState other) {
+        if (other == yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.getDefaultInstance()) return this;
+        if (other.hasTime()) {
+          mergeTime(other.getTime());
+        }
+        if (!other.getHost().isEmpty()) {
+          host_ = other.host_;
+          onChanged();
+        }
+        if (other.getPid() != 0L) {
+          setPid(other.getPid());
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (!other.getUser().isEmpty()) {
+          user_ = other.user_;
+          onChanged();
+        }
+        if (!other.getApplicationName().isEmpty()) {
+          applicationName_ = other.applicationName_;
+          onChanged();
+        }
+        if (other.hasBackendStart()) {
+          mergeBackendStart(other.getBackendStart());
+        }
+        if (other.hasXactStart()) {
+          mergeXactStart(other.getXactStart());
+        }
+        if (other.hasQueryStart()) {
+          mergeQueryStart(other.getQueryStart());
+        }
+        if (other.hasStateChange()) {
+          mergeStateChange(other.getStateChange());
+        }
+        if (!other.getWaitEventType().isEmpty()) {
+          waitEventType_ = other.waitEventType_;
+          onChanged();
+        }
+        if (!other.getWaitEvent().isEmpty()) {
+          waitEvent_ = other.waitEvent_;
+          onChanged();
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
+        if (!other.getQuery().isEmpty()) {
+          query_ = other.query_;
+          onChanged();
+        }
+        if (!other.getBackendType().isEmpty()) {
+          backendType_ = other.backendType_;
+          onChanged();
+        }
+        if (!other.getClientAddr().isEmpty()) {
+          clientAddr_ = other.clientAddr_;
+          onChanged();
+        }
+        if (!other.getClientHostname().isEmpty()) {
+          clientHostname_ = other.clientHostname_;
+          onChanged();
+        }
+        if (other.getClientPort() != 0L) {
+          setClientPort(other.getClientPort());
+        }
+        if (other.getBackendXid() != 0L) {
+          setBackendXid(other.getBackendXid());
+        }
+        if (other.getBackendXmin() != 0L) {
+          setBackendXmin(other.getBackendXmin());
+        }
+        if (!other.getBlockingPids().isEmpty()) {
+          blockingPids_ = other.blockingPids_;
+          onChanged();
+        }
+        if (!other.getQueryId().isEmpty()) {
+          queryId_ = other.queryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp time_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       * @return Whether the time field is set.
+       */
+      public boolean hasTime() {
+        return timeBuilder_ != null || time_ != null;
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       * @return The time.
+       */
+      public com.google.protobuf.Timestamp getTime() {
+        if (timeBuilder_ == null) {
+          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        } else {
+          return timeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      public Builder setTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          time_ = value;
+          onChanged();
+        } else {
+          timeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      public Builder setTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timeBuilder_ == null) {
+          time_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      public Builder mergeTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (time_ != null) {
+            time_ =
+              com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+          } else {
+            time_ = value;
+          }
+          onChanged();
+        } else {
+          timeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      public Builder clearTime() {
+        if (timeBuilder_ == null) {
+          time_ = null;
+          onChanged();
+        } else {
+          time_ = null;
+          timeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
+        
+        onChanged();
+        return getTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+        if (timeBuilder_ != null) {
+          return timeBuilder_.getMessageOrBuilder();
+        } else {
+          return time_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        }
+      }
+      /**
+       * <pre>
+       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimeFieldBuilder() {
+        if (timeBuilder_ == null) {
+          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTime(),
+                  getParentForChildren(),
+                  isClean());
+          time_ = null;
+        }
+        return timeBuilder_;
+      }
+
+      private java.lang.Object host_ = "";
+      /**
+       * <code>string host = 2;</code>
+       * @return The host.
+       */
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          host_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string host = 2;</code>
+       * @return The bytes for host.
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string host = 2;</code>
+       * @param value The host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string host = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHost() {
+        
+        host_ = getDefaultInstance().getHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string host = 2;</code>
+       * @param value The bytes for host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        host_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pid_ ;
+      /**
+       * <code>int64 pid = 3;</code>
+       * @return The pid.
+       */
+      @java.lang.Override
+      public long getPid() {
+        return pid_;
+      }
+      /**
+       * <code>int64 pid = 3;</code>
+       * @param value The pid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPid(long value) {
+        
+        pid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 pid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPid() {
+        
+        pid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <code>string database = 4;</code>
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database = 4;</code>
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database = 4;</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+        
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4;</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object user_ = "";
+      /**
+       * <code>string user = 5;</code>
+       * @return The user.
+       */
+      public java.lang.String getUser() {
+        java.lang.Object ref = user_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          user_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user = 5;</code>
+       * @return The bytes for user.
+       */
+      public com.google.protobuf.ByteString
+          getUserBytes() {
+        java.lang.Object ref = user_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          user_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user = 5;</code>
+       * @param value The user to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUser(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        user_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUser() {
+        
+        user_ = getDefaultInstance().getUser();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user = 5;</code>
+       * @param value The bytes for user to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        user_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object applicationName_ = "";
+      /**
+       * <code>string application_name = 6;</code>
+       * @return The applicationName.
+       */
+      public java.lang.String getApplicationName() {
+        java.lang.Object ref = applicationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 6;</code>
+       * @return The bytes for applicationName.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationNameBytes() {
+        java.lang.Object ref = applicationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 6;</code>
+       * @param value The applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        applicationName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationName() {
+        
+        applicationName_ = getDefaultInstance().getApplicationName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 6;</code>
+       * @param value The bytes for applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        applicationName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp backendStart_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> backendStartBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       * @return Whether the backendStart field is set.
+       */
+      public boolean hasBackendStart() {
+        return backendStartBuilder_ != null || backendStart_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       * @return The backendStart.
+       */
+      public com.google.protobuf.Timestamp getBackendStart() {
+        if (backendStartBuilder_ == null) {
+          return backendStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : backendStart_;
+        } else {
+          return backendStartBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      public Builder setBackendStart(com.google.protobuf.Timestamp value) {
+        if (backendStartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backendStart_ = value;
+          onChanged();
+        } else {
+          backendStartBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      public Builder setBackendStart(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (backendStartBuilder_ == null) {
+          backendStart_ = builderForValue.build();
+          onChanged();
+        } else {
+          backendStartBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      public Builder mergeBackendStart(com.google.protobuf.Timestamp value) {
+        if (backendStartBuilder_ == null) {
+          if (backendStart_ != null) {
+            backendStart_ =
+              com.google.protobuf.Timestamp.newBuilder(backendStart_).mergeFrom(value).buildPartial();
+          } else {
+            backendStart_ = value;
+          }
+          onChanged();
+        } else {
+          backendStartBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      public Builder clearBackendStart() {
+        if (backendStartBuilder_ == null) {
+          backendStart_ = null;
+          onChanged();
+        } else {
+          backendStart_ = null;
+          backendStartBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getBackendStartBuilder() {
+        
+        onChanged();
+        return getBackendStartFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getBackendStartOrBuilder() {
+        if (backendStartBuilder_ != null) {
+          return backendStartBuilder_.getMessageOrBuilder();
+        } else {
+          return backendStart_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : backendStart_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp backend_start = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getBackendStartFieldBuilder() {
+        if (backendStartBuilder_ == null) {
+          backendStartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getBackendStart(),
+                  getParentForChildren(),
+                  isClean());
+          backendStart_ = null;
+        }
+        return backendStartBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp xactStart_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> xactStartBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       * @return Whether the xactStart field is set.
+       */
+      public boolean hasXactStart() {
+        return xactStartBuilder_ != null || xactStart_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       * @return The xactStart.
+       */
+      public com.google.protobuf.Timestamp getXactStart() {
+        if (xactStartBuilder_ == null) {
+          return xactStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : xactStart_;
+        } else {
+          return xactStartBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      public Builder setXactStart(com.google.protobuf.Timestamp value) {
+        if (xactStartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          xactStart_ = value;
+          onChanged();
+        } else {
+          xactStartBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      public Builder setXactStart(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (xactStartBuilder_ == null) {
+          xactStart_ = builderForValue.build();
+          onChanged();
+        } else {
+          xactStartBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      public Builder mergeXactStart(com.google.protobuf.Timestamp value) {
+        if (xactStartBuilder_ == null) {
+          if (xactStart_ != null) {
+            xactStart_ =
+              com.google.protobuf.Timestamp.newBuilder(xactStart_).mergeFrom(value).buildPartial();
+          } else {
+            xactStart_ = value;
+          }
+          onChanged();
+        } else {
+          xactStartBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      public Builder clearXactStart() {
+        if (xactStartBuilder_ == null) {
+          xactStart_ = null;
+          onChanged();
+        } else {
+          xactStart_ = null;
+          xactStartBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getXactStartBuilder() {
+        
+        onChanged();
+        return getXactStartFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getXactStartOrBuilder() {
+        if (xactStartBuilder_ != null) {
+          return xactStartBuilder_.getMessageOrBuilder();
+        } else {
+          return xactStart_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : xactStart_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp xact_start = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getXactStartFieldBuilder() {
+        if (xactStartBuilder_ == null) {
+          xactStartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getXactStart(),
+                  getParentForChildren(),
+                  isClean());
+          xactStart_ = null;
+        }
+        return xactStartBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp queryStart_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> queryStartBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       * @return Whether the queryStart field is set.
+       */
+      public boolean hasQueryStart() {
+        return queryStartBuilder_ != null || queryStart_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       * @return The queryStart.
+       */
+      public com.google.protobuf.Timestamp getQueryStart() {
+        if (queryStartBuilder_ == null) {
+          return queryStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : queryStart_;
+        } else {
+          return queryStartBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      public Builder setQueryStart(com.google.protobuf.Timestamp value) {
+        if (queryStartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryStart_ = value;
+          onChanged();
+        } else {
+          queryStartBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      public Builder setQueryStart(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (queryStartBuilder_ == null) {
+          queryStart_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryStartBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      public Builder mergeQueryStart(com.google.protobuf.Timestamp value) {
+        if (queryStartBuilder_ == null) {
+          if (queryStart_ != null) {
+            queryStart_ =
+              com.google.protobuf.Timestamp.newBuilder(queryStart_).mergeFrom(value).buildPartial();
+          } else {
+            queryStart_ = value;
+          }
+          onChanged();
+        } else {
+          queryStartBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      public Builder clearQueryStart() {
+        if (queryStartBuilder_ == null) {
+          queryStart_ = null;
+          onChanged();
+        } else {
+          queryStart_ = null;
+          queryStartBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getQueryStartBuilder() {
+        
+        onChanged();
+        return getQueryStartFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getQueryStartOrBuilder() {
+        if (queryStartBuilder_ != null) {
+          return queryStartBuilder_.getMessageOrBuilder();
+        } else {
+          return queryStart_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : queryStart_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp query_start = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getQueryStartFieldBuilder() {
+        if (queryStartBuilder_ == null) {
+          queryStartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getQueryStart(),
+                  getParentForChildren(),
+                  isClean());
+          queryStart_ = null;
+        }
+        return queryStartBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp stateChange_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> stateChangeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       * @return Whether the stateChange field is set.
+       */
+      public boolean hasStateChange() {
+        return stateChangeBuilder_ != null || stateChange_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       * @return The stateChange.
+       */
+      public com.google.protobuf.Timestamp getStateChange() {
+        if (stateChangeBuilder_ == null) {
+          return stateChange_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : stateChange_;
+        } else {
+          return stateChangeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      public Builder setStateChange(com.google.protobuf.Timestamp value) {
+        if (stateChangeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stateChange_ = value;
+          onChanged();
+        } else {
+          stateChangeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      public Builder setStateChange(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (stateChangeBuilder_ == null) {
+          stateChange_ = builderForValue.build();
+          onChanged();
+        } else {
+          stateChangeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      public Builder mergeStateChange(com.google.protobuf.Timestamp value) {
+        if (stateChangeBuilder_ == null) {
+          if (stateChange_ != null) {
+            stateChange_ =
+              com.google.protobuf.Timestamp.newBuilder(stateChange_).mergeFrom(value).buildPartial();
+          } else {
+            stateChange_ = value;
+          }
+          onChanged();
+        } else {
+          stateChangeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      public Builder clearStateChange() {
+        if (stateChangeBuilder_ == null) {
+          stateChange_ = null;
+          onChanged();
+        } else {
+          stateChange_ = null;
+          stateChangeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStateChangeBuilder() {
+        
+        onChanged();
+        return getStateChangeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStateChangeOrBuilder() {
+        if (stateChangeBuilder_ != null) {
+          return stateChangeBuilder_.getMessageOrBuilder();
+        } else {
+          return stateChange_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : stateChange_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp state_change = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStateChangeFieldBuilder() {
+        if (stateChangeBuilder_ == null) {
+          stateChangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStateChange(),
+                  getParentForChildren(),
+                  isClean());
+          stateChange_ = null;
+        }
+        return stateChangeBuilder_;
+      }
+
+      private java.lang.Object waitEventType_ = "";
+      /**
+       * <code>string wait_event_type = 11;</code>
+       * @return The waitEventType.
+       */
+      public java.lang.String getWaitEventType() {
+        java.lang.Object ref = waitEventType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          waitEventType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string wait_event_type = 11;</code>
+       * @return The bytes for waitEventType.
+       */
+      public com.google.protobuf.ByteString
+          getWaitEventTypeBytes() {
+        java.lang.Object ref = waitEventType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          waitEventType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string wait_event_type = 11;</code>
+       * @param value The waitEventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWaitEventType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        waitEventType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string wait_event_type = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWaitEventType() {
+        
+        waitEventType_ = getDefaultInstance().getWaitEventType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string wait_event_type = 11;</code>
+       * @param value The bytes for waitEventType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWaitEventTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        waitEventType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object waitEvent_ = "";
+      /**
+       * <code>string wait_event = 12;</code>
+       * @return The waitEvent.
+       */
+      public java.lang.String getWaitEvent() {
+        java.lang.Object ref = waitEvent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          waitEvent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string wait_event = 12;</code>
+       * @return The bytes for waitEvent.
+       */
+      public com.google.protobuf.ByteString
+          getWaitEventBytes() {
+        java.lang.Object ref = waitEvent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          waitEvent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string wait_event = 12;</code>
+       * @param value The waitEvent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWaitEvent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        waitEvent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string wait_event = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWaitEvent() {
+        
+        waitEvent_ = getDefaultInstance().getWaitEvent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string wait_event = 12;</code>
+       * @param value The bytes for waitEvent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWaitEventBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        waitEvent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <code>string state = 13;</code>
+       * @return The state.
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string state = 13;</code>
+       * @return The bytes for state.
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string state = 13;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 13;</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object query_ = "";
+      /**
+       * <code>string query = 14;</code>
+       * @return The query.
+       */
+      public java.lang.String getQuery() {
+        java.lang.Object ref = query_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          query_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string query = 14;</code>
+       * @return The bytes for query.
+       */
+      public com.google.protobuf.ByteString
+          getQueryBytes() {
+        java.lang.Object ref = query_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          query_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string query = 14;</code>
+       * @param value The query to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuery(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        query_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string query = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuery() {
+        
+        query_ = getDefaultInstance().getQuery();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string query = 14;</code>
+       * @param value The bytes for query to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        query_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backendType_ = "";
+      /**
+       * <code>string backend_type = 15;</code>
+       * @return The backendType.
+       */
+      public java.lang.String getBackendType() {
+        java.lang.Object ref = backendType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backendType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string backend_type = 15;</code>
+       * @return The bytes for backendType.
+       */
+      public com.google.protobuf.ByteString
+          getBackendTypeBytes() {
+        java.lang.Object ref = backendType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backendType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string backend_type = 15;</code>
+       * @param value The backendType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackendType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backendType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string backend_type = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackendType() {
+        
+        backendType_ = getDefaultInstance().getBackendType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string backend_type = 15;</code>
+       * @param value The bytes for backendType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackendTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backendType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientAddr_ = "";
+      /**
+       * <code>string client_addr = 16;</code>
+       * @return The clientAddr.
+       */
+      public java.lang.String getClientAddr() {
+        java.lang.Object ref = clientAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_addr = 16;</code>
+       * @return The bytes for clientAddr.
+       */
+      public com.google.protobuf.ByteString
+          getClientAddrBytes() {
+        java.lang.Object ref = clientAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_addr = 16;</code>
+       * @param value The clientAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientAddr(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clientAddr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_addr = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientAddr() {
+        
+        clientAddr_ = getDefaultInstance().getClientAddr();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_addr = 16;</code>
+       * @param value The bytes for clientAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clientAddr_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientHostname_ = "";
+      /**
+       * <code>string client_hostname = 17;</code>
+       * @return The clientHostname.
+       */
+      public java.lang.String getClientHostname() {
+        java.lang.Object ref = clientHostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientHostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_hostname = 17;</code>
+       * @return The bytes for clientHostname.
+       */
+      public com.google.protobuf.ByteString
+          getClientHostnameBytes() {
+        java.lang.Object ref = clientHostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientHostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_hostname = 17;</code>
+       * @param value The clientHostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientHostname(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clientHostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_hostname = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientHostname() {
+        
+        clientHostname_ = getDefaultInstance().getClientHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_hostname = 17;</code>
+       * @param value The bytes for clientHostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientHostnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clientHostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long clientPort_ ;
+      /**
+       * <code>int64 client_port = 18;</code>
+       * @return The clientPort.
+       */
+      @java.lang.Override
+      public long getClientPort() {
+        return clientPort_;
+      }
+      /**
+       * <code>int64 client_port = 18;</code>
+       * @param value The clientPort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientPort(long value) {
+        
+        clientPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 client_port = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientPort() {
+        
+        clientPort_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long backendXid_ ;
+      /**
+       * <code>int64 backend_xid = 19;</code>
+       * @return The backendXid.
+       */
+      @java.lang.Override
+      public long getBackendXid() {
+        return backendXid_;
+      }
+      /**
+       * <code>int64 backend_xid = 19;</code>
+       * @param value The backendXid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackendXid(long value) {
+        
+        backendXid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 backend_xid = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackendXid() {
+        
+        backendXid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long backendXmin_ ;
+      /**
+       * <code>int64 backend_xmin = 20;</code>
+       * @return The backendXmin.
+       */
+      @java.lang.Override
+      public long getBackendXmin() {
+        return backendXmin_;
+      }
+      /**
+       * <code>int64 backend_xmin = 20;</code>
+       * @param value The backendXmin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackendXmin(long value) {
+        
+        backendXmin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 backend_xmin = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackendXmin() {
+        
+        backendXmin_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object blockingPids_ = "";
+      /**
+       * <code>string blocking_pids = 22;</code>
+       * @return The blockingPids.
+       */
+      public java.lang.String getBlockingPids() {
+        java.lang.Object ref = blockingPids_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          blockingPids_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string blocking_pids = 22;</code>
+       * @return The bytes for blockingPids.
+       */
+      public com.google.protobuf.ByteString
+          getBlockingPidsBytes() {
+        java.lang.Object ref = blockingPids_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          blockingPids_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string blocking_pids = 22;</code>
+       * @param value The blockingPids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockingPids(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        blockingPids_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string blocking_pids = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockingPids() {
+        
+        blockingPids_ = getDefaultInstance().getBlockingPids();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string blocking_pids = 22;</code>
+       * @param value The bytes for blockingPids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockingPidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        blockingPids_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object queryId_ = "";
+      /**
+       * <code>string query_id = 23;</code>
+       * @return The queryId.
+       */
+      public java.lang.String getQueryId() {
+        java.lang.Object ref = queryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          queryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string query_id = 23;</code>
+       * @return The bytes for queryId.
+       */
+      public com.google.protobuf.ByteString
+          getQueryIdBytes() {
+        java.lang.Object ref = queryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          queryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string query_id = 23;</code>
+       * @param value The queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        queryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string query_id = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryId() {
+        
+        queryId_ = getDefaultInstance().getQueryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string query_id = 23;</code>
+       * @param value The bytes for queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        queryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.postgresql.v1.SessionState)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.postgresql.v1.SessionState)
+    private static final yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState();
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SessionState>
+        PARSER = new com.google.protobuf.AbstractParser<SessionState>() {
+      @java.lang.Override
+      public SessionState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SessionState(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SessionState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SessionState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PrimaryKeyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.PrimaryKey)
       com.google.protobuf.MessageOrBuilder {
@@ -6535,6 +10262,11 @@ public final class PerfDiag {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_postgresql_v1_PrimaryKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6560,66 +10292,87 @@ public final class PerfDiag {
     java.lang.String[] descriptorData = {
       "\n.yandex/cloud/mdb/postgresql/v1/perf_di" +
       "ag.proto\022\036yandex.cloud.mdb.postgresql.v1" +
-      "\032\037google/protobuf/timestamp.proto\"o\n\nPri" +
-      "maryKey\022\014\n\004host\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\022\020\n\010d" +
-      "atabase\030\004 \001(\t\022\020\n\010toplevel\030\005 \001(\010\022\020\n\010query" +
-      "_id\030\006 \001(\t\022\017\n\007plan_id\030\007 \001(\t\"\234\t\n\nQueryStat" +
-      "s\022(\n\004time\030\001 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\r\n\005query\030\002 \001(\t\022\027\n\017normalized_plan\030\003 " +
-      "\001(\t\022\024\n\014example_plan\030\004 \001(\t\022\r\n\005plans\030\005 \001(\003" +
-      "\022\027\n\017total_plan_time\030\006 \001(\001\022\025\n\rmin_plan_ti" +
-      "me\030\007 \001(\001\022\025\n\rmax_plan_time\030\010 \001(\001\022\026\n\016mean_" +
-      "plan_time\030\t \001(\001\022\030\n\020stddev_plan_time\030\n \001(" +
-      "\001\022\r\n\005calls\030\013 \001(\003\022\022\n\ntotal_time\030\014 \001(\001\022\020\n\010" +
-      "min_time\030\r \001(\001\022\020\n\010max_time\030\016 \001(\001\022\021\n\tmean" +
-      "_time\030\017 \001(\001\022\023\n\013stddev_time\030\020 \001(\001\022\014\n\004rows" +
-      "\030\021 \001(\003\022\027\n\017shared_blks_hit\030\022 \001(\003\022\030\n\020share" +
-      "d_blks_read\030\023 \001(\003\022\033\n\023shared_blks_dirtied" +
-      "\030\024 \001(\003\022\033\n\023shared_blks_written\030\025 \001(\003\022\026\n\016l" +
-      "ocal_blks_hit\030\026 \001(\003\022\027\n\017local_blks_read\030\027" +
-      " \001(\003\022\032\n\022local_blks_dirtied\030\030 \001(\003\022\032\n\022loca" +
-      "l_blks_written\030\031 \001(\003\022\026\n\016temp_blks_read\030\032" +
-      " \001(\003\022\031\n\021temp_blks_written\030\033 \001(\003\022\025\n\rblk_r" +
-      "ead_time\030\034 \001(\001\022\026\n\016blk_write_time\030\035 \001(\001\022\032" +
-      "\n\022temp_blk_read_time\030\036 \001(\001\022\033\n\023temp_blk_w" +
-      "rite_time\030\037 \001(\001\022\023\n\013wal_records\030  \001(\003\022\017\n\007" +
-      "wal_fpi\030! \001(\003\022\021\n\twal_bytes\030\" \001(\003\022\025\n\rjit_" +
-      "functions\030# \001(\003\022\033\n\023jit_generation_time\030$" +
-      " \001(\001\022\032\n\022jit_inlining_count\030% \001(\003\022\031\n\021jit_" +
-      "inlining_time\030& \001(\001\022\036\n\026jit_optimization_" +
-      "count\030\' \001(\003\022\035\n\025jit_optimization_time\030( \001" +
-      "(\001\022\032\n\022jit_emission_count\030) \001(\003\022\031\n\021jit_em" +
-      "ission_time\030* \001(\001\022\024\n\014startup_cost\030+ \001(\003\022" +
-      "\022\n\ntotal_cost\030, \001(\003\022\021\n\tplan_rows\030- \001(\003\022\022" +
-      "\n\nplan_width\030. \001(\003\022\r\n\005reads\030/ \001(\003\022\016\n\006wri" +
-      "tes\0300 \001(\003\022\021\n\tuser_time\0301 \001(\001\022\023\n\013system_t" +
-      "ime\0302 \001(\001\"\204\001\n\016QueryStatement\0227\n\003key\030\001 \001(" +
-      "\0132*.yandex.cloud.mdb.postgresql.v1.Prima" +
-      "ryKey\0229\n\005stats\030\002 \001(\0132*.yandex.cloud.mdb." +
-      "postgresql.v1.QueryStatsBs\n\"yandex.cloud" +
-      ".api.mdb.postgresql.v1ZMgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/pos" +
-      "tgresql/v1;postgresqlb\006proto3"
+      "\032\037google/protobuf/timestamp.proto\"\321\004\n\014Se" +
+      "ssionState\022(\n\004time\030\001 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\014\n\004host\030\002 \001(\t\022\013\n\003pid\030\003 \001(\003\022" +
+      "\020\n\010database\030\004 \001(\t\022\014\n\004user\030\005 \001(\t\022\030\n\020appli" +
+      "cation_name\030\006 \001(\t\0221\n\rbackend_start\030\007 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022.\n\nxact_sta" +
+      "rt\030\010 \001(\0132\032.google.protobuf.Timestamp\022/\n\013" +
+      "query_start\030\t \001(\0132\032.google.protobuf.Time" +
+      "stamp\0220\n\014state_change\030\n \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\027\n\017wait_event_type\030\013 \001(\t" +
+      "\022\022\n\nwait_event\030\014 \001(\t\022\r\n\005state\030\r \001(\t\022\r\n\005q" +
+      "uery\030\016 \001(\t\022\024\n\014backend_type\030\017 \001(\t\022\023\n\013clie" +
+      "nt_addr\030\020 \001(\t\022\027\n\017client_hostname\030\021 \001(\t\022\023" +
+      "\n\013client_port\030\022 \001(\003\022\023\n\013backend_xid\030\023 \001(\003" +
+      "\022\024\n\014backend_xmin\030\024 \001(\003\022\025\n\rblocking_pids\030" +
+      "\026 \001(\t\022\020\n\010query_id\030\027 \001(\tJ\004\010\025\020\026\"o\n\nPrimary" +
+      "Key\022\014\n\004host\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\022\020\n\010datab" +
+      "ase\030\004 \001(\t\022\020\n\010toplevel\030\005 \001(\010\022\020\n\010query_id\030" +
+      "\006 \001(\t\022\017\n\007plan_id\030\007 \001(\t\"\234\t\n\nQueryStats\022(\n" +
+      "\004time\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\r\n\005query\030\002 \001(\t\022\027\n\017normalized_plan\030\003 \001(\t\022" +
+      "\024\n\014example_plan\030\004 \001(\t\022\r\n\005plans\030\005 \001(\003\022\027\n\017" +
+      "total_plan_time\030\006 \001(\001\022\025\n\rmin_plan_time\030\007" +
+      " \001(\001\022\025\n\rmax_plan_time\030\010 \001(\001\022\026\n\016mean_plan" +
+      "_time\030\t \001(\001\022\030\n\020stddev_plan_time\030\n \001(\001\022\r\n" +
+      "\005calls\030\013 \001(\003\022\022\n\ntotal_time\030\014 \001(\001\022\020\n\010min_" +
+      "time\030\r \001(\001\022\020\n\010max_time\030\016 \001(\001\022\021\n\tmean_tim" +
+      "e\030\017 \001(\001\022\023\n\013stddev_time\030\020 \001(\001\022\014\n\004rows\030\021 \001" +
+      "(\003\022\027\n\017shared_blks_hit\030\022 \001(\003\022\030\n\020shared_bl" +
+      "ks_read\030\023 \001(\003\022\033\n\023shared_blks_dirtied\030\024 \001" +
+      "(\003\022\033\n\023shared_blks_written\030\025 \001(\003\022\026\n\016local" +
+      "_blks_hit\030\026 \001(\003\022\027\n\017local_blks_read\030\027 \001(\003" +
+      "\022\032\n\022local_blks_dirtied\030\030 \001(\003\022\032\n\022local_bl" +
+      "ks_written\030\031 \001(\003\022\026\n\016temp_blks_read\030\032 \001(\003" +
+      "\022\031\n\021temp_blks_written\030\033 \001(\003\022\025\n\rblk_read_" +
+      "time\030\034 \001(\001\022\026\n\016blk_write_time\030\035 \001(\001\022\032\n\022te" +
+      "mp_blk_read_time\030\036 \001(\001\022\033\n\023temp_blk_write" +
+      "_time\030\037 \001(\001\022\023\n\013wal_records\030  \001(\003\022\017\n\007wal_" +
+      "fpi\030! \001(\003\022\021\n\twal_bytes\030\" \001(\003\022\025\n\rjit_func" +
+      "tions\030# \001(\003\022\033\n\023jit_generation_time\030$ \001(\001" +
+      "\022\032\n\022jit_inlining_count\030% \001(\003\022\031\n\021jit_inli" +
+      "ning_time\030& \001(\001\022\036\n\026jit_optimization_coun" +
+      "t\030\' \001(\003\022\035\n\025jit_optimization_time\030( \001(\001\022\032" +
+      "\n\022jit_emission_count\030) \001(\003\022\031\n\021jit_emissi" +
+      "on_time\030* \001(\001\022\024\n\014startup_cost\030+ \001(\003\022\022\n\nt" +
+      "otal_cost\030, \001(\003\022\021\n\tplan_rows\030- \001(\003\022\022\n\npl" +
+      "an_width\030. \001(\003\022\r\n\005reads\030/ \001(\003\022\016\n\006writes\030" +
+      "0 \001(\003\022\021\n\tuser_time\0301 \001(\001\022\023\n\013system_time\030" +
+      "2 \001(\001\"\204\001\n\016QueryStatement\0227\n\003key\030\001 \001(\0132*." +
+      "yandex.cloud.mdb.postgresql.v1.PrimaryKe" +
+      "y\0229\n\005stats\030\002 \001(\0132*.yandex.cloud.mdb.post" +
+      "gresql.v1.QueryStatsBs\n\"yandex.cloud.api" +
+      ".mdb.postgresql.v1ZMgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/postgre" +
+      "sql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_yandex_cloud_mdb_postgresql_v1_PrimaryKey_descriptor =
+    internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_postgresql_v1_SessionState_descriptor,
+        new java.lang.String[] { "Time", "Host", "Pid", "Database", "User", "ApplicationName", "BackendStart", "XactStart", "QueryStart", "StateChange", "WaitEventType", "WaitEvent", "State", "Query", "BackendType", "ClientAddr", "ClientHostname", "ClientPort", "BackendXid", "BackendXmin", "BlockingPids", "QueryId", });
+    internal_static_yandex_cloud_mdb_postgresql_v1_PrimaryKey_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_PrimaryKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_PrimaryKey_descriptor,
         new java.lang.String[] { "Host", "User", "Database", "Toplevel", "QueryId", "PlanId", });
     internal_static_yandex_cloud_mdb_postgresql_v1_QueryStats_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_postgresql_v1_QueryStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_QueryStats_descriptor,
         new java.lang.String[] { "Time", "Query", "NormalizedPlan", "ExamplePlan", "Plans", "TotalPlanTime", "MinPlanTime", "MaxPlanTime", "MeanPlanTime", "StddevPlanTime", "Calls", "TotalTime", "MinTime", "MaxTime", "MeanTime", "StddevTime", "Rows", "SharedBlksHit", "SharedBlksRead", "SharedBlksDirtied", "SharedBlksWritten", "LocalBlksHit", "LocalBlksRead", "LocalBlksDirtied", "LocalBlksWritten", "TempBlksRead", "TempBlksWritten", "BlkReadTime", "BlkWriteTime", "TempBlkReadTime", "TempBlkWriteTime", "WalRecords", "WalFpi", "WalBytes", "JitFunctions", "JitGenerationTime", "JitInliningCount", "JitInliningTime", "JitOptimizationCount", "JitOptimizationTime", "JitEmissionCount", "JitEmissionTime", "StartupCost", "TotalCost", "PlanRows", "PlanWidth", "Reads", "Writes", "UserTime", "SystemTime", });
     internal_static_yandex_cloud_mdb_postgresql_v1_QueryStatement_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_QueryStatement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_QueryStatement_descriptor,

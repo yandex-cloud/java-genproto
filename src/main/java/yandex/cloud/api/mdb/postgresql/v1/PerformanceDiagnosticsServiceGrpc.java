@@ -18,6 +18,37 @@ public final class PerformanceDiagnosticsServiceGrpc {
   public static final String SERVICE_NAME = "yandex.cloud.mdb.postgresql.v1.PerformanceDiagnosticsService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest,
+      yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> getListRawSessionStatesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRawSessionStates",
+      requestType = yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest.class,
+      responseType = yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest,
+      yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> getListRawSessionStatesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest, yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> getListRawSessionStatesMethod;
+    if ((getListRawSessionStatesMethod = PerformanceDiagnosticsServiceGrpc.getListRawSessionStatesMethod) == null) {
+      synchronized (PerformanceDiagnosticsServiceGrpc.class) {
+        if ((getListRawSessionStatesMethod = PerformanceDiagnosticsServiceGrpc.getListRawSessionStatesMethod) == null) {
+          PerformanceDiagnosticsServiceGrpc.getListRawSessionStatesMethod = getListRawSessionStatesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest, yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRawSessionStates"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PerformanceDiagnosticsServiceMethodDescriptorSupplier("ListRawSessionStates"))
+              .build();
+        }
+      }
+    }
+    return getListRawSessionStatesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest,
       yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> getListRawStatementsMethod;
 
@@ -105,6 +136,13 @@ public final class PerformanceDiagnosticsServiceGrpc {
      * Handlers for raw data export
      * </pre>
      */
+    public void listRawSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRawSessionStatesMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void listRawStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRawStatementsMethod(), responseObserver);
@@ -112,6 +150,13 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getListRawSessionStatesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest,
+                yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse>(
+                  this, METHODID_LIST_RAW_SESSION_STATES)))
           .addMethod(
             getListRawStatementsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -145,6 +190,14 @@ public final class PerformanceDiagnosticsServiceGrpc {
      * Handlers for raw data export
      * </pre>
      */
+    public void listRawSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRawSessionStatesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void listRawStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -174,6 +227,13 @@ public final class PerformanceDiagnosticsServiceGrpc {
      * Handlers for raw data export
      * </pre>
      */
+    public yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse listRawSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRawSessionStatesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse listRawStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRawStatementsMethod(), getCallOptions(), request);
@@ -202,6 +262,14 @@ public final class PerformanceDiagnosticsServiceGrpc {
      * Handlers for raw data export
      * </pre>
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> listRawSessionStates(
+        yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRawSessionStatesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> listRawStatements(
         yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -209,7 +277,8 @@ public final class PerformanceDiagnosticsServiceGrpc {
     }
   }
 
-  private static final int METHODID_LIST_RAW_STATEMENTS = 0;
+  private static final int METHODID_LIST_RAW_SESSION_STATES = 0;
+  private static final int METHODID_LIST_RAW_STATEMENTS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -228,6 +297,10 @@ public final class PerformanceDiagnosticsServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_LIST_RAW_SESSION_STATES:
+          serviceImpl.listRawSessionStates((yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse>) responseObserver);
+          break;
         case METHODID_LIST_RAW_STATEMENTS:
           serviceImpl.listRawStatements((yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse>) responseObserver);
@@ -293,6 +366,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PerformanceDiagnosticsServiceFileDescriptorSupplier())
+              .addMethod(getListRawSessionStatesMethod())
               .addMethod(getListRawStatementsMethod())
               .build();
         }

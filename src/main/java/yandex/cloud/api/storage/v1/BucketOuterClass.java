@@ -631,6 +631,36 @@ public final class BucketOuterClass {
      * <code>.yandex.cloud.storage.v1.ObjectLock object_lock = 15;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLockOrBuilder getObjectLockOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+     * @return Whether the encryption field is set.
+     */
+    boolean hasEncryption();
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+     * @return The encryption.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption();
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder();
   }
   /**
    * <pre>
@@ -827,6 +857,19 @@ public final class BucketOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(objectLock_);
                 objectLock_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder subBuilder = null;
+              if (encryption_ != null) {
+                subBuilder = encryption_.toBuilder();
+              }
+              encryption_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(encryption_);
+                encryption_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1547,6 +1590,47 @@ public final class BucketOuterClass {
       return getObjectLock();
     }
 
+    public static final int ENCRYPTION_FIELD_NUMBER = 16;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+     * @return Whether the encryption field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryption() {
+      return encryption_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+     * @return The encryption.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption() {
+      return encryption_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's encryption
+     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder() {
+      return getEncryption();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1605,6 +1689,9 @@ public final class BucketOuterClass {
       }
       if (objectLock_ != null) {
         output.writeMessage(15, getObjectLock());
+      }
+      if (encryption_ != null) {
+        output.writeMessage(16, getEncryption());
       }
       unknownFields.writeTo(output);
     }
@@ -1671,6 +1758,10 @@ public final class BucketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getObjectLock());
       }
+      if (encryption_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getEncryption());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1733,6 +1824,11 @@ public final class BucketOuterClass {
         if (!getObjectLock()
             .equals(other.getObjectLock())) return false;
       }
+      if (hasEncryption() != other.hasEncryption()) return false;
+      if (hasEncryption()) {
+        if (!getEncryption()
+            .equals(other.getEncryption())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1792,6 +1888,10 @@ public final class BucketOuterClass {
       if (hasObjectLock()) {
         hash = (37 * hash) + OBJECT_LOCK_FIELD_NUMBER;
         hash = (53 * hash) + getObjectLock().hashCode();
+      }
+      if (hasEncryption()) {
+        hash = (37 * hash) + ENCRYPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryption().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2000,6 +2100,12 @@ public final class BucketOuterClass {
           objectLock_ = null;
           objectLockBuilder_ = null;
         }
+        if (encryptionBuilder_ == null) {
+          encryption_ = null;
+        } else {
+          encryption_ = null;
+          encryptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -2089,6 +2195,11 @@ public final class BucketOuterClass {
           result.objectLock_ = objectLock_;
         } else {
           result.objectLock_ = objectLockBuilder_.build();
+        }
+        if (encryptionBuilder_ == null) {
+          result.encryption_ = encryption_;
+        } else {
+          result.encryption_ = encryptionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2255,6 +2366,9 @@ public final class BucketOuterClass {
         }
         if (other.hasObjectLock()) {
           mergeObjectLock(other.getObjectLock());
+        }
+        if (other.hasEncryption()) {
+          mergeEncryption(other.getEncryption());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4778,6 +4892,170 @@ public final class BucketOuterClass {
           objectLock_ = null;
         }
         return objectLockBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> encryptionBuilder_;
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       * @return Whether the encryption field is set.
+       */
+      public boolean hasEncryption() {
+        return encryptionBuilder_ != null || encryption_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       * @return The encryption.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption() {
+        if (encryptionBuilder_ == null) {
+          return encryption_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+        } else {
+          return encryptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      public Builder setEncryption(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption value) {
+        if (encryptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          encryption_ = value;
+          onChanged();
+        } else {
+          encryptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      public Builder setEncryption(
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder builderForValue) {
+        if (encryptionBuilder_ == null) {
+          encryption_ = builderForValue.build();
+          onChanged();
+        } else {
+          encryptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      public Builder mergeEncryption(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption value) {
+        if (encryptionBuilder_ == null) {
+          if (encryption_ != null) {
+            encryption_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.newBuilder(encryption_).mergeFrom(value).buildPartial();
+          } else {
+            encryption_ = value;
+          }
+          onChanged();
+        } else {
+          encryptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      public Builder clearEncryption() {
+        if (encryptionBuilder_ == null) {
+          encryption_ = null;
+          onChanged();
+        } else {
+          encryption_ = null;
+          encryptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder getEncryptionBuilder() {
+        
+        onChanged();
+        return getEncryptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder() {
+        if (encryptionBuilder_ != null) {
+          return encryptionBuilder_.getMessageOrBuilder();
+        } else {
+          return encryption_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption
+       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> 
+          getEncryptionFieldBuilder() {
+        if (encryptionBuilder_ == null) {
+          encryptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder>(
+                  getEncryption(),
+                  getParentForChildren(),
+                  isClean());
+          encryption_ = null;
+        }
+        return encryptionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -37669,6 +37947,1517 @@ public final class BucketOuterClass {
 
   }
 
+  public interface EncryptionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.Encryption)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> 
+        getRulesList();
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getRules(int index);
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    int getRulesCount();
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> 
+        getRulesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder getRulesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.storage.v1.Encryption}
+   */
+  public static final class Encryption extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.Encryption)
+      EncryptionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Encryption.newBuilder() to construct.
+    private Encryption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Encryption() {
+      rules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Encryption();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Encryption(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                rules_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              rules_.add(
+                  input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          rules_ = java.util.Collections.unmodifiableList(rules_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.class, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder.class);
+    }
+
+    public interface EncryptionRuleOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.Encryption.EncryptionRule)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string kms_master_key_id = 1;</code>
+       * @return The kmsMasterKeyId.
+       */
+      java.lang.String getKmsMasterKeyId();
+      /**
+       * <code>string kms_master_key_id = 1;</code>
+       * @return The bytes for kmsMasterKeyId.
+       */
+      com.google.protobuf.ByteString
+          getKmsMasterKeyIdBytes();
+
+      /**
+       * <code>string sse_algorithm = 2;</code>
+       * @return The sseAlgorithm.
+       */
+      java.lang.String getSseAlgorithm();
+      /**
+       * <code>string sse_algorithm = 2;</code>
+       * @return The bytes for sseAlgorithm.
+       */
+      com.google.protobuf.ByteString
+          getSseAlgorithmBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.Encryption.EncryptionRule}
+     */
+    public static final class EncryptionRule extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.Encryption.EncryptionRule)
+        EncryptionRuleOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use EncryptionRule.newBuilder() to construct.
+      private EncryptionRule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private EncryptionRule() {
+        kmsMasterKeyId_ = "";
+        sseAlgorithm_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new EncryptionRule();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private EncryptionRule(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                kmsMasterKeyId_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                sseAlgorithm_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.class, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder.class);
+      }
+
+      public static final int KMS_MASTER_KEY_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object kmsMasterKeyId_;
+      /**
+       * <code>string kms_master_key_id = 1;</code>
+       * @return The kmsMasterKeyId.
+       */
+      @java.lang.Override
+      public java.lang.String getKmsMasterKeyId() {
+        java.lang.Object ref = kmsMasterKeyId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kmsMasterKeyId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string kms_master_key_id = 1;</code>
+       * @return The bytes for kmsMasterKeyId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKmsMasterKeyIdBytes() {
+        java.lang.Object ref = kmsMasterKeyId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kmsMasterKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SSE_ALGORITHM_FIELD_NUMBER = 2;
+      private volatile java.lang.Object sseAlgorithm_;
+      /**
+       * <code>string sse_algorithm = 2;</code>
+       * @return The sseAlgorithm.
+       */
+      @java.lang.Override
+      public java.lang.String getSseAlgorithm() {
+        java.lang.Object ref = sseAlgorithm_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sseAlgorithm_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string sse_algorithm = 2;</code>
+       * @return The bytes for sseAlgorithm.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSseAlgorithmBytes() {
+        java.lang.Object ref = sseAlgorithm_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sseAlgorithm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kmsMasterKeyId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, kmsMasterKeyId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sseAlgorithm_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sseAlgorithm_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kmsMasterKeyId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, kmsMasterKeyId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sseAlgorithm_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sseAlgorithm_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule other = (yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule) obj;
+
+        if (!getKmsMasterKeyId()
+            .equals(other.getKmsMasterKeyId())) return false;
+        if (!getSseAlgorithm()
+            .equals(other.getSseAlgorithm())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + KMS_MASTER_KEY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getKmsMasterKeyId().hashCode();
+        hash = (37 * hash) + SSE_ALGORITHM_FIELD_NUMBER;
+        hash = (53 * hash) + getSseAlgorithm().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.Encryption.EncryptionRule}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.Encryption.EncryptionRule)
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.class, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          kmsMasterKeyId_ = "";
+
+          sseAlgorithm_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule result = new yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule(this);
+          result.kmsMasterKeyId_ = kmsMasterKeyId_;
+          result.sseAlgorithm_ = sseAlgorithm_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.getDefaultInstance()) return this;
+          if (!other.getKmsMasterKeyId().isEmpty()) {
+            kmsMasterKeyId_ = other.kmsMasterKeyId_;
+            onChanged();
+          }
+          if (!other.getSseAlgorithm().isEmpty()) {
+            sseAlgorithm_ = other.sseAlgorithm_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object kmsMasterKeyId_ = "";
+        /**
+         * <code>string kms_master_key_id = 1;</code>
+         * @return The kmsMasterKeyId.
+         */
+        public java.lang.String getKmsMasterKeyId() {
+          java.lang.Object ref = kmsMasterKeyId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            kmsMasterKeyId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string kms_master_key_id = 1;</code>
+         * @return The bytes for kmsMasterKeyId.
+         */
+        public com.google.protobuf.ByteString
+            getKmsMasterKeyIdBytes() {
+          java.lang.Object ref = kmsMasterKeyId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            kmsMasterKeyId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string kms_master_key_id = 1;</code>
+         * @param value The kmsMasterKeyId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKmsMasterKeyId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          kmsMasterKeyId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string kms_master_key_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearKmsMasterKeyId() {
+          
+          kmsMasterKeyId_ = getDefaultInstance().getKmsMasterKeyId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string kms_master_key_id = 1;</code>
+         * @param value The bytes for kmsMasterKeyId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKmsMasterKeyIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          kmsMasterKeyId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object sseAlgorithm_ = "";
+        /**
+         * <code>string sse_algorithm = 2;</code>
+         * @return The sseAlgorithm.
+         */
+        public java.lang.String getSseAlgorithm() {
+          java.lang.Object ref = sseAlgorithm_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            sseAlgorithm_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string sse_algorithm = 2;</code>
+         * @return The bytes for sseAlgorithm.
+         */
+        public com.google.protobuf.ByteString
+            getSseAlgorithmBytes() {
+          java.lang.Object ref = sseAlgorithm_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            sseAlgorithm_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string sse_algorithm = 2;</code>
+         * @param value The sseAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSseAlgorithm(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          sseAlgorithm_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string sse_algorithm = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSseAlgorithm() {
+          
+          sseAlgorithm_ = getDefaultInstance().getSseAlgorithm();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string sse_algorithm = 2;</code>
+         * @param value The bytes for sseAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSseAlgorithmBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          sseAlgorithm_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.Encryption.EncryptionRule)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.Encryption.EncryptionRule)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<EncryptionRule>
+          PARSER = new com.google.protobuf.AbstractParser<EncryptionRule>() {
+        @java.lang.Override
+        public EncryptionRule parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EncryptionRule(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<EncryptionRule> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EncryptionRule> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int RULES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> rules_;
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> getRulesList() {
+      return rules_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> 
+        getRulesOrBuilderList() {
+      return rules_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    @java.lang.Override
+    public int getRulesCount() {
+      return rules_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getRules(int index) {
+      return rules_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder getRulesOrBuilder(
+        int index) {
+      return rules_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rules_.size(); i++) {
+        output.writeMessage(1, rules_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rules_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.Encryption)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.BucketOuterClass.Encryption other = (yandex.cloud.api.storage.v1.BucketOuterClass.Encryption) obj;
+
+      if (!getRulesList()
+          .equals(other.getRulesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRulesCount() > 0) {
+        hash = (37 * hash) + RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getRulesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.Encryption}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.Encryption)
+        yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.class, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRulesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (rulesBuilder_ == null) {
+          rules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          rulesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_Encryption_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption build() {
+        yandex.cloud.api.storage.v1.BucketOuterClass.Encryption result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption buildPartial() {
+        yandex.cloud.api.storage.v1.BucketOuterClass.Encryption result = new yandex.cloud.api.storage.v1.BucketOuterClass.Encryption(this);
+        int from_bitField0_ = bitField0_;
+        if (rulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rules_ = java.util.Collections.unmodifiableList(rules_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rules_ = rules_;
+        } else {
+          result.rules_ = rulesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.Encryption) {
+          return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.Encryption)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption other) {
+        if (other == yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance()) return this;
+        if (rulesBuilder_ == null) {
+          if (!other.rules_.isEmpty()) {
+            if (rules_.isEmpty()) {
+              rules_ = other.rules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRulesIsMutable();
+              rules_.addAll(other.rules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rules_.isEmpty()) {
+            if (rulesBuilder_.isEmpty()) {
+              rulesBuilder_.dispose();
+              rulesBuilder_ = null;
+              rules_ = other.rules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rulesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRulesFieldBuilder() : null;
+            } else {
+              rulesBuilder_.addAllMessages(other.rules_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.BucketOuterClass.Encryption parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.Encryption) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> rules_ =
+        java.util.Collections.emptyList();
+      private void ensureRulesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rules_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule>(rules_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> rulesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> getRulesList() {
+        if (rulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rules_);
+        } else {
+          return rulesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public int getRulesCount() {
+        if (rulesBuilder_ == null) {
+          return rules_.size();
+        } else {
+          return rulesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getRules(int index) {
+        if (rulesBuilder_ == null) {
+          return rules_.get(index);
+        } else {
+          return rulesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder setRules(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule value) {
+        if (rulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRulesIsMutable();
+          rules_.set(index, value);
+          onChanged();
+        } else {
+          rulesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder setRules(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rulesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder addRules(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule value) {
+        if (rulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRulesIsMutable();
+          rules_.add(value);
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder addRules(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule value) {
+        if (rulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRulesIsMutable();
+          rules_.add(index, value);
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder addRules(
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder addRules(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder builderForValue) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rulesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder addAllRules(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> values) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rules_);
+          onChanged();
+        } else {
+          rulesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder clearRules() {
+        if (rulesBuilder_ == null) {
+          rules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rulesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public Builder removeRules(int index) {
+        if (rulesBuilder_ == null) {
+          ensureRulesIsMutable();
+          rules_.remove(index);
+          onChanged();
+        } else {
+          rulesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder getRulesBuilder(
+          int index) {
+        return getRulesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder getRulesOrBuilder(
+          int index) {
+        if (rulesBuilder_ == null) {
+          return rules_.get(index);  } else {
+          return rulesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> 
+           getRulesOrBuilderList() {
+        if (rulesBuilder_ != null) {
+          return rulesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rules_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder addRulesBuilder() {
+        return getRulesFieldBuilder().addBuilder(
+            yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder addRulesBuilder(
+          int index) {
+        return getRulesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder> 
+           getRulesBuilderList() {
+        return getRulesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> 
+          getRulesFieldBuilder() {
+        if (rulesBuilder_ == null) {
+          rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder>(
+                  rules_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rules_ = null;
+        }
+        return rulesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.Encryption)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.Encryption)
+    private static final yandex.cloud.api.storage.v1.BucketOuterClass.Encryption DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.Encryption();
+    }
+
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Encryption>
+        PARSER = new com.google.protobuf.AbstractParser<Encryption>() {
+      @java.lang.Override
+      public Encryption parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Encryption(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Encryption> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Encryption> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_storage_v1_Bucket_descriptor;
   private static final 
@@ -37799,6 +39588,16 @@ public final class BucketOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_Encryption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_Encryption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -37812,7 +39611,7 @@ public final class BucketOuterClass {
       "yandex.cloud.storage.v1\032\034google/protobuf" +
       "/struct.proto\032\037google/protobuf/timestamp" +
       ".proto\032\036google/protobuf/wrappers.proto\032\035" +
-      "yandex/cloud/validation.proto\"\216\005\n\006Bucket" +
+      "yandex/cloud/validation.proto\"\307\005\n\006Bucket" +
       "\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tfolder_id\030" +
       "\003 \001(\t\022M\n\026anonymous_access_flags\030\004 \001(\0132-." +
       "yandex.cloud.storage.v1.AnonymousAccessF" +
@@ -37829,142 +39628,147 @@ public final class BucketOuterClass {
       "storage.v1.LifecycleRule\022*\n\004tags\030\016 \003(\0132\034" +
       ".yandex.cloud.storage.v1.Tag\0228\n\013object_l" +
       "ock\030\017 \001(\0132#.yandex.cloud.storage.v1.Obje" +
-      "ctLock\"!\n\003Tag\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t\"\222\004\n\003ACL\0222\n\006grants\030\001 \003(\0132\".yandex.cloud" +
-      ".storage.v1.ACL.Grant\032\326\003\n\005Grant\022G\n\npermi" +
-      "ssion\030\001 \001(\0162-.yandex.cloud.storage.v1.AC" +
-      "L.Grant.PermissionB\004\350\3071\001\022F\n\ngrant_type\030\002" +
-      " \001(\0162,.yandex.cloud.storage.v1.ACL.Grant" +
-      ".GrantTypeB\004\350\3071\001\022\022\n\ngrantee_id\030\003 \001(\t\"\243\001\n" +
-      "\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000\022" +
-      "\033\n\027PERMISSION_FULL_CONTROL\020\001\022\024\n\020PERMISSI" +
-      "ON_WRITE\020\002\022\030\n\024PERMISSION_WRITE_ACP\020\003\022\023\n\017" +
-      "PERMISSION_READ\020\004\022\027\n\023PERMISSION_READ_ACP" +
-      "\020\005\"\201\001\n\tGrantType\022\032\n\026GRANT_TYPE_UNSPECIFI" +
-      "ED\020\000\022\026\n\022GRANT_TYPE_ACCOUNT\020\001\022&\n\"GRANT_TY" +
-      "PE_ALL_AUTHENTICATED_USERS\020\002\022\030\n\024GRANT_TY" +
-      "PE_ALL_USERS\020\003\"\233\001\n\024AnonymousAccessFlags\022" +
-      "(\n\004read\030\001 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022(\n\004list\030\002 \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022/\n\013config_read\030\003 \001(\0132\032.google.protob" +
-      "uf.BoolValue\"\344\002\n\010CorsRule\022\n\n\002id\030\001 \001(\t\022M\n" +
-      "\017allowed_methods\030\002 \003(\0162(.yandex.cloud.st" +
-      "orage.v1.CorsRule.MethodB\n\202\3101\002>0\220\3101\001\022\027\n\017" +
-      "allowed_headers\030\003 \003(\t\022\037\n\017allowed_origins" +
-      "\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016expose_headers\030\005 \003(\t\0224" +
-      "\n\017max_age_seconds\030\006 \001(\0132\033.google.protobu" +
-      "f.Int64Value\"u\n\006Method\022\026\n\022METHOD_UNSPECI" +
-      "FIED\020\000\022\016\n\nMETHOD_GET\020\001\022\017\n\013METHOD_HEAD\020\002\022" +
-      "\017\n\013METHOD_POST\020\003\022\016\n\nMETHOD_PUT\020\004\022\021\n\rMETH" +
-      "OD_DELETE\020\005\"\274\006\n\017WebsiteSettings\022\r\n\005index" +
-      "\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\022N\n\025redirect_all_re" +
-      "quests\030\003 \001(\0132/.yandex.cloud.storage.v1.W" +
-      "ebsiteSettings.Scheme\022K\n\rrouting_rules\030\004" +
-      " \003(\01324.yandex.cloud.storage.v1.WebsiteSe" +
-      "ttings.RoutingRule\032_\n\006Scheme\022C\n\010protocol" +
-      "\030\001 \001(\01621.yandex.cloud.storage.v1.Website" +
-      "Settings.Protocol\022\020\n\010hostname\030\002 \001(\t\032O\n\tC" +
-      "ondition\022\'\n\037http_error_code_returned_equ" +
-      "als\030\001 \001(\t\022\031\n\021key_prefix_equals\030\002 \001(\t\032\322\001\n" +
-      "\010Redirect\022\020\n\010hostname\030\001 \001(\t\0224\n\022http_redi" +
-      "rect_code\030\002 \001(\tB\030\362\3071\0243(0[1-9]|[1-9][0-9]" +
-      ")\022C\n\010protocol\030\003 \001(\01621.yandex.cloud.stora" +
-      "ge.v1.WebsiteSettings.Protocol\022\037\n\027replac" +
-      "e_key_prefix_with\030\004 \001(\t\022\030\n\020replace_key_w" +
-      "ith\030\005 \001(\t\032\231\001\n\013RoutingRule\022E\n\tcondition\030\001" +
-      " \001(\01322.yandex.cloud.storage.v1.WebsiteSe" +
-      "ttings.Condition\022C\n\010redirect\030\002 \001(\01321.yan" +
-      "dex.cloud.storage.v1.WebsiteSettings.Red" +
-      "irect\"K\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIE" +
-      "D\020\000\022\021\n\rPROTOCOL_HTTP\020\001\022\022\n\016PROTOCOL_HTTPS" +
-      "\020\002\"\364\t\n\rLifecycleRule\022(\n\002id\030\001 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\022\017\n\007enabled\030\002 \001(\010\022" +
-      "A\n\006filter\030\003 \001(\01321.yandex.cloud.storage.v" +
-      "1.LifecycleRule.RuleFilter\022E\n\nexpiration" +
-      "\030\004 \001(\01321.yandex.cloud.storage.v1.Lifecyc" +
-      "leRule.Expiration\022F\n\013transitions\030\005 \003(\01321" +
-      ".yandex.cloud.storage.v1.LifecycleRule.T" +
-      "ransition\022[\n!abort_incomplete_multipart_" +
-      "upload\030\006 \001(\01320.yandex.cloud.storage.v1.L" +
-      "ifecycleRule.AfterDays\022Z\n\025noncurrent_exp" +
-      "iration\030\007 \001(\0132;.yandex.cloud.storage.v1." +
-      "LifecycleRule.NoncurrentExpiration\022[\n\026no" +
-      "ncurrent_transitions\030\010 \003(\0132;.yandex.clou" +
-      "d.storage.v1.LifecycleRule.NoncurrentTra" +
-      "nsition\032G\n\tAfterDays\022:\n\025days_after_expir" +
-      "ation\030\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "\032L\n\024NoncurrentExpiration\0224\n\017noncurrent_d" +
-      "ays\030\001 \001(\0132\033.google.protobuf.Int64Value\032i" +
-      "\n\024NoncurrentTransition\0224\n\017noncurrent_day" +
-      "s\030\001 \001(\0132\033.google.protobuf.Int64Value\022\033\n\r" +
-      "storage_class\030\002 \001(\tB\004\350\3071\001\032~\n\nTransition\022" +
-      "(\n\004date\030\001 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022)\n\004days\030\002 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022\033\n\rstorage_class\030\004 \001(\tB\004\350\3071\001\032\243\001\n\nEx" +
-      "piration\022(\n\004date\030\001 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022)\n\004days\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022@\n\034expired_object_delete_m" +
-      "arker\030\003 \001(\0132\032.google.protobuf.BoolValue\032" +
-      "\227\001\n\nRuleFilter\022\016\n\006prefix\030\001 \001(\t\022=\n\030object" +
-      "_size_greater_than\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022:\n\025object_size_less_than\030\003" +
-      " \001(\0132\033.google.protobuf.Int64Value\"\335\001\n\010Co" +
-      "unters\022\032\n\022simple_object_size\030\001 \001(\003\022\033\n\023si" +
-      "mple_object_count\030\002 \001(\003\022\032\n\022objects_parts" +
-      "_size\030\003 \001(\003\022\033\n\023objects_parts_count\030\004 \001(\003" +
-      "\022\036\n\026multipart_objects_size\030\005 \001(\003\022\037\n\027mult" +
-      "ipart_objects_count\030\006 \001(\003\022\036\n\026active_mult" +
-      "ipart_count\030\007 \001(\003\"]\n\023OptionalSizeByClass" +
-      "\022\025\n\rstorage_class\030\001 \001(\t\022/\n\nclass_size\030\002 " +
-      "\001(\0132\033.google.protobuf.Int64Value\"8\n\013Size" +
-      "ByClass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n\nclass_" +
-      "size\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\rstorage" +
-      "_class\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!.yandex." +
-      "cloud.storage.v1.Counters\"\252\004\n\013BucketStat" +
-      "s\022\014\n\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022\021\n\tused_size\030\003 \001(" +
-      "\003\022M\n\027storage_class_max_sizes\030\004 \003(\0132,.yan" +
-      "dex.cloud.storage.v1.OptionalSizeByClass" +
-      "\022F\n\030storage_class_used_sizes\030\005 \003(\0132$.yan" +
-      "dex.cloud.storage.v1.SizeByClass\022H\n\026stor" +
-      "age_class_counters\030\006 \003(\0132(.yandex.cloud." +
-      "storage.v1.CountersByClass\022;\n\025default_st" +
-      "orage_class\030\007 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022M\n\026anonymous_access_flags\030\010 \001(\0132" +
-      "-.yandex.cloud.storage.v1.AnonymousAcces" +
-      "sFlags\022.\n\ncreated_at\030\t \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022.\n\nupdated_at\030\n \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"\301\003\n\013HTTPSConfig\022\014" +
-      "\n\004name\030\001 \001(\t\022D\n\013source_type\030\002 \001(\0162/.yand" +
-      "ex.cloud.storage.v1.HTTPSConfig.SourceTy" +
-      "pe\022,\n\006issuer\030\003 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\022-\n\007subject\030\004 \001(\0132\034.google.proto" +
-      "buf.StringValue\022\021\n\tdns_names\030\005 \003(\t\022.\n\nno" +
-      "t_before\030\006 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022-\n\tnot_after\030\007 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\026\n\016certificate_id\030\010 \001(\t\"w\n\nSou" +
-      "rceType\022\033\n\027SOURCE_TYPE_UNSPECIFIED\020\000\022\034\n\030" +
-      "SOURCE_TYPE_SELF_MANAGED\020\001\022.\n*SOURCE_TYP" +
-      "E_MANAGED_BY_CERTIFICATE_MANAGER\020\002\"\363\003\n\nO" +
-      "bjectLock\022D\n\006status\030\002 \001(\01624.yandex.cloud" +
-      ".storage.v1.ObjectLock.ObjectLockStatus\022" +
-      "O\n\021default_retention\030\003 \001(\01324.yandex.clou" +
-      "d.storage.v1.ObjectLock.DefaultRetention" +
-      "\032\324\001\n\020DefaultRetention\022G\n\004mode\030\001 \001(\01629.ya" +
-      "ndex.cloud.storage.v1.ObjectLock.Default" +
-      "Retention.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005years\030" +
-      "\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\023\n" +
-      "\017MODE_GOVERNANCE\020\001\022\023\n\017MODE_COMPLIANCE\020\002B" +
-      "\016\n\006period\022\004\300\3011\001\"w\n\020ObjectLockStatus\022\"\n\036O" +
-      "BJECT_LOCK_STATUS_UNSPECIFIED\020\000\022\037\n\033OBJEC" +
-      "T_LOCK_STATUS_DISABLED\020\001\022\036\n\032OBJECT_LOCK_" +
-      "STATUS_ENABLED\020\002*s\n\nVersioning\022\032\n\026VERSIO" +
-      "NING_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISABLE" +
-      "D\020\001\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSIONIN" +
-      "G_SUSPENDED\020\003Bb\n\033yandex.cloud.api.storag" +
-      "e.v1ZCgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/storage/v1;storageb\006proto" +
-      "3"
+      "ctLock\0227\n\nencryption\030\020 \001(\0132#.yandex.clou" +
+      "d.storage.v1.Encryption\"!\n\003Tag\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t\"\222\004\n\003ACL\0222\n\006grants\030\001 \003" +
+      "(\0132\".yandex.cloud.storage.v1.ACL.Grant\032\326" +
+      "\003\n\005Grant\022G\n\npermission\030\001 \001(\0162-.yandex.cl" +
+      "oud.storage.v1.ACL.Grant.PermissionB\004\350\3071" +
+      "\001\022F\n\ngrant_type\030\002 \001(\0162,.yandex.cloud.sto" +
+      "rage.v1.ACL.Grant.GrantTypeB\004\350\3071\001\022\022\n\ngra" +
+      "ntee_id\030\003 \001(\t\"\243\001\n\nPermission\022\032\n\026PERMISSI" +
+      "ON_UNSPECIFIED\020\000\022\033\n\027PERMISSION_FULL_CONT" +
+      "ROL\020\001\022\024\n\020PERMISSION_WRITE\020\002\022\030\n\024PERMISSIO" +
+      "N_WRITE_ACP\020\003\022\023\n\017PERMISSION_READ\020\004\022\027\n\023PE" +
+      "RMISSION_READ_ACP\020\005\"\201\001\n\tGrantType\022\032\n\026GRA" +
+      "NT_TYPE_UNSPECIFIED\020\000\022\026\n\022GRANT_TYPE_ACCO" +
+      "UNT\020\001\022&\n\"GRANT_TYPE_ALL_AUTHENTICATED_US" +
+      "ERS\020\002\022\030\n\024GRANT_TYPE_ALL_USERS\020\003\"\233\001\n\024Anon" +
+      "ymousAccessFlags\022(\n\004read\030\001 \001(\0132\032.google." +
+      "protobuf.BoolValue\022(\n\004list\030\002 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\022/\n\013config_read\030\003 \001(" +
+      "\0132\032.google.protobuf.BoolValue\"\344\002\n\010CorsRu" +
+      "le\022\n\n\002id\030\001 \001(\t\022M\n\017allowed_methods\030\002 \003(\0162" +
+      "(.yandex.cloud.storage.v1.CorsRule.Metho" +
+      "dB\n\202\3101\002>0\220\3101\001\022\027\n\017allowed_headers\030\003 \003(\t\022\037" +
+      "\n\017allowed_origins\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016expos" +
+      "e_headers\030\005 \003(\t\0224\n\017max_age_seconds\030\006 \001(\013" +
+      "2\033.google.protobuf.Int64Value\"u\n\006Method\022" +
+      "\026\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_GET\020\001\022" +
+      "\017\n\013METHOD_HEAD\020\002\022\017\n\013METHOD_POST\020\003\022\016\n\nMET" +
+      "HOD_PUT\020\004\022\021\n\rMETHOD_DELETE\020\005\"\274\006\n\017Website" +
+      "Settings\022\r\n\005index\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\022N" +
+      "\n\025redirect_all_requests\030\003 \001(\0132/.yandex.c" +
+      "loud.storage.v1.WebsiteSettings.Scheme\022K" +
+      "\n\rrouting_rules\030\004 \003(\01324.yandex.cloud.sto" +
+      "rage.v1.WebsiteSettings.RoutingRule\032_\n\006S" +
+      "cheme\022C\n\010protocol\030\001 \001(\01621.yandex.cloud.s" +
+      "torage.v1.WebsiteSettings.Protocol\022\020\n\010ho" +
+      "stname\030\002 \001(\t\032O\n\tCondition\022\'\n\037http_error_" +
+      "code_returned_equals\030\001 \001(\t\022\031\n\021key_prefix" +
+      "_equals\030\002 \001(\t\032\322\001\n\010Redirect\022\020\n\010hostname\030\001" +
+      " \001(\t\0224\n\022http_redirect_code\030\002 \001(\tB\030\362\3071\0243(" +
+      "0[1-9]|[1-9][0-9])\022C\n\010protocol\030\003 \001(\01621.y" +
+      "andex.cloud.storage.v1.WebsiteSettings.P" +
+      "rotocol\022\037\n\027replace_key_prefix_with\030\004 \001(\t" +
+      "\022\030\n\020replace_key_with\030\005 \001(\t\032\231\001\n\013RoutingRu" +
+      "le\022E\n\tcondition\030\001 \001(\01322.yandex.cloud.sto" +
+      "rage.v1.WebsiteSettings.Condition\022C\n\010red" +
+      "irect\030\002 \001(\01321.yandex.cloud.storage.v1.We" +
+      "bsiteSettings.Redirect\"K\n\010Protocol\022\030\n\024PR" +
+      "OTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HTTP\020\001\022" +
+      "\022\n\016PROTOCOL_HTTPS\020\002\"\364\t\n\rLifecycleRule\022(\n" +
+      "\002id\030\001 \001(\0132\034.google.protobuf.StringValue\022" +
+      "\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321.yande" +
+      "x.cloud.storage.v1.LifecycleRule.RuleFil" +
+      "ter\022E\n\nexpiration\030\004 \001(\01321.yandex.cloud.s" +
+      "torage.v1.LifecycleRule.Expiration\022F\n\013tr" +
+      "ansitions\030\005 \003(\01321.yandex.cloud.storage.v" +
+      "1.LifecycleRule.Transition\022[\n!abort_inco" +
+      "mplete_multipart_upload\030\006 \001(\01320.yandex.c" +
+      "loud.storage.v1.LifecycleRule.AfterDays\022" +
+      "Z\n\025noncurrent_expiration\030\007 \001(\0132;.yandex." +
+      "cloud.storage.v1.LifecycleRule.Noncurren" +
+      "tExpiration\022[\n\026noncurrent_transitions\030\010 " +
+      "\003(\0132;.yandex.cloud.storage.v1.LifecycleR" +
+      "ule.NoncurrentTransition\032G\n\tAfterDays\022:\n" +
+      "\025days_after_expiration\030\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\032L\n\024NoncurrentExpiratio" +
+      "n\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\032i\n\024NoncurrentTransition\022" +
+      "4\n\017noncurrent_days\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022\033\n\rstorage_class\030\002 \001(\tB\004\350\307" +
+      "1\001\032~\n\nTransition\022(\n\004date\030\001 \001(\0132\032.google." +
+      "protobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022\033\n\rstorage_class\030\004" +
+      " \001(\tB\004\350\3071\001\032\243\001\n\nExpiration\022(\n\004date\030\001 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022)\n\004days\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022@\n\034expire" +
+      "d_object_delete_marker\030\003 \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\032\227\001\n\nRuleFilter\022\016\n\006prefi" +
+      "x\030\001 \001(\t\022=\n\030object_size_greater_than\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022:\n\025object" +
+      "_size_less_than\030\003 \001(\0132\033.google.protobuf." +
+      "Int64Value\"\335\001\n\010Counters\022\032\n\022simple_object" +
+      "_size\030\001 \001(\003\022\033\n\023simple_object_count\030\002 \001(\003" +
+      "\022\032\n\022objects_parts_size\030\003 \001(\003\022\033\n\023objects_" +
+      "parts_count\030\004 \001(\003\022\036\n\026multipart_objects_s" +
+      "ize\030\005 \001(\003\022\037\n\027multipart_objects_count\030\006 \001" +
+      "(\003\022\036\n\026active_multipart_count\030\007 \001(\003\"]\n\023Op" +
+      "tionalSizeByClass\022\025\n\rstorage_class\030\001 \001(\t" +
+      "\022/\n\nclass_size\030\002 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\"8\n\013SizeByClass\022\025\n\rstorage_clas" +
+      "s\030\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"]\n\017CountersB" +
+      "yClass\022\025\n\rstorage_class\030\001 \001(\t\0223\n\010counter" +
+      "s\030\002 \001(\0132!.yandex.cloud.storage.v1.Counte" +
+      "rs\"\252\004\n\013BucketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_" +
+      "size\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "\021\n\tused_size\030\003 \001(\003\022M\n\027storage_class_max_" +
+      "sizes\030\004 \003(\0132,.yandex.cloud.storage.v1.Op" +
+      "tionalSizeByClass\022F\n\030storage_class_used_" +
+      "sizes\030\005 \003(\0132$.yandex.cloud.storage.v1.Si" +
+      "zeByClass\022H\n\026storage_class_counters\030\006 \003(" +
+      "\0132(.yandex.cloud.storage.v1.CountersByCl" +
+      "ass\022;\n\025default_storage_class\030\007 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022M\n\026anonymous_ac" +
+      "cess_flags\030\010 \001(\0132-.yandex.cloud.storage." +
+      "v1.AnonymousAccessFlags\022.\n\ncreated_at\030\t " +
+      "\001(\0132\032.google.protobuf.Timestamp\022.\n\nupdat" +
+      "ed_at\030\n \001(\0132\032.google.protobuf.Timestamp\"" +
+      "\301\003\n\013HTTPSConfig\022\014\n\004name\030\001 \001(\t\022D\n\013source_" +
+      "type\030\002 \001(\0162/.yandex.cloud.storage.v1.HTT" +
+      "PSConfig.SourceType\022,\n\006issuer\030\003 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022-\n\007subject\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\022\021\n\tdns_" +
+      "names\030\005 \003(\t\022.\n\nnot_before\030\006 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022-\n\tnot_after\030\007 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022\026\n\016certificat" +
+      "e_id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027SOURCE_TYPE_" +
+      "UNSPECIFIED\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAGE" +
+      "D\020\001\022.\n*SOURCE_TYPE_MANAGED_BY_CERTIFICAT" +
+      "E_MANAGER\020\002\"\363\003\n\nObjectLock\022D\n\006status\030\002 \001" +
+      "(\01624.yandex.cloud.storage.v1.ObjectLock." +
+      "ObjectLockStatus\022O\n\021default_retention\030\003 " +
+      "\001(\01324.yandex.cloud.storage.v1.ObjectLock" +
+      ".DefaultRetention\032\324\001\n\020DefaultRetention\022G" +
+      "\n\004mode\030\001 \001(\01629.yandex.cloud.storage.v1.O" +
+      "bjectLock.DefaultRetention.Mode\022\016\n\004days\030" +
+      "\002 \001(\003H\000\022\017\n\005years\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE" +
+      "_UNSPECIFIED\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017M" +
+      "ODE_COMPLIANCE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020Obje" +
+      "ctLockStatus\022\"\n\036OBJECT_LOCK_STATUS_UNSPE" +
+      "CIFIED\020\000\022\037\n\033OBJECT_LOCK_STATUS_DISABLED\020" +
+      "\001\022\036\n\032OBJECT_LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEn" +
+      "cryption\022A\n\005rules\030\001 \003(\01322.yandex.cloud.s" +
+      "torage.v1.Encryption.EncryptionRule\032B\n\016E" +
+      "ncryptionRule\022\031\n\021kms_master_key_id\030\001 \001(\t" +
+      "\022\025\n\rsse_algorithm\030\002 \001(\t*s\n\nVersioning\022\032\n" +
+      "\026VERSIONING_UNSPECIFIED\020\000\022\027\n\023VERSIONING_" +
+      "DISABLED\020\001\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VE" +
+      "RSIONING_SUSPENDED\020\003Bb\n\033yandex.cloud.api" +
+      ".storage.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/storage/v1;storage" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37979,7 +39783,7 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_Bucket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_Bucket_descriptor,
-        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", });
+        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", "Encryption", });
     internal_static_yandex_cloud_storage_v1_Tag_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_storage_v1_Tag_fieldAccessorTable = new
@@ -38130,6 +39934,18 @@ public final class BucketOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_ObjectLock_DefaultRetention_descriptor,
         new java.lang.String[] { "Mode", "Days", "Years", "Period", });
+    internal_static_yandex_cloud_storage_v1_Encryption_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_storage_v1_Encryption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_Encryption_descriptor,
+        new java.lang.String[] { "Rules", });
+    internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_descriptor =
+      internal_static_yandex_cloud_storage_v1_Encryption_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_Encryption_EncryptionRule_descriptor,
+        new java.lang.String[] { "KmsMasterKeyId", "SseAlgorithm", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

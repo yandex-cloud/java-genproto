@@ -3308,6 +3308,16 @@ public final class FederationOuterClass {
      * @return The encryptedAssertions.
      */
     boolean getEncryptedAssertions();
+
+    /**
+     * <pre>
+     * Value parameter ForceAuthn in SAMLRequest.
+     * </pre>
+     *
+     * <code>bool force_authn = 2;</code>
+     * @return The forceAuthn.
+     */
+    boolean getForceAuthn();
   }
   /**
    * <pre>
@@ -3363,6 +3373,11 @@ public final class FederationOuterClass {
               encryptedAssertions_ = input.readBool();
               break;
             }
+            case 16: {
+
+              forceAuthn_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3410,6 +3425,21 @@ public final class FederationOuterClass {
       return encryptedAssertions_;
     }
 
+    public static final int FORCE_AUTHN_FIELD_NUMBER = 2;
+    private boolean forceAuthn_;
+    /**
+     * <pre>
+     * Value parameter ForceAuthn in SAMLRequest.
+     * </pre>
+     *
+     * <code>bool force_authn = 2;</code>
+     * @return The forceAuthn.
+     */
+    @java.lang.Override
+    public boolean getForceAuthn() {
+      return forceAuthn_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3427,6 +3457,9 @@ public final class FederationOuterClass {
       if (encryptedAssertions_ != false) {
         output.writeBool(1, encryptedAssertions_);
       }
+      if (forceAuthn_ != false) {
+        output.writeBool(2, forceAuthn_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3439,6 +3472,10 @@ public final class FederationOuterClass {
       if (encryptedAssertions_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, encryptedAssertions_);
+      }
+      if (forceAuthn_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, forceAuthn_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3457,6 +3494,8 @@ public final class FederationOuterClass {
 
       if (getEncryptedAssertions()
           != other.getEncryptedAssertions()) return false;
+      if (getForceAuthn()
+          != other.getForceAuthn()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3471,6 +3510,9 @@ public final class FederationOuterClass {
       hash = (37 * hash) + ENCRYPTED_ASSERTIONS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEncryptedAssertions());
+      hash = (37 * hash) + FORCE_AUTHN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getForceAuthn());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3610,6 +3652,8 @@ public final class FederationOuterClass {
         super.clear();
         encryptedAssertions_ = false;
 
+        forceAuthn_ = false;
+
         return this;
       }
 
@@ -3637,6 +3681,7 @@ public final class FederationOuterClass {
       public yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings buildPartial() {
         yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings result = new yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings(this);
         result.encryptedAssertions_ = encryptedAssertions_;
+        result.forceAuthn_ = forceAuthn_;
         onBuilt();
         return result;
       }
@@ -3687,6 +3732,9 @@ public final class FederationOuterClass {
         if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.FederationSecuritySettings.getDefaultInstance()) return this;
         if (other.getEncryptedAssertions() != false) {
           setEncryptedAssertions(other.getEncryptedAssertions());
+        }
+        if (other.getForceAuthn() != false) {
+          setForceAuthn(other.getForceAuthn());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3756,6 +3804,49 @@ public final class FederationOuterClass {
       public Builder clearEncryptedAssertions() {
         
         encryptedAssertions_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean forceAuthn_ ;
+      /**
+       * <pre>
+       * Value parameter ForceAuthn in SAMLRequest.
+       * </pre>
+       *
+       * <code>bool force_authn = 2;</code>
+       * @return The forceAuthn.
+       */
+      @java.lang.Override
+      public boolean getForceAuthn() {
+        return forceAuthn_;
+      }
+      /**
+       * <pre>
+       * Value parameter ForceAuthn in SAMLRequest.
+       * </pre>
+       *
+       * <code>bool force_authn = 2;</code>
+       * @param value The forceAuthn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForceAuthn(boolean value) {
+        
+        forceAuthn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value parameter ForceAuthn in SAMLRequest.
+       * </pre>
+       *
+       * <code>bool force_authn = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForceAuthn() {
+        
+        forceAuthn_ = false;
         onChanged();
         return this;
       }
@@ -3858,14 +3949,15 @@ public final class FederationOuterClass {
       "e_ids\030\014 \001(\010\022P\n\006labels\030\r \003(\0132@.yandex.clo" +
       "ud.organizationmanager.v1.saml.Federatio" +
       "n.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\032FederationSecuri" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"O\n\032FederationSecuri" +
       "tySettings\022\034\n\024encrypted_assertions\030\001 \001(\010" +
-      "*Q\n\013BindingType\022\034\n\030BINDING_TYPE_UNSPECIF" +
-      "IED\020\000\022\010\n\004POST\020\001\022\014\n\010REDIRECT\020\002\022\014\n\010ARTIFAC" +
-      "T\020\003B\201\001\n,yandex.cloud.api.organizationman" +
-      "ager.v1.samlZQgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/organizationmanag" +
-      "er/v1/saml;samlb\006proto3"
+      "\022\023\n\013force_authn\030\002 \001(\010*Q\n\013BindingType\022\034\n\030" +
+      "BINDING_TYPE_UNSPECIFIED\020\000\022\010\n\004POST\020\001\022\014\n\010" +
+      "REDIRECT\020\002\022\014\n\010ARTIFACT\020\003B\201\001\n,yandex.clou" +
+      "d.api.organizationmanager.v1.samlZQgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/organizationmanager/v1/saml;samlb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3891,7 +3983,7 @@ public final class FederationOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_FederationSecuritySettings_descriptor,
-        new java.lang.String[] { "EncryptedAssertions", });
+        new java.lang.String[] { "EncryptedAssertions", "ForceAuthn", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
