@@ -16737,6 +16737,31 @@ public final class TriggerOuterClass {
           getResourceIdBytes(int index);
 
       /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the streamName.
+       */
+      java.util.List<java.lang.String>
+          getStreamNameList();
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of streamName.
+       */
+      int getStreamNameCount();
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The streamName at the given index.
+       */
+      java.lang.String getStreamName(int index);
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the streamName at the given index.
+       */
+      com.google.protobuf.ByteString
+          getStreamNameBytes(int index);
+
+      /**
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 5 [(.yandex.cloud.size) = "&lt;=10"];</code>
        * @return A list containing the levels.
        */
@@ -16864,6 +16889,7 @@ public final class TriggerOuterClass {
         logGroupId_ = "";
         resourceType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         resourceId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        streamName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         levels_ = java.util.Collections.emptyList();
       }
 
@@ -16924,9 +16950,9 @@ public final class TriggerOuterClass {
               }
               case 40: {
                 int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                   levels_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000004;
+                  mutable_bitField0_ |= 0x00000008;
                 }
                 levels_.add(rawValue);
                 break;
@@ -16936,9 +16962,9 @@ public final class TriggerOuterClass {
                 int oldLimit = input.pushLimit(length);
                 while(input.getBytesUntilLimit() > 0) {
                   int rawValue = input.readEnum();
-                  if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                     levels_ = new java.util.ArrayList<java.lang.Integer>();
-                    mutable_bitField0_ |= 0x00000004;
+                    mutable_bitField0_ |= 0x00000008;
                   }
                   levels_.add(rawValue);
                 }
@@ -16956,6 +16982,15 @@ public final class TriggerOuterClass {
                   batchSettings_ = subBuilder.buildPartial();
                 }
 
+                break;
+              }
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  streamName_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                streamName_.add(s);
                 break;
               }
               case 810: {
@@ -17007,8 +17042,11 @@ public final class TriggerOuterClass {
           if (((mutable_bitField0_ & 0x00000002) != 0)) {
             resourceId_ = resourceId_.getUnmodifiableView();
           }
-          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          if (((mutable_bitField0_ & 0x00000008) != 0)) {
             levels_ = java.util.Collections.unmodifiableList(levels_);
+          }
+          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+            streamName_ = streamName_.getUnmodifiableView();
           }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
@@ -17182,6 +17220,41 @@ public final class TriggerOuterClass {
       public com.google.protobuf.ByteString
           getResourceIdBytes(int index) {
         return resourceId_.getByteString(index);
+      }
+
+      public static final int STREAM_NAME_FIELD_NUMBER = 7;
+      private com.google.protobuf.LazyStringList streamName_;
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return A list containing the streamName.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStreamNameList() {
+        return streamName_;
+      }
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @return The count of streamName.
+       */
+      public int getStreamNameCount() {
+        return streamName_.size();
+      }
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the element to return.
+       * @return The streamName at the given index.
+       */
+      public java.lang.String getStreamName(int index) {
+        return streamName_.get(index);
+      }
+      /**
+       * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the streamName at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStreamNameBytes(int index) {
+        return streamName_.getByteString(index);
       }
 
       public static final int LEVELS_FIELD_NUMBER = 5;
@@ -17400,6 +17473,9 @@ public final class TriggerOuterClass {
         if (batchSettings_ != null) {
           output.writeMessage(6, getBatchSettings());
         }
+        for (int i = 0; i < streamName_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 7, streamName_.getRaw(i));
+        }
         if (actionCase_ == 101) {
           output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
         }
@@ -17450,6 +17526,14 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, getBatchSettings());
         }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < streamName_.size(); i++) {
+            dataSize += computeStringSizeNoTag(streamName_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getStreamNameList().size();
+        }
         if (actionCase_ == 101) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
@@ -17479,6 +17563,8 @@ public final class TriggerOuterClass {
             .equals(other.getResourceTypeList())) return false;
         if (!getResourceIdList()
             .equals(other.getResourceIdList())) return false;
+        if (!getStreamNameList()
+            .equals(other.getStreamNameList())) return false;
         if (!levels_.equals(other.levels_)) return false;
         if (hasBatchSettings() != other.hasBatchSettings()) return false;
         if (hasBatchSettings()) {
@@ -17518,6 +17604,10 @@ public final class TriggerOuterClass {
         if (getResourceIdCount() > 0) {
           hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
           hash = (53 * hash) + getResourceIdList().hashCode();
+        }
+        if (getStreamNameCount() > 0) {
+          hash = (37 * hash) + STREAM_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getStreamNameList().hashCode();
         }
         if (getLevelsCount() > 0) {
           hash = (37 * hash) + LEVELS_FIELD_NUMBER;
@@ -17678,8 +17768,10 @@ public final class TriggerOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
           resourceId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000002);
-          levels_ = java.util.Collections.emptyList();
+          streamName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000004);
+          levels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
           if (batchSettingsBuilder_ == null) {
             batchSettings_ = null;
           } else {
@@ -17727,8 +17819,13 @@ public final class TriggerOuterClass {
           }
           result.resourceId_ = resourceId_;
           if (((bitField0_ & 0x00000004) != 0)) {
-            levels_ = java.util.Collections.unmodifiableList(levels_);
+            streamName_ = streamName_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.streamName_ = streamName_;
+          if (((bitField0_ & 0x00000008) != 0)) {
+            levels_ = java.util.Collections.unmodifiableList(levels_);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.levels_ = levels_;
           if (batchSettingsBuilder_ == null) {
@@ -17823,10 +17920,20 @@ public final class TriggerOuterClass {
             }
             onChanged();
           }
+          if (!other.streamName_.isEmpty()) {
+            if (streamName_.isEmpty()) {
+              streamName_ = other.streamName_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureStreamNameIsMutable();
+              streamName_.addAll(other.streamName_);
+            }
+            onChanged();
+          }
           if (!other.levels_.isEmpty()) {
             if (levels_.isEmpty()) {
               levels_ = other.levels_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureLevelsIsMutable();
               levels_.addAll(other.levels_);
@@ -18210,12 +18317,122 @@ public final class TriggerOuterClass {
           return this;
         }
 
+        private com.google.protobuf.LazyStringList streamName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureStreamNameIsMutable() {
+          if (!((bitField0_ & 0x00000004) != 0)) {
+            streamName_ = new com.google.protobuf.LazyStringArrayList(streamName_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return A list containing the streamName.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getStreamNameList() {
+          return streamName_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return The count of streamName.
+         */
+        public int getStreamNameCount() {
+          return streamName_.size();
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index of the element to return.
+         * @return The streamName at the given index.
+         */
+        public java.lang.String getStreamName(int index) {
+          return streamName_.get(index);
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the streamName at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getStreamNameBytes(int index) {
+          return streamName_.getByteString(index);
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param index The index to set the value at.
+         * @param value The streamName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStreamName(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamNameIsMutable();
+          streamName_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param value The streamName to add.
+         * @return This builder for chaining.
+         */
+        public Builder addStreamName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStreamNameIsMutable();
+          streamName_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param values The streamName to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllStreamName(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureStreamNameIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, streamName_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStreamName() {
+          streamName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string stream_name = 7 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]", (.yandex.cloud.size) = "&lt;=100"];</code>
+         * @param value The bytes of the streamName to add.
+         * @return This builder for chaining.
+         */
+        public Builder addStreamNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureStreamNameIsMutable();
+          streamName_.add(value);
+          onChanged();
+          return this;
+        }
+
         private java.util.List<java.lang.Integer> levels_ =
           java.util.Collections.emptyList();
         private void ensureLevelsIsMutable() {
-          if (!((bitField0_ & 0x00000004) != 0)) {
+          if (!((bitField0_ & 0x00000008) != 0)) {
             levels_ = new java.util.ArrayList<java.lang.Integer>(levels_);
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000008;
           }
         }
         /**
@@ -18291,7 +18508,7 @@ public final class TriggerOuterClass {
          */
         public Builder clearLevels() {
           levels_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
           return this;
         }
@@ -34969,7 +35186,7 @@ public final class TriggerOuterClass {
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\'yande" +
       "x/cloud/logging/v1/log_entry.proto\032\035yand" +
-      "ex/cloud/validation.proto\"\242%\n\007Trigger\022\n\n" +
+      "ex/cloud/validation.proto\"\343%\n\007Trigger\022\n\n" +
       "\002id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013de" +
@@ -35062,98 +35279,100 @@ public final class TriggerOuterClass {
       "nvokeFunctionWithRetryH\000\022Y\n\020invoke_conta" +
       "iner\030f \001(\0132=.yandex.cloud.serverless.tri" +
       "ggers.v1.InvokeContainerWithRetryH\000B\016\n\006a" +
-      "ction\022\004\300\3011\001\032\213\004\n\007Logging\022\036\n\014log_group_id\030" +
+      "ction\022\004\300\3011\001\032\314\004\n\007Logging\022\036\n\014log_group_id\030" +
       "\001 \001(\tB\010\212\3101\004<=50\022@\n\rresource_type\030\003 \003(\tB)" +
       "\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=10" +
       "0\022>\n\013resource_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-" +
-      "zA-Z0-9_.]{1,62}\202\3101\005<=100\022A\n\006levels\030\005 \003(" +
-      "\0162\'.yandex.cloud.logging.v1.LogLevel.Lev" +
-      "elB\010\202\3101\004<=10\022W\n\016batch_settings\030\006 \001(\01329.y" +
-      "andex.cloud.serverless.triggers.v1.Loggi" +
-      "ngBatchSettingsB\004\350\3071\001\022W\n\017invoke_function" +
-      "\030e \001(\0132<.yandex.cloud.serverless.trigger" +
-      "s.v1.InvokeFunctionWithRetryH\000\022Y\n\020invoke" +
-      "_container\030g \001(\0132=.yandex.cloud.serverle" +
-      "ss.triggers.v1.InvokeContainerWithRetryH" +
-      "\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectStorageEvent" +
-      "Type\022)\n%OBJECT_STORAGE_EVENT_TYPE_UNSPEC" +
-      "IFIED\020\000\022+\n\'OBJECT_STORAGE_EVENT_TYPE_CRE" +
-      "ATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE_EVENT_TYP" +
-      "E_UPDATE_OBJECT\020\002\022+\n\'OBJECT_STORAGE_EVEN" +
-      "T_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032ContainerRegi" +
-      "stryEventType\022-\n)CONTAINER_REGISTRY_EVEN" +
-      "T_TYPE_UNSPECIFIED\020\000\022.\n*CONTAINER_REGIST" +
-      "RY_EVENT_TYPE_CREATE_IMAGE\020\001\022.\n*CONTAINE" +
-      "R_REGISTRY_EVENT_TYPE_DELETE_IMAGE\020\002\0222\n." +
-      "CONTAINER_REGISTRY_EVENT_TYPE_CREATE_IMA" +
-      "GE_TAG\020\003\0222\n.CONTAINER_REGISTRY_EVENT_TYP" +
-      "E_DELETE_IMAGE_TAG\020\004\"8\n\006Status\022\026\n\022STATUS" +
-      "_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006PAUSED\020\002\"i" +
-      "\n\022InvokeFunctionOnce\022!\n\013function_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022\032\n" +
-      "\022service_account_id\030\003 \001(\t\"\213\002\n\027InvokeFunc" +
-      "tionWithRetry\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022servic" +
-      "e_account_id\030\003 \001(\t\022J\n\016retry_settings\030\004 \001" +
-      "(\01322.yandex.cloud.serverless.triggers.v1" +
-      ".RetrySettings\022O\n\021dead_letter_queue\030\005 \001(" +
-      "\01324.yandex.cloud.serverless.triggers.v1." +
-      "PutQueueMessage\"c\n\023InvokeContainerOnce\022\"" +
-      "\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004pa" +
-      "th\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\"\205\002\n" +
-      "\030InvokeContainerWithRetry\022\"\n\014container_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022s" +
-      "ervice_account_id\030\004 \001(\t\022J\n\016retry_setting" +
-      "s\030\005 \001(\01322.yandex.cloud.serverless.trigge" +
-      "rs.v1.RetrySettings\022O\n\021dead_letter_queue" +
-      "\030\006 \001(\01324.yandex.cloud.serverless.trigger" +
-      "s.v1.PutQueueMessage\"M\n\017PutQueueMessage\022" +
-      "\020\n\010queue_id\030\013 \001(\t\022(\n\022service_account_id\030" +
-      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatchSettings\022\026\n\004" +
-      "size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.DurationB\004\350\3071\001\"g\n\026CloudLo" +
-      "gsBatchSettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\0050-100" +
-      "\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf.Durat" +
-      "ionB\t\372\3071\0051s-1m\"e\n\024LoggingBatchSettings\022\027" +
-      "\n\004size\030\001 \001(\003B\t\372\3071\0051-100\0224\n\006cutoff\030\002 \001(\0132" +
-      "\031.google.protobuf.DurationB\t\372\3071\0051s-1m\"m\n" +
-      "\rRetrySettings\022\037\n\016retry_attempts\030\001 \001(\003B\007" +
-      "\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.google.proto" +
-      "buf.DurationB\016\372\3071\00610s-1m\350\3071\001\"\232\002\n\rBilling" +
-      "Budget\022(\n\022billing_account_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n" +
-      "\017invoke_function\030e \001(\0132<.yandex.cloud.se" +
-      "rverless.triggers.v1.InvokeFunctionWithR" +
-      "etryH\000\022Y\n\020invoke_container\030g \001(\0132=.yande" +
-      "x.cloud.serverless.triggers.v1.InvokeCon" +
-      "tainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\"j\n\027Dat" +
-      "aStreamBatchSettings\022\031\n\004size\030\001 \001(\003B\013\372\3071\007" +
-      "1-65536\0224\n\006cutoff\030\002 \001(\0132\031.google.protobu" +
-      "f.DurationB\t\372\3071\0051s-1m\"\366\002\n\nDataStream\022\020\n\010" +
-      "endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(\t\022\016\n\006stre" +
-      "am\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022T\n\016" +
-      "batch_settings\030\005 \001(\0132<.yandex.cloud.serv" +
-      "erless.triggers.v1.DataStreamBatchSettin" +
-      "gs\022W\n\017invoke_function\030\r \001(\0132<.yandex.clo" +
-      "ud.serverless.triggers.v1.InvokeFunction" +
-      "WithRetryH\000\022Y\n\020invoke_container\030\017 \001(\0132=." +
-      "yandex.cloud.serverless.triggers.v1.Invo" +
-      "keContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\"\331" +
-      "\001\n\004Mail\022\r\n\005email\030\002 \001(\t\022W\n\017invoke_functio" +
+      "zA-Z0-9_.]{1,62}\202\3101\005<=100\022?\n\013stream_name" +
+      "\030\007 \003(\tB*\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9" +
+      "]\202\3101\005<=100\022A\n\006levels\030\005 \003(\0162\'.yandex.clou" +
+      "d.logging.v1.LogLevel.LevelB\010\202\3101\004<=10\022W\n" +
+      "\016batch_settings\030\006 \001(\01329.yandex.cloud.ser" +
+      "verless.triggers.v1.LoggingBatchSettings" +
+      "B\004\350\3071\001\022W\n\017invoke_function\030e \001(\0132<.yandex" +
+      ".cloud.serverless.triggers.v1.InvokeFunc" +
+      "tionWithRetryH\000\022Y\n\020invoke_container\030g \001(" +
+      "\0132=.yandex.cloud.serverless.triggers.v1." +
+      "InvokeContainerWithRetryH\000B\016\n\006action\022\004\300\301" +
+      "1\001\"\312\001\n\026ObjectStorageEventType\022)\n%OBJECT_" +
+      "STORAGE_EVENT_TYPE_UNSPECIFIED\020\000\022+\n\'OBJE" +
+      "CT_STORAGE_EVENT_TYPE_CREATE_OBJECT\020\001\022+\n" +
+      "\'OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT" +
+      "\020\002\022+\n\'OBJECT_STORAGE_EVENT_TYPE_DELETE_O" +
+      "BJECT\020\003\"\223\002\n\032ContainerRegistryEventType\022-" +
+      "\n)CONTAINER_REGISTRY_EVENT_TYPE_UNSPECIF" +
+      "IED\020\000\022.\n*CONTAINER_REGISTRY_EVENT_TYPE_C" +
+      "REATE_IMAGE\020\001\022.\n*CONTAINER_REGISTRY_EVEN" +
+      "T_TYPE_DELETE_IMAGE\020\002\0222\n.CONTAINER_REGIS" +
+      "TRY_EVENT_TYPE_CREATE_IMAGE_TAG\020\003\0222\n.CON" +
+      "TAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_" +
+      "TAG\020\004\"8\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\n\n\006ACTIVE\020\001\022\n\n\006PAUSED\020\002\"i\n\022InvokeFunctio" +
+      "nOnce\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022service_accoun" +
+      "t_id\030\003 \001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!" +
+      "\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014fun" +
+      "ction_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 " +
+      "\001(\t\022J\n\016retry_settings\030\004 \001(\01322.yandex.clo" +
+      "ud.serverless.triggers.v1.RetrySettings\022" +
+      "O\n\021dead_letter_queue\030\005 \001(\01324.yandex.clou" +
+      "d.serverless.triggers.v1.PutQueueMessage" +
+      "\"c\n\023InvokeContainerOnce\022\"\n\014container_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022ser" +
+      "vice_account_id\030\004 \001(\t\"\205\002\n\030InvokeContaine" +
+      "rWithRetry\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_" +
+      "id\030\004 \001(\t\022J\n\016retry_settings\030\005 \001(\01322.yande" +
+      "x.cloud.serverless.triggers.v1.RetrySett" +
+      "ings\022O\n\021dead_letter_queue\030\006 \001(\01324.yandex" +
+      ".cloud.serverless.triggers.v1.PutQueueMe" +
+      "ssage\"M\n\017PutQueueMessage\022\020\n\010queue_id\030\013 \001" +
+      "(\t\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"X\n\rBatchSettings\022\026\n\004size\030\001 \001(\003B\010\372\3071" +
+      "\0040-10\022/\n\006cutoff\030\002 \001(\0132\031.google.protobuf." +
+      "DurationB\004\350\3071\001\"g\n\026CloudLogsBatchSettings" +
+      "\022\027\n\004size\030\001 \001(\003B\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(" +
+      "\0132\031.google.protobuf.DurationB\t\372\3071\0051s-1m\"" +
+      "e\n\024LoggingBatchSettings\022\027\n\004size\030\001 \001(\003B\t\372" +
+      "\3071\0051-100\0224\n\006cutoff\030\002 \001(\0132\031.google.protob" +
+      "uf.DurationB\t\372\3071\0051s-1m\"m\n\rRetrySettings\022" +
+      "\037\n\016retry_attempts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010inte" +
+      "rval\030\002 \001(\0132\031.google.protobuf.DurationB\016\372" +
+      "\3071\00610s-1m\350\3071\001\"\232\002\n\rBillingBudget\022(\n\022billi" +
+      "ng_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbud" +
+      "get_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n\017invoke_functio" +
       "n\030e \001(\0132<.yandex.cloud.serverless.trigge" +
       "rs.v1.InvokeFunctionWithRetryH\000\022Y\n\020invok" +
       "e_container\030g \001(\0132=.yandex.cloud.serverl" +
       "ess.triggers.v1.InvokeContainerWithRetry" +
-      "H\000B\016\n\006action\022\004\300\3011\001*\342\001\n\013TriggerType\022\034\n\030TR" +
-      "IGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rM" +
-      "ESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_B" +
-      "ROKER_MESSAGE\020\014\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022C" +
-      "ONTAINER_REGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007L" +
-      "OGGING\020\010\022\022\n\016BILLING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n" +
-      "\004MAIL\020\013B{\n\'yandex.cloud.api.serverless.t" +
-      "riggers.v1ZPgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/serverless/triggers" +
-      "/v1;triggersb\006proto3"
+      "H\000B\016\n\006action\022\004\300\3011\001\"j\n\027DataStreamBatchSet" +
+      "tings\022\031\n\004size\030\001 \001(\003B\013\372\3071\0071-65536\0224\n\006cuto" +
+      "ff\030\002 \001(\0132\031.google.protobuf.DurationB\t\372\3071" +
+      "\0051s-1m\"\366\002\n\nDataStream\022\020\n\010endpoint\030\001 \001(\t\022" +
+      "\020\n\010database\030\002 \001(\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022ser" +
+      "vice_account_id\030\004 \001(\t\022T\n\016batch_settings\030" +
+      "\005 \001(\0132<.yandex.cloud.serverless.triggers" +
+      ".v1.DataStreamBatchSettings\022W\n\017invoke_fu" +
+      "nction\030\r \001(\0132<.yandex.cloud.serverless.t" +
+      "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
+      "invoke_container\030\017 \001(\0132=.yandex.cloud.se" +
+      "rverless.triggers.v1.InvokeContainerWith" +
+      "RetryH\000B\016\n\006action\022\004\300\3011\001\"\331\001\n\004Mail\022\r\n\005emai" +
+      "l\030\002 \001(\t\022W\n\017invoke_function\030e \001(\0132<.yande" +
+      "x.cloud.serverless.triggers.v1.InvokeFun" +
+      "ctionWithRetryH\000\022Y\n\020invoke_container\030g \001" +
+      "(\0132=.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeContainerWithRetryH\000B\016\n\006action\022\004\300" +
+      "\3011\001*\342\001\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSP" +
+      "ECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022" +
+      "\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014" +
+      "\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGIST" +
+      "RY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BIL" +
+      "LING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yand" +
+      "ex.cloud.api.serverless.triggers.v1ZPgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/serverless/triggers/v1;triggersb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35228,7 +35447,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Logging_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Logging_descriptor,
-        new java.lang.String[] { "LogGroupId", "ResourceType", "ResourceId", "Levels", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "LogGroupId", "ResourceType", "ResourceId", "StreamName", "Levels", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_fieldAccessorTable = new
