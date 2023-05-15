@@ -107,6 +107,21 @@ public final class JobServiceOuterClass {
      */
     yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestDataEntryOrBuilder getDataPayloadOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+     * @return Whether the artifactUploadSettings field is set.
+     */
+    boolean hasArtifactUploadSettings();
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+     * @return The artifactUploadSettings.
+     */
+    yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings getArtifactUploadSettings();
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+     */
+    yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder getArtifactUploadSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.Job}
@@ -209,6 +224,19 @@ public final class JobServiceOuterClass {
               }
               dataPayload_.add(
                   input.readMessage(yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestDataEntry.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder subBuilder = null;
+              if (artifactUploadSettings_ != null) {
+                subBuilder = artifactUploadSettings_.toBuilder();
+              }
+              artifactUploadSettings_ = input.readMessage(yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(artifactUploadSettings_);
+                artifactUploadSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -452,6 +480,32 @@ public final class JobServiceOuterClass {
       return dataPayload_.get(index);
     }
 
+    public static final int ARTIFACT_UPLOAD_SETTINGS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings artifactUploadSettings_;
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+     * @return Whether the artifactUploadSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasArtifactUploadSettings() {
+      return artifactUploadSettings_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+     * @return The artifactUploadSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings getArtifactUploadSettings() {
+      return artifactUploadSettings_ == null ? yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.getDefaultInstance() : artifactUploadSettings_;
+    }
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder getArtifactUploadSettingsOrBuilder() {
+      return getArtifactUploadSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -484,6 +538,9 @@ public final class JobServiceOuterClass {
       for (int i = 0; i < dataPayload_.size(); i++) {
         output.writeMessage(6, dataPayload_.get(i));
       }
+      if (artifactUploadSettings_ != null) {
+        output.writeMessage(7, getArtifactUploadSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -513,6 +570,10 @@ public final class JobServiceOuterClass {
       for (int i = 0; i < dataPayload_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, dataPayload_.get(i));
+      }
+      if (artifactUploadSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getArtifactUploadSettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -547,6 +608,11 @@ public final class JobServiceOuterClass {
       }
       if (!getDataPayloadList()
           .equals(other.getDataPayloadList())) return false;
+      if (hasArtifactUploadSettings() != other.hasArtifactUploadSettings()) return false;
+      if (hasArtifactUploadSettings()) {
+        if (!getArtifactUploadSettings()
+            .equals(other.getArtifactUploadSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -575,6 +641,10 @@ public final class JobServiceOuterClass {
       if (getDataPayloadCount() > 0) {
         hash = (37 * hash) + DATA_PAYLOAD_FIELD_NUMBER;
         hash = (53 * hash) + getDataPayloadList().hashCode();
+      }
+      if (hasArtifactUploadSettings()) {
+        hash = (37 * hash) + ARTIFACT_UPLOAD_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getArtifactUploadSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -734,6 +804,12 @@ public final class JobServiceOuterClass {
         } else {
           dataPayloadBuilder_.clear();
         }
+        if (artifactUploadSettingsBuilder_ == null) {
+          artifactUploadSettings_ = null;
+        } else {
+          artifactUploadSettings_ = null;
+          artifactUploadSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -782,6 +858,11 @@ public final class JobServiceOuterClass {
           result.dataPayload_ = dataPayload_;
         } else {
           result.dataPayload_ = dataPayloadBuilder_.build();
+        }
+        if (artifactUploadSettingsBuilder_ == null) {
+          result.artifactUploadSettings_ = artifactUploadSettings_;
+        } else {
+          result.artifactUploadSettings_ = artifactUploadSettingsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -874,6 +955,9 @@ public final class JobServiceOuterClass {
               dataPayloadBuilder_.addAllMessages(other.dataPayload_);
             }
           }
+        }
+        if (other.hasArtifactUploadSettings()) {
+          mergeArtifactUploadSettings(other.getArtifactUploadSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1609,6 +1693,125 @@ public final class JobServiceOuterClass {
           dataPayload_ = null;
         }
         return dataPayloadBuilder_;
+      }
+
+      private yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings artifactUploadSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder> artifactUploadSettingsBuilder_;
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       * @return Whether the artifactUploadSettings field is set.
+       */
+      public boolean hasArtifactUploadSettings() {
+        return artifactUploadSettingsBuilder_ != null || artifactUploadSettings_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       * @return The artifactUploadSettings.
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings getArtifactUploadSettings() {
+        if (artifactUploadSettingsBuilder_ == null) {
+          return artifactUploadSettings_ == null ? yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.getDefaultInstance() : artifactUploadSettings_;
+        } else {
+          return artifactUploadSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      public Builder setArtifactUploadSettings(yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings value) {
+        if (artifactUploadSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          artifactUploadSettings_ = value;
+          onChanged();
+        } else {
+          artifactUploadSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      public Builder setArtifactUploadSettings(
+          yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder builderForValue) {
+        if (artifactUploadSettingsBuilder_ == null) {
+          artifactUploadSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          artifactUploadSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      public Builder mergeArtifactUploadSettings(yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings value) {
+        if (artifactUploadSettingsBuilder_ == null) {
+          if (artifactUploadSettings_ != null) {
+            artifactUploadSettings_ =
+              yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.newBuilder(artifactUploadSettings_).mergeFrom(value).buildPartial();
+          } else {
+            artifactUploadSettings_ = value;
+          }
+          onChanged();
+        } else {
+          artifactUploadSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      public Builder clearArtifactUploadSettings() {
+        if (artifactUploadSettingsBuilder_ == null) {
+          artifactUploadSettings_ = null;
+          onChanged();
+        } else {
+          artifactUploadSettings_ = null;
+          artifactUploadSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder getArtifactUploadSettingsBuilder() {
+        
+        onChanged();
+        return getArtifactUploadSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder getArtifactUploadSettingsOrBuilder() {
+        if (artifactUploadSettingsBuilder_ != null) {
+          return artifactUploadSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return artifactUploadSettings_ == null ?
+              yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.getDefaultInstance() : artifactUploadSettings_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings artifact_upload_settings = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder> 
+          getArtifactUploadSettingsFieldBuilder() {
+        if (artifactUploadSettingsBuilder_ == null) {
+          artifactUploadSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder>(
+                  getArtifactUploadSettings(),
+                  getParentForChildren(),
+                  isClean());
+          artifactUploadSettings_ = null;
+        }
+        return artifactUploadSettingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3860,6 +4063,1232 @@ public final class JobServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestDataEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TestArtifactUploadSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string output_bucket = 1;</code>
+     * @return The outputBucket.
+     */
+    java.lang.String getOutputBucket();
+    /**
+     * <code>string output_bucket = 1;</code>
+     * @return The bytes for outputBucket.
+     */
+    com.google.protobuf.ByteString
+        getOutputBucketBytes();
+
+    /**
+     * <code>string output_name = 2;</code>
+     * @return The outputName.
+     */
+    java.lang.String getOutputName();
+    /**
+     * <code>string output_name = 2;</code>
+     * @return The bytes for outputName.
+     */
+    com.google.protobuf.ByteString
+        getOutputNameBytes();
+
+    /**
+     * <code>bool is_archive = 3;</code>
+     * @return The isArchive.
+     */
+    boolean getIsArchive();
+
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @return A list containing the filterInclude.
+     */
+    java.util.List<java.lang.String>
+        getFilterIncludeList();
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @return The count of filterInclude.
+     */
+    int getFilterIncludeCount();
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @param index The index of the element to return.
+     * @return The filterInclude at the given index.
+     */
+    java.lang.String getFilterInclude(int index);
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filterInclude at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFilterIncludeBytes(int index);
+
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @return A list containing the filterExclude.
+     */
+    java.util.List<java.lang.String>
+        getFilterExcludeList();
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @return The count of filterExclude.
+     */
+    int getFilterExcludeCount();
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @param index The index of the element to return.
+     * @return The filterExclude at the given index.
+     */
+    java.lang.String getFilterExclude(int index);
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filterExclude at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFilterExcludeBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings}
+   */
+  public static final class TestArtifactUploadSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings)
+      TestArtifactUploadSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TestArtifactUploadSettings.newBuilder() to construct.
+    private TestArtifactUploadSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TestArtifactUploadSettings() {
+      outputBucket_ = "";
+      outputName_ = "";
+      filterInclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      filterExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TestArtifactUploadSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TestArtifactUploadSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              outputBucket_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              outputName_ = s;
+              break;
+            }
+            case 24: {
+
+              isArchive_ = input.readBool();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                filterInclude_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              filterInclude_.add(s);
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                filterExclude_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              filterExclude_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          filterInclude_ = filterInclude_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          filterExclude_ = filterExclude_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.class, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder.class);
+    }
+
+    public static final int OUTPUT_BUCKET_FIELD_NUMBER = 1;
+    private volatile java.lang.Object outputBucket_;
+    /**
+     * <code>string output_bucket = 1;</code>
+     * @return The outputBucket.
+     */
+    @java.lang.Override
+    public java.lang.String getOutputBucket() {
+      java.lang.Object ref = outputBucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outputBucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string output_bucket = 1;</code>
+     * @return The bytes for outputBucket.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutputBucketBytes() {
+      java.lang.Object ref = outputBucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outputBucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTPUT_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object outputName_;
+    /**
+     * <code>string output_name = 2;</code>
+     * @return The outputName.
+     */
+    @java.lang.Override
+    public java.lang.String getOutputName() {
+      java.lang.Object ref = outputName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outputName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string output_name = 2;</code>
+     * @return The bytes for outputName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutputNameBytes() {
+      java.lang.Object ref = outputName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outputName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_ARCHIVE_FIELD_NUMBER = 3;
+    private boolean isArchive_;
+    /**
+     * <code>bool is_archive = 3;</code>
+     * @return The isArchive.
+     */
+    @java.lang.Override
+    public boolean getIsArchive() {
+      return isArchive_;
+    }
+
+    public static final int FILTER_INCLUDE_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList filterInclude_;
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @return A list containing the filterInclude.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFilterIncludeList() {
+      return filterInclude_;
+    }
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @return The count of filterInclude.
+     */
+    public int getFilterIncludeCount() {
+      return filterInclude_.size();
+    }
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @param index The index of the element to return.
+     * @return The filterInclude at the given index.
+     */
+    public java.lang.String getFilterInclude(int index) {
+      return filterInclude_.get(index);
+    }
+    /**
+     * <code>repeated string filter_include = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filterInclude at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFilterIncludeBytes(int index) {
+      return filterInclude_.getByteString(index);
+    }
+
+    public static final int FILTER_EXCLUDE_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList filterExclude_;
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @return A list containing the filterExclude.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFilterExcludeList() {
+      return filterExclude_;
+    }
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @return The count of filterExclude.
+     */
+    public int getFilterExcludeCount() {
+      return filterExclude_.size();
+    }
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @param index The index of the element to return.
+     * @return The filterExclude at the given index.
+     */
+    public java.lang.String getFilterExclude(int index) {
+      return filterExclude_.get(index);
+    }
+    /**
+     * <code>repeated string filter_exclude = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filterExclude at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFilterExcludeBytes(int index) {
+      return filterExclude_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputBucket_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, outputBucket_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, outputName_);
+      }
+      if (isArchive_ != false) {
+        output.writeBool(3, isArchive_);
+      }
+      for (int i = 0; i < filterInclude_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filterInclude_.getRaw(i));
+      }
+      for (int i = 0; i < filterExclude_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filterExclude_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputBucket_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, outputBucket_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, outputName_);
+      }
+      if (isArchive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isArchive_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < filterInclude_.size(); i++) {
+          dataSize += computeStringSizeNoTag(filterInclude_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFilterIncludeList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < filterExclude_.size(); i++) {
+          dataSize += computeStringSizeNoTag(filterExclude_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFilterExcludeList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings other = (yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings) obj;
+
+      if (!getOutputBucket()
+          .equals(other.getOutputBucket())) return false;
+      if (!getOutputName()
+          .equals(other.getOutputName())) return false;
+      if (getIsArchive()
+          != other.getIsArchive()) return false;
+      if (!getFilterIncludeList()
+          .equals(other.getFilterIncludeList())) return false;
+      if (!getFilterExcludeList()
+          .equals(other.getFilterExcludeList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OUTPUT_BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getOutputBucket().hashCode();
+      hash = (37 * hash) + OUTPUT_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getOutputName().hashCode();
+      hash = (37 * hash) + IS_ARCHIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsArchive());
+      if (getFilterIncludeCount() > 0) {
+        hash = (37 * hash) + FILTER_INCLUDE_FIELD_NUMBER;
+        hash = (53 * hash) + getFilterIncludeList().hashCode();
+      }
+      if (getFilterExcludeCount() > 0) {
+        hash = (37 * hash) + FILTER_EXCLUDE_FIELD_NUMBER;
+        hash = (53 * hash) + getFilterExcludeList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings)
+        yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.class, yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        outputBucket_ = "";
+
+        outputName_ = "";
+
+        isArchive_ = false;
+
+        filterInclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filterExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings build() {
+        yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings buildPartial() {
+        yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings result = new yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings(this);
+        int from_bitField0_ = bitField0_;
+        result.outputBucket_ = outputBucket_;
+        result.outputName_ = outputName_;
+        result.isArchive_ = isArchive_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          filterInclude_ = filterInclude_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.filterInclude_ = filterInclude_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          filterExclude_ = filterExclude_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.filterExclude_ = filterExclude_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings) {
+          return mergeFrom((yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings other) {
+        if (other == yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings.getDefaultInstance()) return this;
+        if (!other.getOutputBucket().isEmpty()) {
+          outputBucket_ = other.outputBucket_;
+          onChanged();
+        }
+        if (!other.getOutputName().isEmpty()) {
+          outputName_ = other.outputName_;
+          onChanged();
+        }
+        if (other.getIsArchive() != false) {
+          setIsArchive(other.getIsArchive());
+        }
+        if (!other.filterInclude_.isEmpty()) {
+          if (filterInclude_.isEmpty()) {
+            filterInclude_ = other.filterInclude_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFilterIncludeIsMutable();
+            filterInclude_.addAll(other.filterInclude_);
+          }
+          onChanged();
+        }
+        if (!other.filterExclude_.isEmpty()) {
+          if (filterExclude_.isEmpty()) {
+            filterExclude_ = other.filterExclude_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureFilterExcludeIsMutable();
+            filterExclude_.addAll(other.filterExclude_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object outputBucket_ = "";
+      /**
+       * <code>string output_bucket = 1;</code>
+       * @return The outputBucket.
+       */
+      public java.lang.String getOutputBucket() {
+        java.lang.Object ref = outputBucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outputBucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string output_bucket = 1;</code>
+       * @return The bytes for outputBucket.
+       */
+      public com.google.protobuf.ByteString
+          getOutputBucketBytes() {
+        java.lang.Object ref = outputBucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outputBucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string output_bucket = 1;</code>
+       * @param value The outputBucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputBucket(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        outputBucket_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string output_bucket = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutputBucket() {
+        
+        outputBucket_ = getDefaultInstance().getOutputBucket();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string output_bucket = 1;</code>
+       * @param value The bytes for outputBucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        outputBucket_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object outputName_ = "";
+      /**
+       * <code>string output_name = 2;</code>
+       * @return The outputName.
+       */
+      public java.lang.String getOutputName() {
+        java.lang.Object ref = outputName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outputName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string output_name = 2;</code>
+       * @return The bytes for outputName.
+       */
+      public com.google.protobuf.ByteString
+          getOutputNameBytes() {
+        java.lang.Object ref = outputName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outputName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string output_name = 2;</code>
+       * @param value The outputName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        outputName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string output_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutputName() {
+        
+        outputName_ = getDefaultInstance().getOutputName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string output_name = 2;</code>
+       * @param value The bytes for outputName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        outputName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isArchive_ ;
+      /**
+       * <code>bool is_archive = 3;</code>
+       * @return The isArchive.
+       */
+      @java.lang.Override
+      public boolean getIsArchive() {
+        return isArchive_;
+      }
+      /**
+       * <code>bool is_archive = 3;</code>
+       * @param value The isArchive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsArchive(boolean value) {
+        
+        isArchive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_archive = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsArchive() {
+        
+        isArchive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList filterInclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFilterIncludeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          filterInclude_ = new com.google.protobuf.LazyStringArrayList(filterInclude_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @return A list containing the filterInclude.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFilterIncludeList() {
+        return filterInclude_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @return The count of filterInclude.
+       */
+      public int getFilterIncludeCount() {
+        return filterInclude_.size();
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @param index The index of the element to return.
+       * @return The filterInclude at the given index.
+       */
+      public java.lang.String getFilterInclude(int index) {
+        return filterInclude_.get(index);
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the filterInclude at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFilterIncludeBytes(int index) {
+        return filterInclude_.getByteString(index);
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The filterInclude to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterInclude(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFilterIncludeIsMutable();
+        filterInclude_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @param value The filterInclude to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilterInclude(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFilterIncludeIsMutable();
+        filterInclude_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @param values The filterInclude to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFilterInclude(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFilterIncludeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, filterInclude_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilterInclude() {
+        filterInclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_include = 4;</code>
+       * @param value The bytes of the filterInclude to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilterIncludeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFilterIncludeIsMutable();
+        filterInclude_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList filterExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFilterExcludeIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          filterExclude_ = new com.google.protobuf.LazyStringArrayList(filterExclude_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @return A list containing the filterExclude.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFilterExcludeList() {
+        return filterExclude_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @return The count of filterExclude.
+       */
+      public int getFilterExcludeCount() {
+        return filterExclude_.size();
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @param index The index of the element to return.
+       * @return The filterExclude at the given index.
+       */
+      public java.lang.String getFilterExclude(int index) {
+        return filterExclude_.get(index);
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the filterExclude at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFilterExcludeBytes(int index) {
+        return filterExclude_.getByteString(index);
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The filterExclude to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterExclude(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFilterExcludeIsMutable();
+        filterExclude_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @param value The filterExclude to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilterExclude(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFilterExcludeIsMutable();
+        filterExclude_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @param values The filterExclude to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFilterExclude(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFilterExcludeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, filterExclude_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilterExclude() {
+        filterExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string filter_exclude = 5;</code>
+       * @param value The bytes of the filterExclude to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilterExcludeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFilterExcludeIsMutable();
+        filterExclude_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.agent.v1.TestArtifactUploadSettings)
+    private static final yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings();
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TestArtifactUploadSettings>
+        PARSER = new com.google.protobuf.AbstractParser<TestArtifactUploadSettings>() {
+      @java.lang.Override
+      public TestArtifactUploadSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TestArtifactUploadSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TestArtifactUploadSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TestArtifactUploadSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.JobServiceOuterClass.TestArtifactUploadSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8387,6 +9816,11 @@ public final class JobServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadtesting_agent_v1_TestDataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadtesting_agent_v1_GetJobTransientFile_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8427,20 +9861,26 @@ public final class JobServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/loadtesting/agent/v1/job_" +
       "service.proto\022!yandex.cloud.loadtesting." +
-      "agent.v1\032\034google/api/annotations.proto\"\203" +
+      "agent.v1\032\034google/api/annotations.proto\"\344" +
       "\002\n\003Job\022\n\n\002id\030\001 \001(\t\022\016\n\006config\030\002 \001(\t\0225\n\004am" +
       "mo\030\003 \001(\0132\'.yandex.cloud.loadtesting.agen" +
       "t.v1.File\022\034\n\024logging_log_group_id\030\004 \001(\t\022" +
       "C\n\ttest_data\030\005 \001(\01320.yandex.cloud.loadte" +
       "sting.agent.v1.StorageObject\022F\n\014data_pay" +
       "load\030\006 \003(\01320.yandex.cloud.loadtesting.ag" +
-      "ent.v1.TestDataEntry\"%\n\004File\022\014\n\004name\030\001 \001" +
-      "(\t\022\017\n\007content\030\002 \001(\014\"O\n\rStorageObject\022\035\n\025" +
-      "object_storage_bucket\030\001 \001(\t\022\037\n\027object_st" +
-      "orage_filename\030\002 \001(\t\"}\n\rTestDataEntry\022\014\n" +
-      "\004name\030\001 \001(\t\022\024\n\014is_transient\030\002 \001(\010\022H\n\016sto" +
-      "rage_object\030\003 \001(\01320.yandex.cloud.loadtes" +
-      "ting.agent.v1.StorageObject\"3\n\023GetJobTra" +
+      "ent.v1.TestDataEntry\022_\n\030artifact_upload_" +
+      "settings\030\007 \001(\0132=.yandex.cloud.loadtestin" +
+      "g.agent.v1.TestArtifactUploadSettings\"%\n" +
+      "\004File\022\014\n\004name\030\001 \001(\t\022\017\n\007content\030\002 \001(\014\"O\n\r" +
+      "StorageObject\022\035\n\025object_storage_bucket\030\001" +
+      " \001(\t\022\037\n\027object_storage_filename\030\002 \001(\t\"}\n" +
+      "\rTestDataEntry\022\014\n\004name\030\001 \001(\t\022\024\n\014is_trans" +
+      "ient\030\002 \001(\010\022H\n\016storage_object\030\003 \001(\01320.yan" +
+      "dex.cloud.loadtesting.agent.v1.StorageOb" +
+      "ject\"\214\001\n\032TestArtifactUploadSettings\022\025\n\ro" +
+      "utput_bucket\030\001 \001(\t\022\023\n\013output_name\030\002 \001(\t\022" +
+      "\022\n\nis_archive\030\003 \001(\010\022\026\n\016filter_include\030\004 " +
+      "\003(\t\022\026\n\016filter_exclude\030\005 \003(\t\"3\n\023GetJobTra" +
       "nsientFile\022\016\n\006job_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
       "\"W\n\rGetJobRequest\022\033\n\023compute_instance_id" +
       "\030\001 \001(\t\022\031\n\021agent_instance_id\030\002 \001(\t\022\016\n\006job" +
@@ -8494,7 +9934,7 @@ public final class JobServiceOuterClass {
     internal_static_yandex_cloud_loadtesting_agent_v1_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_Job_descriptor,
-        new java.lang.String[] { "Id", "Config", "Ammo", "LoggingLogGroupId", "TestData", "DataPayload", });
+        new java.lang.String[] { "Id", "Config", "Ammo", "LoggingLogGroupId", "TestData", "DataPayload", "ArtifactUploadSettings", });
     internal_static_yandex_cloud_loadtesting_agent_v1_File_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_loadtesting_agent_v1_File_fieldAccessorTable = new
@@ -8513,38 +9953,44 @@ public final class JobServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_TestDataEntry_descriptor,
         new java.lang.String[] { "Name", "IsTransient", "StorageObject", });
-    internal_static_yandex_cloud_loadtesting_agent_v1_GetJobTransientFile_descriptor =
+    internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_agent_v1_TestArtifactUploadSettings_descriptor,
+        new java.lang.String[] { "OutputBucket", "OutputName", "IsArchive", "FilterInclude", "FilterExclude", });
+    internal_static_yandex_cloud_loadtesting_agent_v1_GetJobTransientFile_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_loadtesting_agent_v1_GetJobTransientFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_GetJobTransientFile_descriptor,
         new java.lang.String[] { "JobId", "Name", });
     internal_static_yandex_cloud_loadtesting_agent_v1_GetJobRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_loadtesting_agent_v1_GetJobRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_GetJobRequest_descriptor,
         new java.lang.String[] { "ComputeInstanceId", "AgentInstanceId", "JobId", });
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimJobStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimJobStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_ClaimJobStatusRequest_descriptor,
         new java.lang.String[] { "JobId", "Status", "Error", });
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimJobStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimJobStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_ClaimJobStatusResponse_descriptor,
         new java.lang.String[] { "Code", });
     internal_static_yandex_cloud_loadtesting_agent_v1_JobSignalRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_loadtesting_agent_v1_JobSignalRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_JobSignalRequest_descriptor,
         new java.lang.String[] { "JobId", });
     internal_static_yandex_cloud_loadtesting_agent_v1_JobSignalResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_loadtesting_agent_v1_JobSignalResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_JobSignalResponse_descriptor,

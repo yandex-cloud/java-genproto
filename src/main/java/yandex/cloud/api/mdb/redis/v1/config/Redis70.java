@@ -247,6 +247,33 @@ public final class Redis70 {
      * <code>.yandex.cloud.mdb.redis.v1.config.RedisConfig7_0.ClientOutputBufferLimit client_output_buffer_limit_normal = 9;</code>
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis70.RedisConfig7_0.ClientOutputBufferLimitOrBuilder getClientOutputBufferLimitNormalOrBuilder();
+
+    /**
+     * <pre>
+     * Redis maxmemory percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+     * @return Whether the maxmemoryPercent field is set.
+     */
+    boolean hasMaxmemoryPercent();
+    /**
+     * <pre>
+     * Redis maxmemory percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+     * @return The maxmemoryPercent.
+     */
+    com.google.protobuf.Int64Value getMaxmemoryPercent();
+    /**
+     * <pre>
+     * Redis maxmemory percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxmemoryPercentOrBuilder();
   }
   /**
    * <pre>
@@ -393,6 +420,19 @@ public final class Redis70 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clientOutputBufferLimitNormal_);
                 clientOutputBufferLimitNormal_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxmemoryPercent_ != null) {
+                subBuilder = maxmemoryPercent_.toBuilder();
+              }
+              maxmemoryPercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxmemoryPercent_);
+                maxmemoryPercent_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2231,6 +2271,44 @@ public final class Redis70 {
       return getClientOutputBufferLimitNormal();
     }
 
+    public static final int MAXMEMORY_PERCENT_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value maxmemoryPercent_;
+    /**
+     * <pre>
+     * Redis maxmemory percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+     * @return Whether the maxmemoryPercent field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxmemoryPercent() {
+      return maxmemoryPercent_ != null;
+    }
+    /**
+     * <pre>
+     * Redis maxmemory percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+     * @return The maxmemoryPercent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxmemoryPercent() {
+      return maxmemoryPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxmemoryPercent_;
+    }
+    /**
+     * <pre>
+     * Redis maxmemory percent
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxmemoryPercentOrBuilder() {
+      return getMaxmemoryPercent();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2271,6 +2349,9 @@ public final class Redis70 {
       }
       if (clientOutputBufferLimitNormal_ != null) {
         output.writeMessage(9, getClientOutputBufferLimitNormal());
+      }
+      if (maxmemoryPercent_ != null) {
+        output.writeMessage(10, getMaxmemoryPercent());
       }
       unknownFields.writeTo(output);
     }
@@ -2314,6 +2395,10 @@ public final class Redis70 {
       if (clientOutputBufferLimitNormal_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getClientOutputBufferLimitNormal());
+      }
+      if (maxmemoryPercent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getMaxmemoryPercent());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2365,6 +2450,11 @@ public final class Redis70 {
         if (!getClientOutputBufferLimitNormal()
             .equals(other.getClientOutputBufferLimitNormal())) return false;
       }
+      if (hasMaxmemoryPercent() != other.hasMaxmemoryPercent()) return false;
+      if (hasMaxmemoryPercent()) {
+        if (!getMaxmemoryPercent()
+            .equals(other.getMaxmemoryPercent())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2405,6 +2495,10 @@ public final class Redis70 {
       if (hasClientOutputBufferLimitNormal()) {
         hash = (37 * hash) + CLIENT_OUTPUT_BUFFER_LIMIT_NORMAL_FIELD_NUMBER;
         hash = (53 * hash) + getClientOutputBufferLimitNormal().hashCode();
+      }
+      if (hasMaxmemoryPercent()) {
+        hash = (37 * hash) + MAXMEMORY_PERCENT_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxmemoryPercent().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2586,6 +2680,12 @@ public final class Redis70 {
           clientOutputBufferLimitNormal_ = null;
           clientOutputBufferLimitNormalBuilder_ = null;
         }
+        if (maxmemoryPercentBuilder_ == null) {
+          maxmemoryPercent_ = null;
+        } else {
+          maxmemoryPercent_ = null;
+          maxmemoryPercentBuilder_ = null;
+        }
         return this;
       }
 
@@ -2644,6 +2744,11 @@ public final class Redis70 {
           result.clientOutputBufferLimitNormal_ = clientOutputBufferLimitNormal_;
         } else {
           result.clientOutputBufferLimitNormal_ = clientOutputBufferLimitNormalBuilder_.build();
+        }
+        if (maxmemoryPercentBuilder_ == null) {
+          result.maxmemoryPercent_ = maxmemoryPercent_;
+        } else {
+          result.maxmemoryPercent_ = maxmemoryPercentBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2721,6 +2826,9 @@ public final class Redis70 {
         }
         if (other.hasClientOutputBufferLimitNormal()) {
           mergeClientOutputBufferLimitNormal(other.getClientOutputBufferLimitNormal());
+        }
+        if (other.hasMaxmemoryPercent()) {
+          mergeMaxmemoryPercent(other.getMaxmemoryPercent());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3969,6 +4077,161 @@ public final class Redis70 {
           clientOutputBufferLimitNormal_ = null;
         }
         return clientOutputBufferLimitNormalBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxmemoryPercent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxmemoryPercentBuilder_;
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       * @return Whether the maxmemoryPercent field is set.
+       */
+      public boolean hasMaxmemoryPercent() {
+        return maxmemoryPercentBuilder_ != null || maxmemoryPercent_ != null;
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       * @return The maxmemoryPercent.
+       */
+      public com.google.protobuf.Int64Value getMaxmemoryPercent() {
+        if (maxmemoryPercentBuilder_ == null) {
+          return maxmemoryPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxmemoryPercent_;
+        } else {
+          return maxmemoryPercentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      public Builder setMaxmemoryPercent(com.google.protobuf.Int64Value value) {
+        if (maxmemoryPercentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxmemoryPercent_ = value;
+          onChanged();
+        } else {
+          maxmemoryPercentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      public Builder setMaxmemoryPercent(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxmemoryPercentBuilder_ == null) {
+          maxmemoryPercent_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxmemoryPercentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      public Builder mergeMaxmemoryPercent(com.google.protobuf.Int64Value value) {
+        if (maxmemoryPercentBuilder_ == null) {
+          if (maxmemoryPercent_ != null) {
+            maxmemoryPercent_ =
+              com.google.protobuf.Int64Value.newBuilder(maxmemoryPercent_).mergeFrom(value).buildPartial();
+          } else {
+            maxmemoryPercent_ = value;
+          }
+          onChanged();
+        } else {
+          maxmemoryPercentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      public Builder clearMaxmemoryPercent() {
+        if (maxmemoryPercentBuilder_ == null) {
+          maxmemoryPercent_ = null;
+          onChanged();
+        } else {
+          maxmemoryPercent_ = null;
+          maxmemoryPercentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxmemoryPercentBuilder() {
+        
+        onChanged();
+        return getMaxmemoryPercentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxmemoryPercentOrBuilder() {
+        if (maxmemoryPercentBuilder_ != null) {
+          return maxmemoryPercentBuilder_.getMessageOrBuilder();
+        } else {
+          return maxmemoryPercent_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxmemoryPercent_;
+        }
+      }
+      /**
+       * <pre>
+       * Redis maxmemory percent
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value maxmemory_percent = 10 [(.yandex.cloud.value) = "1-75"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxmemoryPercentFieldBuilder() {
+        if (maxmemoryPercentBuilder_ == null) {
+          maxmemoryPercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxmemoryPercent(),
+                  getParentForChildren(),
+                  isClean());
+          maxmemoryPercent_ = null;
+        }
+        return maxmemoryPercentBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5272,7 +5535,7 @@ public final class Redis70 {
       "\n/yandex/cloud/mdb/redis/v1/config/redis" +
       "7_0.proto\022 yandex.cloud.mdb.redis.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\312\010\n\016RedisConf" +
+      "dex/cloud/validation.proto\"\214\t\n\016RedisConf" +
       "ig7_0\022Z\n\020maxmemory_policy\030\001 \001(\0162@.yandex" +
       ".cloud.mdb.redis.v1.config.RedisConfig7_" +
       "0.MaxmemoryPolicy\022,\n\007timeout\030\002 \001(\0132\033.goo" +
@@ -5290,26 +5553,27 @@ public final class Redis70 {
       "erLimit\022s\n!client_output_buffer_limit_no" +
       "rmal\030\t \001(\0132H.yandex.cloud.mdb.redis.v1.c" +
       "onfig.RedisConfig7_0.ClientOutputBufferL" +
-      "imit\032\311\001\n\027ClientOutputBufferLimit\0228\n\nhard" +
-      "_limit\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\014soft_sec" +
-      "onds\030\005 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\007\372\3071\003>=0\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMOR" +
-      "Y_POLICY_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020\001" +
-      "\022\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013A" +
-      "LLKEYS_LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016ALL" +
-      "KEYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEVI" +
-      "CTION\020\010\"\360\001\n\021RedisConfigSet7_0\022J\n\020effecti" +
-      "ve_config\030\001 \001(\01320.yandex.cloud.mdb.redis" +
-      ".v1.config.RedisConfig7_0\022E\n\013user_config" +
-      "\030\002 \001(\01320.yandex.cloud.mdb.redis.v1.confi" +
-      "g.RedisConfig7_0\022H\n\016default_config\030\003 \001(\013" +
-      "20.yandex.cloud.mdb.redis.v1.config.Redi" +
-      "sConfig7_0Br\n$yandex.cloud.api.mdb.redis" +
-      ".v1.configZJgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/redis/v1/config" +
-      ";redisb\006proto3"
+      "imit\022@\n\021maxmemory_percent\030\n \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\010\372\3071\0041-75\032\311\001\n\027Clien" +
+      "tOutputBufferLimit\0228\n\nhard_limit\030\001 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\0228\n\n" +
+      "soft_limit\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\022:\n\014soft_seconds\030\005 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\"\304\001\n\017M" +
+      "axmemoryPolicy\022 \n\034MAXMEMORY_POLICY_UNSPE" +
+      "CIFIED\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALLKEYS_LR" +
+      "U\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023" +
+      "\n\017VOLATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022" +
+      "\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010\"\360\001\n\021Re" +
+      "disConfigSet7_0\022J\n\020effective_config\030\001 \001(" +
+      "\01320.yandex.cloud.mdb.redis.v1.config.Red" +
+      "isConfig7_0\022E\n\013user_config\030\002 \001(\01320.yande" +
+      "x.cloud.mdb.redis.v1.config.RedisConfig7" +
+      "_0\022H\n\016default_config\030\003 \001(\01320.yandex.clou" +
+      "d.mdb.redis.v1.config.RedisConfig7_0Br\n$" +
+      "yandex.cloud.api.mdb.redis.v1.configZJgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/redis/v1/config;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5322,7 +5586,7 @@ public final class Redis70 {
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig7_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig7_0_descriptor,
-        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", });
+        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig7_0_ClientOutputBufferLimit_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig7_0_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig7_0_ClientOutputBufferLimit_fieldAccessorTable = new
