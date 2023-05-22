@@ -3010,6 +3010,21 @@ public final class PlacementGroupServiceOuterClass {
      */
     yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategyOrBuilder getSpreadPlacementStrategyOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+     * @return Whether the partitionPlacementStrategy field is set.
+     */
+    boolean hasPartitionPlacementStrategy();
+    /**
+     * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+     * @return The partitionPlacementStrategy.
+     */
+    yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy getPartitionPlacementStrategy();
+    /**
+     * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+     */
+    yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategyOrBuilder getPartitionPlacementStrategyOrBuilder();
+
     public yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.CreatePlacementGroupRequest.PlacementStrategyCase getPlacementStrategyCase();
   }
   /**
@@ -3106,6 +3121,20 @@ public final class PlacementGroupServiceOuterClass {
               placementStrategyCase_ = 5;
               break;
             }
+            case 50: {
+              yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.Builder subBuilder = null;
+              if (placementStrategyCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_).toBuilder();
+              }
+              placementStrategy_ =
+                  input.readMessage(yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_);
+                placementStrategy_ = subBuilder.buildPartial();
+              }
+              placementStrategyCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3156,6 +3185,7 @@ public final class PlacementGroupServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SPREAD_PLACEMENT_STRATEGY(5),
+      PARTITION_PLACEMENT_STRATEGY(6),
       PLACEMENTSTRATEGY_NOT_SET(0);
       private final int value;
       private PlacementStrategyCase(int value) {
@@ -3174,6 +3204,7 @@ public final class PlacementGroupServiceOuterClass {
       public static PlacementStrategyCase forNumber(int value) {
         switch (value) {
           case 5: return SPREAD_PLACEMENT_STRATEGY;
+          case 6: return PARTITION_PLACEMENT_STRATEGY;
           case 0: return PLACEMENTSTRATEGY_NOT_SET;
           default: return null;
         }
@@ -3469,6 +3500,37 @@ public final class PlacementGroupServiceOuterClass {
       return yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy.getDefaultInstance();
     }
 
+    public static final int PARTITION_PLACEMENT_STRATEGY_FIELD_NUMBER = 6;
+    /**
+     * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+     * @return Whether the partitionPlacementStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasPartitionPlacementStrategy() {
+      return placementStrategyCase_ == 6;
+    }
+    /**
+     * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+     * @return The partitionPlacementStrategy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy getPartitionPlacementStrategy() {
+      if (placementStrategyCase_ == 6) {
+         return (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_;
+      }
+      return yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategyOrBuilder getPartitionPlacementStrategyOrBuilder() {
+      if (placementStrategyCase_ == 6) {
+         return (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_;
+      }
+      return yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3500,6 +3562,9 @@ public final class PlacementGroupServiceOuterClass {
           4);
       if (placementStrategyCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy) placementStrategy_);
+      }
+      if (placementStrategyCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_);
       }
       unknownFields.writeTo(output);
     }
@@ -3533,6 +3598,10 @@ public final class PlacementGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy) placementStrategy_);
       }
+      if (placementStrategyCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3562,6 +3631,10 @@ public final class PlacementGroupServiceOuterClass {
           if (!getSpreadPlacementStrategy()
               .equals(other.getSpreadPlacementStrategy())) return false;
           break;
+        case 6:
+          if (!getPartitionPlacementStrategy()
+              .equals(other.getPartitionPlacementStrategy())) return false;
+          break;
         case 0:
         default:
       }
@@ -3590,6 +3663,10 @@ public final class PlacementGroupServiceOuterClass {
         case 5:
           hash = (37 * hash) + SPREAD_PLACEMENT_STRATEGY_FIELD_NUMBER;
           hash = (53 * hash) + getSpreadPlacementStrategy().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + PARTITION_PLACEMENT_STRATEGY_FIELD_NUMBER;
+          hash = (53 * hash) + getPartitionPlacementStrategy().hashCode();
           break;
         case 0:
         default:
@@ -3797,6 +3874,13 @@ public final class PlacementGroupServiceOuterClass {
             result.placementStrategy_ = spreadPlacementStrategyBuilder_.build();
           }
         }
+        if (placementStrategyCase_ == 6) {
+          if (partitionPlacementStrategyBuilder_ == null) {
+            result.placementStrategy_ = placementStrategy_;
+          } else {
+            result.placementStrategy_ = partitionPlacementStrategyBuilder_.build();
+          }
+        }
         result.placementStrategyCase_ = placementStrategyCase_;
         onBuilt();
         return result;
@@ -3863,6 +3947,10 @@ public final class PlacementGroupServiceOuterClass {
         switch (other.getPlacementStrategyCase()) {
           case SPREAD_PLACEMENT_STRATEGY: {
             mergeSpreadPlacementStrategy(other.getSpreadPlacementStrategy());
+            break;
+          }
+          case PARTITION_PLACEMENT_STRATEGY: {
+            mergePartitionPlacementStrategy(other.getPartitionPlacementStrategy());
             break;
           }
           case PLACEMENTSTRATEGY_NOT_SET: {
@@ -4541,6 +4629,147 @@ public final class PlacementGroupServiceOuterClass {
         placementStrategyCase_ = 5;
         onChanged();;
         return spreadPlacementStrategyBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.Builder, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategyOrBuilder> partitionPlacementStrategyBuilder_;
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       * @return Whether the partitionPlacementStrategy field is set.
+       */
+      @java.lang.Override
+      public boolean hasPartitionPlacementStrategy() {
+        return placementStrategyCase_ == 6;
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       * @return The partitionPlacementStrategy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy getPartitionPlacementStrategy() {
+        if (partitionPlacementStrategyBuilder_ == null) {
+          if (placementStrategyCase_ == 6) {
+            return (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_;
+          }
+          return yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance();
+        } else {
+          if (placementStrategyCase_ == 6) {
+            return partitionPlacementStrategyBuilder_.getMessage();
+          }
+          return yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      public Builder setPartitionPlacementStrategy(yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy value) {
+        if (partitionPlacementStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          placementStrategy_ = value;
+          onChanged();
+        } else {
+          partitionPlacementStrategyBuilder_.setMessage(value);
+        }
+        placementStrategyCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      public Builder setPartitionPlacementStrategy(
+          yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.Builder builderForValue) {
+        if (partitionPlacementStrategyBuilder_ == null) {
+          placementStrategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          partitionPlacementStrategyBuilder_.setMessage(builderForValue.build());
+        }
+        placementStrategyCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      public Builder mergePartitionPlacementStrategy(yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy value) {
+        if (partitionPlacementStrategyBuilder_ == null) {
+          if (placementStrategyCase_ == 6 &&
+              placementStrategy_ != yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance()) {
+            placementStrategy_ = yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.newBuilder((yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            placementStrategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (placementStrategyCase_ == 6) {
+            partitionPlacementStrategyBuilder_.mergeFrom(value);
+          }
+          partitionPlacementStrategyBuilder_.setMessage(value);
+        }
+        placementStrategyCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      public Builder clearPartitionPlacementStrategy() {
+        if (partitionPlacementStrategyBuilder_ == null) {
+          if (placementStrategyCase_ == 6) {
+            placementStrategyCase_ = 0;
+            placementStrategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (placementStrategyCase_ == 6) {
+            placementStrategyCase_ = 0;
+            placementStrategy_ = null;
+          }
+          partitionPlacementStrategyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.Builder getPartitionPlacementStrategyBuilder() {
+        return getPartitionPlacementStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategyOrBuilder getPartitionPlacementStrategyOrBuilder() {
+        if ((placementStrategyCase_ == 6) && (partitionPlacementStrategyBuilder_ != null)) {
+          return partitionPlacementStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          if (placementStrategyCase_ == 6) {
+            return (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_;
+          }
+          return yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.compute.v1.PartitionPlacementStrategy partition_placement_strategy = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.Builder, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategyOrBuilder> 
+          getPartitionPlacementStrategyFieldBuilder() {
+        if (partitionPlacementStrategyBuilder_ == null) {
+          if (!(placementStrategyCase_ == 6)) {
+            placementStrategy_ = yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.getDefaultInstance();
+          }
+          partitionPlacementStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy.Builder, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategyOrBuilder>(
+                  (yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PartitionPlacementStrategy) placementStrategy_,
+                  getParentForChildren(),
+                  isClean());
+          placementStrategy_ = null;
+        }
+        placementStrategyCase_ = 6;
+        onChanged();;
+        return partitionPlacementStrategyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12856,76 +13085,79 @@ public final class PlacementGroupServiceOuterClass {
       "\022\016\n\006filter\030\004 \001(\t\"y\n\033ListPlacementGroupsR" +
       "esponse\022A\n\020placement_groups\030\001 \003(\0132\'.yand" +
       "ex.cloud.compute.v1.PlacementGroup\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\307\002\n\033CreatePlacementG" +
+      "xt_page_token\030\002 \001(\t\"\244\003\n\033CreatePlacementG" +
       "roupRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002" +
       " \001(\t\022\023\n\013description\030\003 \001(\t\022P\n\006labels\030\004 \003(" +
       "\0132@.yandex.cloud.compute.v1.CreatePlacem" +
       "entGroupRequest.LabelsEntry\022U\n\031spread_pl" +
       "acement_strategy\030\005 \001(\01320.yandex.cloud.co" +
-      "mpute.v1.SpreadPlacementStrategyH\000\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001B\032\n\022placement_strategy\022\004\300\3011\001\":\n\034CreateP" +
-      "lacementGroupMetadata\022\032\n\022placement_group" +
-      "_id\030\001 \001(\t\"\216\002\n\033UpdatePlacementGroupReques" +
-      "t\022\032\n\022placement_group_id\030\001 \001(\t\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022\014" +
-      "\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022P\n\006lab" +
-      "els\030\005 \003(\0132@.yandex.cloud.compute.v1.Upda" +
-      "tePlacementGroupRequest.LabelsEntry\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\":\n\034UpdatePlacementGroupMetadata\022\032\n\022pl" +
-      "acement_group_id\030\001 \001(\t\"9\n\033DeletePlacemen" +
-      "tGroupRequest\022\032\n\022placement_group_id\030\001 \001(" +
-      "\t\":\n\034DeletePlacementGroupMetadata\022\032\n\022pla" +
-      "cement_group_id\030\001 \001(\t\"g\n\"ListPlacementGr" +
-      "oupInstancesRequest\022\032\n\022placement_group_i" +
-      "d\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token" +
-      "\030\003 \001(\t\"t\n#ListPlacementGroupInstancesRes" +
-      "ponse\0224\n\tinstances\030\001 \003(\0132!.yandex.cloud." +
-      "compute.v1.Instance\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"h\n#ListPlacementGroupOperationsRequ" +
-      "est\022\032\n\022placement_group_id\030\001 \001(\t\022\021\n\tpage_" +
-      "size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"v\n$ListPl" +
-      "acementGroupOperationsResponse\0225\n\noperat" +
-      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
-      "ation\022\027\n\017next_page_token\030\002 \001(\t2\334\n\n\025Place" +
-      "mentGroupService\022\233\001\n\003Get\0221.yandex.cloud." +
-      "compute.v1.GetPlacementGroupRequest\032\'.ya" +
-      "ndex.cloud.compute.v1.PlacementGroup\"8\202\323" +
-      "\344\223\0022\0220/compute/v1/placementGroups/{place" +
-      "ment_group_id}\022\226\001\n\004List\0223.yandex.cloud.c" +
-      "ompute.v1.ListPlacementGroupsRequest\0324.y" +
+      "mpute.v1.SpreadPlacementStrategyH\000\022[\n\034pa" +
+      "rtition_placement_strategy\030\006 \001(\01323.yande" +
+      "x.cloud.compute.v1.PartitionPlacementStr" +
+      "ategyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\032\n\022placement_strategy\022\004\300\301" +
+      "1\001\":\n\034CreatePlacementGroupMetadata\022\032\n\022pl" +
+      "acement_group_id\030\001 \001(\t\"\216\002\n\033UpdatePlaceme" +
+      "ntGroupRequest\022\032\n\022placement_group_id\030\001 \001" +
+      "(\t\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description" +
+      "\030\004 \001(\t\022P\n\006labels\030\005 \003(\0132@.yandex.cloud.co" +
+      "mpute.v1.UpdatePlacementGroupRequest.Lab" +
+      "elsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\":\n\034UpdatePlacementGroupM" +
+      "etadata\022\032\n\022placement_group_id\030\001 \001(\t\"9\n\033D" +
+      "eletePlacementGroupRequest\022\032\n\022placement_" +
+      "group_id\030\001 \001(\t\":\n\034DeletePlacementGroupMe" +
+      "tadata\022\032\n\022placement_group_id\030\001 \001(\t\"g\n\"Li" +
+      "stPlacementGroupInstancesRequest\022\032\n\022plac" +
+      "ement_group_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022" +
+      "\022\n\npage_token\030\003 \001(\t\"t\n#ListPlacementGrou" +
+      "pInstancesResponse\0224\n\tinstances\030\001 \003(\0132!." +
+      "yandex.cloud.compute.v1.Instance\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"h\n#ListPlacementGroupO" +
+      "perationsRequest\022\032\n\022placement_group_id\030\001" +
+      " \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 " +
+      "\001(\t\"v\n$ListPlacementGroupOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t2\334\n\n\025PlacementGroupService\022\233\001\n\003Get\0221." +
+      "yandex.cloud.compute.v1.GetPlacementGrou" +
+      "pRequest\032\'.yandex.cloud.compute.v1.Place" +
+      "mentGroup\"8\202\323\344\223\0022\0220/compute/v1/placement" +
+      "Groups/{placement_group_id}\022\226\001\n\004List\0223.y" +
       "andex.cloud.compute.v1.ListPlacementGrou" +
-      "psResponse\"#\202\323\344\223\002\035\022\033/compute/v1/placemen" +
-      "tGroups\022\273\001\n\006Create\0224.yandex.cloud.comput" +
-      "e.v1.CreatePlacementGroupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"X\202\323\344\223\002 \"\033/co" +
-      "mpute/v1/placementGroups:\001*\262\322*.\n\034CreateP" +
-      "lacementGroupMetadata\022\016PlacementGroup\022\320\001" +
-      "\n\006Update\0224.yandex.cloud.compute.v1.Updat" +
-      "ePlacementGroupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"m\202\323\344\223\002520/compute/v1/p" +
-      "lacementGroups/{placement_group_id}:\001*\262\322" +
-      "*.\n\034UpdatePlacementGroupMetadata\022\016Placem" +
-      "entGroup\022\324\001\n\006Delete\0224.yandex.cloud.compu" +
-      "te.v1.DeletePlacementGroupRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"q\202\323\344\223\0022*0/c" +
-      "ompute/v1/placementGroups/{placement_gro" +
-      "up_id}\262\322*5\n\034DeletePlacementGroupMetadata" +
-      "\022\025google.protobuf.Empty\022\316\001\n\rListInstance" +
-      "s\022;.yandex.cloud.compute.v1.ListPlacemen" +
-      "tGroupInstancesRequest\032<.yandex.cloud.co" +
-      "mpute.v1.ListPlacementGroupInstancesResp" +
-      "onse\"B\202\323\344\223\002<\022:/compute/v1/placementGroup" +
-      "s/{placement_group_id}/instances\022\322\001\n\016Lis" +
-      "tOperations\022<.yandex.cloud.compute.v1.Li" +
-      "stPlacementGroupOperationsRequest\032=.yand" +
-      "ex.cloud.compute.v1.ListPlacementGroupOp" +
-      "erationsResponse\"C\202\323\344\223\002=\022;/compute/v1/pl" +
-      "acementGroups/{placement_group_id}/opera" +
-      "tionsBb\n\033yandex.cloud.api.compute.v1ZCgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/compute/v1;computeb\006proto3"
+      "psRequest\0324.yandex.cloud.compute.v1.List" +
+      "PlacementGroupsResponse\"#\202\323\344\223\002\035\022\033/comput" +
+      "e/v1/placementGroups\022\273\001\n\006Create\0224.yandex" +
+      ".cloud.compute.v1.CreatePlacementGroupRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"X\202\323\344\223\002 \"\033/compute/v1/placementGroups:\001*" +
+      "\262\322*.\n\034CreatePlacementGroupMetadata\022\016Plac" +
+      "ementGroup\022\320\001\n\006Update\0224.yandex.cloud.com" +
+      "pute.v1.UpdatePlacementGroupRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"m\202\323\344\223\002520" +
+      "/compute/v1/placementGroups/{placement_g" +
+      "roup_id}:\001*\262\322*.\n\034UpdatePlacementGroupMet" +
+      "adata\022\016PlacementGroup\022\324\001\n\006Delete\0224.yande" +
+      "x.cloud.compute.v1.DeletePlacementGroupR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"q\202\323\344\223\0022*0/compute/v1/placementGroups/{" +
+      "placement_group_id}\262\322*5\n\034DeletePlacement" +
+      "GroupMetadata\022\025google.protobuf.Empty\022\316\001\n" +
+      "\rListInstances\022;.yandex.cloud.compute.v1" +
+      ".ListPlacementGroupInstancesRequest\032<.ya" +
+      "ndex.cloud.compute.v1.ListPlacementGroup" +
+      "InstancesResponse\"B\202\323\344\223\002<\022:/compute/v1/p" +
+      "lacementGroups/{placement_group_id}/inst" +
+      "ances\022\322\001\n\016ListOperations\022<.yandex.cloud." +
+      "compute.v1.ListPlacementGroupOperationsR" +
+      "equest\032=.yandex.cloud.compute.v1.ListPla" +
+      "cementGroupOperationsResponse\"C\202\323\344\223\002=\022;/" +
+      "compute/v1/placementGroups/{placement_gr" +
+      "oup_id}/operationsBb\n\033yandex.cloud.api.c" +
+      "ompute.v1ZCgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/compute/v1;computeb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12961,7 +13193,7 @@ public final class PlacementGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreatePlacementGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreatePlacementGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "SpreadPlacementStrategy", "PlacementStrategy", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "SpreadPlacementStrategy", "PartitionPlacementStrategy", "PlacementStrategy", });
     internal_static_yandex_cloud_compute_v1_CreatePlacementGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreatePlacementGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreatePlacementGroupRequest_LabelsEntry_fieldAccessorTable = new

@@ -2196,6 +2196,33 @@ public final class Postgresql10 {
      * <code>.google.protobuf.Int64Value max_standby_archive_delay = 162;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxStandbyArchiveDelayOrBuilder();
+
+    /**
+     * <pre>
+     * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the sessionDurationTimeout field is set.
+     */
+    boolean hasSessionDurationTimeout();
+    /**
+     * <pre>
+     * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The sessionDurationTimeout.
+     */
+    com.google.protobuf.Int64Value getSessionDurationTimeout();
+    /**
+     * <pre>
+     * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSessionDurationTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -3773,6 +3800,19 @@ public final class Postgresql10 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxStandbyArchiveDelay_);
                 maxStandbyArchiveDelay_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1306: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (sessionDurationTimeout_ != null) {
+                subBuilder = sessionDurationTimeout_.toBuilder();
+              }
+              sessionDurationTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sessionDurationTimeout_);
+                sessionDurationTimeout_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9265,6 +9305,44 @@ public final class Postgresql10 {
       return getMaxStandbyArchiveDelay();
     }
 
+    public static final int SESSION_DURATION_TIMEOUT_FIELD_NUMBER = 163;
+    private com.google.protobuf.Int64Value sessionDurationTimeout_;
+    /**
+     * <pre>
+     * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the sessionDurationTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionDurationTimeout() {
+      return sessionDurationTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The sessionDurationTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSessionDurationTimeout() {
+      return sessionDurationTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionDurationTimeout_;
+    }
+    /**
+     * <pre>
+     * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSessionDurationTimeoutOrBuilder() {
+      return getSessionDurationTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9658,6 +9736,9 @@ public final class Postgresql10 {
       }
       if (maxStandbyArchiveDelay_ != null) {
         output.writeMessage(162, getMaxStandbyArchiveDelay());
+      }
+      if (sessionDurationTimeout_ != null) {
+        output.writeMessage(163, getSessionDurationTimeout());
       }
       unknownFields.writeTo(output);
     }
@@ -10173,6 +10254,10 @@ public final class Postgresql10 {
       if (maxStandbyArchiveDelay_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(162, getMaxStandbyArchiveDelay());
+      }
+      if (sessionDurationTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(163, getSessionDurationTimeout());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10740,6 +10825,11 @@ public final class Postgresql10 {
         if (!getMaxStandbyArchiveDelay()
             .equals(other.getMaxStandbyArchiveDelay())) return false;
       }
+      if (hasSessionDurationTimeout() != other.hasSessionDurationTimeout()) return false;
+      if (hasSessionDurationTimeout()) {
+        if (!getSessionDurationTimeout()
+            .equals(other.getSessionDurationTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11214,6 +11304,10 @@ public final class Postgresql10 {
       if (hasMaxStandbyArchiveDelay()) {
         hash = (37 * hash) + MAX_STANDBY_ARCHIVE_DELAY_FIELD_NUMBER;
         hash = (53 * hash) + getMaxStandbyArchiveDelay().hashCode();
+      }
+      if (hasSessionDurationTimeout()) {
+        hash = (37 * hash) + SESSION_DURATION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionDurationTimeout().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12028,6 +12122,12 @@ public final class Postgresql10 {
           maxStandbyArchiveDelay_ = null;
           maxStandbyArchiveDelayBuilder_ = null;
         }
+        if (sessionDurationTimeoutBuilder_ == null) {
+          sessionDurationTimeout_ = null;
+        } else {
+          sessionDurationTimeout_ = null;
+          sessionDurationTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -12608,6 +12708,11 @@ public final class Postgresql10 {
         } else {
           result.maxStandbyArchiveDelay_ = maxStandbyArchiveDelayBuilder_.build();
         }
+        if (sessionDurationTimeoutBuilder_ == null) {
+          result.sessionDurationTimeout_ = sessionDurationTimeout_;
+        } else {
+          result.sessionDurationTimeout_ = sessionDurationTimeoutBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13039,6 +13144,9 @@ public final class Postgresql10 {
         }
         if (other.hasMaxStandbyArchiveDelay()) {
           mergeMaxStandbyArchiveDelay(other.getMaxStandbyArchiveDelay());
+        }
+        if (other.hasSessionDurationTimeout()) {
+          mergeSessionDurationTimeout(other.getSessionDurationTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -27919,6 +28027,161 @@ public final class Postgresql10 {
         }
         return maxStandbyArchiveDelayBuilder_;
       }
+
+      private com.google.protobuf.Int64Value sessionDurationTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionDurationTimeoutBuilder_;
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return Whether the sessionDurationTimeout field is set.
+       */
+      public boolean hasSessionDurationTimeout() {
+        return sessionDurationTimeoutBuilder_ != null || sessionDurationTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return The sessionDurationTimeout.
+       */
+      public com.google.protobuf.Int64Value getSessionDurationTimeout() {
+        if (sessionDurationTimeoutBuilder_ == null) {
+          return sessionDurationTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionDurationTimeout_;
+        } else {
+          return sessionDurationTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setSessionDurationTimeout(com.google.protobuf.Int64Value value) {
+        if (sessionDurationTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionDurationTimeout_ = value;
+          onChanged();
+        } else {
+          sessionDurationTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setSessionDurationTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sessionDurationTimeoutBuilder_ == null) {
+          sessionDurationTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionDurationTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder mergeSessionDurationTimeout(com.google.protobuf.Int64Value value) {
+        if (sessionDurationTimeoutBuilder_ == null) {
+          if (sessionDurationTimeout_ != null) {
+            sessionDurationTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(sessionDurationTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            sessionDurationTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          sessionDurationTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder clearSessionDurationTimeout() {
+        if (sessionDurationTimeoutBuilder_ == null) {
+          sessionDurationTimeout_ = null;
+          onChanged();
+        } else {
+          sessionDurationTimeout_ = null;
+          sessionDurationTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSessionDurationTimeoutBuilder() {
+        
+        onChanged();
+        return getSessionDurationTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSessionDurationTimeoutOrBuilder() {
+        if (sessionDurationTimeoutBuilder_ != null) {
+          return sessionDurationTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionDurationTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : sessionDurationTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Terminate any session that exceeds the designated timeout, specified in seconds. If a timeout is not specified, the default session timeout is set to 12 hours. To disable it, specify a value of 0.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_duration_timeout = 163 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSessionDurationTimeoutFieldBuilder() {
+        if (sessionDurationTimeoutBuilder_ == null) {
+          sessionDurationTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSessionDurationTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          sessionDurationTimeout_ = null;
+        }
+        return sessionDurationTimeoutBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29217,7 +29480,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\335T\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\257U\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -29427,78 +29690,80 @@ public final class Postgresql10 {
       "o_seed\030\236\001 \001(\0132\034.google.protobuf.DoubleVa" +
       "lueB\013\372\3071\0070.0-1.0\022?\n\031max_standby_archive_" +
       "delay\030\242\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000" +
-      "\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOG" +
-      "ICAL\020\002\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRON" +
-      "OUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_" +
-      "COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022" +
-      "\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRO" +
-      "NOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOU" +
-      "S_COMMIT_REMOTE_APPLY\020\005\"\232\001\n\023ConstraintEx" +
-      "clusion\022$\n CONSTRAINT_EXCLUSION_UNSPECIF" +
-      "IED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CO" +
-      "NSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_E" +
-      "XCLUSION_PARTITION\020\003\"\222\001\n\021ForceParallelMo" +
-      "de\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022" +
-      "\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PAR" +
-      "ALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_" +
-      "REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_E" +
-      "RROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERRO" +
-      "R_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSI" +
-      "TY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERB" +
-      "OSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIF" +
-      "IED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL" +
-      "_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_L" +
-      "EVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rL" +
-      "OG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021" +
-      "LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t" +
-      "\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC" +
-      "\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNS" +
-      "PECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LO" +
-      "G_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003" +
-      "\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionI" +
-      "solation\022%\n!TRANSACTION_ISOLATION_UNSPEC" +
-      "IFIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UN" +
-      "COMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_REA" +
-      "D_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_R" +
-      "EPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATIO" +
-      "N_SERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA" +
-      "_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HE" +
-      "X\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\tXmlBina" +
-      "ry\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BI" +
-      "NARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXml" +
-      "Option\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XM" +
-      "L_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTEN" +
-      "T\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QUOT" +
-      "E_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022" +
-      "BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_" +
-      "OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING\020\004" +
-      "\"\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PLA" +
-      "N_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_P" +
-      "LAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DE" +
-      "BUG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRI" +
-      "NT_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRIN" +
-      "T_VERBOSE\020\004\"\212\003\n\026SharedPreloadLibraries\022(" +
-      "\n$SHARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000" +
-      "\022)\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAI" +
-      "N\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_" +
-      "PLAN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMES" +
-      "CALEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_" +
-      "QUALSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_" +
-      "PG_CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PG" +
-      "LOGICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG" +
-      "_PREWARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES_P" +
-      "GAUDIT\020\010\"\225\002\n\025PostgresqlConfigSet10\022Y\n\020ef" +
-      "fective_config\030\001 \001(\01329.yandex.cloud.mdb." +
-      "postgresql.v1.config.PostgresqlConfig10B" +
-      "\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.yandex.clou" +
-      "d.mdb.postgresql.v1.config.PostgresqlCon" +
-      "fig10\022Q\n\016default_config\030\003 \001(\01329.yandex.c" +
-      "loud.mdb.postgresql.v1.config.Postgresql" +
-      "Config10B\201\001\n)yandex.cloud.api.mdb.postgr" +
-      "esql.v1.configZTgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/postgresql/" +
-      "v1/config;postgresqlb\006proto3"
+      "e\022P\n\030session_duration_timeout\030\243\001 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\020\372\3071\0140-2147483" +
+      "647\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED" +
+      "\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_L" +
+      "OGICAL\020\002\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHR" +
+      "ONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOU" +
+      "S_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020" +
+      "\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCH" +
+      "RONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRON" +
+      "OUS_COMMIT_REMOTE_APPLY\020\005\"\232\001\n\023Constraint" +
+      "Exclusion\022$\n CONSTRAINT_EXCLUSION_UNSPEC" +
+      "IFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030" +
+      "CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT" +
+      "_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForceParallel" +
+      "Mode\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020" +
+      "\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_P" +
+      "ARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MOD" +
+      "E_REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG" +
+      "_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ER" +
+      "ROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBO" +
+      "SITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VE" +
+      "RBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPEC" +
+      "IFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEV" +
+      "EL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG" +
+      "_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n" +
+      "\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025" +
+      "\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR" +
+      "\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PAN" +
+      "IC\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_U" +
+      "NSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021" +
+      "LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD" +
+      "\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Transactio" +
+      "nIsolation\022%\n!TRANSACTION_ISOLATION_UNSP" +
+      "ECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_" +
+      "UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_R" +
+      "EAD_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION" +
+      "_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLAT" +
+      "ION_SERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030BYT" +
+      "EA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_" +
+      "HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\tXmlBi" +
+      "nary\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_" +
+      "BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tX" +
+      "mlOption\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023" +
+      "XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONT" +
+      "ENT\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QU" +
+      "OTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026" +
+      "\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOT" +
+      "E_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING" +
+      "\020\004\"\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_P" +
+      "LAN_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT" +
+      "_PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_" +
+      "DEBUG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_P" +
+      "RINT_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PR" +
+      "INT_VERBOSE\020\004\"\212\003\n\026SharedPreloadLibraries" +
+      "\022(\n$SHARED_PRELOAD_LIBRARIES_UNSPECIFIED" +
+      "\020\000\022)\n%SHARED_PRELOAD_LIBRARIES_AUTO_EXPL" +
+      "AIN\020\001\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HIN" +
+      "T_PLAN\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIM" +
+      "ESCALEDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_P" +
+      "G_QUALSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIE" +
+      "S_PG_CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_" +
+      "PGLOGICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_" +
+      "PG_PREWARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES" +
+      "_PGAUDIT\020\010\"\225\002\n\025PostgresqlConfigSet10\022Y\n\020" +
+      "effective_config\030\001 \001(\01329.yandex.cloud.md" +
+      "b.postgresql.v1.config.PostgresqlConfig1" +
+      "0B\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.yandex.cl" +
+      "oud.mdb.postgresql.v1.config.PostgresqlC" +
+      "onfig10\022Q\n\016default_config\030\003 \001(\01329.yandex" +
+      ".cloud.mdb.postgresql.v1.config.Postgres" +
+      "qlConfig10B\201\001\n)yandex.cloud.api.mdb.post" +
+      "gresql.v1.configZTgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/postgresq" +
+      "l/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29511,7 +29776,7 @@ public final class Postgresql10 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "MaxStandbyArchiveDelay", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "MaxStandbyArchiveDelay", "SessionDurationTimeout", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_fieldAccessorTable = new
