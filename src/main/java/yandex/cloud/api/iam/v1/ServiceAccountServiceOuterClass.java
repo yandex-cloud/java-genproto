@@ -10517,7 +10517,7 @@ public final class ServiceAccountServiceOuterClass {
       "\"v\n$ListServiceAccountOperationsResponse" +
       "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
       "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\350\r\n\025ServiceAccountService\022\217\001\n\003Get\022-.yan" +
+      "2\207\016\n\025ServiceAccountService\022\217\001\n\003Get\022-.yan" +
       "dex.cloud.iam.v1.GetServiceAccountReques" +
       "t\032#.yandex.cloud.iam.v1.ServiceAccount\"4" +
       "\202\323\344\223\002.\022,/iam/v1/serviceAccounts/{service" +
@@ -10544,26 +10544,27 @@ public final class ServiceAccountServiceOuterClass {
       "sBindingsRequest\032/.yandex.cloud.access.L" +
       "istAccessBindingsResponse\"@\202\323\344\223\002:\0228/iam/" +
       "v1/serviceAccounts/{resource_id}:listAcc" +
-      "essBindings\022\346\001\n\021SetAccessBindings\022-.yand" +
+      "essBindings\022\366\001\n\021SetAccessBindings\022-.yand" +
       "ex.cloud.access.SetAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\177\202\323\344" +
-      "\223\002<\"7/iam/v1/serviceAccounts/{resource_i" +
-      "d}:setAccessBindings:\001*\262\322*9\n access.SetA" +
-      "ccessBindingsMetadata\022\025google.protobuf.E" +
-      "mpty\022\363\001\n\024UpdateAccessBindings\0220.yandex.c" +
-      "loud.access.UpdateAccessBindingsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\205\001\202\323\344" +
-      "\223\002?\":/iam/v1/serviceAccounts/{resource_i" +
-      "d}:updateAccessBindings:\001*\262\322*<\n#access.U" +
-      "pdateAccessBindingsMetadata\022\025google.prot" +
-      "obuf.Empty\022\306\001\n\016ListOperations\0228.yandex.c" +
-      "loud.iam.v1.ListServiceAccountOperations" +
-      "Request\0329.yandex.cloud.iam.v1.ListServic" +
-      "eAccountOperationsResponse\"?\202\323\344\223\0029\0227/iam" +
-      "/v1/serviceAccounts/{service_account_id}" +
-      "/operationsBV\n\027yandex.cloud.api.iam.v1Z;" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/iam/v1;iamb\006proto3"
+      "\032!.yandex.cloud.operation.Operation\"\216\001\202\323" +
+      "\344\223\002<\"7/iam/v1/serviceAccounts/{resource_" +
+      "id}:setAccessBindings:\001*\262\322*H\n access.Set" +
+      "AccessBindingsMetadata\022$access.AccessBin" +
+      "dingsOperationResult\022\202\002\n\024UpdateAccessBin" +
+      "dings\0220.yandex.cloud.access.UpdateAccess" +
+      "BindingsRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\224\001\202\323\344\223\002?\":/iam/v1/serviceAcco" +
+      "unts/{resource_id}:updateAccessBindings:" +
+      "\001*\262\322*K\n#access.UpdateAccessBindingsMetad" +
+      "ata\022$access.AccessBindingsOperationResul" +
+      "t\022\306\001\n\016ListOperations\0228.yandex.cloud.iam." +
+      "v1.ListServiceAccountOperationsRequest\0329" +
+      ".yandex.cloud.iam.v1.ListServiceAccountO" +
+      "perationsResponse\"?\202\323\344\223\0029\0227/iam/v1/servi" +
+      "ceAccounts/{service_account_id}/operatio" +
+      "nsBV\n\027yandex.cloud.api.iam.v1Z;github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "iam/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

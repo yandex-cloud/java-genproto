@@ -16724,23 +16724,17 @@ public final class Stt {
         int index);
 
     /**
-     * <pre>
-     * Tag for distinguish audio channels.
-     * </pre>
-     *
-     * <code>string channel_tag = 2;</code>
+     * <code>string channel_tag = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The channelTag.
      */
-    java.lang.String getChannelTag();
+    @java.lang.Deprecated java.lang.String getChannelTag();
     /**
-     * <pre>
-     * Tag for distinguish audio channels.
-     * </pre>
-     *
-     * <code>string channel_tag = 2;</code>
+     * <code>string channel_tag = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for channelTag.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getChannelTagBytes();
   }
   /**
@@ -16908,15 +16902,12 @@ public final class Stt {
     public static final int CHANNEL_TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object channelTag_;
     /**
-     * <pre>
-     * Tag for distinguish audio channels.
-     * </pre>
-     *
-     * <code>string channel_tag = 2;</code>
+     * <code>string channel_tag = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The channelTag.
      */
     @java.lang.Override
-    public java.lang.String getChannelTag() {
+    @java.lang.Deprecated public java.lang.String getChannelTag() {
       java.lang.Object ref = channelTag_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -16929,15 +16920,12 @@ public final class Stt {
       }
     }
     /**
-     * <pre>
-     * Tag for distinguish audio channels.
-     * </pre>
-     *
-     * <code>string channel_tag = 2;</code>
+     * <code>string channel_tag = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for channelTag.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getChannelTagBytes() {
       java.lang.Object ref = channelTag_;
       if (ref instanceof java.lang.String) {
@@ -17628,14 +17616,11 @@ public final class Stt {
 
       private java.lang.Object channelTag_ = "";
       /**
-       * <pre>
-       * Tag for distinguish audio channels.
-       * </pre>
-       *
-       * <code>string channel_tag = 2;</code>
+       * <code>string channel_tag = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The channelTag.
        */
-      public java.lang.String getChannelTag() {
+      @java.lang.Deprecated public java.lang.String getChannelTag() {
         java.lang.Object ref = channelTag_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -17648,14 +17633,11 @@ public final class Stt {
         }
       }
       /**
-       * <pre>
-       * Tag for distinguish audio channels.
-       * </pre>
-       *
-       * <code>string channel_tag = 2;</code>
+       * <code>string channel_tag = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for channelTag.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getChannelTagBytes() {
         java.lang.Object ref = channelTag_;
         if (ref instanceof String) {
@@ -17669,15 +17651,12 @@ public final class Stt {
         }
       }
       /**
-       * <pre>
-       * Tag for distinguish audio channels.
-       * </pre>
-       *
-       * <code>string channel_tag = 2;</code>
+       * <code>string channel_tag = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The channelTag to set.
        * @return This builder for chaining.
        */
-      public Builder setChannelTag(
+      @java.lang.Deprecated public Builder setChannelTag(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -17688,29 +17667,23 @@ public final class Stt {
         return this;
       }
       /**
-       * <pre>
-       * Tag for distinguish audio channels.
-       * </pre>
-       *
-       * <code>string channel_tag = 2;</code>
+       * <code>string channel_tag = 2 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearChannelTag() {
+      @java.lang.Deprecated public Builder clearChannelTag() {
         
         channelTag_ = getDefaultInstance().getChannelTag();
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * Tag for distinguish audio channels.
-       * </pre>
-       *
-       * <code>string channel_tag = 2;</code>
+       * <code>string channel_tag = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for channelTag to set.
        * @return This builder for chaining.
        */
-      public Builder setChannelTagBytes(
+      @java.lang.Deprecated public Builder setChannelTagBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -21408,6 +21381,26 @@ public final class Stt {
      */
     yandex.cloud.api.ai.stt.v3.Stt.StatusCodeOrBuilder getStatusCodeOrBuilder();
 
+    /**
+     * <pre>
+     * Tag for distinguish audio channels.
+     * </pre>
+     *
+     * <code>string channel_tag = 9;</code>
+     * @return The channelTag.
+     */
+    java.lang.String getChannelTag();
+    /**
+     * <pre>
+     * Tag for distinguish audio channels.
+     * </pre>
+     *
+     * <code>string channel_tag = 9;</code>
+     * @return The bytes for channelTag.
+     */
+    com.google.protobuf.ByteString
+        getChannelTagBytes();
+
     public yandex.cloud.api.ai.stt.v3.Stt.StreamingResponse.EventCase getEventCase();
   }
   /**
@@ -21430,6 +21423,7 @@ public final class Stt {
       super(builder);
     }
     private StreamingResponse() {
+      channelTag_ = "";
     }
 
     @java.lang.Override
@@ -21561,6 +21555,12 @@ public final class Stt {
                 event_ = subBuilder.buildPartial();
               }
               eventCase_ = 8;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              channelTag_ = s;
               break;
             }
             default: {
@@ -21957,6 +21957,52 @@ public final class Stt {
       return yandex.cloud.api.ai.stt.v3.Stt.StatusCode.getDefaultInstance();
     }
 
+    public static final int CHANNEL_TAG_FIELD_NUMBER = 9;
+    private volatile java.lang.Object channelTag_;
+    /**
+     * <pre>
+     * Tag for distinguish audio channels.
+     * </pre>
+     *
+     * <code>string channel_tag = 9;</code>
+     * @return The channelTag.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelTag() {
+      java.lang.Object ref = channelTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Tag for distinguish audio channels.
+     * </pre>
+     *
+     * <code>string channel_tag = 9;</code>
+     * @return The bytes for channelTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelTagBytes() {
+      java.lang.Object ref = channelTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21994,6 +22040,9 @@ public final class Stt {
       }
       if (eventCase_ == 8) {
         output.writeMessage(8, (yandex.cloud.api.ai.stt.v3.Stt.StatusCode) event_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, channelTag_);
       }
       unknownFields.writeTo(output);
     }
@@ -22036,6 +22085,9 @@ public final class Stt {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, (yandex.cloud.api.ai.stt.v3.Stt.StatusCode) event_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, channelTag_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -22063,6 +22115,8 @@ public final class Stt {
       }
       if (getResponseWallTimeMs()
           != other.getResponseWallTimeMs()) return false;
+      if (!getChannelTag()
+          .equals(other.getChannelTag())) return false;
       if (!getEventCase().equals(other.getEventCase())) return false;
       switch (eventCase_) {
         case 4:
@@ -22110,6 +22164,8 @@ public final class Stt {
       hash = (37 * hash) + RESPONSE_WALL_TIME_MS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getResponseWallTimeMs());
+      hash = (37 * hash) + CHANNEL_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelTag().hashCode();
       switch (eventCase_) {
         case 4:
           hash = (37 * hash) + PARTIAL_FIELD_NUMBER;
@@ -22288,6 +22344,8 @@ public final class Stt {
         }
         responseWallTimeMs_ = 0L;
 
+        channelTag_ = "";
+
         eventCase_ = 0;
         event_ = null;
         return this;
@@ -22362,6 +22420,7 @@ public final class Stt {
             result.event_ = statusCodeBuilder_.build();
           }
         }
+        result.channelTag_ = channelTag_;
         result.eventCase_ = eventCase_;
         onBuilt();
         return result;
@@ -22419,6 +22478,10 @@ public final class Stt {
         }
         if (other.getResponseWallTimeMs() != 0L) {
           setResponseWallTimeMs(other.getResponseWallTimeMs());
+        }
+        if (!other.getChannelTag().isEmpty()) {
+          channelTag_ = other.channelTag_;
+          onChanged();
         }
         switch (other.getEventCase()) {
           case PARTIAL: {
@@ -23753,6 +23816,102 @@ public final class Stt {
         onChanged();;
         return statusCodeBuilder_;
       }
+
+      private java.lang.Object channelTag_ = "";
+      /**
+       * <pre>
+       * Tag for distinguish audio channels.
+       * </pre>
+       *
+       * <code>string channel_tag = 9;</code>
+       * @return The channelTag.
+       */
+      public java.lang.String getChannelTag() {
+        java.lang.Object ref = channelTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Tag for distinguish audio channels.
+       * </pre>
+       *
+       * <code>string channel_tag = 9;</code>
+       * @return The bytes for channelTag.
+       */
+      public com.google.protobuf.ByteString
+          getChannelTagBytes() {
+        java.lang.Object ref = channelTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Tag for distinguish audio channels.
+       * </pre>
+       *
+       * <code>string channel_tag = 9;</code>
+       * @param value The channelTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        channelTag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tag for distinguish audio channels.
+       * </pre>
+       *
+       * <code>string channel_tag = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelTag() {
+        
+        channelTag_ = getDefaultInstance().getChannelTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tag for distinguish audio channels.
+       * </pre>
+       *
+       * <code>string channel_tag = 9;</code>
+       * @param value The bytes for channelTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        channelTag_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24009,35 +24168,36 @@ public final class Stt {
       "\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013end_tim" +
       "e_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n\tlangua" +
       "ges\030\006 \003(\0132$.speechkit.stt.v3.LanguageEst" +
-      "imation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(\003\"]\n" +
+      "imation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(\003\"a\n" +
       "\021AlternativeUpdate\0223\n\014alternatives\030\001 \003(\013" +
-      "2\035.speechkit.stt.v3.Alternative\022\023\n\013chann" +
-      "el_tag\030\002 \001(\t\"\231\001\n\014AudioCursors\022\030\n\020receive" +
-      "d_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001(\003\022\027" +
-      "\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_time_ms" +
-      "\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_time_" +
-      "ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013final_ind" +
-      "ex\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\0132#.spee" +
-      "chkit.stt.v3.AlternativeUpdateH\000B\006\n\004Type" +
-      "\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\0162\032.spee" +
-      "chkit.stt.v3.CodeType\022\017\n\007message\030\002 \001(\t\"4" +
-      "\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_requ" +
-      "est_id\030\002 \001(\t\"\274\003\n\021StreamingResponse\0223\n\014se" +
-      "ssion_uuid\030\001 \001(\0132\035.speechkit.stt.v3.Sess" +
-      "ionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036.speechk" +
-      "it.stt.v3.AudioCursors\022\035\n\025response_wall_" +
-      "time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.speechk" +
-      "it.stt.v3.AlternativeUpdateH\000\0224\n\005final\030\005" +
-      " \001(\0132#.speechkit.stt.v3.AlternativeUpdat" +
-      "eH\000\0221\n\neou_update\030\006 \001(\0132\033.speechkit.stt." +
-      "v3.EouUpdateH\000\022=\n\020final_refinement\030\007 \001(\013" +
-      "2!.speechkit.stt.v3.FinalRefinementH\000\0223\n" +
-      "\013status_code\030\010 \001(\0132\034.speechkit.stt.v3.St" +
-      "atusCodeH\000B\007\n\005Event*K\n\010CodeType\022\031\n\025CODE_" +
-      "TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNI" +
-      "NG\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud.api.ai." +
-      "stt.v3Z>github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/ai/stt/v3;sttb\006proto3"
+      "2\035.speechkit.stt.v3.Alternative\022\027\n\013chann" +
+      "el_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursors\022\030\n\020rec" +
+      "eived_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001" +
+      "(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_tim" +
+      "e_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_t" +
+      "ime_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013final" +
+      "_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\0132#." +
+      "speechkit.stt.v3.AlternativeUpdateH\000B\006\n\004" +
+      "Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\0162\032." +
+      "speechkit.stt.v3.CodeType\022\017\n\007message\030\002 \001" +
+      "(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_" +
+      "request_id\030\002 \001(\t\"\321\003\n\021StreamingResponse\0223" +
+      "\n\014session_uuid\030\001 \001(\0132\035.speechkit.stt.v3." +
+      "SessionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036.spe" +
+      "echkit.stt.v3.AudioCursors\022\035\n\025response_w" +
+      "all_time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.spe" +
+      "echkit.stt.v3.AlternativeUpdateH\000\0224\n\005fin" +
+      "al\030\005 \001(\0132#.speechkit.stt.v3.AlternativeU" +
+      "pdateH\000\0221\n\neou_update\030\006 \001(\0132\033.speechkit." +
+      "stt.v3.EouUpdateH\000\022=\n\020final_refinement\030\007" +
+      " \001(\0132!.speechkit.stt.v3.FinalRefinementH" +
+      "\000\0223\n\013status_code\030\010 \001(\0132\034.speechkit.stt.v" +
+      "3.StatusCodeH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n\005E" +
+      "vent*K\n\010CodeType\022\031\n\025CODE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CLOSED\020" +
+      "\003B\\\n\032yandex.cloud.api.ai.stt.v3Z>github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/ai/stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24186,7 +24346,7 @@ public final class Stt {
     internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,
-        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "Event", });
+        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ChannelTag", "Event", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

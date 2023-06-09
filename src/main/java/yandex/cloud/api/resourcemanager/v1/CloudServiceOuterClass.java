@@ -11099,7 +11099,7 @@ public final class CloudServiceOuterClass {
       "=50\0220\n\014delete_after\030\002 \001(\0132\032.google.proto" +
       "buf.Timestamp\"Y\n\023DeleteCloudMetadata\022\020\n\010" +
       "cloud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp2\312\r\n\014CloudServic" +
+      "oogle.protobuf.Timestamp2\350\r\n\014CloudServic" +
       "e\022\217\001\n\003Get\0220.yandex.cloud.resourcemanager" +
       ".v1.GetCloudRequest\032&.yandex.cloud.resou" +
       "rcemanager.v1.Cloud\".\202\323\344\223\002(\022&/resource-m" +
@@ -11130,23 +11130,24 @@ public final class CloudServiceOuterClass {
       "cloud.access.ListAccessBindingsRequest\032/" +
       ".yandex.cloud.access.ListAccessBindingsR" +
       "esponse\"D\202\323\344\223\002>\022</resource-manager/v1/cl" +
-      "ouds/{resource_id}:listAccessBindings\022\353\001" +
+      "ouds/{resource_id}:listAccessBindings\022\372\001" +
       "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
       "s.SetAccessBindingsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\203\001\202\323\344\223\002@\";/resourc" +
+      "d.operation.Operation\"\222\001\202\323\344\223\002@\";/resourc" +
       "e-manager/v1/clouds/{resource_id}:setAcc" +
-      "essBindings:\001*\262\322*9\n access.SetAccessBind" +
-      "ingsMetadata\022\025google.protobuf.Empty\022\367\001\n\024" +
-      "UpdateAccessBindings\0220.yandex.cloud.acce" +
-      "ss.UpdateAccessBindingsRequest\032!.yandex." +
-      "cloud.operation.Operation\"\211\001\202\323\344\223\002C\">/res" +
-      "ource-manager/v1/clouds/{resource_id}:up" +
-      "dateAccessBindings:\001*\262\322*<\n#access.Update" +
-      "AccessBindingsMetadata\022\025google.protobuf." +
-      "EmptyBz\n#yandex.cloud.api.resourcemanage" +
-      "r.v1ZSgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/resourcemanager/v1;resour" +
-      "cemanagerb\006proto3"
+      "essBindings:\001*\262\322*H\n access.SetAccessBind" +
+      "ingsMetadata\022$access.AccessBindingsOpera" +
+      "tionResult\022\206\002\n\024UpdateAccessBindings\0220.ya" +
+      "ndex.cloud.access.UpdateAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\230\001\202\323\344\223\002C\">/resource-manager/v1/clouds/{" +
+      "resource_id}:updateAccessBindings:\001*\262\322*K" +
+      "\n#access.UpdateAccessBindingsMetadata\022$a" +
+      "ccess.AccessBindingsOperationResultBz\n#y" +
+      "andex.cloud.api.resourcemanager.v1ZSgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/resourcemanager/v1;resourcemanagerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -11118,7 +11118,7 @@ public final class FolderServiceOuterClass {
       "1\006<=2000\"n\n\034ListFolderOperationsResponse" +
       "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
       "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\346\r\n\rFolderService\022\223\001\n\003Get\0221.yandex.clou" +
+      "2\204\016\n\rFolderService\022\223\001\n\003Get\0221.yandex.clou" +
       "d.resourcemanager.v1.GetFolderRequest\032\'." +
       "yandex.cloud.resourcemanager.v1.Folder\"0" +
       "\202\323\344\223\002*\022(/resource-manager/v1/folders/{fo" +
@@ -11150,22 +11150,23 @@ public final class FolderServiceOuterClass {
       "/.yandex.cloud.access.ListAccessBindings" +
       "Response\"E\202\323\344\223\002?\022=/resource-manager/v1/f" +
       "olders/{resource_id}:listAccessBindings\022" +
-      "\354\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
+      "\373\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
       "ess.SetAccessBindingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\204\001\202\323\344\223\002A\"</resou" +
+      "oud.operation.Operation\"\223\001\202\323\344\223\002A\"</resou" +
       "rce-manager/v1/folders/{resource_id}:set" +
-      "AccessBindings:\001*\262\322*9\n access.SetAccessB" +
-      "indingsMetadata\022\025google.protobuf.Empty\022\370" +
-      "\001\n\024UpdateAccessBindings\0220.yandex.cloud.a" +
-      "ccess.UpdateAccessBindingsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"\212\001\202\323\344\223\002D\"?/" +
-      "resource-manager/v1/folders/{resource_id" +
-      "}:updateAccessBindings:\001*\262\322*<\n#access.Up" +
-      "dateAccessBindingsMetadata\022\025google.proto" +
-      "buf.EmptyBz\n#yandex.cloud.api.resourcema" +
-      "nager.v1ZSgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/resourcemanager/v1;re" +
-      "sourcemanagerb\006proto3"
+      "AccessBindings:\001*\262\322*H\n access.SetAccessB" +
+      "indingsMetadata\022$access.AccessBindingsOp" +
+      "erationResult\022\207\002\n\024UpdateAccessBindings\0220" +
+      ".yandex.cloud.access.UpdateAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\231\001\202\323\344\223\002D\"?/resource-manager/v1/folde" +
+      "rs/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*K\n#access.UpdateAccessBindingsMetadat" +
+      "a\022$access.AccessBindingsOperationResultB" +
+      "z\n#yandex.cloud.api.resourcemanager.v1ZS" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/resourcemanager/v1;resourcemana" +
+      "gerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

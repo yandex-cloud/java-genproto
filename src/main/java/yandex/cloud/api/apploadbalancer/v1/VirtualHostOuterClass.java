@@ -21297,7 +21297,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replacement for the path prefix matched by [StringMatch].
-     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
@@ -21310,7 +21310,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replacement for the path prefix matched by [StringMatch].
-     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
@@ -21798,7 +21798,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replacement for the path prefix matched by [StringMatch].
-     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
@@ -21823,7 +21823,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replacement for the path prefix matched by [StringMatch].
-     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
      * a request with `/foobaz` path is forwarded with `/barbaz` path.
      * For [StringMatch.exact_match], the whole path is replaced.
      * If not specified, the path is not changed.
@@ -23062,7 +23062,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replacement for the path prefix matched by [StringMatch].
-       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
@@ -23086,7 +23086,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replacement for the path prefix matched by [StringMatch].
-       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
@@ -23111,7 +23111,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replacement for the path prefix matched by [StringMatch].
-       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
@@ -23134,7 +23134,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replacement for the path prefix matched by [StringMatch].
-       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.
@@ -23152,7 +23152,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replacement for the path prefix matched by [StringMatch].
-       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `prefix_rewrite` value is `/bar`,
        * a request with `/foobaz` path is forwarded with `/barbaz` path.
        * For [StringMatch.exact_match], the whole path is replaced.
        * If not specified, the path is not changed.

@@ -6455,6 +6455,33 @@ public final class Kafka {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopicSettings topic_settings = 7;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTargetTopicSettingsOrBuilder getTopicSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Data serialization format settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+     * @return Whether the serializer field is set.
+     */
+    boolean hasSerializer();
+    /**
+     * <pre>
+     * Data serialization format settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+     * @return The serializer.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer getSerializer();
+    /**
+     * <pre>
+     * Data serialization format settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder getSerializerOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaTarget}
@@ -6547,6 +6574,19 @@ public final class Kafka {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(topicSettings_);
                 topicSettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.Builder subBuilder = null;
+              if (serializer_ != null) {
+                subBuilder = serializer_.toBuilder();
+              }
+              serializer_ = input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(serializer_);
+                serializer_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6751,6 +6791,44 @@ public final class Kafka {
       return getTopicSettings();
     }
 
+    public static final int SERIALIZER_FIELD_NUMBER = 8;
+    private yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer serializer_;
+    /**
+     * <pre>
+     * Data serialization format settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+     * @return Whether the serializer field is set.
+     */
+    @java.lang.Override
+    public boolean hasSerializer() {
+      return serializer_ != null;
+    }
+    /**
+     * <pre>
+     * Data serialization format settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+     * @return The serializer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer getSerializer() {
+      return serializer_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.getDefaultInstance() : serializer_;
+    }
+    /**
+     * <pre>
+     * Data serialization format settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder getSerializerOrBuilder() {
+      return getSerializer();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6776,6 +6854,9 @@ public final class Kafka {
       }
       if (topicSettings_ != null) {
         output.writeMessage(7, getTopicSettings());
+      }
+      if (serializer_ != null) {
+        output.writeMessage(8, getSerializer());
       }
       unknownFields.writeTo(output);
     }
@@ -6805,6 +6886,10 @@ public final class Kafka {
       if (topicSettings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTopicSettings());
+      }
+      if (serializer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getSerializer());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6838,6 +6923,11 @@ public final class Kafka {
         if (!getTopicSettings()
             .equals(other.getTopicSettings())) return false;
       }
+      if (hasSerializer() != other.hasSerializer()) return false;
+      if (hasSerializer()) {
+        if (!getSerializer()
+            .equals(other.getSerializer())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6864,6 +6954,10 @@ public final class Kafka {
       if (hasTopicSettings()) {
         hash = (37 * hash) + TOPIC_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getTopicSettings().hashCode();
+      }
+      if (hasSerializer()) {
+        hash = (37 * hash) + SERIALIZER_FIELD_NUMBER;
+        hash = (53 * hash) + getSerializer().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7018,6 +7112,12 @@ public final class Kafka {
           topicSettings_ = null;
           topicSettingsBuilder_ = null;
         }
+        if (serializerBuilder_ == null) {
+          serializer_ = null;
+        } else {
+          serializer_ = null;
+          serializerBuilder_ = null;
+        }
         return this;
       }
 
@@ -7064,6 +7164,11 @@ public final class Kafka {
           result.topicSettings_ = topicSettings_;
         } else {
           result.topicSettings_ = topicSettingsBuilder_.build();
+        }
+        if (serializerBuilder_ == null) {
+          result.serializer_ = serializer_;
+        } else {
+          result.serializer_ = serializerBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7131,6 +7236,9 @@ public final class Kafka {
         }
         if (other.hasTopicSettings()) {
           mergeTopicSettings(other.getTopicSettings());
+        }
+        if (other.hasSerializer()) {
+          mergeSerializer(other.getSerializer());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7771,6 +7879,161 @@ public final class Kafka {
           topicSettings_ = null;
         }
         return topicSettingsBuilder_;
+      }
+
+      private yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer serializer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder> serializerBuilder_;
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       * @return Whether the serializer field is set.
+       */
+      public boolean hasSerializer() {
+        return serializerBuilder_ != null || serializer_ != null;
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       * @return The serializer.
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer getSerializer() {
+        if (serializerBuilder_ == null) {
+          return serializer_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.getDefaultInstance() : serializer_;
+        } else {
+          return serializerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      public Builder setSerializer(yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer value) {
+        if (serializerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serializer_ = value;
+          onChanged();
+        } else {
+          serializerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      public Builder setSerializer(
+          yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.Builder builderForValue) {
+        if (serializerBuilder_ == null) {
+          serializer_ = builderForValue.build();
+          onChanged();
+        } else {
+          serializerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      public Builder mergeSerializer(yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer value) {
+        if (serializerBuilder_ == null) {
+          if (serializer_ != null) {
+            serializer_ =
+              yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.newBuilder(serializer_).mergeFrom(value).buildPartial();
+          } else {
+            serializer_ = value;
+          }
+          onChanged();
+        } else {
+          serializerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      public Builder clearSerializer() {
+        if (serializerBuilder_ == null) {
+          serializer_ = null;
+          onChanged();
+        } else {
+          serializer_ = null;
+          serializerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.Builder getSerializerBuilder() {
+        
+        onChanged();
+        return getSerializerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder getSerializerOrBuilder() {
+        if (serializerBuilder_ != null) {
+          return serializerBuilder_.getMessageOrBuilder();
+        } else {
+          return serializer_ == null ?
+              yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.getDefaultInstance() : serializer_;
+        }
+      }
+      /**
+       * <pre>
+       * Data serialization format settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.Serializer serializer = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder> 
+          getSerializerFieldBuilder() {
+        if (serializerBuilder_ == null) {
+          serializerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.Serializer.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder>(
+                  getSerializer(),
+                  getParentForChildren(),
+                  isClean());
+          serializer_ = null;
+        }
+        return serializerBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9637,57 +9900,61 @@ public final class Kafka {
       "kafka.proto\022%yandex.cloud.datatransfer.v" +
       "1.endpoint\0322yandex/cloud/datatransfer/v1" +
       "/endpoint/common.proto\0323yandex/cloud/dat" +
-      "atransfer/v1/endpoint/parsers.proto\"\211\001\n\026" +
-      "KafkaConnectionOptions\022\024\n\ncluster_id\030\001 \001" +
-      "(\tH\000\022K\n\non_premise\030\002 \001(\01325.yandex.cloud." +
-      "datatransfer.v1.endpoint.OnPremiseKafkaH" +
-      "\000B\014\n\nconnection\"z\n\016OnPremiseKafka\022\023\n\013bro" +
-      "ker_urls\030\001 \003(\t\022@\n\010tls_mode\030\005 \001(\0132..yande" +
-      "x.cloud.datatransfer.v1.endpoint.TLSMode" +
-      "\022\021\n\tsubnet_id\030\004 \001(\t\"\243\001\n\tKafkaAuth\022H\n\004sas" +
-      "l\030\001 \001(\01328.yandex.cloud.datatransfer.v1.e" +
-      "ndpoint.KafkaSaslSecurityH\000\022@\n\007no_auth\030\002" +
-      " \001(\0132-.yandex.cloud.datatransfer.v1.endp" +
-      "oint.NoAuthH\000B\n\n\010security\"\254\001\n\021KafkaSaslS" +
-      "ecurity\022\014\n\004user\030\001 \001(\t\022?\n\010password\030\004 \001(\0132" +
-      "-.yandex.cloud.datatransfer.v1.endpoint." +
-      "Secret\022H\n\tmechanism\030\003 \001(\01625.yandex.cloud" +
-      ".datatransfer.v1.endpoint.KafkaMechanism" +
-      "\"\343\002\n\013KafkaSource\022Q\n\nconnection\030\001 \001(\0132=.y" +
-      "andex.cloud.datatransfer.v1.endpoint.Kaf" +
-      "kaConnectionOptions\022>\n\004auth\030\002 \001(\01320.yand" +
-      "ex.cloud.datatransfer.v1.endpoint.KafkaA" +
-      "uth\022\027\n\017security_groups\030\003 \003(\t\022\022\n\ntopic_na" +
-      "me\030\004 \001(\t\022U\n\013transformer\030\005 \001(\0132@.yandex.c" +
-      "loud.datatransfer.v1.endpoint.DataTransf" +
-      "ormationOptions\022=\n\006parser\030\007 \001(\0132-.yandex" +
-      ".cloud.datatransfer.v1.endpoint.Parser\"\222" +
-      "\002\n\013KafkaTarget\022Q\n\nconnection\030\001 \001(\0132=.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.Kafka" +
-      "ConnectionOptions\022>\n\004auth\030\002 \001(\01320.yandex" +
-      ".cloud.datatransfer.v1.endpoint.KafkaAut" +
-      "h\022\027\n\017security_groups\030\003 \003(\t\022W\n\016topic_sett" +
-      "ings\030\007 \001(\0132?.yandex.cloud.datatransfer.v" +
-      "1.endpoint.KafkaTargetTopicSettings\"\216\001\n\030" +
-      "KafkaTargetTopicSettings\022H\n\005topic\030\001 \001(\0132" +
-      "7.yandex.cloud.datatransfer.v1.endpoint." +
-      "KafkaTargetTopicH\000\022\026\n\014topic_prefix\030\002 \001(\t" +
-      "H\000B\020\n\016topic_settings\"=\n\020KafkaTargetTopic" +
-      "\022\022\n\ntopic_name\030\001 \001(\t\022\025\n\rsave_tx_order\030\002 " +
-      "\001(\010*i\n\016KafkaMechanism\022\037\n\033KAFKA_MECHANISM" +
-      "_UNSPECIFIED\020\000\022\032\n\026KAFKA_MECHANISM_SHA256" +
-      "\020\001\022\032\n\026KAFKA_MECHANISM_SHA512\020\002B\247\001\n)yande" +
-      "x.cloud.api.datatransfer.v1.endpointZRgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/datatransfer/v1/endpoint;endpoint" +
-      "\252\002%Yandex.Cloud.Datatransfer.V1.EndPoint" +
-      "b\006proto3"
+      "atransfer/v1/endpoint/parsers.proto\0327yan" +
+      "dex/cloud/datatransfer/v1/endpoint/seria" +
+      "lizers.proto\"\211\001\n\026KafkaConnectionOptions\022" +
+      "\024\n\ncluster_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(" +
+      "\01325.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.OnPremiseKafkaH\000B\014\n\nconnection\"z\n\016OnPr" +
+      "emiseKafka\022\023\n\013broker_urls\030\001 \003(\t\022@\n\010tls_m" +
+      "ode\030\005 \001(\0132..yandex.cloud.datatransfer.v1" +
+      ".endpoint.TLSMode\022\021\n\tsubnet_id\030\004 \001(\t\"\243\001\n" +
+      "\tKafkaAuth\022H\n\004sasl\030\001 \001(\01328.yandex.cloud." +
+      "datatransfer.v1.endpoint.KafkaSaslSecuri" +
+      "tyH\000\022@\n\007no_auth\030\002 \001(\0132-.yandex.cloud.dat" +
+      "atransfer.v1.endpoint.NoAuthH\000B\n\n\010securi" +
+      "ty\"\254\001\n\021KafkaSaslSecurity\022\014\n\004user\030\001 \001(\t\022?" +
+      "\n\010password\030\004 \001(\0132-.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.Secret\022H\n\tmechanism\030\003 \001" +
+      "(\01625.yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.KafkaMechanism\"\343\002\n\013KafkaSource\022Q\n\ncon" +
+      "nection\030\001 \001(\0132=.yandex.cloud.datatransfe" +
+      "r.v1.endpoint.KafkaConnectionOptions\022>\n\004" +
+      "auth\030\002 \001(\01320.yandex.cloud.datatransfer.v" +
+      "1.endpoint.KafkaAuth\022\027\n\017security_groups\030" +
+      "\003 \003(\t\022\022\n\ntopic_name\030\004 \001(\t\022U\n\013transformer" +
+      "\030\005 \001(\0132@.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.DataTransformationOptions\022=\n\006pars" +
+      "er\030\007 \001(\0132-.yandex.cloud.datatransfer.v1." +
+      "endpoint.Parser\"\331\002\n\013KafkaTarget\022Q\n\nconne" +
+      "ction\030\001 \001(\0132=.yandex.cloud.datatransfer." +
+      "v1.endpoint.KafkaConnectionOptions\022>\n\004au" +
+      "th\030\002 \001(\01320.yandex.cloud.datatransfer.v1." +
+      "endpoint.KafkaAuth\022\027\n\017security_groups\030\003 " +
+      "\003(\t\022W\n\016topic_settings\030\007 \001(\0132?.yandex.clo" +
+      "ud.datatransfer.v1.endpoint.KafkaTargetT" +
+      "opicSettings\022E\n\nserializer\030\010 \001(\01321.yande" +
+      "x.cloud.datatransfer.v1.endpoint.Seriali" +
+      "zer\"\216\001\n\030KafkaTargetTopicSettings\022H\n\005topi" +
+      "c\030\001 \001(\01327.yandex.cloud.datatransfer.v1.e" +
+      "ndpoint.KafkaTargetTopicH\000\022\026\n\014topic_pref" +
+      "ix\030\002 \001(\tH\000B\020\n\016topic_settings\"=\n\020KafkaTar" +
+      "getTopic\022\022\n\ntopic_name\030\001 \001(\t\022\025\n\rsave_tx_" +
+      "order\030\002 \001(\010*i\n\016KafkaMechanism\022\037\n\033KAFKA_M" +
+      "ECHANISM_UNSPECIFIED\020\000\022\032\n\026KAFKA_MECHANIS" +
+      "M_SHA256\020\001\022\032\n\026KAFKA_MECHANISM_SHA512\020\002B\247" +
+      "\001\n)yandex.cloud.api.datatransfer.v1.endp" +
+      "ointZRgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/datatransfer/v1/endpoint;" +
+      "endpoint\252\002%Yandex.Cloud.Datatransfer.V1." +
+      "EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Parsers.getDescriptor(),
+          yandex.cloud.api.datatransfer.v1.endpoint.Serializers.getDescriptor(),
         });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaConnectionOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9724,7 +9991,7 @@ public final class Kafka {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaTarget_descriptor,
-        new java.lang.String[] { "Connection", "Auth", "SecurityGroups", "TopicSettings", });
+        new java.lang.String[] { "Connection", "Auth", "SecurityGroups", "TopicSettings", "Serializer", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaTargetTopicSettings_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaTargetTopicSettings_fieldAccessorTable = new
@@ -9739,6 +10006,7 @@ public final class Kafka {
         new java.lang.String[] { "TopicName", "SaveTxOrder", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.getDescriptor();
+    yandex.cloud.api.datatransfer.v1.endpoint.Serializers.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1114,6 +1114,14 @@ public final class TestOuterClass {
        * <code>AUTOSTOPPED = 11;</code>
        */
       AUTOSTOPPED(11),
+      /**
+       * <code>WAITING = 12;</code>
+       */
+      WAITING(12),
+      /**
+       * <code>DELETING = 13;</code>
+       */
+      DELETING(13),
       UNRECOGNIZED(-1),
       ;
 
@@ -1165,6 +1173,14 @@ public final class TestOuterClass {
        * <code>AUTOSTOPPED = 11;</code>
        */
       public static final int AUTOSTOPPED_VALUE = 11;
+      /**
+       * <code>WAITING = 12;</code>
+       */
+      public static final int WAITING_VALUE = 12;
+      /**
+       * <code>DELETING = 13;</code>
+       */
+      public static final int DELETING_VALUE = 13;
 
 
       public final int getNumber() {
@@ -1203,6 +1219,8 @@ public final class TestOuterClass {
           case 9: return STOPPING;
           case 10: return STOPPED;
           case 11: return AUTOSTOPPED;
+          case 12: return WAITING;
+          case 13: return DELETING;
           default: return null;
         }
       }
@@ -7277,7 +7295,7 @@ public final class TestOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/loadtesting/agent/v1/test" +
       ".proto\022!yandex.cloud.loadtesting.agent.v" +
-      "1\032\037google/protobuf/timestamp.proto\"\327\007\n\004T" +
+      "1\032\037google/protobuf/timestamp.proto\"\362\007\n\004T" +
       "est\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004na" +
       "me\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022C\n\006labels\030" +
       "\005 \003(\01323.yandex.cloud.loadtesting.agent.v" +
@@ -7295,33 +7313,34 @@ public final class TestOuterClass {
       "es\030\022 \003(\t\022>\n\006status\030\023 \001(\0162..yandex.cloud." +
       "loadtesting.agent.v1.Test.Status\022\016\n\006erro" +
       "rs\030\024 \003(\t\022\020\n\010favorite\030\025 \001(\010\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\276\001\n\006St" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\331\001\n\006St" +
       "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007CREATED\020" +
       "\001\022\r\n\tINITIATED\020\002\022\r\n\tPREPARING\020\003\022\013\n\007RUNNI" +
       "NG\020\004\022\r\n\tFINISHING\020\005\022\010\n\004DONE\020\006\022\023\n\017POST_PR" +
       "OCESSING\020\007\022\n\n\006FAILED\020\010\022\014\n\010STOPPING\020\t\022\013\n\007" +
-      "STOPPED\020\n\022\017\n\013AUTOSTOPPED\020\013\"@\n\tGenerator\022" +
-      "\031\n\025GENERATOR_UNSPECIFIED\020\000\022\013\n\007PANDORA\020\001\022" +
-      "\013\n\007PHANTOM\020\002B\006\n\004ammo\"\302\001\n\014LoadSchedule\022=\n" +
-      "\004type\030\001 \001(\0162/.yandex.cloud.loadtesting.a" +
-      "gent.v1.ScheduleType\022\021\n\tinstances\030\002 \001(\003\022" +
-      "\020\n\010duration\030\003 \001(\t\022\020\n\010rps_from\030\004 \001(\003\022\016\n\006r" +
-      "ps_to\030\005 \001(\003\022\014\n\004step\030\006 \001(\003\022\013\n\003ops\030\007 \001(\003\022\021" +
-      "\n\tstpd_path\030\010 \001(\t\"\250\001\n\010Schedule\022>\n\tload_t" +
-      "ype\030\001 \001(\0162+.yandex.cloud.loadtesting.age" +
-      "nt.v1.LoadType\022F\n\rload_schedule\030\002 \003(\0132/." +
-      "yandex.cloud.loadtesting.agent.v1.LoadSc" +
-      "hedule\022\024\n\014load_profile\030\003 \003(\t*l\n\010AmmoType" +
-      "\022\031\n\025AMMO_TYPE_UNSPECIFIED\020\000\022\r\n\tHTTP_JSON" +
-      "\020\001\022\007\n\003RAW\020\002\022\007\n\003URI\020\003\022\013\n\007URIPOST\020\004\022\013\n\007PHA" +
-      "NTOM\020\005\022\n\n\006ACCESS\020\006*L\n\010LoadType\022\031\n\025LOAD_T" +
-      "YPE_UNSPECIFIED\020\000\022\007\n\003RPS\020\001\022\r\n\tINSTANCES\020" +
-      "\002\022\r\n\tSTPD_FILE\020\003*V\n\014ScheduleType\022\035\n\031SCHE" +
-      "DULE_TYPE_UNSPECIFIED\020\000\022\010\n\004ONCE\020\001\022\t\n\005CON" +
-      "ST\020\002\022\010\n\004LINE\020\003\022\010\n\004STEP\020\004Bt\n%yandex.cloud" +
-      ".api.loadtesting.agent.v1ZKgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/load" +
-      "testing/agent/v1;agentb\006proto3"
+      "STOPPED\020\n\022\017\n\013AUTOSTOPPED\020\013\022\013\n\007WAITING\020\014\022" +
+      "\014\n\010DELETING\020\r\"@\n\tGenerator\022\031\n\025GENERATOR_" +
+      "UNSPECIFIED\020\000\022\013\n\007PANDORA\020\001\022\013\n\007PHANTOM\020\002B" +
+      "\006\n\004ammo\"\302\001\n\014LoadSchedule\022=\n\004type\030\001 \001(\0162/" +
+      ".yandex.cloud.loadtesting.agent.v1.Sched" +
+      "uleType\022\021\n\tinstances\030\002 \001(\003\022\020\n\010duration\030\003" +
+      " \001(\t\022\020\n\010rps_from\030\004 \001(\003\022\016\n\006rps_to\030\005 \001(\003\022\014" +
+      "\n\004step\030\006 \001(\003\022\013\n\003ops\030\007 \001(\003\022\021\n\tstpd_path\030\010" +
+      " \001(\t\"\250\001\n\010Schedule\022>\n\tload_type\030\001 \001(\0162+.y" +
+      "andex.cloud.loadtesting.agent.v1.LoadTyp" +
+      "e\022F\n\rload_schedule\030\002 \003(\0132/.yandex.cloud." +
+      "loadtesting.agent.v1.LoadSchedule\022\024\n\014loa" +
+      "d_profile\030\003 \003(\t*l\n\010AmmoType\022\031\n\025AMMO_TYPE" +
+      "_UNSPECIFIED\020\000\022\r\n\tHTTP_JSON\020\001\022\007\n\003RAW\020\002\022\007" +
+      "\n\003URI\020\003\022\013\n\007URIPOST\020\004\022\013\n\007PHANTOM\020\005\022\n\n\006ACC" +
+      "ESS\020\006*L\n\010LoadType\022\031\n\025LOAD_TYPE_UNSPECIFI" +
+      "ED\020\000\022\007\n\003RPS\020\001\022\r\n\tINSTANCES\020\002\022\r\n\tSTPD_FIL" +
+      "E\020\003*V\n\014ScheduleType\022\035\n\031SCHEDULE_TYPE_UNS" +
+      "PECIFIED\020\000\022\010\n\004ONCE\020\001\022\t\n\005CONST\020\002\022\010\n\004LINE\020" +
+      "\003\022\010\n\004STEP\020\004Bt\n%yandex.cloud.api.loadtest" +
+      "ing.agent.v1ZKgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/loadtesting/agent" +
+      "/v1;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

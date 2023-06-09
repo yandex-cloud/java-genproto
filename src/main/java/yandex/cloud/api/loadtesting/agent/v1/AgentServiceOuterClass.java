@@ -157,6 +157,14 @@ public final class AgentServiceOuterClass {
        * <code>TANK_FAILED = 4;</code>
        */
       TANK_FAILED(4),
+      /**
+       * <code>STOPPED = 5;</code>
+       */
+      STOPPED(5),
+      /**
+       * <code>UPLOADING_ARTIFACTS = 6;</code>
+       */
+      UPLOADING_ARTIFACTS(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -180,6 +188,14 @@ public final class AgentServiceOuterClass {
        * <code>TANK_FAILED = 4;</code>
        */
       public static final int TANK_FAILED_VALUE = 4;
+      /**
+       * <code>STOPPED = 5;</code>
+       */
+      public static final int STOPPED_VALUE = 5;
+      /**
+       * <code>UPLOADING_ARTIFACTS = 6;</code>
+       */
+      public static final int UPLOADING_ARTIFACTS_VALUE = 6;
 
 
       public final int getNumber() {
@@ -211,6 +227,8 @@ public final class AgentServiceOuterClass {
           case 2: return PREPARING_TEST;
           case 3: return TESTING;
           case 4: return TANK_FAILED;
+          case 5: return STOPPED;
+          case 6: return UPLOADING_ARTIFACTS;
           default: return null;
         }
       }
@@ -1335,22 +1353,23 @@ public final class AgentServiceOuterClass {
       "\n5yandex/cloud/loadtesting/agent/v1/agen" +
       "t_service.proto\022!yandex.cloud.loadtestin" +
       "g.agent.v1\032\034google/api/annotations.proto" +
-      "\"\357\001\n\027ClaimAgentStatusRequest\022\031\n\021agent_in" +
+      "\"\226\002\n\027ClaimAgentStatusRequest\022\031\n\021agent_in" +
       "stance_id\030\001 \001(\t\022Q\n\006status\030\002 \001(\0162A.yandex" +
       ".cloud.loadtesting.agent.v1.ClaimAgentSt" +
-      "atusRequest.Status\"f\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\022\n\016READY_FOR_TEST\020\001\022\022\n\016PREP" +
-      "ARING_TEST\020\002\022\013\n\007TESTING\020\003\022\017\n\013TANK_FAILED" +
-      "\020\004\"(\n\030ClaimAgentStatusResponse\022\014\n\004code\030\001" +
-      " \001(\0032\340\001\n\014AgentService\022\317\001\n\013ClaimStatus\022:." +
-      "yandex.cloud.loadtesting.agent.v1.ClaimA" +
-      "gentStatusRequest\032;.yandex.cloud.loadtes" +
-      "ting.agent.v1.ClaimAgentStatusResponse\"G" +
-      "\202\323\344\223\002A\"</loadtesting/agent/v1/agents/{ag" +
-      "ent_instance_id}/claimStatus:\001*Bt\n%yande" +
-      "x.cloud.api.loadtesting.agent.v1ZKgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/loadtesting/agent/v1;agentb\006proto3"
+      "atusRequest.Status\"\214\001\n\006Status\022\026\n\022STATUS_" +
+      "UNSPECIFIED\020\000\022\022\n\016READY_FOR_TEST\020\001\022\022\n\016PRE" +
+      "PARING_TEST\020\002\022\013\n\007TESTING\020\003\022\017\n\013TANK_FAILE" +
+      "D\020\004\022\013\n\007STOPPED\020\005\022\027\n\023UPLOADING_ARTIFACTS\020" +
+      "\006\"(\n\030ClaimAgentStatusResponse\022\014\n\004code\030\001 " +
+      "\001(\0032\340\001\n\014AgentService\022\317\001\n\013ClaimStatus\022:.y" +
+      "andex.cloud.loadtesting.agent.v1.ClaimAg" +
+      "entStatusRequest\032;.yandex.cloud.loadtest" +
+      "ing.agent.v1.ClaimAgentStatusResponse\"G\202" +
+      "\323\344\223\002A\"</loadtesting/agent/v1/agents/{age" +
+      "nt_instance_id}/claimStatus:\001*Bt\n%yandex" +
+      ".cloud.api.loadtesting.agent.v1ZKgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/loadtesting/agent/v1;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
