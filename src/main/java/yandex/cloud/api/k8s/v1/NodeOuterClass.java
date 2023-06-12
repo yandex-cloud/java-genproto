@@ -436,6 +436,22 @@ public final class NodeOuterClass {
        * <code>MISSING = 5;</code>
        */
       MISSING(5),
+      /**
+       * <pre>
+       * Node is stopped
+       * </pre>
+       *
+       * <code>STOPPED = 6;</code>
+       */
+      STOPPED(6),
+      /**
+       * <pre>
+       * Backend request to kubernetes api was unsuccessful.
+       * </pre>
+       *
+       * <code>UNKNOWN = 7;</code>
+       */
+      UNKNOWN(7),
       UNRECOGNIZED(-1),
       ;
 
@@ -486,6 +502,22 @@ public final class NodeOuterClass {
        * <code>MISSING = 5;</code>
        */
       public static final int MISSING_VALUE = 5;
+      /**
+       * <pre>
+       * Node is stopped
+       * </pre>
+       *
+       * <code>STOPPED = 6;</code>
+       */
+      public static final int STOPPED_VALUE = 6;
+      /**
+       * <pre>
+       * Backend request to kubernetes api was unsuccessful.
+       * </pre>
+       *
+       * <code>UNKNOWN = 7;</code>
+       */
+      public static final int UNKNOWN_VALUE = 7;
 
 
       public final int getNumber() {
@@ -518,6 +550,8 @@ public final class NodeOuterClass {
           case 3: return NOT_READY;
           case 4: return READY;
           case 5: return MISSING;
+          case 6: return STOPPED;
+          case 7: return UNKNOWN;
           default: return null;
         }
       }
@@ -21934,7 +21968,7 @@ public final class NodeOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036yandex/cloud/k8s/v1/node.proto\022\023yandex" +
       ".cloud.k8s.v1\032\037google/protobuf/timestamp" +
-      ".proto\032\035yandex/cloud/validation.proto\"\307\005" +
+      ".proto\032\035yandex/cloud/validation.proto\"\342\005" +
       "\n\004Node\0220\n\006status\030\001 \001(\0162 .yandex.cloud.k8" +
       "s.v1.Node.Status\022,\n\004spec\030\002 \001(\0132\036.yandex." +
       "cloud.k8s.v1.Node.Spec\022;\n\014cloud_status\030\003" +
@@ -21950,81 +21984,82 @@ public final class NodeOuterClass {
       "message\030\003 \001(\t\032j\n\004Spec\0225\n\tresources\030\001 \001(\013" +
       "2\".yandex.cloud.k8s.v1.ResourcesSpec\022+\n\004" +
       "disk\030\002 \001(\0132\035.yandex.cloud.k8s.v1.DiskSpe" +
-      "c\"l\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014P" +
-      "ROVISIONING\020\001\022\021\n\rNOT_CONNECTED\020\002\022\r\n\tNOT_" +
-      "READY\020\003\022\t\n\005READY\020\004\022\013\n\007MISSING\020\005\"\255\001\n\tCond" +
-      "ition\022\014\n\004type\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007m" +
-      "essage\030\003 \001(\t\0227\n\023last_heartbeat_time\030\004 \001(" +
-      "\0132\032.google.protobuf.Timestamp\0228\n\024last_tr" +
-      "ansition_time\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"\261\001\n\005Taint\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t\0221\n\006effect\030\003 \001(\0162!.yandex.cloud.k8s" +
-      ".v1.Taint.Effect\"Y\n\006Effect\022\026\n\022EFFECT_UNS" +
-      "PECIFIED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO" +
-      "_SCHEDULE\020\002\022\016\n\nNO_EXECUTE\020\003\"<\n\016AttachedV" +
-      "olume\022\023\n\013driver_name\030\001 \001(\t\022\025\n\rvolume_han" +
-      "dle\030\002 \001(\t\"\233\013\n\014NodeTemplate\022\027\n\004name\030\r \001(\t" +
-      "B\t\212\3101\005<=128\022t\n\006labels\030\017 \003(\0132-.yandex.clo" +
-      "ud.k8s.v1.NodeTemplate.LabelsEntryB5\202\3101\004" +
-      "<=32\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\" +
-      "@0-9a-z]*\022\023\n\013platform_id\030\001 \001(\t\022:\n\016resour" +
-      "ces_spec\030\002 \001(\0132\".yandex.cloud.k8s.v1.Res" +
-      "ourcesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132\035.yan" +
-      "dex.cloud.k8s.v1.DiskSpec\022w\n\010metadata\030\004 " +
-      "\003(\0132/.yandex.cloud.k8s.v1.NodeTemplate.M" +
-      "etadataEntryB4\202\3101\004<=64\212\3101\010<=131072\262\3101\006\032\004" +
-      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022A\n\017v4_address" +
-      "_spec\030\005 \001(\0132$.yandex.cloud.k8s.v1.NodeAd" +
-      "dressSpecB\002\030\001\022@\n\021scheduling_policy\030\006 \001(\013" +
-      "2%.yandex.cloud.k8s.v1.SchedulingPolicy\022" +
-      "J\n\027network_interface_specs\030\007 \003(\0132).yande" +
-      "x.cloud.k8s.v1.NetworkInterfaceSpec\022>\n\020p" +
-      "lacement_policy\030\n \001(\0132$.yandex.cloud.k8s" +
-      ".v1.PlacementPolicy\022K\n\020network_settings\030" +
-      "\013 \001(\01321.yandex.cloud.k8s.v1.NodeTemplate" +
-      ".NetworkSettings\022^\n\032container_runtime_se" +
-      "ttings\030\014 \001(\0132:.yandex.cloud.k8s.v1.NodeT" +
-      "emplate.ContainerRuntimeSettings\022^\n\032cont" +
-      "ainer_network_settings\030\020 \001(\0132:.yandex.cl" +
-      "oud.k8s.v1.NodeTemplate.ContainerNetwork" +
-      "Settings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\243\001\n\017NetworkSett" +
-      "ings\022J\n\004type\030\001 \001(\01626.yandex.cloud.k8s.v1" +
-      ".NodeTemplate.NetworkSettings.TypeB\004\350\3071\001" +
-      "\"D\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDA" +
-      "RD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\032\251\001\n\030Conta" +
-      "inerRuntimeSettings\022S\n\004type\030\001 \001(\0162?.yand" +
-      "ex.cloud.k8s.v1.NodeTemplate.ContainerRu" +
-      "ntimeSettings.TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020TYPE" +
-      "_UNSPECIFIED\020\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAINERD" +
-      "\020\002\032+\n\030ContainerNetworkSettings\022\017\n\007pod_mt" +
-      "u\030\001 \001(\003\"\324\001\n\024NetworkInterfaceSpec\022\022\n\nsubn" +
-      "et_ids\030\002 \003(\t\022E\n\027primary_v4_address_spec\030" +
-      "\003 \001(\0132$.yandex.cloud.k8s.v1.NodeAddressS" +
-      "pec\022E\n\027primary_v6_address_spec\030\004 \001(\0132$.y" +
-      "andex.cloud.k8s.v1.NodeAddressSpec\022\032\n\022se" +
-      "curity_group_ids\030\005 \003(\t\"\222\001\n\017NodeAddressSp" +
-      "ec\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yandex" +
-      ".cloud.k8s.v1.OneToOneNatSpec\022<\n\020dns_rec" +
-      "ord_specs\030\002 \003(\0132\".yandex.cloud.k8s.v1.Dn" +
-      "sRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001" +
-      "(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001" +
-      "(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"E\n\017OneToOne" +
-      "NatSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.clo" +
-      "ud.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n\006" +
-      "memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372\307" +
-      "1\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100\022" +
-      "\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\200\001\n\010DiskSpec\022L\n\014d" +
-      "isk_type_id\030\001 \001(\tB6\362\30712|network-ssd|netw" +
-      "ork-hdd|network-ssd-nonreplicated\022&\n\tdis" +
-      "k_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Sch" +
-      "edulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017Pl" +
-      "acementPolicy\022\032\n\022placement_group_id\030\001 \001(" +
-      "\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED" +
-      "\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.a" +
-      "pi.k8s.v1Z;github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      "c\"\206\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014" +
+      "PROVISIONING\020\001\022\021\n\rNOT_CONNECTED\020\002\022\r\n\tNOT" +
+      "_READY\020\003\022\t\n\005READY\020\004\022\013\n\007MISSING\020\005\022\013\n\007STOP" +
+      "PED\020\006\022\013\n\007UNKNOWN\020\007\"\255\001\n\tCondition\022\014\n\004type" +
+      "\030\001 \001(\t\022\016\n\006status\030\002 \001(\t\022\017\n\007message\030\003 \001(\t\022" +
+      "7\n\023last_heartbeat_time\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\0228\n\024last_transition_time" +
+      "\030\005 \001(\0132\032.google.protobuf.Timestamp\"\261\001\n\005T" +
+      "aint\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\0221\n\006effe" +
+      "ct\030\003 \001(\0162!.yandex.cloud.k8s.v1.Taint.Eff" +
+      "ect\"Y\n\006Effect\022\026\n\022EFFECT_UNSPECIFIED\020\000\022\017\n" +
+      "\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO_SCHEDULE\020\002\022\016" +
+      "\n\nNO_EXECUTE\020\003\"<\n\016AttachedVolume\022\023\n\013driv" +
+      "er_name\030\001 \001(\t\022\025\n\rvolume_handle\030\002 \001(\t\"\233\013\n" +
+      "\014NodeTemplate\022\027\n\004name\030\r \001(\tB\t\212\3101\005<=128\022t" +
+      "\n\006labels\030\017 \003(\0132-.yandex.cloud.k8s.v1.Nod" +
+      "eTemplate.LabelsEntryB5\202\3101\004<=32\212\3101\005<=128" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\023\n\013" +
+      "platform_id\030\001 \001(\t\022:\n\016resources_spec\030\002 \001(" +
+      "\0132\".yandex.cloud.k8s.v1.ResourcesSpec\0225\n" +
+      "\016boot_disk_spec\030\003 \001(\0132\035.yandex.cloud.k8s" +
+      ".v1.DiskSpec\022w\n\010metadata\030\004 \003(\0132/.yandex." +
+      "cloud.k8s.v1.NodeTemplate.MetadataEntryB" +
+      "4\202\3101\004<=64\212\3101\010<=131072\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
+      "z][-_0-9a-z]*\022A\n\017v4_address_spec\030\005 \001(\0132$" +
+      ".yandex.cloud.k8s.v1.NodeAddressSpecB\002\030\001" +
+      "\022@\n\021scheduling_policy\030\006 \001(\0132%.yandex.clo" +
+      "ud.k8s.v1.SchedulingPolicy\022J\n\027network_in" +
+      "terface_specs\030\007 \003(\0132).yandex.cloud.k8s.v" +
+      "1.NetworkInterfaceSpec\022>\n\020placement_poli" +
+      "cy\030\n \001(\0132$.yandex.cloud.k8s.v1.Placement" +
+      "Policy\022K\n\020network_settings\030\013 \001(\01321.yande" +
+      "x.cloud.k8s.v1.NodeTemplate.NetworkSetti" +
+      "ngs\022^\n\032container_runtime_settings\030\014 \001(\0132" +
+      ":.yandex.cloud.k8s.v1.NodeTemplate.Conta" +
+      "inerRuntimeSettings\022^\n\032container_network" +
+      "_settings\030\020 \001(\0132:.yandex.cloud.k8s.v1.No" +
+      "deTemplate.ContainerNetworkSettings\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\032\243\001\n\017NetworkSettings\022J\n\004type\030" +
+      "\001 \001(\01626.yandex.cloud.k8s.v1.NodeTemplate" +
+      ".NetworkSettings.TypeB\004\350\3071\001\"D\n\004Type\022\024\n\020T" +
+      "YPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTW" +
+      "ARE_ACCELERATED\020\002\032\251\001\n\030ContainerRuntimeSe" +
+      "ttings\022S\n\004type\030\001 \001(\0162?.yandex.cloud.k8s." +
+      "v1.NodeTemplate.ContainerRuntimeSettings" +
+      ".TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
+      "\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAINERD\020\002\032+\n\030Contain" +
+      "erNetworkSettings\022\017\n\007pod_mtu\030\001 \001(\003\"\324\001\n\024N" +
+      "etworkInterfaceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022" +
+      "E\n\027primary_v4_address_spec\030\003 \001(\0132$.yande" +
+      "x.cloud.k8s.v1.NodeAddressSpec\022E\n\027primar" +
+      "y_v6_address_spec\030\004 \001(\0132$.yandex.cloud.k" +
+      "8s.v1.NodeAddressSpec\022\032\n\022security_group_" +
+      "ids\030\005 \003(\t\"\222\001\n\017NodeAddressSpec\022A\n\023one_to_" +
+      "one_nat_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1" +
+      ".OneToOneNatSpec\022<\n\020dns_record_specs\030\002 \003" +
+      "(\0132\".yandex.cloud.k8s.v1.DnsRecordSpec\"_" +
+      "\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013d" +
+      "ns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-864" +
+      "00\022\013\n\003ptr\030\004 \001(\010\"E\n\017OneToOneNatSpec\0222\n\nip" +
+      "_version\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpV" +
+      "ersion\"y\n\rResourcesSpec\022\027\n\006memory\030\001 \001(\003B" +
+      "\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore" +
+      "_fraction\030\003 \001(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003" +
+      "B\007\372\3071\003>=0\"\200\001\n\010DiskSpec\022L\n\014disk_type_id\030\001" +
+      " \001(\tB6\362\30712|network-ssd|network-hdd|netwo" +
+      "rk-ssd-nonreplicated\022&\n\tdisk_size\030\002 \001(\003B" +
+      "\023\372\3071\0170-4398046511104\"\'\n\020SchedulingPolicy" +
+      "\022\023\n\013preemptible\030\001 \001(\010\"-\n\017PlacementPolicy" +
+      "\022\032\n\022placement_group_id\030\001 \001(\t*;\n\tIpVersio" +
+      "n\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022" +
+      "\010\n\004IPV6\020\002BV\n\027yandex.cloud.api.k8s.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
