@@ -235,6 +235,37 @@ public final class DiskServiceGrpc {
     return getMoveMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Relocate",
+      requestType = yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod;
+    if ((getRelocateMethod = DiskServiceGrpc.getRelocateMethod) == null) {
+      synchronized (DiskServiceGrpc.class) {
+        if ((getRelocateMethod = DiskServiceGrpc.getRelocateMethod) == null) {
+          DiskServiceGrpc.getRelocateMethod = getRelocateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Relocate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DiskServiceMethodDescriptorSupplier("Relocate"))
+              .build();
+        }
+      }
+    }
+    return getRelocateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesRequest,
       yandex.cloud.api.compute.v1.DiskServiceOuterClass.ListDiskSnapshotSchedulesResponse> getListSnapshotSchedulesMethod;
 
@@ -395,6 +426,18 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified disk to another availability zone
+     * Disk must be detached from instances. To move attached
+     * disk use [InstanceService.Relocate] request.
+     * </pre>
+     */
+    public void relocate(yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRelocateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
@@ -454,6 +497,13 @@ public final class DiskServiceGrpc {
                 yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
+          .addMethod(
+            getRelocateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RELOCATE)))
           .addMethod(
             getListSnapshotSchedulesMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -567,6 +617,19 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified disk to another availability zone
+     * Disk must be detached from instances. To move attached
+     * disk use [InstanceService.Relocate] request.
+     * </pre>
+     */
+    public void relocate(yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRelocateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
@@ -668,6 +731,18 @@ public final class DiskServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified disk to another availability zone
+     * Disk must be detached from instances. To move attached
+     * disk use [InstanceService.Relocate] request.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation relocate(yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRelocateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -783,6 +858,19 @@ public final class DiskServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified disk to another availability zone
+     * Disk must be detached from instances. To move attached
+     * disk use [InstanceService.Relocate] request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> relocate(
+        yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRelocateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of snapshot schedules the specified disk is attached to.
      * </pre>
      */
@@ -800,7 +888,8 @@ public final class DiskServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST_OPERATIONS = 5;
   private static final int METHODID_MOVE = 6;
-  private static final int METHODID_LIST_SNAPSHOT_SCHEDULES = 7;
+  private static final int METHODID_RELOCATE = 7;
+  private static final int METHODID_LIST_SNAPSHOT_SCHEDULES = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -845,6 +934,10 @@ public final class DiskServiceGrpc {
           break;
         case METHODID_MOVE:
           serviceImpl.move((yandex.cloud.api.compute.v1.DiskServiceOuterClass.MoveDiskRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RELOCATE:
+          serviceImpl.relocate((yandex.cloud.api.compute.v1.DiskServiceOuterClass.RelocateDiskRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_SNAPSHOT_SCHEDULES:
@@ -919,6 +1012,7 @@ public final class DiskServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())
+              .addMethod(getRelocateMethod())
               .addMethod(getListSnapshotSchedulesMethod())
               .build();
         }

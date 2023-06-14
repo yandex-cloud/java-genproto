@@ -607,6 +607,37 @@ public final class InstanceServiceGrpc {
     return getMoveMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Relocate",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod;
+    if ((getRelocateMethod = InstanceServiceGrpc.getRelocateMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getRelocateMethod = InstanceServiceGrpc.getRelocateMethod) == null) {
+          InstanceServiceGrpc.getRelocateMethod = getRelocateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Relocate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("Relocate"))
+              .build();
+        }
+      }
+    }
+    return getRelocateMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -863,6 +894,17 @@ public final class InstanceServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Moves the specified instance to another availability zone
+     * Running instance will be restarted during this operation.
+     * </pre>
+     */
+    public void relocate(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRelocateMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -998,6 +1040,13 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
+          .addMethod(
+            getRelocateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RELOCATE)))
           .build();
     }
   }
@@ -1242,6 +1291,18 @@ public final class InstanceServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Moves the specified instance to another availability zone
+     * Running instance will be restarted during this operation.
+     * </pre>
+     */
+    public void relocate(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRelocateMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1464,6 +1525,17 @@ public final class InstanceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified instance to another availability zone
+     * Running instance will be restarted during this operation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation relocate(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRelocateMethod(), getCallOptions(), request);
     }
   }
 
@@ -1707,6 +1779,18 @@ public final class InstanceServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMoveMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Moves the specified instance to another availability zone
+     * Running instance will be restarted during this operation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> relocate(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRelocateMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1728,6 +1812,7 @@ public final class InstanceServiceGrpc {
   private static final int METHODID_UPDATE_NETWORK_INTERFACE = 16;
   private static final int METHODID_LIST_OPERATIONS = 17;
   private static final int METHODID_MOVE = 18;
+  private static final int METHODID_RELOCATE = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1822,6 +1907,10 @@ public final class InstanceServiceGrpc {
           serviceImpl.move((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.MoveInstanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_RELOCATE:
+          serviceImpl.relocate((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1902,6 +1991,7 @@ public final class InstanceServiceGrpc {
               .addMethod(getUpdateNetworkInterfaceMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())
+              .addMethod(getRelocateMethod())
               .build();
         }
       }
