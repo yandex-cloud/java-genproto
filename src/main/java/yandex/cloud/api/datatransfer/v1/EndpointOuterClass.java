@@ -1593,6 +1593,21 @@ public final class EndpointOuterClass {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSourceOrBuilder getPostgresSourceOrBuilder();
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+     * @return Whether the ydbSource field is set.
+     */
+    boolean hasYdbSource();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+     * @return The ydbSource.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource getYdbSource();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSourceOrBuilder getYdbSourceOrBuilder();
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaSource kafka_source = 8;</code>
      * @return Whether the kafkaSource field is set.
      */
@@ -1681,6 +1696,21 @@ public final class EndpointOuterClass {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget clickhouse_target = 104;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTargetOrBuilder getClickhouseTargetOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+     * @return Whether the ydbTarget field is set.
+     */
+    boolean hasYdbTarget();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+     * @return The ydbTarget.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget getYdbTarget();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTargetOrBuilder getYdbTargetOrBuilder();
 
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTarget kafka_target = 110;</code>
@@ -1787,6 +1817,20 @@ public final class EndpointOuterClass {
               settingsCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.Builder subBuilder = null;
+              if (settingsCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 3;
+              break;
+            }
             case 66: {
               yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaSource.Builder subBuilder = null;
               if (settingsCase_ == 8) {
@@ -1871,6 +1915,20 @@ public final class EndpointOuterClass {
               settingsCase_ = 104;
               break;
             }
+            case 842: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.Builder subBuilder = null;
+              if (settingsCase_ == 105) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 105;
+              break;
+            }
             case 882: {
               yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTarget.Builder subBuilder = null;
               if (settingsCase_ == 110) {
@@ -1938,12 +1996,14 @@ public final class EndpointOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MYSQL_SOURCE(1),
       POSTGRES_SOURCE(2),
+      YDB_SOURCE(3),
       KAFKA_SOURCE(8),
       MONGO_SOURCE(9),
       CLICKHOUSE_SOURCE(16),
       MYSQL_TARGET(101),
       POSTGRES_TARGET(102),
       CLICKHOUSE_TARGET(104),
+      YDB_TARGET(105),
       KAFKA_TARGET(110),
       MONGO_TARGET(111),
       SETTINGS_NOT_SET(0);
@@ -1965,12 +2025,14 @@ public final class EndpointOuterClass {
         switch (value) {
           case 1: return MYSQL_SOURCE;
           case 2: return POSTGRES_SOURCE;
+          case 3: return YDB_SOURCE;
           case 8: return KAFKA_SOURCE;
           case 9: return MONGO_SOURCE;
           case 16: return CLICKHOUSE_SOURCE;
           case 101: return MYSQL_TARGET;
           case 102: return POSTGRES_TARGET;
           case 104: return CLICKHOUSE_TARGET;
+          case 105: return YDB_TARGET;
           case 110: return KAFKA_TARGET;
           case 111: return MONGO_TARGET;
           case 0: return SETTINGS_NOT_SET;
@@ -2048,6 +2110,37 @@ public final class EndpointOuterClass {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_;
       }
       return yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource.getDefaultInstance();
+    }
+
+    public static final int YDB_SOURCE_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+     * @return Whether the ydbSource field is set.
+     */
+    @java.lang.Override
+    public boolean hasYdbSource() {
+      return settingsCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+     * @return The ydbSource.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource getYdbSource() {
+      if (settingsCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSourceOrBuilder getYdbSourceOrBuilder() {
+      if (settingsCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance();
     }
 
     public static final int KAFKA_SOURCE_FIELD_NUMBER = 8;
@@ -2236,6 +2329,37 @@ public final class EndpointOuterClass {
       return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget.getDefaultInstance();
     }
 
+    public static final int YDB_TARGET_FIELD_NUMBER = 105;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+     * @return Whether the ydbTarget field is set.
+     */
+    @java.lang.Override
+    public boolean hasYdbTarget() {
+      return settingsCase_ == 105;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+     * @return The ydbTarget.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget getYdbTarget() {
+      if (settingsCase_ == 105) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTargetOrBuilder getYdbTargetOrBuilder() {
+      if (settingsCase_ == 105) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance();
+    }
+
     public static final int KAFKA_TARGET_FIELD_NUMBER = 110;
     /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTarget kafka_target = 110;</code>
@@ -2318,6 +2442,9 @@ public final class EndpointOuterClass {
       if (settingsCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_);
       }
+      if (settingsCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_);
+      }
       if (settingsCase_ == 8) {
         output.writeMessage(8, (yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaSource) settings_);
       }
@@ -2335,6 +2462,9 @@ public final class EndpointOuterClass {
       }
       if (settingsCase_ == 104) {
         output.writeMessage(104, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_);
+      }
+      if (settingsCase_ == 105) {
+        output.writeMessage(105, (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_);
       }
       if (settingsCase_ == 110) {
         output.writeMessage(110, (yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTarget) settings_);
@@ -2359,6 +2489,10 @@ public final class EndpointOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresSource) settings_);
       }
+      if (settingsCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_);
+      }
       if (settingsCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, (yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaSource) settings_);
@@ -2382,6 +2516,10 @@ public final class EndpointOuterClass {
       if (settingsCase_ == 104) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(104, (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseTarget) settings_);
+      }
+      if (settingsCase_ == 105) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(105, (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_);
       }
       if (settingsCase_ == 110) {
         size += com.google.protobuf.CodedOutputStream
@@ -2416,6 +2554,10 @@ public final class EndpointOuterClass {
           if (!getPostgresSource()
               .equals(other.getPostgresSource())) return false;
           break;
+        case 3:
+          if (!getYdbSource()
+              .equals(other.getYdbSource())) return false;
+          break;
         case 8:
           if (!getKafkaSource()
               .equals(other.getKafkaSource())) return false;
@@ -2439,6 +2581,10 @@ public final class EndpointOuterClass {
         case 104:
           if (!getClickhouseTarget()
               .equals(other.getClickhouseTarget())) return false;
+          break;
+        case 105:
+          if (!getYdbTarget()
+              .equals(other.getYdbTarget())) return false;
           break;
         case 110:
           if (!getKafkaTarget()
@@ -2471,6 +2617,10 @@ public final class EndpointOuterClass {
           hash = (37 * hash) + POSTGRES_SOURCE_FIELD_NUMBER;
           hash = (53 * hash) + getPostgresSource().hashCode();
           break;
+        case 3:
+          hash = (37 * hash) + YDB_SOURCE_FIELD_NUMBER;
+          hash = (53 * hash) + getYdbSource().hashCode();
+          break;
         case 8:
           hash = (37 * hash) + KAFKA_SOURCE_FIELD_NUMBER;
           hash = (53 * hash) + getKafkaSource().hashCode();
@@ -2494,6 +2644,10 @@ public final class EndpointOuterClass {
         case 104:
           hash = (37 * hash) + CLICKHOUSE_TARGET_FIELD_NUMBER;
           hash = (53 * hash) + getClickhouseTarget().hashCode();
+          break;
+        case 105:
+          hash = (37 * hash) + YDB_TARGET_FIELD_NUMBER;
+          hash = (53 * hash) + getYdbTarget().hashCode();
           break;
         case 110:
           hash = (37 * hash) + KAFKA_TARGET_FIELD_NUMBER;
@@ -2681,6 +2835,13 @@ public final class EndpointOuterClass {
             result.settings_ = postgresSourceBuilder_.build();
           }
         }
+        if (settingsCase_ == 3) {
+          if (ydbSourceBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = ydbSourceBuilder_.build();
+          }
+        }
         if (settingsCase_ == 8) {
           if (kafkaSourceBuilder_ == null) {
             result.settings_ = settings_;
@@ -2721,6 +2882,13 @@ public final class EndpointOuterClass {
             result.settings_ = settings_;
           } else {
             result.settings_ = clickhouseTargetBuilder_.build();
+          }
+        }
+        if (settingsCase_ == 105) {
+          if (ydbTargetBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = ydbTargetBuilder_.build();
           }
         }
         if (settingsCase_ == 110) {
@@ -2795,6 +2963,10 @@ public final class EndpointOuterClass {
             mergePostgresSource(other.getPostgresSource());
             break;
           }
+          case YDB_SOURCE: {
+            mergeYdbSource(other.getYdbSource());
+            break;
+          }
           case KAFKA_SOURCE: {
             mergeKafkaSource(other.getKafkaSource());
             break;
@@ -2817,6 +2989,10 @@ public final class EndpointOuterClass {
           }
           case CLICKHOUSE_TARGET: {
             mergeClickhouseTarget(other.getClickhouseTarget());
+            break;
+          }
+          case YDB_TARGET: {
+            mergeYdbTarget(other.getYdbTarget());
             break;
           }
           case KAFKA_TARGET: {
@@ -3155,6 +3331,147 @@ public final class EndpointOuterClass {
         settingsCase_ = 2;
         onChanged();;
         return postgresSourceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSourceOrBuilder> ydbSourceBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       * @return Whether the ydbSource field is set.
+       */
+      @java.lang.Override
+      public boolean hasYdbSource() {
+        return settingsCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       * @return The ydbSource.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource getYdbSource() {
+        if (ydbSourceBuilder_ == null) {
+          if (settingsCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 3) {
+            return ydbSourceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      public Builder setYdbSource(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource value) {
+        if (ydbSourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          ydbSourceBuilder_.setMessage(value);
+        }
+        settingsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      public Builder setYdbSource(
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.Builder builderForValue) {
+        if (ydbSourceBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          ydbSourceBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      public Builder mergeYdbSource(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource value) {
+        if (ydbSourceBuilder_ == null) {
+          if (settingsCase_ == 3 &&
+              settings_ != yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 3) {
+            ydbSourceBuilder_.mergeFrom(value);
+          }
+          ydbSourceBuilder_.setMessage(value);
+        }
+        settingsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      public Builder clearYdbSource() {
+        if (ydbSourceBuilder_ == null) {
+          if (settingsCase_ == 3) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 3) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          ydbSourceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.Builder getYdbSourceBuilder() {
+        return getYdbSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSourceOrBuilder getYdbSourceOrBuilder() {
+        if ((settingsCase_ == 3) && (ydbSourceBuilder_ != null)) {
+          return ydbSourceBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbSource ydb_source = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSourceOrBuilder> 
+          getYdbSourceFieldBuilder() {
+        if (ydbSourceBuilder_ == null) {
+          if (!(settingsCase_ == 3)) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.getDefaultInstance();
+          }
+          ydbSourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSourceOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbSource) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 3;
+        onChanged();;
+        return ydbSourceBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4004,6 +4321,147 @@ public final class EndpointOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTargetOrBuilder> ydbTargetBuilder_;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       * @return Whether the ydbTarget field is set.
+       */
+      @java.lang.Override
+      public boolean hasYdbTarget() {
+        return settingsCase_ == 105;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       * @return The ydbTarget.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget getYdbTarget() {
+        if (ydbTargetBuilder_ == null) {
+          if (settingsCase_ == 105) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 105) {
+            return ydbTargetBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      public Builder setYdbTarget(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget value) {
+        if (ydbTargetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          ydbTargetBuilder_.setMessage(value);
+        }
+        settingsCase_ = 105;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      public Builder setYdbTarget(
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.Builder builderForValue) {
+        if (ydbTargetBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          ydbTargetBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 105;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      public Builder mergeYdbTarget(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget value) {
+        if (ydbTargetBuilder_ == null) {
+          if (settingsCase_ == 105 &&
+              settings_ != yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 105) {
+            ydbTargetBuilder_.mergeFrom(value);
+          }
+          ydbTargetBuilder_.setMessage(value);
+        }
+        settingsCase_ = 105;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      public Builder clearYdbTarget() {
+        if (ydbTargetBuilder_ == null) {
+          if (settingsCase_ == 105) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 105) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          ydbTargetBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.Builder getYdbTargetBuilder() {
+        return getYdbTargetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTargetOrBuilder getYdbTargetOrBuilder() {
+        if ((settingsCase_ == 105) && (ydbTargetBuilder_ != null)) {
+          return ydbTargetBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 105) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbTarget ydb_target = 105;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTargetOrBuilder> 
+          getYdbTargetFieldBuilder() {
+        if (ydbTargetBuilder_ == null) {
+          if (!(settingsCase_ == 105)) {
+            settings_ = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.getDefaultInstance();
+          }
+          ydbTargetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTargetOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbTarget) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 105;
+        onChanged();;
+        return ydbTargetBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTarget, yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTarget.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTargetOrBuilder> kafkaTargetBuilder_;
       /**
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTarget kafka_target = 110;</code>
@@ -4370,37 +4828,42 @@ public final class EndpointOuterClass {
       "ex/cloud/datatransfer/v1/endpoint/mongo." +
       "proto\0321yandex/cloud/datatransfer/v1/endp" +
       "oint/mysql.proto\0324yandex/cloud/datatrans" +
-      "fer/v1/endpoint/postgres.proto\"\201\002\n\010Endpo" +
-      "int\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004na" +
-      "me\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022B\n\006labels\030" +
-      "\006 \003(\01322.yandex.cloud.datatransfer.v1.End" +
-      "point.LabelsEntry\022@\n\010settings\0304 \001(\0132..ya" +
-      "ndex.cloud.datatransfer.v1.EndpointSetti" +
-      "ngs\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"\266\006\n\020EndpointSettings\022J\n\014mysql" +
-      "_source\030\001 \001(\01322.yandex.cloud.datatransfe" +
-      "r.v1.endpoint.MysqlSourceH\000\022P\n\017postgres_" +
-      "source\030\002 \001(\01325.yandex.cloud.datatransfer" +
-      ".v1.endpoint.PostgresSourceH\000\022J\n\014kafka_s" +
-      "ource\030\010 \001(\01322.yandex.cloud.datatransfer." +
-      "v1.endpoint.KafkaSourceH\000\022J\n\014mongo_sourc" +
-      "e\030\t \001(\01322.yandex.cloud.datatransfer.v1.e" +
-      "ndpoint.MongoSourceH\000\022T\n\021clickhouse_sour" +
-      "ce\030\020 \001(\01327.yandex.cloud.datatransfer.v1." +
-      "endpoint.ClickhouseSourceH\000\022J\n\014mysql_tar" +
-      "get\030e \001(\01322.yandex.cloud.datatransfer.v1" +
-      ".endpoint.MysqlTargetH\000\022P\n\017postgres_targ" +
-      "et\030f \001(\01325.yandex.cloud.datatransfer.v1." +
-      "endpoint.PostgresTargetH\000\022T\n\021clickhouse_" +
-      "target\030h \001(\01327.yandex.cloud.datatransfer" +
-      ".v1.endpoint.ClickhouseTargetH\000\022J\n\014kafka" +
-      "_target\030n \001(\01322.yandex.cloud.datatransfe" +
-      "r.v1.endpoint.KafkaTargetH\000\022J\n\014mongo_tar" +
-      "get\030o \001(\01322.yandex.cloud.datatransfer.v1" +
-      ".endpoint.MongoTargetH\000B\n\n\010settingsBq\n y" +
-      "andex.cloud.api.datatransfer.v1ZMgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/datatransfer/v1;datatransferb\006proto3"
+      "fer/v1/endpoint/postgres.proto\032/yandex/c" +
+      "loud/datatransfer/v1/endpoint/ydb.proto\"" +
+      "\201\002\n\010Endpoint\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022B" +
+      "\n\006labels\030\006 \003(\01322.yandex.cloud.datatransf" +
+      "er.v1.Endpoint.LabelsEntry\022@\n\010settings\0304" +
+      " \001(\0132..yandex.cloud.datatransfer.v1.Endp" +
+      "ointSettings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\306\007\n\020EndpointSettings" +
+      "\022J\n\014mysql_source\030\001 \001(\01322.yandex.cloud.da" +
+      "tatransfer.v1.endpoint.MysqlSourceH\000\022P\n\017" +
+      "postgres_source\030\002 \001(\01325.yandex.cloud.dat" +
+      "atransfer.v1.endpoint.PostgresSourceH\000\022F" +
+      "\n\nydb_source\030\003 \001(\01320.yandex.cloud.datatr" +
+      "ansfer.v1.endpoint.YdbSourceH\000\022J\n\014kafka_" +
+      "source\030\010 \001(\01322.yandex.cloud.datatransfer" +
+      ".v1.endpoint.KafkaSourceH\000\022J\n\014mongo_sour" +
+      "ce\030\t \001(\01322.yandex.cloud.datatransfer.v1." +
+      "endpoint.MongoSourceH\000\022T\n\021clickhouse_sou" +
+      "rce\030\020 \001(\01327.yandex.cloud.datatransfer.v1" +
+      ".endpoint.ClickhouseSourceH\000\022J\n\014mysql_ta" +
+      "rget\030e \001(\01322.yandex.cloud.datatransfer.v" +
+      "1.endpoint.MysqlTargetH\000\022P\n\017postgres_tar" +
+      "get\030f \001(\01325.yandex.cloud.datatransfer.v1" +
+      ".endpoint.PostgresTargetH\000\022T\n\021clickhouse" +
+      "_target\030h \001(\01327.yandex.cloud.datatransfe" +
+      "r.v1.endpoint.ClickhouseTargetH\000\022F\n\nydb_" +
+      "target\030i \001(\01320.yandex.cloud.datatransfer" +
+      ".v1.endpoint.YdbTargetH\000\022J\n\014kafka_target" +
+      "\030n \001(\01322.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.KafkaTargetH\000\022J\n\014mongo_target\030o \001" +
+      "(\01322.yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.MongoTargetH\000B\n\n\010settingsBq\n yandex.c" +
+      "loud.api.datatransfer.v1ZMgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/datat" +
+      "ransfer/v1;datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4411,6 +4874,7 @@ public final class EndpointOuterClass {
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Mysql.getDescriptor(),
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.getDescriptor(),
+          yandex.cloud.api.datatransfer.v1.endpoint.Ydb.getDescriptor(),
         });
     internal_static_yandex_cloud_datatransfer_v1_Endpoint_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4429,13 +4893,14 @@ public final class EndpointOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_EndpointSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_EndpointSettings_descriptor,
-        new java.lang.String[] { "MysqlSource", "PostgresSource", "KafkaSource", "MongoSource", "ClickhouseSource", "MysqlTarget", "PostgresTarget", "ClickhouseTarget", "KafkaTarget", "MongoTarget", "Settings", });
+        new java.lang.String[] { "MysqlSource", "PostgresSource", "YdbSource", "KafkaSource", "MongoSource", "ClickhouseSource", "MysqlTarget", "PostgresTarget", "ClickhouseTarget", "YdbTarget", "KafkaTarget", "MongoTarget", "Settings", });
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Kafka.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.getDescriptor();
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
