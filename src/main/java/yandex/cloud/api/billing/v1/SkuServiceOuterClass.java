@@ -71,7 +71,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -82,7 +82,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -297,7 +297,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -320,7 +320,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -899,7 +899,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -921,7 +921,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -944,7 +944,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -965,7 +965,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -981,7 +981,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -1088,7 +1088,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -1099,7 +1099,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -1343,7 +1343,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -1366,7 +1366,7 @@ public final class SkuServiceOuterClass {
     /**
      * <pre>
      * Optional ID of the billing account.
-     * If specified, contract prices for concrete billing account are included in the response.
+     * If specified, contract prices for a particular billing account are included in the response.
      * To get the billing account ID, use [BillingAccountService.List] request.
      * </pre>
      *
@@ -2001,7 +2001,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -2023,7 +2023,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -2046,7 +2046,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -2067,7 +2067,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *
@@ -2083,7 +2083,7 @@ public final class SkuServiceOuterClass {
       /**
        * <pre>
        * Optional ID of the billing account.
-       * If specified, contract prices for concrete billing account are included in the response.
+       * If specified, contract prices for a particular billing account are included in the response.
        * To get the billing account ID, use [BillingAccountService.List] request.
        * </pre>
        *

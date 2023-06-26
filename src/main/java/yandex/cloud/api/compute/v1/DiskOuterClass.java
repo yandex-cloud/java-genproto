@@ -4140,6 +4140,12 @@ public final class DiskOuterClass {
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
+
+    /**
+     * <code>int64 placement_group_partition = 2;</code>
+     * @return The placementGroupPartition.
+     */
+    long getPlacementGroupPartition();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DiskPlacementPolicy}
@@ -4191,6 +4197,11 @@ public final class DiskOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               placementGroupId_ = s;
+              break;
+            }
+            case 16: {
+
+              placementGroupPartition_ = input.readInt64();
               break;
             }
             default: {
@@ -4271,6 +4282,17 @@ public final class DiskOuterClass {
       }
     }
 
+    public static final int PLACEMENT_GROUP_PARTITION_FIELD_NUMBER = 2;
+    private long placementGroupPartition_;
+    /**
+     * <code>int64 placement_group_partition = 2;</code>
+     * @return The placementGroupPartition.
+     */
+    @java.lang.Override
+    public long getPlacementGroupPartition() {
+      return placementGroupPartition_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4288,6 +4310,9 @@ public final class DiskOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
+      if (placementGroupPartition_ != 0L) {
+        output.writeInt64(2, placementGroupPartition_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4299,6 +4324,10 @@ public final class DiskOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placementGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
+      }
+      if (placementGroupPartition_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, placementGroupPartition_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4317,6 +4346,8 @@ public final class DiskOuterClass {
 
       if (!getPlacementGroupId()
           .equals(other.getPlacementGroupId())) return false;
+      if (getPlacementGroupPartition()
+          != other.getPlacementGroupPartition()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4330,6 +4361,9 @@ public final class DiskOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PLACEMENT_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPlacementGroupId().hashCode();
+      hash = (37 * hash) + PLACEMENT_GROUP_PARTITION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPlacementGroupPartition());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4465,6 +4499,8 @@ public final class DiskOuterClass {
         super.clear();
         placementGroupId_ = "";
 
+        placementGroupPartition_ = 0L;
+
         return this;
       }
 
@@ -4492,6 +4528,7 @@ public final class DiskOuterClass {
       public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy buildPartial() {
         yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy result = new yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy(this);
         result.placementGroupId_ = placementGroupId_;
+        result.placementGroupPartition_ = placementGroupPartition_;
         onBuilt();
         return result;
       }
@@ -4543,6 +4580,9 @@ public final class DiskOuterClass {
         if (!other.getPlacementGroupId().isEmpty()) {
           placementGroupId_ = other.placementGroupId_;
           onChanged();
+        }
+        if (other.getPlacementGroupPartition() != 0L) {
+          setPlacementGroupPartition(other.getPlacementGroupPartition());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4668,6 +4708,37 @@ public final class DiskOuterClass {
         onChanged();
         return this;
       }
+
+      private long placementGroupPartition_ ;
+      /**
+       * <code>int64 placement_group_partition = 2;</code>
+       * @return The placementGroupPartition.
+       */
+      @java.lang.Override
+      public long getPlacementGroupPartition() {
+        return placementGroupPartition_;
+      }
+      /**
+       * <code>int64 placement_group_partition = 2;</code>
+       * @param value The placementGroupPartition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlacementGroupPartition(long value) {
+        
+        placementGroupPartition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 placement_group_partition = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlacementGroupPartition() {
+        
+        placementGroupPartition_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4762,11 +4833,12 @@ public final class DiskOuterClass {
       "PlacementPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
       "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022STAT" +
       "US_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\t\n\005READY\020" +
-      "\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004B\010\n\006source\"1\n\023" +
+      "\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004B\010\n\006source\"T\n\023" +
       "DiskPlacementPolicy\022\032\n\022placement_group_i" +
-      "d\030\001 \001(\tBb\n\033yandex.cloud.api.compute.v1ZC" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/compute/v1;computeb\006proto3"
+      "d\030\001 \001(\t\022!\n\031placement_group_partition\030\002 \001" +
+      "(\003Bb\n\033yandex.cloud.api.compute.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4790,7 +4862,7 @@ public final class DiskOuterClass {
     internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor,
-        new java.lang.String[] { "PlacementGroupId", });
+        new java.lang.String[] { "PlacementGroupId", "PlacementGroupPartition", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
