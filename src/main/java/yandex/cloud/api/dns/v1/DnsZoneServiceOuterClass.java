@@ -14,6 +14,1787 @@ public final class DnsZoneServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface UpdateDnsZonePrivateNetworksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks will be updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
+     */
+    java.lang.String getDnsZoneId();
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks will be updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
+     */
+    com.google.protobuf.ByteString
+        getDnsZoneIdBytes();
+
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @return A list containing the privateNetworkIdAdditions.
+     */
+    java.util.List<java.lang.String>
+        getPrivateNetworkIdAdditionsList();
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @return The count of privateNetworkIdAdditions.
+     */
+    int getPrivateNetworkIdAdditionsCount();
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @param index The index of the element to return.
+     * @return The privateNetworkIdAdditions at the given index.
+     */
+    java.lang.String getPrivateNetworkIdAdditions(int index);
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privateNetworkIdAdditions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrivateNetworkIdAdditionsBytes(int index);
+
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @return A list containing the privateNetworkIdDeletions.
+     */
+    java.util.List<java.lang.String>
+        getPrivateNetworkIdDeletionsList();
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @return The count of privateNetworkIdDeletions.
+     */
+    int getPrivateNetworkIdDeletionsCount();
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @param index The index of the element to return.
+     * @return The privateNetworkIdDeletions at the given index.
+     */
+    java.lang.String getPrivateNetworkIdDeletions(int index);
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privateNetworkIdDeletions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrivateNetworkIdDeletionsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest}
+   */
+  public static final class UpdateDnsZonePrivateNetworksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest)
+      UpdateDnsZonePrivateNetworksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateDnsZonePrivateNetworksRequest.newBuilder() to construct.
+    private UpdateDnsZonePrivateNetworksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateDnsZonePrivateNetworksRequest() {
+      dnsZoneId_ = "";
+      privateNetworkIdAdditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      privateNetworkIdDeletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDnsZonePrivateNetworksRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateDnsZonePrivateNetworksRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dnsZoneId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                privateNetworkIdAdditions_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              privateNetworkIdAdditions_.add(s);
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                privateNetworkIdDeletions_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              privateNetworkIdDeletions_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          privateNetworkIdAdditions_ = privateNetworkIdAdditions_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          privateNetworkIdDeletions_ = privateNetworkIdDeletions_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.Builder.class);
+    }
+
+    public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dnsZoneId_;
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks will be updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getDnsZoneId() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dnsZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks will be updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDnsZoneIdBytes() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dnsZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRIVATE_NETWORK_ID_ADDITIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList privateNetworkIdAdditions_;
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @return A list containing the privateNetworkIdAdditions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrivateNetworkIdAdditionsList() {
+      return privateNetworkIdAdditions_;
+    }
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @return The count of privateNetworkIdAdditions.
+     */
+    public int getPrivateNetworkIdAdditionsCount() {
+      return privateNetworkIdAdditions_.size();
+    }
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @param index The index of the element to return.
+     * @return The privateNetworkIdAdditions at the given index.
+     */
+    public java.lang.String getPrivateNetworkIdAdditions(int index) {
+      return privateNetworkIdAdditions_.get(index);
+    }
+    /**
+     * <pre>
+     * Network IDs to remove
+     * </pre>
+     *
+     * <code>repeated string private_network_id_additions = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privateNetworkIdAdditions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrivateNetworkIdAdditionsBytes(int index) {
+      return privateNetworkIdAdditions_.getByteString(index);
+    }
+
+    public static final int PRIVATE_NETWORK_ID_DELETIONS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList privateNetworkIdDeletions_;
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @return A list containing the privateNetworkIdDeletions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrivateNetworkIdDeletionsList() {
+      return privateNetworkIdDeletions_;
+    }
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @return The count of privateNetworkIdDeletions.
+     */
+    public int getPrivateNetworkIdDeletionsCount() {
+      return privateNetworkIdDeletions_.size();
+    }
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @param index The index of the element to return.
+     * @return The privateNetworkIdDeletions at the given index.
+     */
+    public java.lang.String getPrivateNetworkIdDeletions(int index) {
+      return privateNetworkIdDeletions_.get(index);
+    }
+    /**
+     * <pre>
+     * Network IDs to add
+     * </pre>
+     *
+     * <code>repeated string private_network_id_deletions = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privateNetworkIdDeletions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrivateNetworkIdDeletionsBytes(int index) {
+      return privateNetworkIdDeletions_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
+      }
+      for (int i = 0; i < privateNetworkIdAdditions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, privateNetworkIdAdditions_.getRaw(i));
+      }
+      for (int i = 0; i < privateNetworkIdDeletions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, privateNetworkIdDeletions_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < privateNetworkIdAdditions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(privateNetworkIdAdditions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPrivateNetworkIdAdditionsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < privateNetworkIdDeletions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(privateNetworkIdDeletions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPrivateNetworkIdDeletionsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest) obj;
+
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!getPrivateNetworkIdAdditionsList()
+          .equals(other.getPrivateNetworkIdAdditionsList())) return false;
+      if (!getPrivateNetworkIdDeletionsList()
+          .equals(other.getPrivateNetworkIdDeletionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDnsZoneId().hashCode();
+      if (getPrivateNetworkIdAdditionsCount() > 0) {
+        hash = (37 * hash) + PRIVATE_NETWORK_ID_ADDITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivateNetworkIdAdditionsList().hashCode();
+      }
+      if (getPrivateNetworkIdDeletionsCount() > 0) {
+        hash = (37 * hash) + PRIVATE_NETWORK_ID_DELETIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivateNetworkIdDeletionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest)
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dnsZoneId_ = "";
+
+        privateNetworkIdAdditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        privateNetworkIdDeletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest build() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest buildPartial() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.dnsZoneId_ = dnsZoneId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          privateNetworkIdAdditions_ = privateNetworkIdAdditions_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.privateNetworkIdAdditions_ = privateNetworkIdAdditions_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          privateNetworkIdDeletions_ = privateNetworkIdDeletions_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.privateNetworkIdDeletions_ = privateNetworkIdDeletions_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest) {
+          return mergeFrom((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest other) {
+        if (other == yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.getDefaultInstance()) return this;
+        if (!other.getDnsZoneId().isEmpty()) {
+          dnsZoneId_ = other.dnsZoneId_;
+          onChanged();
+        }
+        if (!other.privateNetworkIdAdditions_.isEmpty()) {
+          if (privateNetworkIdAdditions_.isEmpty()) {
+            privateNetworkIdAdditions_ = other.privateNetworkIdAdditions_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePrivateNetworkIdAdditionsIsMutable();
+            privateNetworkIdAdditions_.addAll(other.privateNetworkIdAdditions_);
+          }
+          onChanged();
+        }
+        if (!other.privateNetworkIdDeletions_.isEmpty()) {
+          if (privateNetworkIdDeletions_.isEmpty()) {
+            privateNetworkIdDeletions_ = other.privateNetworkIdDeletions_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensurePrivateNetworkIdDeletionsIsMutable();
+            privateNetworkIdDeletions_.addAll(other.privateNetworkIdDeletions_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dnsZoneId_ = "";
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks will be updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return The dnsZoneId.
+       */
+      public java.lang.String getDnsZoneId() {
+        java.lang.Object ref = dnsZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dnsZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks will be updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return The bytes for dnsZoneId.
+       */
+      public com.google.protobuf.ByteString
+          getDnsZoneIdBytes() {
+        java.lang.Object ref = dnsZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dnsZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks will be updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks will be updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDnsZoneId() {
+        
+        dnsZoneId_ = getDefaultInstance().getDnsZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks will be updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList privateNetworkIdAdditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePrivateNetworkIdAdditionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          privateNetworkIdAdditions_ = new com.google.protobuf.LazyStringArrayList(privateNetworkIdAdditions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @return A list containing the privateNetworkIdAdditions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrivateNetworkIdAdditionsList() {
+        return privateNetworkIdAdditions_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @return The count of privateNetworkIdAdditions.
+       */
+      public int getPrivateNetworkIdAdditionsCount() {
+        return privateNetworkIdAdditions_.size();
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @param index The index of the element to return.
+       * @return The privateNetworkIdAdditions at the given index.
+       */
+      public java.lang.String getPrivateNetworkIdAdditions(int index) {
+        return privateNetworkIdAdditions_.get(index);
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the privateNetworkIdAdditions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateNetworkIdAdditionsBytes(int index) {
+        return privateNetworkIdAdditions_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The privateNetworkIdAdditions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateNetworkIdAdditions(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePrivateNetworkIdAdditionsIsMutable();
+        privateNetworkIdAdditions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @param value The privateNetworkIdAdditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivateNetworkIdAdditions(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePrivateNetworkIdAdditionsIsMutable();
+        privateNetworkIdAdditions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @param values The privateNetworkIdAdditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrivateNetworkIdAdditions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrivateNetworkIdAdditionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, privateNetworkIdAdditions_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateNetworkIdAdditions() {
+        privateNetworkIdAdditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to remove
+       * </pre>
+       *
+       * <code>repeated string private_network_id_additions = 2;</code>
+       * @param value The bytes of the privateNetworkIdAdditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivateNetworkIdAdditionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePrivateNetworkIdAdditionsIsMutable();
+        privateNetworkIdAdditions_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList privateNetworkIdDeletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePrivateNetworkIdDeletionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          privateNetworkIdDeletions_ = new com.google.protobuf.LazyStringArrayList(privateNetworkIdDeletions_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @return A list containing the privateNetworkIdDeletions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrivateNetworkIdDeletionsList() {
+        return privateNetworkIdDeletions_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @return The count of privateNetworkIdDeletions.
+       */
+      public int getPrivateNetworkIdDeletionsCount() {
+        return privateNetworkIdDeletions_.size();
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @param index The index of the element to return.
+       * @return The privateNetworkIdDeletions at the given index.
+       */
+      public java.lang.String getPrivateNetworkIdDeletions(int index) {
+        return privateNetworkIdDeletions_.get(index);
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the privateNetworkIdDeletions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateNetworkIdDeletionsBytes(int index) {
+        return privateNetworkIdDeletions_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The privateNetworkIdDeletions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateNetworkIdDeletions(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePrivateNetworkIdDeletionsIsMutable();
+        privateNetworkIdDeletions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @param value The privateNetworkIdDeletions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivateNetworkIdDeletions(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePrivateNetworkIdDeletionsIsMutable();
+        privateNetworkIdDeletions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @param values The privateNetworkIdDeletions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrivateNetworkIdDeletions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrivateNetworkIdDeletionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, privateNetworkIdDeletions_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateNetworkIdDeletions() {
+        privateNetworkIdDeletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network IDs to add
+       * </pre>
+       *
+       * <code>repeated string private_network_id_deletions = 3;</code>
+       * @param value The bytes of the privateNetworkIdDeletions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivateNetworkIdDeletionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePrivateNetworkIdDeletionsIsMutable();
+        privateNetworkIdDeletions_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksRequest)
+    private static final yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest();
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateDnsZonePrivateNetworksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateDnsZonePrivateNetworksRequest>() {
+      @java.lang.Override
+      public UpdateDnsZonePrivateNetworksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateDnsZonePrivateNetworksRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateDnsZonePrivateNetworksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateDnsZonePrivateNetworksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateDnsZonePrivateNetworksMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks was updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
+     */
+    java.lang.String getDnsZoneId();
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks was updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
+     */
+    com.google.protobuf.ByteString
+        getDnsZoneIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata}
+   */
+  public static final class UpdateDnsZonePrivateNetworksMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata)
+      UpdateDnsZonePrivateNetworksMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateDnsZonePrivateNetworksMetadata.newBuilder() to construct.
+    private UpdateDnsZonePrivateNetworksMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateDnsZonePrivateNetworksMetadata() {
+      dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDnsZonePrivateNetworksMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateDnsZonePrivateNetworksMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dnsZoneId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.Builder.class);
+    }
+
+    public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dnsZoneId_;
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks was updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getDnsZoneId() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dnsZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the DNS zone which private networks was updated
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDnsZoneIdBytes() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dnsZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata) obj;
+
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDnsZoneId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata)
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dnsZoneId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata build() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata buildPartial() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata(this);
+        result.dnsZoneId_ = dnsZoneId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata) {
+          return mergeFrom((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata other) {
+        if (other == yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata.getDefaultInstance()) return this;
+        if (!other.getDnsZoneId().isEmpty()) {
+          dnsZoneId_ = other.dnsZoneId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object dnsZoneId_ = "";
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks was updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return The dnsZoneId.
+       */
+      public java.lang.String getDnsZoneId() {
+        java.lang.Object ref = dnsZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dnsZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks was updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return The bytes for dnsZoneId.
+       */
+      public com.google.protobuf.ByteString
+          getDnsZoneIdBytes() {
+        java.lang.Object ref = dnsZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dnsZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks was updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks was updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDnsZoneId() {
+        
+        dnsZoneId_ = getDefaultInstance().getDnsZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone which private networks was updated
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dns.v1.UpdateDnsZonePrivateNetworksMetadata)
+    private static final yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata();
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateDnsZonePrivateNetworksMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateDnsZonePrivateNetworksMetadata>() {
+      @java.lang.Override
+      public UpdateDnsZonePrivateNetworksMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateDnsZonePrivateNetworksMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateDnsZonePrivateNetworksMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateDnsZonePrivateNetworksMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetDnsZoneRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.GetDnsZoneRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -21107,6 +22888,16 @@ public final class DnsZoneServiceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21227,136 +23018,146 @@ public final class DnsZoneServiceOuterClass {
       "oto\032 yandex/cloud/api/operation.proto\032\"y" +
       "andex/cloud/dns/v1/dns_zone.proto\032&yande" +
       "x/cloud/operation/operation.proto\032\035yande" +
-      "x/cloud/validation.proto\".\n\021GetDnsZoneRe" +
-      "quest\022\031\n\013dns_zone_id\030\001 \001(\tB\004\350\3071\001\"\211\001\n\023Lis" +
-      "tDnsZonesRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage" +
-      "_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\t" +
-      "B\n\212\3101\006<=1000\"`\n\024ListDnsZonesResponse\022/\n\t" +
-      "dns_zones\030\001 \003(\0132\034.yandex.cloud.dns.v1.Dn" +
-      "sZone\022\027\n\017next_page_token\030\002 \001(\t\"\213\004\n\024Creat" +
-      "eDnsZoneRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\212\3101\004" +
-      "<=50\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z" +
-      "0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(" +
-      "\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex.c" +
-      "loud.dns.v1.CreateDnsZoneRequest.LabelsE" +
-      "ntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\0228\n" +
-      "\004zone\030\005 \001(\tB*\350\3071\001\212\3101\005<=255\362\3071\031[.]|[a-z0-" +
-      "9][-a-z0-9.]*\\.\022B\n\022private_visibility\030\006 " +
-      "\001(\0132&.yandex.cloud.dns.v1.PrivateVisibil" +
-      "ity\022@\n\021public_visibility\030\007 \001(\0132%.yandex." +
-      "cloud.dns.v1.PublicVisibility\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025" +
-      "CreateDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001" +
-      "(\t\"\376\003\n\024UpdateDnsZoneRequest\022\033\n\013dns_zone_" +
-      "id\030\001 \001(\tB\006\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB" +
-      "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n" +
-      "\013description\030\004 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels" +
-      "\030\005 \003(\01325.yandex.cloud.dns.v1.UpdateDnsZo" +
-      "neRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362" +
-      "\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][" +
-      "-_./\\@0-9a-z]*\022B\n\022private_visibility\030\006 \001" +
-      "(\0132&.yandex.cloud.dns.v1.PrivateVisibili" +
-      "ty\022@\n\021public_visibility\030\007 \001(\0132%.yandex.c" +
-      "loud.dns.v1.PublicVisibility\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025U" +
-      "pdateDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(" +
-      "\t\"3\n\024DeleteDnsZoneRequest\022\033\n\013dns_zone_id" +
-      "\030\001 \001(\tB\006\212\3101\00220\",\n\025DeleteDnsZoneMetadata\022" +
-      "\023\n\013dns_zone_id\030\001 \001(\t\"r\n\032GetDnsZoneRecord" +
-      "SetRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022" +
-      "\033\n\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=255\022\032\n\004type\030\003 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=10\"\226\001\n\034ListDnsZoneRecordSe" +
-      "tsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_to" +
-      "ken\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212" +
-      "\3101\006<=1000\"m\n\035ListDnsZoneRecordSetsRespon" +
-      "se\0223\n\013record_sets\030\001 \003(\0132\036.yandex.cloud.d" +
-      "ns.v1.RecordSet\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\264\001\n\027UpdateRecordSetsRequest\022\033\n\013dns_zone" +
-      "_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030\002 \003(\0132\036.y" +
-      "andex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000" +
-      "\022=\n\tadditions\030\003 \003(\0132\036.yandex.cloud.dns.v" +
-      "1.RecordSetB\n\202\3101\006<=1000\"\032\n\030UpdateRecordS" +
-      "etsMetadata\"\363\001\n\027UpsertRecordSetsRequest\022" +
-      "\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletion" +
-      "s\030\002 \003(\0132\036.yandex.cloud.dns.v1.RecordSetB" +
-      "\n\202\3101\006<=1000\022@\n\014replacements\030\003 \003(\0132\036.yand" +
-      "ex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022:\n" +
-      "\006merges\030\004 \003(\0132\036.yandex.cloud.dns.v1.Reco" +
-      "rdSetB\n\202\3101\006<=1000\"\032\n\030UpsertRecordSetsMet" +
-      "adata\"u\n\rRecordSetDiff\0221\n\tadditions\030\001 \003(" +
-      "\0132\036.yandex.cloud.dns.v1.RecordSet\0221\n\tdel" +
-      "etions\030\002 \003(\0132\036.yandex.cloud.dns.v1.Recor" +
-      "dSet\"\226\001\n\034ListDnsZoneOperationsRequest\022\033\n" +
-      "\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212" +
-      "\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n" +
-      "\035ListDnsZoneOperationsResponse\0225\n\noperat" +
-      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
-      "ation\022\027\n\017next_page_token\030\002 \001(\t2\340\021\n\016DnsZo" +
-      "neService\022p\n\003Get\022&.yandex.cloud.dns.v1.G" +
-      "etDnsZoneRequest\032\034.yandex.cloud.dns.v1.D" +
-      "nsZone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone_" +
-      "id}\022r\n\004List\022(.yandex.cloud.dns.v1.ListDn" +
-      "sZonesRequest\032).yandex.cloud.dns.v1.List" +
-      "DnsZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones\022" +
-      "\224\001\n\006Create\022).yandex.cloud.dns.v1.CreateD" +
-      "nsZoneRequest\032!.yandex.cloud.operation.O" +
-      "peration\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n\025" +
-      "CreateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Updat" +
-      "e\022).yandex.cloud.dns.v1.UpdateDnsZoneReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "J\202\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*\262" +
-      "\322* \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\255\001\n\006" +
-      "Delete\022).yandex.cloud.dns.v1.DeleteDnsZo" +
-      "neRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zone_id" +
-      "}\262\322*.\n\025DeleteDnsZoneMetadata\022\025google.pro" +
-      "tobuf.Empty\022\221\001\n\014GetRecordSet\022/.yandex.cl" +
-      "oud.dns.v1.GetDnsZoneRecordSetRequest\032\036." +
-      "yandex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002*\022(/" +
-      "dns/v1/zones/{dns_zone_id}:getRecordSet\022" +
-      "\253\001\n\016ListRecordSets\0221.yandex.cloud.dns.v1" +
-      ".ListDnsZoneRecordSetsRequest\0322.yandex.c" +
-      "loud.dns.v1.ListDnsZoneRecordSetsRespons" +
-      "e\"2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_id}:l" +
-      "istRecordSets\022\311\001\n\020UpdateRecordSets\022,.yan" +
-      "dex.cloud.dns.v1.UpdateRecordSetsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"d\202\323\344" +
-      "\223\0021\",/dns/v1/zones/{dns_zone_id}:updateR" +
-      "ecordSets:\001*\262\322*)\n\030UpdateRecordSetsMetada" +
-      "ta\022\rRecordSetDiff\022\311\001\n\020UpsertRecordSets\022," +
-      ".yandex.cloud.dns.v1.UpsertRecordSetsReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "d\202\323\344\223\0021\",/dns/v1/zones/{dns_zone_id}:ups" +
-      "ertRecordSets:\001*\262\322*)\n\030UpsertRecordSetsMe" +
-      "tadata\022\rRecordSetDiff\022\247\001\n\016ListOperations" +
-      "\0221.yandex.cloud.dns.v1.ListDnsZoneOperat" +
-      "ionsRequest\0322.yandex.cloud.dns.v1.ListDn" +
-      "sZoneOperationsResponse\".\202\323\344\223\002(\022&/dns/v1" +
-      "/zones/{dns_zone_id}/operations\022\255\001\n\022List" +
-      "AccessBindings\022..yandex.cloud.access.Lis" +
-      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
-      "cess.ListAccessBindingsResponse\"6\202\323\344\223\0020\022" +
-      "./dns/v1/zones/{resource_id}:listAccessB" +
-      "indings\022\334\001\n\021SetAccessBindings\022-.yandex.c" +
-      "loud.access.SetAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"u\202\323\344\223\0022\"" +
-      "-/dns/v1/zones/{resource_id}:setAccessBi" +
-      "ndings:\001*\262\322*9\n access.SetAccessBindingsM" +
-      "etadata\022\025google.protobuf.Empty\022\350\001\n\024Updat" +
-      "eAccessBindings\0220.yandex.cloud.access.Up" +
-      "dateAccessBindingsRequest\032!.yandex.cloud" +
-      ".operation.Operation\"{\202\323\344\223\0025\"0/dns/v1/zo" +
-      "nes/{resource_id}:updateAccessBindings:\001" +
-      "*\262\322*<\n#access.UpdateAccessBindingsMetada" +
-      "ta\022\025google.protobuf.EmptyBV\n\027yandex.clou" +
-      "d.api.dns.v1Z;github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/dns/v1;dnsb\006proto" +
-      "3"
+      "x/cloud/validation.proto\"\206\001\n#UpdateDnsZo" +
+      "nePrivateNetworksRequest\022\023\n\013dns_zone_id\030" +
+      "\001 \001(\t\022$\n\034private_network_id_additions\030\002 " +
+      "\003(\t\022$\n\034private_network_id_deletions\030\003 \003(" +
+      "\t\";\n$UpdateDnsZonePrivateNetworksMetadat" +
+      "a\022\023\n\013dns_zone_id\030\001 \001(\t\".\n\021GetDnsZoneRequ" +
+      "est\022\031\n\013dns_zone_id\030\001 \001(\tB\004\350\3071\001\"\211\001\n\023ListD" +
+      "nsZonesRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_t" +
+      "oken\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n" +
+      "\212\3101\006<=1000\"`\n\024ListDnsZonesResponse\022/\n\tdn" +
+      "s_zones\030\001 \003(\0132\034.yandex.cloud.dns.v1.DnsZ" +
+      "one\022\027\n\017next_page_token\030\002 \001(\t\"\213\004\n\024CreateD" +
+      "nsZoneRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\212\3101\004<=" +
+      "50\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
+      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB" +
+      "\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex.clo" +
+      "ud.dns.v1.CreateDnsZoneRequest.LabelsEnt" +
+      "ryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\0228\n\004z" +
+      "one\030\005 \001(\tB*\350\3071\001\212\3101\005<=255\362\3071\031[.]|[a-z0-9]" +
+      "[-a-z0-9.]*\\.\022B\n\022private_visibility\030\006 \001(" +
+      "\0132&.yandex.cloud.dns.v1.PrivateVisibilit" +
+      "y\022@\n\021public_visibility\030\007 \001(\0132%.yandex.cl" +
+      "oud.dns.v1.PublicVisibility\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025Cr" +
+      "eateDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(\t" +
+      "\"\376\003\n\024UpdateDnsZoneRequest\022\033\n\013dns_zone_id" +
+      "\030\001 \001(\tB\006\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362" +
+      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
+      "escription\030\004 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\005" +
+      " \003(\01325.yandex.cloud.dns.v1.UpdateDnsZone" +
+      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
+      "./\\@0-9a-z]*\022B\n\022private_visibility\030\006 \001(\013" +
+      "2&.yandex.cloud.dns.v1.PrivateVisibility" +
+      "\022@\n\021public_visibility\030\007 \001(\0132%.yandex.clo" +
+      "ud.dns.v1.PublicVisibility\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025Upd" +
+      "ateDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(\t\"" +
+      "3\n\024DeleteDnsZoneRequest\022\033\n\013dns_zone_id\030\001" +
+      " \001(\tB\006\212\3101\00220\",\n\025DeleteDnsZoneMetadata\022\023\n" +
+      "\013dns_zone_id\030\001 \001(\t\"r\n\032GetDnsZoneRecordSe" +
+      "tRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\033\n" +
+      "\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=255\022\032\n\004type\030\003 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=10\"\226\001\n\034ListDnsZoneRecordSets" +
+      "Request\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_toke" +
+      "n\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
+      "\006<=1000\"m\n\035ListDnsZoneRecordSetsResponse" +
+      "\0223\n\013record_sets\030\001 \003(\0132\036.yandex.cloud.dns" +
+      ".v1.RecordSet\022\027\n\017next_page_token\030\002 \001(\t\"\264" +
+      "\001\n\027UpdateRecordSetsRequest\022\033\n\013dns_zone_i" +
+      "d\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030\002 \003(\0132\036.yan" +
+      "dex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022=" +
+      "\n\tadditions\030\003 \003(\0132\036.yandex.cloud.dns.v1." +
+      "RecordSetB\n\202\3101\006<=1000\"\032\n\030UpdateRecordSet" +
+      "sMetadata\"\363\001\n\027UpsertRecordSetsRequest\022\033\n" +
+      "\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030" +
+      "\002 \003(\0132\036.yandex.cloud.dns.v1.RecordSetB\n\202" +
+      "\3101\006<=1000\022@\n\014replacements\030\003 \003(\0132\036.yandex" +
+      ".cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022:\n\006m" +
+      "erges\030\004 \003(\0132\036.yandex.cloud.dns.v1.Record" +
+      "SetB\n\202\3101\006<=1000\"\032\n\030UpsertRecordSetsMetad" +
+      "ata\"u\n\rRecordSetDiff\0221\n\tadditions\030\001 \003(\0132" +
+      "\036.yandex.cloud.dns.v1.RecordSet\0221\n\tdelet" +
+      "ions\030\002 \003(\0132\036.yandex.cloud.dns.v1.RecordS" +
+      "et\"\226\001\n\034ListDnsZoneOperationsRequest\022\033\n\013d" +
+      "ns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101" +
+      "\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035L" +
+      "istDnsZoneOperationsResponse\0225\n\noperatio" +
+      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
+      "ion\022\027\n\017next_page_token\030\002 \001(\t2\310\023\n\016DnsZone" +
+      "Service\022p\n\003Get\022&.yandex.cloud.dns.v1.Get" +
+      "DnsZoneRequest\032\034.yandex.cloud.dns.v1.Dns" +
+      "Zone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone_id" +
+      "}\022r\n\004List\022(.yandex.cloud.dns.v1.ListDnsZ" +
+      "onesRequest\032).yandex.cloud.dns.v1.ListDn" +
+      "sZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones\022\224\001" +
+      "\n\006Create\022).yandex.cloud.dns.v1.CreateDns" +
+      "ZoneRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n\025Cr" +
+      "eateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Update\022" +
+      ").yandex.cloud.dns.v1.UpdateDnsZoneReque" +
+      "st\032!.yandex.cloud.operation.Operation\"J\202" +
+      "\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*\262\322*" +
+      " \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\255\001\n\006De" +
+      "lete\022).yandex.cloud.dns.v1.DeleteDnsZone" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zone_id}\262" +
+      "\322*.\n\025DeleteDnsZoneMetadata\022\025google.proto" +
+      "buf.Empty\022\221\001\n\014GetRecordSet\022/.yandex.clou" +
+      "d.dns.v1.GetDnsZoneRecordSetRequest\032\036.ya" +
+      "ndex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002*\022(/dn" +
+      "s/v1/zones/{dns_zone_id}:getRecordSet\022\253\001" +
+      "\n\016ListRecordSets\0221.yandex.cloud.dns.v1.L" +
+      "istDnsZoneRecordSetsRequest\0322.yandex.clo" +
+      "ud.dns.v1.ListDnsZoneRecordSetsResponse\"" +
+      "2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_id}:lis" +
+      "tRecordSets\022\311\001\n\020UpdateRecordSets\022,.yande" +
+      "x.cloud.dns.v1.UpdateRecordSetsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"d\202\323\344\223\002" +
+      "1\",/dns/v1/zones/{dns_zone_id}:updateRec" +
+      "ordSets:\001*\262\322*)\n\030UpdateRecordSetsMetadata" +
+      "\022\rRecordSetDiff\022\311\001\n\020UpsertRecordSets\022,.y" +
+      "andex.cloud.dns.v1.UpsertRecordSetsReque" +
+      "st\032!.yandex.cloud.operation.Operation\"d\202" +
+      "\323\344\223\0021\",/dns/v1/zones/{dns_zone_id}:upser" +
+      "tRecordSets:\001*\262\322*)\n\030UpsertRecordSetsMeta" +
+      "data\022\rRecordSetDiff\022\247\001\n\016ListOperations\0221" +
+      ".yandex.cloud.dns.v1.ListDnsZoneOperatio" +
+      "nsRequest\0322.yandex.cloud.dns.v1.ListDnsZ" +
+      "oneOperationsResponse\".\202\323\344\223\002(\022&/dns/v1/z" +
+      "ones/{dns_zone_id}/operations\022\255\001\n\022ListAc" +
+      "cessBindings\022..yandex.cloud.access.ListA" +
+      "ccessBindingsRequest\032/.yandex.cloud.acce" +
+      "ss.ListAccessBindingsResponse\"6\202\323\344\223\0020\022./" +
+      "dns/v1/zones/{resource_id}:listAccessBin" +
+      "dings\022\334\001\n\021SetAccessBindings\022-.yandex.clo" +
+      "ud.access.SetAccessBindingsRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"u\202\323\344\223\0022\"-/" +
+      "dns/v1/zones/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*9\n access.SetAccessBindingsMet" +
+      "adata\022\025google.protobuf.Empty\022\350\001\n\024UpdateA" +
+      "ccessBindings\0220.yandex.cloud.access.Upda" +
+      "teAccessBindingsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"{\202\323\344\223\0025\"0/dns/v1/zone" +
+      "s/{resource_id}:updateAccessBindings:\001*\262" +
+      "\322*<\n#access.UpdateAccessBindingsMetadata" +
+      "\022\025google.protobuf.Empty\022\345\001\n\025UpdatePrivat" +
+      "eNetworks\0228.yandex.cloud.dns.v1.UpdateDn" +
+      "sZonePrivateNetworksRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"o\202\323\344\223\002621/dns/v1/" +
+      "zones/{dns_zone_id}:updatePrivateNetwork" +
+      "s:\001*\262\322*/\n$UpdateDnsZonePrivateNetworksMe" +
+      "tadata\022\007DnsZoneBV\n\027yandex.cloud.api.dns." +
+      "v1Z;github.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/dns/v1;dnsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21369,26 +23170,38 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
-    internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_descriptor =
+    internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksRequest_descriptor,
+        new java.lang.String[] { "DnsZoneId", "PrivateNetworkIdAdditions", "PrivateNetworkIdDeletions", });
+    internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dns_v1_UpdateDnsZonePrivateNetworksMetadata_descriptor,
+        new java.lang.String[] { "DnsZoneId", });
+    internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_GetDnsZoneRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_ListDnsZonesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_dns_v1_ListDnsZonesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZonesRequest_descriptor,
         new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZonesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_dns_v1_ListDnsZonesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZonesResponse_descriptor,
         new java.lang.String[] { "DnsZones", "NextPageToken", });
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_descriptor,
@@ -21400,13 +23213,13 @@ public final class DnsZoneServiceOuterClass {
         internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_CreateDnsZoneMetadata_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_descriptor,
@@ -21418,79 +23231,79 @@ public final class DnsZoneServiceOuterClass {
         internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateDnsZoneMetadata_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_DeleteDnsZoneMetadata_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRecordSetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRecordSetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_GetDnsZoneRecordSetRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "Name", "Type", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_descriptor,
         new java.lang.String[] { "RecordSets", "NextPageToken", });
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateRecordSetsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "Deletions", "Additions", });
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateRecordSetsMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpsertRecordSetsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "Deletions", "Replacements", "Merges", });
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_dns_v1_RecordSetDiff_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor,
         new java.lang.String[] { "Additions", "Deletions", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_descriptor,

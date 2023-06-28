@@ -421,6 +421,37 @@ public final class DnsZoneServiceGrpc {
     return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdatePrivateNetworksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdatePrivateNetworks",
+      requestType = yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdatePrivateNetworksMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdatePrivateNetworksMethod;
+    if ((getUpdatePrivateNetworksMethod = DnsZoneServiceGrpc.getUpdatePrivateNetworksMethod) == null) {
+      synchronized (DnsZoneServiceGrpc.class) {
+        if ((getUpdatePrivateNetworksMethod = DnsZoneServiceGrpc.getUpdatePrivateNetworksMethod) == null) {
+          DnsZoneServiceGrpc.getUpdatePrivateNetworksMethod = getUpdatePrivateNetworksMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePrivateNetworks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("UpdatePrivateNetworks"))
+              .build();
+        }
+      }
+    }
+    return getUpdatePrivateNetworksMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -609,6 +640,16 @@ public final class DnsZoneServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Atomically updates zone private networks
+     * </pre>
+     */
+    public void updatePrivateNetworks(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePrivateNetworksMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -702,6 +743,13 @@ public final class DnsZoneServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getUpdatePrivateNetworksMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_PRIVATE_NETWORKS)))
           .build();
     }
   }
@@ -872,6 +920,17 @@ public final class DnsZoneServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Atomically updates zone private networks
+     * </pre>
+     */
+    public void updatePrivateNetworks(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdatePrivateNetworksMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1026,6 +1085,16 @@ public final class DnsZoneServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Atomically updates zone private networks
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updatePrivateNetworks(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdatePrivateNetworksMethod(), getCallOptions(), request);
     }
   }
 
@@ -1195,6 +1264,17 @@ public final class DnsZoneServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Atomically updates zone private networks
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updatePrivateNetworks(
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdatePrivateNetworksMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1210,6 +1290,7 @@ public final class DnsZoneServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 10;
   private static final int METHODID_SET_ACCESS_BINDINGS = 11;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 12;
+  private static final int METHODID_UPDATE_PRIVATE_NETWORKS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1278,6 +1359,10 @@ public final class DnsZoneServiceGrpc {
           break;
         case METHODID_UPDATE_ACCESS_BINDINGS:
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_PRIVATE_NETWORKS:
+          serviceImpl.updatePrivateNetworks((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZonePrivateNetworksRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -1354,6 +1439,7 @@ public final class DnsZoneServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getUpdatePrivateNetworksMethod())
               .build();
         }
       }
